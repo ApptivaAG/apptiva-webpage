@@ -1,10 +1,10 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from "react";
+import Link from "gatsby-link";
 
 export default class IndexPage extends React.Component {
   render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+    const { data } = this.props;
+    const { edges: posts } = data.allMarkdownRemark;
 
     return (
       <section className="section">
@@ -13,15 +13,15 @@ export default class IndexPage extends React.Component {
             <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
           </div>
           {posts
-            .filter(post => post.node.frontmatter.templateKey === 'blog-post')
+            .filter(post => post.node.frontmatter.templateKey === "blog-post")
             .map(({ node: post }) => (
               <div
                 className="content"
-                style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
+                style={{ border: "1px solid #eaecee", padding: "2em 4em" }}
                 key={post.id}
               >
                 <p>
-                  <Link className="has-text-primary" to={post.fields.slug}>
+                  <Link className="has-text-primary" to={post.frontmatter.path}>
                     {post.frontmatter.title}
                   </Link>
                   <span> &bull; </span>
@@ -31,7 +31,7 @@ export default class IndexPage extends React.Component {
                   {post.excerpt}
                   <br />
                   <br />
-                  <Link className="button is-small" to={post.fields.slug}>
+                  <Link className="button is-small" to={post.frontmatter.path}>
                     Keep Reading →
                   </Link>
                 </p>
@@ -39,7 +39,7 @@ export default class IndexPage extends React.Component {
             ))}
         </div>
       </section>
-    )
+    );
   }
 }
 
@@ -55,6 +55,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            path
             templateKey
             date(formatString: "MMMM DD, YYYY")
           }
@@ -62,4 +63,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
