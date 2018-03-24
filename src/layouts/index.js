@@ -1,15 +1,43 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import { ThemeProvider, injectGlobal } from 'styled-components'
+import styledNormalize from 'styled-normalize'
 
 import Navbar from '../components/Navbar'
+import { fontFace } from './font-face'
+import { Container } from './style'
+
+const theme = {
+  color: { primary: '#008fd7', secondary: '#81d742' }
+}
+
+injectGlobal`
+  ${styledNormalize}
+  ${fontFace}
+
+body {
+  font-family: Gentona, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-weight: 300;
+}
+
+`
 
 const TemplateWrapper = ({ children }) => (
-  <div>
-    <Helmet title="Home | Gatsby + Netlify CMS" />
-    <Navbar />
-    <div>{children()}</div>
-  </div>
+  <ThemeProvider theme={theme}>
+    <div>
+      <Helmet title="Home | Gatsby + Netlify CMS" />
+      <Navbar />
+      <Container>{children()}</Container>
+    </div>
+  </ThemeProvider>
 )
 
 TemplateWrapper.propTypes = {
