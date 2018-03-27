@@ -1,30 +1,47 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import styled from "styled-components";
 import Content, { HTMLContent } from '../components/Content'
+import { Container } from '../layouts/style';
+
+const HeadArea = styled.div`
+`
+
+const HeadImage = styled.img`
+  width: 100%;
+`
+
+const HeaderTitle = styled.h1`
+  font-size: 4rem;
+  text-align: center;
+`
+
+const Header = ({ title, image }) =>
+  <HeadArea>
+    <Container>
+      <HeaderTitle>{title}</HeaderTitle>
+      <HeadImage src={image} />
+    </Container>
+  </HeadArea>
 
 export const BlogPostTemplate = ({
   content,
   contentComponent,
   description,
   title,
-  helmet,
+  helmet, image, author
 }) => {
   const PostContent = contentComponent || Content
 
   return (
     <section className="section">
+      <Header title={title} image={image} />
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-          </div>
-        </div>
-      </div>
+      <Container>
+        <p>{author}</p>
+        <p>{description}</p>
+        <PostContent content={content} />
+      </Container>
     </section>
   )
 }
@@ -38,7 +55,7 @@ export default props => {
       contentComponent={HTMLContent}
       description={post.frontmatter.description}
       helmet={<Helmet title={`Blog | ${post.frontmatter.title}`} />}
-      title={post.frontmatter.title}
+      title={post.frontmatter.title} author={post.frontmatter.author} image={post.frontmatter.image}
     />
   )
 }
@@ -52,6 +69,8 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        image
+        author
       }
     }
   }

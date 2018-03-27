@@ -16,6 +16,10 @@ injectGlobal`
   ${styledNormalize}
   ${fontFace}
 
+html {
+  font-size: 20px;
+}
+
 body {
   font-family: Gentona, sans-serif;
 }
@@ -35,7 +39,7 @@ const TemplateWrapper = ({ children }) => (
     <div>
       <Helmet title="Home | Gatsby + Netlify CMS" />
       <Navbar />
-      <Container>{children()}</Container>
+      {children()}
     </div>
   </ThemeProvider>
 )
