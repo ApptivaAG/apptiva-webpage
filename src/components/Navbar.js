@@ -2,10 +2,8 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
-import github from '../img/github-icon.svg'
-import logo from '../img/apptiva-logo.svg'
-
 import { Container as DefaultContainer } from '../layouts/style'
+import logo from '../img/apptiva-logo.svg'
 
 const NavBar = styled.nav`
   position: sticky;
@@ -52,8 +50,9 @@ const Navbar = () => (
         </Link>
       </div>
       <div>
-        <NavItems to="/about">About</NavItems>
         <NavItems to="/products">Products</NavItems>
+        <NavItems to="/blog">Blog</NavItems>
+        <NavItems to="/about">About</NavItems>
       </div>
     </Container>
   </NavBar>
