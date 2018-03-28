@@ -7,6 +7,7 @@ import styledNormalize from 'styled-normalize'
 import Navbar from '../components/Navbar'
 import { fontFace } from './font-face'
 import { Container } from './style'
+import Footer from '../components/Footer'
 
 const theme = {
   color: { primary: '#008fd7', secondary: '#81d742' }
@@ -46,6 +47,10 @@ pre {
   border: 1px #eee solid;
 }
 
+svg {
+  fill: currentColor;
+}
+
 `
 
 const TemplateWrapper = ({ children }) => (
@@ -54,6 +59,7 @@ const TemplateWrapper = ({ children }) => (
       <Helmet title="Home | Gatsby + Netlify CMS" />
       <Navbar />
       <Container>{children()}</Container>
+      <Footer />
     </div>
   </ThemeProvider>
 )
