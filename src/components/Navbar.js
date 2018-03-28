@@ -21,15 +21,15 @@ const Container = DefaultContainer.extend`
 
 const Logo = styled.img`
   display: block;
-  height: 2.4rem;
-  padding: 1.3rem 0;
+  height: 2.1rem;
+  padding: 1rem 0;
 `
 
 const NavItems = styled(Link)`
   display: inline-block;
-  font-size: 1.375rem;
+  font-size: 1.1rem;
   font-weight: 500;
-  margin-left: 3rem;
+  margin-left: 2rem;
   color: white;
 
   transition: transform 30ms ease-out;

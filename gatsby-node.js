@@ -5,7 +5,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators
 
   return graphql(`
-    {
+    query {
       allMarkdownRemark(limit: 1000) {
         edges {
           node {
@@ -27,17 +27,23 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    result.data.allMarkdownRemark.edges.forEach(edge => {
-      const id = edge.node.id
+    const edges = result.data.allMarkdownRemark.edges
+
+    edges.forEach(({ node }, index) => {
+      const prev = index === 0 ? false : edges[index - 1].node
+      const next = index === edges.length - 1 ? false : edges[index + 1].node
+      const id = node.id
       createPage({
-        path: edge.node.frontmatter.path,
+        path: node.frontmatter.path,
         component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
+          `src/templates/${String(node.frontmatter.templateKey)}.js`
         ),
         // additional data can be passed via context
         context: {
           id,
-        },
+          prev,
+          next
+        }
       })
     })
   })
@@ -51,7 +57,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value,
+      value
     })
   }
 }

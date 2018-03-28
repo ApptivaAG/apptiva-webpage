@@ -18,18 +18,32 @@ injectGlobal`
 
 html {
   font-size: 20px;
+  font-family: Gentona, sans-serif;
+  font-weight: 200;
 }
 
-body {
-  font-family: Gentona, sans-serif;
+p {
+  line-height: 1.3;
 }
 
 a {
   text-decoration: none;
 }
 
-p {
-  font-weight: 300;
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+pre {
+  padding: 1rem;
+  background-color: hsla(0, 0%, 0%, 0.02);
+  overflow-x: auto;
+  border: 1px #eee solid;
 }
 
 `
@@ -39,7 +53,7 @@ const TemplateWrapper = ({ children }) => (
     <div>
       <Helmet title="Home | Gatsby + Netlify CMS" />
       <Navbar />
-      {children()}
+      <Container>{children()}</Container>
     </div>
   </ThemeProvider>
 )
