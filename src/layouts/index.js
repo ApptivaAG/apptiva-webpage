@@ -47,6 +47,16 @@ pre {
   border: 1px #eee solid;
 }
 
+blockquote {
+  margin: 1rem;
+  background: #F8f8f8;
+  padding: 0 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.04) ;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04) ;
+  border-right: 1px solid rgba(0, 0, 0, 0.04) ;
+  border-left: 3px solid #008FD7;
+}
+
 svg {
   fill: currentColor;
 }
