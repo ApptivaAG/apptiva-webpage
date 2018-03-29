@@ -64,7 +64,7 @@ export const BlogPostTemplate = ({
     <section>
       {helmet || ''}
       <Header title={title} image={image} />
-      <Published author={author} date={date} />
+      {author && <Published author={author} date={date} />}
       <Description>{description}</Description>
       <PostContent content={content} />
     </section>
