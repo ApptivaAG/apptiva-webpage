@@ -8,7 +8,8 @@ import chevron from '../img/chevron.svg'
 const year = new Date().getFullYear()
 
 const Background = styled.div`
-  padding: 3rem 0;
+  margin-top: 6rem;
+  padding: 3rem 0 1rem;
   color: white;
   background-color: #3d525c;
   font-size: 0.8rem;
@@ -25,11 +26,12 @@ const Grid = Container.extend`
 
   @media (min-width: 860px) {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
       'about contact links'
       'about social links'
       'company company company';
-    grid-gap: 3rem;
+    grid-gap: 1rem 3rem;
   }
   ul {
     list-style-type: none;
@@ -71,6 +73,7 @@ const Links = styled.div`
   grid-area: links;
 `
 const Company = styled.div`
+  padding-top: 1rem;
   grid-area: company;
   text-align: center;
 `
@@ -91,11 +94,28 @@ const Footer = () => (
       <Contact>
         <h2>Kontakt</h2>
         <ul>
-          <li>Apptiva AG, Neuenkirchstrasse 19, 6203 Sempach Station</li>
-          <li>041 322 26 26</li>
-          <li>info@apptiva.ch</li>
-          <li>www.apptiva.ch</li>
+          <li>
+            <a
+              href="https://www.google.com/maps/place/Apptiva+AG/@47.1127346,8.192777,17z/data=!3m1!4b1!4m5!3m4!1s0x4790201d7af9f115:0xa30a7ef7decd53b5!8m2!3d47.112731!4d8.194971"
+              target="_blank"
+            >
+              Apptiva AG<br />Neuenkirchstrasse 19<br />6203 Sempach Station
+            </a>
+          </li>
+          <li>
+            <a href="tel:+41413222626" target="_blank">
+              041 322 26 26
+            </a>
+          </li>
+          <li>
+            <a href="mailto:info@apptiva.ch">info@apptiva.ch</a>
+          </li>
+          <li>
+            <Link to="/">www.apptiva.ch</Link>
+          </li>
         </ul>
+      </Contact>
+      <Social>
         <h2>Social Media</h2>
         <ul>
           <li>Twitter</li>
@@ -104,27 +124,31 @@ const Footer = () => (
           <li>Facebook</li>
           <li>Youtube</li>
         </ul>
-      </Contact>
+      </Social>
       <Links>
         <h2>Quick Links</h2>
         <ul>
           <li>
-            <Link to="/blog/">Aktuelle Themen</Link>
+            <Link to="/blog/">Blog</Link>
           </li>
           <li>Warum Sie mit uns zusammenarbeiten sollten</li>
           <li>
-            <a href="https://www.botfabrik.ch/">Die Botfabrik</a>
+            <a href="https://www.botfabrik.ch/" target="_blank">
+              Die Botfabrik
+            </a>
           </li>
           <li>
-            <a href="http://www.webkiste.ch/">Wie Webkiste</a>
+            <a href="http://www.webkiste.ch/" target="_blank">
+              Wie Webkiste
+            </a>
           </li>
           <li>
-            <a href="http://www.digitalenterprise.ch/">
+            <a href="http://www.digitalenterprise.ch/" target="_blank">
               Unser Partner Digital Enterprise
             </a>
           </li>
           <li>
-            <a href="http://www.lean-enterprise-app.com/">
+            <a href="http://www.lean-enterprise-app.com/" target="_blank">
               Das Manifest der Lean Enterprise App
             </a>
           </li>
