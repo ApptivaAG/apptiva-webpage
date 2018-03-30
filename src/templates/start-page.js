@@ -1,18 +1,9 @@
 import React from 'react'
+import Testimonials from '../components/Testimonials'
 
 export const StartPageTemplate = ({ image, title, testimonials }) => (
   <section>
-    <h2>{title}</h2>
-    {testimonials.edges.map(edge => {
-      const { logo, name, position, statement } = edge.node.frontmatter
-      return (
-        <div key={edge.node.id}>
-          <p>{name}</p>
-          <p>{position}</p>
-          <p>{statement}</p>
-        </div>
-      )
-    })}
+    <Testimonials testimonials={testimonials} />
   </section>
 )
 
@@ -39,18 +30,12 @@ export const startPageQuery = graphql`
       }
     }
     testimonials: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/data/" } }
+      filter: { frontmatter: { templateKey: { eq: "testimonial-data" } } }
     ) {
       edges {
         node {
           id
-          frontmatter {
-            templateKey
-            logo
-            name
-            position
-            statement
-          }
+          ...Testimonial_details
         }
       }
     }

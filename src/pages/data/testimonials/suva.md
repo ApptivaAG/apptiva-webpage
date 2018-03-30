@@ -1,6 +1,6 @@
 ---
 templateKey: 'testimonial-data'
-logo: /img/suva.png
+avatar: logos/suva.png
 statement: > 
     Das haben Sie super gemacht. Weiter so!
 name: Oliver Tillmann
