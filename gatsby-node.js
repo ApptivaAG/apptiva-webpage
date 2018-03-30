@@ -6,7 +6,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
   return graphql(`
     query {
-      allMarkdownRemark(limit: 1000) {
+      allMarkdownRemark(
+        limit: 1000
+        filter: { fileAbsolutePath: { regex: "/pages/" } }
+      ) {
         edges {
           node {
             id
