@@ -1,16 +1,22 @@
 import React from 'react'
+import Img from 'gatsby-image'
+
 import Testimonials from '../components/Testimonials'
 
 export const StartPageTemplate = ({ image, title, testimonials }) => (
-  <section>
+  <div>
+    <section>
+      <h1>{title}</h1>
+      <Img sizes={image.childImageSharp.sizes} />
+    </section>
     <Testimonials testimonials={testimonials} />
-  </section>
+  </div>
 )
 
 export default ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
-  console.log('testimonials', data.testimonials)
+  console.log('start page frontmatter', frontmatter)
 
   return (
     <StartPageTemplate
@@ -26,7 +32,13 @@ export const startPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        image
+        image {
+          childImageSharp {
+            sizes(maxWidth: 1920) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
       }
     }
     testimonials: allMarkdownRemark(
