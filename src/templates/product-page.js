@@ -12,7 +12,7 @@ export const ProductPageTemplate = ({
   main,
   testimonials,
   fullImage,
-  pricing,
+  pricing
 }) => (
   <section className="section section--gradient">
     <div className="container">
@@ -30,7 +30,7 @@ export const ProductPageTemplate = ({
                     boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
                     backgroundColor: '#f40',
                     color: 'white',
-                    padding: '1rem',
+                    padding: '1rem'
                   }}
                 >
                   {title}
@@ -86,7 +86,6 @@ export const ProductPageTemplate = ({
                   </div>
                 </div>
               </div>
-              <Testimonials testimonials={testimonials} />
               <div
                 className="full-width-image-container"
                 style={{ backgroundImage: `url(${fullImage})` }}
