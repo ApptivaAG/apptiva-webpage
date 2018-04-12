@@ -1,19 +1,13 @@
 import React from 'react'
-import Link from 'gatsby-link'
 
-export default class IndexPage extends React.Component {
-  render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+const IndexPage = () => (
+  <div>
+    <h1>Apptiva</h1>
+    <p>Willkomen auf der Webseite der Apptiva AG.</p>
+  </div>
+)
 
-    return (
-      <div>
-        <h1>Apptiva</h1>
-        <p>Willkomen auf der Webseite der Apptiva AG.</p>
-      </div>
-    )
-  }
-}
+export default IndexPage
 
 export const pageQuery = graphql`
   query IndexQuery {

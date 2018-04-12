@@ -2,7 +2,6 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import Content, { HTMLContent } from '../components/Content'
-import { Container } from '../layouts/style'
 
 const HeadArea = styled.div``
 
@@ -53,7 +52,7 @@ export const BlogPostTemplate = ({
   helmet,
   image,
   author,
-  date
+  date,
 }) => {
   const PostContent = contentComponent || Content
 
