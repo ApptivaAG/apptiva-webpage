@@ -33,6 +33,7 @@
     "serve": "gatsby serve",
     "format":
       "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
+    "lint": "eslint ./src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
