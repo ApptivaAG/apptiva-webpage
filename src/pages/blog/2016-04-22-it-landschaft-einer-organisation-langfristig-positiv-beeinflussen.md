@@ -2,8 +2,7 @@
 title: IT Landschaft einer Organisation langfristig positiv beeinflussen
 path: it-landschaft-einer-organisation-langfristig-positiv-beeinflussen
 templateKey: blog-post
-image: >-
-  http://apptiva.ch/wp-content/uploads/2016/04/photo-1428542352098-14267e544673.jpg
+image: 'http://apptiva.ch/wp-content/uploads/2016/04/photo-1428542352098-14267e544673.jpg'
 date: 2016-04-22T15:31:35.000Z
 author: linus-huesler
 description: ''

@@ -2,8 +2,7 @@
 title: Anwender im Vordergrund
 path: anwender-im-vordergrund
 templateKey: blog-post
-image: >-
-  http://apptiva.ch/wp-content/uploads/2015/07/photo-1428263138494-e8e56a91a02e.jpeg
+image: 'http://apptiva.ch/wp-content/uploads/2015/07/photo-1428263138494-e8e56a91a02e.jpeg'
 date: 2015-07-29T20:22:18.000Z
 author: philip-schoenholzer
 description: >-

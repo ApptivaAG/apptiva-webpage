@@ -96,7 +96,13 @@ export const pageQuery = graphql`
         date(formatString: "DD.MM.YYYY")
         title
         description
-        image
+        image {
+          childImageSharp {
+            sizes(maxWidth: 1920) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
         author
       }
     }

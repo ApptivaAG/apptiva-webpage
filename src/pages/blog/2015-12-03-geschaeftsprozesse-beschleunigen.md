@@ -2,8 +2,7 @@
 title: Geschäfts&shy;prozesse beschleunigen
 path: geschaeftsprozesse-beschleunigen
 templateKey: blog-post
-image: >-
-  http://apptiva.ch/wp-content/uploads/2015/12/photo-1436377734980-0ee004df570b.jpeg
+image: 'http://apptiva.ch/wp-content/uploads/2015/12/photo-1436377734980-0ee004df570b.jpeg'
 date: 2015-12-03T15:53:27.000Z
 author: philip-schoenholzer
 description: >-

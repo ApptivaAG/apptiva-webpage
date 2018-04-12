@@ -2,8 +2,7 @@
 title: Amazon Lambda zusammen mit dem Serverless Framework
 path: amazon-lambda-zusammen-mit-dem-serverless-framework
 templateKey: blog-post
-image: >-
-  http://apptiva.ch/wp-content/uploads/2017/07/serverless-application-development.jpg
+image: 'http://apptiva.ch/wp-content/uploads/2017/07/serverless-application-development.jpg'
 date: 2017-07-27T13:31:48.000Z
 author: linus-huesler
 description: >-
