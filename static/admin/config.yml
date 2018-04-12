@@ -19,6 +19,19 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
 
+  - name: "testimonials"
+    label: "Testimonials"
+    folder: "src/pages/data/testimonials"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "testimonial-data"}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Avatar", name: "avatar", widget: "image"}
+      - {label: "Position", name: "position", widget: "string"}
+      - {label: "Unternehmen", name: "company", widget: "string"}
+      - {label: "Statement", name: "statement", widget: "text"}
+  
   - name: "pages"
     label: "Pages"
     files:
