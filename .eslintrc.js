@@ -1,18 +1,18 @@
 module.exports = {
   env: {
     browser: true,
-    es6: true
+    es6: true,
   },
   extends: 'eslint:recommended',
   parserOptions: {
     ecmaFeatures: {
       experimentalObjectRestSpread: true,
-      jsx: true
+      jsx: true,
     },
-    sourceType: 'module'
+    sourceType: 'module',
   },
   globals: {
-    graphql: true
+    graphql: true,
   },
   plugins: ['react'],
   rules: {
@@ -27,8 +27,8 @@ module.exports = {
       'error',
       {
         after: true,
-        before: true
-      }
+        before: true,
+      },
     ],
     'block-scoped-var': 'error',
     'block-spacing': 'error',
@@ -42,8 +42,8 @@ module.exports = {
       'error',
       {
         after: true,
-        before: false
-      }
+        before: false,
+      },
     ],
     'comma-style': ['error', 'last'],
     complexity: 'error',
@@ -80,8 +80,8 @@ module.exports = {
       'error',
       {
         after: true,
-        before: true
-      }
+        before: true,
+      },
     ],
     'line-comment-position': 'error',
     'linebreak-style': ['error', 'unix'],
@@ -125,7 +125,7 @@ module.exports = {
     'no-implicit-coercion': 'error',
     'no-implicit-globals': 'error',
     'no-implied-eval': 'error',
-    'no-inline-comments': 'error',
+    'no-inline-comments': 'warn',
     'no-invalid-this': 'error',
     'no-iterator': 'error',
     'no-label-var': 'error',
@@ -188,6 +188,7 @@ module.exports = {
     'no-useless-constructor': 'error',
     'no-useless-rename': 'error',
     'no-useless-return': 'error',
+    'no-unused-vars': 'warn',
     'no-var': 'error',
     'no-void': 'error',
     'no-warning-comments': 'error',
@@ -243,6 +244,6 @@ module.exports = {
     'yield-star-spacing': 'error',
     yoda: ['error', 'never'],
     'react/jsx-uses-react': 'error',
-    'react/jsx-uses-vars': 'error'
-  }
+    'react/jsx-uses-vars': 'error',
+  },
 }

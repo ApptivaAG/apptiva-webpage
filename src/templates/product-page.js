@@ -123,13 +123,7 @@ export const productPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        image {
-          childImageSharp {
-            sizes(maxWidth: 1920) {
-              ...GatsbyImageSharpSizes
-            }
-          }
-        }
+        image
         heading
         description
         intro {

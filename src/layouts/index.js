@@ -5,12 +5,19 @@ import { ThemeProvider, injectGlobal } from 'styled-components'
 import styledNormalize from 'styled-normalize'
 
 import Navbar from '../components/Navbar'
+import Hero from '../components/Hero'
 import { fontFace } from './font-face'
 import { Container } from './style'
 import Footer from '../components/Footer'
 
 const theme = {
-  color: { primary: '#008fd7', secondary: '#81d742' }
+  color: { primary: '#008fd7', secondary: '#81d742' },
+}
+
+if (typeof window !== 'undefined') {
+  // make scroll behavior of internal links smooth
+  // eslint-disable-next-line global-require
+  require('smooth-scroll')('a[href*="#"]')
 }
 
 injectGlobal`
@@ -29,6 +36,10 @@ p {
 
 a {
   text-decoration: none;
+}
+
+h1 {
+  font-weight: 800;
 }
 
 .full-width {
@@ -63,10 +74,11 @@ svg {
 
 `
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = ({ children, location }) => (
   <ThemeProvider theme={theme}>
     <div>
       <Helmet title="Home | Gatsby + Netlify CMS" />
+      {location.pathname === '/' && <Hero />}
       <Navbar />
       <Container>{children()}</Container>
       <Footer />
@@ -75,7 +87,7 @@ const TemplateWrapper = ({ children }) => (
 )
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func
+  children: PropTypes.func,
 }
 
 export default TemplateWrapper

@@ -7,3 +7,12 @@ export const Container = styled.div`
   padding-right: 10px;
   padding-left: 10px;
 `
+
+export const FullWidth = styled.div`
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+`
