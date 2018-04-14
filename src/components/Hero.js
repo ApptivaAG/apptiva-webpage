@@ -1,7 +1,7 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import Link from 'gatsby-link'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 import heroImage from '../img/solution-collage.svg'
 import logoSlogan from '../img/logo-slogan.svg'
@@ -13,7 +13,9 @@ const Logo = styled.img`
   width: 10em;
 `
 const Section = styled.section`
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   overflow-x: hidden;
 `
 const Columns = styled.div`
@@ -30,6 +32,60 @@ const Teaser = styled.h1`
 `
 const Fat = styled.span`
   color: black;
+`
+const ArrowContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+`
+const Arrow = styled.a`
+  margin-bottom: 1.9rem;
+  padding: 0.5em 0.7em;
+  border-radius: 50%;
+  font-weight: 800;
+  color: white;
+  background-color: ${props => props.theme.color.primary};
+  transition: transform 30ms ease-out;
+  transform: translate3d(0, 0, 0);
+  overflow: hidden;
+
+  &:hover {
+    transform: translate3d(0, -1px, 0);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+  @media (max-width: 320px) {
+    display: none;
+  }
+`
+const Slide = keyframes`
+  from {
+    transform: translate3d(0,0,0);
+    opacity: 1;
+  }
+  53% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0;
+    transform: translate3d(0,2rem,0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0,2rem,0);
+    
+  }
+`
+const AnimatedArrow = styled.svg`
+  width: 1em;
+  height: 1em;
+  animation: ${Slide} 2s cubic-bezier(0.87, -0.24, 0.77, 0.34) infinite;
 `
 
 export default () => (
@@ -50,6 +106,18 @@ export default () => (
         </div>
       </Columns>
     </FullWidth>
+    <ArrowContainer>
+      <Arrow href="/#start">
+        <AnimatedArrow viewBox="0 0 16 10">
+          <path
+            d="M 2 2 L 8 8 L 14 2"
+            fill="transparent"
+            stroke="white"
+            strokeWidth="2"
+          />
+        </AnimatedArrow>
+      </Arrow>
+    </ArrowContainer>
   </Section>
 )
 

@@ -25,9 +25,10 @@ const shared = css`
   color: white;
   background-color: ${props => props.theme.color.primary};
   transition: transform 30ms ease-out;
+  transform: translate3d(0, 0, 0);
 
   &:hover {
-    transform: translateY(-1px);
+    transform: translate3d(0, -1px, 0);
   }
 
   &:active {

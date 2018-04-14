@@ -2,7 +2,7 @@ import React from 'react'
 
 const IndexPage = () => (
   <section>
-    <h1 id="offerte">Apptiva</h1>
+    <h1 id="start">Apptiva</h1>
     <p>Willkomen auf der Webseite der Apptiva AG.</p>
     <p>
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
@@ -26,6 +26,7 @@ const IndexPage = () => (
       Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
       sit amet.
     </p>
+    <h1 id="offerte">Offerte</h1>
     <p>
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
       eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
