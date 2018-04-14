@@ -70,7 +70,6 @@ module.exports = {
     'id-blacklist': 'error',
     'id-length': 'error',
     'id-match': 'error',
-    'implicit-arrow-linebreak': ['error', 'beside'],
     indent: 'off',
     'indent-legacy': 'off',
     'init-declarations': 'error',
