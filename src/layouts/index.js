@@ -17,7 +17,10 @@ const theme = {
 if (typeof window !== 'undefined') {
   // make scroll behavior of internal links smooth
   // eslint-disable-next-line global-require
-  require('smooth-scroll')('a[href*="#"]')
+  require('smooth-scroll')('a[href*="#"]', {
+    // integer or function returning an integer. How far to offset the scrolling anchor location in pixels
+    offset: 108,
+  })
 }
 
 injectGlobal`
