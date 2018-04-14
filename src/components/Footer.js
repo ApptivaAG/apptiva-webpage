@@ -8,7 +8,7 @@ import chevron from '../img/chevron.svg'
 const year = new Date().getFullYear()
 
 const Background = styled.footer`
-  margin-top: 6rem;
+  margin-top: 4rem;
   padding: 3rem 0 1rem;
   color: white;
   background-color: #3d525c;

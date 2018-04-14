@@ -11,15 +11,21 @@ import { Container } from './style'
 import Footer from '../components/Footer'
 
 const theme = {
-  color: { primary: '#008fd7', secondary: '#81d742' },
+  color: {
+    primary: '#008fd7',
+    secondary: '#81d742',
+    text: '#111',
+    bg: 'white',
+    darkBg: '#eee',
+  },
 }
 
 if (typeof window !== 'undefined') {
   // make scroll behavior of internal links smooth
-  // eslint-disable-next-line global-require
+  // eslint-disable-next-line global-require, no-undef
   require('smooth-scroll')('a[href*="#"]', {
     // integer or function returning an integer. How far to offset the scrolling anchor location in pixels
-    offset: 108,
+    offset: 156,
   })
 }
 
@@ -31,6 +37,7 @@ html {
   font-size: 20px;
   font-family: Gentona, sans-serif;
   font-weight: 200;
+  color: ${theme.color.text};
 }
 
 p {

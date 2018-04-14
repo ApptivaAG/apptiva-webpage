@@ -8,8 +8,9 @@ import logo from '../img/apptiva-logo.svg'
 const NavBar = styled.nav`
   position: sticky;
   top: 0;
-  bottom: 0;
   background-color: ${props => props.theme.color.primary};
+  z-index: 90;
+  overflow-x: hidden;
 `
 
 const Container = DefaultContainer.extend`
@@ -46,11 +47,12 @@ const Navbar = () => (
   <NavBar>
     <Container>
       <div>
-        <Link to="/#start">
+        <Link to="/">
           <Logo src={logo} alt="Apptiva" />
         </Link>
       </div>
       <div>
+        <NavItems to="/#dienstleistungen">Dienstleistungen</NavItems>
         <NavItems to="/products">Products</NavItems>
         <NavItems to="/blog">Blog</NavItems>
         <NavItems to="/about">About</NavItems>

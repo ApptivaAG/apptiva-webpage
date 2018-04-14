@@ -20,15 +20,27 @@ const Section = styled.section`
 `
 const Columns = styled.div`
   display: flex;
+  flex-wrap: wrap;
   margin-right: 10%;
 `
+const Col = styled.div`
+  flex: 3 3 18rem;
+  padding: 1rem;
+`
 const HeroImage = styled.img`
-  margin-right: 4rem;
+  flex: 4 1 20rem;
+  @media (min-width: 381px) {
+    margin-right: 3rem;
+  }
 `
 const Teaser = styled.h1`
   color: #aaa;
   margin: 0 0 2rem;
   max-width: 24rem;
+
+  @media (max-width: 380px) {
+    font-size: 1.4rem;
+  }
 `
 const Fat = styled.span`
   color: black;
@@ -39,6 +51,9 @@ const ArrowContainer = styled.div`
   justify-content: flex-end;
   align-items: center;
   flex: 1;
+  @media (max-width: 380px) {
+    display: none;
+  }
 `
 const Arrow = styled.a`
   margin-bottom: 1.9rem;
@@ -57,9 +72,6 @@ const Arrow = styled.a`
 
   &:active {
     transform: translateY(1px);
-  }
-  @media (max-width: 320px) {
-    display: none;
   }
 `
 const Slide = keyframes`
@@ -91,23 +103,23 @@ const AnimatedArrow = styled.svg`
 export default () => (
   <Section>
     <Logo src={logoSlogan} alt="Apptiva - Passgenaue Softwarelösungen" />
-    <FullWidth>
-      <Columns>
-        <HeroImage
-          src={heroImage}
-          alt="Erfolgreich umgesetzte Desktop, Mobile und Weblösungen"
-        />
-        <div>
-          <Teaser>
-            Hier kann schon bald Ihre{' '}
-            <Fat>iOS, Android, Desktop oder Web-Applikation</Fat> stehen.
-          </Teaser>
-          <Button href="/#offerte">Offerte anfordern</Button>
-        </div>
-      </Columns>
-    </FullWidth>
+
+    <Columns>
+      <HeroImage
+        src={heroImage}
+        alt="Erfolgreich umgesetzte Desktop, Mobile und Weblösungen"
+      />
+      <Col>
+        <Teaser>
+          Hier kann schon bald Ihre{' '}
+          <Fat>iOS, Android, Desktop oder Web-Applikation</Fat> stehen.
+        </Teaser>
+        <Button href="/#offerte">Offerte anfordern</Button>
+      </Col>
+    </Columns>
+
     <ArrowContainer>
-      <Arrow href="/#start">
+      <Arrow href="/#dienstleistungen">
         <AnimatedArrow viewBox="0 0 16 10">
           <path
             d="M 2 2 L 8 8 L 14 2"
