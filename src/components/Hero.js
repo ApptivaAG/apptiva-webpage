@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 import heroImage from '../img/solution-collage.svg'
 import logoSlogan from '../img/logo-slogan.svg'
-import { FullWidth, Container } from '../layouts/style'
+import { FullWidth, Container, Button } from '../layouts/style'
 
 const Logo = styled.img`
   margin: 3em 4rem 2em;
@@ -25,7 +25,7 @@ const HeroImage = styled.img`
 `
 const Teaser = styled.h1`
   color: #aaa;
-  margin: 0;
+  margin: 0 0 2rem;
   max-width: 24rem;
 `
 const Fat = styled.span`
@@ -46,7 +46,7 @@ export default () => (
             Hier kann schon bald Ihre{' '}
             <Fat>iOS, Android, Desktop oder Web-Applikation</Fat> stehen.
           </Teaser>
-          <a href="/#offerte">Offerte anfordern</a>
+          <Button href="/#offerte">Offerte anfordern</Button>
         </div>
       </Columns>
     </FullWidth>

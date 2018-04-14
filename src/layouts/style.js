@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+import React from 'react'
+import styled, { css } from 'styled-components'
 
 export const Container = styled.div`
   margin-right: auto;
@@ -16,3 +17,37 @@ export const FullWidth = styled.div`
   margin-left: -50vw;
   margin-right: -50vw;
 `
+const shared = css`
+  display: inline-block;
+  padding: 0.5em 1em;
+  border-radius: 0.1em;
+  font-weight: 600;
+  color: white;
+  background-color: ${props => props.theme.color.primary};
+  transition: transform 30ms ease-out;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+`
+const ButtonStyled = styled.button`
+  ${shared};
+`
+const AStyled = styled.a`
+  ${shared};
+`
+
+export const Button = ({ type, href, ...props }) => {
+  if (type && href) {
+    throw new Error('type and href are not possible')
+  }
+  return type ? (
+    <ButtonStyled type={type} {...props} />
+  ) : (
+    <AStyled href={href} {...props} />
+  )
+}
