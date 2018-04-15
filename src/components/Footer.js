@@ -98,12 +98,17 @@ const Footer = () => (
             <a
               href="https://www.google.com/maps/place/Apptiva+AG/@47.1127346,8.192777,17z/data=!3m1!4b1!4m5!3m4!1s0x4790201d7af9f115:0xa30a7ef7decd53b5!8m2!3d47.112731!4d8.194971"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Apptiva AG<br />Neuenkirchstrasse 19<br />6203 Sempach Station
             </a>
           </li>
           <li>
-            <a href="tel:+41413222626" target="_blank">
+            <a
+              href="tel:+41413222626"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               041 322 26 26
             </a>
           </li>
@@ -133,22 +138,38 @@ const Footer = () => (
           </li>
           <li>Warum Sie mit uns zusammenarbeiten sollten</li>
           <li>
-            <a href="https://www.botfabrik.ch/" target="_blank">
+            <a
+              href="https://www.botfabrik.ch/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Die Botfabrik
             </a>
           </li>
           <li>
-            <a href="http://www.webkiste.ch/" target="_blank">
+            <a
+              href="http://www.webkiste.ch/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Wie Webkiste
             </a>
           </li>
           <li>
-            <a href="http://www.digitalenterprise.ch/" target="_blank">
+            <a
+              href="http://www.digitalenterprise.ch/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Unser Partner Digital Enterprise
             </a>
           </li>
           <li>
-            <a href="http://www.lean-enterprise-app.com/" target="_blank">
+            <a
+              href="http://www.lean-enterprise-app.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Das Manifest der Lean Enterprise App
             </a>
           </li>
