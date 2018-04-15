@@ -14,7 +14,7 @@ const ColList = styled.ul`
 `
 const ListItem = styled.li`
   flex: 1;
-  padding: 0 1em;
+  padding: 0 1em 1em;
   text-align: center;
 
   a {
@@ -56,6 +56,7 @@ const ImageList = styled.div`
   img {
     flex: 0 1 6em;
     width: 100%;
+    max-width: 6em;
     height: 100%;
     padding: 1em;
   }

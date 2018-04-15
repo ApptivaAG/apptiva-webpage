@@ -23,12 +23,21 @@ const Columns = styled.div`
   flex-wrap: wrap;
   margin-right: 10%;
 `
-const Col = styled.div`
-  flex: 3 3 18rem;
-  padding: 1rem;
+const ColHero = styled.div`
+  flex: 6 1 24rem;
+  margin-right: 3rem;
+`
+const ColTeaser = styled.div`
+  flex: 1 1 18rem;
+  padding: 2rem 1rem;
 `
 const HeroImage = styled.img`
-  flex: 4 1 20rem;
+  /* flex: 4 1 24rem; */
+  height: 100%;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+
   @media (min-width: 381px) {
     margin-right: 3rem;
   }
@@ -105,17 +114,19 @@ export default () => (
     <Logo src={logoSlogan} alt="Apptiva - Passgenaue Softwarelösungen" />
 
     <Columns>
-      <HeroImage
-        src={heroImage}
-        alt="Erfolgreich umgesetzte Desktop, Mobile und Weblösungen"
-      />
-      <Col>
+      <ColHero>
+        <HeroImage
+          src={heroImage}
+          alt="Erfolgreich umgesetzte Desktop, Mobile und Weblösungen"
+        />
+      </ColHero>
+      <ColTeaser>
         <Teaser>
           Hier kann schon bald Ihre{' '}
           <Fat>iOS, Android, Desktop oder Web-Applikation</Fat> stehen.
         </Teaser>
         <Button href="/#offerte">Offerte anfordern</Button>
-      </Col>
+      </ColTeaser>
     </Columns>
 
     <ArrowContainer>
