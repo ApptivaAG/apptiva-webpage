@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import { Parallax } from 'react-spring'
 
 import { Title, Section, FullWidth, Container } from '../layouts/style'
 import styled from 'styled-components'
@@ -62,7 +63,7 @@ const ImageList = styled.div`
   }
 `
 
-const IndexPage = ({ testimonials }) => (
+const IndexPage = ({ testimonials, posts }) => (
   <div>
     <Section>
       <Title id="dienstleistungen">Dienst&shy;leistungen</Title>
@@ -144,13 +145,49 @@ const IndexPage = ({ testimonials }) => (
     </Section>
 
     <Testimonials testimonials={testimonials} />
+
+    <Section>
+      <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
+      {posts
+        .filter(post => post.node.frontmatter.templateKey === 'blog-post')
+        .map(({ node: post }) => (
+          <div
+            className="content"
+            style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
+            key={post.id}
+          >
+            <p>
+              <Link
+                className="has-text-primary"
+                to={`/${post.frontmatter.path}`}
+              >
+                {post.frontmatter.title}
+              </Link>
+              <span> &bull; </span>
+              <small>{post.frontmatter.date}</small>
+            </p>
+            <p>
+              {post.excerpt}
+              <br />
+              <br />
+              <Link
+                className="button is-small"
+                to={`/${post.frontmatter.path}`}
+              >
+                Keep Reading →
+              </Link>
+            </p>
+          </div>
+        ))}
+    </Section>
   </div>
 )
 
 export default ({ data }) => {
-  console.log('start page frontmatter', data.testimonials)
+  console.log('blog data', data.blogs)
+  const { edges: posts } = data.blogs
 
-  return <IndexPage testimonials={data.testimonials} />
+  return <IndexPage testimonials={data.testimonials} posts={posts} />
 }
 
 export const indexPageQuery = graphql`
@@ -162,6 +199,27 @@ export const indexPageQuery = graphql`
         node {
           id
           ...Testimonial_details
+        }
+      }
+    }
+    blogs: allMarkdownRemark(
+      limit: 3
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+    ) {
+      edges {
+        node {
+          excerpt(pruneLength: 400)
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            path
+            templateKey
+            date(formatString: "MMMM DD, YYYY")
+          }
         }
       }
     }
