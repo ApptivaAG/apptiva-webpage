@@ -16,7 +16,7 @@ const theme = {
     secondary: '#81d742',
     text: '#111',
     bg: 'white',
-    darkBg: '#eee',
+    darkBg: '#f6f6f6',
   },
 }
 
