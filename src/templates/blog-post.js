@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import Content, { HTMLContent } from '../components/Content'
@@ -44,6 +45,35 @@ const Published = ({ author, date }) => {
   )
 }
 
+const Navigation = ({ next, prev }) => {
+  const LayoutNavigation = styled.div`
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -0.5em;
+  `
+  const NavigationLinks = styled(Link)`
+    padding: 0.5em;
+    margin: 0.5em;
+    background-color: #eee;
+    border-radius: 0.2em;
+  `
+
+  return (
+    <LayoutNavigation>
+      {prev && (
+        <NavigationLinks to={prev.frontmatter.path}>
+          {prev.frontmatter.title}
+        </NavigationLinks>
+      )}
+      {next && (
+        <NavigationLinks to={next.frontmatter.path}>
+          {next.frontmatter.title}
+        </NavigationLinks>
+      )}
+    </LayoutNavigation>
+  )
+}
+
 export const BlogPostTemplate = ({
   content,
   contentComponent,
@@ -53,6 +83,7 @@ export const BlogPostTemplate = ({
   image,
   author,
   date,
+  navigation,
 }) => {
   const PostContent = contentComponent || Content
 
@@ -66,6 +97,7 @@ export const BlogPostTemplate = ({
       <Description>{description}</Description>
       {author && <Published author={author} date={date} />}
       <PostContent content={content} />
+      <Navigation next={navigation.next} prev={navigation.prev} />
     </section>
   )
 }
@@ -83,6 +115,7 @@ export default props => {
       author={post.frontmatter.author}
       image={post.frontmatter.image}
       date={post.frontmatter.date}
+      navigation={props.pathContext}
     />
   )
 }
