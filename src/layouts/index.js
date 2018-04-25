@@ -82,6 +82,10 @@ svg {
   fill: currentColor;
 }
 
+iframe {
+  border: 0;
+}
+
 `
 
 const TemplateWrapper = ({ children, location }) => (

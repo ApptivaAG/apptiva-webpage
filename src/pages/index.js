@@ -2,28 +2,30 @@ import React from 'react'
 import Link from 'gatsby-link'
 import { Parallax } from 'react-spring'
 
-import { Title, Section, FullWidth, Container } from '../layouts/style'
+import { Title, Section, FullWidth, Container, Button, Centered } from '../layouts/style'
 import styled from 'styled-components'
 import Testimonials from '../components/Testimonials'
 
 const ColList = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -1em 4em;
+  margin: 0 -1em 2em;
   padding: 0;
   list-style: none;
 `
 const ListItem = styled.li`
   flex: 1;
   padding: 0 1em 1em;
-  text-align: center;
+  text-align: ${props => props.align ? props.align : 'center'};;
 
   a {
     display: block;
-    padding: 1em;
+    height: 100%;
+    padding: ${props => props.full ? 0 : '1em'};
     border: 1px solid lightgray;
     border-radius: 0.2em;
     color: ${props => props.theme.color.text};
+    overflow: hidden;
 
     &:hover {
       color: ${props => props.theme.color.bg}
@@ -32,7 +34,7 @@ const ListItem = styled.li`
   }
 
   h2, h3, h4 {
-    margin: .1em;
+    margin: .1em ${props => props.full ? '1rem' : 0};
   }
   h3 {
     font-size: 1em;
@@ -45,7 +47,12 @@ const ListItem = styled.li`
 
   img {
     width: 100%;
-    margin-top: 1em;
+    margin-top: ${props => props.full ? 0 : '1rem'};;
+  }
+
+  p {
+    line-height: 1.2;
+    margin: 1em ${props => props.full ? '1rem' : 0}
   }
 `
 const ImageList = styled.div`
@@ -61,6 +68,9 @@ const ImageList = styled.div`
     height: 100%;
     padding: 1em;
   }
+`
+const Blockquote = styled.blockquote`
+  margin-top: 4em;
 `
 
 const IndexPage = ({ testimonials, posts }) => (
@@ -102,7 +112,7 @@ const IndexPage = ({ testimonials, posts }) => (
           </Link>
         </ListItem>
       </ColList>
-      <blockquote>
+      <Blockquote>
         <h3>Unsere Spezialität</h3>
         <p>
           Das Erstellen von individuellen Softwarelösungen ist unsere
@@ -112,7 +122,7 @@ const IndexPage = ({ testimonials, posts }) => (
           schlanke und passgenaue Lösungen: „Lean Enterprise Apps“. Unsere Apps
           füllen die Lücken, die Standardsoftware nicht füllen kann.
         </p>
-      </blockquote>
+      </Blockquote>
     </Section>
 
     <Section dark>
@@ -147,38 +157,32 @@ const IndexPage = ({ testimonials, posts }) => (
     <Testimonials testimonials={testimonials} />
 
     <Section>
-      <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
-      {posts
-        .filter(post => post.node.frontmatter.templateKey === 'blog-post')
-        .map(({ node: post }) => (
-          <div
-            className="content"
-            style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
-            key={post.id}
-          >
-            <p>
-              <Link
-                className="has-text-primary"
-                to={`/${post.frontmatter.path}`}
-              >
-                {post.frontmatter.title}
-              </Link>
-              <span> &bull; </span>
-              <small>{post.frontmatter.date}</small>
-            </p>
+      <Title id="blog">Blog</Title>
+
+              <ColList>
+      {posts.map(({ node: post }) => (
+        <ListItem key={post.id} full align="left">
+          <Link to={`/${post.frontmatter.path}`}>
+            <img src={post.frontmatter.image} alt="Post image"/>
+            <h2>
+              {post.frontmatter.title}
+            </h2>
+            <h4>{post.frontmatter.date}</h4>
             <p>
               {post.excerpt}
-              <br />
-              <br />
-              <Link
-                className="button is-small"
-                to={`/${post.frontmatter.path}`}
-              >
-                Keep Reading →
-              </Link>
             </p>
-          </div>
-        ))}
+          </Link>
+        </ListItem>
+      ))}
+      </ColList>
+      <Centered>
+        <Button to="/blog/">Zum Apptiva Blog</Button>
+      </Centered>
+    </Section>
+    <Section>
+    <FullWidth>
+      <iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Apptiva AG, Neuenkirchstrasse 19, Sempach Station&amp;hl=de&amp;geocode=+&amp;hnear=Apptiva AG+Neuenkirchstrasse 19,+Sempach Station&amp;t=m&amp;z=10&amp;iwloc=A&amp;output=embed" width="100%" height="550px" frameborder="0"></iframe>
+    </FullWidth>
     </Section>
   </div>
 )
@@ -209,7 +213,7 @@ export const indexPageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 400)
+          excerpt(pruneLength: 140)
           id
           fields {
             slug
@@ -217,7 +221,7 @@ export const indexPageQuery = graphql`
           frontmatter {
             title
             path
-            templateKey
+            image
             date(formatString: "MMMM DD, YYYY")
           }
         }
