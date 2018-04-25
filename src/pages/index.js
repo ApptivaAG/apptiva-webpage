@@ -5,6 +5,7 @@ import { Parallax } from 'react-spring'
 import { Title, Section, FullWidth, Container, Button, Centered } from '../layouts/style'
 import styled from 'styled-components'
 import Testimonials from '../components/Testimonials'
+import Employees from '../components/Employees';
 
 const ColList = styled.ul`
   display: flex;
@@ -80,7 +81,7 @@ const Blockquote = styled.blockquote`
   margin-top: 4em;
 `
 
-const IndexPage = ({ testimonials, posts }) => (
+const IndexPage = ({ testimonials, posts, employees }) => (
   <div>
     <Section>
       <Title id="dienstleistungen">Dienst&shy;leistungen</Title>
@@ -163,6 +164,8 @@ const IndexPage = ({ testimonials, posts }) => (
 
     <Testimonials testimonials={testimonials} />
 
+    <Employees employees={employees} />
+
     <Section dark>
       <Title id="blog">Blog</Title>
 
@@ -188,7 +191,7 @@ const IndexPage = ({ testimonials, posts }) => (
     </Section>
     <Section >
     <FullWidth>
-      <iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Apptiva AG, Neuenkirchstrasse 19, Sempach Station&amp;hl=de&amp;geocode=+&amp;hnear=Apptiva AG+Neuenkirchstrasse 19,+Sempach Station&amp;t=m&amp;z=10&amp;iwloc=A&amp;output=embed" width="100%" height="550px" frameborder="0"></iframe>
+      <iframe scrolling="no" marginHeight="0" marginWidth="0" src="https://maps.google.com/maps?q=Apptiva AG, Neuenkirchstrasse 19, Sempach Station&amp;hl=de&amp;geocode=+&amp;hnear=Apptiva AG+Neuenkirchstrasse 19,+Sempach Station&amp;t=m&amp;z=10&amp;iwloc=A&amp;output=embed" width="100%" height="550px" frameBorder="0"></iframe>
     </FullWidth>
     </Section>
   </div>
@@ -198,7 +201,7 @@ export default ({ data }) => {
   console.log('blog data', data.blogs)
   const { edges: posts } = data.blogs
 
-  return <IndexPage testimonials={data.testimonials} posts={posts} />
+  return <IndexPage testimonials={data.testimonials} posts={posts} employees={data.employees}/>
 }
 
 export const indexPageQuery = graphql`
@@ -210,6 +213,16 @@ export const indexPageQuery = graphql`
         node {
           id
           ...Testimonial_details
+        }
+      }
+    }
+    employees: allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "employee-data" } } }
+    ) {
+      edges {
+        node {
+          id
+          ...Employee_details
         }
       }
     }
