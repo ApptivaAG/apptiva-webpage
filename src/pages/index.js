@@ -16,7 +16,7 @@ const ColList = styled.ul`
 const ListItem = styled.li`
   flex: 1;
   padding: 0 1em 1em;
-  text-align: ${props => props.align ? props.align : 'center'};;
+  text-align: ${props => props.align ? props.align : 'center'};
 
   a {
     display: block;
@@ -25,11 +25,16 @@ const ListItem = styled.li`
     border: 1px solid lightgray;
     border-radius: 0.2em;
     color: ${props => props.theme.color.text};
+    background-color: ${props => props.theme.color.bg};
     overflow: hidden;
 
     &:hover {
-      color: ${props => props.theme.color.bg}
+      color: ${props => props.theme.color.bg};
       background-color: ${props => props.theme.color.primary};
+
+      img {
+        transform: scale(1.1);
+      }
     }
   }
 
@@ -47,7 +52,9 @@ const ListItem = styled.li`
 
   img {
     width: 100%;
-    margin-top: ${props => props.full ? 0 : '1rem'};;
+    margin-top: ${props => props.full ? 0 : '1rem'};
+    margin-bottom: ${props => props.full ? '.6rem' : 0};
+    transition: transform .3s;
   }
 
   p {
@@ -156,7 +163,7 @@ const IndexPage = ({ testimonials, posts }) => (
 
     <Testimonials testimonials={testimonials} />
 
-    <Section>
+    <Section dark>
       <Title id="blog">Blog</Title>
 
               <ColList>
@@ -179,7 +186,7 @@ const IndexPage = ({ testimonials, posts }) => (
         <Button to="/blog/">Zum Apptiva Blog</Button>
       </Centered>
     </Section>
-    <Section>
+    <Section >
     <FullWidth>
       <iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Apptiva AG, Neuenkirchstrasse 19, Sempach Station&amp;hl=de&amp;geocode=+&amp;hnear=Apptiva AG+Neuenkirchstrasse 19,+Sempach Station&amp;t=m&amp;z=10&amp;iwloc=A&amp;output=embed" width="100%" height="550px" frameborder="0"></iframe>
     </FullWidth>
