@@ -34,12 +34,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     const edges = result.data.allMarkdownRemark.edges
 
     edges.forEach(({ node }, index) => {
-      // const none = {
-      //   id:
-      //     '/Users/philipschonholzer/Development/apptiva-website/src/pages/blog/2015-07-08-der-digitale-wandel.md absPath of file >>> MarkdownRemark',
-      //   fields: [Object],
-      //   frontmatter: [Object],
-      // }
       const prev = index === 0 ? false : edges[index - 1].node
       const next = index === edges.length - 1 ? false : edges[index + 1].node
       const id = node.id
