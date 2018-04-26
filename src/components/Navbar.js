@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import { Container as DefaultContainer } from '../layouts/style'
 import logo from '../img/apptiva-logo.svg'
@@ -24,8 +24,7 @@ const Logo = styled.img`
   height: 2.1rem;
   padding: 1rem 0;
 `
-
-const NavItems = styled(Link)`
+const shared = css`
   display: inline-block;
   font-size: 1.1rem;
   font-weight: 500;
@@ -42,20 +41,40 @@ const NavItems = styled(Link)`
     color: ${props => props.theme.color.secondary};
   }
 `
+const NavItemsLink = styled(Link)`
+  ${shared};
+`
+const NavItemsA = styled.a`
+  ${shared};
+`
 
-const Navbar = () => (
+const DynLink = ({ type, nav, ...props }) =>
+  type === 'root' ? (
+    <NavItemsA href={nav} {...props} />
+  ) : (
+    <NavItemsLink to={nav} {...props} />
+  )
+
+const Navbar = ({ location }) => (
   <NavBar>
     <Container>
       <div>
-        <Link to="/">
+        <DynLink type={location} nav="/#start">
           <Logo src={logo} alt="Apptiva" />
-        </Link>
+        </DynLink>
       </div>
+
       <div>
-        <NavItems to="/#dienstleistungen">Dienstleistungen</NavItems>
-        <NavItems to="/products">Products</NavItems>
-        <NavItems to="/blog">Blog</NavItems>
-        <NavItems to="/about">About</NavItems>
+        <DynLink type={location} nav="/#dienstleistungen">
+          Dienstleistungen
+        </DynLink>
+        <DynLink type={location} nav="/#team">
+          Team
+        </DynLink>
+        <DynLink type={location} nav="/#blog">
+          Blog
+        </DynLink>
+        <NavItemsLink to="/about">About</NavItemsLink>
       </div>
     </Container>
   </NavBar>

@@ -108,7 +108,7 @@ const AnimatedArrow = styled.svg`
 `
 
 export default () => (
-  <Section>
+  <Section id="start">
     <Logo src={logoSlogan} alt="Apptiva - Passgenaue Softwarelösungen" />
 
     <Columns>

@@ -102,7 +102,7 @@ const TemplateWrapper = ({ children, location }) => (
     <div>
       <Helmet title="Apptiva AG - iOS, Android, Desktop und Web-Applikationen" />
       {location.pathname === '/' && <Hero />}
-      <Navbar />
+      {location.pathname === '/' ? <Navbar location="root" /> : <Navbar />}
       <Container>{children()}</Container>
       <Footer />
     </div>
