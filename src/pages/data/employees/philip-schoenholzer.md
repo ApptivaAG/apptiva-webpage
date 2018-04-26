@@ -1,15 +1,15 @@
 ---
 templateKey: employee-data
-path: /roman-schaller
-name: Roman Schaller
-claim: Wissensschaffender Technologe
-avatar: images/roman-schaller.jpg
+path: /philip-schoenholzer
+name: Philip Schönholzer
+claim: Vorauszeichnender Querdenker
+avatar: images/philip-schoenholzer.jpg
 function: Softwareentwickler und -architekt
 education: Informatik FH
 slogan: Es gibt nicht genug gute Software auf der Welt. Daran möchte ich etwas ändern.
 contact:
   tel: +41 78 909 82 44
-  mail: roman.schaller@apptiva.ch
+  mail: philip.schoenholzer@apptiva.ch
   twitter: romixch
   xing: https://www.xing.com/profile/Markus_Tanner2
   linkedin: https://www.xing.com/profile/Markus_Tanner2

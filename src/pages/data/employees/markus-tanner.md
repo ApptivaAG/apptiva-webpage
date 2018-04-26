@@ -1,5 +1,6 @@
 ---
 templateKey: employee-data
+path: /markus-tanner
 name: Markus Tanner
 claim: Überlegender Gipfelstürmer
 avatar: images/markus-tanner.jpg
@@ -9,7 +10,7 @@ slogan: Es gibt nicht genug gute Software auf der Welt. Daran möchte ich etwas 
 contact:
   tel: +41 78 909 82 44
   mail: markus.tanner@apptiva.ch
-  twitter: '@mactanners'
+  twitter: mactanners
   xing: https://www.xing.com/profile/Markus_Tanner2
   linkedin: https://www.xing.com/profile/Markus_Tanner2
 skills:

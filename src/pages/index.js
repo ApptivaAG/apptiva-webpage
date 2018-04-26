@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { Parallax } from 'react-spring'
 
 import { Title, Section, FullWidth, Container, Button, Centered } from '../layouts/style'
 import styled from 'styled-components'
@@ -198,7 +197,7 @@ const IndexPage = ({ testimonials, posts, employees }) => (
 )
 
 export default ({ data }) => {
-  console.log('blog data', data.blogs)
+  console.log('blog data', data.employees)
   const { edges: posts } = data.blogs
 
   return <IndexPage testimonials={data.testimonials} posts={posts} employees={data.employees}/>
@@ -217,6 +216,7 @@ export const indexPageQuery = graphql`
       }
     }
     employees: allMarkdownRemark(
+      sort: {order: ASC, fields: [frontmatter___name] }
       filter: { frontmatter: { templateKey: { eq: "employee-data" } } }
     ) {
       edges {
