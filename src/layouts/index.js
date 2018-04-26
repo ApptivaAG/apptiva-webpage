@@ -87,12 +87,20 @@ iframe {
   border: 0;
 }
 
+.gatsby-resp-image-wrapper {
+  transition: transform .3s;
+
+  &:hover {
+    transform: scale(1.06);
+  }
+}
+
 `
 
 const TemplateWrapper = ({ children, location }) => (
   <ThemeProvider theme={theme}>
     <div>
-      <Helmet title="Home | Gatsby + Netlify CMS" />
+      <Helmet title="Apptiva AG - iOS, Android, Desktop und Web-Applikationen" />
       {location.pathname === '/' && <Hero />}
       <Navbar />
       <Container>{children()}</Container>

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Apptiva AG'
+    title: 'Apptiva AG',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -9,15 +9,15 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/pages`,
-        name: 'pages'
-      }
+        name: 'pages',
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/img`,
-        name: 'images'
-      }
+        name: 'images',
+      },
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
@@ -31,17 +31,17 @@ module.exports = {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 590
-            }
-          }
-        ]
-      }
+              maxWidth: 800,
+            },
+          },
+        ],
+      },
     },
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
-        modulePath: `${__dirname}/src/cms/cms.js`
-      }
-    }
-  ]
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
+  ],
 }

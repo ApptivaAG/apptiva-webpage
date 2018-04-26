@@ -2,7 +2,7 @@
 title: Wir sind in die Startup Station umgezogen
 path: wir-sind-in-die-startup-station-umgezogen
 templateKey: blog-post
-image: 'http://apptiva.ch/wp-content/uploads/2018/02/buero_innen_02_.jpg'
+image: img/buero_innen_02_.jpg
 date: 2018-02-06T20:16:49.000Z
 author: philip-schoenholzer
 description: ''
@@ -10,7 +10,8 @@ categories:
   - Allgemein
 ---
 
-<h2>Wir haben neue Büroräumlichkeiten bezogen!</h2>
+## Wir haben neue Büroräumlichkeiten bezogen!
+
 Neu findet man die Apptiva AG in Sempach Station in der Startup Station.
 
 Die Startup Station bietet Startups flexible Räumlichkeiten zu interessanten Konditionen. Unsere Beweggründe waren aber weniger die interessanten Konditionen, sondern die Möglichkeit uns intensiver mit anderen Startups auszutauschen und Synergien zu nutzen.
@@ -21,11 +22,21 @@ Inzwischen sind wir bereits einige Wochen hier und haben uns sehr gut eingelebt.
 
 &nbsp;
 
-<a href="https://apptiva.ch/wp-content/uploads/2018/02/buero_innen_04_.jpg"><img src="https://apptiva.ch/wp-content/uploads/2018/02/buero_innen_04_-350x120.jpg" alt="" width="350" height="120" class="alignnone wp-image-2834 size-timeline-express" /></a> <a href="https://apptiva.ch/wp-content/uploads/2018/02/buero_innen_05_.jpg"><img src="https://apptiva.ch/wp-content/uploads/2018/02/buero_innen_05_-350x120.jpg" alt="" width="350" height="120" class="alignnone wp-image-2835 size-timeline-express" /></a> <a href="https://apptiva.ch/wp-content/uploads/2018/02/gebaeude.jpg"><img src="https://apptiva.ch/wp-content/uploads/2018/02/gebaeude-350x120.jpg" alt="" width="350" height="120" class="alignnone wp-image-2836 size-timeline-express" /></a> <a href="https://apptiva.ch/wp-content/uploads/2018/02/buero_innen_03.jpg"><img src="https://apptiva.ch/wp-content/uploads/2018/02/buero_innen_03-350x120.jpg" alt="" width="350" height="120" class="alignnone size-timeline-express wp-image-2839" /></a>
+<div style="display: inline-block; width:350px; height:120px; overflow: hidden;">
+  <img src="img/buero_innen_04.jpg" alt="" />
+</div>
+<div style="display: inline-block; width:350px; height:120px; overflow: hidden;">
+  <img src="./img/buero_innen_05.jpg" alt="" />
+</div> 
+<div style="display: inline-block; width:350px; height:120px; overflow: hidden;">
+  <img src="./img/gebaeude.jpg" alt="" />
+</div>
+<div style="display: inline-block; width:350px; height:120px; overflow: hidden;">
+  <img src="./img/buero_innen_03.jpg" alt=""/>
+</div>
 
-<h3>Unsere neue Adresse lautet</h3>
-Apptiva AG
-Neuenkirchstrasse 19
-Sempach Station
+### Unsere neue Adresse lautet
 
-<a href="https://apptiva.ch/wp-content/uploads/2018/02/buero_innen_03.jpg"></a>
+Apptiva AG<br/>
+Neuenkirchstrasse 19<br/>
+Sempach Station<br/>

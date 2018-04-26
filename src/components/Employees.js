@@ -65,7 +65,6 @@ const Contact = styled.div`
 `
 
 export default ({ employees }) => {
-  console.log('Employees', employees)
   return (
     <Section>
       <Title>Team</Title>

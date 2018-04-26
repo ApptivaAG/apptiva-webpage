@@ -1,10 +1,18 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Img from 'gatsby-image'
 
-import { Title, Section, FullWidth, Container, Button, Centered } from '../layouts/style'
+import {
+  Title,
+  Section,
+  FullWidth,
+  Container,
+  Button,
+  Centered,
+} from '../layouts/style'
 import styled from 'styled-components'
 import Testimonials from '../components/Testimonials'
-import Employees from '../components/Employees';
+import Employees from '../components/Employees'
 
 const ColList = styled.ul`
   display: flex;
@@ -13,15 +21,18 @@ const ColList = styled.ul`
   padding: 0;
   list-style: none;
 `
+const ImgStyled = styled(Img)`
+  transition: transform 0.3s;
+`
 const ListItem = styled.li`
   flex: 1;
   padding: 0 1em 1em;
-  text-align: ${props => props.align ? props.align : 'center'};
+  text-align: ${props => (props.align ? props.align : 'center')};
 
   a {
     display: block;
     height: 100%;
-    padding: ${props => props.full ? 0 : '1em'};
+    padding: ${props => (props.full ? 0 : '1em')};
     border: 1px solid lightgray;
     border-radius: 0.2em;
     color: ${props => props.theme.color.text};
@@ -32,34 +43,34 @@ const ListItem = styled.li`
       color: ${props => props.theme.color.bg};
       background-color: ${props => props.theme.color.primary};
 
-      img {
-        transform: scale(1.1);
+      ${ImgStyled} {
+        transform: scale(1.06);
       }
     }
   }
 
-  h2, h3, h4 {
-    margin: .1em ${props => props.full ? '1rem' : 0};
+  h2,
+  h3,
+  h4 {
+    margin: 0.1em ${props => (props.full ? '1rem' : 0)};
   }
   h3 {
     font-size: 1em;
     font-weight: 300;
   }
   h4 {
-    font-size: .8em;
+    font-size: 0.8em;
     font-weight: 300;
   }
 
-  img {
-    width: 100%;
-    margin-top: ${props => props.full ? 0 : '1rem'};
-    margin-bottom: ${props => props.full ? '.6rem' : 0};
-    transition: transform .3s;
+  ${ImgStyled} {
+    margin-top: ${props => (props.full ? 0 : '1rem')};
+    margin-bottom: ${props => (props.full ? '.6rem' : 0)};
   }
 
   p {
     line-height: 1.2;
-    margin: 1em ${props => props.full ? '1rem' : 0}
+    margin: 1em ${props => (props.full ? '1rem' : 0)};
   }
 `
 const ImageList = styled.div`
@@ -80,7 +91,7 @@ const Blockquote = styled.blockquote`
   margin-top: 4em;
 `
 
-const IndexPage = ({ testimonials, posts, employees }) => (
+const IndexPage = ({ testimonials, posts, employees, images }) => (
   <div>
     <Section>
       <Title id="dienstleistungen">Dienst&shy;leistungen</Title>
@@ -90,8 +101,9 @@ const IndexPage = ({ testimonials, posts, employees }) => (
             <h3>Individuelle Entwicklung</h3>
             <h2>App-Lösungen</h2>
             <h4>Mobile und Desktop</h4>
-            <img
-              src="https://apptiva.ch/wp-content/uploads/2015/06/Apps-1024x737.png"
+            <ImgStyled
+              style={{ width: '100%' }}
+              sizes={images.edges[0].node.sizes}
               alt="Apps"
             />
           </Link>
@@ -101,8 +113,9 @@ const IndexPage = ({ testimonials, posts, employees }) => (
             <h3>Individuelle Entwicklung</h3>
             <h2>App-Lösungen</h2>
             <h4>Mobile und Desktop</h4>
-            <img
-              src="https://apptiva.ch/wp-content/uploads/2015/06/Apps-1024x737.png"
+            <ImgStyled
+              style={{ width: '100%' }}
+              sizes={images.edges[0].node.sizes}
               alt="Apps"
             />
           </Link>
@@ -112,8 +125,9 @@ const IndexPage = ({ testimonials, posts, employees }) => (
             <h3>Individuelle Entwicklung</h3>
             <h2>App-Lösungen</h2>
             <h4>Mobile und Desktop</h4>
-            <img
-              src="https://apptiva.ch/wp-content/uploads/2015/06/Apps-1024x737.png"
+            <ImgStyled
+              style={{ width: '100%' }}
+              sizes={images.edges[0].node.sizes}
               alt="Apps"
             />
           </Link>
@@ -168,39 +182,54 @@ const IndexPage = ({ testimonials, posts, employees }) => (
     <Section dark>
       <Title id="blog">Blog</Title>
 
-              <ColList>
-      {posts.map(({ node: post }) => (
-        <ListItem key={post.id} full align="left">
-          <Link to={`/${post.frontmatter.path}`}>
-            <img src={post.frontmatter.image} alt="Post image"/>
-            <h2>
-              {post.frontmatter.title}
-            </h2>
-            <h4>{post.frontmatter.date}</h4>
-            <p>
-              {post.excerpt}
-            </p>
-          </Link>
-        </ListItem>
-      ))}
+      <ColList>
+        {posts.map(({ node: post }) => (
+          <ListItem key={post.id} full align="left">
+            <Link to={`/${post.frontmatter.path}`}>
+              <ImgStyled
+                style={{ width: '100%' }}
+                resolutions={post.frontmatter.image.childImageSharp.resolutions}
+                alt="Post image"
+              />
+              <h2>{post.frontmatter.title}</h2>
+              <h4>{post.frontmatter.date}</h4>
+              <p>{post.excerpt}</p>
+            </Link>
+          </ListItem>
+        ))}
       </ColList>
       <Centered>
         <Button to="/blog/">Zum Apptiva Blog</Button>
       </Centered>
     </Section>
-    <Section >
-    <FullWidth>
-      <iframe scrolling="no" marginHeight="0" marginWidth="0" src="https://maps.google.com/maps?q=Apptiva AG, Neuenkirchstrasse 19, Sempach Station&amp;hl=de&amp;geocode=+&amp;hnear=Apptiva AG+Neuenkirchstrasse 19,+Sempach Station&amp;t=m&amp;z=10&amp;iwloc=A&amp;output=embed" width="100%" height="550px" frameBorder="0"></iframe>
-    </FullWidth>
+    <Section>
+      <FullWidth>
+        <iframe
+          scrolling="no"
+          marginHeight="0"
+          marginWidth="0"
+          src="https://maps.google.com/maps?q=Apptiva AG, Neuenkirchstrasse 19, Sempach Station&amp;hl=de&amp;geocode=+&amp;hnear=Apptiva AG+Neuenkirchstrasse 19,+Sempach Station&amp;t=m&amp;z=10&amp;iwloc=A&amp;output=embed"
+          width="100%"
+          height="550px"
+          frameBorder="0"
+        />
+      </FullWidth>
     </Section>
   </div>
 )
 
 export default ({ data }) => {
-  console.log('blog data', data.employees)
+  console.log('index data', data)
   const { edges: posts } = data.blogs
 
-  return <IndexPage testimonials={data.testimonials} posts={posts} employees={data.employees}/>
+  return (
+    <IndexPage
+      testimonials={data.testimonials}
+      posts={posts}
+      employees={data.employees}
+      images={data.images}
+    />
+  )
 }
 
 export const indexPageQuery = graphql`
@@ -216,7 +245,7 @@ export const indexPageQuery = graphql`
       }
     }
     employees: allMarkdownRemark(
-      sort: {order: ASC, fields: [frontmatter___name] }
+      sort: { order: ASC, fields: [frontmatter___name] }
       filter: { frontmatter: { templateKey: { eq: "employee-data" } } }
     ) {
       edges {
@@ -241,11 +270,34 @@ export const indexPageQuery = graphql`
           frontmatter {
             title
             path
-            image
+            image {
+              childImageSharp {
+                resolutions(height: 150, width: 300) {
+                  ...GatsbyImageSharpResolutions
+                }
+              }
+            }
             date(formatString: "MMMM DD, YYYY")
+          }
+        }
+      }
+    }
+    images: allImageSharp(filter: { id: { regex: "/apps/" } }) {
+      edges {
+        node {
+          sizes {
+            ...GatsbyImageSharpSizes
           }
         }
       }
     }
   }
 `
+
+// {
+//   childImageSharp {
+//     resolutions(height: 150, width: 300) {
+//       ...GatsbyImageSharpResolutions
+//     }
+//   }
+// }

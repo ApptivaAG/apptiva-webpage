@@ -1,14 +1,11 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import Content, { HTMLContent } from '../components/Content'
 
 const HeadArea = styled.div``
-
-const HeadImage = styled.img`
-  width: 100%;
-`
 
 const HeaderTitle = styled.h1`
   font-size: 4rem;
@@ -20,7 +17,7 @@ const HeaderTitle = styled.h1`
 const Header = ({ title, image }) => (
   <HeadArea>
     <HeaderTitle>{title}</HeaderTitle>
-    <HeadImage src={image} />
+    <Img style={{ width: '100%' }} sizes={image.childImageSharp.sizes} />
   </HeadArea>
 )
 
@@ -129,9 +126,23 @@ export const pageQuery = graphql`
         date(formatString: "DD.MM.YYYY")
         title
         description
-        image
+        image {
+          childImageSharp {
+            sizes {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
         author
       }
     }
   }
 `
+
+// {
+//   childImageSharp {
+//     sizes {
+//       ...GatsbyImageSharpSizes
+//     }
+//   }
+// }
