@@ -25,7 +25,7 @@ export const EmployeePageTemplate = ({
       {helmet || ''}
       <h1>{name}</h1>
       <h2>{claim}</h2>
-      <Img sizes={avatar.childImageSharp.resolutions} />
+      <Img style={{height: 300, width: 300, borderRadius: '50%', border: '3px solid #eee' }} sizes={avatar.childImageSharp.resolutions} />
       <h3>{role}</h3>
       <h4>{education}</h4>
       <p>{slogan}</p>

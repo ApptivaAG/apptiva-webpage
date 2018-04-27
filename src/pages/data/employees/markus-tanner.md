@@ -3,6 +3,7 @@ templateKey: employee-page
 path: /markus-tanner
 name: Markus Tanner
 claim: Überlegender Gipfelstürmer
+preview: images/marksu-tanner-prev.jpg
 avatar: images/markus-tanner.jpg
 role: Softwareentwickler und -architekt
 education: Informatik FH
