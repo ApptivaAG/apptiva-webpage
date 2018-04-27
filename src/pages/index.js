@@ -2,14 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 
-import {
-  Title,
-  Section,
-  FullWidth,
-  Container,
-  Button,
-  Centered,
-} from '../layouts/style'
+import { Title, Section, FullWidth, Button, Centered } from '../layouts/style'
 import styled from 'styled-components'
 import Testimonials from '../components/Testimonials'
 import Employees from '../components/Employees'
@@ -219,7 +212,6 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
 )
 
 export default ({ data }) => {
-  console.log('index data', data)
   const { edges: posts } = data.blogs
 
   return (

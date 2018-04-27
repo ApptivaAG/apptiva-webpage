@@ -1,11 +1,9 @@
 import React from 'react'
-import Img from 'gatsby-image'
-import Link from 'gatsby-link'
 import styled, { keyframes } from 'styled-components'
 
 import heroImage from '../img/solution-collage.svg'
 import logoSlogan from '../img/logo-slogan.svg'
-import { FullWidth, Container, Button } from '../layouts/style'
+import { Button } from '../layouts/style'
 
 const Logo = styled.img`
   margin: 3em 4rem 2em;
