@@ -238,7 +238,7 @@ export const indexPageQuery = graphql`
     }
     employees: allMarkdownRemark(
       sort: { order: ASC, fields: [frontmatter___name] }
-      filter: { frontmatter: { templateKey: { eq: "employee-data" } } }
+      filter: { frontmatter: { templateKey: { eq: "employee-page" } } }
     ) {
       edges {
         node {

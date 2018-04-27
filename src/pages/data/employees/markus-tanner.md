@@ -1,10 +1,10 @@
 ---
-templateKey: employee-data
+templateKey: employee-page
 path: /markus-tanner
 name: Markus Tanner
 claim: Überlegender Gipfelstürmer
 avatar: images/markus-tanner.jpg
-function: Softwareentwickler und -architekt
+role: Softwareentwickler und -architekt
 education: Informatik FH
 slogan: Es gibt nicht genug gute Software auf der Welt. Daran möchte ich etwas ändern.
 contact:

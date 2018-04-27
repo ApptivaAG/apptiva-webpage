@@ -1,10 +1,10 @@
 ---
-templateKey: employee-data
+templateKey: employee-page
 path: /roman-schaller
 name: Roman Schaller
 claim: Wissensschaffender Technologe
 avatar: images/roman-schaller.jpg
-function: Softwareentwickler und -architekt
+role: Softwareentwickler und -architekt
 education: Informatik FH
 slogan: Es gibt nicht genug gute Software auf der Welt. Daran möchte ich etwas ändern.
 contact:
