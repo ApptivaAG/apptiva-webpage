@@ -46,7 +46,7 @@ p {
 
 a {
   text-decoration: none;
-  color: ${theme.color.text};
+  color: ${theme.color.primary};
 }
 
 h1 {

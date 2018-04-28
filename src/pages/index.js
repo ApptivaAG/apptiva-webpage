@@ -71,7 +71,7 @@ const ImageList = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  margin: 2em -1em 0;
+  margin: 1em -1em;
   img {
     flex: 0 1 6em;
     width: 100%;

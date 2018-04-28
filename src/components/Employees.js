@@ -6,14 +6,8 @@ import PhoneIcon from 'react-icons/lib/fa/phone'
 import EnvelopeIcon from 'react-icons/lib/fa/envelope'
 import TwitterIcon from 'react-icons/lib/fa/twitter'
 
-import { Section, Title } from '../layouts/style'
-const Subtitle = styled.h4`
-  font-size: 1.2em;
-  font-weight: 300;
-  text-transform: uppercase;
-  margin-top: -1em;
-  margin-bottom: 3em;
-`
+import { Section, Title, Subtitle } from '../layouts/style'
+
 const EmployeeList = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -23,7 +17,7 @@ const EmployeeList = styled.div`
 const EmployeeStyled = styled.div`
   font-size: 0.8em;
   flex: 1 1 0%;
-  margin: 0 0.5rem 3rem;
+  margin: 2rem 0.5rem;
   @media (max-width: 500px) {
     text-align: center;
   }

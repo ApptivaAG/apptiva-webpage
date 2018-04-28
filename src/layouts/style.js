@@ -4,8 +4,8 @@ import styled, { css } from 'styled-components'
 
 export const Section = styled.section`
   position: relative;
-  padding-top: 1em;
-  padding-bottom: 3em;
+  padding-top: 2em;
+  padding-bottom: 2em;
 
   ${props =>
     props.dark &&
@@ -53,6 +53,15 @@ export const Title = styled.h1`
   @media (min-width: 381px) {
     font-size: 4em;
   }
+`
+
+export const Subtitle = styled.h4`
+  font-size: 1.2em;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-top: -1em;
+  margin-bottom: 1em;
+  text-align: center;
 `
 
 const shared = css`
