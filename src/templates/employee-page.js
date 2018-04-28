@@ -11,6 +11,7 @@ import LinkedinIcon from 'react-icons/lib/fa/linkedin'
 
 import Content, { HTMLContent } from '../components/Content'
 import { Title, Subtitle, Section } from '../layouts/style'
+import { theme } from '../layouts'
 
 const EmployeeBanner = styled.div`
   display: flex;
@@ -55,6 +56,62 @@ const ContactList = styled.ul`
     white-space: nowrap;
   }
 `
+const SkillList = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem 2rem;
+`
+const SkillItem = styled.div`
+  flex: 1 1 16rem;
+  margin: 0 1rem;
+`
+const Bar = styled.div`
+  position: relative;
+  font-weight: 400;
+  color: white;
+  background-color: #ccc;
+  height: 1.8em;
+  margin: 0.5em 0;
+`
+const Text = styled.div`
+  position: absolute;
+  height: 100%;
+  padding: 0.3em 0.5em;
+`
+const Color = styled.div`
+  height: 100%;
+`
+const colorPalett = {
+  0: theme.color.primary,
+  1: theme.color.secondary,
+  2: theme.color.orange,
+  3: theme.color.darkGray,
+  4: theme.color.primary,
+  5: theme.color.secondary,
+  6: theme.color.orange,
+  7: theme.color.darkGray,
+  8: theme.color.primary,
+  9: theme.color.secondary,
+  10: theme.color.orange,
+  11: theme.color.darkGray,
+}
+
+const Skill = ({ title, color, items }) => (
+  <SkillItem>
+    <h2>{title}</h2>
+    {items.map(item => (
+      <Bar key={item.name}>
+        <Text>{item.name}</Text>
+        <Color
+          style={{
+            backgroundColor: color,
+            width: item.value + '%',
+          }}
+        />
+      </Bar>
+    ))}
+  </SkillItem>
+)
 
 export const EmployeePageTemplate = ({
   content,
@@ -122,7 +179,14 @@ export const EmployeePageTemplate = ({
           </EmployeeData>
         </EmployeeBanner>
       </Section>
-      <p>{skills[0].title}</p>
+      <Section>
+        <h1>Meine Skills</h1>
+        <SkillList>
+          {skills.map((skill, index) => (
+            <Skill key={skill.title} color={colorPalett[index]} {...skill} />
+          ))}
+        </SkillList>
+      </Section>
       <Section dark>
         <PostContent content={content} />
       </Section>
@@ -170,7 +234,6 @@ export const employeePageQuery = graphql`
         }
         skills {
           title
-          color
           items {
             name
             value

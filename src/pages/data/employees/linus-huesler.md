@@ -15,23 +15,61 @@ contact:
   linkedin: https://www.xing.com/profile/Markus_Tanner2
 skills:
   - title: Methodiken
-    color: blue
     items:
       - name: Scrum
-        value: 4
+        value: 100
       - name: Lean
-        value: 2
+        value: 50
       - name: User Centered Design
-        value: 3
+        value: 75
+      - name: User Story Mapping
+        value: 90
   - title: Architektur
-    color: blue
     items:
-      - name: Zusammenarbeit und Organisation
-        value: 2
-      - name: Entscheiden
-        value: 3
+      - name: Organisation / Zusammenarbeit
+        value: 100
+      - name: Anforderungen / Entscheiden
+        value: 90
       - name: Dokumentieren
-        value: 3
+        value: 100
+  - title: Backend
+    items:
+      - name: Java
+        value: 100
+      - name: Java EE
+        value: 85
+      - name: Spring Boot
+        value: 90
+      - name: RESTful
+        value: 100
+      - name: node.js
+        value: 80
+      - name: PHP
+        value: 75
+  - title: Frontend
+    items:
+      - name: React / Redux
+        value: 85
+      - name: AngularJS
+        value: 75
+      - name: JavaScript / TypeScript
+        value: 75
+      - name: Twitter Bootstrap
+        value: 90
+      - name: HTML5 / CSS3
+        value: 90
+  - title: Verschiedenes
+    items:
+      - name: Jenkins
+        value: 75
+      - name: Maven / Gradle
+        value: 60
+      - name: Netflix OSS
+        value: 60
+      - name: 'Mobile: React Native / Ionic'
+        value: 85
+      - name: AsciiDoc / Markdown
+        value: 90
 ---
 
 # Meine Erfahrungen

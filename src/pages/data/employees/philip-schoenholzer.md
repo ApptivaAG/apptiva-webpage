@@ -14,24 +14,60 @@ contact:
   xing: https://www.xing.com/profile/Markus_Tanner2
   linkedin: https://www.xing.com/profile/Markus_Tanner2
 skills:
+  - title: Analyse
+    items:
+      - name: Stakeholder Interviews
+        value: 100
+      - name: Ethnografische Interviews
+        value: 100
+      - name: Umfragen
+        value: 75
   - title: Methodiken
-    color: blue
     items:
       - name: Scrum
-        value: 4
+        value: 100
       - name: Lean
-        value: 2
+        value: 75
       - name: User Centered Design
-        value: 3
-  - title: Architektur
-    color: blue
+        value: 100
+      - name: User Story Mapping
+        value: 100
+  - title: Anforderungen
     items:
-      - name: Zusammenarbeit und Organisation
-        value: 2
-      - name: Entscheiden
-        value: 3
-      - name: Dokumentieren
-        value: 3
+      - name: Personas
+        value: 100
+      - name: Kontext Szenarios
+        value: 100
+      - name: Customer Journey Maps
+        value: 75
+      - name: User Stories
+        value: 100
+  - title: Tools
+    items:
+      - name: Sketch
+        value: 75
+      - name: InVision
+        value: 100
+      - name: Affinity Designer
+        value: 90
+      - name: Balsamiq Mockups
+        value: 100
+  - title: Entwerfen
+    items:
+      - name: Sketching
+        value: 100
+      - name: Wireframing
+        value: 100
+      - name: Accessibility
+        value: 75
+  - title: Technologie
+    items:
+      - name: JavaScript
+        value: 90
+      - name: HTML5 / CSS3
+        value: 100
+      - name: React / Redux
+        value: 80
 ---
 
 # Meine Erfahrungen

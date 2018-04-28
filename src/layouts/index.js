@@ -10,13 +10,15 @@ import { fontFace } from './font-face'
 import { Container } from './style'
 import Footer from '../components/Footer'
 
-const theme = {
+export const theme = {
   color: {
     primary: '#008fd7',
     secondary: '#81d742',
+    orange: '#ff7d00',
     text: '#111',
     bg: 'white',
-    darkBg: '#f6f6f6',
+    lightBg: '#f6f6f6',
+    darkGray: '#3d525c',
   },
 }
 

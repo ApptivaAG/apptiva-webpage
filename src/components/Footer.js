@@ -11,7 +11,7 @@ const Background = styled.footer`
   margin-top: 4rem;
   padding: 3rem 0 1rem;
   color: white;
-  background-color: #3d525c;
+  background-color: ${props => props.theme.color.darkGray};
   font-size: 0.8rem;
 `
 

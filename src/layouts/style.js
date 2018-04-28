@@ -19,7 +19,7 @@ export const Section = styled.section`
         right: 50%;
         margin-left: -49.8vw;
         margin-right: -49.8vw;
-        background-color: ${props.theme.color.darkBg};
+        background-color: ${props.theme.color.lightBg};
         z-index: -1;
       }
     `};
