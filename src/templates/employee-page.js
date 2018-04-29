@@ -59,7 +59,11 @@ const ContactList = styled.ul`
 const SkillList = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -1rem 2rem;
+  display: grid;
+  @media (min-width: 20rem) {
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  }
+  margin: 0 -1rem;
 `
 const SkillItem = styled.div`
   flex: 1 1 16rem;
@@ -187,9 +191,7 @@ export const EmployeePageTemplate = ({
           ))}
         </SkillList>
       </Section>
-      <Section dark>
-        <PostContent content={content} />
-      </Section>
+      <PostContent content={content} />
     </div>
   )
 }

@@ -3,16 +3,17 @@ templateKey: employee-page
 path: /linus-huesler
 name: Linus Hüsler
 claim: Ordentlich überraschender Entwerfer
+preview: images/linus-huesler-prev.jpg
 avatar: images/linus-huesler.jpg
-role: Softwareentwickler und -architekt
-education: Informatik FH
-slogan: Es gibt nicht genug gute Software auf der Welt. Daran möchte ich etwas ändern.
+role: Softwareentwickler und -architekt, Unternehmer
+# education: Informatik FH
+slogan: Für komplexe Probleme gibt’s oft einfache Lösungen. Diese zusammen mit den Anwender zu entwickeln ist meine Faszination.
 contact:
-  tel: +41 78 909 82 44
+  tel: +41 79 794 76 85
   mail: linus.huesler@apptiva.ch
-  twitter: romixch
-  xing: https://www.xing.com/profile/Markus_Tanner2
-  linkedin: https://www.xing.com/profile/Markus_Tanner2
+  twitter: linushuesler
+  xing: https://www.xing.com/profile/Linus_Huesler
+  linkedin: https://ch.linkedin.com/in/linushuesler
 skills:
   - title: Methodiken
     items:
@@ -28,9 +29,9 @@ skills:
     items:
       - name: Organisation / Zusammenarbeit
         value: 100
-      - name: Anforderungen / Entscheiden
+      - name: Anforderungen / Entscheidungen
         value: 90
-      - name: Dokumentieren
+      - name: Dokumentation
         value: 100
   - title: Backend
     items:
@@ -74,6 +75,4 @@ skills:
 
 # Meine Erfahrungen
 
-Seit 2004 bin ich als Softwareentwickler tätig. Dabei durfte ich Erfahrungen in der Telekommunikationsbranche, bei der Umsetzung von Web-to-Print-Lösungen und bei der Weiterentwicklung eines ERP-Systems sammeln. Von 2014 bis 2017 habe ich ein System für die Verwaltung von elektronischen Regaletiketten umgesetzt. Während dieser Zeit konnte ich meine Skills in den Bereichen Mobile, Front- und Back-End stetig weiter ausbauen.
-
-Die erfolgreichsten Projekte und Produkte waren bis anhin die, bei welchen nebst der Softwarearchitetkur auch die Vorgehensweise gepasst hat. Aus diesem Grund haben agile Methodiken bei mir einen sehr hohen Stellenwert.
+Schon seit mehreren Jahren interessieren mich die gegenseitigen Einflüsse einer bestehenden Softwarearchitektur auf agile Vorgehensmethodiken und dem Verlangen nach einer kürzeren Time to Market; sei dies beim Liefern von neuen oder verbesserten Funktionen aber auch beim Validieren von Ideen und Kundenanforderungen. Als treibende Kraft konnte ich über vier Jahre eine Firma mit mehr als 300 Mitarbeiter bei der Transformation zu einem agilen Softwareunternehmen begleiten. Dabei stand zum Einen der Mindset von Mitarbeiter und Management im Vordergrund. Zum Andern aber auch die notwendigen Anpassungen der Architektur eines seit über 14 Jahren entwickelten, monolithisch aufgebauten ERP Systems. So konnte ich oben erwähnte Skills in einer realen Umgebung erlernen und einsetzen.

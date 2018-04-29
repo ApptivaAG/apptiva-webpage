@@ -213,7 +213,6 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
 
 export default ({ data }) => {
   const { edges: posts } = data.blogs
-
   return (
     <IndexPage
       testimonials={data.testimonials}

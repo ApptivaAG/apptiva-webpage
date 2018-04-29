@@ -14,13 +14,19 @@ const EmployeeList = styled.div`
   justify-content: space-between;
   margin: 0 -0.5rem;
 `
-const EmployeeStyled = styled.div`
+const EmployeeWrapper = styled.div`
   font-size: 0.8em;
-  flex: 1 1 0%;
+  flex: 1 0 10rem;
   margin: 2rem 0.5rem;
+
   @media (max-width: 500px) {
     text-align: center;
   }
+`
+const Employee = styled.div`
+  width: 10rem;
+  margin-left: auto;
+  margin-right: auto;
 `
 const Avatar = styled(Img)`
   border: 3px solid #eee;
@@ -67,28 +73,30 @@ export default ({ employees }) => {
       </Subtitle>
       <EmployeeList>
         {employees.edges.map(edge => {
-          const { name, claim, contact, path, avatar } = edge.node.frontmatter
+          const { name, claim, contact, path, preview } = edge.node.frontmatter
           return (
-            <EmployeeStyled key={edge.node.id}>
-              <LinkStyled to={path}>
-                <Avatar resolutions={avatar.childImageSharp.resolutions} />
-                <Name>{name}</Name>
-                <Claim>{claim}</Claim>
-              </LinkStyled>
-              <Contact>
-                <a href={`tel:${contact.tel}`}>
-                  <PhoneIcon />
-                  {contact.tel}
-                </a>
-                <a href={`mailto:${contact.mail}`}>
-                  <EnvelopeIcon />
-                  {contact.mail}
-                </a>
-                <a href={`https://twitter.com/${contact.twitter}`}>
-                  <TwitterIcon />@{contact.twitter}
-                </a>
-              </Contact>
-            </EmployeeStyled>
+            <EmployeeWrapper key={edge.node.id}>
+              <Employee>
+                <LinkStyled to={path}>
+                  <Avatar resolutions={preview.childImageSharp.resolutions} />
+                  <Name>{name}</Name>
+                  <Claim>{claim}</Claim>
+                </LinkStyled>
+                <Contact>
+                  <a href={`tel:${contact.tel}`}>
+                    <PhoneIcon />
+                    {contact.tel}
+                  </a>
+                  <a href={`mailto:${contact.mail}`}>
+                    <EnvelopeIcon />
+                    {contact.mail}
+                  </a>
+                  <a href={`https://twitter.com/${contact.twitter}`}>
+                    <TwitterIcon />@{contact.twitter}
+                  </a>
+                </Contact>
+              </Employee>
+            </EmployeeWrapper>
           )
         })}
       </EmployeeList>
@@ -109,7 +117,7 @@ export const employeeFragment = graphql`
         mail
         twitter
       }
-      avatar {
+      preview {
         childImageSharp {
           resolutions(width: 200, height: 200) {
             ...GatsbyImageSharpResolutions

@@ -3,17 +3,17 @@ templateKey: employee-page
 path: /markus-tanner
 name: Markus Tanner
 claim: Überlegender Gipfelstürmer
-preview: images/marksu-tanner-prev.jpg
+preview: images/markus-tanner-prev.jpg
 avatar: images/markus-tanner.jpg
 role: Softwareentwickler und -architekt
-education: Informatik FH
+# education: Informatik FH
 slogan: Es gibt nicht genug gute Software auf der Welt. Daran möchte ich etwas ändern.
 contact:
   tel: +41 78 909 82 44
   mail: markus.tanner@apptiva.ch
   twitter: mactanners
   xing: https://www.xing.com/profile/Markus_Tanner2
-  linkedin: https://www.xing.com/profile/Markus_Tanner2
+  linkedin: https://www.linkedin.com/in/markus-tanner-79a7703/
 skills:
   - title: Methodiken
     items:

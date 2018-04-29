@@ -3,16 +3,17 @@ templateKey: employee-page
 path: /roman-schaller
 name: Roman Schaller
 claim: Wissensschaffender Technologe
+preview: images/roman-schaller-prev.jpg
 avatar: images/roman-schaller.jpg
-role: Softwareentwickler und -architekt
-education: Informatik FH
-slogan: Es gibt nicht genug gute Software auf der Welt. Daran möchte ich etwas ändern.
+role: Softwareentwickler und -architekt, Unternehmer
+# education: Informatik FH
+slogan: Ich kann mit Software den Menschen das Leben einfacher machen. Dafür liebe ich meinen Job.
 contact:
-  tel: +41 78 909 82 44
+  tel: +41 79 607 51 40
   mail: roman.schaller@apptiva.ch
   twitter: romixch
-  xing: https://www.xing.com/profile/Markus_Tanner2
-  linkedin: https://www.xing.com/profile/Markus_Tanner2
+  xing: https://www.xing.com/profile/Roman_Schaller
+  linkedin: https://www.linkedin.com/pub/roman-schaller/100/a2a/8b5
 skills:
   - title: Methodiken
     items:
@@ -74,6 +75,8 @@ skills:
 
 # Meine Erfahrungen
 
-Seit 2004 bin ich als Softwareentwickler tätig. Dabei durfte ich Erfahrungen in der Telekommunikationsbranche, bei der Umsetzung von Web-to-Print-Lösungen und bei der Weiterentwicklung eines ERP-Systems sammeln. Von 2014 bis 2017 habe ich ein System für die Verwaltung von elektronischen Regaletiketten umgesetzt. Während dieser Zeit konnte ich meine Skills in den Bereichen Mobile, Front- und Back-End stetig weiter ausbauen.
+Seit Ende 2013 entwickle ich Web-Applikationen auf dem Java-Stack. Ich arbeite in Projekten als Architekt, Backend- und als Frontend-Entwickler. Anwender- und Kundenkontakt sowie agile Prozesse sind mir sehr wichtig.
 
-Die erfolgreichsten Projekte und Produkte waren bis anhin die, bei welchen nebst der Softwarearchitetkur auch die Vorgehensweise gepasst hat. Aus diesem Grund haben agile Methodiken bei mir einen sehr hohen Stellenwert.
+2008 bis 2013 durfte ich viele Erfahrungen in der Entwicklung von ERP-Systemen sammeln. Ich habe viel Arbeit in Core-Funktionen und die technischen Herausforderungen von grossen Server-Anwendungen gesteckt.
+
+Seit beginn meines Studiums 2004 konzentriere ich mich auf die Java-Plattform und dessen Ökosystem.
