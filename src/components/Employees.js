@@ -66,7 +66,7 @@ const Contact = styled.div`
 
 export default ({ employees }) => {
   return (
-    <Section>
+    <Section dark>
       <Title id="team">Team</Title>
       <Subtitle>
         Mehr als 40 Jahre Erfahrung bei der Entwicklung von Enterprise-Software.

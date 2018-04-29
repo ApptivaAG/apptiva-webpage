@@ -172,7 +172,7 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
 
     <Employees employees={employees} />
 
-    <Section dark>
+    <Section>
       <Title id="blog">Blog</Title>
 
       <ColList>

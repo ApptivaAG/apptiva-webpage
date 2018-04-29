@@ -17,13 +17,14 @@ const TestimonialStyle = styled.li`
 `
 const Person = styled.div`
   display: flex;
+  color: #444;
 
   p {
     line-height: 1;
   }
 `
 const Avatar = styled(Img)`
-  border: 1px solid red;
+  border: 2px solid #e2e2e2;
   border-radius: 50%;
   margin-right: 1em;
 `
