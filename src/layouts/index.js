@@ -55,13 +55,26 @@ h1 {
   font-weight: 800;
 }
 
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 960px;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
 .full-width {
   width: 100vw;
-  position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+}
+
+.dark-section {
+  background-color: #f6f6f6;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 pre {
