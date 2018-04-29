@@ -64,6 +64,7 @@ h1 {
 }
 
 .full-width {
+  position: relative;
   width: 100vw;
   left: 50%;
   right: 50%;
