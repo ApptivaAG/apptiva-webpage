@@ -10,6 +10,8 @@ import {
   FaMobile,
   FaDashboard,
   FaUser,
+  FaBarChart,
+  FaEye,
 } from 'react-icons/lib/fa'
 
 import Content, { HTMLContent } from '../components/Content'
@@ -35,6 +37,8 @@ const icons = {
   mobile: <FaMobile />,
   dashboard: <FaDashboard />,
   user: <FaUser />,
+  'bar-chart': <FaBarChart />,
+  eye: <FaEye />,
 }
 
 const ListTitle = styled.div`

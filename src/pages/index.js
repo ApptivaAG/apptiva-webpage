@@ -6,6 +6,7 @@ import { Title, Section, FullWidth, Button, Centered } from '../layouts/style'
 import styled from 'styled-components'
 import Testimonials from '../components/Testimonials'
 import Employees from '../components/Employees'
+import {ReactComponent as Eris} from '../img/eris-logo.svg'
 
 const ColList = styled.ul`
   display: flex;
@@ -16,6 +17,9 @@ const ColList = styled.ul`
 `
 const ImgStyled = styled(Img)`
   transition: transform 0.3s;
+`
+const ErisLogo = styled(Eris)`
+  margin: 3em .6em;
 `
 const ListItem = styled.li`
   flex: 1;
@@ -32,12 +36,18 @@ const ListItem = styled.li`
     background-color: ${props => props.theme.color.bg};
     overflow: hidden;
 
+    svg {
+      color: ${props => props.theme.color.primary};
+      transition: transform 0.3s;
+    }
+
     &:hover {
       color: ${props => props.theme.color.bg};
       background-color: ${props => props.theme.color.primary};
 
-      ${ImgStyled} {
+      ${ImgStyled}, svg {
         transform: scale(1.06);
+        color: ${props => props.theme.color.bg};
       }
     }
   }
@@ -102,15 +112,11 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
           </Link>
         </ListItem>
         <ListItem>
-          <Link to="/individuelle-entwicklung/">
-            <h3>Individuelle Entwicklung</h3>
-            <h2>App-Lösungen</h2>
-            <h4>Mobile und Desktop</h4>
-            <ImgStyled
-              style={{ width: '100%' }}
-              sizes={images.edges[0].node.sizes}
-              alt="Apps"
-            />
+          <Link to="/dashboard-notaufnahme/">
+            <h3>Apptiva</h3>
+            <h2>Dashboard</h2>
+            <h4>für die Notaufnahme</h4>
+            <ErisLogo            />
           </Link>
         </ListItem>
         <ListItem>
@@ -273,7 +279,7 @@ export const indexPageQuery = graphql`
         }
       }
     }
-    images: allImageSharp(filter: { id: { regex: "/apps/" } }) {
+    images: allImageSharp(filter: { id: { regex: "/apps|eris/" } }) {
       edges {
         node {
           sizes {

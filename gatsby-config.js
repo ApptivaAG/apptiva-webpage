@@ -21,6 +21,7 @@ module.exports = {
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-svgr',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
