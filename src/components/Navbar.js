@@ -24,23 +24,25 @@ const Logo = styled.img`
   height: 2.1rem;
   padding: 1rem 0;
 `
-const shared = css`
-  display: inline-block;
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin-left: 2rem;
-  color: white;
+const shared = props =>
+  props.element !== 'logo' &&
+  css`
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-left: 2rem;
+    color: white;
 
-  transition: transform 30ms ease-out;
+    transition: transform 30ms ease-out;
 
-  &:hover {
-    transform: translateY(-1px);
-  }
+    &:hover {
+      transform: translateY(-1px);
+    }
 
-  &:active {
-    color: ${props => props.theme.color.secondary};
-  }
-`
+    &:active {
+      color: ${props => props.theme.color.secondary};
+    }
+  `
 const NavItemsLink = styled(Link)`
   ${shared};
 `
@@ -59,7 +61,7 @@ const Navbar = ({ location }) => (
   <NavBar>
     <Container>
       <div>
-        <DynLink type={location} nav="/#start">
+        <DynLink type={location} nav="/#start" element="logo">
           <Logo src={logo} alt="Apptiva" />
         </DynLink>
       </div>
