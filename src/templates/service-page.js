@@ -58,7 +58,7 @@ const ItemList = styled.ul`
 const Item = styled.li`
   display: flex;
   margin: 1rem;
-  flex: 1 0 18rem;
+  flex: 1 1 18rem;
 `
 const Icon = styled.div`
   display: flex;
