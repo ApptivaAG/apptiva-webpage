@@ -37,6 +37,7 @@ listOfText:
       title: Ausser­gewöhnlich benutzer­freundlich
       text: Durch die nutzerorientierte Gestaltung unserer Apps befinden sich die Anwender im Zentrum. Sie erhalten eine Lösung die verständlich, einfach und schnell zu bedienen ist.
 ---
+
 <div class="full-width dark-section" style="overflow: auto;">
 <div class="container">
 <img style="float: left; max-width: 20rem; margin: 1rem; " src="https://apptiva.ch/wp-content/uploads/2015/07/Showcase_Jenny_Hello-1024x654.png" alt="Jenny Hello" />
@@ -50,7 +51,6 @@ Sehen Sie wie eine Lean Enterprise App beispielsweise den Telefonverkauf für Je
 </div>
 </div>
 
-
 <img style="float: right; max-width: 14rem; margin-top: 4rem; " src="https://apptiva.ch/wp-content/uploads/2016/03/Sparschwein.svg" alt="Tiefe Kosten" />
 
 # Ist dies nicht sehr teuer?
@@ -58,8 +58,6 @@ Sehen Sie wie eine Lean Enterprise App beispielsweise den Telefonverkauf für Je
 Dank unserem effektiven Vorgehen kann eine App bereits ab CHF 7'000.- erstellt werden!
 
 Mit der Beschleunigung und Vereinfachung eines Prozesses lohnt sich die Investition in individuelle Softwareentwicklung bereits nach wenigen Wochen. Sie werden somit nicht nur zufriedenere Kunden haben, sondern auch ein gesünderes Unternehmen.
-
-
 
 # Wir unterstützen Sie gerne bei der Entwicklung einer individuellen Anwendung.
 
