@@ -2,8 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Markdown = styled.div`
-  h1 {
+  h1,
+  h2 {
     margin-top: 2em;
+  }
+
+  li {
+    margin-bottom: 0.5em;
   }
 `
 

@@ -39,7 +39,6 @@ const Grid = Container.extend`
 
     li {
       display: flex;
-      padding: 0.4em 0;
     }
 
     li::before {
