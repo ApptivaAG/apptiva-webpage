@@ -1,6 +1,6 @@
 import { css } from 'styled-components'
 
-export const fontFace = css`
+export default css`
   @font-face {
     font-family: 'Gentona';
     src: url('/font/Gentona-ExtraBold.woff2') format('woff2'),

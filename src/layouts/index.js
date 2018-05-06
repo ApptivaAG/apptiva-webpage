@@ -1,12 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { ThemeProvider, injectGlobal } from 'styled-components'
 import styledNormalize from 'styled-normalize'
 
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
-import { fontFace } from './font-face'
+import fontFace from './font-face'
 import { Container } from './style'
 import Footer from '../components/Footer'
 
@@ -31,6 +30,7 @@ if (typeof window !== 'undefined') {
   })
 }
 
+// eslint-disable-next-line no-unused-expressions
 injectGlobal`
   ${styledNormalize}
   ${fontFace}
@@ -124,9 +124,5 @@ const TemplateWrapper = ({ children, location }) => (
     </div>
   </ThemeProvider>
 )
-
-TemplateWrapper.propTypes = {
-  children: PropTypes.func,
-}
 
 export default TemplateWrapper

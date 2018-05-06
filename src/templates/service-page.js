@@ -117,6 +117,7 @@ export const ServicePageTemplate = ({
       </Centered>
       <ListTitle>
         <h1>{listOfText.title}</h1>
+        {/* eslint-disable-next-line react/no-danger */}
         <p dangerouslySetInnerHTML={{ __html: listOfText.description }} />
       </ListTitle>
       <ItemList>

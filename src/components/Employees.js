@@ -64,45 +64,43 @@ const Contact = styled.div`
   }
 `
 
-export default ({ employees }) => {
-  return (
-    <Section dark>
-      <Title id="team">Team</Title>
-      <Subtitle>
-        Mehr als 40 Jahre Erfahrung bei der Entwicklung von Enterprise-Software.
-      </Subtitle>
-      <EmployeeList>
-        {employees.edges.map(edge => {
-          const { name, claim, contact, path, preview } = edge.node.frontmatter
-          return (
-            <EmployeeWrapper key={edge.node.id}>
-              <Employee>
-                <LinkStyled to={path}>
-                  <Avatar resolutions={preview.childImageSharp.resolutions} />
-                  <Name>{name}</Name>
-                  <Claim>{claim}</Claim>
-                </LinkStyled>
-                <Contact>
-                  <a href={`tel:${contact.tel}`}>
-                    <PhoneIcon />
-                    {contact.tel}
-                  </a>
-                  <a href={`mailto:${contact.mail}`}>
-                    <EnvelopeIcon />
-                    {contact.mail}
-                  </a>
-                  <a href={`https://twitter.com/${contact.twitter}`}>
-                    <TwitterIcon />@{contact.twitter}
-                  </a>
-                </Contact>
-              </Employee>
-            </EmployeeWrapper>
-          )
-        })}
-      </EmployeeList>
-    </Section>
-  )
-}
+export default ({ employees }) => (
+  <Section dark>
+    <Title id="team">Team</Title>
+    <Subtitle>
+      Mehr als 40 Jahre Erfahrung bei der Entwicklung von Enterprise-Software.
+    </Subtitle>
+    <EmployeeList>
+      {employees.edges.map(edge => {
+        const { name, claim, contact, path, preview } = edge.node.frontmatter
+        return (
+          <EmployeeWrapper key={edge.node.id}>
+            <Employee>
+              <LinkStyled to={path}>
+                <Avatar resolutions={preview.childImageSharp.resolutions} />
+                <Name>{name}</Name>
+                <Claim>{claim}</Claim>
+              </LinkStyled>
+              <Contact>
+                <a href={`tel:${contact.tel}`}>
+                  <PhoneIcon />
+                  {contact.tel}
+                </a>
+                <a href={`mailto:${contact.mail}`}>
+                  <EnvelopeIcon />
+                  {contact.mail}
+                </a>
+                <a href={`https://twitter.com/${contact.twitter}`}>
+                  <TwitterIcon />@{contact.twitter}
+                </a>
+              </Contact>
+            </Employee>
+          </EmployeeWrapper>
+        )
+      })}
+    </EmployeeList>
+  </Section>
+)
 
 export const employeeFragment = graphql`
   fragment Employee_details on MarkdownRemark {

@@ -109,7 +109,7 @@ const Skill = ({ title, color, items }) => (
         <Color
           style={{
             backgroundColor: color,
-            width: item.value + '%',
+            width: `${item.value} + %`,
           }}
         />
       </Bar>

@@ -1,9 +1,9 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
+import styled from 'styled-components'
 
 import { Title, Section, FullWidth, Button, Centered } from '../layouts/style'
-import styled from 'styled-components'
 import Testimonials from '../components/Testimonials'
 import Employees from '../components/Employees'
 import {ReactComponent as Eris} from '../img/eris-logo.svg'
@@ -204,6 +204,7 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
     <Section>
       <FullWidth>
         <iframe
+          title="Google Maps"
           scrolling="no"
           marginHeight="0"
           marginWidth="0"

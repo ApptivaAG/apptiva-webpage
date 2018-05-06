@@ -178,7 +178,12 @@ const Footer = () => (
           <li>Impressum</li>
         </ul>
       </Links>
-      <Company>© {year} Apptiva AG. Passgenaue Softwarelösungen.</Company>
+      <Company>
+        <span role="img" aria-label="All rights reserved.">
+          ©
+        </span>{' '}
+        {year} Apptiva AG. Passgenaue Softwarelösungen.
+      </Company>
     </Grid>
   </Background>
 )
