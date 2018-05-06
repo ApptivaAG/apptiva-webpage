@@ -54,6 +54,9 @@ a {
 h1 {
   font-weight: 800;
 }
+h1, h2 {
+  hyphens: auto;
+}
 
 .container {
   margin-right: auto;
