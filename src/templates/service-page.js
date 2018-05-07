@@ -3,16 +3,7 @@ import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
-import {
-  FaClockO,
-  FaDatabase,
-  FaExpand,
-  FaMobile,
-  FaDashboard,
-  FaUser,
-  FaBarChart,
-  FaEye,
-} from 'react-icons/lib/fa'
+import * as FontAwesome from 'react-icons/lib/fa'
 
 import Content, { HTMLContent } from '../components/Content'
 import { Centered } from '../layouts/style'
@@ -29,17 +20,13 @@ const HeaderTitle = styled.h1`
     font-size: 4rem;
   }
 `
-
-const icons = {
-  'clock-o': <FaClockO />,
-  database: <FaDatabase />,
-  expand: <FaExpand />,
-  mobile: <FaMobile />,
-  dashboard: <FaDashboard />,
-  user: <FaUser />,
-  'bar-chart': <FaBarChart />,
-  eye: <FaEye />,
+const faName = string => {
+  const faPrefix = `Fa-${string}`
+  const str = faPrefix.replace(/-([a-z])/g, g => g[1].toUpperCase())
+  return str
 }
+
+const icons = icon => React.createElement(FontAwesome[faName(icon)])
 
 const ListTitle = styled.div`
   margin: 5em 0 3em;
@@ -129,7 +116,7 @@ export const ServicePageTemplate = ({
           <ItemList>
             {listOfText.items.map(item => (
               <Item key={item.icon}>
-                <Icon>{icons[item.icon]}</Icon>
+                <Icon>{icons(item.icon)}</Icon>
                 <ItemContent>
                   <h2>{item.title}</h2>
                   <p>{item.text}</p>
