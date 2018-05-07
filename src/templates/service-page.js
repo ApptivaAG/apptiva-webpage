@@ -90,10 +90,12 @@ const Header = ({ title, image, subtitle }) => (
         {subtitle.text} {subtitle.swaps && subtitle.swaps[0]}
       </h2>
     )}
-    <Img
-      style={{ width: '80%', margin: '2rem auto' }}
-      sizes={image.childImageSharp.sizes}
-    />
+    {image && (
+      <Img
+        style={{ width: '80%', margin: '2rem auto' }}
+        sizes={image.childImageSharp.sizes}
+      />
+    )}
   </HeadArea>
 )
 
@@ -149,7 +151,7 @@ export default props => {
     <ServicePageTemplate
       content={post.html}
       contentComponent={HTMLContent}
-      helmet={<Helmet title={`Blog | ${post.frontmatter.title}`} />}
+      helmet={<Helmet title={`${post.frontmatter.title} | Apptiva AG`} />}
       {...post.frontmatter}
     />
   )

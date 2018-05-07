@@ -135,7 +135,11 @@ const Footer = () => (
           <li>
             <Link to="/blog/">Blog</Link>
           </li>
-          <li>Warum Sie mit uns zusammenarbeiten sollten</li>
+          <li>
+            <Link to="/zusammenarbeit">
+              Warum Sie mit uns zusammenarbeiten sollten
+            </Link>
+          </li>
           <li>
             <a
               href="https://www.botfabrik.ch/"
