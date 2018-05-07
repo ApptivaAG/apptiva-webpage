@@ -44,9 +44,13 @@ listOfText:
 
 <div class="full-width dark-section" style="overflow: auto;">
 <div class="container">
-<h1 style="margin: 0;">Optimieren Sie mit dem Apptiva Dashboard Ihre Abläufe.</h1>
-<p> Das Apptiva Dashboard ist ein schlankes Patientenleitsystem das Pflegepersonal, Ärztinnen und Ärzte bei der Bewältigung medizinischer Notfälle unterstützt.</p>
+
+## Optimieren Sie mit dem Apptiva Dashboard Ihre Abläufe.
+
+Das Apptiva Dashboard ist ein schlankes Patientenleitsystem das Pflegepersonal, Ärztinnen und Ärzte bei der Bewältigung medizinischer Notfälle unterstützt.
+
 <img style="margin-top: 4rem; " src="img/emergency-universal.jpg" alt="Pflegeperson im Behandlungsraum" />
+
 </div>
 </div>
 
@@ -84,8 +88,50 @@ Folgende Aktionen können direkt im TV-Modus getätigt werden:
 
 Weiter Aktionen werden laufend hinzugefügt.
 
+<div style="position: relative;	margin: 2rem 0; padding-bottom: 56.25%; padding-top: 25px; height: 0;">
+  <iframe style="position: absolute; top: 0;	left: 0; width: 100%;	height: 100%;" src="https://www.youtube.com/embed/QHazYYSCxsE?feature=oembed&amp;wmode=transparent" allowfullscreen="" id="fitvid487652" frameborder="0"></iframe>
+</div>
+
+<div class="full-width dark-section">
+<div class="container">
+
+# Desktop und Mobile
+
+![Für Desktop- und Mobile-Geräte](img/desktop-mobile.png)
+
+## Arbeiten Sie mit dem für Sie passenden Gerät
+
+Egal ob Desktop-PC, Notebook, Tablet oder Smartphone. Das Apptiva Dashboard passt sich optimal an das jeweilige Gerät an – und dies ohne dass Sie eine spezielle Software auf Ihrem Gerät installieren müssen. Sie starten einfach Ihren Browser, verbinden mit dem Dashboard und schon können Sie arbeiten.
+
+Bedienen Sie das Dashboard so wie Sie sich dies von anderen Web-Anwendungen gewohnt sind. Speichern Sie die oft verwendeten Seiten als Favoriten oder schicken Sie Ihrem Arbeitskollegen den Link zu einem Patientendossier per E-Mail.
+
+## An den Ort des Geschehens
+
+Nehmen Sie das Apptiva Dashboard mit an den Ort des Geschehens. Erfassen Sie die Informationen dort wo sie entstehen – direkt beim Patienten.
+
+Sie verlegen einen Patienten von der Triage in eine Koje? Ändern Sie einfach den Aufenthaltsort des Patienten über Ihr Smartphone. Früher hätten Sie dafür an den Stations-PC gehen müssen. Heute machen Sie dies mit wenigen Klicks in kurzer Zeit. Die Datenqualität und -aktualität wird stark ansteigen.
+
+</div>
+</div>
+
+# Schnittstellen zu bestehenden Systemen
+
+Das Apptiva Dashboard lässt sich einfach mit Ihren bestehenden Systemen verbinden. Synchronisieren Sie zum Beispiel das Patientendossier von Ihrem KIS oder übernehmen Sie administrative Daten vom ERP. Dazu setzen wir auf HL7 – dem internationalen Standard für den elektronischen Austausch von medizinischen Daten. Die Schnittstellen lassen sich nach Belieben an Ihre Anforderungen anpassen.
+
+Änderungen, die im Dashboard gemacht werden (z.B. Aufenthaltsort ändern) können natürlich auch wieder in Ihr Zentralsystem zurückgeschrieben werden. Dadurch verhindern Sie doppelte Arbeiten und erhöhen die Transparenz.
+
+![Integration Apptiva Dashboard](img/integration.png)
+
+Mit dem Apptiva Dashboard erhalten Sie einen flexiblen Zusatz zu Ihrem bestehenden KIS und können damit einen Teil Ihres Geschäftsprozesses gezielt optimieren. Aufgrund der Synchronisierung von Datenänderungen in beide Richtungen ist in Ihrem bestehenden System weiterhin alles Notwendige verfügbar.
+
+<div class="full-width dark-section" style="margin-bottom: -4rem;">
+<div class="container">
+
 # Anfrage
 
 Gerne geben wir Ihnen weitere Informationen zu unserem Dashboard. Wir freuen uns über Ihre Anfrage.
 
 Rufen Sie uns an <a href="tel:+41413222626">041 322 26 26</a> oder schreiben Sie an <a href="mailto:info@apptiva.ch">info@­apptiva.ch</a>
+
+</div>
+</div>

@@ -35,84 +35,69 @@ injectGlobal`
   ${styledNormalize}
   ${fontFace}
 
-html {
-  font-size: 20px;
-  font-family: Gentona, sans-serif;
-  font-weight: 200;
-  color: ${theme.color.text};
-}
-
-p {
-  line-height: 1.3;
-}
-
-a {
-  text-decoration: none;
-  color: ${theme.color.primary};
-}
-
-h1 {
-  font-weight: 800;
-}
-h1, h2 {
-  hyphens: auto;
-}
-
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 960px;
-  padding-right: 1em;
-  padding-left: 1em;
-}
-
-.full-width {
-  position: relative;
-  width: 100vw;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-}
-
-.dark-section {
-  background-color: #f6f6f6;
-  padding-top: 2em;
-  padding-bottom: 2em;
-}
-
-pre {
-  padding: 1rem;
-  background-color: hsla(0, 0%, 0%, 0.02);
-  overflow-x: auto;
-  border: 1px #eee solid;
-}
-
-blockquote {
-  margin: 1rem;
-  background: #F8f8f8;
-  padding: 0 1rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.04) ;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.04) ;
-  border-right: 1px solid rgba(0, 0, 0, 0.04) ;
-  border-left: 3px solid #008FD7;
-}
-
-svg {
-  fill: currentColor;
-}
-
-iframe {
-  border: 0;
-}
-
-.gatsby-resp-image-wrapper {
-  transition: transform .3s;
-
-  &:hover {
-    transform: scale(1.06);
+  html {
+    font-size: 20px;
+    font-family: Gentona, sans-serif;
+    font-weight: 200;
+    color: ${theme.color.text};
   }
-}
+
+  p {
+    line-height: 1.3;
+  }
+
+  a {
+    text-decoration: none;
+    color: ${theme.color.primary};
+  }
+
+  h1 {
+    font-weight: 800;
+  }
+  h1, h2 {
+    hyphens: auto;
+  }
+
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 960px;
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+
+  pre {
+    padding: 1rem;
+    background-color: hsla(0, 0%, 0%, 0.02);
+    overflow-x: auto;
+    border: 1px #eee solid;
+  }
+
+  blockquote {
+    margin: 1rem;
+    background: #F8f8f8;
+    padding: 0 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.04) ;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04) ;
+    border-right: 1px solid rgba(0, 0, 0, 0.04) ;
+    border-left: 3px solid #008FD7;
+  }
+
+  svg {
+    fill: currentColor;
+  }
+
+  iframe {
+    border: 0;
+  }
+
+  .gatsby-resp-image-wrapper {
+    transition: transform .3s;
+
+    &:hover {
+      transform: scale(1.06);
+    }
+  }
 
 `
 
