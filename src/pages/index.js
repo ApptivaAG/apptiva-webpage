@@ -6,7 +6,9 @@ import styled from 'styled-components'
 import { Title, Section, FullWidth, Button, Centered } from '../layouts/style'
 import Testimonials from '../components/Testimonials'
 import Employees from '../components/Employees'
-import {ReactComponent as Eris} from '../img/eris-logo.svg'
+import { ReactComponent as Eris } from '../img/eris-logo.svg'
+import { ReactComponent as LifeRing } from '../img/life-ring.svg'
+import { theme } from '../layouts'
 
 const ColList = styled.ul`
   display: flex;
@@ -19,7 +21,13 @@ const ImgStyled = styled(Img)`
   transition: transform 0.3s;
 `
 const ErisLogo = styled(Eris)`
-  margin: 3em .6em;
+  margin: 3em 0.6em;
+`
+const SupportLogo = styled(LifeRing)`
+  color: ${p => p.theme.color.orange};
+  max-height: 8rem;
+  margin-top: 1em;
+}
 `
 const ListItem = styled.li`
   flex: 1;
@@ -37,7 +45,8 @@ const ListItem = styled.li`
     overflow: hidden;
 
     svg {
-      color: ${props => props.theme.color.primary};
+      color: ${props =>
+        props.color ? props.color : props.theme.color.primary};
       transition: transform 0.3s;
     }
 
@@ -106,7 +115,7 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
             <h4>Mobile und Desktop</h4>
             <ImgStyled
               style={{ width: '100%' }}
-              sizes={images.edges[0].node.sizes}
+              sizes={images.appsImage.sizes}
               alt="Apps"
             />
           </Link>
@@ -116,19 +125,14 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
             <h3>Apptiva</h3>
             <h2>Dashboard</h2>
             <h4>für die Notaufnahme</h4>
-            <ErisLogo            />
+            <ErisLogo />
           </Link>
         </ListItem>
-        <ListItem>
-          <Link to="/individuelle-entwicklung/">
-            <h3>Individuelle Entwicklung</h3>
-            <h2>App-Lösungen</h2>
-            <h4>Mobile und Desktop</h4>
-            <ImgStyled
-              style={{ width: '100%' }}
-              sizes={images.edges[0].node.sizes}
-              alt="Apps"
-            />
+        <ListItem color={theme.color.orange}>
+          <Link to="/unterstuetzung/">
+            <h3>Erstklassige</h3>
+            <h2>Unterstützung</h2>
+            <SupportLogo />
           </Link>
         </ListItem>
       </ColList>
@@ -225,7 +229,7 @@ export default ({ data }) => {
       testimonials={data.testimonials}
       posts={posts}
       employees={data.employees}
-      images={data.images}
+      images={data}
     />
   )
 }
@@ -280,13 +284,9 @@ export const indexPageQuery = graphql`
         }
       }
     }
-    images: allImageSharp(filter: { id: { regex: "/apps|eris/" } }) {
-      edges {
-        node {
-          sizes {
-            ...GatsbyImageSharpSizes
-          }
-        }
+    appsImage: imageSharp(id: { regex: "/apps/" }) {
+      sizes(maxWidth: 600) {
+        ...GatsbyImageSharpSizes
       }
     }
   }

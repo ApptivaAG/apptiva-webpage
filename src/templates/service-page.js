@@ -85,9 +85,11 @@ const ItemContent = styled.div`
 const Header = ({ title, image, subtitle }) => (
   <HeadArea>
     <HeaderTitle dangerouslySetInnerHTML={{ __html: title }} />
-    <h2>
-      {subtitle.text} {subtitle.swaps[0]}
-    </h2>
+    {subtitle && (
+      <h2>
+        {subtitle.text} {subtitle.swaps && subtitle.swaps[0]}
+      </h2>
+    )}
     <Img
       style={{ width: '80%', margin: '2rem auto' }}
       sizes={image.childImageSharp.sizes}
@@ -107,7 +109,7 @@ export const ServicePageTemplate = ({
 }) => {
   const PostContent = contentComponent || Content
 
-  console.log('subtitle', subtitle)
+  console.log('listOfText', listOfText)
 
   return (
     <section>
@@ -115,22 +117,26 @@ export const ServicePageTemplate = ({
       <Centered>
         <Header title={title} image={image} subtitle={subtitle} />
       </Centered>
-      <ListTitle>
-        <h1>{listOfText.title}</h1>
-        {/* eslint-disable-next-line react/no-danger */}
-        <p dangerouslySetInnerHTML={{ __html: listOfText.description }} />
-      </ListTitle>
-      <ItemList>
-        {listOfText.items.map(item => (
-          <Item key={item.icon}>
-            <Icon>{icons[item.icon]}</Icon>
-            <ItemContent>
-              <h2>{item.title}</h2>
-              <p>{item.text}</p>
-            </ItemContent>
-          </Item>
-        ))}
-      </ItemList>
+      {listOfText && (
+        <div>
+          <ListTitle>
+            <h1>{listOfText.title}</h1>
+            {/* eslint-disable-next-line react/no-danger */}
+            <p dangerouslySetInnerHTML={{ __html: listOfText.description }} />
+          </ListTitle>
+          <ItemList>
+            {listOfText.items.map(item => (
+              <Item key={item.icon}>
+                <Icon>{icons[item.icon]}</Icon>
+                <ItemContent>
+                  <h2>{item.title}</h2>
+                  <p>{item.text}</p>
+                </ItemContent>
+              </Item>
+            ))}
+          </ItemList>
+        </div>
+      )}
       <PostContent content={content} />
     </section>
   )
