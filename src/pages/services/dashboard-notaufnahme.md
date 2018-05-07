@@ -36,11 +36,7 @@ listOfText:
       text: Für jede Behandlung werden die getätigten Aktionen zeitlich genau protokolliert. So kann jede Behandlung innert Sekunden über die Suche aufgerufen und der zeitliche Ablauf nachvollzogen werden
 ---
 
-<style>h1 {text-align: center}</style>
-
-<div style="position: relative;	margin: 2rem 0; padding-bottom: 56.25%; padding-top: 25px; height: 0;">
-  <iframe style="position: absolute; top: 0;	left: 0; width: 100%;	height: 100%;" src="https://www.youtube.com/embed/CIFltWCHlz0?feature=oembed&amp;wmode=transparent" allowfullscreen="" id="fitvid487652" frameborder="0"></iframe>
-</div>
+`youtube: https://www.youtube.com/embed/CIFltWCHlz0`
 
 <div class="full-width dark-section" style="overflow: auto;">
 <div class="container">
@@ -71,9 +67,8 @@ Das Apptiva Dashboard verschafft Pflegekräften, Ärztinnen und Ärzten der Nota
 
 ## In Sekunden Informationen aktualisieren – mit Touch!
 
-<div style="float: right; width: 16rem; max-width: 100%; ">
-<img src="img/touch.png" alt="Mit Touch bedienen" />
-</div>
+[[right]]
+|![Mit Touch bedienen](img/touch.png)
 
 Tätigen Sie die wichtigsten Aktionen direkt am TV/Monitor mittels Touch. So können Sie Aktionen innert Sekunden erledigen, so wie Sie sich dies von einem physischen Whiteboard gewohnt sind. Dank „Drag and Drop“ sind alle Aktionen sehr einfach zu bedienen.
 
@@ -88,9 +83,7 @@ Folgende Aktionen können direkt im TV-Modus getätigt werden:
 
 Weiter Aktionen werden laufend hinzugefügt.
 
-<div style="position: relative;	margin: 2rem 0; padding-bottom: 56.25%; padding-top: 25px; height: 0;">
-  <iframe style="position: absolute; top: 0;	left: 0; width: 100%;	height: 100%;" src="https://www.youtube.com/embed/QHazYYSCxsE?feature=oembed&amp;wmode=transparent" allowfullscreen="" id="fitvid487652" frameborder="0"></iframe>
-</div>
+`youtube: https://www.youtube.com/embed/QHazYYSCxsE`
 
 <div class="full-width dark-section">
 <div class="container">

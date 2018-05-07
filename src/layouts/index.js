@@ -42,6 +42,13 @@ injectGlobal`
     color: ${theme.color.text};
   }
 
+  h1 {
+    font-weight: 800;
+  }
+  h1, h2 {
+    hyphens: auto;
+  }
+
   p {
     line-height: 1.3;
   }
@@ -51,19 +58,8 @@ injectGlobal`
     color: ${theme.color.primary};
   }
 
-  h1 {
-    font-weight: 800;
-  }
-  h1, h2 {
-    hyphens: auto;
-  }
-
-  .container {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 960px;
-    padding-right: 1em;
-    padding-left: 1em;
+  li {
+    margin-bottom: 0.5em;
   }
 
   pre {
@@ -89,14 +85,6 @@ injectGlobal`
 
   iframe {
     border: 0;
-  }
-
-  .gatsby-resp-image-wrapper {
-    transition: transform .3s;
-
-    &:hover {
-      transform: scale(1.06);
-    }
   }
 
 `

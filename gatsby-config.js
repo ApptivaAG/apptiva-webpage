@@ -21,11 +21,13 @@ module.exports = {
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-svgr',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          'gatsby-remark-external-links',
+          'gatsby-remark-smartypants',
+          'gatsby-remark-copy-linked-files',
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -35,6 +37,19 @@ module.exports = {
               maxWidth: 1024,
             },
           },
+          {
+            resolve: 'gatsby-remark-custom-blocks',
+            options: {
+              blocks: {
+                dark: 'custom-block-dark',
+                center: 'custom-block-center',
+                left: 'custom-block-left',
+                right: 'custom-block-right',
+              },
+            },
+          },
+          'gatsby-remark-embed-responsive-video',
+          'gatsby-remark-responsive-iframe',
         ],
       },
     },
@@ -44,5 +59,6 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
+    'gatsby-plugin-svgr',
   ],
 }

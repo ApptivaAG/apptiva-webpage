@@ -40,18 +40,21 @@ listOfText:
 
 <div class="full-width dark-section" style="overflow: auto;">
 <div class="container">
-<img style="float: left; max-width: 20rem; margin: 1rem; " src="https://apptiva.ch/wp-content/uploads/2015/07/Showcase_Jenny_Hello-1024x654.png" alt="Jenny Hello" />
-<div style="margin: 1rem">
-<h1 style="margin: 0;">Warum liebt Jenny ihre Lean Enterprise App?</h1>
-<p> 
+
+[[left]]
+|![Jenny Hello](img/hello-jenny.png)
+
+# Warum liebt Jenny ihre Lean Enterprise App?
+
 Sehen Sie wie eine Lean Enterprise App beispielsweise den Telefonverkauf für Jenny vereinfacht und beschleunigt.
-</p>
-<a href="telefonverkauf-showcase">Ansehen</a>
-</div>
+
+[Ansehen](/telefonverkauf-showcase)
+
 </div>
 </div>
 
-<img style="float: right; max-width: 14rem; margin-top: 4rem; " src="https://apptiva.ch/wp-content/uploads/2016/03/Sparschwein.svg" alt="Tiefe Kosten" />
+[[right]]
+|![Tiefe Kosten](img/sparschwein.svg)
 
 # Ist dies nicht sehr teuer?
 

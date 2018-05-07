@@ -8,8 +8,12 @@ const Markdown = styled.div`
     margin-bottom: 1em;
   }
 
-  li {
-    margin-bottom: 0.5em;
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 960px;
+    padding-right: 1em;
+    padding-left: 1em;
   }
 
   .full-width {
@@ -26,6 +30,28 @@ const Markdown = styled.div`
     margin-top: 4em;
     padding-top: 1px;
     padding-bottom: 4em;
+  }
+
+  .custom-block-left {
+    float: left;
+    width: 16rem;
+    max-width: 100%;
+    margin-right: 2rem;
+  }
+
+  .custom-block-right {
+    float: right;
+    width: 16rem;
+    max-width: 100%;
+    margin-left: 2rem;
+  }
+
+  .gatsby-resp-image-wrapper {
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.06);
+    }
   }
 
   .gatsby-resp-image-background-image {
