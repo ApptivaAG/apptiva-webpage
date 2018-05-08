@@ -25,7 +25,7 @@ const Logo = styled.img`
   padding: 1rem 0;
 `
 const shared = props =>
-  props.element !== 'logo' &&
+  props['data-element'] !== 'logo' &&
   css`
     display: inline-block;
     font-size: 1.1rem;
@@ -40,7 +40,7 @@ const shared = props =>
     }
 
     &:active {
-      color: ${props => props.theme.color.secondary};
+      color: ${props.theme.color.secondary};
     }
   `
 const NavItemsLink = styled(Link)`
@@ -61,7 +61,7 @@ const Navbar = ({ location }) => (
   <NavBar>
     <Container>
       <div>
-        <DynLink type={location} nav="/#start" element="logo">
+        <DynLink type={location} nav="/#start" data-element="logo">
           <Logo src={logo} alt="Apptiva" />
         </DynLink>
       </div>
