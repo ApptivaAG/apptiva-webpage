@@ -3,7 +3,14 @@ import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 
-import { Title, Section, FullWidth, Button, Centered } from '../layouts/style'
+import {
+  Title,
+  Section,
+  FullWidth,
+  Button,
+  Centered,
+  Right,
+} from '../layouts/style'
 import Testimonials from '../components/Testimonials'
 import Employees from '../components/Employees'
 import { ReactComponent as Eris } from '../img/eris-logo.svg'
@@ -101,6 +108,7 @@ const ImageList = styled.div`
 `
 const Blockquote = styled.blockquote`
   margin-top: 4em;
+  padding-bottom: 1em;
 `
 
 const IndexPage = ({ testimonials, posts, employees, images }) => (
@@ -146,6 +154,9 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
           schlanke und passgenaue Lösungen: „Lean Enterprise Apps“. Unsere Apps
           füllen die Lücken, die Standardsoftware nicht füllen kann.
         </p>
+        <Right>
+          <Button to="/unsere-kompetenzen">Unsere Kompetenzen</Button>
+        </Right>
       </Blockquote>
     </Section>
 

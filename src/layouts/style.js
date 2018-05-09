@@ -45,6 +45,9 @@ export const FullWidth = styled.div`
 export const Centered = styled.div`
   text-align: center;
 `
+export const Right = styled.div`
+  text-align: right;
+`
 
 export const Title = styled.h1`
   font-size: 2.8em;
