@@ -12,30 +12,30 @@ subtitle:
     - vereinfachen.
     - digitalisieren.
 
-listOfText:
-  title: Vorteile der individuellen Software­entwicklung
-  description: 
-    Bei der individuellen Softwareentwicklung halten wir uns an das <a href="http://www.lean-enterprise-app.com/">Manifest der Lean Enterprise App</a>.
+bulletGroups:
+  - title: Vorteile der individuellen Software­entwicklung
+    description: 
+      Bei der individuellen Softwareentwicklung halten wir uns an das <a href="http://www.lean-enterprise-app.com/">Manifest der Lean Enterprise App</a>.
 
-  items:
-    - icon: clock-o
-      title: Individuell und dennoch schnell
-      text: Dank einer überraschend direkten Zusammenarbeit und unserem agilen Vorgehen sind bereits nach wenigen Tagen die ersten Ergebnisse im Einsatz.
-    - icon: database
-      title: Integriert in Ihre System­landschaft
-      text: Führen Sie Ihre Daten nicht doppelt. Die Daten werden aus bestehenden Systemen bezogen und die Resultate zurückgeschrieben.
-    - icon: expand
-      title: Erweitern ohne Risiko
-      text: Durch ihre Autonomie können unsere Apps einfach und schnell angepasst und erweitert werden, ohne das Gesamtsystem zu gefährden.
-    - icon: mobile
-      title: Fokussiert aufs Wesentliche
-      text: Jede unserer Lösungen bildet einen Anwendungsfall optimal ab. Damit können wir uns auf das Wesentliche fokussieren und erschaffen nicht die “eierlegende Wollmilchsau”. Unnötiger Ballast ist fehl am Platz.
-    - icon: dashboard
-      title: Beschleunigte Geschäfts­prozesse
-      text: Der Bottleneck wird aufgelöst. Unsere Apps füllen Lücken, die Standardsoftware nicht füllen kann.
-    - icon: user
-      title: Ausser­gewöhnlich benutzer­freundlich
-      text: Durch die nutzerorientierte Gestaltung unserer Apps befinden sich die Anwender im Zentrum. Sie erhalten eine Lösung die verständlich, einfach und schnell zu bedienen ist.
+    bulletList:
+      - icon: clock-o
+        title: Individuell und dennoch schnell
+        text: Dank einer überraschend direkten Zusammenarbeit und unserem agilen Vorgehen sind bereits nach wenigen Tagen die ersten Ergebnisse im Einsatz.
+      - icon: database
+        title: Integriert in Ihre System­landschaft
+        text: Führen Sie Ihre Daten nicht doppelt. Die Daten werden aus bestehenden Systemen bezogen und die Resultate zurückgeschrieben.
+      - icon: expand
+        title: Erweitern ohne Risiko
+        text: Durch ihre Autonomie können unsere Apps einfach und schnell angepasst und erweitert werden, ohne das Gesamtsystem zu gefährden.
+      - icon: mobile
+        title: Fokussiert aufs Wesentliche
+        text: Jede unserer Lösungen bildet einen Anwendungsfall optimal ab. Damit können wir uns auf das Wesentliche fokussieren und erschaffen nicht die “eierlegende Wollmilchsau”. Unnötiger Ballast ist fehl am Platz.
+      - icon: dashboard
+        title: Beschleunigte Geschäfts­prozesse
+        text: Der Bottleneck wird aufgelöst. Unsere Apps füllen Lücken, die Standardsoftware nicht füllen kann.
+      - icon: user
+        title: Ausser­gewöhnlich benutzer­freundlich
+        text: Durch die nutzerorientierte Gestaltung unserer Apps befinden sich die Anwender im Zentrum. Sie erhalten eine Lösung die verständlich, einfach und schnell zu bedienen ist.
 ---
 
 <div class="full-width dark-section" style="overflow: auto;">

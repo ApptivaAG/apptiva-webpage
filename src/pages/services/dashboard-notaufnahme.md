@@ -10,30 +10,30 @@ subtitle:
   swaps: 
     - Notaufnahme.
 
-listOfText:
-  title: Vorteile der des Apptiva Dashboards für die Notaufnahme
-  description: 
-    Optimieren sie Ihre Administration, damit Sie mehr Zeit für Ihre Patienten haben.
+bulletGroups:
+  - title: Vorteile der des Apptiva Dashboards für die Notaufnahme
+    description: 
+      Optimieren sie Ihre Administration, damit Sie mehr Zeit für Ihre Patienten haben.
 
-  items:
-    - icon: dashboard
-      title: Überblick über die aktuelle Situation
-      text: Das Apptiva Dashboard verschafft Pflegekräften, Ärztinnen und Ärzten der Notaufnahme einen Überblick zur aktuellen Situation. Sehen Sie alle relevanten Informationen auf einen Blick.
-    - icon: mobile
-      title: Standort­unabhängig
-      text: Rufen Sie das Dashboard in Ihrem Büro, in einer Koje oder von zu Hause auf. Das Apptiva Dashboard passt sich optimal an das von Ihnen verwendete Gerät an, egal ob Desktop-PC, Tablet oder Smartphone.
-    - icon: expand
-      title: Integriert in Ihre System­landschaft
-      text: Integrieren Sie das Apptiva Dashboard in Ihre bestehende Systemlandschaft um gleiche Daten nur einmal erfassen zu müssen und diese sofort verfügbar zu haben.
-    - icon: clock-o
-      title: Mehr Zeit für die Patienten
-      text: Mit dem Apptiva Dashboard hat die Pflege weniger administrative Arbeit. Die notwendigen Informationen werden vorgelagert erfasst und mit wenigen Klicks aktualisiert. Die spätere Aufarbeitung der Daten entfällt.
-    - icon: bar-chart
-      title: Statistiken zur Notaufnahme
-      text: Das Apptiva Dashboard unterstützt das Qualitäts­management mit Informationen zum Durchfluss sowie zur Prozess- und Betreuungsqualität.
-    - icon: eye
-      title: Alle Aktionen automatisch protokolliert
-      text: Für jede Behandlung werden die getätigten Aktionen zeitlich genau protokolliert. So kann jede Behandlung innert Sekunden über die Suche aufgerufen und der zeitliche Ablauf nachvollzogen werden
+    bulletList:
+      - icon: dashboard
+        title: Überblick über die aktuelle Situation
+        text: Das Apptiva Dashboard verschafft Pflegekräften, Ärztinnen und Ärzten der Notaufnahme einen Überblick zur aktuellen Situation. Sehen Sie alle relevanten Informationen auf einen Blick.
+      - icon: mobile
+        title: Standort­unabhängig
+        text: Rufen Sie das Dashboard in Ihrem Büro, in einer Koje oder von zu Hause auf. Das Apptiva Dashboard passt sich optimal an das von Ihnen verwendete Gerät an, egal ob Desktop-PC, Tablet oder Smartphone.
+      - icon: expand
+        title: Integriert in Ihre System­landschaft
+        text: Integrieren Sie das Apptiva Dashboard in Ihre bestehende Systemlandschaft um gleiche Daten nur einmal erfassen zu müssen und diese sofort verfügbar zu haben.
+      - icon: clock-o
+        title: Mehr Zeit für die Patienten
+        text: Mit dem Apptiva Dashboard hat die Pflege weniger administrative Arbeit. Die notwendigen Informationen werden vorgelagert erfasst und mit wenigen Klicks aktualisiert. Die spätere Aufarbeitung der Daten entfällt.
+      - icon: bar-chart
+        title: Statistiken zur Notaufnahme
+        text: Das Apptiva Dashboard unterstützt das Qualitäts­management mit Informationen zum Durchfluss sowie zur Prozess- und Betreuungsqualität.
+      - icon: eye
+        title: Alle Aktionen automatisch protokolliert
+        text: Für jede Behandlung werden die getätigten Aktionen zeitlich genau protokolliert. So kann jede Behandlung innert Sekunden über die Suche aufgerufen und der zeitliche Ablauf nachvollzogen werden
 ---
 
 `youtube: https://www.youtube.com/embed/CIFltWCHlz0`

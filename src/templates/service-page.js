@@ -94,11 +94,11 @@ export const ServicePageTemplate = ({
   helmet,
   image,
   subtitle,
-  listOfText,
+  bulletGroups,
 }) => {
   const PostContent = contentComponent || Content
 
-  console.log('listOfText', listOfText)
+  console.log('bullet', bulletGroups)
 
   return (
     <section>
@@ -106,26 +106,30 @@ export const ServicePageTemplate = ({
       <Centered>
         <Header title={title} image={image} subtitle={subtitle} />
       </Centered>
-      {listOfText && (
-        <div>
-          <ListTitle>
-            <h1>{listOfText.title}</h1>
-            {/* eslint-disable-next-line react/no-danger */}
-            <p dangerouslySetInnerHTML={{ __html: listOfText.description }} />
-          </ListTitle>
-          <ItemList>
-            {listOfText.items.map(item => (
-              <Item key={item.icon}>
-                <Icon>{icons(item.icon)}</Icon>
-                <ItemContent>
-                  <h2>{item.title}</h2>
-                  <p>{item.text}</p>
-                </ItemContent>
-              </Item>
-            ))}
-          </ItemList>
-        </div>
-      )}
+      <Centered>
+        <p>{description}</p>
+      </Centered>
+      {bulletGroups &&
+        bulletGroups.map(group => (
+          <div key={group.title}>
+            <ListTitle>
+              <h1>{group.title}</h1>
+              {/* eslint-disable-next-line react/no-danger */}
+              <p dangerouslySetInnerHTML={{ __html: group.description }} />
+            </ListTitle>
+            <ItemList>
+              {group.bulletList.map(item => (
+                <Item key={item.icon}>
+                  <Icon>{icons(item.icon)}</Icon>
+                  <ItemContent>
+                    <h2>{item.title}</h2>
+                    <p dangerouslySetInnerHTML={{ __html: item.text }} />
+                  </ItemContent>
+                </Item>
+              ))}
+            </ItemList>
+          </div>
+        ))}
       <PostContent content={content} />
     </section>
   )
@@ -162,10 +166,11 @@ export const pageQuery = graphql`
           text
           swaps
         }
-        listOfText {
+        description
+        bulletGroups {
           title
           description
-          items {
+          bulletList {
             icon
             title
             text

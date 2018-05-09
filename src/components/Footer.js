@@ -176,7 +176,9 @@ const Footer = () => (
               Das Manifest der Lean Enterprise App
             </a>
           </li>
-          <li>Unsere Kompetenzen</li>
+          <li>
+            <Link to="/unsere-kompetenzen">Unsere Kompetenzen</Link>
+          </li>
           <li>Unser Vorgehen</li>
           <li>Impressum</li>
         </ul>
