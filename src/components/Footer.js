@@ -179,7 +179,9 @@ const Footer = () => (
           <li>
             <Link to="/unsere-kompetenzen">Unsere Kompetenzen</Link>
           </li>
-          <li>Unser Vorgehen</li>
+          <li>
+            <Link to="/vorgehensweise">Unser Vorgehen</Link>
+          </li>
           <li>Impressum</li>
         </ul>
       </Links>
