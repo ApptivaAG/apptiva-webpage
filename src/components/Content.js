@@ -33,17 +33,21 @@ const Markdown = styled.div`
   }
 
   .custom-block-left {
-    float: left;
-    width: 16rem;
-    max-width: 100%;
-    margin-right: 2rem;
+    @media (min-width: 640px) {
+      float: left;
+      width: 16rem;
+      max-width: 100%;
+      margin-right: 2rem;
+    }
   }
 
   .custom-block-right {
-    float: right;
-    width: 16rem;
-    max-width: 100%;
-    margin-left: 2rem;
+    @media (min-width: 640px) {
+      float: right;
+      width: 16rem;
+      max-width: 100%;
+      margin-left: 2rem;
+    }
   }
 
   .gatsby-resp-image-wrapper {
