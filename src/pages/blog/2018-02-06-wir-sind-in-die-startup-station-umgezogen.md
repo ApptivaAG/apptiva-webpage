@@ -29,16 +29,16 @@ Inzwischen sind wir bereits einige Wochen hier und haben uns sehr gut eingelebt.
 </style>
 
 <div class="small-image">
-  <img src="img/buero_innen_04.jpg" alt="" />
+  <img src="img/buero_innen_04.jpg" alt="Blick durchs Büro" />
 </div>
 <div class="small-image">
-  <img src="./img/buero_innen_05.jpg" alt="" />
+  <img src="./img/buero_innen_05.jpg" alt="Unsere Wohlfühlecke" />
 </div> 
 <div class="small-image">
-  <img src="./img/gebaeude.jpg" alt="" />
+  <img src="./img/gebaeude.jpg" alt="Gebäude" />
 </div>
 <div class="small-image">
-  <img src="./img/buero_innen_03.jpg" alt=""/>
+  <img src="./img/buero_innen_03.jpg" alt="Unsere Arbeitsplätze"/>
 </div>
 
 ### Unsere neue Adresse lautet
