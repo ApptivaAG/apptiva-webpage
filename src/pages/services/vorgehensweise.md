@@ -22,6 +22,9 @@ bulletGroups:
         text: Wir sprechen nicht nur von einem agilen Vorgehen, wir leben es tatsächlich und dies mit grossem Erfolg. Der Fortschritt eines Projektes wird bei uns nicht nur kommuniziert sondern von Ihnen in Ihrem Unternehmen erlebt. Sie stellen den Fortschritt anhand funktionierender Software fest, welche bei Ihnen tatsächlich im Einsatz ist. Alle zwei Wochen erhalten Sie ein echtes Software-Update!
 ---
 
+<div class="full-width dark-section" style="overflow: auto;">
+<div class="container">
+
 # Iterationen
 
 Sobald klar ist, wohin die Reise führt, starten wir mit zweiwöchigen Iterationen. Sie sind als Kunde fester Bestandteil davon. Jede Iteration durchläuft folgende Phasen:
@@ -45,7 +48,10 @@ Jetzt, wo alles klar ist, geht es an die Entwicklung. Anschliessend wird die neu
 
 Ist die Lösung im Einsatz, beobachten wir, wie die Anwender sie einsetzen und lernen daraus für die nächste Iteration.
 
-> Dank dem richtigen Vorgehen sparen Sie Geld, weil wir passgenau das entwickeln, was Sie benötigen.
+</div>
+</div>
+
+<div id="ucd" />
 
 # User Centered Design
 
@@ -57,7 +63,7 @@ Wir auch nicht. Darum wenden wir UCD (User Centered Design) an. Diese Methode hi
 <div class="container">
 
 [[left]]
-|![Jenny Hello](img/hello-jenny.png)
+|![Jenny nutzt das Branchensystem](img/jenny-erp.png)
 
 ## Tag 1
 
@@ -76,7 +82,8 @@ Um dies herauszufinden, beobachten wir den Benutzer während seiner Arbeit und f
 <div class="container">
 
 [[right]]
-|![Jenny Hello](img/hello-jenny.png)
+|![Personas](img/personas.jpg)
+|![Kontext Szenarios](img/kontext-szenarios.jpg)
 
 ## Tag 2
 
@@ -93,7 +100,8 @@ Um die Tätigkeiten der Benutzer optimal zu unterstützen, entwickeln wir den k�
 <div class="container">
 
 [[left]]
-|![Jenny Hello](img/hello-jenny.png)
+|![Skizzen](img/sketch.jpg)
+|![Wireframes](img/wireframe.png)
 
 ## Tag 3
 
@@ -111,8 +119,8 @@ Sobald sich eine Idee herauskristallisiert, verfeinern wir diese mit speziellen 
 <div class="full-width" style="overflow: auto;">
 <div class="container">
 
-[[left]]
-|![Jenny Hello](img/hello-jenny.png)
+[[right]]
+|![Prototyp](img/prototyp.png)
 
 ## Tag 4
 
@@ -127,7 +135,7 @@ Mit spezieller Software entwickeln wir sehr schnell Prototypen einer App.
 <div class="container">
 
 [[left]]
-|![Jenny Hello](img/hello-jenny.png)
+|![Test des Prototyps](img/jenny-allinone.png)
 
 ## Tag 5
 
@@ -141,8 +149,8 @@ Mit diesem Prototyp testen wir eine Idee direkt am Arbeitsplatz der Benutzer. So
 <div class="full-width" style="overflow: auto;">
 <div class="container">
 
-[[left]]
-|![Jenny Hello](img/hello-jenny.png)
+[[right]]
+|![Lösung umsetzen](img/umsetzen.png)
 
 ## Iteratives Umsetzen
 
@@ -150,3 +158,5 @@ Nach diesen Schritten ist klar, was die optimale Lösung für den Benutzer und d
 
 </div>
 </div>
+
+> Dank dem richtigen Vorgehen sparen Sie Geld, weil wir passgenau das entwickeln, was Sie benötigen.

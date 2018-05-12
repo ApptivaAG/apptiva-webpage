@@ -8,6 +8,10 @@ const Markdown = styled.div`
     margin-bottom: 1em;
   }
 
+  img {
+    max-width: 100%;
+  }
+
   .container {
     margin-right: auto;
     margin-left: auto;
