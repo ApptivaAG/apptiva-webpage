@@ -182,7 +182,7 @@ const Footer = () => (
           <li>
             <Link to="/vorgehensweise">Unser Vorgehen</Link>
           </li>
-          <li>Impressum</li>
+          <li><Link to="/impressum">Impressum</Link></li>
         </ul>
       </Links>
       <Company>
