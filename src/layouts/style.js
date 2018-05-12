@@ -17,8 +17,8 @@ export const Section = styled.section`
         bottom: 0;
         left: 50%;
         right: 50%;
-        margin-left: -49.8vw;
-        margin-right: -49.8vw;
+        margin-left: -49.5vw;
+        margin-right: -49.5vw;
         background-color: ${props.theme.color.lightBg};
         z-index: -1;
       }
@@ -36,8 +36,8 @@ export const Container = styled.div`
 export const FullWidth = styled.div`
   width: 100vw;
   position: relative;
-  left: 50%;
-  right: 50%;
+  left: 49.4%;
+  right: 49.4%;
   margin-left: -50vw;
   margin-right: -50vw;
 `
