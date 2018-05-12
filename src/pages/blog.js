@@ -1,54 +1,48 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Img from 'gatsby-image'
+import { Section, Title } from '../layouts/style'
 
 export default ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
 
   return (
-    <section className="section">
-      <div className="container">
-        <div className="content">
-          <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
-        </div>
-        {posts
-          .filter(post => post.node.frontmatter.templateKey === 'blog-post')
-          .map(({ node: post }) => (
-            <div
-              className="content"
-              style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
-              key={post.id}
+    <Section>
+      <Title>Blogbeiträge</Title>
+
+      {posts.map(({ node: post }) => (
+        <div key={post.id}>
+          <p style={{ marginTop: '4em', fontWeight: 600 }}>
+            <Link to={`/${post.frontmatter.path}`}>
+              {post.frontmatter.title}
+            </Link>
+            <span> &bull; </span>
+            <small>{post.frontmatter.date}</small>
+          </p>
+          <Img
+            resolutions={post.frontmatter.image.childImageSharp.resolutions}
+          />
+          <p>
+            {post.excerpt}
+            <Link
+              style={{ fontWeight: 500, marginLeft: 5 }}
+              to={`/${post.frontmatter.path}`}
             >
-              <p>
-                <Link
-                  className="has-text-primary"
-                  to={`/${post.frontmatter.path}`}
-                >
-                  {post.frontmatter.title}
-                </Link>
-                <span> &bull; </span>
-                <small>{post.frontmatter.date}</small>
-              </p>
-              <p>
-                {post.excerpt}
-                <br />
-                <br />
-                <Link
-                  className="button is-small"
-                  to={`/${post.frontmatter.path}`}
-                >
-                  Keep Reading →
-                </Link>
-              </p>
-            </div>
-          ))}
-      </div>
-    </section>
+              Weiterlesen →
+            </Link>
+          </p>
+        </div>
+      ))}
+    </Section>
   )
 }
 
 export const blogListPage = graphql`
   query BlogQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+    ) {
       edges {
         node {
           excerpt(pruneLength: 400)
@@ -61,6 +55,13 @@ export const blogListPage = graphql`
             path
             templateKey
             date(formatString: "MMMM DD, YYYY")
+            image {
+              childImageSharp {
+                resolutions(height: 150, width: 300) {
+                  ...GatsbyImageSharpResolutions
+                }
+              }
+            }
           }
         }
       }
