@@ -10,7 +10,6 @@ const NavBar = styled.nav`
   top: 0;
   background-color: ${props => props.theme.color.primary};
   z-index: 90;
-  overflow-x: hidden;
 `
 
 const Container = DefaultContainer.extend`
@@ -24,6 +23,34 @@ const Logo = styled.img`
   height: 2.1rem;
   padding: 1rem 0;
 `
+const Navigation = styled.div`
+  @media (max-width: 739px) {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    bottom: 0;
+    right: -20rem;
+    padding: 2em 2em 2em 0;
+    background-color: ${p => p.theme.color.primary};
+    transition: all 200ms ease 0s;
+  }
+`
+const MenuButton = styled.button`
+  border: none;
+  background: transparent;
+  color: white;
+  font-weight: 600;
+
+  @media (min-width: 740px) {
+    display: none;
+  }
+
+  &:active ~ ${Navigation}, &:focus ~ ${Navigation} {
+    transform: translate3d(-20rem, 0px, 0px);
+  }
+`
+
 const shared = props =>
   props['data-element'] !== 'logo' &&
   css`
@@ -66,7 +93,8 @@ const Navbar = ({ location }) => (
         </DynLink>
       </div>
 
-      <div>
+      <MenuButton>Menu</MenuButton>
+      <Navigation>
         <DynLink type={location} nav="/#dienstleistungen">
           Dienstleistungen
         </DynLink>
@@ -77,7 +105,7 @@ const Navbar = ({ location }) => (
           Blog
         </DynLink>
         <NavItemsLink to="/about">About</NavItemsLink>
-      </div>
+      </Navigation>
     </Container>
   </NavBar>
 )
