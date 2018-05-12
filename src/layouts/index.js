@@ -8,6 +8,7 @@ import Hero from '../components/Hero'
 import fontFace from './font-face'
 import { Container } from './style'
 import Footer from '../components/Footer'
+import Lightbox from '../components/Lightbox'
 
 export const theme = {
   color: {
@@ -91,13 +92,13 @@ injectGlobal`
 
 const TemplateWrapper = ({ children, location }) => (
   <ThemeProvider theme={theme}>
-    <div>
+    <Lightbox>
       <Helmet title="Apptiva AG - iOS, Android, Desktop und Web-Applikationen" />
       {location.pathname === '/' && <Hero />}
       {location.pathname === '/' ? <Navbar location="root" /> : <Navbar />}
       <Container>{children()}</Container>
       <Footer />
-    </div>
+    </Lightbox>
   </ThemeProvider>
 )
 

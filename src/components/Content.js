@@ -50,11 +50,13 @@ const Markdown = styled.div`
     }
   }
 
-  .gatsby-resp-image-wrapper {
-    transition: transform 0.3s;
+  @media (min-width: 400px) {
+    .gatsby-resp-image-wrapper {
+      transition: transform 0.3s;
 
-    &:hover {
-      transform: scale(1.06);
+      &:hover {
+        transform: scale(1.06);
+      }
     }
   }
 
