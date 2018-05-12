@@ -2,7 +2,7 @@
 title: Der Digitale Wandel
 path: der-digitale-wandel
 templateKey: blog-post
-image: 'http://apptiva.ch/wp-content/uploads/2015/07/stonehenge-357227_1280.jpg'
+image: img/stonehenge-357227_1280.jpg
 date: 2015-07-08T22:34:55.000Z
 author: linus-huesler
 description: >-
