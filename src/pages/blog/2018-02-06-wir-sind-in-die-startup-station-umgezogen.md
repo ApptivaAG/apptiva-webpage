@@ -22,16 +22,22 @@ Inzwischen sind wir bereits einige Wochen hier und haben uns sehr gut eingelebt.
 
 &nbsp;
 
-<div style="display: inline-block; width:350px; height:120px; overflow: hidden;">
+<style>
+.small-image {
+  display: inline-block; width:350px; height:120px; max-width: 100%; overflow: hidden;
+}
+</style>
+
+<div class="small-image">
   <img src="img/buero_innen_04.jpg" alt="" />
 </div>
-<div style="display: inline-block; width:350px; height:120px; overflow: hidden;">
+<div class="small-image">
   <img src="./img/buero_innen_05.jpg" alt="" />
 </div> 
-<div style="display: inline-block; width:350px; height:120px; overflow: hidden;">
+<div class="small-image">
   <img src="./img/gebaeude.jpg" alt="" />
 </div>
-<div style="display: inline-block; width:350px; height:120px; overflow: hidden;">
+<div class="small-image">
   <img src="./img/buero_innen_03.jpg" alt=""/>
 </div>
 

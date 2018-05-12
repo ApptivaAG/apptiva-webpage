@@ -8,7 +8,10 @@ import Content, { HTMLContent } from '../components/Content'
 const HeadArea = styled.div``
 
 const HeaderTitle = styled.h1`
-  font-size: 4rem;
+  font-size: 2rem;
+  @media (min-width: 400px) {
+    font-size: 4rem;
+  }
   font-weight: 800;
   line-height: 1;
   text-align: center;
