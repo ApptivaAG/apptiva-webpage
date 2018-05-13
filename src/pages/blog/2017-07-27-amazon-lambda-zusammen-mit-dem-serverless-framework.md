@@ -2,7 +2,7 @@
 title: Amazon Lambda zusammen mit dem Serverless Framework
 path: amazon-lambda-zusammen-mit-dem-serverless-framework
 templateKey: blog-post
-image: 'http://apptiva.ch/wp-content/uploads/2017/07/serverless-application-development.jpg'
+image: img/serverless-application-development.jpg
 date: 2017-07-27T13:31:48.000Z
 author: linus-huesler
 description: >-
@@ -29,27 +29,26 @@ Das Serverless Framework ist ein NPM Modul. Du kannst es wie folgt installieren:
 <h3>2. Beispielprojekt</h3>
 Für unser Beispiel brauchst du zwei Dateien:
 <div><strong>handler.js: </strong>Diese Datei enhält den Lambda Code</div>
-<div>
-<div>
-<pre><span>'use strict'</span><span>;</span>
-<span>module.exports.run </span><span>=</span><span> (event, context) </span><span>=&gt;</span><span> {</span>
-<span> </span><span>const</span><span> time </span><span>=</span><span> </span><span>new</span><span> Date();</span>
-<span> console.log(</span><span>`Your cron function "</span><span>${</span><span>context.functionName</span><span>}</span><span>" ran at </span><span>${</span><span>time</span><span>}</span><span>. Yea!`</span><span>);</span>
-<span>};</span></pre>
-</div>
-</div>
+
+<pre>'use strict';
+module.exports.run = (event, context) =&gt; {
+ const time = new Date();
+ console.log(`Your cron function "${context.functionName}" ran at ${time}. Yea!`);
+};</pre>
+
 <strong>serverless.yml: </strong>Dies ist die Serverless Konfiguration
+
 <div>
-<pre><span>service</span><span>: </span><span>apptiva-demo-service</span>
-<span>provider</span><span>:</span>
-<span> </span><span>name</span><span>: </span><span>aws</span>
-<span> </span><span>runtime</span><span>: </span><span>nodejs4.3</span>
-<span>functions</span><span>:</span>
-<span> </span><span>cron</span><span>:</span>
-<span>   </span><span>handler</span><span>: </span><span>handler.run</span>
-<span>   </span><span>events</span><span>:</span>
-<span>     </span><span># Führe die Lambda Funktion jede Minute aus</span>
-<span>     - </span><span>schedule</span><span>: </span><span>rate(1 minute)</span></pre>
+<pre>service: apptiva-demo-service
+provider:
+ name: aws
+ runtime: nodejs4.3
+functions:
+ cron:
+   handler: handler.run
+   events:
+     # Führe die Lambda Funktion jede Minute aus
+     - schedule: rate(1 minute)</pre>
 <strong></strong>
 
 </div>
@@ -57,7 +56,7 @@ Für unser Beispiel brauchst du zwei Dateien:
 <div>Du kannst nun die erstellte Lambda Funktion bereits lokal ausführen:</div>
 <pre>serverless invoke local -f cron</pre>
 <div>Als Resultat solltest du folgende Ausgabe erhalten:</div>
-<pre>Your cron function "<span>apptiva-demo-service</span>" ran at Thu Jul 27 2017 11:42:03 GMT+0200 (CEST). Yea!</pre>
+<pre>Your cron function "apptiva-demo-service" ran at Thu Jul 27 2017 11:42:03 GMT+0200 (CEST). Yea!</pre>
 <h3>3. AWS Service Account einrichten</h3>
 Damit das Serverless Framework Zugriff auf deinen AWS Account hat, erstellen wir bei AWS einen IAM Benutzer mit Admin Berechtigung. Dieser Benutzer kann den Lamdba Service innerhalb deines AWS Accounts konfigurieren.
 <ul>
@@ -86,6 +85,6 @@ Meiner Meinung nach vereinfachen Serverless Applikationen die Entwicklung von ko
 
 Folgende Präsentation von AWS gibt dir weitere Informationen zum Thema:
 
-https://www.slideshare.net/AmazonWebServices/deep-dive-on-sserverless-application-development
+<iframe src="https://www.slideshare.net/slideshow/embed_code/key/IXHTxRxxUtD61G" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen="" height="356" frameborder="0" width="427"> </iframe>
 
 &nbsp;
