@@ -70,6 +70,7 @@ export const Subtitle = styled.h4`
 const shared = css`
   display: inline-block;
   padding: 0.6em 1.4em .7em;
+  border: 0 none;
   border-radius: 0.1em;
   font-weight: 500;
   color: white;
@@ -77,6 +78,7 @@ const shared = css`
   transition: transform 30ms ease-out;
   transform: translate3d(0, 0, 0);
   box-sizing: border-box;
+  cursor: pointer;
 
   &:hover {
     transform: translate3d(0, -1px, 0);

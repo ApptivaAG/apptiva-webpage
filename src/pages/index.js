@@ -10,12 +10,14 @@ import {
   Button,
   Centered,
   Right,
+  Subtitle,
 } from '../layouts/style'
 import Testimonials from '../components/Testimonials'
 import Employees from '../components/Employees'
 import { ReactComponent as Eris } from '../img/eris-logo.svg'
 import { ReactComponent as LifeRing } from '../img/life-ring.svg'
 import { theme } from '../layouts'
+import ContactForm from '../components/ContactForm'
 
 const ColList = styled.ul`
   display: flex;
@@ -195,6 +197,7 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
 
     <Section>
       <Title id="blog">Blog</Title>
+      <Subtitle>Aktuelle News rund um die Apptiva</Subtitle>
 
       <ColList>
         {posts.map(({ node: post }) => (
@@ -216,7 +219,15 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
         <Button to="/blog/">Zum Apptiva Blog</Button>
       </Centered>
     </Section>
-    <Section>
+    <Section id="kontakt" dark>
+      <Title>Kontakt</Title>
+      <Subtitle>Wir freuen uns, von Ihnen zu hören.</Subtitle>
+      Möchten Sie uns kennenlernen oder haben Sie Fragen zu unseren
+      Dienstleistungen? <br />Zögern Sie nicht und nehmen Sie mit uns Kontakt
+      auf!
+      <ContactForm />
+    </Section>
+    <Section style={{ padding: 0, marginBottom: '-4rem' }}>
       <FullWidth>
         <iframe
           title="Google Maps"

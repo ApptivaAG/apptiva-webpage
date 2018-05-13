@@ -106,7 +106,9 @@ const Navbar = ({ location }) => (
         <DynLink type={location} nav="/#blog">
           Blog
         </DynLink>
-        <NavItemsLink to="/about">About</NavItemsLink>
+        <DynLink type={location} nav="/#kontakt">
+          Kontakt
+        </DynLink>
       </Navigation>
     </Container>
   </NavBar>
