@@ -2,7 +2,7 @@
 title: React Komponenten mit Chrome Timeline analysieren
 path: react-komponenten-mit-chrome-timeline-analysieren
 templateKey: blog-post
-image: 'http://apptiva.ch/wp-content/uploads/2016/11/profiling.png'
+image: img/profiling.png
 date: 2016-11-16T21:01:42.000Z
 author: linus-huesler
 description: >-
@@ -35,7 +35,7 @@ Um nun die Timeline in Chrome anschauen zu können, muss ich folgendes machen:
 </ol>
 &nbsp;
 
-<img src="https://apptiva.ch/wp-content/uploads/2016/11/react-profiling.png" alt="react-profiling" width="2148" height="352" class="alignnone size-full wp-image-2640" />
+<img src="img/react-profiling.png" alt="react-profiling"  />
 
 &nbsp;
 
