@@ -42,10 +42,11 @@ class ContactForm extends React.Component {
     if (this.state.email === '' || this.state.name === '') {
       alert('Upps, ein zwingendes Feld ist noch nicht ausgefüllt.')
     } else {
+      const body = encode({ 'form-name': 'contact', ...this.state })
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({ 'form-name': 'contact', ...this.state }),
+        body,
       })
         .then(res => res.json())
         .then(response => {
@@ -72,7 +73,11 @@ class ContactForm extends React.Component {
   render() {
     const { name, email, message } = this.state
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        onSubmit={this.handleSubmit}
+      >
         <p>
           <label htmlFor="name">
             Ihr Name (Pflichtfeld){' '}
