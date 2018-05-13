@@ -34,6 +34,7 @@ module.exports = {
               emojiConversion: 'toImage',
             },
           },
+          'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
           {
             resolve: `gatsby-remark-images`,

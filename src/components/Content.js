@@ -1,7 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
+require('prismjs/themes/prism.css')
+
 const Markdown = styled.div`
+  margin-bottom: 4rem;
+
   h1,
   h2 {
     margin-top: 2em;
