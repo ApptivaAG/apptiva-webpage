@@ -47,17 +47,20 @@ class ContactForm extends React.Component {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({ 'form-name': 'contact', ...this.state }),
       })
-        .then(() => {
+        .then(res => res.json())
+        .then(response => {
+          console.log('Success', response)
           alert(
             'Danke! Wir haben Ihre Nachricht erhalten und melden uns so bald wie möglich bei Ihnen.'
           )
           this.setState({ name: '', email: '', message: '' })
         })
-        .catch(error =>
+        .catch(error => {
+          console.log('Error', error)
           alert(
             `Leider hat dies nicht funktioniert. Entschuldigen Sie die Umstände. Wenn Sie uns auf info@apptiva.ch ein Email schicken melden wir uns sofort bei Ihnen.`
           )
-        )
+        })
     }
     e.preventDefault()
   }
