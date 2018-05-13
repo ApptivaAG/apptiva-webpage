@@ -12,12 +12,19 @@ import {
   Right,
   Subtitle,
 } from '../layouts/style'
+import { theme } from '../layouts'
 import Testimonials from '../components/Testimonials'
 import Employees from '../components/Employees'
+import ContactForm from '../components/ContactForm'
+
 import { ReactComponent as Eris } from '../img/eris-logo.svg'
 import { ReactComponent as LifeRing } from '../img/life-ring.svg'
-import { theme } from '../layouts'
-import ContactForm from '../components/ContactForm'
+import suva from '../img/suva-300.png'
+import sanagate from '../img/sanagate-300x65.png'
+import maxon from '../img/maxonmotor-300x45.png'
+import insel from '../img/insel-gruppe-logo-300x70.png'
+import hostettler from '../img/hostettler-300x70.png'
+import energie360 from '../img/energie360-300x72.png'
 
 const ColList = styled.ul`
   display: flex;
@@ -165,28 +172,28 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
     <Section dark>
       <ImageList>
         <img
-          src="https://apptiva.ch/wp-content/uploads/2016/11/sanagate-300x65.png"
-          alt=""
+          src={sanagate}
+          alt="sanagate"
         />
         <img
-          src="https://apptiva.ch/wp-content/uploads/2016/02/insel-gruppe-logo-300x70.png"
-          alt="insel-gruppe-logo"
+          src={insel}
+          alt="Insel Gruppe"
         />
         <img
-          src="https://apptiva.ch/wp-content/uploads/2016/07/57d088b5-0519-4d8a-8180-4f95d7cea1ad-300x72.png"
-          alt=""
+          src={energie360}
+          alt="Energie 360° AG"
         />
         <img
-          src="https://apptiva.ch/wp-content/uploads/2016/07/logo_organisationen_suva-300x75.png"
+          src={suva}
           alt="suva"
         />
         <img
-          src="https://apptiva.ch/wp-content/uploads/2016/07/hostettler-300x70.png"
+          src={hostettler}
           alt="hostettler"
         />
         <img
-          src="https://apptiva.ch/wp-content/uploads/2016/11/maxonmotor_desat-300x45.png"
-          alt=""
+          src={maxon}
+          alt="maxon motor"
         />
       </ImageList>
     </Section>
