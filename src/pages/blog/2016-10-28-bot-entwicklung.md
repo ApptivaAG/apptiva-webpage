@@ -14,7 +14,7 @@ Das Thema Bots ist in aller Munde. Interessanterweise gibt es aber kaum Angebote
 
 Den ersten Schritt haben wir diese Woche mit der Lancierung der [Botfabrik](https://www.botfabrik.ch) getan. Die Botfabrik soll Interessierten die Thematik der Bots und die Bot Entwicklung näher bringen. So werden in der Botfabrik die Möglichkeiten von Bots ausgelotet und veranschaulicht. Nun ist die Botfabrik nicht bloss eine klassische Webseite, sondern selber ein Bot namens Pit. Pit ist sozusagen ein Bot, welcher Bots erklärt.
 
-![Screenshot der Webseite botfabrik.ch](img/intro.png)
+![Screenshot der Webseite botfabrik.ch](img/bot-intro.png)
 
 Nun kann selbst Pit nicht alle Fragen beantworten. Deshalb gibt es eine Slack-Integration, die uns ermöglicht für Pit einzuspringen. Ab diesem Zeitpunkt übernehmen wir und können direkt mit den Besuchern der Botfabrik kommunizieren.
 
