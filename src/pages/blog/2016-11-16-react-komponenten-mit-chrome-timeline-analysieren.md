@@ -2,7 +2,7 @@
 title: React Komponenten mit Chrome Timeline analysieren
 path: react-komponenten-mit-chrome-timeline-analysieren
 templateKey: blog-post
-image: img/profiling.png
+image: ./img/profiling.png
 date: 2016-11-16T21:01:42.000Z
 author: linus-huesler
 description: >-
@@ -39,6 +39,6 @@ Um nun die Timeline in Chrome anschauen zu können, muss ich folgendes machen:
 
 &nbsp;
 
-Was mir auffällt ist, dass nach dem Eintreffen einer neuen Chat-Nachricht die <em>Intro</em> Komponente aktualisiert wird. Dies macht keinen Sinn, da diese Komponente nur statischen Text anzeigt. Es gilt jetzt herauszufinden, warum das so ist. Gut Nacht :-)
+Was mir auffällt ist, dass nach dem Eintreffen einer neuen Chat-Nachricht die <em>Intro</em> Komponente aktualisiert wird. Dies macht keinen Sinn, da diese Komponente nur statischen Text anzeigt. Es gilt jetzt herauszufinden, warum das so ist. Gut Nacht :smile:
 
 Linus Hüsler

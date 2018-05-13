@@ -71,6 +71,12 @@ const Markdown = styled.div`
   .gatsby-resp-image-image {
     box-shadow: none !important;
   }
+
+  .emojione {
+    height: 1em;
+    bottom: -3px;
+    position: relative;
+  }
 `
 
 export default ({ content, className }) => (

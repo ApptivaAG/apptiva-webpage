@@ -27,6 +27,13 @@ module.exports = {
         plugins: [
           'gatsby-remark-external-links',
           'gatsby-remark-smartypants',
+          {
+            resolve: 'gatsby-remark-emoji',
+            options: {
+              // default emojiConversion --> shortnameToUnicode
+              emojiConversion: 'toImage',
+            },
+          },
           'gatsby-remark-copy-linked-files',
           {
             resolve: `gatsby-remark-images`,
