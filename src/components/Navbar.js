@@ -33,7 +33,7 @@ const Navigation = styled.div`
     right: -20rem;
     padding: 2em 2em 2em 0;
     background-color: ${p => p.theme.color.primary};
-    transition: all 200ms ease 0s;
+    transition: all 200ms ease 200ms;
   }
 `
 const MenuButton = styled.button`
@@ -71,9 +71,11 @@ const shared = props =>
     }
   `
 const NavItemsLink = styled(Link)`
+  padding: 0.2em 0;
   ${shared};
 `
 const NavItemsA = styled.a`
+  padding: 0.2em 0;
   ${shared};
 `
 
