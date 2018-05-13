@@ -48,9 +48,7 @@ class ContactForm extends React.Component {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body,
       })
-        .then(res => res.json())
-        .then(response => {
-          console.log('Success', response)
+        .then(() => {
           alert(
             'Danke! Wir haben Ihre Nachricht erhalten und melden uns so bald wie möglich bei Ihnen.'
           )
