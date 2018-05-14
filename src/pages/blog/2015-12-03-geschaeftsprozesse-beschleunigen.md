@@ -1,5 +1,5 @@
 ---
-title: Geschäfts&shy;prozesse beschleunigen
+title: Geschäftsprozesse beschleunigen
 path: geschaeftsprozesse-beschleunigen
 templateKey: blog-post
 image: img/beschleunigen.jpg
