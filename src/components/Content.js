@@ -82,6 +82,12 @@ const Markdown = styled.div`
     bottom: -3px;
     position: relative;
   }
+
+  .gatsby-highlight {
+    font-size: 0.8em;
+  }
+
+}
 `
 
 export default ({ content, className }) => (

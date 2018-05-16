@@ -25,21 +25,24 @@ In diesem Beispiel erstellen wir eine einfache Lambda Funktion die jede Minute a
 Damit dieses Beispiel funktioniert, musst du Node installiert haben (z.B. mit <code>brew install node</code>) und du musst einen Account bei Amazon Web Services haben.
 <h3>1. Serverless installieren</h3>
 Das Serverless Framework ist ein NPM Modul. Du kannst es wie folgt installieren:
-<pre>npm install -g serverless</pre>
+
+`npm install -g serverless
+
 <h3>2. Beispielprojekt</h3>
 Für unser Beispiel brauchst du zwei Dateien:
 <div><strong>handler.js: </strong>Diese Datei enhält den Lambda Code</div>
 
-<pre>'use strict';
+```javascript
+'use strict';
 module.exports.run = (event, context) =&gt; {
  const time = new Date();
  console.log(`Your cron function "${context.functionName}" ran at ${time}. Yea!`);
-};</pre>
+};
+```
 
 <strong>serverless.yml: </strong>Dies ist die Serverless Konfiguration
 
-<div>
-<pre>service: apptiva-demo-service
+```yml
 provider:
  name: aws
  runtime: nodejs4.3
@@ -48,17 +51,21 @@ functions:
    handler: handler.run
    events:
      # Führe die Lambda Funktion jede Minute aus
-     - schedule: rate(1 minute)</pre>
-<strong></strong>
+     - schedule: rate(1 minute)
+```
 
-</div>
-<div>
-<div>Du kannst nun die erstellte Lambda Funktion bereits lokal ausführen:</div>
-<pre>serverless invoke local -f cron</pre>
-<div>Als Resultat solltest du folgende Ausgabe erhalten:</div>
-<pre>Your cron function "apptiva-demo-service" ran at Thu Jul 27 2017 11:42:03 GMT+0200 (CEST). Yea!</pre>
-<h3>3. AWS Service Account einrichten</h3>
+Du kannst nun die erstellte Lambda Funktion bereits lokal ausführen:
+
+`serverless invoke local -f cron`
+
+Als Resultat solltest du folgende Ausgabe erhalten:
+
+`Your cron function "apptiva-demo-service" ran at Thu Jul 27 2017 11:42:03 GMT+0200 (CEST). Yea!`
+
+### 3. AWS Service Account einrichten
+
 Damit das Serverless Framework Zugriff auf deinen AWS Account hat, erstellen wir bei AWS einen IAM Benutzer mit Admin Berechtigung. Dieser Benutzer kann den Lamdba Service innerhalb deines AWS Accounts konfigurieren.
+
 <ul>
  	<li>Melde dich bei Amazon Web Services an: <a href="https://console.aws.amazon.com" target="_blank" rel="noopener">https://console.aws.amazon.com</a></li>
  	<li>Gehe zur "Identity &amp; Access Management (IAM)" Seite</li>
@@ -68,23 +75,27 @@ Damit das Serverless Framework Zugriff auf deinen AWS Account hat, erstellen wir
  	<li>Prüfe ob alle Angaben stimmen und klicke "Create user"</li>
  	<li>Kopiere den erstellten API Key und das Secret</li>
 </ul>
+
 In deiner Konsole musst du nun dem Serverless Framework den AWS API Key und das Secret mitteilen:
-<pre>serverless config credentials --provider aws --key DEIN_API_KEY --secret DEIN_SECRET</pre>
-</div>
+
+`serverless config credentials --provider aws --key DEIN_API_KEY --secret DEIN_SECRET`
+
 <h3>4. Applikation deployen</h3>
 Du kannst nun die Applikation mit folgendem Befehl deployen:
-<pre>serverless deploy -v</pre>
+
+`serverless deploy -v`
+
 Ab jetzt wird die <em>run</em> Funktion jede Minute ausgeführt. Dies kannst du im Log sehen:
-<pre>serverless logs -f cron</pre>
+
+`serverless logs -f cron`
+
 Falls du nur eine Änderung an der Funktion gemacht hast, kannst du diese Änderung mittels folgendem Befehle neu deployen:
-<pre>serverless deploy function -f cron</pre>
+
+`serverless deploy function -f cron`
+
 <h2>Fazit</h2>
 Meiner Meinung nach vereinfachen Serverless Applikationen die Entwicklung von kostgünstigen und skalierbaren Applikationen enorm. Als Softwareentwickler muss ich mich nicht um die Skalierbarkeit und Verfügbarkeit der Applikation kümmern. So glaube ich, dass wir in Zukunft immer mehr solche Applikationen antreffen werden.
-
-&nbsp;
 
 Folgende Präsentation von AWS gibt dir weitere Informationen zum Thema:
 
 <iframe src="https://www.slideshare.net/slideshow/embed_code/key/IXHTxRxxUtD61G" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen="" height="356" frameborder="0" width="427"> </iframe>
-
-&nbsp;

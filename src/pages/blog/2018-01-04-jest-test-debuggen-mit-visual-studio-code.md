@@ -24,7 +24,8 @@ Eventuell musst du abhängig vom Projekt einen <em>preLaunchTask</em> hinzufüge
 
 Unsere Launch-Konfiguration sieht nun so aus:
 
-<pre><span>{
+```json
+{
  "type": "node",
  "request": "launch",
  "name": "Debug Jest Test",
@@ -41,4 +42,5 @@ Unsere Launch-Konfiguration sieht nun so aus:
  "protocol": "inspector",
  "console": "integratedTerminal",
  "internalConsoleOptions": "neverOpen"
-}</span></pre>
+}
+```
