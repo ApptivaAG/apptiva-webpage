@@ -119,7 +119,7 @@ export const ServicePageTemplate = ({
             </ListTitle>
             <ItemList>
               {group.bulletList.map(item => (
-                <Item key={item.icon}>
+                <Item key={item.title}>
                   <Icon>{icons(item.icon)}</Icon>
                   <ItemContent>
                     <h2>{item.title}</h2>

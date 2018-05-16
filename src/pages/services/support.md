@@ -8,6 +8,11 @@ description: ''
 ---
 
 <style>
+.gatsby-image-outer-wrapper {
+  max-width: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+}
 .service {
   margin-top: 4rem;
 }
@@ -18,6 +23,15 @@ description: ''
 </style>
 
 ## Wir unterstützen Sie mit Brainpower und Wissen bei Ihrem Vorhaben.
+
+# Aktuell Angebote
+
+* [Persona Workshop](/persona-workshop)
+* Usability Audit
+* Innovations Workshop
+* Architektur Review
+* Softwarekonzepte mit hoher Usability
+* User Centered Design-Workshop
 
 <div class="service">
 
