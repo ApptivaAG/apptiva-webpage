@@ -171,30 +171,12 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
 
     <Section dark>
       <ImageList>
-        <img
-          src={sanagate}
-          alt="sanagate"
-        />
-        <img
-          src={insel}
-          alt="Insel Gruppe"
-        />
-        <img
-          src={energie360}
-          alt="Energie 360° AG"
-        />
-        <img
-          src={suva}
-          alt="suva"
-        />
-        <img
-          src={hostettler}
-          alt="hostettler"
-        />
-        <img
-          src={maxon}
-          alt="maxon motor"
-        />
+        <img src={sanagate} alt="sanagate" />
+        <img src={insel} alt="Insel Gruppe" />
+        <img src={energie360} alt="Energie 360° AG" />
+        <img src={suva} alt="suva" />
+        <img src={hostettler} alt="hostettler" />
+        <img src={maxon} alt="maxon motor" />
       </ImageList>
     </Section>
 
@@ -313,18 +295,10 @@ export const indexPageQuery = graphql`
         }
       }
     }
-    appsImage: imageSharp(id: { regex: "/apps/" }) {
+    appsImage: imageSharp(id: { regex: "/apps.png/" }) {
       sizes(maxWidth: 600) {
         ...GatsbyImageSharpSizes
       }
     }
   }
 `
-
-// {
-//   childImageSharp {
-//     resolutions(height: 150, width: 300) {
-//       ...GatsbyImageSharpResolutions
-//     }
-//   }
-// }
