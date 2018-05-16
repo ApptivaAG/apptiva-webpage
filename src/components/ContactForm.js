@@ -40,6 +40,7 @@ class ContactForm extends React.Component {
 
   handleSubmit(e) {
     if (this.state.email === '' || this.state.name === '') {
+      /* eslint-disable-next-line no-alert */
       alert('Upps, ein zwingendes Feld ist noch nicht ausgefüllt.')
     } else {
       const body = encode({ 'form-name': 'contact', ...this.state })
@@ -49,13 +50,16 @@ class ContactForm extends React.Component {
         body,
       })
         .then(() => {
+          /* eslint-disable-next-line no-alert */
           alert(
             'Danke! Wir haben Ihre Nachricht erhalten und melden uns so bald wie möglich bei Ihnen.'
           )
           this.setState({ name: '', email: '', message: '' })
         })
         .catch(error => {
+          /* eslint-disable-next-line no-console */
           console.log('Error', error)
+          /* eslint-disable-next-line no-alert */
           alert(
             `Leider hat dies nicht funktioniert. Entschuldigen Sie die Umstände. Wenn Sie uns auf info@apptiva.ch ein Email schicken melden wir uns sofort bei Ihnen.`
           )

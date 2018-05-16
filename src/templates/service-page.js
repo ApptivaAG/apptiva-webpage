@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
@@ -98,8 +97,6 @@ export const ServicePageTemplate = ({
 }) => {
   const PostContent = contentComponent || Content
 
-  console.log('bullet', bulletGroups)
-
   return (
     <section>
       {helmet || ''}
@@ -123,6 +120,7 @@ export const ServicePageTemplate = ({
                   <Icon>{icons(item.icon)}</Icon>
                   <ItemContent>
                     <h2>{item.title}</h2>
+                    {/* eslint-disable-next-line react/no-danger */}
                     <p dangerouslySetInnerHTML={{ __html: item.text }} />
                   </ItemContent>
                 </Item>
