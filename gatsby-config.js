@@ -26,6 +26,7 @@ module.exports = {
       options: {
         plugins: [
           'gatsby-remark-external-links',
+          'gatsby-plugin-catch-links',
           'gatsby-remark-smartypants',
           {
             resolve: 'gatsby-remark-emoji',
