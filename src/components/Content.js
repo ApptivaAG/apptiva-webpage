@@ -7,9 +7,10 @@ const Markdown = styled.div`
   margin-bottom: 4rem;
 
   h1,
-  h2 {
-    margin-top: 2em;
-    margin-bottom: 1em;
+  h2,
+  h3 {
+    margin-top: 1.6em;
+    margin-bottom: 0.6em;
   }
 
   img {
