@@ -35,7 +35,6 @@ module.exports = {
               emojiConversion: 'toImage',
             },
           },
-          'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
           {
             resolve: `gatsby-remark-images`,
@@ -59,6 +58,7 @@ module.exports = {
           },
           'gatsby-remark-embed-responsive-video',
           'gatsby-remark-responsive-iframe',
+          'gatsby-remark-prismjs',
         ],
       },
     },
