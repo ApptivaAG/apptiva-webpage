@@ -27,9 +27,10 @@ import hostettler from '../img/hostettler-300x70.png'
 import energie360 from '../img/energie360-300x72.png'
 
 const ColList = styled.ul`
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -1em 2em;
+  margin: 0 -0.5em 2em;
   padding: 0;
   list-style: none;
 `
@@ -43,19 +44,21 @@ const SupportLogo = styled(LifeRing)`
   color: ${p => p.theme.color.orange};
   max-height: 8rem;
   margin-top: 1em;
+  margin-bottom: 1em;
 }
 `
 const ListItem = styled.li`
-  flex: 1;
-  padding: 0 1em 1em;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 12rem;
+  margin: 0 0.5em 1em;
+  border: 1px solid lightgray;
+  border-radius: 0.2em;
   text-align: ${props => (props.align ? props.align : 'center')};
 
   a {
-    display: block;
-    height: 100%;
+    flex: 1;
     padding: ${props => (props.full ? 0 : '1em')};
-    border: 1px solid lightgray;
-    border-radius: 0.2em;
     color: ${props => props.theme.color.text};
     background-color: ${props => props.theme.color.bg};
     overflow: hidden;
