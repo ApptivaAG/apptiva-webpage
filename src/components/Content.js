@@ -17,6 +17,10 @@ const Markdown = styled.div`
     max-width: 100%;
   }
 
+  a {
+    word-break: break-all;
+  }
+
   .container {
     margin-right: auto;
     margin-left: auto;
