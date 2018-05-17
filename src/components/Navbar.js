@@ -28,19 +28,21 @@ const Navigation = styled.div`
     position: fixed;
     display: flex;
     flex-direction: column;
+    font-size: 1.2em;
     top: 0;
     bottom: 0;
     right: -20rem;
-    padding: 2em 2em 2em 0;
+    padding: 0.8em 2em 2em 0;
     background-color: ${p => p.theme.color.primary};
     transition: all 200ms ease 200ms;
   }
 `
-const MenuButton = styled.button`
-  border: none;
-  background: transparent;
+const MenuButton = styled.a`
+  padding: 0.5em;
+  margin-right: -0.5em;
   color: white;
   font-weight: 600;
+  cursor: pointer;
 
   @media (min-width: 740px) {
     display: none;
@@ -55,9 +57,9 @@ const shared = props =>
   props['data-element'] !== 'logo' &&
   css`
     display: inline-block;
-    font-size: 1.1rem;
+    font-size: 1.1em;
     font-weight: 500;
-    margin-left: 2rem;
+    margin-left: 2em;
     color: white;
 
     transition: transform 30ms ease-out;
@@ -71,11 +73,11 @@ const shared = props =>
     }
   `
 const NavItemsLink = styled(Link)`
-  padding: 0.2em 0;
+  padding: 0.3em 0;
   ${shared};
 `
 const NavItemsA = styled.a`
-  padding: 0.2em 0;
+  padding: 0.3em 0;
   ${shared};
 `
 
@@ -95,7 +97,7 @@ const Navbar = ({ location }) => (
         </DynLink>
       </div>
 
-      <MenuButton>Menu</MenuButton>
+      <MenuButton tabIndex="0">Menu</MenuButton>
       <Navigation>
         <DynLink type={location} nav="/#dienstleistungen">
           Dienstleistungen
