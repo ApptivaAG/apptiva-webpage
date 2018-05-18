@@ -126,7 +126,7 @@ export const productPageQuery = graphql`
         image {
           childImageSharp {
             sizes {
-              ...GatsbyImageSharpSizes
+              ...GatsbyImageSharpSizes_withWebp
             }
           }
         }

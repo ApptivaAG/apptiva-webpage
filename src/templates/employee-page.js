@@ -219,7 +219,7 @@ export const employeePageQuery = graphql`
         avatar {
           childImageSharp {
             sizes(maxWidth: 300) {
-              ...GatsbyImageSharpSizes
+              ...GatsbyImageSharpSizes_withWebp
             }
           }
         }

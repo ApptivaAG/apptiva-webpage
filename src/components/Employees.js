@@ -118,7 +118,7 @@ export const employeeFragment = graphql`
       preview {
         childImageSharp {
           resolutions(width: 200, height: 200) {
-            ...GatsbyImageSharpResolutions
+            ...GatsbyImageSharpResolutions_withWebp
           }
         }
       }

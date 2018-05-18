@@ -38,7 +38,9 @@
     "styled-normalize": "^4.0.0",
     "unist-util-visit": "^1.3.1"
   },
-  "keywords": ["Apptiva"],
+  "keywords": [
+    "Apptiva"
+  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
@@ -47,8 +49,7 @@
     "develop": "gatsby develop",
     "develop-ip": "gatsby develop -H 192.168.1.188",
     "serve": "gatsby serve",
-    "format":
-      "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "lint": "eslint ./src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

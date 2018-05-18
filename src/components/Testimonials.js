@@ -88,7 +88,7 @@ export const testimonialFragment = graphql`
       avatar {
         childImageSharp {
           resolutions(width: 50, height: 50) {
-            ...GatsbyImageSharpResolutions
+            ...GatsbyImageSharpResolutions_withWebp
           }
         }
       }

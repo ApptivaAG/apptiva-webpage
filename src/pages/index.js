@@ -289,7 +289,7 @@ export const indexPageQuery = graphql`
             image {
               childImageSharp {
                 resolutions(height: 150, width: 300) {
-                  ...GatsbyImageSharpResolutions
+                  ...GatsbyImageSharpResolutions_withWebp
                 }
               }
             }
@@ -300,7 +300,7 @@ export const indexPageQuery = graphql`
     }
     appsImage: imageSharp(id: { regex: "/apps.png/" }) {
       sizes(maxWidth: 600) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp
       }
     }
   }

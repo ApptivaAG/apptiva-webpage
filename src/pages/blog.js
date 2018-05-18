@@ -58,7 +58,7 @@ export const blogListPage = graphql`
             image {
               childImageSharp {
                 resolutions(height: 150, width: 300) {
-                  ...GatsbyImageSharpResolutions
+                  ...GatsbyImageSharpResolutions_withWebp
                 }
               }
             }
