@@ -75,7 +75,7 @@ skills:
 
 # Meine Erfahrungen
 
-Seit Ende 2013 entwickle ich Web-Applikationen auf dem Java-Stack. Ich arbeite in Projekten als Architekt, Backend- und als Frontend-Entwickler. Anwender- und Kundenkontakt sowie agile Prozesse sind mir sehr wichtig.
+Seit Ende 2007 entwickle ich Web-Applikationen auf dem Java-Stack. Ich arbeite in Projekten als Architekt, Backend- und als Frontend-Entwickler. Anwender- und Kundenkontakt sowie agile Prozesse sind mir sehr wichtig.
 
 2008 bis 2013 durfte ich viele Erfahrungen in der Entwicklung von ERP-Systemen sammeln. Ich habe viel Arbeit in Core-Funktionen und die technischen Herausforderungen von grossen Server-Anwendungen gesteckt.
 
