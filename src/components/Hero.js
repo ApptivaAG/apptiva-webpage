@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 
-import heroImage from '../img/solution-collage.svg'
+import heroImage from '../img/solution-collage.png'
 import logoSlogan from '../img/logo-slogan.svg'
 import { Button } from '../layouts/style'
 
@@ -33,7 +33,7 @@ const ColTeaser = styled.div`
   padding: 2rem 1rem;
 `
 const HeroImage = styled.img`
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
   min-width: 0;
   min-height: 0;
