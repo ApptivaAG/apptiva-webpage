@@ -10,18 +10,7 @@ export const Section = styled.section`
   ${props =>
     props.dark &&
     css`
-      &:before {
-        content: ' ';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 50%;
-        right: 50%;
-        margin-left: -49.5vw;
-        margin-right: -49.5vw;
-        background-color: ${props.theme.color.lightBg};
-        z-index: -1;
-      }
+      background-color: ${props.theme.color.lightBg};
     `};
 `
 
@@ -31,15 +20,6 @@ export const Container = styled.div`
   max-width: 960px;
   padding-right: 1em;
   padding-left: 1em;
-`
-
-export const FullWidth = styled.div`
-  width: 100vw;
-  position: relative;
-  left: 49.4%;
-  right: 49.4%;
-  margin-left: -50vw;
-  margin-right: -50vw;
 `
 
 export const Centered = styled.div`

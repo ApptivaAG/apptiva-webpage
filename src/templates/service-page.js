@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import * as FontAwesome from 'react-icons/lib/fa'
 
 import Content, { HTMLContent } from '../components/Content'
-import { Centered } from '../layouts/style'
+import { Centered, Container } from '../layouts/style'
 
 const HeadArea = styled.div``
 
@@ -100,35 +100,37 @@ export const ServicePageTemplate = ({
   return (
     <section>
       {helmet || ''}
-      <Centered>
-        <Header title={title} image={image} subtitle={subtitle} />
-      </Centered>
-      <Centered>
-        <p>{description}</p>
-      </Centered>
-      {bulletGroups &&
-        bulletGroups.map(group => (
-          <div key={group.title}>
-            <ListTitle>
-              <h1>{group.title}</h1>
-              {/* eslint-disable-next-line react/no-danger */}
-              <p dangerouslySetInnerHTML={{ __html: group.description }} />
-            </ListTitle>
-            <ItemList>
-              {group.bulletList.map(item => (
-                <Item key={item.title}>
-                  <Icon>{icons(item.icon)}</Icon>
-                  <ItemContent>
-                    <h2>{item.title}</h2>
-                    {/* eslint-disable-next-line react/no-danger */}
-                    <p dangerouslySetInnerHTML={{ __html: item.text }} />
-                  </ItemContent>
-                </Item>
-              ))}
-            </ItemList>
-          </div>
-        ))}
-      <PostContent content={content} />
+      <Container>
+        <Centered>
+          <Header title={title} image={image} subtitle={subtitle} />
+        </Centered>
+        <Centered>
+          <p>{description}</p>
+        </Centered>
+        {bulletGroups &&
+          bulletGroups.map(group => (
+            <div key={group.title}>
+              <ListTitle>
+                <h1>{group.title}</h1>
+                {/* eslint-disable-next-line react/no-danger */}
+                <p dangerouslySetInnerHTML={{ __html: group.description }} />
+              </ListTitle>
+              <ItemList>
+                {group.bulletList.map(item => (
+                  <Item key={item.title}>
+                    <Icon>{icons(item.icon)}</Icon>
+                    <ItemContent>
+                      <h2>{item.title}</h2>
+                      {/* eslint-disable-next-line react/no-danger */}
+                      <p dangerouslySetInnerHTML={{ __html: item.text }} />
+                    </ItemContent>
+                  </Item>
+                ))}
+              </ItemList>
+            </div>
+          ))}
+        <PostContent content={content} />
+      </Container>
     </section>
   )
 }

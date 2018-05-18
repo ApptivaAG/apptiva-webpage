@@ -1,7 +1,7 @@
 import React from 'react'
+import Img from 'gatsby-image'
 import styled, { keyframes } from 'styled-components'
 
-import heroImage from '../img/solution-collage.png'
 import logoSlogan from '../img/logo-slogan.svg'
 import { Button } from '../layouts/style'
 
@@ -32,12 +32,7 @@ const ColTeaser = styled.div`
   flex: 1 1 18rem;
   padding: 2rem 1rem;
 `
-const HeroImage = styled.img`
-  /* height: 100%; */
-  width: 100%;
-  min-width: 0;
-  min-height: 0;
-`
+
 const Teaser = styled.h1`
   color: #aaa;
   margin: 0 0 2rem;
@@ -105,14 +100,14 @@ const AnimatedArrow = styled.svg`
   animation: ${Slide} 2s cubic-bezier(0.87, -0.24, 0.77, 0.34) infinite;
 `
 
-export default () => (
+export default ({ image }) => (
   <Section id="start">
     <Logo src={logoSlogan} alt="Apptiva - Passgenaue Softwarelösungen" />
 
     <Columns>
       <ColHero>
-        <HeroImage
-          src={heroImage}
+        <Img
+          sizes={image}
           alt="Erfolgreich umgesetzte Desktop, Mobile und Weblösungen"
         />
       </ColHero>

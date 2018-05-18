@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import Content, { HTMLContent } from '../components/Content'
+import { Container } from '../layouts/style'
 
 const HeadArea = styled.div``
 
@@ -93,11 +94,13 @@ export const BlogPostTemplate = ({
   return (
     <section>
       {helmet || ''}
-      <Header title={title} image={image} />
-      <Description>{description}</Description>
-      {author && <Published author={author} date={date} />}
-      <PostContent content={content} />
-      <Navigation next={navigation.next} prev={navigation.prev} />
+      <Container>
+        <Header title={title} image={image} />
+        <Description>{description}</Description>
+        {author && <Published author={author} date={date} />}
+        <PostContent content={content} />
+        <Navigation next={navigation.next} prev={navigation.prev} />
+      </Container>
     </section>
   )
 }

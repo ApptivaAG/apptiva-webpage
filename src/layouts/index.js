@@ -4,9 +4,7 @@ import { ThemeProvider, injectGlobal } from 'styled-components'
 import styledNormalize from 'styled-normalize'
 
 import Navbar from '../components/Navbar'
-import Hero from '../components/Hero'
 import fontFace from './font-face'
-import { Container } from './style'
 import Footer from '../components/Footer'
 import Lightbox from '../components/Lightbox'
 
@@ -94,9 +92,8 @@ const TemplateWrapper = ({ children, location }) => (
   <ThemeProvider theme={theme}>
     <Lightbox>
       <Helmet title="Apptiva AG - iOS, Android, Desktop und Web-Applikationen" />
-      {location.pathname === '/' && <Hero />}
-      {location.pathname === '/' ? <Navbar location="root" /> : <Navbar />}
-      <Container>{children()}</Container>
+      {location.pathname !== '/' && <Navbar />}
+      {children()}
       <Footer />
     </Lightbox>
   </ThemeProvider>

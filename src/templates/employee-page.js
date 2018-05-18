@@ -9,7 +9,7 @@ import XingIcon from 'react-icons/lib/fa/xing'
 import LinkedinIcon from 'react-icons/lib/fa/linkedin'
 
 import Content, { HTMLContent } from '../components/Content'
-import { Title, Subtitle, Section } from '../layouts/style'
+import { Title, Subtitle, Section, Container } from '../layouts/style'
 import { theme } from '../layouts'
 
 const EmployeeBanner = styled.div`
@@ -135,62 +135,72 @@ export const EmployeePageTemplate = ({
     <div>
       {helmet || ''}
       <Section>
-        <Title>{name}</Title>
-        <Subtitle>{claim}</Subtitle>
+        <Container>
+          <Title>{name}</Title>
+          <Subtitle>{claim}</Subtitle>
+        </Container>
       </Section>
       <Section dark>
-        <EmployeeBanner>
-          <Avatar>
-            <ImgRound sizes={avatar.childImageSharp.sizes} />
-          </Avatar>
-          <EmployeeData>
-            <h3>{role}</h3>
-            <h4>{education}</h4>
-            <p>{slogan}</p>
-            <ContactList>
-              <li>
-                <a href={`tel:${contact.tel}`}>
-                  <PhoneIcon />
-                  {contact.tel}
-                </a>
-              </li>
-              <li>
-                <a href={`mailto:${contact.mail}`}>
-                  <EnvelopeIcon />
-                  {contact.mail}
-                </a>
-              </li>
-              <li>
-                <a href={`https://twitter.com/${contact.twitter}`}>
-                  <TwitterIcon />
-                  @{contact.twitter}
-                </a>
-              </li>
-              <li>
-                <a href={contact.xing}>
-                  <XingIcon />
-                  Xing
-                </a>
-              </li>
-              <li>
-                <a href={contact.linkedin}>
-                  <LinkedinIcon style={{ paddingBottom: 5 }} />
-                  Linkedin
-                </a>
-              </li>
-            </ContactList>
-          </EmployeeData>
-        </EmployeeBanner>
+        <Container>
+          <EmployeeBanner>
+            <Avatar>
+              <ImgRound sizes={avatar.childImageSharp.sizes} />
+            </Avatar>
+            <EmployeeData>
+              <h3>{role}</h3>
+              <h4>{education}</h4>
+              <p>{slogan}</p>
+              <ContactList>
+                <li>
+                  <a href={`tel:${contact.tel}`}>
+                    <PhoneIcon />
+                    {contact.tel}
+                  </a>
+                </li>
+                <li>
+                  <a href={`mailto:${contact.mail}`}>
+                    <EnvelopeIcon />
+                    {contact.mail}
+                  </a>
+                </li>
+                <li>
+                  <a href={`https://twitter.com/${contact.twitter}`}>
+                    <TwitterIcon />
+                    @{contact.twitter}
+                  </a>
+                </li>
+                <li>
+                  <a href={contact.xing}>
+                    <XingIcon />
+                    Xing
+                  </a>
+                </li>
+                <li>
+                  <a href={contact.linkedin}>
+                    <LinkedinIcon style={{ paddingBottom: 5 }} />
+                    Linkedin
+                  </a>
+                </li>
+              </ContactList>
+            </EmployeeData>
+          </EmployeeBanner>
+        </Container>
       </Section>
       <Section>
-        <h1>Meine Skills</h1>
-        <SkillList>
-          {skills.map((skill, index) => (
-            <Skill key={skill.title} color={colorPalett[index]} {...skill} />
-          ))}
-        </SkillList>
+        <Container>
+          <h1>Meine Skills</h1>
+          <SkillList>
+            {skills.map((skill, index) => (
+              <Skill key={skill.title} color={colorPalett[index]} {...skill} />
+            ))}
+          </SkillList>
+        </Container>
       </Section>
-      <PostContent content={content} />
+      <Section>
+        <Container>
+          <PostContent content={content} />
+        </Container>
+      </Section>
     </div>
   )
 }

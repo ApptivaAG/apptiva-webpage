@@ -1,7 +1,7 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
-import { Section as SectionDefault } from '../layouts/style'
+import { Section as SectionDefault, Container } from '../layouts/style'
 
 const Section = SectionDefault.extend`
   padding-top: 4em;
@@ -69,11 +69,13 @@ const TestimonialsStyle = styled.ul`
 `
 export default ({ testimonials }) => (
   <Section>
-    <TestimonialsStyle>
-      {testimonials.edges.map(edge => (
-        <Testimonial key={edge.node.id} {...edge.node.frontmatter} />
-      ))}
-    </TestimonialsStyle>
+    <Container>
+      <TestimonialsStyle>
+        {testimonials.edges.map(edge => (
+          <Testimonial key={edge.node.id} {...edge.node.frontmatter} />
+        ))}
+      </TestimonialsStyle>
+    </Container>
   </Section>
 )
 
