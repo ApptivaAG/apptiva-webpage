@@ -116,7 +116,7 @@ export default ({ image }) => (
           Hier kann schon bald Ihre{' '}
           <Fat>iOS, Android, Desktop oder Web-Applikation</Fat> stehen.
         </Teaser>
-        <Button href="/#offerte">Offerte anfordern</Button>
+        <Button href="/#kontakt">Offerte anfordern</Button>
       </ColTeaser>
     </Columns>
 
