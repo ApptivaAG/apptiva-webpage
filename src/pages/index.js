@@ -40,7 +40,8 @@ const ImgStyled = styled(Img)`
   transition: transform 0.3s;
 `
 const ErisLogo = styled(Eris)`
-  margin: 3em 0.6em;
+  width: 90%;
+  margin: 2.6em auto;
 `
 const SupportLogo = styled(LifeRing)`
   color: ${p => p.theme.color.orange};
@@ -59,7 +60,7 @@ const ListItem = styled.li`
   text-align: ${props => (props.align ? props.align : 'center')};
 
   a {
-    flex: 1;
+    flex: 1 1 auto;
     padding: ${props => (props.full ? 0 : '1em')};
     color: ${props => props.theme.color.text};
     background-color: ${props => props.theme.color.bg};
