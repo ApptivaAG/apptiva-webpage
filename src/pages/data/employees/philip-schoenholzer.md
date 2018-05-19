@@ -139,11 +139,12 @@ Verantwortlich für die Analyse, User Research, Anforderungen, Modellen, Design,
 
 ### Safira Client
 
+[[right]]
+|![Safira Client](images/safira.png)
+
 Moderner Desktop-Client für grosse ERP-Lösung.
 
 Verantwortlich für das Produkt inkl. Analyse, User Research, Anforderungen, Modellen, Design, Prototyp und Tests.
-
-<img src="https://apptiva.ch/wp-content/uploads/2015/10/Support-Request-small-300x165.png" alt="Support Request (small)" width="300" height="165" class="alignnone wp-image-1259 size-medium" />
 
 # Mein Hacks
 
