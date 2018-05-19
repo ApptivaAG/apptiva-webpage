@@ -11,6 +11,7 @@ import LinkedinIcon from 'react-icons/lib/fa/linkedin'
 import Content, { HTMLContent } from '../components/Content'
 import { Title, Subtitle, Section, Container } from '../layouts/style'
 import { theme } from '../layouts'
+import SEO from '../components/SEO'
 
 const EmployeeBanner = styled.div`
   display: flex;
@@ -119,21 +120,29 @@ const Skill = ({ title, color, items }) => (
 export const EmployeePageTemplate = ({
   content,
   contentComponent,
-  helmet,
-  name,
-  claim,
-  avatar,
-  role,
-  education,
-  slogan,
-  contact,
-  skills,
+  metaData,
 }) => {
   const PostContent = contentComponent || Content
+  const {
+    name,
+    claim,
+    avatar,
+    role,
+    education,
+    slogan,
+    contact,
+    skills,
+  } = metaData
+
+  const seoImage =
+    metaData.avatar &&
+    metaData.avatar.childImageSharp.resize &&
+    metaData.avatar.childImageSharp.resize.src
 
   return (
     <div>
-      {helmet || ''}
+      <Helmet title={`Mitarbeiter | ${name}`} />
+      <SEO metaData={metaData} postImage={seoImage} />
       <Section>
         <Container>
           <Title>{name}</Title>
@@ -212,8 +221,7 @@ export default props => {
     <EmployeePageTemplate
       content={post.html}
       contentComponent={HTMLContent}
-      helmet={<Helmet title={`Mitarbeiter | ${post.frontmatter.name}`} />}
-      {...post.frontmatter}
+      metaData={post.frontmatter}
     />
   )
 }
@@ -230,6 +238,9 @@ export const employeePageQuery = graphql`
           childImageSharp {
             sizes(maxWidth: 300) {
               ...GatsbyImageSharpSizes_withWebp
+            }
+            resize(width: 1200, height: 630, cropFocus: NORTH) {
+              src
             }
           }
         }
