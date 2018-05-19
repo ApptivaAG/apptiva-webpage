@@ -129,9 +129,9 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
   <div>
     <Hero image={images.heroImage.sizes} />
     <Navbar location="root" />
-    <Section>
+    <Section id="dienstleistungen">
       <Container>
-        <Title id="dienstleistungen">Dienst&shy;leistungen</Title>
+        <Title>Dienst&shy;leistungen</Title>
         <ColList>
           <ListItem>
             <Link to="/individuelle-entwicklung/">
@@ -195,9 +195,9 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
 
     <Employees employees={employees} />
 
-    <Section>
+    <Section id="blog">
       <Container>
-        <Title id="blog">Blog</Title>
+        <Title>Blog</Title>
         <Subtitle>Aktuelle News rund um die Apptiva</Subtitle>
 
         <ColList>

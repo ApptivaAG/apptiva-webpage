@@ -65,9 +65,9 @@ const Contact = styled.div`
 `
 
 export default ({ employees }) => (
-  <Section dark>
+  <Section id="team" dark>
     <Container>
-      <Title id="team">Team</Title>
+      <Title>Team</Title>
       <Subtitle>
         Mehr als 40 Jahre Erfahrung bei der Entwicklung von Enterprise-Software.
       </Subtitle>

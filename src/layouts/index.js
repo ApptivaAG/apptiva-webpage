@@ -26,7 +26,7 @@ if (typeof window !== 'undefined') {
   // eslint-disable-next-line global-require, no-undef
   require('smooth-scroll')('a[href*="#"]', {
     // integer or function returning an integer. How far to offset the scrolling anchor location in pixels
-    offset: 156,
+    offset: 40,
   })
 }
 
