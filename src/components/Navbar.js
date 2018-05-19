@@ -24,15 +24,16 @@ const Logo = styled.img`
   padding: 1rem 0;
 `
 const Navigation = styled.div`
-  @media (max-width: 739px) {
+  margin-right: -1em;
+  @media (max-width: 759px) {
     position: fixed;
     display: flex;
     flex-direction: column;
-    font-size: 1.2em;
+    font-size: 1.1em;
     top: 0;
     bottom: 0;
     right: -20rem;
-    padding: 0.8em 2em 2em 0;
+    padding: 1em 1em 1em 0;
     background-color: ${p => p.theme.color.primary};
     transition: all 200ms ease 200ms;
   }
@@ -59,7 +60,9 @@ const shared = props =>
     display: inline-block;
     font-size: 1.1em;
     font-weight: 500;
-    margin-left: 2em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    padding: 0.3em 0.5em;
     color: white;
 
     transition: transform 30ms ease-out;
@@ -73,11 +76,9 @@ const shared = props =>
     }
   `
 const NavItemsLink = styled(Link)`
-  padding: 0.3em 0;
   ${shared};
 `
 const NavItemsA = styled.a`
-  padding: 0.3em 0;
   ${shared};
 `
 
