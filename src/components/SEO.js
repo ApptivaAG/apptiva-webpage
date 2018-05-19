@@ -132,13 +132,14 @@ SEO.propTypes = {
     author: PropTypes.string,
     date: PropTypes.any,
     path: PropTypes.string,
-  }).isRequired,
+  }),
   postImage: PropTypes.string,
 }
 
 SEO.defaultProps = {
   isBlogPost: false,
   postImage: null,
+  metaData: {},
 }
 
 export default SEO

@@ -27,6 +27,7 @@ import hostettler from '../img/hostettler-300x70.png'
 import energie360 from '../img/energie360-300x72.png'
 import Hero from '../components/Hero'
 import Navbar from '../components/Navbar'
+import SEO from '../components/SEO'
 
 const ColList = styled.ul`
   box-sizing: border-box;
@@ -128,6 +129,7 @@ const Blockquote = styled.blockquote`
 
 const IndexPage = ({ testimonials, posts, employees, images }) => (
   <div>
+    <SEO />
     <Hero image={images.heroImage.sizes} />
     <Navbar location="root" />
     <Section id="dienstleistungen">
