@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import styled, { css } from 'styled-components'
 
 import { Container as DefaultContainer } from '../layouts/style'
-import logo from '../img/apptiva-logo.svg'
+import logo from '../img/logo.svg'
 
 const NavBar = styled.nav`
   position: sticky;

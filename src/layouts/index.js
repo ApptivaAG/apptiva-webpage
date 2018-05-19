@@ -7,6 +7,7 @@ import Navbar from '../components/Navbar'
 import fontFace from './font-face'
 import Footer from '../components/Footer'
 import Lightbox from '../components/Lightbox'
+import config from '../config'
 
 export const theme = {
   color: {
@@ -91,7 +92,7 @@ injectGlobal`
 const TemplateWrapper = ({ children, location }) => (
   <ThemeProvider theme={theme}>
     <Lightbox>
-      <Helmet title="Apptiva AG - iOS, Android, Desktop und Web-Applikationen" />
+      <Helmet title={config.title} />
       {location.pathname !== '/' && <Navbar />}
       {children()}
       <Footer />

@@ -3,8 +3,11 @@ import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
+
 import Content, { HTMLContent } from '../components/Content'
 import { Container } from '../layouts/style'
+import config from '../config'
+import SEO from '../components/SEO'
 
 const HeadArea = styled.div``
 
@@ -78,22 +81,23 @@ const Navigation = ({ next, prev }) => {
 export const BlogPostTemplate = ({
   content,
   contentComponent,
-  description,
-  title,
-  helmet,
-  image,
-  author,
-  date,
+  metaData,
   navigation,
 }) => {
   const PostContent = contentComponent || Content
+  const { title, image, description, author, date } = metaData
 
   const Description = styled.p`
     font-weight: 400;
   `
   return (
     <section>
-      {helmet || ''}
+      <Helmet title={`${title} - Blog - ${config.company}`} />
+      <SEO
+        isBlogPost
+        metaData={metaData}
+        postImage={metaData.image.childImageSharp.resize.src}
+      />
       <Container>
         <Header title={title} image={image} />
         <Description>{description}</Description>
@@ -105,20 +109,17 @@ export const BlogPostTemplate = ({
   )
 }
 
-export default props => {
-  const { markdownRemark: post } = props.data
+export default ({ data, pathContext }) => {
+  const { markdownRemark: post } = data
+
+  post.frontmatter.excerpt = post.excerpt
 
   return (
     <BlogPostTemplate
       content={post.html}
       contentComponent={HTMLContent}
-      description={post.frontmatter.description}
-      helmet={<Helmet title={`Blog | ${post.frontmatter.title}`} />}
-      title={post.frontmatter.title}
-      author={post.frontmatter.author}
-      image={post.frontmatter.image}
-      date={post.frontmatter.date}
-      navigation={props.pathContext}
+      metaData={post.frontmatter}
+      navigation={pathContext}
     />
   )
 }
@@ -128,18 +129,23 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       html
+      excerpt(pruneLength: 300)
       frontmatter {
-        date(formatString: "DD.MM.YYYY")
         title
         description
+        author
+        date(formatString: "DD.MM.YYYY")
+        path
         image {
           childImageSharp {
             sizes {
               ...GatsbyImageSharpSizes_withWebp
             }
+            resize(width: 1200, height: 630, cropFocus: ENTROPY) {
+              src
+            }
           }
         }
-        author
       }
     }
   }
