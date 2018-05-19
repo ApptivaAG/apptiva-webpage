@@ -4,11 +4,9 @@ path: /dashboard-notaufnahme
 title: Dashboard für die Notaufnahme
 image: img/eris-devices.png
 author: philip-schoenholzer
-description: ''
+description: Das schlanke Patientenleitsystem für die Notaufnahme. Optimieren sie Ihre Administration, damit Sie mehr Zeit für Ihre Patienten haben.
 subtitle: 
-  text: Das schlanke Patientenleitsystem für die die
-  swaps: 
-    - Notaufnahme.
+  text: Das schlanke Patientenleitsystem für die Notaufnahme.
 
 bulletGroups:
   - title: Vorteile der des Apptiva Dashboards für die Notaufnahme

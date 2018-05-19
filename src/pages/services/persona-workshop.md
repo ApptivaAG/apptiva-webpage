@@ -4,7 +4,7 @@ path: persona-workshop
 title: Persona-Workshop
 image: img/persona-hero.jpg
 author: philip-schoenholzer
-description: ''
+description: Mit Personas werden Ihre Lösungen in Zukunft besser auf die Bedürfnisse der Anwender und Stakeholder ausgerichtet und damit erfolgreicher sein.
 
 bulletGroups:
   - title: Inhalt und Lernziele

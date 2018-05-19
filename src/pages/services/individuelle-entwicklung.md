@@ -1,10 +1,10 @@
 ---
 templateKey: 'service-page'
 path: /individuelle-entwicklung
-title: Individuelle Software&shy;entwicklung
+title: Individuelle Softwareentwicklung
 image: ../../img/apps.png
 author: philip-schoenholzer
-description: ''
+description: Wir entwickeln individuelle, fokussierte und ausser­gewöhnlich benutzer­freundlich Anwendungen um Ihre einzigartigen Geschäftsprozesse zu beschleunigen.
 subtitle: 
   text: Wir entwickeln individuelle Anwendungen um Ihre einzigartigen Geschäftsprozesse zu
   swaps: 

@@ -77,7 +77,7 @@ const SEO = ({ metaData, postImage, isBlogPost }) => {
   const title = metaData.title || config.title
   const description =
     metaData.description || metaData.excerpt || config.description
-  const image = `${config.url}${postImage}` || config.image
+  const image = postImage ? `${config.url}${postImage}` : config.logo
   const url = metaData.path
     ? `${config.url}${path.sep}${metaData.path}`
     : config.url

@@ -6,6 +6,8 @@ import * as FontAwesome from 'react-icons/lib/fa'
 
 import Content, { HTMLContent } from '../components/Content'
 import { Centered, Container } from '../layouts/style'
+import config from '../config'
+import SEO from '../components/SEO'
 
 const HeadArea = styled.div``
 
@@ -88,25 +90,29 @@ const Header = ({ title, image, subtitle }) => (
 export const ServicePageTemplate = ({
   content,
   contentComponent,
-  description,
-  title,
-  helmet,
-  image,
-  subtitle,
-  bulletGroups,
+  metaData,
 }) => {
   const PostContent = contentComponent || Content
+  const { title, image, subtitle, description, bulletGroups } = metaData
+  const seoImage =
+    metaData.image &&
+    metaData.image.childImageSharp.resize &&
+    metaData.image.childImageSharp.resize.src
 
   return (
     <section>
-      {helmet || ''}
+      <Helmet title={`${title} - ${config.company}`} />
+      <SEO metaData={metaData} postImage={seoImage} />
       <Container>
         <Centered>
           <Header title={title} image={image} subtitle={subtitle} />
         </Centered>
-        <Centered>
-          <p>{description}</p>
-        </Centered>
+        {!subtitle &&
+          description && (
+            <Centered>
+              <p>{description}</p>
+            </Centered>
+          )}
         {bulletGroups &&
           bulletGroups.map(group => (
             <div key={group.title}>
@@ -142,8 +148,7 @@ export default props => {
     <ServicePageTemplate
       content={post.html}
       contentComponent={HTMLContent}
-      helmet={<Helmet title={`${post.frontmatter.title} | Apptiva AG`} />}
-      {...post.frontmatter}
+      metaData={post.frontmatter}
     />
   )
 }
@@ -159,6 +164,9 @@ export const pageQuery = graphql`
           childImageSharp {
             sizes {
               ...GatsbyImageSharpSizes_withWebp
+            }
+            resize(width: 1200, height: 630, cropFocus: ENTROPY) {
+              src
             }
           }
         }

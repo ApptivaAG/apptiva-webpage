@@ -3,7 +3,9 @@ templateKey: 'service-page'
 path: /vorgehensweise
 title: Vorgehen
 author: philip-schoenholzer
-description: ''
+description: Wir gehen agil, iterativ und zielorientiert vor. Um  optimale Ergebnis zu liefern, studieren wir die Domäne, die Herausforderungen und Potentiale der Kunden und die Bedrüfnisse der Anwender. So entwickeln wir passgenaue Lösungen. 
+subtitle: 
+  text: Unser agiles Vorgehen ist Teil unseres Erfolgsrezepts. Profitieren Sie davon!
 
 bulletGroups:
   - title: Initialisierung
