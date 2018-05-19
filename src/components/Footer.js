@@ -122,11 +122,51 @@ const Footer = () => (
       <Social>
         <h2>Social Media</h2>
         <ul>
-          <li>Twitter</li>
-          <li>Xing</li>
-          <li>LinkedIn</li>
-          <li>Facebook</li>
-          <li>Youtube</li>
+          <li>
+            <a
+              href="https://twitter.com/ApptivaTeam"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Twitter
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.xing.com/companies/apptivaag"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Xing
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/company/apptiva-ag"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/apptivaag"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/channel/UCkRetskswz9I4-ohcYuTG3Q"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Youtube
+            </a>
+          </li>
         </ul>
       </Social>
       <Links>
@@ -182,7 +222,9 @@ const Footer = () => (
           <li>
             <Link to="/vorgehensweise">Unser Vorgehen</Link>
           </li>
-          <li><Link to="/impressum">Impressum</Link></li>
+          <li>
+            <Link to="/impressum">Impressum</Link>
+          </li>
         </ul>
       </Links>
       <Company>
