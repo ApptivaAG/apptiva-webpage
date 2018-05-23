@@ -131,11 +131,11 @@ const SEO = ({ metaData, postImage, isBlogPost }) => {
 SEO.propTypes = {
   isBlogPost: PropTypes.bool,
   metaData: PropTypes.shape({
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     image: PropTypes.any,
     description: PropTypes.string,
     author: PropTypes.string,
-    date: PropTypes.any,
+    isoDate: PropTypes.any,
     path: PropTypes.string,
   }),
   postImage: PropTypes.string,
