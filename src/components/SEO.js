@@ -60,8 +60,11 @@ const getSchemaOrgJSONLD = ({
           publisher: {
             '@type': 'Organization',
             url: config.url,
-            logo: config.logo,
             name: config.company,
+            logo: {
+              '@type': 'ImageObject',
+              url: config.logo,
+            },
           },
           mainEntityOfPage: {
             '@type': 'WebSite',
@@ -81,7 +84,8 @@ const SEO = ({ metaData, postImage, isBlogPost }) => {
   const url = metaData.path
     ? `${config.url}${path.sep}${metaData.path}`
     : config.url
-  const date = isBlogPost ? metaData.date : false
+  const date = isBlogPost ? metaData.isoDate : false
+  const author = metaData.author || config.company
 
   const schemaOrgJSONLD = getSchemaOrgJSONLD({
     isBlogPost,
@@ -89,6 +93,7 @@ const SEO = ({ metaData, postImage, isBlogPost }) => {
     title,
     image,
     description,
+    author,
     date,
   })
 

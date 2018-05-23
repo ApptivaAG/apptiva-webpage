@@ -135,6 +135,7 @@ export const pageQuery = graphql`
         description
         author
         date(formatString: "DD.MM.YYYY")
+        isoDate: date(formatString: "DD-MM-YYYY")
         path
         image {
           childImageSharp {
