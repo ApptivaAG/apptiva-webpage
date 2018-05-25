@@ -63,5 +63,15 @@ module.exports = {
       },
     },
     'gatsby-plugin-svgr',
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-66015649-1',
+        // Setting this parameter is optional
+        anonymize: true,
+        // Avoids sending pageview hits from custom paths
+        exclude: ['/preview/**', '/do-not-track/me/too/'],
+      },
+    },
   ],
 }
