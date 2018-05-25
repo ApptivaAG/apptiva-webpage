@@ -319,8 +319,11 @@ export const indexPageQuery = graphql`
       }
     }
     heroImage: imageSharp(id: { regex: "/solution-collage.png/" }) {
-      sizes(maxWidth: 1200) {
-        ...GatsbyImageSharpSizes_withWebp
+      sizes(
+        maxWidth: 1800
+        traceSVG: { background: "#ffffff", color: "#aaaaaa", threshold: 140 }
+      ) {
+        ...GatsbyImageSharpSizes_withWebp_tracedSVG
       }
     }
   }
