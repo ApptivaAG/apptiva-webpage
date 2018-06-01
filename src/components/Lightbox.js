@@ -31,12 +31,12 @@ class Lightbox extends React.Component {
   }
   handleOpen(e) {
     // TODO: improvement for keyboard users that keypress on link
-    e.preventDefault()
     if (
       e.target.className === 'gatsby-resp-image-image' ||
       (e.target.parentNode.className &&
         e.target.parentNode.className.includes('lightbox'))
     ) {
+      e.preventDefault()
       // only on tablet and larger
       if (window.innerWidth > 400) {
         const { src, srcset, alt } = e.target
