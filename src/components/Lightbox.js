@@ -34,7 +34,8 @@ class Lightbox extends React.Component {
     e.preventDefault()
     if (
       e.target.className === 'gatsby-resp-image-image' ||
-      e.target.parentNode.className.includes('lightbox')
+      (e.target.parentNode.className &&
+        e.target.parentNode.className.includes('lightbox'))
     ) {
       // only on tablet and larger
       if (window.innerWidth > 400) {
