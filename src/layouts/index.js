@@ -65,9 +65,15 @@ injectGlobal`
       transform: scale(1.06);
     }
   }
+  
+  ul {
 
-  li {
-    margin-bottom: 0.5em;
+    li {
+      margin-bottom: 0.5em;
+    }
+    h3 {
+      display: inline;
+    }
   }
 
   pre {
