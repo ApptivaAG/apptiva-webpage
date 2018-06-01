@@ -56,6 +56,14 @@ injectGlobal`
   a {
     text-decoration: none;
     color: ${theme.color.primary};
+    
+    .gatsby-image-outer-wrapper {
+      transition: transform 0.3s;
+    }
+
+    &:hover .gatsby-image-outer-wrapper {
+      transform: scale(1.06);
+    }
   }
 
   li {

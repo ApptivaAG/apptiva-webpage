@@ -63,6 +63,38 @@ const Markdown = styled.div`
     }
   }
 
+  .custom-block-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+
+    .custom-block-col {
+      flex: 1 1 14rem;
+      margin: 0 1rem 1rem;
+    }
+
+  }
+
+  .custom-block-avatar {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid #ececec; 
+    border-radius: 50%; 
+    overflow: hidden;
+
+    & > p {
+      margin: 0;
+    }
+    @media (min-width: 640px) {
+      width: 200px; 
+    }
+  }
+
+  .custom-block-no-margin > * {
+    margin: 0 !important;
+  }
+
   @media (min-width: 400px) {
     .gatsby-resp-image-wrapper {
       transition: transform 0.3s;

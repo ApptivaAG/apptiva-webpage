@@ -1,11 +1,12 @@
 import React from 'react'
 import Img from 'gatsby-image'
+import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import * as FontAwesome from 'react-icons/lib/fa'
 
 import Content, { HTMLContent } from '../components/Content'
-import { Centered, Container } from '../layouts/style'
+import { Centered, Container, Section } from '../layouts/style'
 import config from '../config'
 import SEO from '../components/SEO'
 
@@ -19,6 +20,35 @@ const HeaderTitle = styled.h1`
 
   @media (min-width: 381px) {
     font-size: 4rem;
+  }
+`
+const CustomerTitle = styled.h1`
+  font-size: 1.7em;
+  color: #cbcbcb;
+  text-align: center;
+`
+const Customers = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 -0.5rem;
+
+  & > div {
+    flex: 1 1 6rem;
+    width: 100%;
+    margin: 0.5rem;
+    text-align: center;
+  }
+`
+const Cols = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+
+  & > * {
+    flex: 1 1 14rem;
+    margin: 0 1rem 1rem;
   }
 `
 const faName = string => {
@@ -93,7 +123,16 @@ export const ServicePageTemplate = ({
   metaData,
 }) => {
   const PostContent = contentComponent || Content
-  const { title, image, subtitle, description, bulletGroups } = metaData
+  const {
+    title,
+    image,
+    subtitle,
+    description,
+    customers,
+    solutions,
+    specs,
+    bulletGroups,
+  } = metaData
   const seoImage =
     metaData.image &&
     metaData.image.childImageSharp.resize &&
@@ -113,6 +152,48 @@ export const ServicePageTemplate = ({
               <p>{description}</p>
             </Centered>
           )}
+      </Container>
+
+      {customers && (
+        <Section dark>
+          <Container>
+            <CustomerTitle>Auswahl unserer Kunden</CustomerTitle>
+            <Customers>
+              {customers.map(customer => (
+                <Img
+                  key={customer.childImageSharp.resolutions.src}
+                  resolutions={customer.childImageSharp.resolutions}
+                />
+              ))}
+            </Customers>
+          </Container>
+        </Section>
+      )}
+      {solutions && (
+        <Section>
+          <Container>
+            <Centered>
+              <h1>Lösungen</h1>
+              <Cols>
+                {solutions.map(solution => (
+                  <div key={solution.title}>
+                    <h2>{solution.title}</h2>
+                    <a href={solution.image.childImageSharp.sizes.src}>
+                      <Img
+                        className="lightbox"
+                        sizes={solution.image.childImageSharp.sizes}
+                        alt={solution.title}
+                      />
+                    </a>
+                    <p>{solution.text}</p>
+                  </div>
+                ))}
+              </Cols>
+            </Centered>
+          </Container>
+        </Section>
+      )}
+      <Container>
         {bulletGroups &&
           bulletGroups.map(group => (
             <div key={group.title}>
@@ -135,6 +216,22 @@ export const ServicePageTemplate = ({
               </ItemList>
             </div>
           ))}
+        {specs && (
+          <Section>
+            <Centered>
+              <h1>{specs.title}</h1>
+              <Cols>
+                {specs.specItems.map(spec => (
+                  <div key={spec.title}>
+                    <h2>{spec.title}</h2>
+                    {/* eslint-disable-next-line react/no-danger */}
+                    <p>{spec.text}</p>
+                  </div>
+                ))}
+              </Cols>
+            </Centered>
+          </Section>
+        )}
         <PostContent content={content} />
       </Container>
     </section>
@@ -175,11 +272,36 @@ export const pageQuery = graphql`
           swaps
         }
         description
+        customers {
+          childImageSharp {
+            resolutions(width: 200, grayscale: true) {
+              ...GatsbyImageSharpResolutions_withWebp
+            }
+          }
+        }
+        solutions {
+          title
+          text
+          image {
+            childImageSharp {
+              sizes {
+                ...GatsbyImageSharpSizes_withWebp
+              }
+            }
+          }
+        }
         bulletGroups {
           title
           description
           bulletList {
             icon
+            title
+            text
+          }
+        }
+        specs {
+          title
+          specItems {
             title
             text
           }
