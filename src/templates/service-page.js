@@ -272,7 +272,7 @@ export const pageQuery = graphql`
         customers {
           childImageSharp {
             resolutions(width: 200, grayscale: true) {
-              ...GatsbyImageSharpResolutions_withWebp
+              ...GatsbyImageSharpResolutions_withWebp_noBase64
             }
           }
         }
