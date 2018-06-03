@@ -153,7 +153,12 @@ export const EmployeePageTemplate = ({
         <Container>
           <EmployeeBanner>
             <Avatar>
-              <ImgRound sizes={avatar.childImageSharp.sizes} />
+              <ImgRound
+                sizes={{
+                  ...avatar.childImageSharp.sizes,
+                  base64: avatar.childImageSharp.sqip.dataURI,
+                }}
+              />
             </Avatar>
             <EmployeeData>
               <h3>{role}</h3>
@@ -237,10 +242,13 @@ export const employeePageQuery = graphql`
         avatar {
           childImageSharp {
             sizes(maxWidth: 300) {
-              ...GatsbyImageSharpSizes_withWebp
+              ...GatsbyImageSharpSizes_withWebp_noBase64
             }
             resize(width: 1200, height: 630, cropFocus: NORTH) {
               src
+            }
+            sqip(numberOfPrimitives: 8, blur: 12) {
+              dataURI
             }
           }
         }

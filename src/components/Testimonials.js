@@ -46,7 +46,12 @@ const Statement = styled.p`
 export const Testimonial = ({ name, position, statement, avatar, company }) => (
   <TestimonialStyle>
     <Person>
-      <Avatar resolutions={avatar.childImageSharp.resolutions} />
+      <Avatar
+        resolutions={{
+          ...avatar.childImageSharp.resolutions,
+          base64: avatar.childImageSharp.sqip.dataURI,
+        }}
+      />
       <div>
         <Name>{name}</Name>
         <Position>{position}</Position>
@@ -91,6 +96,9 @@ export const testimonialFragment = graphql`
         childImageSharp {
           resolutions(width: 50, height: 50) {
             ...GatsbyImageSharpResolutions_withWebp
+          }
+          sqip(numberOfPrimitives: 2, blur: 16) {
+            dataURI
           }
         }
       }

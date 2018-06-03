@@ -78,7 +78,12 @@ export default ({ employees }) => (
             <EmployeeWrapper key={edge.node.id}>
               <Employee>
                 <LinkStyled to={path}>
-                  <Avatar resolutions={preview.childImageSharp.resolutions} />
+                  <Avatar
+                    resolutions={{
+                      ...preview.childImageSharp.resolutions,
+                      base64: preview.childImageSharp.sqip.dataURI,
+                    }}
+                  />
                   <Name>{name}</Name>
                   <Claim>{claim}</Claim>
                 </LinkStyled>
@@ -121,6 +126,9 @@ export const employeeFragment = graphql`
         childImageSharp {
           resolutions(width: 200, height: 200) {
             ...GatsbyImageSharpResolutions_withWebp
+          }
+          sqip(numberOfPrimitives: 8, blur: 16) {
+            dataURI
           }
         }
       }

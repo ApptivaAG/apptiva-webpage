@@ -143,7 +143,10 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
               <h4>Mobile und Desktop</h4>
               <ImgStyled
                 style={{ width: '100%' }}
-                sizes={images.appsImage.sizes}
+                sizes={{
+                  ...images.appsImage.sizes,
+                  base64: images.appsImage.sqip.dataURI,
+                }}
                 alt="Apps"
               />
             </Link>
@@ -209,9 +212,10 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
               <Link to={`/${post.frontmatter.path}`}>
                 <ImgStyled
                   style={{ width: '100%' }}
-                  resolutions={
-                    post.frontmatter.image.childImageSharp.resolutions
-                  }
+                  resolutions={{
+                    ...post.frontmatter.image.childImageSharp.resolutions,
+                    base64: post.frontmatter.image.childImageSharp.sqip.dataURI,
+                  }}
                   alt="Post image"
                 />
                 <h2>{post.frontmatter.title}</h2>
@@ -304,7 +308,10 @@ export const indexPageQuery = graphql`
             image {
               childImageSharp {
                 resolutions(height: 150, width: 300) {
-                  ...GatsbyImageSharpResolutions_withWebp
+                  ...GatsbyImageSharpResolutions_withWebp_noBase64
+                }
+                sqip(numberOfPrimitives: 8, blur: 6) {
+                  dataURI
                 }
               }
             }
@@ -315,7 +322,10 @@ export const indexPageQuery = graphql`
     }
     appsImage: imageSharp(id: { regex: "/apps.png/" }) {
       sizes(maxWidth: 600) {
-        ...GatsbyImageSharpSizes_withWebp
+        ...GatsbyImageSharpSizes_withWebp_noBase64
+      }
+      sqip(numberOfPrimitives: 16, blur: 6) {
+        dataURI
       }
     }
     heroImage: imageSharp(id: { regex: "/solution-collage.png/" }) {
