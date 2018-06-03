@@ -130,7 +130,11 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
               <h3>Individuelle Entwicklung</h3>
               <h2>App-Lösungen</h2>
               <h4>Mobile und Desktop</h4>
-              <ImgStyled sizes={images.appsImage.sizes} alt="Apps" />
+              <ImgStyled
+                style={{ width: '100%' }}
+                sizes={images.appsImage.sizes}
+                alt="Apps"
+              />
             </Link>
           </ListItem>
           <ListItem>
@@ -203,9 +207,10 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
               <Link to={`/${post.frontmatter.path}`}>
                 <ImgStyled
                   style={{ width: '100%' }}
-                  resolutions={
-                    post.frontmatter.image.childImageSharp.resolutions
-                  }
+                  resolutions={{
+                    ...post.frontmatter.image.childImageSharp.resolutions,
+                    base64: post.frontmatter.image.childImageSharp.sqip.dataURI,
+                  }}
                   alt="Post image"
                 />
                 <h2>{post.frontmatter.title}</h2>
@@ -298,7 +303,10 @@ export const indexPageQuery = graphql`
             image {
               childImageSharp {
                 resolutions(height: 150, width: 300) {
-                  ...GatsbyImageSharpResolutions_withWebp
+                  ...GatsbyImageSharpResolutions_withWebp_noBase64
+                }
+                sqip(numberOfPrimitives: 8, blur: 6) {
+                  dataURI
                 }
               }
             }
@@ -309,12 +317,12 @@ export const indexPageQuery = graphql`
     }
     appsImage: imageSharp(id: { regex: "/apps.png/" }) {
       sizes(maxWidth: 600) {
-        ...GatsbyImageSharpSizes_withWebp
+        ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
     partyplaner: imageSharp(id: { regex: "/partyplaner.png/" }) {
       sizes(maxWidth: 600) {
-        ...GatsbyImageSharpSizes_withWebp
+        ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
     heroImage: imageSharp(id: { regex: "/solution-collage.png/" }) {
