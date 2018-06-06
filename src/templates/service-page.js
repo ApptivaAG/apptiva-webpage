@@ -136,20 +136,22 @@ export const ServicePageTemplate = ({
     metaData.image.childImageSharp.resize.src
 
   return (
-    <section>
+    <div>
       <Helmet title={`${title} - ${config.company}`} />
       <SEO metaData={metaData} postImage={seoImage} />
-      <Container>
-        <Centered>
-          <Header title={title} image={image} subtitle={subtitle} />
-        </Centered>
-        {!subtitle &&
-          description && (
-            <Centered>
-              <p>{description}</p>
-            </Centered>
-          )}
-      </Container>
+      <Section>
+        <Container>
+          <Centered>
+            <Header title={title} image={image} subtitle={subtitle} />
+          </Centered>
+          {!subtitle &&
+            description && (
+              <Centered>
+                <p>{description}</p>
+              </Centered>
+            )}
+        </Container>
+      </Section>
 
       {customers && (
         <Section dark>
@@ -190,10 +192,10 @@ export const ServicePageTemplate = ({
           </Container>
         </Section>
       )}
-      <Container>
-        {bulletGroups &&
-          bulletGroups.map(group => (
-            <div key={group.title}>
+      {bulletGroups &&
+        bulletGroups.map(group => (
+          <Section>
+            <Container key={group.title}>
               <ListTitle>
                 <h1>{group.title}</h1>
                 {/* eslint-disable-next-line react/no-danger */}
@@ -211,10 +213,12 @@ export const ServicePageTemplate = ({
                   </Item>
                 ))}
               </ItemList>
-            </div>
-          ))}
-        {specs && (
-          <Section>
+            </Container>
+          </Section>
+        ))}
+      {specs && (
+        <Section dark>
+          <Container>
             <Centered>
               <h1>{specs.title}</h1>
               <Cols>
@@ -227,11 +231,15 @@ export const ServicePageTemplate = ({
                 ))}
               </Cols>
             </Centered>
-          </Section>
-        )}
-        <PostContent content={content} />
-      </Container>
-    </section>
+          </Container>
+        </Section>
+      )}
+      <Section>
+        <Container>
+          <PostContent content={content} />
+        </Container>
+      </Section>
+    </div>
   )
 }
 
