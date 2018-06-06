@@ -22,29 +22,29 @@ solutions:
     text: Immer öfter kommen auch Chatbots oder Konversations-Dialoge bei der Produktkonfiguration zum Einsatz. Dies ist eine modern und von Anwendern gern genutzte Möglichkeit ein Produkt zu konfigurieren.
 
 bulletGroups:
-  - title: Vorteile eines Produktkonfigurators
+  - title: Vorteile eines Apptiva-Produktkonfigurators
     description: 
       Mit einem individuelle eCommerce Produkt- & Angebotskonfigurator verkaufen Sie komplexe Angebote einfach auf Ihrer Webseite oder in Ihrem Webshop.
 
     bulletList:
       - icon: star
         title: Attraktiv
-        text: Präsentieren Sie Ihr Angebote mit einem Produktkonfigurator in einem besonders guten Licht. Mit einer attraktiven Präsentation wird ein Produkt höher eingestuft. 
+        text: Wir präsentieren Ihr Angebot in einem besonders guten Licht. Mit einer attraktiven Präsentation wird ein Produkt höher eingestuft. 
       - icon: user
-        title: Massgeschneiderte Angebote schnüren
-        text: Ermöglichen Sie Ihren Kunden sich ein individuelles massgeschneidertes Angebot selber zusammenzustellen.
+        title: Massgeschneidert
+        text: Unsere individuellen Produktkonfiguratoren passen sich Ihrem Angebot an und nicht umgekehrt.
       - icon: heart
         title: Benutzerfreundlich
-        text: Verlieren Sie keine Kunden aufgrund von unverständlichen und komplizierten Einkaufserlebnisses.
+        text: Dank unserem Vorgehen entstehen Produktkonfiguratoren, welche ein einfaches und benutzerfreundliches Einkaufserlebnisses bieten.
       - icon: line-chart
         title: Conversion Optimierung
-        text: Mit einem niederschwelligen Angebot konvertieren Sie mehr Besucher zu zahlenden Kunden.
+        text: Wir wissen wie Besucher zu zahlenden Kunden werden. Unsere Produktkonfiguratoren lassen ein niederschwelliges Einkaufen zu.
       - icon: rocket
         title: Alleinstellungsmerkmal
-        text: Stechen Sie mit einer besonderen Dienstleitung aus dem eCommerce-Jungle heraus. Seien Sie der Konkurrenz eine Nasenspitze voraus.
+        text: Mit unseren Produktkonfiguratoren stechen Sie aus dem eCommerce-Jungle heraus. Seien Sie der Konkurrenz eine Nasenspitze voraus.
       - icon: lightbulb-o
         title: Komplexität reduzieren
-        text: Machen Sie das Leben Ihrer Kunden ein bisschen einfacher und erhöhen Sie gleichzeitig Ihren Umsatz.
+        text: Wir machen das Leben Ihrer Kunden ein bisschen einfacher und erhöhen gleichzeitig Ihren Umsatz.
 
 specs:
   title: Integration und Schnittstellen
