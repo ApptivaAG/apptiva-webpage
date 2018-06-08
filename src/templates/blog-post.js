@@ -8,6 +8,7 @@ import Content, { HTMLContent } from '../components/Content'
 import { Container } from '../layouts/style'
 import config from '../config'
 import SEO from '../components/SEO'
+import { stripHTML } from '../util'
 
 const HeadArea = styled.div``
 
@@ -98,7 +99,7 @@ export const BlogPostTemplate = ({
   `
   return (
     <section>
-      <Helmet title={`${title} - Blog - ${config.company}`} />
+      <Helmet title={`${stripHTML(title)} - Blog - ${config.company}`} />
       <SEO
         isBlogPost
         metaData={metaData}

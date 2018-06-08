@@ -1,6 +1,5 @@
 import React from 'react'
 import Img from 'gatsby-image'
-import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import * as FontAwesome from 'react-icons/lib/fa'
@@ -9,6 +8,7 @@ import Content, { HTMLContent } from '../components/Content'
 import { Centered, Container, Section } from '../layouts/style'
 import config from '../config'
 import SEO from '../components/SEO'
+import { stripHTML } from '../util'
 
 const HeadArea = styled.div``
 
@@ -137,7 +137,7 @@ export const ServicePageTemplate = ({
 
   return (
     <div>
-      <Helmet title={`${title} - ${config.company}`} />
+      <Helmet title={`${stripHTML(title)} - ${config.company}`} />
       <SEO metaData={metaData} postImage={seoImage} />
       <Section>
         <Container>

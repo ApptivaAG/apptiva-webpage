@@ -1,7 +1,7 @@
 ---
 templateKey: 'service-page'
 path: /produktkonfiguratoren
-title: Produkt- & Angebotskonfiguratoren
+title: Angebots- & <br/>Produkt&#173;konfiguratoren
 image: img/partyplaner.png
 author: philip-schoenholzer
 description: Mit einem individuelle eCommerce Produkt- & Angebotskonfigurator verkaufen Sie komplexe Angebote einfach auf Ihrer Webseite oder in Ihrem Webshop.
@@ -15,7 +15,7 @@ customers:
 
 solutions:
   - title: Formular/Optisch
-    image: img/partyplaner.png
+    image: img/partyplaner-2.png
     text: Ein Produktkonfigurator, welcher über ein Formular oder optisch gesteuert wird. Dies ist der Klassiker unter den Produktkonfiguratoren.
   - title: Chatbot
     image: img/chatbot.png
