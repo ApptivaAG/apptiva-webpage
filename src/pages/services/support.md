@@ -27,7 +27,7 @@ description: ''
 # Aktuell Angebote
 
 * ### [Persona Workshop](/persona-workshop)
-* ### Usability Audit
+* ### [Usability Audit](/usability-audit)
 * ### Innovations Workshop
 * ### Architektur Review
 * ### Softwarekonzepte mit hoher Usability
