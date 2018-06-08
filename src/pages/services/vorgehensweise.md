@@ -53,13 +53,17 @@ Ist die Lösung im Einsatz, beobachten wir, wie die Anwender sie einsetzen und l
 </div>
 </div>
 
-<div id="ucd" />
+<div id="ucd" class="full-width" style="overflow: auto;">
+<div class="container">
 
 # User Centered Design
 
 Kennen Sie Software, von der sie nur einen Bruchteil der Funktionalität benutzen? Die Funktionen, welche Sie wirklich benötigen, sind aber mehr schlecht als recht zu bedienen? Möchten Sie eine solche Lösung finanzieren?
 
 Wir auch nicht. Darum wenden wir UCD (User Centered Design) an. Diese Methode hilft uns, die benötigte Funktionalität umzusetzen. Und zwar genau so, wie Sie es erwarten. Sehen Sie sich an folgendem Beispiel an, wie UCD funktioniert:
+
+</div>
+</div>
 
 <div class="full-width dark-section" style="overflow: auto;">
 <div class="container">

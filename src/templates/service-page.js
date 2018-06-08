@@ -60,13 +60,13 @@ const faName = string => {
 const icons = icon => React.createElement(FontAwesome[faName(icon)])
 
 const ListTitle = styled.div`
-  margin: 5em 0 3em;
+  margin-bottom: 3em;
   text-align: center;
 `
 const ItemList = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -1rem;
+  margin: 0 -1rem 4rem;
   padding: 0;
   list-style: none;
 `

@@ -40,9 +40,12 @@ const Markdown = styled.div`
 
   .dark-section {
     background-color: #f6f6f6;
-    margin-top: 4em;
     padding-top: 1px;
     padding-bottom: 4em;
+  }
+
+  .full-width + .dark-section {
+    margin-top: 4em;
   }
 
   .custom-block-left {
