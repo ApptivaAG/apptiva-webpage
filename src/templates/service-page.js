@@ -194,7 +194,7 @@ export const ServicePageTemplate = ({
       )}
       {bulletGroups &&
         bulletGroups.map(group => (
-          <Section>
+          <Section key={group.title}>
             <Container key={group.title}>
               <ListTitle>
                 <h1>{group.title}</h1>
