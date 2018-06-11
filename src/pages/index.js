@@ -315,7 +315,7 @@ export const indexPageQuery = graphql`
                 }
               }
             }
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "DD.MM.YYYY")
           }
         }
       }
