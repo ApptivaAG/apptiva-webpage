@@ -1,9 +1,17 @@
+const config = require('./src/config')
+
 module.exports = {
   siteMetadata: {
-    title: 'Apptiva AG',
+    title: config.company,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: config.url,
+      },
+    },
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-source-filesystem',
