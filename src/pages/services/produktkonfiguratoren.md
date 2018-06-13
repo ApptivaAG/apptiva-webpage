@@ -24,7 +24,7 @@ solutions:
 bulletGroups:
   - title: Vorteile eines Apptiva-Produktkonfigurators
     description: 
-      Mit einem individuelle eCommerce Produkt- & Angebotskonfigurator verkaufen Sie komplexe Angebote einfach auf Ihrer Webseite oder in Ihrem Webshop.
+      Mit einem individuelle E-Commerce Produkt- & Angebotskonfigurator verkaufen Sie komplexe Angebote einfach auf Ihrer Webseite oder in Ihrem Webshop.
 
     bulletList:
       - icon: star
@@ -41,7 +41,7 @@ bulletGroups:
         text: Wir wissen wie Besucher zu zahlenden Kunden werden. Unsere Produktkonfiguratoren lassen ein niederschwelliges Einkaufen zu.
       - icon: rocket
         title: Alleinstellungsmerkmal
-        text: Mit unseren Produktkonfiguratoren stechen Sie aus dem eCommerce-Jungle heraus. Seien Sie der Konkurrenz eine Nasenspitze voraus.
+        text: Mit unseren Produktkonfiguratoren stechen Sie aus dem E-Commerce-Jungle heraus. Seien Sie der Konkurrenz eine Nasenspitze voraus.
       - icon: lightbulb-o
         title: Komplexität reduzieren
         text: Wir machen das Leben Ihrer Kunden ein bisschen einfacher und erhöhen gleichzeitig Ihren Umsatz.
@@ -51,7 +51,7 @@ specs:
   specItems:
     - title: CMS
       text: |
-        Wir bieten Integration in CMS- Systeme. Beispielswiese: Wordpress, Drupal, TYPO3 und viele weitere.
+        Wir bieten Integration in CMS-Systeme. Beispielsweise: WordPress, Drupal, TYPO3 und viele weitere.
     - title: Webshop
       text: Haben Sie bereits einen Webshop und möchten zusätzlich einen Konfigurator anbieten? Kein Problem. Wir unterstützen die meisten Shops.
     - title: Statische Webseite
