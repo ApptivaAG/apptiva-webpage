@@ -10,18 +10,18 @@ subtitle:
 bulletGroups:
   - title: Initialisierung
     description: 
-      Bevor wir mit der Umsetzung einer neuen Lean Enterprise App beginnen, setzen wir uns mit den folgenden drei Punkten auseinander
+      Bevor wir mit der Umsetzung einer neuen App beginnen, setzen wir uns mit den folgenden drei Punkten auseinander
 
     bulletList:
       - icon: clock-o
         title: Domäne
-        text: Wir haben die Lean Enterprise App damals erfunden, weil sie einfach logisch ist. Dadurch, dass wir bereits mehrere Apps entwickelt haben, wissen wir was funktioniert und was nicht. Wir haben unser Vorgehen über die Zeit genau darauf abgestimmt um optimale Resultate zu erhalten. Profitieren Sie davon!
-      - icon: database
-        title: Big Picture
-        text: Im Enterprise-Umfeld steht der Benutzer auch heute noch hinten an. Der moderne Benutzer lässt sich aber nicht mehr nur mit Funktionen abspecken, sondern erwartet auch eine entsprechend verständliche, einfache und schnelle Bedienung. Mit User Centered Design steht der Benutzer im Zentrum. Dieses aussergewöhliche Vorgehen für Enterprise-Software führt zu aussergewöhnlich benutzerfreundlichen Lösungen.
+        text: Uns ist es wichtig zu verstehen, in welchem Umfeld die App zum Einsatz kommt. Nur mit genügend Verständnis für Ihr Business können wir Ihnen die für Ihr Geschäft passende Lösung liefern.
       - icon: expand
         title: Ziele
-        text: Wir sprechen nicht nur von einem agilen Vorgehen, wir leben es tatsächlich und dies mit grossem Erfolg. Der Fortschritt eines Projektes wird bei uns nicht nur kommuniziert sondern von Ihnen in Ihrem Unternehmen erlebt. Sie stellen den Fortschritt anhand funktionierender Software fest, welche bei Ihnen tatsächlich im Einsatz ist. Alle zwei Wochen erhalten Sie ein echtes Software-Update!
+        text: Wir brauchen ein gemeinsames Ziel. Vielleicht heisst es „Die Telefonverkäufe können in der Hälfte der Zeit abgewickelt werden.“ Wie lautet Ihr Ziel?
+      - icon: database
+        title: Big Picture
+        text: Mit dem Verständnis Ihrer Domäne und einem klaren Ziel können wir ein grobes Bild davon zeichnen, aus welchen Funktionen Ihre App einmal besteht und wie sie eingesetzt wird.
 ---
 
 <div class="full-width dark-section" style="overflow: auto;">
@@ -49,6 +49,11 @@ Jetzt, wo alles klar ist, geht es an die Entwicklung. Anschliessend wird die neu
 ## Lernen
 
 Ist die Lösung im Einsatz, beobachten wir, wie die Anwender sie einsetzen und lernen daraus für die nächste Iteration.
+<br/>
+<br/>
+<br/>
+
+`youtube: https://www.youtube.com/embed/62l0zM_Xqxc`
 
 </div>
 </div>
