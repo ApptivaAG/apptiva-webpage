@@ -53,7 +53,7 @@ specs:
       text: |
         Wir bieten Integration in CMS-Systeme. Beispielsweise: WordPress, Drupal, TYPO3 und viele weitere.
     - title: Webshop
-      text: Haben Sie bereits einen Webshop und möchten zusätzlich einen Konfigurator anbieten? Kein Problem. Wir unterstützen die meisten Shops.
+      text: Haben Sie bereits einen Webshop und möchten zusätzlich einen Konfigurator anbieten? Kein Problem. Wir unterstützen die meisten Shops.
     - title: Statische Webseite
       text: Unsere Konfiguratoren können sehr gut in bereits vorhandene statische Webseiten integriert werden.
 ---

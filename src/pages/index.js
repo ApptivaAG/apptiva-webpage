@@ -16,6 +16,8 @@ import Testimonials from '../components/Testimonials'
 import Employees from '../components/Employees'
 import ContactForm from '../components/ContactForm'
 
+import { ReactComponent as Eris } from '../img/eris-logo.svg'
+
 import suva from '../img/suva-300.png'
 import sanagate from '../img/sanagate-300x65.png'
 import maxon from '../img/maxonmotor-300x45.png'
@@ -37,6 +39,9 @@ const ColList = styled.ul`
 const ImgStyled = styled(Img)`
   max-width: 340px;
   transition: transform 0.3s;
+`
+const ErisLogo = styled(Eris)`
+  margin: 4em 0.6em;
 `
 const ListItem = styled.li`
   display: flex;
@@ -131,16 +136,23 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
               <h2>App-Lösungen</h2>
               <h4>Mobile und Desktop</h4>
               <ImgStyled
-                style={{ width: '100%' }}
+                style={{ width: '100%', marginTop: '2rem' }}
                 sizes={images.appsImage.sizes}
                 alt="Apps"
               />
             </Link>
           </ListItem>
           <ListItem>
+            <Link to="/dashboard-notaufnahme/">
+              <h3>Apptiva</h3>
+              <h2>Dashboard</h2>
+              <h4>für die Notaufnahme</h4>
+              <ErisLogo />
+            </Link>
+          </ListItem>
+          <ListItem>
             <Link to="/produktkonfiguratoren/">
-              <h3>Angebots- &</h3>
-              <h2>Produkt&#173;konfiguratoren</h2>
+              <h2>Produkt&#173;konfiguratoren </h2>
               <h4>Komplexe Angebote einfach verkaufen</h4>
               <ImgStyled
                 sizes={images.partyplaner.sizes}
@@ -152,8 +164,8 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
         <h2>Weitere Angebote</h2>
         <ul>
           <li>
-            <Link to="/dashboard-notaufnahme">
-              <h3>Apptiva Dashboard für die Notaufnahme</h3>
+            <Link to="/bot-entwicklung/">
+              <h3>Chatbots</h3>
             </Link>
           </li>
           <li>

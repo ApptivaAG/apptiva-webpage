@@ -34,6 +34,7 @@ class Lightbox extends React.Component {
     if (
       e.target.className === 'gatsby-resp-image-image' ||
       (e.target.parentNode.className &&
+        e.target.parentNode.className.includes &&
         e.target.parentNode.className.includes('lightbox'))
     ) {
       e.preventDefault()
