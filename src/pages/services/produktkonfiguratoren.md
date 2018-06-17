@@ -16,10 +16,10 @@ customers:
 solutions:
   - title: Formular
     image: img/partyplaner-2.png
-    text: Ein Produktkonfigurator, welcher über ein Formular gesteuert wird. Dies ist der Klassiker unter den Produktkonfiguratoren.
+    text: Ein Produktkonfigurator, welcher über ein Formular gesteuert wird, ist der Klassiker unter den Produktkonfiguratoren. Dieser eignet sich besonders für mobile Geräte, sowie eine Bedienung über die Tastatur.  
   - title: Grafisch
     image: img/anhaenger-zubehoer.png
-    text: Ein Produktkonfigurator, welcher grafisch dargestellt wird. Dies erlaubt eine äusserst intuitive und attraktive Lösung.
+    text: Ein grafischer Produktkonfigurator erlaubt eine äusserst intuitive und attraktive Lösung. Diese eignen sich besonders um visualle Eigenheiten der Produkte zu vermitteln. 
   - title: Chatbot
     image: img/chatbot.png
     text: Immer öfter kommen auch Chatbots oder Konversations-Dialoge bei der Produktkonfiguration zum Einsatz. Dies ist eine modern und von Anwendern gern genutzte Möglichkeit ein Produkt zu konfigurieren.
