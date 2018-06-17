@@ -14,9 +14,12 @@ customers:
   - ../../img/sanagate-300x65.png
 
 solutions:
-  - title: Formular/Optisch
+  - title: Formular
     image: img/partyplaner-2.png
-    text: Ein Produktkonfigurator, welcher über ein Formular oder optisch gesteuert wird. Dies ist der Klassiker unter den Produktkonfiguratoren.
+    text: Ein Produktkonfigurator, welcher über ein Formular gesteuert wird. Dies ist der Klassiker unter den Produktkonfiguratoren.
+  - title: Grafisch
+    image: img/anhaenger-zubehoer.png
+    text: Ein Produktkonfigurator, welcher grafisch dargestellt wird. Dies erlaubt eine äusserst intuitive und attraktive Lösung.
   - title: Chatbot
     image: img/chatbot.png
     text: Immer öfter kommen auch Chatbots oder Konversations-Dialoge bei der Produktkonfiguration zum Einsatz. Dies ist eine modern und von Anwendern gern genutzte Möglichkeit ein Produkt zu konfigurieren.
