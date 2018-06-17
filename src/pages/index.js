@@ -41,6 +41,7 @@ const ImgStyled = styled(Img)`
   transition: transform 0.3s;
 `
 const ErisLogo = styled(Eris)`
+  width: 90%;
   margin: 4em 0.6em;
 `
 const ListItem = styled.li`
