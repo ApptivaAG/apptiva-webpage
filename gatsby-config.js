@@ -60,8 +60,12 @@ module.exports = {
               blocks: {
                 dark: 'custom-block-dark',
                 center: 'custom-block-center',
+                row: 'custom-block-row',
+                col: 'custom-block-col',
                 left: 'custom-block-left',
                 right: 'custom-block-right',
+                avatar: 'custom-block-avatar',
+                'no-margin': 'custom-block-no-margin',
               },
             },
           },

@@ -26,12 +26,12 @@ description: ''
 
 # Aktuell Angebote
 
-* [Persona Workshop](/persona-workshop)
-* Usability Audit
-* Innovations Workshop
-* Architektur Review
-* Softwarekonzepte mit hoher Usability
-* User Centered Design-Workshop
+* ### [Persona Workshop](/persona-workshop)
+* ### [Usability Audit](/usability-audit)
+* ### Innovations Workshop
+* ### Architektur Review
+* ### Softwarekonzepte mit hoher Usability
+* ### User Centered Design-Workshop
 
 <div class="service">
 

@@ -5,9 +5,10 @@ import styled from 'styled-components'
 import * as FontAwesome from 'react-icons/lib/fa'
 
 import Content, { HTMLContent } from '../components/Content'
-import { Centered, Container } from '../layouts/style'
+import { Centered, Container, Section } from '../layouts/style'
 import config from '../config'
 import SEO from '../components/SEO'
+import { stripHTML } from '../util'
 
 const HeadArea = styled.div``
 
@@ -21,6 +22,35 @@ const HeaderTitle = styled.h1`
     font-size: 4rem;
   }
 `
+const CustomerTitle = styled.h1`
+  font-size: 1.7em;
+  color: #cbcbcb;
+  text-align: center;
+`
+const Customers = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 -0.5rem;
+
+  & > div {
+    flex: 1 1 6rem;
+    width: 100%;
+    margin: 0.5rem;
+    text-align: center;
+  }
+`
+const Cols = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+
+  & > * {
+    flex: 1 1 14rem;
+    margin: 0 1rem 1rem;
+  }
+`
 const faName = string => {
   const faPrefix = `Fa-${string}`
   const str = faPrefix.replace(/-([a-z])/g, g => g[1].toUpperCase())
@@ -30,16 +60,13 @@ const faName = string => {
 const icons = icon => React.createElement(FontAwesome[faName(icon)])
 
 const ListTitle = styled.div`
-  margin: 5em 0 3em;
+  margin-bottom: 3em;
   text-align: center;
-  * {
-    margin: 0;
-  }
 `
 const ItemList = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -1rem;
+  margin: 0 -1rem 4rem;
   padding: 0;
   list-style: none;
 `
@@ -93,29 +120,82 @@ export const ServicePageTemplate = ({
   metaData,
 }) => {
   const PostContent = contentComponent || Content
-  const { title, image, subtitle, description, bulletGroups } = metaData
+  const {
+    title,
+    image,
+    subtitle,
+    description,
+    customers,
+    solutions,
+    specs,
+    bulletGroups,
+  } = metaData
   const seoImage =
     metaData.image &&
     metaData.image.childImageSharp.resize &&
     metaData.image.childImageSharp.resize.src
 
   return (
-    <section>
-      <Helmet title={`${title} - ${config.company}`} />
+    <div>
+      <Helmet title={`${stripHTML(title)} - ${config.company}`} />
       <SEO metaData={metaData} postImage={seoImage} />
-      <Container>
-        <Centered>
-          <Header title={title} image={image} subtitle={subtitle} />
-        </Centered>
-        {!subtitle &&
-          description && (
+      <Section>
+        <Container>
+          <Centered>
+            <Header title={title} image={image} subtitle={subtitle} />
+          </Centered>
+          {!subtitle &&
+            description && (
+              <Centered>
+                <p>{description}</p>
+              </Centered>
+            )}
+        </Container>
+      </Section>
+
+      {customers && (
+        <Section dark>
+          <Container>
+            <CustomerTitle>Auswahl unserer Kunden</CustomerTitle>
+            <Customers>
+              {customers.map(customer => (
+                <Img
+                  key={customer.childImageSharp.resolutions.src}
+                  resolutions={customer.childImageSharp.resolutions}
+                />
+              ))}
+            </Customers>
+          </Container>
+        </Section>
+      )}
+      {solutions && (
+        <Section>
+          <Container>
             <Centered>
-              <p>{description}</p>
+              <h1>Lösungen</h1>
+              <Cols>
+                {solutions.map(solution => (
+                  <div key={solution.title}>
+                    <h2>{solution.title}</h2>
+                    <a href={solution.image.childImageSharp.sizes.src}>
+                      <Img
+                        className="lightbox"
+                        sizes={solution.image.childImageSharp.sizes}
+                        alt={solution.title}
+                      />
+                    </a>
+                    <p>{solution.text}</p>
+                  </div>
+                ))}
+              </Cols>
             </Centered>
-          )}
-        {bulletGroups &&
-          bulletGroups.map(group => (
-            <div key={group.title}>
+          </Container>
+        </Section>
+      )}
+      {bulletGroups &&
+        bulletGroups.map(group => (
+          <Section key={group.title}>
+            <Container key={group.title}>
               <ListTitle>
                 <h1>{group.title}</h1>
                 {/* eslint-disable-next-line react/no-danger */}
@@ -133,11 +213,33 @@ export const ServicePageTemplate = ({
                   </Item>
                 ))}
               </ItemList>
-            </div>
-          ))}
-        <PostContent content={content} />
-      </Container>
-    </section>
+            </Container>
+          </Section>
+        ))}
+      {specs && (
+        <Section dark>
+          <Container>
+            <Centered>
+              <h1>{specs.title}</h1>
+              <Cols>
+                {specs.specItems.map(spec => (
+                  <div key={spec.title}>
+                    <h2>{spec.title}</h2>
+                    {/* eslint-disable-next-line react/no-danger */}
+                    <p>{spec.text}</p>
+                  </div>
+                ))}
+              </Cols>
+            </Centered>
+          </Container>
+        </Section>
+      )}
+      <Section>
+        <Container>
+          <PostContent content={content} />
+        </Container>
+      </Section>
+    </div>
   )
 }
 
@@ -175,11 +277,36 @@ export const pageQuery = graphql`
           swaps
         }
         description
+        customers {
+          childImageSharp {
+            resolutions(width: 200, grayscale: true) {
+              ...GatsbyImageSharpResolutions_withWebp_noBase64
+            }
+          }
+        }
+        solutions {
+          title
+          text
+          image {
+            childImageSharp {
+              sizes {
+                ...GatsbyImageSharpSizes_withWebp
+              }
+            }
+          }
+        }
         bulletGroups {
           title
           description
           bulletList {
             icon
+            title
+            text
+          }
+        }
+        specs {
+          title
+          specItems {
             title
             text
           }

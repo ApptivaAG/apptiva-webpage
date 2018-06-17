@@ -2,7 +2,7 @@
 title: Bots Holzöpfel ond Zipfelchappe
 path: bots-holzoepfel-ond-zipfelchappe
 templateKey: blog-post
-image: img/DSC_0042.jpg
+image: ./img/DSC_0042.jpg
 date: 2018-02-01T08:33:14.000Z
 author: markus-tanner
 description: ''
@@ -31,10 +31,8 @@ Als SpringBoot-Fan fiel es mir offen gesagt zunächst etwas schwer, ein Backend 
 
 Auch in einem kleinen Unternehmen ist es sehr wichtig, dass man sich Gedanken zu den Themen Arbeitsmethodik und Entscheidungsfindung macht. Aus diesem Grund sind wir bei Apptiva dabei, Holacracy einzuführen. Dazu haben wir unter anderem den Zweck der Firma miteinander formuliert. Zudem haben wir sämtliche Arbeiten notiert und spezifischen Rollen zugewiesen. Da ich nicht von Anfang an bei Apptiva dabei war, ist diese Transparenz für mich sehr interessant. Es ist nun sehr detailliert geregelt, wer für was verantwortlich ist. Wir stecken bei dieser Einführung noch in den Kinderschuhen. Die Holacracy-Meetings laufen jedoch von Mal zu Mal effizienter ab.
 
-Zu meinem Start bei Apptiva ziehe ich ein durchwegs positives Fazit. Ich freue mich auf die kommenden Herausforderungen!
+[[right]]
+|[[avatar]]
+||![](img/markus-tanner.jpg)
 
-<div style="display: flex; justify-content: flex-end;" >
-  <div style="border: 5px solid #ececec; border-radius: 50%; width: 120px; height:120px; overflow: hidden;">
-    <img src="./img/markus-tanner.jpg" />
-  </div>
-</div>
+Zu meinem Start bei Apptiva ziehe ich ein durchwegs positives Fazit. Ich freue mich auf die kommenden Herausforderungen!

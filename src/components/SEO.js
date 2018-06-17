@@ -3,6 +3,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 import config from '../config'
+import { stripHTML } from '../util'
 
 const getSchemaOrgJSONLD = ({
   isBlogPost,
@@ -77,7 +78,7 @@ const getSchemaOrgJSONLD = ({
 }
 
 const SEO = ({ metaData, postImage, isBlogPost }) => {
-  const title = metaData.title || config.title
+  const title = stripHTML(metaData.title) || config.title
   const description =
     metaData.description || metaData.excerpt || config.description
   const image = postImage ? `${config.url}${postImage}` : config.logo

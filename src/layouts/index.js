@@ -56,10 +56,24 @@ injectGlobal`
   a {
     text-decoration: none;
     color: ${theme.color.primary};
-  }
+    
+    .gatsby-image-outer-wrapper {
+      transition: transform 0.3s;
+    }
 
-  li {
-    margin-bottom: 0.5em;
+    &:hover .gatsby-image-outer-wrapper {
+      transform: scale(1.06);
+    }
+  }
+  
+  ul {
+
+    li {
+      margin-bottom: 0.5em;
+    }
+    h3 {
+      display: inline;
+    }
   }
 
   pre {

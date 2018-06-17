@@ -12,13 +12,12 @@ import {
   Subtitle,
   Container,
 } from '../layouts/style'
-import { theme } from '../layouts'
 import Testimonials from '../components/Testimonials'
 import Employees from '../components/Employees'
 import ContactForm from '../components/ContactForm'
 
 import { ReactComponent as Eris } from '../img/eris-logo.svg'
-import { ReactComponent as LifeRing } from '../img/life-ring.svg'
+
 import suva from '../img/suva-300.png'
 import sanagate from '../img/sanagate-300x65.png'
 import maxon from '../img/maxonmotor-300x45.png'
@@ -38,18 +37,12 @@ const ColList = styled.ul`
   list-style: none;
 `
 const ImgStyled = styled(Img)`
+  max-width: 340px;
   transition: transform 0.3s;
 `
 const ErisLogo = styled(Eris)`
   width: 90%;
-  margin: 2.6em auto;
-`
-const SupportLogo = styled(LifeRing)`
-  color: ${p => p.theme.color.orange};
-  max-height: 8rem;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
+  margin: 4em 0.6em;
 `
 const ListItem = styled.li`
   display: flex;
@@ -63,8 +56,8 @@ const ListItem = styled.li`
   a {
     flex: 1 1 auto;
     padding: ${props => (props.full ? 0 : '1em')};
+    border-radius: 0.2em;
     color: ${props => props.theme.color.text};
-    background-color: ${props => props.theme.color.bg};
     overflow: hidden;
 
     svg {
@@ -101,6 +94,8 @@ const ListItem = styled.li`
   ${ImgStyled} {
     margin-top: ${props => (props.full ? 0 : '1rem')};
     margin-bottom: ${props => (props.full ? '.6rem' : 0)};
+    margin-left: auto;
+    margin-right: auto;
   }
 
   p {
@@ -142,11 +137,8 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
               <h2>App-Lösungen</h2>
               <h4>Mobile und Desktop</h4>
               <ImgStyled
-                style={{ width: '100%' }}
-                sizes={{
-                  ...images.appsImage.sizes,
-                  base64: images.appsImage.sqip.dataURI,
-                }}
+                style={{ width: '100%', marginTop: '2rem' }}
+                sizes={images.appsImage.sizes}
                 alt="Apps"
               />
             </Link>
@@ -159,14 +151,30 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
               <ErisLogo />
             </Link>
           </ListItem>
-          <ListItem color={theme.color.orange}>
-            <Link to="/unterstuetzung/">
-              <h3>Erstklassige</h3>
-              <h2>Unterstützung</h2>
-              <SupportLogo />
+          <ListItem>
+            <Link to="/produktkonfiguratoren/">
+              <h2>Produkt&#173;konfiguratoren </h2>
+              <h4>Komplexe Angebote einfach verkaufen</h4>
+              <ImgStyled
+                sizes={images.partyplaner.sizes}
+                alt="Angebots- und Produktkonfiguratoren"
+              />
             </Link>
           </ListItem>
         </ColList>
+        <h2>Weitere Angebote</h2>
+        <ul>
+          <li>
+            <Link to="/bot-entwicklung/">
+              <h3>Chatbots</h3>
+            </Link>
+          </li>
+          <li>
+            <Link to="/unterstuetzung">
+              <h3>Erstklassige Unterstützung</h3>
+            </Link>
+          </li>
+        </ul>
         <Blockquote>
           <h3>Unsere Spezialität</h3>
           <p>
@@ -324,8 +332,10 @@ export const indexPageQuery = graphql`
       sizes(maxWidth: 600) {
         ...GatsbyImageSharpSizes_withWebp_noBase64
       }
-      sqip(numberOfPrimitives: 16, blur: 6) {
-        dataURI
+    }
+    partyplaner: imageSharp(id: { regex: "/partyplaner.png/" }) {
+      sizes(maxWidth: 600) {
+        ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
     heroImage: imageSharp(id: { regex: "/solution-collage.png/" }) {
