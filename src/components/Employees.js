@@ -35,10 +35,10 @@ const Avatar = styled(Img)`
 `
 const LinkStyled = styled(Link)`
   display: block;
-  transition: transform 0.3s;
+  /* transition: transform 0.3s;
   &:hover {
     transform: scale(1.06);
-  }
+  } */
 `
 const Name = styled.h2`
   margin: 0;

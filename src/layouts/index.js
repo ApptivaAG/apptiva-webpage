@@ -58,11 +58,15 @@ injectGlobal`
     color: ${theme.color.primary};
     
     .gatsby-image-outer-wrapper {
-      transition: transform 0.3s;
-    }
+      transform:translateZ(0);
 
-    &:hover .gatsby-image-outer-wrapper {
-      transform: scale(1.06);
+      .gatsby-image-wrapper {
+        transition: transform 0.3s;
+
+        &:hover {
+          transform: scale(1.06);
+        }
+      }
     }
   }
   

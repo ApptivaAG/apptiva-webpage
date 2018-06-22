@@ -82,9 +82,11 @@ const Markdown = styled.div`
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    border: 5px solid #ececec; 
-    border-radius: 50%; 
-    overflow: hidden;
+    .gatsby-resp-image-background-image {
+      border: 5px solid #ececec; 
+      border-radius: 50%; 
+      overflow: hidden;
+    }
 
     & > p {
       margin: 0;
@@ -99,11 +101,14 @@ const Markdown = styled.div`
   }
 
   @media (min-width: 400px) {
-    .gatsby-resp-image-wrapper {
-      transition: transform 0.3s;
-
-      &:hover {
-        transform: scale(1.06);
+    .gatsby-resp-image-wrapper .gatsby-resp-image-background-image {
+      transform:translateZ(0);
+      
+      img {
+        transition: transform 0.3s;
+        &:hover {
+          transform: scale(1.06);
+        }
       }
     }
   }
