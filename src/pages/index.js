@@ -153,7 +153,9 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
           </ListItem>
           <ListItem>
             <Link to="/produktkonfiguratoren/">
-              <h2>Produkt-Konfiguratoren </h2>
+              <h2>
+                Produkt-<br />Konfiguratoren
+              </h2>
               <h4>Komplexe Angebote einfach verkaufen</h4>
               <ImgStyled
                 sizes={images.partyplaner.sizes}
