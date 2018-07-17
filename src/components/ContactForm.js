@@ -30,7 +30,7 @@ const encode = data =>
 class ContactForm extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { name: '', email: '', message: '', mightBeRobot: true }
+    this.state = { name: '', email: '', message: '' }
 
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -39,11 +39,7 @@ class ContactForm extends React.Component {
   /* Here’s the juicy bit for posting the form submission */
 
   handleSubmit(e) {
-    if (
-      this.state.email === '' ||
-      this.state.name === '' ||
-      this.state.mightBeRobot
-    ) {
+    if (this.state.email === '' || this.state.name === '') {
       /* eslint-disable-next-line no-alert */
       alert('Ups, ein zwingendes Feld ist noch nicht ausgefüllt.')
     } else {
