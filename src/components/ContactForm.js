@@ -1,7 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import { Button } from '../layouts/style'
-import Recaptcha from 'react-recaptcha'
 
 const sharedInput = css`
   display: block;
@@ -35,14 +34,6 @@ class ContactForm extends React.Component {
 
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
-    this.verifyRecaptchaCallback = this.verifyRecaptchaCallback.bind(this)
-  }
-
-  // if this is missing the verifyRecaptchaCallback is not fired ...
-  recaptchaCallback = function() {}
-
-  verifyRecaptchaCallback = function(response) {
-    this.setState({ mightBeRobot: false })
   }
 
   /* Here’s the juicy bit for posting the form submission */
@@ -94,6 +85,13 @@ class ContactForm extends React.Component {
         data-netlify-honeypot="bot-field"
         onSubmit={this.handleSubmit}
       >
+        <input type="hidden" name="form-name" value="contact" />
+        <p hidden>
+          <label>
+            Don’t fill this out if you're human:{' '}
+            <input name="bot-field" onChange={this.handleChange} />
+          </label>
+        </p>
         <p>
           <label htmlFor="name">
             Ihr Name (Pflichtfeld){' '}
@@ -126,13 +124,6 @@ class ContactForm extends React.Component {
             />
           </label>
         </p>
-        <Recaptcha
-          sitekey="6Lc4nGQUAAAAADYOyR6hk5u5TJN8sr-YxkZMTw4i"
-          render="explicit"
-          verifyCallback={this.verifyRecaptchaCallback}
-          onloadCallback={this.recaptchaCallback}
-          hl="de-CH"
-        />
         <p>
           <Button type="submit">Senden</Button>
         </p>
