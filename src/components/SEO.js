@@ -108,6 +108,7 @@ const SEO = ({ metaData, postImage, isBlogPost }) => {
       <script type="application/ld+json">
         {JSON.stringify(schemaOrgJSONLD)}
       </script>
+      <script src="https://www.google.com/recaptcha/api.js" async defer />
 
       {/* OpenGraph tags */}
       <meta property="og:url" content={url} />

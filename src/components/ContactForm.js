@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import { Button } from '../layouts/style'
+import Recaptcha from 'react-recaptcha'
 
 const sharedInput = css`
   display: block;
@@ -30,18 +31,30 @@ const encode = data =>
 class ContactForm extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { name: '', email: '', message: '' }
+    this.state = { name: '', email: '', message: '', mightBeRobot: true }
 
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.verifyRecaptchaCallback = this.verifyRecaptchaCallback.bind(this)
+  }
+
+  // if this is missing the verifyRecaptchaCallback is not fired ...
+  recaptchaCallback = function() {}
+
+  verifyRecaptchaCallback = function(response) {
+    this.setState({ mightBeRobot: false })
   }
 
   /* Here’s the juicy bit for posting the form submission */
 
   handleSubmit(e) {
-    if (this.state.email === '' || this.state.name === '') {
+    if (
+      this.state.email === '' ||
+      this.state.name === '' ||
+      this.state.mightBeRobot
+    ) {
       /* eslint-disable-next-line no-alert */
-      alert('Upps, ein zwingendes Feld ist noch nicht ausgefüllt.')
+      alert('Ups, ein zwingendes Feld ist noch nicht ausgefüllt.')
     } else {
       const body = encode({ 'form-name': 'contact', ...this.state })
       fetch('/', {
@@ -113,6 +126,13 @@ class ContactForm extends React.Component {
             />
           </label>
         </p>
+        <Recaptcha
+          sitekey="6Lc4nGQUAAAAADYOyR6hk5u5TJN8sr-YxkZMTw4i"
+          render="explicit"
+          verifyCallback={this.verifyRecaptchaCallback}
+          onloadCallback={this.recaptchaCallback}
+          hl="de-CH"
+        />
         <p>
           <Button type="submit">Senden</Button>
         </p>
