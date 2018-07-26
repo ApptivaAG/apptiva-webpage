@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
+import { description } from '../config'
 
 import { Container } from '../layouts/style'
 import chevron from '../img/chevron.svg'
@@ -82,13 +83,7 @@ const Footer = () => (
     <Grid>
       <About>
         <h2>Über Apptiva</h2>
-        <p>
-          Die Apptiva AG ist auf das Erstellen von kundenindividuellen
-          Softwarelösungen spezialisiert. Damit unterstützt sie Unternehmen bei
-          der Digitalisierung und bei der Beschleunigung ihrer
-          Geschäftsprozesse. Die Apptiva AG setzt dazu modernste Technologien
-          und Methodiken ein, um schlanke und passgenaue Lösungen zu liefern.
-        </p>
+        <p>{description}</p>
       </About>
       <Contact>
         <h2>Kontakt</h2>
