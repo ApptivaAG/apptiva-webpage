@@ -10,7 +10,9 @@ import config from '../config'
 import SEO from '../components/SEO'
 import { stripHTML } from '../util'
 
-const HeadArea = styled.div``
+const HeadArea = styled.div`
+  margin-bottom: 0.6em;
+`
 
 const HeaderTitle = styled.h1`
   font-size: 2rem;
@@ -36,8 +38,9 @@ const Header = ({ title, image }) => (
 )
 
 const Published = ({ author, date }) => {
-  const Div = styled.div`
-    margin-top: 2rem;
+  const Wrapper = styled.div`
+    margin-top: 0;
+    margin-bottom: 3em;
     color: #0009;
     font-size: 0.8rem;
   `
@@ -49,10 +52,10 @@ const Published = ({ author, date }) => {
     font-weight: 400;
   `
   return (
-    <Div>
+    <Wrapper>
       Publiziert von <Author>{author.replace('-', ' ')}</Author> am{' '}
       <Date>{date}</Date>
-    </Div>
+    </Wrapper>
   )
 }
 
@@ -95,7 +98,9 @@ export const BlogPostTemplate = ({
   const { title, image, description, author, date } = metaData
 
   const Description = styled.p`
-    font-weight: 400;
+    font-weight: 600;
+    margin-bottom: 0.4em;
+    margin-top: 2em;
   `
   return (
     <section>
@@ -107,7 +112,7 @@ export const BlogPostTemplate = ({
       />
       <Container>
         <Header title={title} image={image} />
-        <Description>{description}</Description>
+        {description && <Description>{description}</Description>}
         {author && <Published author={author} date={date} />}
         <PostContent content={content} />
         <Navigation next={navigation.next} prev={navigation.prev} />
