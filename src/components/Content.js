@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { sharedButtonStyle } from '../layouts/style'
 
 require('prismjs/themes/prism.css')
 
@@ -64,6 +65,16 @@ const Markdown = styled.div`
       max-width: 100%;
       margin-left: 2rem;
     }
+  }
+
+  .custom-block-button {
+    ${sharedButtonStyle}
+
+    p{
+      margin: 0;
+      a {
+      color: white;
+    }}
   }
 
   .custom-block-row {

@@ -47,7 +47,7 @@ export const Subtitle = styled.h4`
   text-align: center;
 `
 
-const shared = css`
+export const sharedButtonStyle = css`
   display: inline-block;
   padding: 0.6em 1.4em .7em;
   border: 0 none;
@@ -74,13 +74,13 @@ const shared = css`
   }
 `
 const ButtonStyled = styled.button`
-  ${shared};
+  ${sharedButtonStyle};
 `
 const AStyled = styled.a`
-  ${shared};
+  ${sharedButtonStyle};
 `
 const LinkStyled = styled(Link)`
-  ${shared};
+  ${sharedButtonStyle};
 `
 
 export const Button = ({ type, href, to, ...props }) => {

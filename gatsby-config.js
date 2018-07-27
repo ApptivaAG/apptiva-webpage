@@ -64,6 +64,7 @@ module.exports = {
                 col: 'custom-block-col',
                 left: 'custom-block-left',
                 right: 'custom-block-right',
+                button: 'custom-block-button',
                 avatar: 'custom-block-avatar',
                 'no-margin': 'custom-block-no-margin',
               },
