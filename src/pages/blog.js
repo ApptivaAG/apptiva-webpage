@@ -56,7 +56,7 @@ export const blogListPage = graphql`
             title
             path
             templateKey
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "D. MMMM YYYY", locale: "de")
             image {
               childImageSharp {
                 resolutions(height: 150, width: 300) {
