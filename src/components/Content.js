@@ -67,14 +67,11 @@ const Markdown = styled.div`
     }
   }
 
-  .custom-block-button {
-    ${sharedButtonStyle}
-
-    p{
-      margin: 0;
-      a {
-      color: white;
-    }}
+  .custom-block-button p {
+    margin: 0;
+    a {
+      ${sharedButtonStyle}
+    }
   }
 
   .custom-block-row {
