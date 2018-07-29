@@ -27,6 +27,7 @@ import energie360 from '../img/energie360-300x72.png'
 import Hero from '../components/Hero'
 import Navbar from '../components/Navbar'
 import SEO from '../components/SEO'
+import { truncate } from '../util';
 
 const ColList = styled.ul`
   box-sizing: border-box;
@@ -230,7 +231,11 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
                 />
                 <h2>{post.frontmatter.title}</h2>
                 <h4>{post.frontmatter.date}</h4>
-                <p>{post.excerpt}</p>
+                <p>
+                  {post.frontmatter.description
+                    ? truncate(post.frontmatter.description, 140)
+                    : post.excerpt}
+                </p>
               </Link>
             </ListItem>
           ))}
@@ -326,6 +331,7 @@ export const indexPageQuery = graphql`
               }
             }
             date(formatString: "DD.MM.YYYY")
+            description
           }
         }
       }
@@ -341,9 +347,7 @@ export const indexPageQuery = graphql`
       }
     }
     heroImage: imageSharp(id: { regex: "/solution-collage.png/" }) {
-      sizes(
-        maxWidth: 1800
-      ) {
+      sizes(maxWidth: 1800) {
         ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }

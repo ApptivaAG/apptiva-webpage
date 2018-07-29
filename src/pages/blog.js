@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import { Section, Title, Container } from '../layouts/style'
+import { truncate } from '../util'
 
 export default ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
@@ -24,7 +25,9 @@ export default ({ data }) => {
               resolutions={post.frontmatter.image.childImageSharp.resolutions}
             />
             <p>
-              {post.excerpt}
+              {post.frontmatter.description
+                ? truncate(post.frontmatter.description, 400)
+                : post.excerpt}
               <Link
                 style={{ fontWeight: 500, marginLeft: 5 }}
                 to={`/${post.frontmatter.path}`}
@@ -57,6 +60,7 @@ export const blogListPage = graphql`
             path
             templateKey
             date(formatString: "D. MMMM YYYY", locale: "de")
+            description
             image {
               childImageSharp {
                 resolutions(height: 150, width: 300) {
