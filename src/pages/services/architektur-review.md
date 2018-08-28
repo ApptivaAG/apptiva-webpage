@@ -38,6 +38,12 @@ Zu den einzelnen Zielen werden schliesslich Qualitätsszenarien definiert. Die S
 
 <img style="margin-top: 4rem;" src="img/review-analyse.png" alt="Review">
 
+<style>
+.service h1, .service h2, .service p {
+  margin: 0;
+}
+</style>
+
 ## Interessiert?
 
 <div class="service">
