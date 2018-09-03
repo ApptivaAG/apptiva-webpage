@@ -32,7 +32,7 @@ Zu den einzelnen Zielen werden schliesslich Qualitätsszenarien definiert. Die S
 
 2.  Nebst der Angemessenheit der Architektur wird auch der Entwicklungsansatz an sich bewertet. Entsprechen die eingesetzten Tools den Best-Practices? Ist die Architektur verständlich und einfach nachvollziehbar? Ist die Architektur in der Firma gut kommuniziert und stehen die Mitarbeitenden dahinter?
 
-3.  Schliesslich wird eine Verifikation auf Code-Ebene durchgeführt. Es mögen diverse Konzepte existieren, doch werden diese im Code auch widerspiegelt?
+3.  Nun wird eine Verifikation auf Code-Ebene durchgeführt. Es mögen diverse Konzepte existieren, doch werden diese im Code auch widerspiegelt?
 
 4.  Schliesslich werden die Ergebnisse aus den vorhergehenden Punkten zusammengeführt. Es werden die Risiken ermittelt und die wichtigsten Erkenntnisse formuliert. Dies passiert wiederum unter der Berücksichtigung der Qualitätsziele.
 
