@@ -34,9 +34,10 @@ Zu den einzelnen Zielen werden schliesslich Qualitätsszenarien definiert. Die S
 
 3.  Nun wird eine Verifikation auf Code-Ebene durchgeführt. Es mögen diverse Konzepte existieren, doch werden diese im Code auch widerspiegelt?
 
-4.  Schliesslich werden die Ergebnisse aus den vorhergehenden Punkten zusammengeführt. Es werden die Risiken ermittelt und die wichtigsten Erkenntnisse formuliert. Dies passiert wiederum unter der Berücksichtigung der Qualitätsziele.
+[[right]]
+|![Review](img/review-analyse.png)
 
-<img style="margin-top: 4rem;" src="img/review-analyse.png" alt="Review">
+4.  Schliesslich werden die Ergebnisse aus den vorhergehenden Punkten zusammengeführt. Es werden die Risiken ermittelt und die wichtigsten Erkenntnisse formuliert. Dies passiert wiederum unter der Berücksichtigung der Qualitätsziele.
 
 <style>
 .service h1, .service h2, .service p {
@@ -50,10 +51,10 @@ Zu den einzelnen Zielen werden schliesslich Qualitätsszenarien definiert. Die S
 
 Rufen Sie uns an
 
-# <a href="tel:+41413222626">041 322 26 26</a>
+# [041 322 26 26](tel:+41413222626)
 
 oder schreiben Sie an
 
-# <a href="mailto:info@apptiva.ch">info@­apptiva.ch</a>
+# [info@­apptiva.ch](mailto:info@apptiva.ch)
 
 </div>
