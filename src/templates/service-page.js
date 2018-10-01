@@ -136,7 +136,7 @@ export const ServicePageTemplate = ({
     metaData.image.childImageSharp.resize.src
 
   return (
-    <div>
+    <main>
       <Helmet title={`${stripHTML(title)} - ${config.company}`} />
       <SEO metaData={metaData} postImage={seoImage} />
       <Section>
@@ -239,7 +239,7 @@ export const ServicePageTemplate = ({
           <PostContent content={content} />
         </Container>
       </Section>
-    </div>
+    </main>
   )
 }
 

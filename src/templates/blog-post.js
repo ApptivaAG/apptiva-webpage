@@ -103,7 +103,7 @@ export const BlogPostTemplate = ({
     margin-top: 2em;
   `
   return (
-    <section>
+    <main>
       <Helmet title={`${stripHTML(title)} - Blog - ${config.company}`} />
       <SEO
         isBlogPost
@@ -117,7 +117,7 @@ export const BlogPostTemplate = ({
         <PostContent content={content} />
         <Navigation next={navigation.next} prev={navigation.prev} />
       </Container>
-    </section>
+    </main>
   )
 }
 

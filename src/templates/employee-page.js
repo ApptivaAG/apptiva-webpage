@@ -140,7 +140,7 @@ export const EmployeePageTemplate = ({
     metaData.avatar.childImageSharp.resize.src
 
   return (
-    <div>
+    <main>
       <Helmet title={`Mitarbeiter | ${name}`} />
       <SEO metaData={metaData} postImage={seoImage} />
       <Section>
@@ -215,7 +215,7 @@ export const EmployeePageTemplate = ({
           <PostContent content={content} />
         </Container>
       </Section>
-    </div>
+    </main>
   )
 }
 
