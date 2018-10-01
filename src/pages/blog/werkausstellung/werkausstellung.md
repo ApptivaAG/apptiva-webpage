@@ -3,7 +3,7 @@ title: Unsere kleine Werkausstellung
 path: werkausstellung
 templateKey: blog-post
 image: werkausstellung.jpg
-date: 2018-08-31
+date: 2018-10-01
 author: Philip Schönholzer
 description: >-
   Im Rahmen unseres dritten Geburtstags, haben wir eine kleine Werkausstellung auf die Beine gestellt. Alle die es nicht live erleben konnten, erhalten hier einen kleinen Einblick in unser Schaffen der letzen Jahre.
@@ -21,12 +21,10 @@ Ausgestellt wurden folgende Projekte:
 * Einsatzplanung für sd Gebäudeunterhalt
 * V-Sponse für R-Squared
 * [Energierechner](http://meinverbrauch.ch) für ITZ
-* Neuenentwicklung der Digital Signage Software
+* Neuentwicklung der Digital Signage Software
 * [Alex Chatbot](https://geschaeftsberichte.vorwerk.de/2017/fuehlen/) für Vorwerk
 * Generelle Infos zu [Chatbots](https://www.botfabrik.ch)
 
 Die QR-Codes für die V-Sponse können wir hier online leider nicht mehr anbieten. Die anderen dürft ihr auch weiterhin gerne nutzen.
 
 ![Poster der Werkausstellung](collage.jpg)
-
-Was denkt ihr? Was haltet ihr von unserer Werkausstellung? Wir würden uns über Feedback wie [Twitter](https://twitter.com/ApptivaTeam) oder [Mail](mailto:info@apptiva.ch) freuen. :smiley:
