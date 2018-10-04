@@ -1,9 +1,9 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import styled from 'styled-components'
 import { Title, Container, Subtitle, Button } from '../layouts/style'
 import SEO from '../components/SEO'
 import config from '../config'
-import styled from 'styled-components'
 
 const metadata = {
   title: 'Jobs',
@@ -13,7 +13,7 @@ const metadata = {
 
 const Searching = styled.h4`
   text-align: center;
-  padding: 1em 0 0.5em;
+  /* padding-top: 1em; */
   font-size: 3em;
   font-weight: 100;
 `
@@ -32,7 +32,14 @@ export default () => (
 
       <Searching>Wir suchen</Searching>
 
-      <h2>Fullstack Software-Entwicklerin / -Entwickler</h2>
+      <h2
+        style={{
+          marginBottom: 0,
+        }}
+      >
+        Fullstack Software-Entwicklerin / -Entwickler
+      </h2>
+      <small>100%, ab sofort</small>
 
       <h3>Deine Stärken</h3>
 
@@ -48,12 +55,15 @@ export default () => (
         <li>Voller Ideen und Tatendrang</li>
       </ul>
 
-      <h3>Dein Wissen</h3>
+      <h3>Deine fachlichen Fähigkeiten</h3>
 
       <ul>
-        <li>Gute Programmierkenntnisse</li>
-        <li>Gute Kenntnis von HTML, CSS, JS</li>
-        <li>Git-SCM kennen ist von Vorteil</li>
+        <li>Dein Programmier-Beitrag führt schnell zum gewünschten Outcome</li>
+        <li>
+          Du magst mit HTML, CSS, JS in nützlicher Frist ansprechende
+          Oberflächen entwickeln
+        </li>
+        <li>Umgang mit Git-SCM in einem Team ist dir bekannt</li>
         <li>Node.js und oder Java kennen ist von Vorteil</li>
         <li>React kennen ist von Vorteil</li>
       </ul>
