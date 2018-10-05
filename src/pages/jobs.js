@@ -63,25 +63,24 @@ export default () => (
           Du magst mit HTML, CSS, JS in nützlicher Frist ansprechende
           Oberflächen entwickeln
         </li>
-        <li>Umgang mit Git-SCM in einem Team ist dir bekannt</li>
-        <li>Node.js und oder Java kennen ist von Vorteil</li>
-        <li>React kennen ist von Vorteil</li>
+        <li>Du weisst, wie man mit Git in einem Team arbeitet</li>
+        <li>Du kennst dich mit mindestens einer der folgenden Technologien aus: Node.js, React, Java</li>
       </ul>
 
       <h3>Deine Vorteile</h3>
 
       <ul>
-        <li>Werde nicht mehr wie ein Kind behandelt</li>
+        <li>Du wirst nicht mehr wie ein Kind behandelt</li>
         <li>
           Du entscheidest über deine Tätigkeiten, deine Arbeitszeiten, deine
           Ferienzeit und deinen Lohn
         </li>
-        <li>Arbeite mit den besten Software-Entwicklern zusammen</li>
+        <li>Du arbeitest mit den besten Software-Entwicklern zusammen</li>
         <li>
-          Arbeite an spannenden Projekten wie Chatbots oder einem Partyplaner
+          Du arbeitest an spannenden Projekten wie Chatbots oder einem Partyplaner
         </li>
-        <li>Arbeite mit den modernsten Tools und Libraries</li>
-        <li>Erlebe ein selbstorganisierendes Unternehmen am eigenen Leibe</li>
+        <li>Du benutzt die modernsten Tools und Libraries</li>
+        <li>Du erlebst ein selbstorganisierendes Unternehmen am eigenen Leibe</li>
       </ul>
 
       <p>
