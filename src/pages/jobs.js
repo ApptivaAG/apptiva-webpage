@@ -50,7 +50,7 @@ export default () => (
         <li>
           Freude in unterschiedlichen Tätigkeitsgebieten zu wirken (Comb shaped)
         </li>
-        <li>Gewifte Schreiberin / Gewifter Schreiber</li>
+        <li>Gewiefte Schreiberin / Gewifter Schreiber</li>
         <li>Gier dich weiterzuentwickeln</li>
         <li>Voller Ideen und Tatendrang</li>
       </ul>
