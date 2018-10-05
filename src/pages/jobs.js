@@ -37,7 +37,7 @@ export default () => (
           marginBottom: 0,
         }}
       >
-        Fullstack Software-Entwicklerin / -Entwickler
+        UnternehmerIn und Fullstack Software-EntwicklerIn
       </h2>
       <small>100%, ab sofort</small>
 
@@ -73,8 +73,8 @@ export default () => (
       <ul>
         <li>Werde nicht mehr wie ein Kind behandelt</li>
         <li>
-          Du entscheidest über deine Tätigkeiten, dein Arbeitszeiten, deine
-          Ferienzeit und dein Lohn
+          Du entscheidest über deine Tätigkeiten, deine Arbeitszeiten, deine
+          Ferienzeit und deinen Lohn
         </li>
         <li>Arbeite mit den besten Software-Entwicklern zusammen</li>
         <li>
@@ -85,9 +85,8 @@ export default () => (
       </ul>
 
       <p>
-        Bewerbe dich jetzt mit Motivationsschreiben, Lebenslauf, Zeugnissen und
-        Diplomen bei uns. Willst du mehr Erfahren? Dann ruf uns an! Wir freuen
-        uns von dir zu hören.
+        Überzeug uns mit deiner Bewerbung! Willst du mehr Erfahren? Dann ruf uns
+        an! Wir freuen uns von dir zu hören.
       </p>
       <Layout>
         <Button href="mailto:info@apptiva.ch">Bewirb dich</Button>
