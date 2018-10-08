@@ -7,7 +7,7 @@ import config from '../config'
 
 const metadata = {
   title: 'Jobs',
-  description: 'Die besten Jobs in der Software-Entwicklung.',
+  description: 'Wir bieten Jobs für Erwachsene',
   path: 'jobs',
 }
 
@@ -41,6 +41,13 @@ export default () => (
       </h2>
       <small>100%, ab sofort</small>
 
+      <p>Wir sind ein junges Software-Unternehmen und suchen Verstärkung.</p>
+      <p>
+        Du findest bei uns spannende und abwechslungsreiche Arbeit vor. Wir
+        möchten mit dir gemeinsam Herausforderungen meistern und Spass an der
+        Arbeit haben. Es würde uns freuen dich schon bald kennen zu lernen!
+      </p>
+
       <h3>Deine Stärken</h3>
 
       <ul>
@@ -63,6 +70,7 @@ export default () => (
         </li>
         <li>Du weisst, wie man mit Git in einem Team arbeitet</li>
         <li>Du möchtest mit Node.js, React und Java entwickeln</li>
+        <li>Dir ist Software Craftsmanship wichtig</li>
       </ul>
 
       <h3>Deine Vorteile</h3>
@@ -73,12 +81,12 @@ export default () => (
           Du entscheidest über deine Tätigkeiten, deine Arbeitszeiten, deine
           Ferienzeit und deinen Lohn
         </li>
-        <li>Du arbeitest mit den besten Software-Entwicklern zusammen</li>
         <li>
           Du arbeitest an spannenden Projekten wie Chatbots oder einem
           Partyplaner
         </li>
         <li>Du verwendest moderne Tools und Libraries</li>
+        <li>Du hast die Chance dich zu bei uns zu entfalten</li>
         <li>
           Du erlebst ein selbstorganisierendes Unternehmen am eigenen Leibe
         </li>
