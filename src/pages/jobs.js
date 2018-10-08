@@ -37,7 +37,7 @@ export default () => (
           marginBottom: 0,
         }}
       >
-        UnternehmerIn und Fullstack Software-EntwicklerIn
+        Fullstack Software-EntwicklerIn und UnternehmerIn
       </h2>
       <small>100%, ab sofort</small>
 
@@ -47,10 +47,8 @@ export default () => (
         <li>Teamfähig und selbständig</li>
         <li>Entscheidungsfreudig</li>
         <li>Schnelle Auffassungsgabe</li>
-        <li>
-          Freude in unterschiedlichen Tätigkeitsgebieten zu wirken (Comb shaped)
-        </li>
-        <li>Gewiefte Schreiberin / Gewifter Schreiber</li>
+        <li>Freude in unterschiedlichen Tätigkeitsgebieten zu wirken</li>
+        <li>Gewiefte Schreiberin / Gewiefter Schreiber</li>
         <li>Gier dich weiterzuentwickeln</li>
         <li>Voller Ideen und Tatendrang</li>
       </ul>
@@ -64,7 +62,7 @@ export default () => (
           Oberflächen entwickeln
         </li>
         <li>Du weisst, wie man mit Git in einem Team arbeitet</li>
-        <li>Du kennst dich mit mindestens einer der folgenden Technologien aus: Node.js, React, Java</li>
+        <li>Du möchtest mit Node.js, React und Java entwickeln</li>
       </ul>
 
       <h3>Deine Vorteile</h3>
@@ -77,10 +75,13 @@ export default () => (
         </li>
         <li>Du arbeitest mit den besten Software-Entwicklern zusammen</li>
         <li>
-          Du arbeitest an spannenden Projekten wie Chatbots oder einem Partyplaner
+          Du arbeitest an spannenden Projekten wie Chatbots oder einem
+          Partyplaner
         </li>
-        <li>Du benutzt die modernsten Tools und Libraries</li>
-        <li>Du erlebst ein selbstorganisierendes Unternehmen am eigenen Leibe</li>
+        <li>Du verwendest moderne Tools und Libraries</li>
+        <li>
+          Du erlebst ein selbstorganisierendes Unternehmen am eigenen Leibe
+        </li>
       </ul>
 
       <p>
