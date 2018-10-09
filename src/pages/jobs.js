@@ -45,56 +45,54 @@ export default () => (
       <p>
         Du findest bei uns spannende und abwechslungsreiche Arbeit vor. Wir
         möchten mit dir gemeinsam Herausforderungen meistern und Spass an der
-        Arbeit haben. Es würde uns freuen dich schon bald kennen zu lernen!
+        Arbeit haben. Es würde uns freuen, dich schon bald kennen zu lernen!
       </p>
 
       <h3>Deine Stärken</h3>
 
       <ul>
-        <li>Teamfähig und selbständig</li>
-        <li>Entscheidungsfreudig</li>
-        <li>Schnelle Auffassungsgabe</li>
-        <li>Freude in unterschiedlichen Tätigkeitsgebieten zu wirken</li>
-        <li>Gewiefte Schreiberin / Gewiefter Schreiber</li>
-        <li>Gier dich weiterzuentwickeln</li>
-        <li>Voller Ideen und Tatendrang</li>
+        <li>Du bist teamfähig und selbständig.</li>
+        <li>Du bist entscheidungsfreudig.</li>
+        <li>Du verfügst über eine schnelle Auffassungsgabe.</li>
+        <li>
+          Du hast Freude, in unterschiedlichen Tätigkeitsgebieten zu wirken.
+        </li>
+        <li>Du bist gierig darauf, dich weiterzuentwickeln.</li>
+        <li>Du steckst voller Ideen und Tatendrang.</li>
       </ul>
 
       <h3>Deine fachlichen Fähigkeiten</h3>
 
       <ul>
-        <li>Dein Programmier-Beitrag führt schnell zum gewünschten Outcome</li>
-        <li>
-          Du magst mit HTML, CSS, JS in nützlicher Frist ansprechende
-          Oberflächen entwickeln
-        </li>
-        <li>Du weisst, wie man mit Git in einem Team arbeitet</li>
-        <li>Du möchtest mit Node.js, React und Java entwickeln</li>
-        <li>Dir ist Software Craftsmanship wichtig</li>
+        <li>Dein Programmier-Beitrag führt schnell zum gewünschten Outcome.</li>
+        <li>Dir ist Software Craftsmanship wichtig.</li>
+        <li>Du magst mit HTML, CSS, JS ansprechende Oberflächen entwickeln.</li>
+        <li>Du möchtest mit Node.js, React und Java entwickeln.</li>
+        <li>Du weisst, wie man mit Git in einem Team arbeitet.</li>
       </ul>
 
       <h3>Deine Vorteile</h3>
 
       <ul>
-        <li>Du wirst nicht mehr wie ein Kind behandelt</li>
+        <li>Du wirst nicht mehr wie ein Kind behandelt.</li>
         <li>
           Du entscheidest über deine Tätigkeiten, deine Arbeitszeiten, deine
-          Ferienzeit und deinen Lohn
+          Ferienzeit und deinen Lohn.
         </li>
         <li>
           Du arbeitest an spannenden Projekten wie Chatbots oder einem
-          Partyplaner
+          Partyplaner.
         </li>
-        <li>Du verwendest moderne Tools und Libraries</li>
-        <li>Du hast die Chance dich zu bei uns zu entfalten</li>
+        <li>Du verwendest moderne Tools und Libraries.</li>
+        <li>Du hast die Chance, dich zu bei uns zu entfalten.</li>
         <li>
-          Du erlebst ein selbstorganisierendes Unternehmen am eigenen Leibe
+          Du erlebst ein selbstorganisierendes Unternehmen am eigenen Leibe.
         </li>
       </ul>
 
       <p>
-        Überzeug uns mit deiner Bewerbung! Willst du mehr Erfahren? Dann ruf uns
-        an! Wir freuen uns von dir zu hören.
+        Überzeug uns mit deiner Bewerbung! Willst du mehr erfahren? Dann ruf uns
+        an! Wir freuen uns, von dir zu hören.
       </p>
       <Layout>
         <Button href="mailto:info@apptiva.ch">Bewirb dich</Button>
