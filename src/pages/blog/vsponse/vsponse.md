@@ -13,9 +13,9 @@ categories:
 
 ## Videos und Sicherheit
 
-Mit der V-Sponse Plattform für Bewerbungsvideos kann R-Squared Video-Antworten von potentiellen Kandidaten ihren Auftraggebern anbieten. So können die Auftraggeber ein besseres Bild der Kandidaten erhalten und R-Squared kann mit besseren Leistungen brillieren.
+Mit der V-Sponse Plattform für Bewerbungsvideos kann [R-Squared](https://www.r-squared.ch/) Video-Antworten von potentiellen Kandidaten ihren Auftraggebern anbieten. So können die Auftraggeber ein besseres Bild der Kandidaten erhalten und R-Squared kann mit besseren Leistungen brillieren.
 
-Für uns war das Projekt auch sehr spannend. Zum Einen konnten wir unser Wissen in der Video-Aufnahme, -Verarbeitung und -Wiedergabe in einem Web-Client vertiefen. Zum Anderen forderte dieses Projekt hohe Ansprüche an die Sicherheit im Umgang mit persönlichen Daten.
+Für uns war das Projekt auch sehr spannend. Zum einen konnten wir unser Wissen in der Video-Aufnahme, -Verarbeitung und -Wiedergabe in einem Web-Client vertiefen. Zum anderen forderte dieses Projekt hohe Ansprüche an die Sicherheit im Umgang mit persönlichen Daten.
 
 ## Cloudinary
 
@@ -27,7 +27,7 @@ Um den Anforderungen an die Sicherheit im Umgang mit persönlichen Daten gerecht
 
 1.  Die HRM-Mitarbeiter müssen sich per Zwei-Faktor-Authentisierung (2FA) anmelden.
 1.  Vidoes können nicht einfach heruntergeladen und gespeichert werden.
-1.  Alle Videos werden nach einer weile automatisch gelöscht.
+1.  Alle Videos werden nach einer Weile automatisch gelöscht.
 
 2FA verhindert nicht nur, dass sich jemand unerlaubt Zugriff mit einem schwachen oder gestohlenen Passwort ermöglicht, sondern auch das Kollegen ihr Konto weiterleiten. So erschweren wir die Verbreitung von persönlichen Daten.
 
