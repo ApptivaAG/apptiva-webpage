@@ -19,7 +19,7 @@ Heute muss jede Firma darauf vorbereitet sein, dass neue Geschäftsmodelle von b
 
 Einige Beispiele von Firmen, dessen bewährte Produkte von neuen, disruptiven, digitalen Technologien verdrängt wurden:
 
-![Nokia](http://apptiva.ch/wp-content/uploads/2015/07/nokia-logo-300x98.jpg) ![Polaroid](http://apptiva.ch/wp-content/uploads/2015/07/polaroid-logo-300x98.png) ![Kodak](http://apptiva.ch/wp-content/uploads/2015/07/kodak-logo-300x98.png)
+![Nokia](img/nokia-logo.jpg) ![Polaroid](img/polaroid-logo.png) ![Kodak](img/kodak-logo.png)
 
 Nur digital gut aufgestellte Unternehmen sind in der Lage, selber entsprechende Geschäftsmodelle zu entwickeln oder beim Auftauchen solcher schnell reagieren zu können. Die Unternehmen sind gezwungen, ihre Geschäftsmodelle zu digitalisieren: Spezifische Informatikkomponenten müssen die Benutzer in einzelnen Teilprozessen optimal unterstützen.
 

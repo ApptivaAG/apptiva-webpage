@@ -43,7 +43,11 @@ class ContactForm extends React.Component {
       /* eslint-disable-next-line no-alert */
       alert('Ups, ein zwingendes Feld ist noch nicht ausgefüllt.')
     } else {
-      const body = encode({ 'form-name': 'contact', ...this.state })
+      const body = encode({
+        'form-name': 'contact',
+        subject: 'Kontaktformular apptiva.ch',
+        ...this.state,
+      })
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
