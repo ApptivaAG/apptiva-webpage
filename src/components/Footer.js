@@ -171,6 +171,15 @@ const Footer = () => (
             <Link to="/blog/">Blog</Link>
           </li>
           <li>
+            <Link to="/jobs">Offene Stellen</Link>
+          </li>
+          <li>
+            <Link to="/unsere-kompetenzen">Unsere Kompetenzen</Link>
+          </li>
+          <li>
+            <Link to="/vorgehensweise">Unser Vorgehen</Link>
+          </li>
+          <li>
             <Link to="/zusammenarbeit">
               Warum Sie mit uns zusammenarbeiten sollten
             </Link>
@@ -190,7 +199,7 @@ const Footer = () => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              Wie Webkiste
+              Die Webkiste
             </a>
           </li>
           <li>
@@ -210,12 +219,6 @@ const Footer = () => (
             >
               Das Manifest der Lean Enterprise App
             </a>
-          </li>
-          <li>
-            <Link to="/unsere-kompetenzen">Unsere Kompetenzen</Link>
-          </li>
-          <li>
-            <Link to="/vorgehensweise">Unser Vorgehen</Link>
           </li>
           <li>
             <Link to="/impressum">Impressum</Link>

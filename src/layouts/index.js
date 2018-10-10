@@ -42,6 +42,8 @@ injectGlobal`
     color: ${theme.color.text};
   }
 
+  main { display: block; }
+
   h1 {
     font-weight: 800;
   }

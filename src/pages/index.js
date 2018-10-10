@@ -124,7 +124,7 @@ const Blockquote = styled.blockquote`
 `
 
 const IndexPage = ({ testimonials, posts, employees, images }) => (
-  <div>
+  <main>
     <SEO />
     <Hero image={images.heroImage.sizes} />
     <Navbar location="root" />
@@ -267,7 +267,7 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
         frameBorder="0"
       />
     </Section>
-  </div>
+  </main>
 )
 
 export default ({ data }) => {

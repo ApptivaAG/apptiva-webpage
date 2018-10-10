@@ -1,13 +1,23 @@
 import React from 'react'
-import { Container } from '../layouts/style'
+import styled from 'styled-components'
+import { Container as ContainerDefault } from '../layouts/style'
+
+const Container = styled(ContainerDefault)`
+  padding-top: 4em;
+  padding-bottom: 12em;
+`
 
 const NotFoundPage = () => (
-  <div>
+  <main>
     <Container>
-      <h1>NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      <h1>Da ist leider nichts...</h1>
+      <p>
+        Sie sind auf einer Seite gelandet die es nicht (mehr) gibt... Tut uns
+        leid.
+      </p>
+      <a href="/">Zur Startseite</a>
     </Container>
-  </div>
+  </main>
 )
 
 export default NotFoundPage
