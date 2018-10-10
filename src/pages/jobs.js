@@ -84,7 +84,7 @@ export default () => (
           Partyplaner.
         </li>
         <li>Du verwendest moderne Tools und Libraries.</li>
-        <li>Du hast die Chance, dich zu bei uns zu entfalten.</li>
+        <li>Du hast die Chance, dich bei uns zu entfalten.</li>
         <li>
           Du erlebst ein selbstorganisierendes Unternehmen am eigenen Leibe.
         </li>
