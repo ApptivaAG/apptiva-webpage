@@ -39,7 +39,7 @@ export default () => (
       >
         Fullstack Software-EntwicklerIn und UnternehmerIn
       </h2>
-      <small>100%, ab sofort</small>
+      <small>80% - 100%, ab sofort</small>
 
       <p>Wir sind ein junges Software-Unternehmen und suchen Verstärkung.</p>
       <p>
@@ -91,8 +91,8 @@ export default () => (
       </ul>
 
       <p>
-        Überzeug uns mit deiner Bewerbung! Willst du mehr erfahren? Dann ruf uns
-        an! Wir freuen uns, von dir zu hören.
+        Blut geleckt? Dann überzeug uns mit deiner Bewerbung! Willst du mehr
+        erfahren? Dann ruf uns an! Wir freuen uns, von dir zu hören.
       </p>
       <Layout>
         <Button href="mailto:info@apptiva.ch">Bewirb dich</Button>
