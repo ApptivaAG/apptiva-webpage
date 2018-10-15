@@ -9,7 +9,7 @@ subtitle:
   text: Behalten Sie Ihren Einsatzplan auch in Ausnahmesituationen im Griff.
 
 customers:
-  - ../../../img/sd.jpg
+  - ../../../img/sd.png
   - ../../../img/schurch-logo.png
   - ../../../img/hostettler-300x70.png
 
@@ -42,8 +42,6 @@ bulletGroups:
       - icon: globe
         title: Online
         text: Für die Einsatzplanung müssen Sie nichts installieren. Sie ist für Sie von überall per Browser bedienbar.
-
-
 ---
 
 # Kontakt
