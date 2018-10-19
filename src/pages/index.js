@@ -27,7 +27,7 @@ import energie360 from '../img/energie360-300x72.png'
 import Hero from '../components/Hero'
 import Navbar from '../components/Navbar'
 import SEO from '../components/SEO'
-import { truncate } from '../util';
+import { truncate } from '../util'
 
 const ColList = styled.ul`
   box-sizing: border-box;
@@ -175,6 +175,11 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
           <li>
             <Link to="/unterstuetzung">
               <h3>Erstklassige Unterstützung</h3>
+            </Link>
+          </li>
+          <li>
+            <Link to="/einsatzplanung">
+              <h3>Einsatzplanung für den Gebäudeunterhalt</h3>
             </Link>
           </li>
         </ul>
