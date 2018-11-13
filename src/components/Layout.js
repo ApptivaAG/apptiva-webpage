@@ -3,10 +3,10 @@ import Helmet from 'react-helmet'
 import { ThemeProvider, injectGlobal } from 'styled-components'
 import styledNormalize from 'styled-normalize'
 
-import Navbar from '../components/Navbar'
-import fontFace from './font-face'
-import Footer from '../components/Footer'
-import Lightbox from '../components/Lightbox'
+import Navbar from './Navbar'
+import fontFace from '../layouts/font-face'
+import Footer from './Footer'
+import Lightbox from './Lightbox'
 import config from '../config'
 
 export const theme = {
@@ -109,15 +109,15 @@ injectGlobal`
 
 `
 
-const TemplateWrapper = ({ children, location }) => (
+const Layout = ({ children, location }) => (
   <ThemeProvider theme={theme}>
     <Lightbox>
       <Helmet title={config.title} />
       {location.pathname !== '/' && <Navbar />}
-      {children()}
+      {children}
       <Footer />
     </Lightbox>
   </ThemeProvider>
 )
 
-export default TemplateWrapper
+export default Layout

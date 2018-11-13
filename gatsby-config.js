@@ -5,6 +5,7 @@ module.exports = {
     title: config.company,
   },
   plugins: [
+    'gatsby-plugin-netlify-cache',
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-canonical-urls`,
