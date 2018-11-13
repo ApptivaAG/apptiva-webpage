@@ -42,7 +42,7 @@ class ContactForm extends React.Component {
     if (this.state.email === '' || this.state.name === '') {
       /* eslint-disable-next-line no-alert */
       alert('Ups, ein zwingendes Feld ist noch nicht ausgefüllt.')
-    } else {
+    } else if (this.state['bot-field'] === undefined) {
       const body = encode({
         'form-name': 'contact',
         subject: 'Kontaktformular apptiva.ch',
@@ -85,11 +85,10 @@ class ContactForm extends React.Component {
         data-netlify-honeypot="bot-field"
         onSubmit={this.handleSubmit}
       >
-        <input type="hidden" name="form-name" value="contact" />
         <p hidden>
-          <label>
-            Don’t fill this out if you're human:{' '}
-            <input name="bot-field" onChange={this.handleChange} />
+          <label htmlFor="bot-field">
+            Nicht ausfüllen:{' '}
+            <input type="text" name="bot-field" onChange={this.handleChange} />
           </label>
         </p>
         <p>
