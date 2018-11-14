@@ -21,7 +21,7 @@ Die App für den Abverkauf erlaubt es dem Verkaufspersonal in der Filiale, eine 
 
 ## Webshop
 
-Durch den Webshop lernen wir schneller, was wie gut bei den Kunden ankommt. Zuerst hatten wir bloss eine Landingpage. Darauf konnten wir die Konversionsrate von unterschiedlichen Wertversprechen messen. Zusätzlich schauten wir, wie oft die Kunden auf die verfügbaren Filialen klickten oder sich für den Newsletter anmeldeten. Dies war zwar ein guter Indikator, aber der ultimative Test ist, ob ein Kunde für ein Produkt tatsächlich Geld in die Hand nimmt. Deshalb bieten wir inzwischen einige Artikel zum Verleih an.
+Durch den Webshop lernen wir schneller, was wie gut bei den Kunden ankommt. Zuerst hatten wir bloss eine Landingpage. Damit konnten wir die Attraktivität von unterschiedlichen Wertversprechen messen. Zusätzlich schauten wir, wie oft die Kunden auf die verfügbaren Filialen klickten oder sich für den Newsletter anmeldeten. Noch aussagekräftiger ist allerdings ein Test, ob ein Kunde für ein Produkt tatsächlich Geld in die Hand nimmt. Deshalb bieten wir inzwischen einige Artikel zum Verleih an.
 
 ## Ausblick
 
