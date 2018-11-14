@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
@@ -9,6 +9,7 @@ import { Container } from '../layouts/style'
 import config from '../config'
 import SEO from '../components/SEO'
 import { stripHTML } from '../util'
+import Layout from '../components/Layout'
 
 const HeadArea = styled.div`
   margin-bottom: 0.6em;
@@ -29,7 +30,7 @@ const Header = ({ title, image }) => (
     <HeaderTitle>{title}</HeaderTitle>
     <Img
       style={{ width: '100%' }}
-      sizes={{
+      fluid={{
         ...image.childImageSharp.sizes,
         base64: image.childImageSharp.sqip.dataURI,
       }}
@@ -121,18 +122,20 @@ export const BlogPostTemplate = ({
   )
 }
 
-export default ({ data, pathContext }) => {
+export default ({ data, pageContext }) => {
   const { markdownRemark: post } = data
 
   post.frontmatter.excerpt = post.excerpt
 
   return (
-    <BlogPostTemplate
-      content={post.html}
-      contentComponent={HTMLContent}
-      metaData={post.frontmatter}
-      navigation={pathContext}
-    />
+    <Layout>
+      <BlogPostTemplate
+        content={post.html}
+        contentComponent={HTMLContent}
+        metaData={post.frontmatter}
+        navigation={pageContext}
+      />
+    </Layout>
   )
 }
 
@@ -154,8 +157,8 @@ export const pageQuery = graphql`
             sqip(numberOfPrimitives: 16, blur: 6) {
               dataURI
             }
-            sizes {
-              ...GatsbyImageSharpSizes_withWebp_noBase64
+            fluid {
+              ...GatsbyImageSharpFluid_withWebp_noBase64
             }
             resize(width: 1200, height: 630, cropFocus: ENTROPY) {
               src
@@ -170,7 +173,7 @@ export const pageQuery = graphql`
 // {
 //   childImageSharp {
 //     sizes {
-//       ...GatsbyImageSharpSizes
+//       ...GatsbyImageSharpFluid
 //     }
 //   }
 // }

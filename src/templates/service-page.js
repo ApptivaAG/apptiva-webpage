@@ -1,14 +1,16 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
-import * as FontAwesome from 'react-icons/lib/fa'
+import * as FontAwesome from 'react-icons/fa'
 
 import Content, { HTMLContent } from '../components/Content'
 import { Centered, Container, Section } from '../layouts/style'
 import config from '../config'
 import SEO from '../components/SEO'
 import { stripHTML } from '../util'
+import Layout from '../components/Layout'
 
 const HeadArea = styled.div``
 
@@ -108,7 +110,7 @@ const Header = ({ title, image, subtitle }) => (
     {image && (
       <Img
         style={{ width: '80%', margin: '2rem auto' }}
-        sizes={image.childImageSharp.sizes}
+        fluid={image.childImageSharp.sizes}
       />
     )}
   </HeadArea>
@@ -144,12 +146,11 @@ export const ServicePageTemplate = ({
           <Centered>
             <Header title={title} image={image} subtitle={subtitle} />
           </Centered>
-          {!subtitle &&
-            description && (
-              <Centered>
-                <p>{description}</p>
-              </Centered>
-            )}
+          {!subtitle && description && (
+            <Centered>
+              <p>{description}</p>
+            </Centered>
+          )}
         </Container>
       </Section>
 
@@ -161,7 +162,7 @@ export const ServicePageTemplate = ({
               {customers.map(customer => (
                 <Img
                   key={customer.childImageSharp.resolutions.src}
-                  resolutions={customer.childImageSharp.resolutions}
+                  fixed={customer.childImageSharp.resolutions}
                 />
               ))}
             </Customers>
@@ -180,7 +181,7 @@ export const ServicePageTemplate = ({
                     <a href={solution.image.childImageSharp.sizes.src}>
                       <Img
                         className="lightbox"
-                        sizes={solution.image.childImageSharp.sizes}
+                        fluid={solution.image.childImageSharp.sizes}
                         alt={solution.title}
                       />
                     </a>
@@ -247,11 +248,13 @@ export default props => {
   const { markdownRemark: post } = props.data
 
   return (
-    <ServicePageTemplate
-      content={post.html}
-      contentComponent={HTMLContent}
-      metaData={post.frontmatter}
-    />
+    <Layout>
+      <ServicePageTemplate
+        content={post.html}
+        contentComponent={HTMLContent}
+        metaData={post.frontmatter}
+      />
+    </Layout>
   )
 }
 
@@ -264,8 +267,8 @@ export const pageQuery = graphql`
         title
         image {
           childImageSharp {
-            sizes {
-              ...GatsbyImageSharpSizes_withWebp
+            fluid {
+              ...GatsbyImageSharpFluid_withWebp
             }
             resize(width: 1200, height: 630, cropFocus: ENTROPY) {
               src
@@ -279,8 +282,8 @@ export const pageQuery = graphql`
         description
         customers {
           childImageSharp {
-            resolutions(width: 200, grayscale: true) {
-              ...GatsbyImageSharpResolutions_withWebp_noBase64
+            fixed(width: 200, grayscale: true) {
+              ...GatsbyImageSharpFixed_withWebp_noBase64
             }
           }
         }
@@ -289,8 +292,8 @@ export const pageQuery = graphql`
           text
           image {
             childImageSharp {
-              sizes {
-                ...GatsbyImageSharpSizes_withWebp
+              fluid {
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }

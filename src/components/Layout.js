@@ -109,11 +109,11 @@ injectGlobal`
 
 `
 
-const Layout = ({ children, location }) => (
+const Layout = ({ children, showNavbar = true }) => (
   <ThemeProvider theme={theme}>
     <Lightbox>
       <Helmet title={config.title} />
-      {location.pathname !== '/' && <Navbar />}
+      {showNavbar && <Navbar />}
       {children}
       <Footer />
     </Lightbox>

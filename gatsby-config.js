@@ -79,6 +79,20 @@ module.exports = {
     },
     'gatsby-plugin-svgr',
     {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: './src/favicon.png',
+
+        dir: 'auto',
+        lang: 'de-ch,de',
+        background: '#fff',
+        theme_color: '#fff',
+        display: 'standalone',
+        orientation: 'any',
+        version: '1.0',
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: 'UA-66015649-1',

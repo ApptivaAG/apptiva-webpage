@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { description } from '../config'
 
@@ -94,7 +94,11 @@ const Footer = () => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              Apptiva AG<br />Neuenkirchstrasse 19<br />6203 Sempach Station
+              Apptiva AG
+              <br />
+              Neuenkirchstrasse 19
+              <br />
+              6203 Sempach Station
             </a>
           </li>
           <li>

@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 
@@ -125,7 +125,7 @@ const Blockquote = styled.blockquote`
 `
 
 const IndexPage = ({ testimonials, posts, employees, images }) => (
-  <Layout>
+  <Layout showNavbar={false}>
     <main>
       <SEO />
       <Hero image={images.heroImage.sizes} />
@@ -141,7 +141,7 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
                 <h4>Mobile und Desktop</h4>
                 <ImgStyled
                   style={{ width: '100%', marginTop: '2rem' }}
-                  sizes={images.appsImage.sizes}
+                  fluid={images.appsImage.sizes}
                   alt="Apps"
                 />
               </Link>
@@ -157,11 +157,13 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
             <ListItem>
               <Link to="/produktkonfiguratoren/">
                 <h2>
-                  Produkt-<br />Konfiguratoren
+                  Produkt-
+                  <br />
+                  Konfiguratoren
                 </h2>
                 <h4>Komplexe Angebote einfach verkaufen</h4>
                 <ImgStyled
-                  sizes={images.partyplaner.sizes}
+                  fluid={images.partyplaner.sizes}
                   alt="Angebots- und Produktkonfiguratoren"
                 />
               </Link>
@@ -230,7 +232,7 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
                 <Link to={`/${post.frontmatter.path}`}>
                   <ImgStyled
                     style={{ width: '100%' }}
-                    resolutions={{
+                    fixed={{
                       ...post.frontmatter.image.childImageSharp.resolutions,
                       base64:
                         post.frontmatter.image.childImageSharp.sqip.dataURI,
@@ -258,8 +260,8 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
           <Title>Kontakt</Title>
           <Subtitle>Wir freuen uns, von Ihnen zu hören.</Subtitle>
           Möchten Sie uns kennenlernen oder haben Sie Fragen zu unseren
-          Dienstleistungen? <br />Zögern Sie nicht und nehmen Sie mit uns
-          Kontakt auf!
+          Dienstleistungen? <br />
+          Zögern Sie nicht und nehmen Sie mit uns Kontakt auf!
           <ContactForm />
         </Container>
       </Section>
@@ -331,8 +333,8 @@ export const indexPageQuery = graphql`
             path
             image {
               childImageSharp {
-                resolutions(height: 150, width: 300) {
-                  ...GatsbyImageSharpResolutions_withWebp_noBase64
+                fixed(height: 150, width: 300) {
+                  ...GatsbyImageSharpFixed_withWebp_noBase64
                 }
                 sqip(numberOfPrimitives: 8, blur: 6) {
                   dataURI
@@ -345,19 +347,23 @@ export const indexPageQuery = graphql`
         }
       }
     }
-    appsImage: imageSharp(id: { regex: "/apps.png/" }) {
-      sizes(maxWidth: 600) {
-        ...GatsbyImageSharpSizes_withWebp_noBase64
+    appsImage: imageSharp(fluid: { originalName: { regex: "/apps.png/" } }) {
+      fluid(maxWidth: 600) {
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
-    partyplaner: imageSharp(id: { regex: "/partyplaner.png/" }) {
-      sizes(maxWidth: 600) {
-        ...GatsbyImageSharpSizes_withWebp_noBase64
+    partyplaner: imageSharp(
+      fluid: { originalName: { regex: "/partyplaner.png/" } }
+    ) {
+      fluid(maxWidth: 600) {
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
-    heroImage: imageSharp(id: { regex: "/solution-collage.png/" }) {
-      sizes(maxWidth: 1800) {
-        ...GatsbyImageSharpSizes_withWebp_noBase64
+    heroImage: imageSharp(
+      fluid: { originalName: { regex: "/solution-collage.png/" } }
+    ) {
+      fluid(maxWidth: 1800) {
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
