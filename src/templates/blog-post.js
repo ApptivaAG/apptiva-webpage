@@ -31,7 +31,7 @@ const Header = ({ title, image }) => (
     <Img
       style={{ width: '100%' }}
       fluid={{
-        ...image.childImageSharp.sizes,
+        ...image.childImageSharp.fluid,
         base64: image.childImageSharp.sqip.dataURI,
       }}
     />

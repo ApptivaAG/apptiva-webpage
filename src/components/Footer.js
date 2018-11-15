@@ -16,7 +16,7 @@ const Background = styled.footer`
   font-size: 0.8rem;
 `
 
-const Grid = Container.extend`
+const Grid = styled(Container)`
   display: grid;
   grid-template-areas:
     'about'

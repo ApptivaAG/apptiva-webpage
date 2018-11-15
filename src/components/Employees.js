@@ -82,7 +82,7 @@ export default ({ employees }) => (
                 <LinkStyled to={path}>
                   <Avatar
                     fixed={{
-                      ...preview.childImageSharp.resolutions,
+                      ...preview.childImageSharp.fixed,
                       base64: preview.childImageSharp.sqip.dataURI,
                     }}
                   />

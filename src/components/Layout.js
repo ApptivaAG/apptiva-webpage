@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { ThemeProvider, injectGlobal } from 'styled-components'
+import { ThemeProvider, createGlobalStyle } from 'styled-components'
 import styledNormalize from 'styled-normalize'
 
 import Navbar from './Navbar'
@@ -31,7 +31,7 @@ if (typeof window !== 'undefined') {
 }
 
 // eslint-disable-next-line no-unused-expressions
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
   ${styledNormalize}
   ${fontFace}
 
@@ -116,6 +116,7 @@ const Layout = ({ children, showNavbar = true }) => (
       {showNavbar && <Navbar />}
       {children}
       <Footer />
+      <GlobalStyle />
     </Lightbox>
   </ThemeProvider>
 )

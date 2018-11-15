@@ -59,7 +59,7 @@ const faName = string => {
   return str
 }
 
-const icons = icon => React.createElement(FontAwesome[faName(icon)])
+const icons = icon => React.createElement(FontAwesome.FaLinkedin)
 
 const ListTitle = styled.div`
   margin-bottom: 3em;
@@ -110,17 +110,13 @@ const Header = ({ title, image, subtitle }) => (
     {image && (
       <Img
         style={{ width: '80%', margin: '2rem auto' }}
-        fluid={image.childImageSharp.sizes}
+        fluid={image.childImageSharp.fluid}
       />
     )}
   </HeadArea>
 )
 
-export const ServicePageTemplate = ({
-  content,
-  contentComponent,
-  metaData,
-}) => {
+const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
   const PostContent = contentComponent || Content
   const {
     title,
@@ -178,10 +174,10 @@ export const ServicePageTemplate = ({
                 {solutions.map(solution => (
                   <div key={solution.title}>
                     <h2>{solution.title}</h2>
-                    <a href={solution.image.childImageSharp.sizes.src}>
+                    <a href={solution.image.childImageSharp.fluid.src}>
                       <Img
                         className="lightbox"
-                        fluid={solution.image.childImageSharp.sizes}
+                        fluid={solution.image.childImageSharp.fluid}
                         alt={solution.title}
                       />
                     </a>
