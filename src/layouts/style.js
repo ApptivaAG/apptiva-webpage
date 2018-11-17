@@ -95,3 +95,17 @@ export const Button = ({ type, href, to, ...props }) => {
     <LinkStyled to={to} {...props} />
   )
 }
+
+export const Icon = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  height: 1.8em;
+  width: 1.8em;
+  font-size: 1.4em;
+  margin-right: 0.6em;
+  color: ${props => props.theme.color.bg};
+  border-radius: 50%;
+  background-color: ${props => props.theme.color.secondary};
+`

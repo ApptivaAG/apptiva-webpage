@@ -6,11 +6,12 @@ import styled from 'styled-components'
 import * as FontAwesome from 'react-icons/fa'
 
 import Content, { HTMLContent } from '../components/Content'
-import { Centered, Container, Section } from '../layouts/style'
+import { Centered, Container, Section, Icon } from '../layouts/style'
 import config from '../config'
 import SEO from '../components/SEO'
 import { stripHTML } from '../util'
 import Layout from '../components/Layout'
+import IconErrorBoundary from '../components/IconErrorBoundary'
 
 const HeadArea = styled.div``
 
@@ -59,7 +60,7 @@ const faName = string => {
   return str
 }
 
-const icons = icon => React.createElement(FontAwesome.FaLinkedin)
+const icons = icon => React.createElement(FontAwesome[faName(icon)])
 
 const ListTitle = styled.div`
   margin-bottom: 3em;
@@ -76,19 +77,6 @@ const Item = styled.li`
   display: flex;
   margin: 1rem;
   flex: 1 1 18rem;
-`
-const Icon = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 0 0 auto;
-  height: 1.8em;
-  width: 1.8em;
-  font-size: 1.4em;
-  margin-right: 0.6em;
-  color: ${props => props.theme.color.bg};
-  border-radius: 50%;
-  background-color: ${props => props.theme.color.secondary};
 `
 const ItemContent = styled.div`
   h2 {
@@ -157,8 +145,8 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
             <Customers>
               {customers.map(customer => (
                 <Img
-                  key={customer.childImageSharp.resolutions.src}
-                  fixed={customer.childImageSharp.resolutions}
+                  key={customer.childImageSharp.fixed.src}
+                  fixed={customer.childImageSharp.fixed}
                 />
               ))}
             </Customers>
@@ -201,7 +189,9 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
               <ItemList>
                 {group.bulletList.map(item => (
                   <Item key={item.title}>
-                    <Icon>{icons(item.icon)}</Icon>
+                    <IconErrorBoundary icon={item.icon}>
+                      <Icon>{icons(item.icon)}</Icon>
+                    </IconErrorBoundary>
                     <ItemContent>
                       <h2>{item.title}</h2>
                       {/* eslint-disable-next-line react/no-danger */}

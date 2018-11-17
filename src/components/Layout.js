@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
 import styledNormalize from 'styled-normalize'
+import { IconContext } from 'react-icons'
 
 import Navbar from './Navbar'
 import fontFace from '../layouts/font-face'
@@ -114,7 +115,9 @@ const Layout = ({ children, showNavbar = true }) => (
     <Lightbox>
       <Helmet title={config.title} />
       {showNavbar && <Navbar />}
-      {children}
+      <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
+        {children}
+      </IconContext.Provider>
       <Footer />
       <GlobalStyle />
     </Lightbox>
