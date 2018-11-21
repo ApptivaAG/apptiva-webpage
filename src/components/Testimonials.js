@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { Section as SectionDefault, Container } from '../layouts/style'
 
-const Section = SectionDefault.extend`
+const Section = styled(SectionDefault)`
   padding-top: 4em;
 `
 
@@ -49,7 +49,7 @@ export const Testimonial = ({ name, position, statement, avatar, company }) => (
     <Person>
       <Avatar
         fixed={{
-          ...avatar.childImageSharp.resolutions,
+          ...avatar.childImageSharp.fixed,
           base64: avatar.childImageSharp.sqip.dataURI,
         }}
       />

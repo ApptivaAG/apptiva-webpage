@@ -6,11 +6,12 @@ import styled from 'styled-components'
 import * as FontAwesome from 'react-icons/fa'
 
 import Content, { HTMLContent } from '../components/Content'
-import { Centered, Container, Section } from '../layouts/style'
+import { Centered, Container, Section, Icon } from '../layouts/style'
 import config from '../config'
 import SEO from '../components/SEO'
 import { stripHTML } from '../util'
 import Layout from '../components/Layout'
+import IconErrorBoundary from '../components/IconErrorBoundary'
 
 const HeadArea = styled.div``
 
@@ -77,19 +78,6 @@ const Item = styled.li`
   margin: 1rem;
   flex: 1 1 18rem;
 `
-const Icon = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 0 0 auto;
-  height: 1.8em;
-  width: 1.8em;
-  font-size: 1.4em;
-  margin-right: 0.6em;
-  color: ${props => props.theme.color.bg};
-  border-radius: 50%;
-  background-color: ${props => props.theme.color.secondary};
-`
 const ItemContent = styled.div`
   h2 {
     margin: 0.2em 0;
@@ -110,17 +98,13 @@ const Header = ({ title, image, subtitle }) => (
     {image && (
       <Img
         style={{ width: '80%', margin: '2rem auto' }}
-        fluid={image.childImageSharp.sizes}
+        fluid={image.childImageSharp.fluid}
       />
     )}
   </HeadArea>
 )
 
-export const ServicePageTemplate = ({
-  content,
-  contentComponent,
-  metaData,
-}) => {
+const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
   const PostContent = contentComponent || Content
   const {
     title,
@@ -161,8 +145,8 @@ export const ServicePageTemplate = ({
             <Customers>
               {customers.map(customer => (
                 <Img
-                  key={customer.childImageSharp.resolutions.src}
-                  fixed={customer.childImageSharp.resolutions}
+                  key={customer.childImageSharp.fixed.src}
+                  fixed={customer.childImageSharp.fixed}
                 />
               ))}
             </Customers>
@@ -178,10 +162,10 @@ export const ServicePageTemplate = ({
                 {solutions.map(solution => (
                   <div key={solution.title}>
                     <h2>{solution.title}</h2>
-                    <a href={solution.image.childImageSharp.sizes.src}>
+                    <a href={solution.image.childImageSharp.fluid.src}>
                       <Img
                         className="lightbox"
-                        fluid={solution.image.childImageSharp.sizes}
+                        fluid={solution.image.childImageSharp.fluid}
                         alt={solution.title}
                       />
                     </a>
@@ -205,7 +189,9 @@ export const ServicePageTemplate = ({
               <ItemList>
                 {group.bulletList.map(item => (
                   <Item key={item.title}>
-                    <Icon>{icons(item.icon)}</Icon>
+                    <IconErrorBoundary icon={item.icon}>
+                      <Icon>{icons(item.icon)}</Icon>
+                    </IconErrorBoundary>
                     <ItemContent>
                       <h2>{item.title}</h2>
                       {/* eslint-disable-next-line react/no-danger */}

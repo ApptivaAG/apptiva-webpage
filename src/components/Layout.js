@@ -1,7 +1,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { ThemeProvider, injectGlobal } from 'styled-components'
+import { ThemeProvider, createGlobalStyle } from 'styled-components'
 import styledNormalize from 'styled-normalize'
+import { IconContext } from 'react-icons'
 
 import Navbar from './Navbar'
 import fontFace from '../layouts/font-face'
@@ -31,7 +32,7 @@ if (typeof window !== 'undefined') {
 }
 
 // eslint-disable-next-line no-unused-expressions
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
   ${styledNormalize}
   ${fontFace}
 
@@ -114,8 +115,11 @@ const Layout = ({ children, showNavbar = true }) => (
     <Lightbox>
       <Helmet title={config.title} />
       {showNavbar && <Navbar />}
-      {children}
+      <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
+        {children}
+      </IconContext.Provider>
       <Footer />
+      <GlobalStyle />
     </Lightbox>
   </ThemeProvider>
 )

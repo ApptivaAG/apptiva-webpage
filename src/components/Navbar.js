@@ -12,7 +12,7 @@ const NavBar = styled.nav`
   z-index: 90;
 `
 
-const Container = DefaultContainer.extend`
+const Container = styled(DefaultContainer)`
   display: flex;
   align-items: center;
   justify-content: space-between;

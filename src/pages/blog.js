@@ -23,7 +23,7 @@ export default ({ data }) => {
                 <span> &bull; </span>
                 <small>{post.frontmatter.date}</small>
               </p>
-              <Img fixed={post.frontmatter.image.childImageSharp.resolutions} />
+              <Img fixed={post.frontmatter.image.childImageSharp.fixed} />
               <p>
                 {post.frontmatter.description
                   ? truncate(post.frontmatter.description, 400)

@@ -158,7 +158,7 @@ export const EmployeePageTemplate = ({
             <Avatar>
               <ImgRound
                 fluid={{
-                  ...avatar.childImageSharp.sizes,
+                  ...avatar.childImageSharp.fluid,
                   base64: avatar.childImageSharp.sqip.dataURI,
                 }}
               />

@@ -29,6 +29,7 @@ class Lightbox extends React.Component {
     this.handleOpen = this.handleOpen.bind(this)
     this.handleClose = this.handleClose.bind(this)
   }
+
   handleOpen(e) {
     // TODO: improvement for keyboard users that keypress on link
     if (
@@ -50,9 +51,11 @@ class Lightbox extends React.Component {
       }
     }
   }
+
   handleClose() {
     this.setState({ open: false })
   }
+
   render() {
     return (
       <div onClick={this.handleOpen} role="presentation">

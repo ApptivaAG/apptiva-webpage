@@ -3,17 +3,16 @@ templateKey: 'service-page'
 path: /vorgehensweise
 title: Vorgehen
 author: philip-schoenholzer
-description: Wir gehen agil, iterativ und zielorientiert vor. Um  optimale Ergebnis zu liefern, studieren wir die Domäne, die Herausforderungen und Potentiale der Kunden und die Bedrüfnisse der Anwender. So entwickeln wir passgenaue Lösungen. 
-subtitle: 
+description: Wir gehen agil, iterativ und zielorientiert vor. Um  optimale Ergebnis zu liefern, studieren wir die Domäne, die Herausforderungen und Potentiale der Kunden und die Bedrüfnisse der Anwender. So entwickeln wir passgenaue Lösungen.
+subtitle:
   text: Unser agiles Vorgehen ist Teil unseres Erfolgsrezepts. Profitieren Sie davon!
 
 bulletGroups:
   - title: Initialisierung
-    description: 
-      Bevor wir mit der Umsetzung einer neuen App beginnen, setzen wir uns mit den folgenden drei Punkten auseinander
+    description: Bevor wir mit der Umsetzung einer neuen App beginnen, setzen wir uns mit den folgenden drei Punkten auseinander
 
     bulletList:
-      - icon: clock-o
+      - icon: reg-clock
         title: Domäne
         text: Uns ist es wichtig zu verstehen, in welchem Umfeld die App zum Einsatz kommt. Nur mit genügend Verständnis für Ihr Business können wir Ihnen die für Ihr Geschäft passende Lösung liefern.
       - icon: expand

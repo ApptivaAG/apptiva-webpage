@@ -19,12 +19,12 @@ import ContactForm from '../components/ContactForm'
 
 import { ReactComponent as Eris } from '../img/eris-logo.svg'
 
-import suva from '../img/suva-300.png'
-import sanagate from '../img/sanagate-300x65.png'
-import maxon from '../img/maxonmotor-300x45.png'
-import insel from '../img/insel-gruppe-logo-300x70.png'
-import hostettler from '../img/hostettler-300x70.png'
-import energie360 from '../img/energie360-300x72.png'
+// import suva from '../img/suva-300.png'
+// import sanagate from '../img/sanagate-300x65.png'
+// import maxon from '../img/maxonmotor-300x45.png'
+// import insel from '../img/insel-gruppe-logo-300x70.png'
+// import hostettler from '../img/hostettler-300x70.png'
+// import energie360 from '../img/energie360-300x72.png'
 import Hero from '../components/Hero'
 import Navbar from '../components/Navbar'
 import SEO from '../components/SEO'
@@ -128,7 +128,7 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
   <Layout showNavbar={false}>
     <main>
       <SEO />
-      <Hero image={images.heroImage.sizes} />
+      <Hero image={images.heroImage.fluid} />
       <Navbar location="root" />
       <Section id="dienstleistungen">
         <Container>
@@ -141,7 +141,7 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
                 <h4>Mobile und Desktop</h4>
                 <ImgStyled
                   style={{ width: '100%', marginTop: '2rem' }}
-                  fluid={images.appsImage.sizes}
+                  fluid={images.appsImage.fluid}
                   alt="Apps"
                 />
               </Link>
@@ -163,7 +163,7 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
                 </h2>
                 <h4>Komplexe Angebote einfach verkaufen</h4>
                 <ImgStyled
-                  fluid={images.partyplaner.sizes}
+                  fluid={images.partyplaner.fluid}
                   alt="Angebots- und Produktkonfiguratoren"
                 />
               </Link>
@@ -204,7 +204,7 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
         </Container>
       </Section>
 
-      <Section dark>
+      {/* <Section dark>
         <Container>
           <ImageList>
             <img src={sanagate} alt="sanagate" />
@@ -215,7 +215,7 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
             <img src={maxon} alt="maxon motor" />
           </ImageList>
         </Container>
-      </Section>
+      </Section> */}
 
       <Testimonials testimonials={testimonials} />
 
@@ -233,7 +233,7 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
                   <ImgStyled
                     style={{ width: '100%' }}
                     fixed={{
-                      ...post.frontmatter.image.childImageSharp.resolutions,
+                      ...post.frontmatter.image.childImageSharp.fixed,
                       base64:
                         post.frontmatter.image.childImageSharp.sqip.dataURI,
                     }}

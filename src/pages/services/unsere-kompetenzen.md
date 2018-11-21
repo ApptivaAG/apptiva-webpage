@@ -3,13 +3,11 @@ templateKey: 'service-page'
 path: /unsere-kompetenzen
 title: Unsere Kompetenzen
 author: philip-schoenholzer
-description: 
-  In den vielen Jahren in denen wir in der Informatik tätig sind, konnten wir echte Erfahrungen aus unterschiedlichen Bereichen sammeln. Die heute für uns wichtigsten haben wir hier aufgelistet.
+description: In den vielen Jahren in denen wir in der Informatik tätig sind, konnten wir echte Erfahrungen aus unterschiedlichen Bereichen sammeln. Die heute für uns wichtigsten haben wir hier aufgelistet.
 
 bulletGroups:
   - title: Methodiken
-    description: 
-      Unsere Methoden um möglichst effektiv Lösung zur Verfügung zu stellen.
+    description: Unsere Methoden um möglichst effektiv Lösung zur Verfügung zu stellen.
 
     bulletList:
       - icon: history
@@ -18,10 +16,10 @@ bulletGroups:
       - icon: inbox
         title: Kanban
         text: Das Ziel von Kanban ist, schnellere Durchlaufzeiten zu erreichen und Probleme schneller sichtbar zu machen. Dies wird unter Anderem durch Begrenzung von parallelen Arbeiten erreicht. Die ganze Wertschöpfungskette mit ihren verschiedenen Prozessschritten wird in einem sogenannten Kanban-Board für alle Beteiligten visualisiert.
-      - icon: circle-o-notch
+      - icon: circle-notch
         title: Lean
         text: Lean-Methodiken stammen ursprünglich aus der Japanischen Autoindustrie. Sie eignen sich hervorragend um neue Ideen zu testen und herauszufinden ob man damit ein profitables Business aufbauen kann. Die Methodiken umfassen MVP (Minimum Viable Product), Customer Development, Lean Canvas und mehr.
-      - icon: hand-pointer-o
+      - icon: hand-pointer
         title: Clean Code
         text: Clean Code macht den Unterschied zwischen Amateur-Software und professioneller Software. Wir arbeiten mit den Clean Code-Prinzipien um robuste und wartbare Software zu schreiben.
       - icon: bug
@@ -38,8 +36,7 @@ bulletGroups:
         text: Beim Story Mapping erstellen alle an einem Projekt Beteiligten zusammen eine Landkarte ihres Vorhabens. Dabei entsteht ein gemeinsames Verständnis, was für die Umsetzung enorm wertvoll ist. Die Story Map visualisiert den Umfang und die Grösse eines Vorhabens. Zusätzlich lassen sich damit einzelne Releases definieren um beim Umsetzen den Fokus nicht zu verlieren.
 
   - title: UX-Design
-    description: 
-      Bei all unseren Lösungen stehen die Anwender im Fokus. Entsprechend ist bei uns Usability nicht bloss ein Lippenbekenntnis sondern Teil jeder Entwicklung.
+    description: Bei all unseren Lösungen stehen die Anwender im Fokus. Entsprechend ist bei uns Usability nicht bloss ein Lippenbekenntnis sondern Teil jeder Entwicklung.
 
     bulletList:
       - icon: comments
@@ -51,7 +48,7 @@ bulletGroups:
       - icon: film
         title: Kontext Szenarios
         text: Kontext Szenarios beschreiben zukünftige Lösungen als Geschichte der Personas. Kontext Szenarios unterstützen die Kreativität und machen die zukünftige Lösung fassbarer.
-      - icon: pencil
+      - icon: pencil-alt
         title: Sketching
         text: Sketches sind mit Stift auf Papier gezeichnete User Interfaces der zukünftigen Lösung. Diese fördern die Kreativität und eignen sich um sehr schnell viele mögliche Varianten einer Lösung zu entwickeln.
       - icon: list-alt
@@ -71,11 +68,10 @@ bulletGroups:
         text: Bei Usability Tests werden den Anwendern Aufgaben gestellt, welche in der Lösung oder einem Prototypen selbständig gelöst werden müssen. Dies gibt Aufschluss über die Verständlichkeit und Einfachheit einer Lösung.
 
   - title: Architektur
-    description: 
-      Die Architektur spielt eine entscheidende Rolle, um die technischen Bedürfnisse zu erfüllt, wie z.B. Sicherheit, Zuverlässigkeit, Verfügbarkeit usw.
+    description: Die Architektur spielt eine entscheidende Rolle, um die technischen Bedürfnisse zu erfüllt, wie z.B. Sicherheit, Zuverlässigkeit, Verfügbarkeit usw.
 
     bulletList:
-      - icon: sort-amount-desc
+      - icon: sort-amount-down
         title: Anforderungen
         text: Üblicherweise werden Anforderungen an ein System in Form von Anwendungsfällen oder User Stories beschrieben. Diese definieren was das System fachlich können soll. Darüber hinaus gibt es jedoch auch Anforderungen, die über reine Funktionalität hinausgehen. Sie beschreiben wie sich das System verhalten soll und haben grossen Einfluss auf die Entstehung der Architektur. Qulitätsziele und -szenarien sind hervorragende Werkzeuge um die Architektur laufend zu überprüfen.
       - icon: user
@@ -89,8 +85,7 @@ bulletGroups:
         text: Dokumentation wird in vielen Softwareprojekten stark vernachlässigt. Später wundert man sich, warum gewisse Teile der Architektur so entstanden sind. „Historisch gewachsen“ sind Antworten die hellhörig machen sollten. Dies muss nicht sein, denn architekturrelevante Einflussfaktoren von Softwarelösungen lassen sich angemessen und ohne Ballast festhalten und kommunizieren.
 
   - title: Technologien
-    description: 
-      Mit der passenden Technologie gelingen besser Lösungen.
+    description: Mit der passenden Technologie gelingen besser Lösungen.
 
     bulletList:
       - icon: coffee
@@ -99,7 +94,7 @@ bulletGroups:
       - icon: globe
         title: HTML, CSS, JavaScript
         text: Die grundlegenden Kerntechnologien des Webs sind HTML (legt fest, was auf der Seite stehen soll), CSS (legt fest, wie es dargestellt werden soll) und JavaScript (legt fest, was passieren soll). Je nach Anforderungen erstellen wir Single-Page-Webanwendungen mit ReactJS oder klassische Webanwendungen die aus mehreren, untereinander verlinkten HTML-Dokumenten bestehen. Dabei halten wir uns an den ROCA Ansatz welcher eine Reihe von Prinzipien formuliert, die in der Praxis viele Vorteile mit sich bringen.
-      - icon: mobile
+      - icon: mobile-alt
         title: React Native
         text: Smartphones und Tablets sind im Geschäftsalltag allgegenwärtig. Gerade für dieses Umfeld sind Frameworks wie React Native und Ionic ideal. Damit lassen sich effizient benutzerfreundliche Apps schreiben, die auf iOS, Android und anderen mobile Plattformen laufen.
       - icon: cloud

@@ -5,7 +5,7 @@ title: Angebots- & <br/>Produkt-Konfiguratoren
 image: img/partyplaner.png
 author: philip-schoenholzer
 description: Mit einem individuelle eCommerce Produkt- & Angebotskonfigurator verkaufen Sie komplexe Angebote einfach auf Ihrer Webseite oder in Ihrem Webshop.
-subtitle: 
+subtitle:
   text: Komplexe Angebote einfach auf Ihrer Webseite verkaufen
 
 customers:
@@ -16,36 +16,35 @@ customers:
 solutions:
   - title: Formular
     image: img/partyplaner-2.png
-    text: Ein Produktkonfigurator, welcher über ein Formular gesteuert wird, ist der Klassiker unter den Produktkonfiguratoren. Dieser eignet sich besonders für mobile Geräte, sowie eine Bedienung über die Tastatur.  
+    text: Ein Produktkonfigurator, welcher über ein Formular gesteuert wird, ist der Klassiker unter den Produktkonfiguratoren. Dieser eignet sich besonders für mobile Geräte, sowie eine Bedienung über die Tastatur.
   - title: Grafisch
     image: img/anhaenger-zubehoer.png
-    text: Ein grafischer Produktkonfigurator erlaubt eine äusserst intuitive und attraktive Lösung. Diese eignen sich besonders um visuelle Eigenheiten der Produkte zu vermitteln. 
+    text: Ein grafischer Produktkonfigurator erlaubt eine äusserst intuitive und attraktive Lösung. Diese eignen sich besonders um visuelle Eigenheiten der Produkte zu vermitteln.
   - title: Chatbot
     image: img/chatbot.png
     text: Immer öfter kommen auch Chatbots oder Konversations-Dialoge bei der Produktkonfiguration zum Einsatz. Dies ist eine modern und von Anwendern gern genutzte Möglichkeit ein Produkt zu konfigurieren.
 
 bulletGroups:
   - title: Vorteile eines Produkt-Konfigurators von Apptiva
-    description: 
-      Mit einem individuelle E-Commerce Produkt- & Angebotskonfigurator verkaufen Sie komplexe Angebote einfach auf Ihrer Webseite oder in Ihrem Webshop.
+    description: Mit einem individuelle E-Commerce Produkt- & Angebotskonfigurator verkaufen Sie komplexe Angebote einfach auf Ihrer Webseite oder in Ihrem Webshop.
 
     bulletList:
       - icon: star
         title: Attraktiv
-        text: Wir präsentieren Ihr Angebot in einem besonders guten Licht. Mit einer attraktiven Präsentation wird ein Produkt hochwertiger eingestuft. 
+        text: Wir präsentieren Ihr Angebot in einem besonders guten Licht. Mit einer attraktiven Präsentation wird ein Produkt hochwertiger eingestuft.
       - icon: user
         title: Massgeschneidert
         text: Unsere individuellen Produktkonfiguratoren passen sich Ihrem Angebot an und nicht umgekehrt.
       - icon: heart
         title: Benutzerfreundlich
         text: Dank unserem Vorgehen entstehen Produktkonfiguratoren, welche ein einfaches und benutzerfreundliches Einkaufserlebnisses bieten.
-      - icon: line-chart
+      - icon: chart-line
         title: Conversion Optimierung
         text: Wir wissen wie Besucher zu zahlenden Kunden werden. Unsere Produktkonfiguratoren lassen ein niederschwelliges Einkaufen zu.
       - icon: rocket
         title: Alleinstellungsmerkmal
         text: Mit unseren Produktkonfiguratoren stechen Sie aus dem E-Commerce-Jungle heraus. Seien Sie der Konkurrenz eine Nasenspitze voraus.
-      - icon: lightbulb-o
+      - icon: reg-lightbulb
         title: Komplexität reduzieren
         text: Wir machen das Leben Ihrer Kunden ein bisschen einfacher und erhöhen gleichzeitig Ihren Umsatz.
 
