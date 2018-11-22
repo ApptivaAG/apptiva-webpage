@@ -94,7 +94,11 @@ const Footer = () => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              Apptiva AG<br />Neuenkirchstrasse 19<br />6203 Sempach Station
+              Apptiva AG
+              <br />
+              Neuenkirchstrasse 19
+              <br />
+              6203 Sempach Station
             </a>
           </li>
           <li>
@@ -218,6 +222,15 @@ const Footer = () => (
               rel="noopener noreferrer"
             >
               Das Manifest der Lean Enterprise App
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://bubblecms.io"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Bubble CMS - Manage Chatbot Content
             </a>
           </li>
           <li>
