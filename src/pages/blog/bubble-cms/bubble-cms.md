@@ -1,8 +1,8 @@
 ---
-title: Chatbot CMS
-path: chatbot-cms
+title: Bubble CMS - Managing Chatbot Content
+path: bubblecms
 templateKey: blog-post
-image: chatbot-cms.png
+image: bubble-cms.png
 date: 2018-11-20
 author: Markus Tanner
 description: >-
@@ -17,21 +17,23 @@ Man könnte meinen, dass diese Fragen schon längst in der Form eines Tools bean
 
 ## Was nun?
 
-Botfabrik to the rescue! Bei den Chatbot-Projekten der vergangenen Jahre haben wir sehr viel über die Bedürfnisse von Kunden gelernt. Wir kennen die fehlenden Puzzleteile für ein erfolgreiches Chatbot-Projekt. Daher fabrizieren wir in der Botfabrik ein Chatbot CMS, welches die Antworten auf die obigen Fragen aus einem Guss liefert.
+Botfabrik to the rescue! Bei den Chatbot-Projekten der vergangenen Jahre haben wir sehr viel über die Bedürfnisse von Kunden gelernt. Wir kennen die fehlenden Puzzleteile für ein erfolgreiches Chatbot-Projekt. Daher fabrizieren wir in der Botfabrik Bubble CMS, welches die Antworten auf die obigen Fragen aus einem Guss liefert.
 
 Wir adressieren mitunter folgende Bedürfnisse:
 
-* Im Chatbot CMS können Fachpersonen den Chatbot mit Äusserungen und den entsprechenden Antworten trainieren. Dazu ist kein technisches Knowhow notwendig.
+* Im Bubble CMS können Fachpersonen den Chatbot mit Äusserungen und den entsprechenden Antworten trainieren. Dazu ist kein technisches Knowhow notwendig.
 * Das Training von verschiedenen Fachbereichen passiert unabhängig voneinander.
 * Es gibt eine Übersicht für Äusserungen, die der Chatbot nicht verstanden hat. Diese können direkt fürs Training des Chatbots verwendet werden.
-* Im Chatbot CMS kann ein Set an Testfragen erfasst werden, damit die richtige Funktionsweise des Chatbots jederzeit sichergestellt werden kann.
+* Im Bubble CMS kann ein Set an Testfragen erfasst werden, damit die richtige Funktionsweise des Chatbots jederzeit sichergestellt werden kann.
 * Es kann nachvollzogen werden, wer was zu welchem Zeitpunkt geändert hat.
 
 ## Interessiert?
 
-Sie haben sich über die genannten Fragen auch schon den Kopf zerbrochen und sind an der neusten Errungenschaft aus der Botfabrik interessiert? Oder sie möchten mit uns zusammenarbeiten?
+Sie haben sich über die genannten Fragen auch schon den Kopf zerbrochen und sind an der neusten Errungenschaft aus der Botfabrik interessiert? Oder Sie möchten mit uns zusammenarbeiten?
 
-Rufen sie uns an
+Dann schauen Sie bei Bubble CMS vorbei: [www.bubblecms.io](https://bubblecms.io/)
+
+Rufen Sie uns an
 
 [041 322 26 26](tel:+41413222626)
 
