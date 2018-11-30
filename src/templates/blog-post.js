@@ -28,13 +28,7 @@ const HeaderTitle = styled.h1`
 const Header = ({ title, image }) => (
   <HeadArea>
     <HeaderTitle>{title}</HeaderTitle>
-    <Img
-      style={{ width: '100%' }}
-      fluid={{
-        ...image.childImageSharp.fluid,
-        base64: image.childImageSharp.sqip.dataURI,
-      }}
-    />
+    <Img style={{ width: '100%' }} fluid={image.childImageSharp.fluid} />
   </HeadArea>
 )
 
@@ -154,11 +148,8 @@ export const pageQuery = graphql`
         path
         image {
           childImageSharp {
-            sqip(numberOfPrimitives: 16, blur: 6) {
-              dataURI
-            }
             fluid {
-              ...GatsbyImageSharpFluid_withWebp_noBase64
+              ...GatsbyImageSharpFluid_withWebp
             }
             resize(width: 1200, height: 630, cropFocus: ENTROPY) {
               src
