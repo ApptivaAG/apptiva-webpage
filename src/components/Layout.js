@@ -60,15 +60,11 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     color: ${theme.color.primary};
     
-    .gatsby-image-outer-wrapper {
-      transform:translateZ(0);
+    .gatsby-image-wrapper {
+      transition: transform 0.3s;
 
-      .gatsby-image-wrapper {
-        transition: transform 0.3s;
-
-        &:hover {
-          transform: scale(1.06);
-        }
+      &:hover {
+        transform: scale(1.06);
       }
     }
   }
