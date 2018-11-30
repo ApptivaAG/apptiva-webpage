@@ -8,6 +8,7 @@ exports.createPages = ({ actions, graphql }) => {
     query {
       allMarkdownRemark(
         limit: 1000
+        sort: { order: DESC, fields: [frontmatter___date] }
         filter: { frontmatter: { templateKey: { regex: "/post/" } } }
       ) {
         edges {
@@ -34,8 +35,8 @@ exports.createPages = ({ actions, graphql }) => {
     const edges = result.data.allMarkdownRemark.edges
 
     edges.forEach(({ node }, index) => {
-      const prev = index === 0 ? false : edges[index - 1].node
-      const next = index === edges.length - 1 ? false : edges[index + 1].node
+      const prev = index === 0 ? null : edges[index - 1].node
+      const next = index === edges.length - 1 ? null : edges[index + 1].node
       const id = node.id
       createPage({
         path: node.frontmatter.path,
