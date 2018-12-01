@@ -19,12 +19,12 @@ import ContactForm from '../components/ContactForm'
 
 import { ReactComponent as Eris } from '../img/eris-logo.svg'
 
-// import suva from '../img/suva-300.png'
-// import sanagate from '../img/sanagate-300x65.png'
-// import maxon from '../img/maxonmotor-300x45.png'
-// import insel from '../img/insel-gruppe-logo-300x70.png'
-// import hostettler from '../img/hostettler-300x70.png'
-// import energie360 from '../img/energie360-300x72.png'
+import suva from '../img/suva-300.png'
+import sanagate from '../img/sanagate-300x65.png'
+import maxon from '../img/maxonmotor-300x45.png'
+import insel from '../img/insel-gruppe-logo-300x70.png'
+import hostettler from '../img/hostettler-300x70.png'
+import energie360 from '../img/energie360-300x72.png'
 import Hero from '../components/Hero'
 import Navbar from '../components/Navbar'
 import SEO from '../components/SEO'
@@ -204,7 +204,7 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
         </Container>
       </Section>
 
-      {/* <Section dark>
+      <Section dark>
         <Container>
           <ImageList>
             <img src={sanagate} alt="sanagate" />
@@ -215,7 +215,7 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
             <img src={maxon} alt="maxon motor" />
           </ImageList>
         </Container>
-      </Section> */}
+      </Section>
 
       <Testimonials testimonials={testimonials} />
 
