@@ -38,9 +38,11 @@ const Navigation = styled.div`
     transition: all 200ms ease 200ms;
   }
 `
-const MenuButton = styled.a`
+const MenuButton = styled.button`
   padding: 0.5em;
   margin-right: -0.5em;
+  border: none;
+  background-color: transparent;
   color: white;
   font-weight: 600;
   cursor: pointer;
