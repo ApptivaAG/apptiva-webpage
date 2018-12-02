@@ -225,6 +225,15 @@ const Footer = () => (
             </a>
           </li>
           <li>
+            <a
+              href="https://bubblecms.io"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Bubble CMS - Manage Chatbot Content
+            </a>
+          </li>
+          <li>
             <Link to="/impressum">Impressum</Link>
           </li>
         </ul>
