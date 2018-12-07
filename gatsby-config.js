@@ -87,7 +87,17 @@ module.exports = {
         exclude: ['/preview/**', '/do-not-track/me/too/'],
       },
     },
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        allPageHeaders: [
+          'Link: </font/Gentona-ExtraBold.woff2>; rel=preload; as=font',
+          'Link: </font/Gentona-Bold.woff2>; rel=preload; as=font',
+          'Link: </font/Gentona-Medium.woff2>; rel=preload; as=font',
+          'Link: </font/Gentona-ExtraLight.woff2>; rel=preload; as=font',
+        ],
+      },
+    },
     'gatsby-plugin-netlify-cache',
-    `gatsby-plugin-netlify`,
   ],
 }
