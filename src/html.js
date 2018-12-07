@@ -17,6 +17,11 @@ export default ({
         content="width=device-width, initial-scale=1, shrink-to-fit=no"
       />
 
+      <link rel="preload" href="/font/Gentona-ExtraBold.woff2" as="font" />
+      <link rel="preload" href="/font/Gentona-Bold.woff2" as="font" />
+      <link rel="preload" href="/font/Gentona-Medium.woff2" as="font" />
+      <link rel="preload" href="/font/Gentona-ExtraLight.woff2" as="font" />
+
       <link
         rel="apple-touch-icon"
         sizes="180x180"
