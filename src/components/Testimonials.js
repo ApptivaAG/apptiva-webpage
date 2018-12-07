@@ -96,7 +96,7 @@ export const testimonialFragment = graphql`
       avatar {
         childImageSharp {
           fixed(width: 50, height: 50) {
-            ...GatsbyImageSharpFixed_withWebp
+            ...GatsbyImageSharpFixed_withWebp_noBase64
           }
           sqip(numberOfPrimitives: 2, blur: 16) {
             dataURI

@@ -127,7 +127,7 @@ export const employeeFragment = graphql`
       preview {
         childImageSharp {
           fixed(width: 200, height: 200) {
-            ...GatsbyImageSharpFixed_withWebp
+            ...GatsbyImageSharpFixed_withWebp_noBase64
           }
           sqip(numberOfPrimitives: 8, blur: 16) {
             dataURI
