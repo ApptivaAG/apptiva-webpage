@@ -3,7 +3,7 @@ title: Progressive Web Apps
 path: pwa-apps
 templateKey: blog-post
 image: pwa-app-transparent.png
-date: 2018-12-21
+date: 2019-01-07
 author: Roman Schaller
 description: >-
   Progressive Web Apps (PWAs) sind leichtgewichtige Web-Anwendungen, die sie auch auf Ihrem iPhone oder Android-Gerät installieren können.
@@ -39,11 +39,12 @@ Der fehlende App Store-Eintrag scheint im ersten Augenblick ein grosser Nachteil
 teuer werden, wenn Dinge beanstandet werden. Updates einer PWA können innert Sekunden durchgeführt werden. Sie müssen kein Review abwarten und sich nicht an die Regeln der
 Store-Betreiber halten.
 
-## Wie verteile ich dann die Anwendung?
+## Wie verteile ich die Anwendung?
 
 Wir durften für [Welti-Furrer](https://www.welti-furrer.ch/) ihre Kran-Doku als [PWA-App](https://kranapp.welti-furrer.ch/) umsetzen. Sie machen ihre Benutzer mit einem QR-Code auf die App aufmerksam:
 ![QR-Codes](qr-code.png)
+Daneben gibt es noch viele weitere Möglichkeiten. Benutzen Sie die sozialen Netzwerke wie Linked-In oder Facebook. Informieren Sie Ihre bestehenden Kunden über den E-Mail-Footer.
+Nutzen Sie am besten Ihre bestehenden Kanäle.
 
-
-## Und wenn die App nun doch in den Store soll?
-Auch das ist möglich. Je nach Funktionalität und Umfang der PWA ist aber mit zusätzlichem Aufwand zu rechnen.
+## Fazit
+Für viele mobile Anwendungen ist eine Progressive Web App genau der richtige Weg. Sie spart Zeit und verkürzt die Time-To-Market.
