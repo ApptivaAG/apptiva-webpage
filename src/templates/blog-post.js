@@ -148,8 +148,8 @@ export const pageQuery = graphql`
         path
         image {
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid_withWebp
+            fluid(srcSetBreakpoints: [340, 800, 1600]) {
+              ...GatsbyImageSharpFluid
             }
             resize(width: 1200, height: 630, cropFocus: ENTROPY) {
               src

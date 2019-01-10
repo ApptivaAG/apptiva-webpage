@@ -51,7 +51,7 @@ module.exports = {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 1024,
+              maxWidth: 960,
             },
           },
           {
@@ -87,6 +87,7 @@ module.exports = {
         exclude: ['/preview/**', '/do-not-track/me/too/'],
       },
     },
+    'gatsby-plugin-netlify-cache',
     {
       resolve: `gatsby-plugin-netlify`,
       options: {
@@ -98,6 +99,5 @@ module.exports = {
         ],
       },
     },
-    'gatsby-plugin-netlify-cache',
   ],
 }

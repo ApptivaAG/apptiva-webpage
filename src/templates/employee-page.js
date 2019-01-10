@@ -245,8 +245,8 @@ export const employeePageQuery = graphql`
         claim
         avatar {
           childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid_withWebp_noBase64
+            fluid(srcSetBreakpoints: [340, 600]) {
+              ...GatsbyImageSharpFluid_noBase64
             }
             resize(width: 1200, height: 630, cropFocus: NORTH) {
               src

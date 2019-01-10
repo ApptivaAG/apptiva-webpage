@@ -53,9 +53,6 @@ export const blogListPage = graphql`
         node {
           excerpt(pruneLength: 400)
           id
-          fields {
-            slug
-          }
           frontmatter {
             title
             path
@@ -65,7 +62,7 @@ export const blogListPage = graphql`
             image {
               childImageSharp {
                 fixed(height: 150, width: 300) {
-                  ...GatsbyImageSharpFixed_withWebp
+                  ...GatsbyImageSharpFixed
                 }
               }
             }

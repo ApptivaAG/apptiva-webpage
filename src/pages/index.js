@@ -325,9 +325,6 @@ export const indexPageQuery = graphql`
         node {
           excerpt(pruneLength: 140)
           id
-          fields {
-            slug
-          }
           frontmatter {
             title
             path

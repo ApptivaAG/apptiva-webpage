@@ -14,13 +14,9 @@ exports.createPages = ({ actions, graphql }) => {
         edges {
           node {
             id
-            fields {
-              slug
-            }
             frontmatter {
               path
               templateKey
-              title
             }
           }
         }
@@ -37,7 +33,7 @@ exports.createPages = ({ actions, graphql }) => {
     edges.forEach(({ node }, index) => {
       const prev = index === 0 ? null : edges[index - 1].node
       const next = index === edges.length - 1 ? null : edges[index + 1].node
-      const id = node.id
+      const {id} = node
       createPage({
         path: node.frontmatter.path,
         component: path.resolve(
@@ -62,13 +58,9 @@ exports.createPages = ({ actions, graphql }) => {
         edges {
           node {
             id
-            fields {
-              slug
-            }
             frontmatter {
               path
               templateKey
-              title
             }
           }
         }
@@ -83,7 +75,7 @@ exports.createPages = ({ actions, graphql }) => {
     const edges = result.data.allMarkdownRemark.edges
 
     edges.forEach(({ node }) => {
-      const id = node.id
+      const { id } = node
       createPage({
         path: node.frontmatter.path,
         component: path.resolve(
@@ -98,17 +90,4 @@ exports.createPages = ({ actions, graphql }) => {
   })
 
   return Promise.all([posts, pages])
-}
-
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
-
-  if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
-    createNodeField({
-      name: `slug`,
-      node,
-      value,
-    })
-  }
 }

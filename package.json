@@ -59,6 +59,7 @@
     "develop": "gatsby develop",
     "develop-ip": "gatsby develop -H 192.168.1.188",
     "serve": "gatsby serve",
+    "clean": "rm -rf .cache/ public",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "lint": "eslint ./src",
     "test": "echo \"Error: no test specified\" && exit 1"

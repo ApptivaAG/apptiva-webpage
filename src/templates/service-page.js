@@ -253,8 +253,8 @@ export const pageQuery = graphql`
         title
         image {
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid_withWebp
+            fluid(srcSetBreakpoints: [340, 800, 1600]) {
+              ...GatsbyImageSharpFluid
             }
             resize(width: 1200, height: 630, cropFocus: ENTROPY) {
               src
@@ -269,7 +269,7 @@ export const pageQuery = graphql`
         customers {
           childImageSharp {
             fixed(width: 200, grayscale: true) {
-              ...GatsbyImageSharpFixed_withWebp_noBase64
+              ...GatsbyImageSharpFixed_noBase64
             }
           }
         }
@@ -278,8 +278,8 @@ export const pageQuery = graphql`
           text
           image {
             childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid_withWebp
+              fluid(srcSetBreakpoints: [340, 800, 1600]) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
