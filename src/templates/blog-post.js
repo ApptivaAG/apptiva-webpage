@@ -48,7 +48,12 @@ const Published = ({ author, date }) => {
   `
   return (
     <Wrapper>
-      Publiziert von <Author>{author.replace('-', ' ')}</Author> am{' '}
+      Publiziert von 
+      {' '}
+      <Author>{author.replace('-', ' ')}</Author>
+      {' '}
+      am
+      {' '}
       <Date>{date}</Date>
     </Wrapper>
   )
