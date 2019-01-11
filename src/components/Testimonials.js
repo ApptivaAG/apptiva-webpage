@@ -1,9 +1,10 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { Section as SectionDefault, Container } from '../layouts/style'
 
-const Section = SectionDefault.extend`
+const Section = styled(SectionDefault)`
   padding-top: 4em;
 `
 
@@ -47,8 +48,8 @@ export const Testimonial = ({ name, position, statement, avatar, company }) => (
   <TestimonialStyle>
     <Person>
       <Avatar
-        resolutions={{
-          ...avatar.childImageSharp.resolutions,
+        fixed={{
+          ...avatar.childImageSharp.fixed,
           base64: avatar.childImageSharp.sqip.dataURI,
         }}
       />
@@ -94,8 +95,8 @@ export const testimonialFragment = graphql`
       company
       avatar {
         childImageSharp {
-          resolutions(width: 50, height: 50) {
-            ...GatsbyImageSharpResolutions_withWebp
+          fixed(width: 50, height: 50) {
+            ...GatsbyImageSharpFixed_withWebp_noBase64
           }
           sqip(numberOfPrimitives: 2, blur: 16) {
             dataURI

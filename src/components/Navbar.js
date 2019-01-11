@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import styled, { css } from 'styled-components'
 
 import { Container as DefaultContainer } from '../layouts/style'
@@ -12,7 +12,7 @@ const NavBar = styled.nav`
   z-index: 90;
 `
 
-const Container = DefaultContainer.extend`
+const Container = styled(DefaultContainer)`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -38,9 +38,11 @@ const Navigation = styled.div`
     transition: all 200ms ease 200ms;
   }
 `
-const MenuButton = styled.a`
+const MenuButton = styled.button`
   padding: 0.5em;
   margin-right: -0.5em;
+  border: none;
+  background-color: transparent;
   color: white;
   font-weight: 600;
   cursor: pointer;

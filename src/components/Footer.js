@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { description } from '../config'
 
@@ -16,7 +16,7 @@ const Background = styled.footer`
   font-size: 0.8rem;
 `
 
-const Grid = Container.extend`
+const Grid = styled(Container)`
   display: grid;
   grid-template-areas:
     'about'

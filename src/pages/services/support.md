@@ -8,7 +8,7 @@ description: ''
 ---
 
 <style>
-.gatsby-image-outer-wrapper {
+.gatsby-image-wrapper {
   max-width: 20rem;
   margin-left: auto;
   margin-right: auto;
@@ -26,12 +26,12 @@ description: ''
 
 # Aktuelle Angebote
 
-* ### [Persona Workshop](/persona-workshop)
-* ### [Usability Audit](/usability-audit)
-* ### [Architektur Review](/architektur-review)
-* ### Innovations Workshop
-* ### Softwarekonzepte mit hoher Usability
-* ### User Centered Design-Workshop
+- ### [Persona Workshop](/persona-workshop)
+- ### [Usability Audit](/usability-audit)
+- ### [Architektur Review](/architektur-review)
+- ### Innovations Workshop
+- ### Softwarekonzepte mit hoher Usability
+- ### User Centered Design-Workshop
 
 <div class="service">
 

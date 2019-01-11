@@ -1,16 +1,19 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
-import PhoneIcon from 'react-icons/lib/fa/phone'
-import EnvelopeIcon from 'react-icons/lib/fa/envelope'
-import TwitterIcon from 'react-icons/lib/fa/twitter'
-import XingIcon from 'react-icons/lib/fa/xing'
-import LinkedinIcon from 'react-icons/lib/fa/linkedin'
+import {
+  FaPhone as PhoneIcon,
+  FaEnvelope as EnvelopeIcon,
+  FaTwitter as TwitterIcon,
+  FaXing as XingIcon,
+  FaLinkedin as LinkedinIcon,
+} from 'react-icons/fa'
 
 import Content, { HTMLContent } from '../components/Content'
 import { Title, Subtitle, Section, Container } from '../layouts/style'
-import { theme } from '../layouts'
+import Layout, { theme } from '../components/Layout'
 import SEO from '../components/SEO'
 
 const EmployeeBanner = styled.div`
@@ -154,8 +157,8 @@ export const EmployeePageTemplate = ({
           <EmployeeBanner>
             <Avatar>
               <ImgRound
-                sizes={{
-                  ...avatar.childImageSharp.sizes,
+                fluid={{
+                  ...avatar.childImageSharp.fluid,
                   base64: avatar.childImageSharp.sqip.dataURI,
                 }}
               />
@@ -179,8 +182,7 @@ export const EmployeePageTemplate = ({
                 </li>
                 <li>
                   <a href={`https://twitter.com/${contact.twitter}`}>
-                    <TwitterIcon />
-                    @{contact.twitter}
+                    <TwitterIcon />@{contact.twitter}
                   </a>
                 </li>
                 <li>
@@ -223,11 +225,13 @@ export default props => {
   const { markdownRemark: post } = props.data
 
   return (
-    <EmployeePageTemplate
-      content={post.html}
-      contentComponent={HTMLContent}
-      metaData={post.frontmatter}
-    />
+    <Layout>
+      <EmployeePageTemplate
+        content={post.html}
+        contentComponent={HTMLContent}
+        metaData={post.frontmatter}
+      />
+    </Layout>
   )
 }
 
@@ -241,8 +245,8 @@ export const employeePageQuery = graphql`
         claim
         avatar {
           childImageSharp {
-            sizes(maxWidth: 300) {
-              ...GatsbyImageSharpSizes_withWebp_noBase64
+            fluid(srcSetBreakpoints: [340, 600]) {
+              ...GatsbyImageSharpFluid_noBase64
             }
             resize(width: 1200, height: 630, cropFocus: NORTH) {
               src

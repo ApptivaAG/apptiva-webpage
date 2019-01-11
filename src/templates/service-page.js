@@ -1,14 +1,17 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
-import * as FontAwesome from 'react-icons/lib/fa'
+import * as FontAwesome from 'react-icons/fa'
 
 import Content, { HTMLContent } from '../components/Content'
-import { Centered, Container, Section } from '../layouts/style'
+import { Centered, Container, Section, Icon } from '../layouts/style'
 import config from '../config'
 import SEO from '../components/SEO'
 import { stripHTML } from '../util'
+import Layout from '../components/Layout'
+import IconErrorBoundary from '../components/IconErrorBoundary'
 
 const HeadArea = styled.div``
 
@@ -75,19 +78,6 @@ const Item = styled.li`
   margin: 1rem;
   flex: 1 1 18rem;
 `
-const Icon = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 0 0 auto;
-  height: 1.8em;
-  width: 1.8em;
-  font-size: 1.4em;
-  margin-right: 0.6em;
-  color: ${props => props.theme.color.bg};
-  border-radius: 50%;
-  background-color: ${props => props.theme.color.secondary};
-`
 const ItemContent = styled.div`
   h2 {
     margin: 0.2em 0;
@@ -102,23 +92,20 @@ const Header = ({ title, image, subtitle }) => (
     <HeaderTitle dangerouslySetInnerHTML={{ __html: title }} />
     {subtitle && (
       <h2>
+        {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
         {subtitle.text} {subtitle.swaps && subtitle.swaps[0]}
       </h2>
     )}
     {image && (
       <Img
         style={{ width: '80%', margin: '2rem auto' }}
-        sizes={image.childImageSharp.sizes}
+        fluid={image.childImageSharp.fluid}
       />
     )}
   </HeadArea>
 )
 
-export const ServicePageTemplate = ({
-  content,
-  contentComponent,
-  metaData,
-}) => {
+const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
   const PostContent = contentComponent || Content
   const {
     title,
@@ -144,12 +131,11 @@ export const ServicePageTemplate = ({
           <Centered>
             <Header title={title} image={image} subtitle={subtitle} />
           </Centered>
-          {!subtitle &&
-            description && (
-              <Centered>
-                <p>{description}</p>
-              </Centered>
-            )}
+          {!subtitle && description && (
+            <Centered>
+              <p>{description}</p>
+            </Centered>
+          )}
         </Container>
       </Section>
 
@@ -160,8 +146,8 @@ export const ServicePageTemplate = ({
             <Customers>
               {customers.map(customer => (
                 <Img
-                  key={customer.childImageSharp.resolutions.src}
-                  resolutions={customer.childImageSharp.resolutions}
+                  key={customer.childImageSharp.fixed.src}
+                  fixed={customer.childImageSharp.fixed}
                 />
               ))}
             </Customers>
@@ -177,10 +163,10 @@ export const ServicePageTemplate = ({
                 {solutions.map(solution => (
                   <div key={solution.title}>
                     <h2>{solution.title}</h2>
-                    <a href={solution.image.childImageSharp.sizes.src}>
+                    <a href={solution.image.childImageSharp.fluid.src}>
                       <Img
                         className="lightbox"
-                        sizes={solution.image.childImageSharp.sizes}
+                        fluid={solution.image.childImageSharp.fluid}
                         alt={solution.title}
                       />
                     </a>
@@ -204,7 +190,9 @@ export const ServicePageTemplate = ({
               <ItemList>
                 {group.bulletList.map(item => (
                   <Item key={item.title}>
-                    <Icon>{icons(item.icon)}</Icon>
+                    <IconErrorBoundary icon={item.icon}>
+                      <Icon>{icons(item.icon)}</Icon>
+                    </IconErrorBoundary>
                     <ItemContent>
                       <h2>{item.title}</h2>
                       {/* eslint-disable-next-line react/no-danger */}
@@ -244,14 +232,18 @@ export const ServicePageTemplate = ({
 }
 
 export default props => {
-  const { markdownRemark: post } = props.data
+  const {
+    data: { markdownRemark: post },
+  } = props
 
   return (
-    <ServicePageTemplate
-      content={post.html}
-      contentComponent={HTMLContent}
-      metaData={post.frontmatter}
-    />
+    <Layout>
+      <ServicePageTemplate
+        content={post.html}
+        contentComponent={HTMLContent}
+        metaData={post.frontmatter}
+      />
+    </Layout>
   )
 }
 
@@ -264,8 +256,8 @@ export const pageQuery = graphql`
         title
         image {
           childImageSharp {
-            sizes {
-              ...GatsbyImageSharpSizes_withWebp
+            fluid(maxWidth: 960, srcSetBreakpoints: [340, 960, 1600]) {
+              ...GatsbyImageSharpFluid
             }
             resize(width: 1200, height: 630, cropFocus: ENTROPY) {
               src
@@ -279,8 +271,8 @@ export const pageQuery = graphql`
         description
         customers {
           childImageSharp {
-            resolutions(width: 200, grayscale: true) {
-              ...GatsbyImageSharpResolutions_withWebp_noBase64
+            fixed(width: 200, grayscale: true) {
+              ...GatsbyImageSharpFixed_noBase64
             }
           }
         }
@@ -289,8 +281,8 @@ export const pageQuery = graphql`
           text
           image {
             childImageSharp {
-              sizes {
-                ...GatsbyImageSharpSizes_withWebp
+              fluid(maxWidth: 960, srcSetBreakpoints: [340, 960, 1600]) {
+                ...GatsbyImageSharpFluid
               }
             }
           }

@@ -27,7 +27,13 @@ module.exports = {
         name: 'images',
       },
     },
-    'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        useMozJpeg: false,
+        stripMetadata: true,
+      },
+    },
     'gatsby-transformer-sharp',
     'gatsby-transformer-sqip',
     {
@@ -51,22 +57,22 @@ module.exports = {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 1024,
+              maxWidth: 960,
             },
           },
           {
             resolve: 'gatsby-remark-custom-blocks',
             options: {
               blocks: {
-                dark: 'custom-block-dark',
-                center: 'custom-block-center',
-                row: 'custom-block-row',
-                col: 'custom-block-col',
-                left: 'custom-block-left',
-                right: 'custom-block-right',
-                button: 'custom-block-button',
-                avatar: 'custom-block-avatar',
-                'no-margin': 'custom-block-no-margin',
+                dark: { classes: 'custom-block-dark' },
+                center: { classes: 'custom-block-center' },
+                row: { classes: 'custom-block-row' },
+                col: { classes: 'custom-block-col' },
+                left: { classes: 'custom-block-left' },
+                right: { classes: 'custom-block-right' },
+                button: { classes: 'custom-block-button' },
+                avatar: { classes: 'custom-block-avatar' },
+                'no-margin': { classes: 'custom-block-no-margin' },
               },
             },
           },
@@ -85,6 +91,18 @@ module.exports = {
         anonymize: true,
         // Avoids sending pageview hits from custom paths
         exclude: ['/preview/**', '/do-not-track/me/too/'],
+      },
+    },
+    'gatsby-plugin-netlify-cache',
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        allPageHeaders: [
+          'Link: </font/Gentona-ExtraBold.woff2>; rel=preload; as=font',
+          'Link: </font/Gentona-Bold.woff2>; rel=preload; as=font',
+          'Link: </font/Gentona-Medium.woff2>; rel=preload; as=font',
+          'Link: </font/Gentona-ExtraLight.woff2>; rel=preload; as=font',
+        ],
       },
     },
   ],

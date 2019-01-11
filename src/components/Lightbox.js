@@ -29,13 +29,12 @@ class Lightbox extends React.Component {
     this.handleOpen = this.handleOpen.bind(this)
     this.handleClose = this.handleClose.bind(this)
   }
+
   handleOpen(e) {
     // TODO: improvement for keyboard users that keypress on link
     if (
       e.target.className === 'gatsby-resp-image-image' ||
-      (e.target.parentNode.className &&
-        e.target.parentNode.className.includes &&
-        e.target.parentNode.className.includes('lightbox'))
+      e.target.closest('.lightbox') !== null
     ) {
       e.preventDefault()
       // only on tablet and larger
@@ -50,21 +49,21 @@ class Lightbox extends React.Component {
       }
     }
   }
+
   handleClose() {
     this.setState({ open: false })
   }
+
   render() {
+    const { open, src, srcset, alt } = this.state
+    const { children } = this.props
     return (
       <div onClick={this.handleOpen} role="presentation">
-        {this.props.children}
-        {this.state.open && (
+        {children}
+        {open && (
           <Modal onClick={this.handleClose}>
-            <ImgStyled
-              src={this.state.src}
-              srcSet={this.state.srcset}
-              alt={this.state.alt}
-            />
-            <h3>{this.state.alt}</h3>
+            <ImgStyled src={src} srcSet={srcset} alt={alt} />
+            <h3>{alt}</h3>
           </Modal>
         )}
       </div>

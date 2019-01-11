@@ -5,28 +5,27 @@ title: Dashboard für die Notaufnahme
 image: img/eris-devices.png
 author: philip-schoenholzer
 description: Das schlanke Patientenleitsystem für die Notaufnahme. Optimieren sie Ihre Administration, damit Sie mehr Zeit für Ihre Patienten haben.
-subtitle: 
+subtitle:
   text: Das schlanke Patientenleitsystem für die Notaufnahme.
 
 bulletGroups:
   - title: Vorteile der des Apptiva Dashboards für die Notaufnahme
-    description: 
-      Optimieren sie Ihre Administration, damit Sie mehr Zeit für Ihre Patienten haben.
+    description: Optimieren sie Ihre Administration, damit Sie mehr Zeit für Ihre Patienten haben.
 
     bulletList:
-      - icon: dashboard
+      - icon: tachometer-alt
         title: Überblick über die aktuelle Situation
         text: Das Apptiva Dashboard verschafft Pflegekräften, Ärztinnen und Ärzten der Notaufnahme einen Überblick zur aktuellen Situation. Sehen Sie alle relevanten Informationen auf einen Blick.
-      - icon: mobile
+      - icon: mobile-alt
         title: Standort­unabhängig
         text: Rufen Sie das Dashboard in Ihrem Büro, in einer Koje oder von zu Hause auf. Das Apptiva Dashboard passt sich optimal an das von Ihnen verwendete Gerät an, egal ob Desktop-PC, Tablet oder Smartphone.
       - icon: expand
         title: Integriert in Ihre System­landschaft
         text: Integrieren Sie das Apptiva Dashboard in Ihre bestehende Systemlandschaft um gleiche Daten nur einmal erfassen zu müssen und diese sofort verfügbar zu haben.
-      - icon: clock-o
+      - icon: reg-clock
         title: Mehr Zeit für die Patienten
         text: Mit dem Apptiva Dashboard hat die Pflege weniger administrative Arbeit. Die notwendigen Informationen werden vorgelagert erfasst und mit wenigen Klicks aktualisiert. Die spätere Aufarbeitung der Daten entfällt.
-      - icon: bar-chart
+      - icon: chart-bar
         title: Statistiken zur Notaufnahme
         text: Das Apptiva Dashboard unterstützt das Qualitäts­management mit Informationen zum Durchfluss sowie zur Prozess- und Betreuungsqualität.
       - icon: eye
@@ -58,10 +57,10 @@ Das Apptiva Dashboard verschafft Pflegekräften, Ärztinnen und Ärzten der Nota
 
 ## Das Dashboard beantwortet folgende Fragen:
 
-* Welche Patienten sind auf der Notaufnahme? Wie ist ihr Zustand und welche Personen sind für sie verantwortlich?
-* Welche Patienten werden als nächstes behandelt? Sind Patienten im Warteraum oder werden demnächst im Notfall eintreffen?
-* In welchem Raum befindet sich welcher Patient? Welche Räume sind noch frei?
-* Welche Verordnungen wurden erlassen? Welche sind bereits umgesetzt?
+- Welche Patienten sind auf der Notaufnahme? Wie ist ihr Zustand und welche Personen sind für sie verantwortlich?
+- Welche Patienten werden als nächstes behandelt? Sind Patienten im Warteraum oder werden demnächst im Notfall eintreffen?
+- In welchem Raum befindet sich welcher Patient? Welche Räume sind noch frei?
+- Welche Verordnungen wurden erlassen? Welche sind bereits umgesetzt?
 
 ## In Sekunden Informationen aktualisieren – mit Touch!
 
@@ -72,12 +71,12 @@ Tätigen Sie die wichtigsten Aktionen direkt am TV/Monitor mittels Touch. So kö
 
 Folgende Aktionen können direkt im TV-Modus getätigt werden:
 
-* Angemeldete und wartende Patienten in eine Koje ziehen.
-* Ärztin oder Arzt zuweisen
-* Pflegekraft zuweisen
-* Verordnungen hinzufügen.
-* Verordnungen abschliessen.
-* Patienten entlassen
+- Angemeldete und wartende Patienten in eine Koje ziehen.
+- Ärztin oder Arzt zuweisen
+- Pflegekraft zuweisen
+- Verordnungen hinzufügen.
+- Verordnungen abschliessen.
+- Patienten entlassen
 
 Weiter Aktionen werden laufend hinzugefügt.
 

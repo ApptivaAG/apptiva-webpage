@@ -5,20 +5,19 @@ title: Individuelle Softwareentwicklung
 image: ../../img/apps.png
 author: philip-schoenholzer
 description: Wir entwickeln individuelle, fokussierte und ausser­gewöhnlich benutzer­freundlich Anwendungen um Ihre einzigartigen Geschäftsprozesse zu beschleunigen.
-subtitle: 
+subtitle:
   text: Wir entwickeln individuelle Anwendungen um Ihre einzigartigen Geschäftsprozesse zu
-  swaps: 
+  swaps:
     - beschleunigen.
     - vereinfachen.
     - digitalisieren.
 
 bulletGroups:
   - title: Vorteile der individuellen Software­entwicklung
-    description: 
-      Bei der individuellen Softwareentwicklung halten wir uns an das <a href="http://www.lean-enterprise-app.com/">Manifest der Lean Enterprise App</a>.
+    description: Bei der individuellen Softwareentwicklung halten wir uns an das <a href="http://www.lean-enterprise-app.com/">Manifest der Lean Enterprise App</a>.
 
     bulletList:
-      - icon: clock-o
+      - icon: reg-clock
         title: Individuell und dennoch schnell
         text: Dank einer überraschend direkten Zusammenarbeit und unserem agilen Vorgehen sind bereits nach wenigen Tagen die ersten Ergebnisse im Einsatz.
       - icon: database
@@ -27,10 +26,10 @@ bulletGroups:
       - icon: expand
         title: Erweitern ohne Risiko
         text: Durch ihre Autonomie können unsere Apps einfach und schnell angepasst und erweitert werden, ohne das Gesamtsystem zu gefährden.
-      - icon: mobile
+      - icon: mobile-alt
         title: Fokussiert aufs Wesentliche
         text: Jede unserer Lösungen bildet einen Anwendungsfall optimal ab. Damit können wir uns auf das Wesentliche fokussieren und erschaffen nicht die “eierlegende Wollmilchsau”. Unnötiger Ballast ist fehl am Platz.
-      - icon: dashboard
+      - icon: tachometer-alt
         title: Beschleunigte Geschäfts­prozesse
         text: Der Bottleneck wird aufgelöst. Unsere Apps füllen Lücken, die Standardsoftware nicht füllen kann.
       - icon: user

@@ -1,10 +1,12 @@
 import React from 'react'
 import Img from 'gatsby-image'
-import Link from 'gatsby-link'
+import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
-import PhoneIcon from 'react-icons/lib/fa/phone'
-import EnvelopeIcon from 'react-icons/lib/fa/envelope'
-import TwitterIcon from 'react-icons/lib/fa/twitter'
+import {
+  FaPhone as PhoneIcon,
+  FaEnvelope as EnvelopeIcon,
+  FaTwitter as TwitterIcon,
+} from 'react-icons/fa'
 
 import { Section, Title, Subtitle, Container } from '../layouts/style'
 
@@ -79,8 +81,8 @@ export default ({ employees }) => (
               <Employee>
                 <LinkStyled to={path}>
                   <Avatar
-                    resolutions={{
-                      ...preview.childImageSharp.resolutions,
+                    fixed={{
+                      ...preview.childImageSharp.fixed,
                       base64: preview.childImageSharp.sqip.dataURI,
                     }}
                   />
@@ -124,8 +126,8 @@ export const employeeFragment = graphql`
       }
       preview {
         childImageSharp {
-          resolutions(width: 200, height: 200) {
-            ...GatsbyImageSharpResolutions_withWebp
+          fixed(width: 200, height: 200) {
+            ...GatsbyImageSharpFixed_withWebp_noBase64
           }
           sqip(numberOfPrimitives: 8, blur: 16) {
             dataURI

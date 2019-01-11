@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 
@@ -12,6 +12,7 @@ import {
   Subtitle,
   Container,
 } from '../layouts/style'
+import Layout from '../components/Layout'
 import Testimonials from '../components/Testimonials'
 import Employees from '../components/Employees'
 import ContactForm from '../components/ContactForm'
@@ -124,155 +125,160 @@ const Blockquote = styled.blockquote`
 `
 
 const IndexPage = ({ testimonials, posts, employees, images }) => (
-  <main>
-    <SEO />
-    <Hero image={images.heroImage.sizes} />
-    <Navbar location="root" />
-    <Section id="dienstleistungen">
-      <Container>
-        <Title>Dienst&shy;leistungen</Title>
-        <ColList>
-          <ListItem>
-            <Link to="/individuelle-entwicklung/">
-              <h3>Individuelle Entwicklung</h3>
-              <h2>App-Lösungen</h2>
-              <h4>Mobile und Desktop</h4>
-              <ImgStyled
-                style={{ width: '100%', marginTop: '2rem' }}
-                sizes={images.appsImage.sizes}
-                alt="Apps"
-              />
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link to="/dashboard-notaufnahme/">
-              <h3>Apptiva</h3>
-              <h2>Dashboard</h2>
-              <h4>für die Notaufnahme</h4>
-              <ErisLogo />
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link to="/produktkonfiguratoren/">
-              <h2>
-                Produkt-<br />Konfiguratoren
-              </h2>
-              <h4>Komplexe Angebote einfach verkaufen</h4>
-              <ImgStyled
-                sizes={images.partyplaner.sizes}
-                alt="Angebots- und Produktkonfiguratoren"
-              />
-            </Link>
-          </ListItem>
-        </ColList>
-        <h2>Weitere Angebote</h2>
-        <ul>
-          <li>
-            <Link to="/bot-entwicklung/">
-              <h3>Chatbots</h3>
-            </Link>
-          </li>
-          <li>
-            <Link to="/unterstuetzung">
-              <h3>Erstklassige Unterstützung</h3>
-            </Link>
-          </li>
-          <li>
-            <Link to="/einsatzplanung">
-              <h3>Einsatzplanung für den Gebäudeunterhalt</h3>
-            </Link>
-          </li>
-        </ul>
-        <Blockquote>
-          <h3>Unsere Spezialität</h3>
-          <p>
-            Das Erstellen von individuellen Softwarelösungen ist unsere
-            Spezialität. Wir unterstützen Sie bei der digitalen Transformation
-            Ihres Unternehmens und beschleunigen Ihre Geschäftsprozesse. Dazu
-            setzen wir modernste Methoden und Technologien ein und liefern
-            schlanke und passgenaue Lösungen: „Lean Enterprise Apps“. Unsere
-            Apps füllen die Lücken, die Standardsoftware nicht füllen kann.
-          </p>
-          <Right>
-            <Button to="/unsere-kompetenzen">Unsere Kompetenzen</Button>
-          </Right>
-        </Blockquote>
-      </Container>
-    </Section>
-
-    <Section dark>
-      <Container>
-        <ImageList>
-          <img src={sanagate} alt="sanagate" />
-          <img src={insel} alt="Insel Gruppe" />
-          <img src={energie360} alt="Energie 360° AG" />
-          <img src={suva} alt="suva" />
-          <img src={hostettler} alt="hostettler" />
-          <img src={maxon} alt="maxon motor" />
-        </ImageList>
-      </Container>
-    </Section>
-
-    <Testimonials testimonials={testimonials} />
-
-    <Employees employees={employees} />
-
-    <Section id="blog">
-      <Container>
-        <Title>Blog</Title>
-        <Subtitle>Aktuelle News rund um die Apptiva</Subtitle>
-
-        <ColList>
-          {posts.map(({ node: post }) => (
-            <ListItem key={post.id} full align="left">
-              <Link to={`/${post.frontmatter.path}`}>
+  <Layout showNavbar={false}>
+    <main>
+      <SEO />
+      <Hero image={images.heroImage.fluid} />
+      <Navbar location="root" />
+      <Section id="dienstleistungen">
+        <Container>
+          <Title>Dienst&shy;leistungen</Title>
+          <ColList>
+            <ListItem>
+              <Link to="/individuelle-entwicklung/">
+                <h3>Individuelle Entwicklung</h3>
+                <h2>App-Lösungen</h2>
+                <h4>Mobile und Desktop</h4>
                 <ImgStyled
-                  style={{ width: '100%' }}
-                  resolutions={{
-                    ...post.frontmatter.image.childImageSharp.resolutions,
-                    base64: post.frontmatter.image.childImageSharp.sqip.dataURI,
-                  }}
-                  alt="Post image"
+                  style={{ width: '100%', marginTop: '2rem' }}
+                  fluid={images.appsImage.fluid}
+                  alt="Apps"
                 />
-                <h2>{post.frontmatter.title}</h2>
-                <h4>{post.frontmatter.date}</h4>
-                <p>
-                  {post.frontmatter.description
-                    ? truncate(post.frontmatter.description, 140)
-                    : post.excerpt}
-                </p>
               </Link>
             </ListItem>
-          ))}
-        </ColList>
-        <Centered>
-          <Button to="/blog/">Zum Apptiva Blog</Button>
-        </Centered>
-      </Container>
-    </Section>
-    <Section id="kontakt" dark>
-      <Container>
-        <Title>Kontakt</Title>
-        <Subtitle>Wir freuen uns, von Ihnen zu hören.</Subtitle>
-        Möchten Sie uns kennenlernen oder haben Sie Fragen zu unseren
-        Dienstleistungen? <br />Zögern Sie nicht und nehmen Sie mit uns Kontakt
-        auf!
-        <ContactForm />
-      </Container>
-    </Section>
-    <Section style={{ padding: 0, marginBottom: '-4rem' }}>
-      <iframe
-        title="Google Maps"
-        scrolling="no"
-        marginHeight="0"
-        marginWidth="0"
-        src="https://maps.google.com/maps?q=Apptiva AG, Neuenkirchstrasse 19, Sempach Station&amp;hl=de&amp;geocode=+&amp;hnear=Apptiva AG+Neuenkirchstrasse 19,+Sempach Station&amp;t=m&amp;z=10&amp;iwloc=A&amp;output=embed"
-        width="100%"
-        height="550px"
-        frameBorder="0"
-      />
-    </Section>
-  </main>
+            <ListItem>
+              <Link to="/dashboard-notaufnahme/">
+                <h3>Apptiva</h3>
+                <h2>Dashboard</h2>
+                <h4>für die Notaufnahme</h4>
+                <ErisLogo />
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link to="/produktkonfiguratoren/">
+                <h2>
+                  Produkt-
+                  <br />
+                  Konfiguratoren
+                </h2>
+                <h4>Komplexe Angebote einfach verkaufen</h4>
+                <ImgStyled
+                  fluid={images.partyplaner.fluid}
+                  alt="Angebots- und Produktkonfiguratoren"
+                />
+              </Link>
+            </ListItem>
+          </ColList>
+          <h2>Weitere Angebote</h2>
+          <ul>
+            <li>
+              <Link to="/bot-entwicklung/">
+                <h3>Chatbots</h3>
+              </Link>
+            </li>
+            <li>
+              <Link to="/unterstuetzung">
+                <h3>Erstklassige Unterstützung</h3>
+              </Link>
+            </li>
+            <li>
+              <Link to="/einsatzplanung">
+                <h3>Einsatzplanung für den Gebäudeunterhalt</h3>
+              </Link>
+            </li>
+          </ul>
+          <Blockquote>
+            <h3>Unsere Spezialität</h3>
+            <p>
+              Das Erstellen von individuellen Softwarelösungen ist unsere
+              Spezialität. Wir unterstützen Sie bei der digitalen Transformation
+              Ihres Unternehmens und beschleunigen Ihre Geschäftsprozesse. Dazu
+              setzen wir modernste Methoden und Technologien ein und liefern
+              schlanke und passgenaue Lösungen: „Lean Enterprise Apps“. Unsere
+              Apps füllen die Lücken, die Standardsoftware nicht füllen kann.
+            </p>
+            <Right>
+              <Button to="/unsere-kompetenzen">Unsere Kompetenzen</Button>
+            </Right>
+          </Blockquote>
+        </Container>
+      </Section>
+
+      <Section dark>
+        <Container>
+          <ImageList>
+            <img src={sanagate} alt="sanagate" />
+            <img src={insel} alt="Insel Gruppe" />
+            <img src={energie360} alt="Energie 360° AG" />
+            <img src={suva} alt="suva" />
+            <img src={hostettler} alt="hostettler" />
+            <img src={maxon} alt="maxon motor" />
+          </ImageList>
+        </Container>
+      </Section>
+
+      <Testimonials testimonials={testimonials} />
+
+      <Employees employees={employees} />
+
+      <Section id="blog">
+        <Container>
+          <Title>Blog</Title>
+          <Subtitle>Aktuelle News rund um die Apptiva</Subtitle>
+
+          <ColList>
+            {posts.map(({ node: post }) => (
+              <ListItem key={post.id} full align="left">
+                <Link to={`/${post.frontmatter.path}`}>
+                  <ImgStyled
+                    style={{ width: '100%' }}
+                    fixed={{
+                      ...post.frontmatter.image.childImageSharp.fixed,
+                      base64:
+                        post.frontmatter.image.childImageSharp.sqip.dataURI,
+                    }}
+                    alt="Post image"
+                  />
+                  <h2>{post.frontmatter.title}</h2>
+                  <h4>{post.frontmatter.date}</h4>
+                  <p>
+                    {post.frontmatter.description
+                      ? truncate(post.frontmatter.description, 140)
+                      : post.excerpt}
+                  </p>
+                </Link>
+              </ListItem>
+            ))}
+          </ColList>
+          <Centered>
+            <Button to="/blog/">Zum Apptiva Blog</Button>
+          </Centered>
+        </Container>
+      </Section>
+      <Section id="kontakt" dark>
+        <Container>
+          <Title>Kontakt</Title>
+          <Subtitle>Wir freuen uns, von Ihnen zu hören.</Subtitle>
+          Möchten Sie uns kennenlernen oder haben Sie Fragen zu unseren
+          Dienstleistungen? <br />
+          Zögern Sie nicht und nehmen Sie mit uns Kontakt auf!
+          <ContactForm />
+        </Container>
+      </Section>
+      <Section style={{ padding: 0, marginBottom: '-4rem' }}>
+        <iframe
+          title="Google Maps"
+          scrolling="no"
+          marginHeight="0"
+          marginWidth="0"
+          src="https://maps.google.com/maps?q=Apptiva AG, Neuenkirchstrasse 19, Sempach Station&amp;hl=de&amp;geocode=+&amp;hnear=Apptiva AG+Neuenkirchstrasse 19,+Sempach Station&amp;t=m&amp;z=10&amp;iwloc=A&amp;output=embed"
+          width="100%"
+          height="550px"
+          frameBorder="0"
+        />
+      </Section>
+    </main>
+  </Layout>
 )
 
 export default ({ data }) => {
@@ -319,16 +325,13 @@ export const indexPageQuery = graphql`
         node {
           excerpt(pruneLength: 140)
           id
-          fields {
-            slug
-          }
           frontmatter {
             title
             path
             image {
               childImageSharp {
-                resolutions(height: 150, width: 300) {
-                  ...GatsbyImageSharpResolutions_withWebp_noBase64
+                fixed(height: 150, width: 300) {
+                  ...GatsbyImageSharpFixed_withWebp_noBase64
                 }
                 sqip(numberOfPrimitives: 8, blur: 6) {
                   dataURI
@@ -341,19 +344,23 @@ export const indexPageQuery = graphql`
         }
       }
     }
-    appsImage: imageSharp(id: { regex: "/apps.png/" }) {
-      sizes(maxWidth: 600) {
-        ...GatsbyImageSharpSizes_withWebp_noBase64
+    appsImage: imageSharp(fluid: { originalName: { regex: "/apps.png/" } }) {
+      fluid(maxWidth: 600) {
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
-    partyplaner: imageSharp(id: { regex: "/partyplaner.png/" }) {
-      sizes(maxWidth: 600) {
-        ...GatsbyImageSharpSizes_withWebp_noBase64
+    partyplaner: imageSharp(
+      fluid: { originalName: { regex: "/partyplaner.png/" } }
+    ) {
+      fluid(maxWidth: 600) {
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
-    heroImage: imageSharp(id: { regex: "/solution-collage.png/" }) {
-      sizes(maxWidth: 1800) {
-        ...GatsbyImageSharpSizes_withWebp_noBase64
+    heroImage: imageSharp(
+      fluid: { originalName: { regex: "/solution-collage.png/" } }
+    ) {
+      fluid(maxWidth: 1800) {
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }

@@ -123,7 +123,7 @@ export default ({ image }) => (
     <Columns>
       <ColHero>
         <Img
-          sizes={{ ...image, base64: svgData }}
+          fluid={{ ...image, base64: svgData }}
           alt="Erfolgreich umgesetzte Desktop, Mobile und Weblösungen"
         />
       </ColHero>
@@ -152,30 +152,10 @@ export default ({ image }) => (
       <Container>
         <h3>
           Wir suchen: <a href="/jobs">Fullstack-EntwicklerIn</a>
-        </h3>Gleich bewerben und einen der besten Jobs in der
+        </h3>
+        Gleich bewerben und einen der besten Jobs in der
         Software&shy;entwicklung schnappen.
       </Container>
     </Jobs>
   </Section>
 )
-
-// export const startPageQuery = graphql`
-//   query StartPage($id: String!) {
-//     markdownRemark(id: { eq: $id }) {
-//       frontmatter {
-//         title
-//         image
-//       }
-//     }
-//     testimonials: allMarkdownRemark(
-//       filter: { frontmatter: { templateKey: { eq: "testimonial-data" } } }
-//     ) {
-//       edges {
-//         node {
-//           id
-//           ...Testimonial_details
-//         }
-//       }
-//     }
-//   }
-// `

@@ -1,12 +1,13 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { ThemeProvider, injectGlobal } from 'styled-components'
+import { ThemeProvider, createGlobalStyle } from 'styled-components'
 import styledNormalize from 'styled-normalize'
+import { IconContext } from 'react-icons'
 
-import Navbar from '../components/Navbar'
-import fontFace from './font-face'
-import Footer from '../components/Footer'
-import Lightbox from '../components/Lightbox'
+import Navbar from './Navbar'
+import fontFace from '../layouts/font-face'
+import Footer from './Footer'
+import Lightbox from './Lightbox'
 import config from '../config'
 
 export const theme = {
@@ -31,7 +32,7 @@ if (typeof window !== 'undefined') {
 }
 
 // eslint-disable-next-line no-unused-expressions
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
   ${styledNormalize}
   ${fontFace}
 
@@ -59,15 +60,11 @@ injectGlobal`
     text-decoration: none;
     color: ${theme.color.primary};
     
-    .gatsby-image-outer-wrapper {
-      transform:translateZ(0);
+    .gatsby-image-wrapper {
+      transition: transform 0.3s;
 
-      .gatsby-image-wrapper {
-        transition: transform 0.3s;
-
-        &:hover {
-          transform: scale(1.06);
-        }
+      &:hover {
+        transform: scale(1.06);
       }
     }
   }
@@ -109,15 +106,18 @@ injectGlobal`
 
 `
 
-const TemplateWrapper = ({ children, location }) => (
+const Layout = ({ children, showNavbar = true }) => (
   <ThemeProvider theme={theme}>
     <Lightbox>
       <Helmet title={config.title} />
-      {location.pathname !== '/' && <Navbar />}
-      {children()}
+      {showNavbar && <Navbar />}
+      <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
+        {children}
+      </IconContext.Provider>
       <Footer />
+      <GlobalStyle />
     </Lightbox>
   </ThemeProvider>
 )
 
-export default TemplateWrapper
+export default Layout
