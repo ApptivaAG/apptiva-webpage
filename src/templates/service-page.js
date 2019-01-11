@@ -92,6 +92,7 @@ const Header = ({ title, image, subtitle }) => (
     <HeaderTitle dangerouslySetInnerHTML={{ __html: title }} />
     {subtitle && (
       <h2>
+        {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
         {subtitle.text} {subtitle.swaps && subtitle.swaps[0]}
       </h2>
     )}
@@ -231,7 +232,9 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
 }
 
 export default props => {
-  const { markdownRemark: post } = props.data
+  const {
+    data: { markdownRemark: post },
+  } = props
 
   return (
     <Layout>
@@ -253,7 +256,7 @@ export const pageQuery = graphql`
         title
         image {
           childImageSharp {
-            fluid(srcSetBreakpoints: [340, 800, 1600]) {
+            fluid(maxWidth: 960, srcSetBreakpoints: [340, 960, 1600]) {
               ...GatsbyImageSharpFluid
             }
             resize(width: 1200, height: 630, cropFocus: ENTROPY) {
@@ -278,7 +281,7 @@ export const pageQuery = graphql`
           text
           image {
             childImageSharp {
-              fluid(srcSetBreakpoints: [340, 800, 1600]) {
+              fluid(maxWidth: 960, srcSetBreakpoints: [340, 960, 1600]) {
                 ...GatsbyImageSharpFluid
               }
             }

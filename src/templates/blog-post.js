@@ -48,12 +48,8 @@ const Published = ({ author, date }) => {
   `
   return (
     <Wrapper>
-      Publiziert von 
-      {' '}
-      <Author>{author.replace('-', ' ')}</Author>
-      {' '}
-      am
-      {' '}
+      {/* eslint-disable-next-line react/jsx-one-expression-per-line  */}
+      Publiziert von <Author>{author.replace('-', ' ')}</Author> am{' '}
       <Date>{date}</Date>
     </Wrapper>
   )
@@ -153,7 +149,7 @@ export const pageQuery = graphql`
         path
         image {
           childImageSharp {
-            fluid(srcSetBreakpoints: [340, 800, 1600]) {
+            fluid(maxWidth: 960, srcSetBreakpoints: [340, 960, 1600]) {
               ...GatsbyImageSharpFluid
             }
             resize(width: 1200, height: 630, cropFocus: ENTROPY) {
