@@ -199,15 +199,6 @@ const Footer = () => (
           </li>
           <li>
             <a
-              href="http://www.webkiste.ch/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Die Webkiste
-            </a>
-          </li>
-          <li>
-            <a
               href="http://www.digitalenterprise.ch/"
               target="_blank"
               rel="noopener noreferrer"
