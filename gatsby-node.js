@@ -17,6 +17,7 @@ exports.createPages = ({ actions, graphql }) => {
             frontmatter {
               path
               templateKey
+              title
             }
           }
         }
@@ -33,7 +34,7 @@ exports.createPages = ({ actions, graphql }) => {
     edges.forEach(({ node }, index) => {
       const prev = index === 0 ? null : edges[index - 1].node
       const next = index === edges.length - 1 ? null : edges[index + 1].node
-      const {id} = node
+      const { id } = node
       createPage({
         path: node.frontmatter.path,
         component: path.resolve(
