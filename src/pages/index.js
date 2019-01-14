@@ -17,7 +17,7 @@ import Testimonials from '../components/Testimonials'
 import Employees from '../components/Employees'
 import ContactForm from '../components/ContactForm'
 
-import { ReactComponent as Eris } from '../img/eris-logo.svg'
+import { ReactComponent as Botfabrik } from '../img/botfabrik.svg'
 
 import suva from '../img/suva-300.png'
 import sanagate from '../img/sanagate-300x65.png'
@@ -42,9 +42,10 @@ const ImgStyled = styled(Img)`
   max-width: 340px;
   transition: transform 0.3s;
 `
-const ErisLogo = styled(Eris)`
-  width: 90%;
-  margin: 4em 0.6em;
+
+const BotfabrikLogo = styled(Botfabrik)`
+  width: 70%;
+  margin: 2em 0.6em;
 `
 const ListItem = styled.li`
   display: flex;
@@ -63,8 +64,6 @@ const ListItem = styled.li`
     overflow: hidden;
 
     svg {
-      color: ${props =>
-        props.color ? props.color : props.theme.color.primary};
       transition: transform 0.3s;
     }
 
@@ -74,7 +73,7 @@ const ListItem = styled.li`
 
       ${ImgStyled}, svg {
         transform: scale(1.06);
-        color: ${props => props.theme.color.bg};
+        color: black;
       }
     }
   }
@@ -147,11 +146,11 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
               </Link>
             </ListItem>
             <ListItem>
-              <Link to="/dashboard-notaufnahme/">
-                <h3>Apptiva</h3>
-                <h2>Dashboard</h2>
-                <h4>für die Notaufnahme</h4>
-                <ErisLogo />
+              <Link to="/bot-entwicklung/">
+                <h3>Individuelle</h3>
+                <h2>Chatbots</h2>
+                <h4>Botfabrik by Apptiva</h4>
+                <BotfabrikLogo />
               </Link>
             </ListItem>
             <ListItem>
@@ -172,8 +171,8 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
           <h2>Weitere Angebote</h2>
           <ul>
             <li>
-              <Link to="/bot-entwicklung/">
-                <h3>Chatbots</h3>
+              <Link to="/dashboard-notaufnahme/">
+                <h3>Dashboard für die Notaufnahme</h3>
               </Link>
             </li>
             <li>
@@ -260,7 +259,8 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
           <Title>Kontakt</Title>
           <Subtitle>Wir freuen uns, von Ihnen zu hören.</Subtitle>
           Möchten Sie uns kennenlernen oder haben Sie Fragen zu unseren
-          Dienstleistungen? <br />
+          Dienstleistungen?
+          <br />
           Zögern Sie nicht und nehmen Sie mit uns Kontakt auf!
           <ContactForm />
         </Container>
