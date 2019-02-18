@@ -2,9 +2,9 @@
 title: Serverless Apps
 path: serverless
 templateKey: blog-post
-image: pwa-app-transparent.png
+image: apptiva-lambda.png
 date: 2019-02-18
-author: Roman Schaller
+author: Roman Schaller, Philip Schönholzer
 description: >-
   Wir haben unser erstes Projekt mit Severless-Technologien umgesetzt. Diese Erfahrungen haben wir damit gemacht.
 categories:
