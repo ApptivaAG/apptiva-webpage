@@ -6,7 +6,7 @@ image: apptiva-lambda.png
 date: 2019-02-18
 author: Roman Schaller, Philip Schönholzer
 description: >-
-  Wir haben unser erstes Projekt mit Severless-Technologien umgesetzt. Folgende Erfahrungen haben wir damit gesammelt.
+  Wir haben ein weiteres Projekt mit Severless-Technologien umgesetzt. Folgende Erfahrungen haben wir damit gesammelt.
 categories:
   - Allgemein
 ---
