@@ -40,3 +40,6 @@ Mit diesem Ansatz müssen wir uns um keine Infrastruktur kümmern. Wir betreiben
 Wenn keine Daten anstehen, laufen unsere Funktionen nicht und brauchen weder Rechenleistung noch Arbeitsspeicher. Dadurch entstehen nur Kosten, wenn Daten von A nach B übermittelt werden. Mit einigen duzend Geräten bezahlen wir monatlich deutlich unter 10 Franken.
 
 # Unser Fazit
+
+Für unser durchaus bescheidenes Szenario hat sich der Einsatz der Serverless-Architektur gelohnt. Die Anwendung ist extrem leichtgewichtig und der entstandene Code sehr kompakt. Im Betrieb haben wir bislang keinerlei Probleme festgestellt.
+Wir werden diesen Ansatz für weitere Projekte im Auge behalten und freuen uns bei passtenden Einsatzgebieten wieder eine Serverless-Architektur anzuwenden. Die AWS-Cloud bietet zudem ein risiges Portfolio an weiteren Diensten, die wir ebenfalls anbinden können, um auch komplexere Szenarien abzudecken.
