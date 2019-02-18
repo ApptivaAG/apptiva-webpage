@@ -34,7 +34,7 @@ Eine weitere, regelmässig als Job ausgeführte Funktion nimmt die Daten, und ve
 > - **Kaum Wartungsaufwand**  
 >   Mit diesem Ansatz müssen wir uns um keine Infrastruktur kümmern. Wir betreiben keinen Server.
 >
-> - **Minimaler Code**
+> - **Minimaler Code**  
 >   Wir schreiben nur die Funktion, die unmittelbar für die Logik notwendig ist. Kein Framework. Kein Webserver.
 >
 > - **Kaum Kosten**  
