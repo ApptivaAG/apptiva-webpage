@@ -24,7 +24,7 @@ gilt also "best effort".
 
 Sobald die Geräte online sind, schicken wir die gesammelten Daten an eine Serverless-Funktion. Diese nimmt alles entgegen und speichert es in der Amazon-Cloud.
 
-Eine weitere Funktion nimmt die Daten wiederum und versucht sie an die MS-SQL-Datenbank zu schicken. Sobald das erfolgreich war, werden die Daten gelöscht.
+Eine weitere regelmässig als Job ausgeführte Funktion nimmt die Daten wiederum, und versucht sie an die MS-SQL-Datenbank zu schicken. Sobald das erfolgreich war, werden die übermittelten Daten gelöscht.
 
 # Was heisst Serverless?
 
@@ -33,6 +33,10 @@ In diesem Sinne gibt es natürlich irgendwo Server, die betrieben werden müssen
 
 # Die Vorteile dieser Architektur
 
+## Kaum Wartungsaufwand
+Mit diesem Ansatz müssen wir uns um keine Infrastruktur kümmern. Wir betreiben keinen Server. 
 
+## Kaum Kosten
+Wenn keine Daten anstehen, laufen unsere Funktionen nicht und brauchen weder Rechenleistung noch Arbeitsspeicher. Dadurch entstehen nur Kosten, wenn Daten von A nach B übermittelt werden. Mit einigen duzend Geräten bezahlen wir monatlich deutlich unter 10 Franken.
 
 # Unser Fazit
