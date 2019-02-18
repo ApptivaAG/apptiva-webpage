@@ -34,11 +34,16 @@ Eine weitere, regelmässig als Job ausgeführte Funktion nimmt die Daten, und ve
 > - **Kaum Wartungsaufwand**  
 >   Mit diesem Ansatz müssen wir uns um keine Infrastruktur kümmern. Wir betreiben keinen Server.
 >
+> - **Minimaler Code**
+>   Wir schreiben nur die Funktion, die unmittelbar für die Logik notwendig ist. Kein Framework. Kein Webserver.
+>
 > - **Kaum Kosten**  
->   Wenn keine Daten anstehen, laufen unsere Funktionen nicht und brauchen weder Rechenleistung noch Arbeitsspeicher. Dadurch entstehen nur Kosten, wenn Daten von A nach B übermittelt werden. Mit einigen duzend Geräten bezahlen wir monatlich deutlich weniger als 10 Franken.
+>   Wenn unsere Funktionen nicht aufgerufen werden, laufen sie nicht und brauchen weder Rechenleistung noch Arbeitsspeicher.
 
 # Unser Fazit
 
 Für unser durchaus bescheidenes Szenario hat sich der Einsatz der Serverless-Architektur gelohnt. Die Anwendung ist extrem leichtgewichtig und der entstandene Code sehr kompakt. Im Betrieb haben wir bislang keinerlei Probleme festgestellt. Die AWS-Cloud bietet zudem ein riesiges Portfolio an weiteren Diensten, die wir ebenfalls anbinden können, um auch komplexere Szenarien abzudecken.
+
+Da unsere Funktionen nur dann Rechenleistung beanspruchen, wenn sie auch in Gebrauch sind, bezahlen wir monatlich deutlich weniger als 10 Franken.
 
 Wir werden diesen Ansatz für weitere Projekte im Auge behalten und freuen uns bei passenden Einsatzgebieten wieder eine Serverless-Architektur anzuwenden.
