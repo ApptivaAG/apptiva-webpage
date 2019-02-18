@@ -42,4 +42,4 @@ Wenn keine Daten anstehen, laufen unsere Funktionen nicht und brauchen weder Rec
 # Unser Fazit
 
 Für unser durchaus bescheidenes Szenario hat sich der Einsatz der Serverless-Architektur gelohnt. Die Anwendung ist extrem leichtgewichtig und der entstandene Code sehr kompakt. Im Betrieb haben wir bislang keinerlei Probleme festgestellt.
-Wir werden diesen Ansatz für weitere Projekte im Auge behalten und freuen uns bei passtenden Einsatzgebieten wieder eine Serverless-Architektur anzuwenden. Die AWS-Cloud bietet zudem ein risiges Portfolio an weiteren Diensten, die wir ebenfalls anbinden können, um auch komplexere Szenarien abzudecken.
+Wir werden diesen Ansatz für weitere Projekte im Auge behalten und freuen uns bei passenden Einsatzgebieten wieder eine Serverless-Architektur anzuwenden. Die AWS-Cloud bietet zudem ein riesiges Portfolio an weiteren Diensten, die wir ebenfalls anbinden können, um auch komplexere Szenarien abzudecken.
