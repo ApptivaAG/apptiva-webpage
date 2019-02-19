@@ -25,6 +25,9 @@ import maxon from '../img/maxonmotor-300x45.png'
 import insel from '../img/insel-gruppe-logo-300x70.png'
 import hostettler from '../img/hostettler-300x70.png'
 import energie360 from '../img/energie360-300x72.png'
+import diepost from '../img/die-post-logo.png'
+import schurch from '../img/schurch-logo.png'
+import sd from '../img/sd.png'
 import Hero from '../components/Hero'
 import Navbar from '../components/Navbar'
 import SEO from '../components/SEO'
@@ -103,6 +106,11 @@ const ListItem = styled.li`
     line-height: 1.2;
     margin: 1em ${props => (props.full ? '1rem' : 0)};
   }
+`
+const CustomerTitle = styled.h1`
+  font-size: 1.7em;
+  color: #cbcbcb;
+  text-align: center;
 `
 const ImageList = styled.div`
   display: flex;
@@ -205,13 +213,17 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
 
       <Section dark>
         <Container>
+          <CustomerTitle>Auswahl unserer Kunden</CustomerTitle>
           <ImageList>
-            <img src={sanagate} alt="sanagate" />
-            <img src={insel} alt="Insel Gruppe" />
             <img src={energie360} alt="Energie 360° AG" />
-            <img src={suva} alt="suva" />
+            <img src={schurch} alt="Schürch Getränke AG" />
             <img src={hostettler} alt="hostettler" />
+            <img src={insel} alt="Insel Gruppe" />
+            <img src={sd} alt="sd Gebäudeunterhalt AG" />
             <img src={maxon} alt="maxon motor" />
+            <img src={sanagate} alt="sanagate" />
+            <img src={diepost} alt="Die Schweizerische Post AG" />
+            <img src={suva} alt="suva" />
           </ImageList>
         </Container>
       </Section>
