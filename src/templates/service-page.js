@@ -34,14 +34,11 @@ const Customers = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 0 -0.5rem;
 
   & > div {
-    flex: 1 1 6rem;
-    width: 100%;
-    margin: 0.5rem;
-    text-align: center;
+    margin: 1em;
   }
 `
 const Cols = styled.div`
