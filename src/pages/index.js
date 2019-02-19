@@ -107,6 +107,16 @@ const ListItem = styled.li`
     margin: 1em ${props => (props.full ? '1rem' : 0)};
   }
 `
+const Buttonlist = styled(Right)`
+  a {
+    margin-top: 1em;
+  }
+  @media (min-width: 381px) {
+    a {
+      margin-left: 1em;
+    }
+  }
+`
 const CustomerTitle = styled.h1`
   font-size: 1.7em;
   color: #cbcbcb;
@@ -196,7 +206,7 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
           </ul>
           <Blockquote>
             <h3>Unsere Spezialität</h3>
-            <p>
+            <p css="margin-bottom: 0">
               Das Erstellen von individuellen Softwarelösungen ist unsere
               Spezialität. Wir unterstützen Sie bei der digitalen Transformation
               Ihres Unternehmens und beschleunigen Ihre Geschäftsprozesse. Dazu
@@ -204,9 +214,10 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
               schlanke und passgenaue Lösungen: „Lean Enterprise Apps“. Unsere
               Apps füllen die Lücken, die Standardsoftware nicht füllen kann.
             </p>
-            <Right>
+            <Buttonlist>
+              <Button to="/vorgehensweise">Unser Vorgehen</Button>
               <Button to="/unsere-kompetenzen">Unsere Kompetenzen</Button>
-            </Right>
+            </Buttonlist>
           </Blockquote>
         </Container>
       </Section>

@@ -49,7 +49,7 @@ export const Subtitle = styled.h4`
 
 export const sharedButtonStyle = css`
   display: inline-block;
-  padding: 0.6em 1.4em .7em;
+  padding: 0.6em 1.4em 0.7em;
   border: 0 none;
   border-radius: 0.1em;
   font-weight: 500;
@@ -68,8 +68,8 @@ export const sharedButtonStyle = css`
     transform: translateY(1px);
   }
 
-  @media (max-width: 380px){
-    width: 100%
+  @media (max-width: 380px) {
+    width: 100%;
     text-align: center;
   }
 `
