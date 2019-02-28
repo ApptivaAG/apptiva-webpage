@@ -83,7 +83,6 @@ const Markdown = styled.div`
       flex: 1 1 14rem;
       margin: 0 1rem 1rem;
     }
-
   }
 
   .custom-block-avatar {
@@ -91,16 +90,17 @@ const Markdown = styled.div`
     margin-left: auto;
     margin-right: auto;
     .gatsby-resp-image-background-image {
-      border: 5px solid #ececec; 
-      border-radius: 50%; 
+      border: 5px solid #ececec;
+      border-radius: 50%;
       overflow: hidden;
+      transform: translateZ(0); /* Safari bug rounded image flicker  */
     }
 
     & > p {
       margin: 0;
     }
     @media (min-width: 640px) {
-      width: 200px; 
+      width: 200px;
     }
   }
 
@@ -110,8 +110,8 @@ const Markdown = styled.div`
 
   @media (min-width: 400px) {
     .gatsby-resp-image-wrapper .gatsby-resp-image-background-image {
-      transform:translateZ(0);
-      
+      transform: translateZ(0);
+
       img {
         transition: transform 0.3s;
         &:hover {
@@ -138,8 +138,6 @@ const Markdown = styled.div`
   .gatsby-highlight {
     font-size: 0.8em;
   }
-
-}
 `
 
 export default ({ content, className }) => (

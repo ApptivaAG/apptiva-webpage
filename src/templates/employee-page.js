@@ -33,6 +33,7 @@ const ImgRound = styled(Img)`
   margin-right: auto;
   border-radius: 50%;
   border: 3px solid white;
+  transform: translateZ(0); /* Safari bug rounded image flicker  */
 `
 const EmployeeData = styled.div`
   flex: 1 1 55%;
@@ -182,7 +183,7 @@ export const EmployeePageTemplate = ({
                 </li>
                 <li>
                   <a href={`https://twitter.com/${contact.twitter}`}>
-                    <TwitterIcon />@{contact.twitter}
+                    <TwitterIcon />@                    {contact.twitter}
                   </a>
                 </li>
                 <li>

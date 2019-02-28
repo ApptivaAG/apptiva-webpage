@@ -34,6 +34,7 @@ const Avatar = styled(Img)`
   border: 3px solid #eee;
   border-radius: 50%;
   margin-right: 1em;
+  transform: translateZ(0); /* Safari bug rounded image flicker  */
 `
 const LinkStyled = styled(Link)`
   display: block;

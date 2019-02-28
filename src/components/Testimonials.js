@@ -28,6 +28,7 @@ const Avatar = styled(Img)`
   border: 2px solid #e2e2e2;
   border-radius: 50%;
   margin-right: 1em;
+  transform: translateZ(0); /* Safari bug rounded image flicker  */
 `
 const Name = styled.p`
   font-weight: 500;
@@ -59,7 +60,7 @@ export const Testimonial = ({ name, position, statement, avatar, company }) => (
         <Company>{company}</Company>
       </div>
     </Person>
-    <Statement>«{statement}»</Statement>
+    <Statement>«{statement}»        </Statement>
   </TestimonialStyle>
 )
 
