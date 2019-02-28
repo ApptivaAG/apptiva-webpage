@@ -183,7 +183,7 @@ export const EmployeePageTemplate = ({
                 </li>
                 <li>
                   <a href={`https://twitter.com/${contact.twitter}`}>
-                    <TwitterIcon />@                    {contact.twitter}
+                    <TwitterIcon />@ {contact.twitter}
                   </a>
                 </li>
                 <li>
@@ -223,7 +223,9 @@ export const EmployeePageTemplate = ({
 }
 
 export default props => {
-  const { markdownRemark: post } = props.data
+  const {
+    data: { markdownRemark: post },
+  } = props
 
   return (
     <Layout>

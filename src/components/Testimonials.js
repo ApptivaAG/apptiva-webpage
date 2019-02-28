@@ -60,7 +60,7 @@ export const Testimonial = ({ name, position, statement, avatar, company }) => (
         <Company>{company}</Company>
       </div>
     </Person>
-    <Statement>«{statement}»        </Statement>
+    <Statement>«{statement}» </Statement>
   </TestimonialStyle>
 )
 
