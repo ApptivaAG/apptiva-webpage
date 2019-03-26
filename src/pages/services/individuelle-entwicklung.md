@@ -6,14 +6,14 @@ image: ../../img/apps.png
 author: philip-schoenholzer
 description: Wir entwickeln individuelle, fokussierte und ausser­gewöhnlich benutzer­freundlich Anwendungen um Ihre einzigartigen Geschäftsprozesse zu beschleunigen.
 subtitle:
-  text: Wir entwickeln individuelle Anwendungen um Ihre einzigartigen Geschäftsprozesse zu
+  text: Wir entwickeln iOS, Android und Web-Anwendungen um Ihre einzigartigen Geschäftsprozesse zu
   swaps:
     - beschleunigen.
     - vereinfachen.
     - digitalisieren.
 
 bulletGroups:
-  - title: Vorteile der individuellen Software­entwicklung
+  - title: Vorteile der Apptiva-Software­entwicklung
     description: Bei der individuellen Softwareentwicklung halten wir uns an das <a href="http://www.lean-enterprise-app.com/">Manifest der Lean Enterprise App</a>.
 
     bulletList:
@@ -25,7 +25,7 @@ bulletGroups:
         text: Führen Sie Ihre Daten nicht doppelt. Die Daten werden aus bestehenden Systemen bezogen und die Resultate zurückgeschrieben.
       - icon: expand
         title: Erweitern ohne Risiko
-        text: Durch ihre Autonomie können unsere Apps einfach und schnell angepasst und erweitert werden, ohne das Gesamtsystem zu gefährden.
+        text: Durch ihre Autonomie können unsere iOS, Android und Web-Apps einfach und schnell angepasst und erweitert werden, ohne das Gesamtsystem zu gefährden.
       - icon: mobile-alt
         title: Fokussiert aufs Wesentliche
         text: Jede unserer Lösungen bildet einen Anwendungsfall optimal ab. Damit können wir uns auf das Wesentliche fokussieren und erschaffen nicht die “eierlegende Wollmilchsau”. Unnötiger Ballast ist fehl am Platz.
@@ -34,7 +34,7 @@ bulletGroups:
         text: Der Bottleneck wird aufgelöst. Unsere Apps füllen Lücken, die Standardsoftware nicht füllen kann.
       - icon: user
         title: Ausser­gewöhnlich benutzer­freundlich
-        text: Durch die nutzerorientierte Gestaltung unserer Apps befinden sich die Anwender im Zentrum. Sie erhalten eine Lösung die verständlich, einfach und schnell zu bedienen ist.
+        text: Durch die nutzerorientierte Gestaltung unserer iOS, Android und Web-Apps befinden sich die Anwender im Zentrum. Sie erhalten eine Lösung die verständlich, einfach und schnell zu bedienen ist.
 ---
 
 <div class="full-width dark-section" style="overflow: auto;">
@@ -55,12 +55,14 @@ Sehen Sie wie eine Lean Enterprise App beispielsweise den Telefonverkauf für Je
 [[right]]
 |![Tiefe Kosten](img/sparschwein.svg)
 
-# Ist dies nicht sehr teuer?
+# Wir sind besonders effektiv
 
-Dank unserem effektiven Vorgehen kann eine App bereits ab CHF 7'000.- erstellt werden!
+Dank unserem effektiven Vorgehen sind erste nutzbare Resultate bereits nach zwei Wochen vorhanden.
 
-Mit der Beschleunigung und Vereinfachung eines Prozesses lohnt sich die Investition in individuelle Softwareentwicklung bereits nach wenigen Wochen. Sie werden somit nicht nur zufriedenere Kunden haben, sondern auch ein gesünderes Unternehmen.
+Mit der Apptiva haben seine einen Partner, welcher unkompliziert und erfolgreich mit Ihnen zusammenarbeitet. Wir konnten bis jetzt jedes Projekt gemeinsam mit unseren Kunden erfolgreich lancieren und betreiben. Unsere Projekte sind aber nicht bloss zeitgerecht und im Budget, sondern kommen auch bei den Anwendern sehr gut an. Wir achten von Beginn an auf eine gute Usability.
 
-# Wir unterstützen Sie gerne bei der Entwicklung einer individuellen Anwendung.
+Für Sie heisst dies mehr Freude, weniger Stress und die Zuversicht die gesteckten Ziele erreichen zu können.
+
+# Wir unterstützen Sie gerne bei der Entwicklung einer individuellen iOS, Android und Web-Anwendung.
 
 Rufen Sie uns an <a href="tel:+41413222626">041 322 26 26</a> oder schreiben Sie an <a href="mailto:info@apptiva.ch">info@­apptiva.ch</a>
