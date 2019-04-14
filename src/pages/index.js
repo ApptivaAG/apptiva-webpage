@@ -31,6 +31,7 @@ import sd from '../img/sd.png'
 import Hero from '../components/Hero'
 import Navbar from '../components/Navbar'
 import SEO from '../components/SEO'
+import swisscom from '../img/swisscom-gold-partner-300.png'
 import { truncate } from '../util'
 
 const ColList = styled.ul`
@@ -139,6 +140,26 @@ const ImageList = styled.div`
 const Blockquote = styled.blockquote`
   margin-top: 4em;
   padding-bottom: 1em;
+`
+const PartnerTitle = styled.h1`
+  font-size: 1.7em;
+  color: #cbcbcb;
+  text-align: center;
+`
+
+const PartnerImage = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1em -1em;
+  img {
+    flex: 1 1 6em;
+    width: 100%;
+    max-width: 12em;
+    height: 100%;
+    padding: 1em;
+  }
 `
 
 const IndexPage = ({ testimonials, posts, employees, images }) => (
@@ -277,7 +298,18 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
           </Centered>
         </Container>
       </Section>
-      <Section id="kontakt" dark>
+      <Section dark>
+        <Container>
+          <PartnerTitle>Partnerschaft</PartnerTitle>
+          <PartnerImage>
+            <img src={swisscom} alt="Swisscom Gold Partner" />
+          </PartnerImage>
+          <div>Seit unserem Beginn setzen wir mitunter auf die 
+            <Link to="https://www.swisscom.ch/de/business/enterprise/angebot/cloud-data-center/application-cloud.html"> Swisscom Application Cloud</Link> und sind seit kurzem stolze
+            Swisscom Gold Partner.</div>
+        </Container>
+      </Section>
+      <Section id="kontakt">
         <Container>
           <Title>Kontakt</Title>
           <Subtitle>Wir freuen uns, von Ihnen zu hören.</Subtitle>
