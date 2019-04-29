@@ -300,13 +300,10 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
       </Section>
       <Section dark>
         <Container>
-          <PartnerTitle>Partnerschaft</PartnerTitle>
+          <PartnerTitle>Partnerschaften</PartnerTitle>
           <PartnerImage>
             <img src={swisscom} alt="Swisscom Gold Partner" />
           </PartnerImage>
-          <div>Seit unserem Beginn setzen wir mitunter auf die 
-            <Link to="https://www.swisscom.ch/de/business/enterprise/angebot/cloud-data-center/application-cloud.html"> Swisscom Application Cloud</Link> und sind seit kurzem stolze
-            Swisscom Gold Partner.</div>
         </Container>
       </Section>
       <Section id="kontakt">
