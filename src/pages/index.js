@@ -163,11 +163,9 @@ const PartnerImage = styled.div`
 `
 
 const IndexPage = ({ testimonials, posts, employees, images }) => (
-  <Layout showNavbar={false}>
+  <Layout showHero>
     <main>
       <SEO />
-      <Hero image={images.heroImage.fluid} />
-      <Navbar location="root" />
       <Section id="dienstleistungen">
         <Container>
           <Title>Dienst&shy;leistungen</Title>
@@ -405,13 +403,6 @@ export const indexPageQuery = graphql`
       fluid: { originalName: { regex: "/partyplaner.png/" } }
     ) {
       fluid(maxWidth: 600) {
-        ...GatsbyImageSharpFluid_withWebp_noBase64
-      }
-    }
-    heroImage: imageSharp(
-      fluid: { originalName: { regex: "/solution-collage.png/" } }
-    ) {
-      fluid(maxWidth: 1800) {
         ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }

@@ -9,6 +9,7 @@ import fontFace from '../layouts/font-face'
 import Footer from './Footer'
 import Lightbox from './Lightbox'
 import config from '../config'
+import Hero from './Hero'
 
 export const theme = {
   color: {
@@ -106,11 +107,12 @@ const GlobalStyle = createGlobalStyle`
 
 `
 
-const Layout = ({ children, showNavbar = true }) => (
+const Layout = ({ children, showHero = false }) => (
   <ThemeProvider theme={theme}>
     <Lightbox>
       <Helmet title={config.title} />
-      {showNavbar && <Navbar />}
+      {showHero && <Hero />}
+      <Navbar location={showHero && 'root'} />
       <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
         {children}
       </IconContext.Provider>

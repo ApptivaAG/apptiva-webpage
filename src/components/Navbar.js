@@ -5,7 +5,7 @@ import styled, { css } from 'styled-components'
 import { Container as DefaultContainer } from '../layouts/style'
 import logo from '../img/logo.svg'
 
-const NavBar = styled.nav`
+const NavBar = styled.header`
   position: sticky;
   top: 0;
   background-color: ${props => props.theme.color.primary};
@@ -23,7 +23,7 @@ const Logo = styled.img`
   height: 2.1rem;
   padding: 1rem 0;
 `
-const Navigation = styled.div`
+const Navigation = styled.nav`
   margin-right: -1em;
   @media (max-width: 759px) {
     position: fixed;
@@ -94,11 +94,11 @@ const DynLink = ({ type, nav, ...props }) =>
 const Navbar = ({ location }) => (
   <NavBar>
     <Container>
-      <div>
+      <h1 css="margin: 0;">
         <DynLink type={location} nav="/#start" data-element="logo">
           <Logo src={logo} alt="Apptiva" />
         </DynLink>
-      </div>
+      </h1>
 
       <MenuButton tabIndex="0">Menu</MenuButton>
       <Navigation>
