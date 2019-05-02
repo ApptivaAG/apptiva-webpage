@@ -38,7 +38,7 @@ const Navigation = styled.div`
     transition: all 200ms ease 200ms;
   }
 `
-const MenuButton = styled.button`
+const MenuButton = styled.div`
   padding: 0.5em;
   margin-right: -0.5em;
   border: none;
