@@ -95,9 +95,9 @@ const Navbar = ({ location }) => (
   <NavBar>
     <Container>
       <div>
-        <DynLink type={location} nav="/#start" data-element="logo">
+        <NavItemsLink to="/" data-element="logo">
           <Logo src={logo} alt="Apptiva" />
-        </DynLink>
+        </NavItemsLink>
       </div>
 
       <MenuButton tabIndex="0">Menu</MenuButton>
