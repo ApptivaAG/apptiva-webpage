@@ -167,7 +167,7 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
     <main>
       <SEO />
       <Hero image={images.heroImage.fluid} />
-      <Navbar location="root" />
+      <Navbar />
       <Section id="dienstleistungen">
         <Container>
           <Title>Dienst&shy;leistungen</Title>
