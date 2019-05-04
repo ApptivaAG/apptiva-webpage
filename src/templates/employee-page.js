@@ -145,8 +145,6 @@ export const EmployeePageTemplate = ({
 
   return (
     <main>
-      <Helmet title={`Mitarbeiter | ${name}`} />
-      <SEO metaData={metaData} postImage={seoImage} />
       <Section>
         <Container>
           <Title>{name}</Title>
@@ -229,11 +227,7 @@ export default props => {
 
   return (
     <Layout>
-      <EmployeePageTemplate
-        content={post.html}
-        contentComponent={HTMLContent}
-        metaData={post.frontmatter}
-      />
+      <h1>Hi</h1>
     </Layout>
   )
 }
