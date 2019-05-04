@@ -60,6 +60,7 @@
     "develop-ip": "gatsby develop -H 192.168.1.188",
     "serve": "gatsby serve",
     "clean": "rm -rf .cache/ public",
+    "netlify-local": "netlify dev",
     "update": "npx npm-check-updates -u",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "lint": "eslint ./src",
@@ -73,6 +74,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
     "gatsby-cli": "^2.5.12",
+    "netlify-cli": "^2.11.15",
     "prettier": "^1.17.0"
   },
   "prettier": {
