@@ -59,7 +59,7 @@
     "develop": "gatsby develop",
     "develop-ip": "gatsby develop -H 192.168.1.188",
     "serve": "gatsby serve",
-    "clean": "rm -rf .cache/ public",
+    "clean": "gatsby clean",
     "netlify-local": "netlify dev",
     "update": "npx npm-check-updates -u",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
