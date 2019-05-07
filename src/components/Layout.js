@@ -99,15 +99,9 @@ const GlobalStyle = createGlobalStyle`
 
 const Layout = ({ children, showNavbar = true }) => (
   <ThemeProvider theme={theme}>
-    <Lightbox>
-      <Helmet title={config.title} />
-      {showNavbar && <Navbar />}
-      <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
-        {children}
-      </IconContext.Provider>
-      <Footer />
-      <GlobalStyle />
-    </Lightbox>
+    <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
+      {children}
+    </IconContext.Provider>
   </ThemeProvider>
 )
 
