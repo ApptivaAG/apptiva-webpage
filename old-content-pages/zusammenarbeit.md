@@ -1,6 +1,6 @@
 ---
 title: Zusammenarbeit
-path: zusammenarbeit
+slug: zusammenarbeit
 image: null
 date: 2015-07-22T21:17:37.000Z
 author: linus-huesler

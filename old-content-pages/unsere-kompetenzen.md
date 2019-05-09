@@ -1,6 +1,6 @@
 ---
 title: Unsere Kompetenzen
-path: unsere-kompetenzen
+slug: unsere-kompetenzen
 image: null
 date: 2015-09-30T10:02:17.000Z
 author: linus-huesler

@@ -1,6 +1,6 @@
 ---
 title: Kontakt
-path: kontakt
+slug: kontakt
 image: null
 date: 2015-06-28T22:15:10.000Z
 author: linus-huesler

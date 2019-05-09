@@ -71,12 +71,12 @@ const Navigation = ({ next, prev }) => {
   return (
     <LayoutNavigation>
       {prev && (
-        <NavigationLinks to={prev.frontmatter.path}>
+        <NavigationLinks to={prev.frontmatter.slug}>
           {prev.frontmatter.title}
         </NavigationLinks>
       )}
       {next && (
-        <NavigationLinks to={next.frontmatter.path}>
+        <NavigationLinks to={next.frontmatter.slug}>
           {next.frontmatter.title}
         </NavigationLinks>
       )}
@@ -135,8 +135,8 @@ export default ({ data, pageContext }) => {
 }
 
 export const pageQuery = graphql`
-  query BlogPostByID($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+  query BlogPostByID($slug: String!) {
+    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       id
       html
       excerpt(pruneLength: 300)
@@ -146,7 +146,7 @@ export const pageQuery = graphql`
         author
         date(formatString: "DD.MM.YYYY")
         isoDate: date(formatString: "DD-MM-YYYY")
-        path
+        slug
         image {
           childImageSharp {
             fluid(maxWidth: 960, srcSetBreakpoints: [340, 960, 1600]) {

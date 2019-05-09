@@ -1,6 +1,6 @@
 ---
 title: Bubble CMS - Managing Chatbot Content
-path: bubblecms
+slug: bubblecms
 templateKey: blog-post
 image: bubble-cms.png
 date: 2018-11-20

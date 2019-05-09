@@ -1,6 +1,6 @@
 ---
 title: Telefonverkauf Showcase
-path: telefonverkauf-showcase
+slug: telefonverkauf-showcase
 image: null
 date: 2015-08-03T17:49:46.000Z
 author: linus-huesler

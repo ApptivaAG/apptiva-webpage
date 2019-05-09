@@ -1,6 +1,6 @@
 ---
 templateKey: 'service-page'
-path: /unterstuetzung
+slug: /unterstuetzung
 title: Unterstützung
 image: img/life-ring.png
 author: philip-schoenholzer

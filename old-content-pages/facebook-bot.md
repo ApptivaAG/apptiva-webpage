@@ -1,6 +1,6 @@
 ---
 title: Facebook Bot
-path: facebook-bot
+slug: facebook-bot
 image: null
 date: 2016-08-16T16:51:32.000Z
 author: linus-huesler

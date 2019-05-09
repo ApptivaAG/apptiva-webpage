@@ -1,6 +1,6 @@
 ---
 title: Impressum
-path: impressum
+slug: impressum
 image: null
 date: 2015-07-14T22:39:19.000Z
 author: linus-huesler

@@ -1,6 +1,6 @@
 ---
 title: Wir sind in die Startup Station umgezogen
-path: wir-sind-in-die-startup-station-umgezogen
+slug: wir-sind-in-die-startup-station-umgezogen
 templateKey: blog-post
 image: img/buero_innen_02_.jpg
 date: 2018-02-06T20:16:49.000Z

@@ -1,6 +1,6 @@
 ---
 templateKey: 'service-page'
-path: /dashboard-notaufnahme
+slug: /dashboard-notaufnahme
 title: Dashboard für die Notaufnahme
 image: img/eris-devices.png
 author: philip-schoenholzer

@@ -1,6 +1,6 @@
 ---
 title: Kunden
-path: kunden
+slug: kunden
 image: null
 date: 2016-11-01T12:59:33.000Z
 author: philip-schoenholzer

@@ -1,6 +1,6 @@
 ---
 title: Karte
-path: karte
+slug: karte
 image: null
 date: 2015-09-28T15:18:17.000Z
 author: linus-huesler

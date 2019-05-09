@@ -1,6 +1,6 @@
 ---
 title: Preisvergleich
-path: preisvergleich
+slug: preisvergleich
 image: null
 date: 2015-08-04T20:42:17.000Z
 author: linus-huesler

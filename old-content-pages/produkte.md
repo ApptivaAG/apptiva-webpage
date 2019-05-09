@@ -1,6 +1,6 @@
 ---
 title: Produkte
-path: produkte
+slug: produkte
 image: null
 date: 2016-03-10T18:31:53.000Z
 author: philip-schoenholzer

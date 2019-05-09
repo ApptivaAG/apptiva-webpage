@@ -1,6 +1,6 @@
 ---
 title: Jest Test debuggen mit Visual Studio Code
-path: jest-test-debuggen-mit-visual-studio-code
+slug: jest-test-debuggen-mit-visual-studio-code
 templateKey: blog-post
 image: img/Jest-Test-debuggen-mit-Visual-Studio-Code.png
 date: 2018-01-04T11:13:30.000Z

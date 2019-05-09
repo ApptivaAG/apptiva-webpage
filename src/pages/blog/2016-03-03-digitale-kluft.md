@@ -1,6 +1,6 @@
 ---
 title: Die Digitale Kluft
-path: digitale-kluft
+slug: digitale-kluft
 templateKey: blog-post
 image: img/digitale-kluft.png
 date: 2016-03-03T11:48:45.000Z

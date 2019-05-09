@@ -1,6 +1,6 @@
 ---
 title: Dienstleistungen
-path: ueber-apptiva
+slug: ueber-apptiva
 image: null
 date: 2015-06-28T21:49:10.000Z
 author: linus-huesler

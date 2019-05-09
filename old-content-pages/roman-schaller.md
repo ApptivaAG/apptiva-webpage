@@ -1,6 +1,6 @@
 ---
 title: Roman Schaller
-path: roman-schaller
+slug: roman-schaller
 image: null
 date: 2015-10-08T14:46:10.000Z
 author: roman-schaller

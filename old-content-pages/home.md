@@ -1,6 +1,6 @@
 ---
 title: Home
-path: home
+slug: home
 image: 'http://apptiva.ch/wp-content/uploads/2015/06/bg_see-compressor.jpg'
 date: 2015-06-28T21:17:40.000Z
 author: linus-huesler

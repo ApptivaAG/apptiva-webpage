@@ -1,6 +1,6 @@
 ---
 title: Blog
-path: blog
+slug: blog
 image: null
 date: 2015-06-28T21:10:33.000Z
 author: linus-huesler

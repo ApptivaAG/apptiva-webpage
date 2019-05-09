@@ -1,6 +1,6 @@
 ---
 templateKey: 'service-page'
-path: persona-workshop
+slug: persona-workshop
 title: Persona-Workshop
 image: img/persona-hero.jpg
 author: philip-schoenholzer

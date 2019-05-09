@@ -1,6 +1,6 @@
 ---
 title: Bots und Chatbots
-path: bots
+slug: bots
 image: null
 date: 2016-10-15T10:45:36.000Z
 author: linus-huesler

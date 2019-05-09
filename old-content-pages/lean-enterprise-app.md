@@ -1,6 +1,6 @@
 ---
 title: Lean Enterprise App
-path: lean-enterprise-app
+slug: lean-enterprise-app
 image: null
 date: 2015-07-23T21:45:42.000Z
 author: linus-huesler
@@ -43,7 +43,7 @@ categories: []
 <p class="p1">[/five_sixth_last]</p>
 <p class="p1">[one_sixth]</p>
 <p class="p1"></p>
-<p class="p1"><img src="http://apptiva.ch/wp-content/uploads/2015/07/road-nature-hand-path.jpg" alt="road-nature-hand-path" width="500" height="325" class="alignnone size-full wp-image-760" /></p>
+<p class="p1"><img src="http://apptiva.ch/wp-content/uploads/2015/07/road-nature-hand-slug.jpg" alt="road-nature-hand-slug" width="500" height="325" class="alignnone size-full wp-image-760" /></p>
 <p class="p1">[/one_sixth]</p>
 <p class="p1">[five_sixth_last]</p>
 

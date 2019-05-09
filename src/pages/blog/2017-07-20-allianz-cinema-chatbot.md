@@ -1,6 +1,6 @@
 ---
 title: Allianz Cinema Chatbot
-path: allianz-cinema-chatbot
+slug: allianz-cinema-chatbot
 templateKey: blog-post
 image: img/allianz-cinema-bot.png
 date: 2017-07-20T15:37:14.000Z

@@ -1,6 +1,6 @@
 ---
 title: Unterstützung
-path: unterstuetzung
+slug: unterstuetzung
 image: null
 date: 2016-03-10T18:38:46.000Z
 author: philip-schoenholzer

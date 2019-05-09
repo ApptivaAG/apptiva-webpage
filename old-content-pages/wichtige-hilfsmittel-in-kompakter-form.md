@@ -1,6 +1,6 @@
 ---
 title: Wichtige Hilfsmittel in kompakter Form
-path: wichtige-hilfsmittel-in-kompakter-form
+slug: wichtige-hilfsmittel-in-kompakter-form
 image: null
 date: 2015-11-03T14:15:43.000Z
 author: linus-huesler

@@ -1,6 +1,6 @@
 ---
 title: Philip Schönholzer
-path: philip-schoenholzer
+slug: philip-schoenholzer
 image: null
 date: 2015-10-15T14:56:12.000Z
 author: philip-schoenholzer

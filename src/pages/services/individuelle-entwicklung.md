@@ -1,6 +1,6 @@
 ---
 templateKey: 'service-page'
-path: /individuelle-entwicklung
+slug: /individuelle-entwicklung
 title: Individuelle Softwareentwicklung
 image: ../../img/apps.png
 author: philip-schoenholzer

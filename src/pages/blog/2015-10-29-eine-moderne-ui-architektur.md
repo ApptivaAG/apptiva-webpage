@@ -1,6 +1,6 @@
 ---
 title: Eine moderne UI-Architektur
-path: eine-moderne-ui-architektur
+slug: eine-moderne-ui-architektur
 templateKey: blog-post
 image: img/netz.jpg
 date: 2015-10-29T09:22:59.000Z

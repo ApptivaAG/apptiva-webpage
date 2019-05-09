@@ -117,7 +117,7 @@ export const employeeFragment = graphql`
     html
     frontmatter {
       templateKey
-      path
+      slug
       name
       claim
       contact {

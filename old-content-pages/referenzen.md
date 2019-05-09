@@ -1,6 +1,6 @@
 ---
 title: Referenzen
-path: referenzen
+slug: referenzen
 image: null
 date: 2016-02-03T15:52:19.000Z
 author: linus-huesler
