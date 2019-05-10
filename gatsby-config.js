@@ -84,6 +84,18 @@ module.exports = {
     },
     'gatsby-plugin-svgr',
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Apptiva AG`,
+        short_name: `Apptiva`,
+        start_url: `/`,
+        background_color: `#252526`,
+        theme_color: `#008FD7`,
+        display: `standalone`,
+        icon: `src/img/icon.svg`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: 'UA-66015649-1',
