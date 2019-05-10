@@ -76,11 +76,11 @@ export default ({ employees }) => (
       </Subtitle>
       <EmployeeList>
         {employees.edges.map(edge => {
-          const { name, claim, contact, path, preview } = edge.node.frontmatter
+          const { name, claim, contact, slug, preview } = edge.node.frontmatter
           return (
             <EmployeeWrapper key={edge.node.id}>
               <Employee>
-                <LinkStyled to={path}>
+                <LinkStyled to={slug}>
                   <Avatar
                     fixed={{
                       ...preview.childImageSharp.fixed,
@@ -117,7 +117,7 @@ export const employeeFragment = graphql`
     html
     frontmatter {
       templateKey
-      path
+      slug
       name
       claim
       contact {

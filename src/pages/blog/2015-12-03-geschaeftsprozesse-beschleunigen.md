@@ -1,6 +1,6 @@
 ---
 title: Geschäftsprozesse beschleunigen
-path: geschaeftsprozesse-beschleunigen
+slug: geschaeftsprozesse-beschleunigen
 templateKey: blog-post
 image: img/beschleunigen.jpg
 date: 2015-12-03T15:53:27.000Z

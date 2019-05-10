@@ -1,6 +1,6 @@
 ---
 title: Stakeholder-Interviews
-path: stakeholder-interviews
+slug: stakeholder-interviews
 templateKey: blog-post
 image: img/stakeholder-interviews.png
 date: 2016-01-15T15:43:50.000Z

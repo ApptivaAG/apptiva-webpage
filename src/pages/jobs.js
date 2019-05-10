@@ -9,7 +9,7 @@ import Layout from '../components/Layout'
 const metadata = {
   title: 'Jobs',
   description: 'Wir bieten Jobs für Erwachsene',
-  path: 'jobs',
+  slug: 'jobs',
 }
 
 const Searching = styled.h4`

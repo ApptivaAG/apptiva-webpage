@@ -1,6 +1,6 @@
 ---
 title: React Komponenten mit Chrome Timeline analysieren
-path: react-komponenten-mit-chrome-timeline-analysieren
+slug: react-komponenten-mit-chrome-timeline-analysieren
 templateKey: blog-post
 image: ./img/profiling.png
 date: 2016-11-16T21:01:42.000Z

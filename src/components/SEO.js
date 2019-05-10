@@ -82,8 +82,8 @@ const SEO = ({ metaData, postImage, isBlogPost }) => {
   const description =
     metaData.description || metaData.excerpt || config.description
   const image = postImage ? `${config.url}${postImage}` : config.logo
-  const url = metaData.path
-    ? `${config.url}${path.sep}${metaData.path}`
+  const url = metaData.slug
+    ? `${config.url}${path.sep}${metaData.slug}`
     : config.url
   const date = isBlogPost ? metaData.isoDate : false
   const author = metaData.author || config.company
@@ -99,7 +99,7 @@ const SEO = ({ metaData, postImage, isBlogPost }) => {
   })
 
   return (
-    <Helmet>
+    <Helmet htmlAttributes={{ lang: 'de-CH' }}>
       {/* General tags */}
       <meta name="description" content={description} />
       <meta name="image" content={image} />
@@ -137,7 +137,7 @@ SEO.propTypes = {
     description: PropTypes.string,
     author: PropTypes.string,
     isoDate: PropTypes.any,
-    path: PropTypes.string,
+    slug: PropTypes.string,
   }),
   postImage: PropTypes.string,
 }

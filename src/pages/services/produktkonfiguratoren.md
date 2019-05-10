@@ -1,6 +1,6 @@
 ---
 templateKey: 'service-page'
-path: /produktkonfiguratoren
+slug: /produktkonfiguratoren
 title: Angebots- & <br/>Produkt-Konfiguratoren
 image: img/partyplaner.png
 author: philip-schoenholzer

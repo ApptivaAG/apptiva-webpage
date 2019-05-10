@@ -1,6 +1,6 @@
 ---
 templateKey: 'service-page'
-path: /impressum
+slug: /impressum
 title: Impressum
 author: philip-schoenholzer
 description: ''

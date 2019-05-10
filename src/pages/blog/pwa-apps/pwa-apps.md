@@ -1,6 +1,6 @@
 ---
 title: Progressive Web Apps
-path: pwa-apps
+slug: pwa-apps
 templateKey: blog-post
 image: pwa-app-transparent.png
 date: 2019-01-07

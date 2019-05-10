@@ -1,6 +1,6 @@
 ---
 templateKey: 'service-page'
-path: /telefonverkauf-showcase
+slug: /telefonverkauf-showcase
 title: Telefonverkauf Showcase
 author: philip-schoenholzer
 description: 

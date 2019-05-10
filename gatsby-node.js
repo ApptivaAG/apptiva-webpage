@@ -1,5 +1,4 @@
 const path = require('path')
-const { createFilePath } = require('gatsby-source-filesystem')
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
@@ -15,7 +14,7 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             id
             frontmatter {
-              path
+              slug
               templateKey
               title
             }
@@ -25,29 +24,29 @@ exports.createPages = ({ actions, graphql }) => {
     }
   `).then(result => {
     if (result.errors) {
-      result.errors.forEach(e => console.error(e.toString()))
-      return Promise.reject(result.errors)
+      throw result.errors
     }
 
-    const edges = result.data.allMarkdownRemark.edges
+    const { edges } = result.data.allMarkdownRemark
 
     edges.forEach(({ node }, index) => {
       const prev = index === 0 ? null : edges[index - 1].node
       const next = index === edges.length - 1 ? null : edges[index + 1].node
-      const { id } = node
+
       createPage({
-        path: node.frontmatter.path,
+        path: path.join('/', node.frontmatter.slug, '/'),
         component: path.resolve(
           `src/templates/${String(node.frontmatter.templateKey)}.js`
         ),
         // additional data can be passed via context
         context: {
-          id,
+          slug: node.frontmatter.slug,
           prev,
           next,
         },
       })
     })
+    return null
   })
 
   const pages = graphql(`
@@ -60,7 +59,7 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             id
             frontmatter {
-              path
+              slug
               templateKey
             }
           }
@@ -69,25 +68,24 @@ exports.createPages = ({ actions, graphql }) => {
     }
   `).then(result => {
     if (result.errors) {
-      result.errors.forEach(e => console.error(e.toString()))
-      return Promise.reject(result.errors)
+      throw result.errors
     }
 
-    const edges = result.data.allMarkdownRemark.edges
+    const { edges } = result.data.allMarkdownRemark
 
     edges.forEach(({ node }) => {
-      const { id } = node
       createPage({
-        path: node.frontmatter.path,
+        path: path.join('/', node.frontmatter.slug, '/'),
         component: path.resolve(
           `src/templates/${String(node.frontmatter.templateKey)}.js`
         ),
         // additional data can be passed via context
         context: {
-          id,
+          slug: node.frontmatter.slug,
         },
       })
     })
+    return null
   })
 
   return Promise.all([posts, pages])

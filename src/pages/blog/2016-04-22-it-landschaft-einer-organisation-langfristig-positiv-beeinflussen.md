@@ -1,6 +1,6 @@
 ---
 title: IT Landschaft einer Organisation langfristig positiv beeinflussen
-path: it-landschaft-einer-organisation-langfristig-positiv-beeinflussen
+slug: it-landschaft-einer-organisation-langfristig-positiv-beeinflussen
 templateKey: blog-post
 image: img/landschaft.jpg
 date: 2016-04-22T15:31:35.000Z

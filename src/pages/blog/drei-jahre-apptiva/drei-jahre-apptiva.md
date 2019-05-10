@@ -1,6 +1,6 @@
 ---
 title: Drei Jahre Apptiva
-path: drei-jahre-apptiva
+slug: drei-jahre-apptiva
 templateKey: blog-post
 image: apptiva-guys.png
 date: 2018-07-27

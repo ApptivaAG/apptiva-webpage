@@ -1,6 +1,6 @@
 ---
 title: V-Sponse - Plattform für Bewerbungsvideos
-path: vsponse
+slug: vsponse
 templateKey: blog-post
 image: video-answer.png
 date: 2018-10-08

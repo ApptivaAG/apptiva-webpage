@@ -1,7 +1,7 @@
 ---
 
 templateKey: 'service-page'
-path: architektur-review
+slug: architektur-review
 title: Architektur-Review
 image: img/architektur-review.jpg
 author: Markus Tanner

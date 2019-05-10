@@ -1,6 +1,6 @@
 ---
 title: MwSt & Startups
-path: mwst-startups
+slug: mwst-startups
 templateKey: blog-post
 image: ./img/mwst.jpg
 date: 2016-10-14T17:40:09.000Z

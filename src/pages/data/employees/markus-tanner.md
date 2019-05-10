@@ -1,6 +1,6 @@
 ---
 templateKey: employee-page
-path: /markus-tanner
+slug: /markus-tanner
 name: Markus Tanner
 claim: Überlegender Gipfelstürmer
 preview: images/markus-tanner-prev.jpg

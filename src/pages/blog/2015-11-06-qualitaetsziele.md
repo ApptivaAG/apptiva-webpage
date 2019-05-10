@@ -1,6 +1,6 @@
 ---
 title: Qualitätsziele
-path: qualitaetsziele
+slug: qualitaetsziele
 templateKey: blog-post
 image: img/qualitaetsziele-a4.png
 date: 2015-11-06T09:48:05.000Z

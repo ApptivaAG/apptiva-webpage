@@ -1,6 +1,6 @@
 ---
 title: Was macht einen guten Usability-Audit aus?
-path: usability-audit
+slug: usability-audit
 templateKey: blog-post
 image: img/magnifying-glass.jpg
 date: 2018-05-30T17:16:49

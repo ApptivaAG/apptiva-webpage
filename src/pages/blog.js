@@ -17,7 +17,7 @@ export default ({ data }) => {
           {posts.map(({ node: post }) => (
             <div key={post.id}>
               <p style={{ marginTop: '4em', fontWeight: 600 }}>
-                <Link to={`/${post.frontmatter.path}`}>
+                <Link to={`/${post.frontmatter.slug}`}>
                   {post.frontmatter.title}
                 </Link>
                 <span> &bull; </span>
@@ -30,7 +30,7 @@ export default ({ data }) => {
                   : post.excerpt}
                 <Link
                   style={{ fontWeight: 500, marginLeft: 5 }}
-                  to={`/${post.frontmatter.path}`}
+                  to={`/${post.frontmatter.slug}`}
                 >
                   Weiterlesen →
                 </Link>
@@ -55,7 +55,7 @@ export const blogListPage = graphql`
           id
           frontmatter {
             title
-            path
+            slug
             templateKey
             date(formatString: "D. MMMM YYYY", locale: "de")
             description
