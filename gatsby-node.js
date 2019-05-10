@@ -1,5 +1,4 @@
 const path = require('path')
-const { createFilePath } = require('gatsby-source-filesystem')
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
@@ -25,8 +24,7 @@ exports.createPages = ({ actions, graphql }) => {
     }
   `).then(result => {
     if (result.errors) {
-      result.errors.forEach(e => console.error(e.toString()))
-      return Promise.reject(result.errors)
+      throw result.errors
     }
 
     const { edges } = result.data.allMarkdownRemark
@@ -34,9 +32,9 @@ exports.createPages = ({ actions, graphql }) => {
     edges.forEach(({ node }, index) => {
       const prev = index === 0 ? null : edges[index - 1].node
       const next = index === edges.length - 1 ? null : edges[index + 1].node
-      const { id } = node
+
       createPage({
-        path: node.frontmatter.slug,
+        path: path.join('/', node.frontmatter.slug, '/'),
         component: path.resolve(
           `src/templates/${String(node.frontmatter.templateKey)}.js`
         ),
@@ -48,6 +46,7 @@ exports.createPages = ({ actions, graphql }) => {
         },
       })
     })
+    return null
   })
 
   const pages = graphql(`
@@ -69,16 +68,14 @@ exports.createPages = ({ actions, graphql }) => {
     }
   `).then(result => {
     if (result.errors) {
-      result.errors.forEach(e => console.error(e.toString()))
-      return Promise.reject(result.errors)
+      throw result.errors
     }
 
     const { edges } = result.data.allMarkdownRemark
 
     edges.forEach(({ node }) => {
-      const { id } = node
       createPage({
-        path: node.frontmatter.slug,
+        path: path.join('/', node.frontmatter.slug, '/'),
         component: path.resolve(
           `src/templates/${String(node.frontmatter.templateKey)}.js`
         ),
@@ -88,6 +85,7 @@ exports.createPages = ({ actions, graphql }) => {
         },
       })
     })
+    return null
   })
 
   return Promise.all([posts, pages])

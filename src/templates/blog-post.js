@@ -161,11 +161,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-// {
-//   childImageSharp {
-//     sizes {
-//       ...GatsbyImageSharpFluid
-//     }
-//   }
-// }
