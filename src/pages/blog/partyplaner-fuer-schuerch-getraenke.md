@@ -1,6 +1,6 @@
 ---
 title: Partyplaner für Schürch Getränke
-path: partyplaner-fuer-schuerch-getraenke
+slug: partyplaner-fuer-schuerch-getraenke
 templateKey: blog-post
 image: ./img/partyplaner-hero.png
 date: 2018-04-17T10:16:49.000Z

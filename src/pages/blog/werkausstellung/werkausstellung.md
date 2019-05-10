@@ -1,6 +1,6 @@
 ---
 title: Unsere kleine Werkausstellung
-path: werkausstellung
+slug: werkausstellung
 templateKey: blog-post
 image: werkausstellung.jpg
 date: 2018-10-01

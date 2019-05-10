@@ -1,6 +1,6 @@
 ---
 title: Dashboard für die Notaufnahme
-path: dashboard-notaufnahme
+slug: dashboard-notaufnahme
 image: 'http://apptiva.ch/wp-content/uploads/2016/02/eris_devices.png'
 date: 2016-02-04T10:37:36.000Z
 author: linus-huesler

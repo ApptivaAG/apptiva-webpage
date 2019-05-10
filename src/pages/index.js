@@ -272,7 +272,7 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
           <ColList>
             {posts.map(({ node: post }) => (
               <ListItem key={post.id} full align="left">
-                <Link to={`/${post.frontmatter.path}`}>
+                <Link to={post.frontmatter.slug}>
                   <ImgStyled
                     style={{ width: '100%' }}
                     fixed={{
@@ -379,7 +379,7 @@ export const indexPageQuery = graphql`
           id
           frontmatter {
             title
-            path
+            slug
             image {
               childImageSharp {
                 fixed(height: 150, width: 300) {

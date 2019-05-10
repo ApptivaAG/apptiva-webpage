@@ -1,6 +1,6 @@
 ---
 title: Vorgehensweise
-path: vorgehensweise
+slug: vorgehensweise
 image: null
 date: 2015-07-23T08:45:26.000Z
 author: linus-huesler

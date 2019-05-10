@@ -1,6 +1,6 @@
 ---
 templateKey: employee-page
-path: /philip-schoenholzer
+slug: /philip-schoenholzer
 name: Philip Schönholzer
 claim: Vorauszeichnender Querdenker
 preview: images/philip-schoenholzer-prev.jpg

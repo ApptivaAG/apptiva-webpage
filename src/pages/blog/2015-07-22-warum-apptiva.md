@@ -1,6 +1,6 @@
 ---
 title: 'Warum Apptiva?'
-path: warum-apptiva
+slug: warum-apptiva
 templateKey: blog-post
 image: img/blauer-himmel.jpg
 date: 2015-07-22T20:26:11.000Z

@@ -1,6 +1,6 @@
 ---
 title: Testimonials
-path: testimonials
+slug: testimonials
 image: null
 date: 2016-11-01T13:27:56.000Z
 author: philip-schoenholzer

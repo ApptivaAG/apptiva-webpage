@@ -1,6 +1,6 @@
 ---
 title: Anwender im Vordergrund
-path: anwender-im-vordergrund
+slug: anwender-im-vordergrund
 templateKey: blog-post
 image: img/junge-am-meer.jpg
 date: 2015-07-29T20:22:18.000Z

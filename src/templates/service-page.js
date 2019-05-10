@@ -245,8 +245,8 @@ export default props => {
 }
 
 export const pageQuery = graphql`
-  query ServicePageByID($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+  query ServicePageByID($slug: String!) {
+    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       id
       html
       frontmatter {

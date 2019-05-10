@@ -1,6 +1,6 @@
 ---
 title: Markus Tanner
-path: markus-tanner
+slug: markus-tanner
 image: null
 date: 2017-10-04T16:52:21.000Z
 author: markus-tanner

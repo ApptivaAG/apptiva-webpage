@@ -1,6 +1,6 @@
 ---
 title: Twitter
-path: twitter
+slug: twitter
 image: 'http://apptiva.ch/wp-content/uploads/2015/11/folge_uns.jpg'
 date: 2015-11-11T10:31:24.000Z
 author: linus-huesler

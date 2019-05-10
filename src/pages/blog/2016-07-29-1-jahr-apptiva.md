@@ -1,6 +1,6 @@
 ---
 title: 1 Jahr Apptiva
-path: 1-jahr-apptiva
+slug: 1-jahr-apptiva
 templateKey: blog-post
 image: img/birthday.jpg
 date: 2016-07-29T16:23:46.000Z

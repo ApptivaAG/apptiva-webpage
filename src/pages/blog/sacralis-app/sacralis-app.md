@@ -1,6 +1,6 @@
 ---
 title: sacralis - nun mit Push-Notifikationen
-path: sacralis-app
+slug: sacralis-app
 templateKey: blog-post
 image: sacralis.png
 date: 2018-12-24

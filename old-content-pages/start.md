@@ -1,6 +1,6 @@
 ---
 title: Start
-path: start
+slug: start
 image: null
 date: 2016-10-31T16:47:34.000Z
 author: philip-schoenholzer

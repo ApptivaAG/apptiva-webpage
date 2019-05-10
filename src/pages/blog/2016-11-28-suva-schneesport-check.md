@@ -1,6 +1,6 @@
 ---
 title: Suva Schneesport-Check
-path: suva-schneesport-check
+slug: suva-schneesport-check
 templateKey: blog-post
 image: img/schneesport-check.jpg
 date: 2016-11-28T14:18:33.000Z

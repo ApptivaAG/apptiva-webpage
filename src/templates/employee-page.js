@@ -239,8 +239,8 @@ export default props => {
 }
 
 export const employeePageQuery = graphql`
-  query EmployeePageByID($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+  query EmployeePageByID($slug: String!) {
+    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       id
       html
       frontmatter {

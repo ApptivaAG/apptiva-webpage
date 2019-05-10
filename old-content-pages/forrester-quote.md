@@ -1,6 +1,6 @@
 ---
 title: Forrester Quote
-path: forrester-quote
+slug: forrester-quote
 image: 'http://apptiva.ch/wp-content/uploads/2015/06/mainbg.jpg'
 date: 2015-06-29T23:13:24.000Z
 author: linus-huesler

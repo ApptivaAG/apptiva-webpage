@@ -1,6 +1,6 @@
 ---
 title: Linus Hüsler
-path: linus-huesler
+slug: linus-huesler
 image: null
 date: 2015-10-06T15:59:37.000Z
 author: linus-huesler

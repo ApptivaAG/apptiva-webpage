@@ -1,6 +1,6 @@
 ---
 title: Serverless Apps
-path: serverless
+slug: serverless
 templateKey: blog-post
 image: apptiva-lambda.png
 date: 2019-02-18

@@ -1,6 +1,6 @@
 ---
 title: Der Digitale Wandel
-path: der-digitale-wandel
+slug: der-digitale-wandel
 templateKey: blog-post
 image: img/stonehenge-357227_1280.jpg
 date: 2015-07-08T22:34:55.000Z

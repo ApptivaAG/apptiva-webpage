@@ -1,6 +1,6 @@
 ---
 title: 'Chatbot entwickeln mit React, Redux, Wit.ai und Slack'
-path: chatbot-entwickeln-mit-react-redux-wit-ai-und-slack-teil-1
+slug: chatbot-entwickeln-mit-react-redux-wit-ai-und-slack-teil-1
 templateKey: blog-post
 image: img/roboter.jpg
 date: 2016-11-03T11:30:17.000Z

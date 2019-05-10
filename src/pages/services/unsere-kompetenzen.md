@@ -1,6 +1,6 @@
 ---
 templateKey: 'service-page'
-path: /unsere-kompetenzen
+slug: /unsere-kompetenzen
 title: Unsere Kompetenzen
 author: philip-schoenholzer
 description: In den vielen Jahren in denen wir in der Informatik tätig sind, konnten wir echte Erfahrungen aus unterschiedlichen Bereichen sammeln. Die heute für uns wichtigsten haben wir hier aufgelistet.

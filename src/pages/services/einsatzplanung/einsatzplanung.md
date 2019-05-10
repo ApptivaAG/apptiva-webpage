@@ -1,6 +1,6 @@
 ---
 templateKey: 'service-page'
-path: /einsatzplanung
+slug: /einsatzplanung
 title: Einsatzplanung für den Gebäudeunterhalt
 image: planung.png
 author: roman-schaller

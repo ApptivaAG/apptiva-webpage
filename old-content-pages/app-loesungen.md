@@ -1,6 +1,6 @@
 ---
 title: App-Lösungen
-path: app-loesungen
+slug: app-loesungen
 image: 'http://apptiva.ch/wp-content/uploads/2015/06/Apps.png'
 date: 2016-04-21T09:06:46.000Z
 author: philip-schoenholzer

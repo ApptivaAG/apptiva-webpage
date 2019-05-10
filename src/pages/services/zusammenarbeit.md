@@ -1,6 +1,6 @@
 ---
 templateKey: 'service-page'
-path: /zusammenarbeit
+slug: /zusammenarbeit
 title: Zusammenarbeit
 author: philip-schoenholzer
 description: ''

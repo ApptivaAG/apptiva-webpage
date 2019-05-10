@@ -1,6 +1,6 @@
 ---
 templateKey: employee-page
-path: /roman-schaller
+slug: /roman-schaller
 name: Roman Schaller
 claim: Wissensschaffender Technologe
 preview: images/roman-schaller-prev.jpg

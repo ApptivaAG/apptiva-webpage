@@ -1,6 +1,6 @@
 ---
 title: Persona-Workshop
-path: persona-workshop
+slug: persona-workshop
 image: 'http://apptiva.ch/wp-content/uploads/2016/02/Persona.jpg'
 date: 2016-02-05T17:02:44.000Z
 author: philip-schoenholzer

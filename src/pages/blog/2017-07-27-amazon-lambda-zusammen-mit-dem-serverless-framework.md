@@ -1,6 +1,6 @@
 ---
 title: Amazon Lambda zusammen mit dem Serverless Framework
-path: amazon-lambda-zusammen-mit-dem-serverless-framework
+slug: amazon-lambda-zusammen-mit-dem-serverless-framework
 templateKey: blog-post
 image: img/serverless-application-development.jpg
 date: 2017-07-27T13:31:48.000Z

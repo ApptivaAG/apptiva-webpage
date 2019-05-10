@@ -1,6 +1,6 @@
 ---
 title: Bots Holzöpfel ond Zipfelchappe
-path: bots-holzoepfel-ond-zipfelchappe
+slug: bots-holzoepfel-ond-zipfelchappe
 templateKey: blog-post
 image: ./img/DSC_0042.jpg
 date: 2018-02-01T08:33:14.000Z

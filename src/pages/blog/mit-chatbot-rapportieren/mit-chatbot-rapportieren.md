@@ -1,6 +1,6 @@
 ---
 title: Mit einem Chatbot rapportieren
-path: mit-einem-chatbot-rapportieren
+slug: mit-einem-chatbot-rapportieren
 templateKey: blog-post
 image: chefbot.png
 date: 2019-04-28

@@ -1,6 +1,6 @@
 ---
 title: Technologie
-path: technologie
+slug: technologie
 image: null
 date: 2015-08-04T21:22:12.000Z
 author: linus-huesler

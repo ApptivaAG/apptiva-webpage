@@ -1,6 +1,6 @@
 ---
 title: Vorgehen Quote
-path: vorgehen-quote
+slug: vorgehen-quote
 image: 'http://apptiva.ch/wp-content/uploads/2015/07/auf-karte-suchen.jpg'
 date: 2015-07-24T08:19:47.000Z
 author: linus-huesler

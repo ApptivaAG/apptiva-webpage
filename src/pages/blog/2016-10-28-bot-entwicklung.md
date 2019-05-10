@@ -1,6 +1,6 @@
 ---
 title: Bot Entwicklung in der Schweiz
-path: bot-entwicklung
+slug: bot-entwicklung
 templateKey: blog-post
 image: img/bot-entwicklung.png
 date: 2016-10-28T14:57:14.000Z

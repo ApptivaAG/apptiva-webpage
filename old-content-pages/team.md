@@ -1,6 +1,6 @@
 ---
 title: Team
-path: team
+slug: team
 image: null
 date: 2015-06-28T22:09:35.000Z
 author: linus-huesler

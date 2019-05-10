@@ -1,6 +1,6 @@
 ---
 title: Mehr Überblick mit Storymap
-path: mehr-ueberblick-mit-storymap
+slug: mehr-ueberblick-mit-storymap
 templateKey: blog-post
 image: img/storymap-post-image.png
 date: 2016-04-15T16:50:44.000Z

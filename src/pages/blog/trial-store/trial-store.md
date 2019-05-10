@@ -1,6 +1,6 @@
 ---
 title: Trial Store - Globus Innovationsprojekt
-path: trial-store
+slug: trial-store
 templateKey: blog-post
 image: trial-store-titel.png
 date: 2018-11-12
