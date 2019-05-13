@@ -14,7 +14,8 @@ const EmployeeList = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0 -0.5rem;
+  margin: 0 auto;
+  max-width: 800px;
 `
 const EmployeeWrapper = styled.div`
   font-size: 0.8em;
