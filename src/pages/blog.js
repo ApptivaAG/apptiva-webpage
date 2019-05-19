@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import { Section, Title, Container } from '../layouts/style'
+import { Section, MainTitle, Container } from '../layouts/style'
 import { truncate } from '../util'
 import Layout from '../components/Layout'
 
@@ -13,7 +13,7 @@ export default ({ data }) => {
       <main>
         <Section>
           <Container>
-            <Title>Blogbeiträge</Title>
+            <MainTitle>Blogbeiträge</MainTitle>
 
             {posts.map(({ node: post }) => (
               <div key={post.id}>

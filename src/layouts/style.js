@@ -29,7 +29,16 @@ export const Right = styled.div`
   text-align: right;
 `
 
-export const Title = styled.h1`
+export const MainTitle = styled.h1`
+  font-size: 2.8em;
+
+  text-align: center;
+  @media (min-width: 381px) {
+    font-size: 4em;
+  }
+`
+
+export const Title = styled.h2`
   font-size: 2.8em;
 
   text-align: center;
