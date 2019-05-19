@@ -85,11 +85,11 @@ const Markdown = styled.div`
     }
   }
 
-  .custom-block-avatar {
+  .custom-block-avatar > .custom-block-body {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    .gatsby-resp-image-background-image {
+    .gatsby-resp-image-wrapper {
       border: 5px solid #ececec;
       border-radius: 50%;
       overflow: hidden;
@@ -104,7 +104,7 @@ const Markdown = styled.div`
     }
   }
 
-  .custom-block-no-margin > * {
+  .custom-block-no-margin > .custom-block-body > * {
     margin: 0 !important;
   }
 
