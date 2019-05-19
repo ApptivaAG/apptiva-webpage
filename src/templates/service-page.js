@@ -13,7 +13,7 @@ import { stripHTML } from '../util'
 import Layout from '../components/Layout'
 import IconErrorBoundary from '../components/IconErrorBoundary'
 
-const HeadArea = styled.div``
+const HeadArea = styled.header``
 
 const HeaderTitle = styled.h1`
   font-size: 2.4rem;
@@ -59,7 +59,7 @@ const faName = string => {
 
 const icons = icon => React.createElement(FontAwesome[faName(icon)])
 
-const ListTitle = styled.div`
+const ListTitle = styled.header`
   margin-bottom: 3em;
   text-align: center;
 `
