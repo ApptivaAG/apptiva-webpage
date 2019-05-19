@@ -107,11 +107,19 @@ export const BlogPostTemplate = ({
         postImage={metaData.image.childImageSharp.resize.src}
       />
       <Container>
-        <Header title={title} image={image} />
-        {description && <Description>{description}</Description>}
-        {author && <Published author={author} date={date} />}
-        <PostContent content={content} />
-        <Navigation next={navigation.next} prev={navigation.prev} />
+        <article>
+          <header>
+            <Header title={title} image={image} />
+            {description && <Description>{description}</Description>}
+            {author && <Published author={author} date={date} />}
+          </header>
+          <section>
+            <PostContent content={content} />
+          </section>
+          <footer>
+            <Navigation next={navigation.next} prev={navigation.prev} />
+          </footer>
+        </article>
       </Container>
     </main>
   )

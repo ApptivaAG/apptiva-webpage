@@ -12,7 +12,7 @@ import {
 } from 'react-icons/fa'
 
 import Content, { HTMLContent } from '../components/Content'
-import { Title, Subtitle, Section, Container } from '../layouts/style'
+import { MainTitle, Subtitle, Section, Container } from '../layouts/style'
 import Layout, { theme } from '../components/Layout'
 import SEO from '../components/SEO'
 
@@ -149,7 +149,7 @@ export const EmployeePageTemplate = ({
       <SEO metaData={metaData} postImage={seoImage} />
       <Section>
         <Container>
-          <Title>{name}</Title>
+          <MainTitle>{name}</MainTitle>
           <Subtitle>{claim}</Subtitle>
         </Container>
       </Section>

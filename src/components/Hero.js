@@ -1,4 +1,5 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled, { keyframes } from 'styled-components'
 
@@ -36,7 +37,7 @@ const ColTeaser = styled.div`
   padding: 2rem 1rem;
 `
 
-const Teaser = styled.h1`
+const Teaser = styled.h2`
   color: #aaa;
   margin: 0 0 2rem;
   max-width: 24rem;
@@ -116,46 +117,60 @@ const Jobs = styled.div`
   }
 `
 
-export default ({ image }) => (
-  <Section id="start">
-    <Logo src={logoSlogan} alt="Apptiva - Passgenaue Softwarelösungen" />
+export default () => {
+  const heroImage = useStaticQuery(graphql`
+    query {
+      imageSharp(fluid: { originalName: { regex: "/solution-collage.png/" } }) {
+        fluid(maxWidth: 1800) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+  `).imageSharp.fluid
 
-    <Columns>
-      <ColHero>
-        <Img
-          fluid={{ ...image, base64: svgData }}
-          alt="Erfolgreich umgesetzte Desktop, Mobile und Weblösungen"
-        />
-      </ColHero>
-      <ColTeaser>
-        <Teaser>
-          Hier kann schon bald Ihre{' '}
-          <Fat>iOS, Android, Desktop oder Web-Applikation</Fat> stehen.
-        </Teaser>
-        <Button href="/#dienstleistungen">Unser Angebot</Button>
-      </ColTeaser>
-    </Columns>
+  return (
+    <Section id="start">
+      <h1 css="font-size: 1em; margin: 0;">
+        <Logo src={logoSlogan} alt="Apptiva - Passgenaue Softwarelösungen" />
+      </h1>
 
-    <ArrowContainer>
-      <Arrow href="/#dienstleistungen">
-        <AnimatedArrow viewBox="0 0 16 10">
-          <path
-            d="M 2 2 L 8 8 L 14 2"
-            fill="transparent"
-            stroke="white"
-            strokeWidth="2"
+      <Columns>
+        <ColHero>
+          <Img
+            fluid={{ ...heroImage, base64: svgData }}
+            alt="Erfolgreich umgesetzte Desktop, Mobile und Weblösungen"
           />
-        </AnimatedArrow>
-      </Arrow>
-    </ArrowContainer>
-    <Jobs>
-      <Container>
-        <h3>
-          Wir suchen: <a href="/jobs">Fullstack-EntwicklerIn</a>
-        </h3>
-        Gleich bewerben und einen der besten Jobs in der
-        Software&shy;entwicklung schnappen.
-      </Container>
-    </Jobs>
-  </Section>
-)
+        </ColHero>
+        <ColTeaser>
+          <Teaser>
+            Hier kann schon bald Ihre{' '}
+            <Fat>iOS, Android, Desktop oder Web-Applikation</Fat> stehen.
+          </Teaser>
+          <Button href="/#dienstleistungen">Unser Angebot</Button>
+        </ColTeaser>
+      </Columns>
+
+      <ArrowContainer>
+        <Arrow href="/#dienstleistungen">
+          <AnimatedArrow viewBox="0 0 16 10">
+            <path
+              d="M 2 2 L 8 8 L 14 2"
+              fill="transparent"
+              stroke="white"
+              strokeWidth="2"
+            />
+          </AnimatedArrow>
+        </Arrow>
+      </ArrowContainer>
+      <Jobs>
+        <Container>
+          <h3>
+            Wir suchen: <a href="/jobs">Fullstack-EntwicklerIn</a>
+          </h3>
+          Gleich bewerben und einen der besten Jobs in der
+          Software&shy;entwicklung schnappen.
+        </Container>
+      </Jobs>
+    </Section>
+  )
+}

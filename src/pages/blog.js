@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import { Section, Title, Container } from '../layouts/style'
+import { Section, MainTitle, Container } from '../layouts/style'
 import { truncate } from '../util'
 import Layout from '../components/Layout'
 
@@ -10,35 +10,37 @@ export default ({ data }) => {
 
   return (
     <Layout>
-      <Section>
-        <Container>
-          <Title>Blogbeiträge</Title>
+      <main>
+        <Section>
+          <Container>
+            <MainTitle>Blogbeiträge</MainTitle>
 
-          {posts.map(({ node: post }) => (
-            <div key={post.id}>
-              <p style={{ marginTop: '4em', fontWeight: 600 }}>
-                <Link to={`/${post.frontmatter.slug}`}>
-                  {post.frontmatter.title}
-                </Link>
-                <span> &bull; </span>
-                <small>{post.frontmatter.date}</small>
-              </p>
-              <Img fixed={post.frontmatter.image.childImageSharp.fixed} />
-              <p>
-                {post.frontmatter.description
-                  ? truncate(post.frontmatter.description, 400)
-                  : post.excerpt}
-                <Link
-                  style={{ fontWeight: 500, marginLeft: 5 }}
-                  to={`/${post.frontmatter.slug}`}
-                >
-                  Weiterlesen →
-                </Link>
-              </p>
-            </div>
-          ))}
-        </Container>
-      </Section>
+            {posts.map(({ node: post }) => (
+              <div key={post.id}>
+                <p style={{ marginTop: '4em', fontWeight: 600 }}>
+                  <Link to={`/${post.frontmatter.slug}`}>
+                    {post.frontmatter.title}
+                  </Link>
+                  <span> &bull; </span>
+                  <small>{post.frontmatter.date}</small>
+                </p>
+                <Img fixed={post.frontmatter.image.childImageSharp.fixed} />
+                <p>
+                  {post.frontmatter.description
+                    ? truncate(post.frontmatter.description, 400)
+                    : post.excerpt}
+                  <Link
+                    style={{ fontWeight: 500, marginLeft: 5 }}
+                    to={`/${post.frontmatter.slug}`}
+                  >
+                    Weiterlesen →
+                  </Link>
+                </p>
+              </div>
+            ))}
+          </Container>
+        </Section>
+      </main>
     </Layout>
   )
 }

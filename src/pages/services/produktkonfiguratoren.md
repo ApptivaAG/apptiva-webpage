@@ -60,7 +60,7 @@ specs:
       text: Unsere Konfiguratoren können sehr gut in bereits vorhandene statische Webseiten integriert werden.
 ---
 
-# Kontakt
+## Kontakt
 
 [[right]]
 |[[avatar]]
@@ -70,7 +70,7 @@ Nehmen Sie jetzt Kontakt mit unserem Projektleiter auf.
 Er steht Ihnen gerne für Fragen zur Verfügung.
 
 [[no-margin]]
-|## Projektleiter
+|Projektleiter
 |
 |### Philip Schönholzer
 |

@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
-import { Title, Container, Subtitle, Button } from '../layouts/style'
+import { MainTitle, Container, Subtitle, Button } from '../layouts/style'
 import SEO from '../components/SEO'
 import config from '../config'
 import Layout from '../components/Layout'
@@ -29,7 +29,7 @@ export default () => (
       <Helmet title={`Jobs - ${config.company}`} />
       <SEO metaData={metadata} />
       <Container>
-        <Title>Jobs</Title>
+        <MainTitle>Jobs</MainTitle>
         <Subtitle>{metadata.description}</Subtitle>
 
         <Searching>Wir suchen</Searching>

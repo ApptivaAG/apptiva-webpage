@@ -118,7 +118,7 @@ const Buttonlist = styled(Right)`
     }
   }
 `
-const CustomerTitle = styled.h1`
+const CustomerTitle = styled.h2`
   font-size: 1.7em;
   color: #cbcbcb;
   text-align: center;
@@ -141,7 +141,7 @@ const Blockquote = styled.blockquote`
   margin-top: 4em;
   padding-bottom: 1em;
 `
-const PartnerTitle = styled.h1`
+const PartnerTitle = styled.h2`
   font-size: 1.7em;
   color: #cbcbcb;
   text-align: center;
@@ -163,11 +163,9 @@ const PartnerImage = styled.div`
 `
 
 const IndexPage = ({ testimonials, posts, employees, images }) => (
-  <Layout showNavbar={false}>
+  <Layout showHero>
     <main>
       <SEO />
-      <Hero image={images.heroImage.fluid} />
-      <Navbar location="root" />
       <Section id="dienstleistungen">
         <Container>
           <Title>Dienst&shy;leistungen</Title>
@@ -319,6 +317,7 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
       </Section>
       <Section style={{ padding: 0, marginBottom: '-4rem' }}>
         <iframe
+          loading="lazy"
           title="Google Maps"
           scrolling="no"
           marginHeight="0"
@@ -405,13 +404,6 @@ export const indexPageQuery = graphql`
       fluid: { originalName: { regex: "/partyplaner.png/" } }
     ) {
       fluid(maxWidth: 600) {
-        ...GatsbyImageSharpFluid_withWebp_noBase64
-      }
-    }
-    heroImage: imageSharp(
-      fluid: { originalName: { regex: "/solution-collage.png/" } }
-    ) {
-      fluid(maxWidth: 1800) {
         ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
