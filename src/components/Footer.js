@@ -40,6 +40,13 @@ const Grid = styled(Container)`
 
     li {
       display: flex;
+      margin-bottom: 0.8em;
+    }
+
+    @media (max-width: 1020px) {
+      li {
+        margin-bottom: 1.6em;
+      }
     }
 
     li::before {
