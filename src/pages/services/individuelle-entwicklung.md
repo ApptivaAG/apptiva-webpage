@@ -55,7 +55,7 @@ Sehen Sie wie eine Lean Enterprise App beispielsweise den Telefonverkauf für Je
 [[right]]
 |![Tiefe Kosten](img/sparschwein.svg)
 
-# Wir sind besonders effektiv
+## Wir sind besonders effektiv
 
 Dank unserem effektiven Vorgehen sind erste nutzbare Resultate bereits nach zwei Wochen vorhanden.
 
@@ -63,6 +63,6 @@ Mit der Apptiva haben seine einen Partner, welcher unkompliziert und erfolgreich
 
 Für Sie heisst dies mehr Freude, weniger Stress und die Zuversicht die gesteckten Ziele erreichen zu können.
 
-# Wir unterstützen Sie gerne bei der Entwicklung einer individuellen iOS, Android und Web-Anwendung.
+## Wir unterstützen Sie gerne bei der Entwicklung einer individuellen iOS, Android und Web-Anwendung.
 
 Rufen Sie uns an <a href="tel:+41413222626">041 322 26 26</a> oder schreiben Sie an <a href="mailto:info@apptiva.ch">info@­apptiva.ch</a>

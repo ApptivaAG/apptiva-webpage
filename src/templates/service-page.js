@@ -25,7 +25,7 @@ const HeaderTitle = styled.h1`
     font-size: 4rem;
   }
 `
-const CustomerTitle = styled.h1`
+const CustomerTitle = styled.h2`
   font-size: 1.7em;
   color: #cbcbcb;
   text-align: center;
@@ -155,11 +155,11 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
         <Section>
           <Container>
             <Centered>
-              <h1>Lösungen</h1>
+              <h2>Lösungen</h2>
               <Cols>
                 {solutions.map(solution => (
                   <div key={solution.title}>
-                    <h2>{solution.title}</h2>
+                    <h3>{solution.title}</h3>
                     <a href={solution.image.childImageSharp.fluid.src}>
                       <Img
                         className="lightbox"
@@ -180,7 +180,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
           <Section key={group.title}>
             <Container key={group.title}>
               <ListTitle>
-                <h1>{group.title}</h1>
+                <h2>{group.title}</h2>
                 {/* eslint-disable-next-line react/no-danger */}
                 <p dangerouslySetInnerHTML={{ __html: group.description }} />
               </ListTitle>
@@ -191,7 +191,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
                       <Icon>{icons(item.icon)}</Icon>
                     </IconErrorBoundary>
                     <ItemContent>
-                      <h2>{item.title}</h2>
+                      <h3>{item.title}</h3>
                       {/* eslint-disable-next-line react/no-danger */}
                       <p dangerouslySetInnerHTML={{ __html: item.text }} />
                     </ItemContent>
@@ -205,11 +205,11 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
         <Section dark>
           <Container>
             <Centered>
-              <h1>{specs.title}</h1>
+              <h2>{specs.title}</h2>
               <Cols>
                 {specs.specItems.map(spec => (
                   <div key={spec.title}>
-                    <h2>{spec.title}</h2>
+                    <h3>{spec.title}</h3>
                     {/* eslint-disable-next-line react/no-danger */}
                     <p>{spec.text}</p>
                   </div>

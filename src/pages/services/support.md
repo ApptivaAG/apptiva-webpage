@@ -22,9 +22,9 @@ description: ''
 }
 </style>
 
-## Wir unterstützen Sie mit Brainpower und Wissen bei Ihrem Vorhaben.
+### Wir unterstützen Sie mit Brainpower und Wissen bei Ihrem Vorhaben.
 
-# Aktuelle Angebote
+## Aktuelle Angebote
 
 - ### [Persona Workshop](/persona-workshop)
 - ### [Usability Audit](/usability-audit)
@@ -37,10 +37,10 @@ description: ''
 
 Rufen Sie uns an
 
-# <a href="tel:+41413222626">041 322 26 26</a>
+## <a href="tel:+41413222626">041 322 26 26</a>
 
 oder schreiben Sie an
 
-# <a href="mailto:info@apptiva.ch">info@­apptiva.ch</a>
+## <a href="mailto:info@apptiva.ch">info@­apptiva.ch</a>
 
 </div>

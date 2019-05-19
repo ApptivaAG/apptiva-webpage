@@ -44,7 +44,7 @@ bulletGroups:
         text: Für die Einsatzplanung müssen Sie nichts installieren. Sie steht Ihnen überall auf den unterschiedlichsten Geräten zur Verfügung.
 ---
 
-# Kontakt
+## Kontakt
 
 [[right]]
 |[[avatar]]
@@ -54,7 +54,7 @@ Nehmen Sie jetzt Kontakt mit unserem Projektleiter auf.
 Er steht Ihnen gerne für Fragen zur Verfügung.
 
 [[no-margin]]
-|## Projektleiter
+| Projektleiter
 |
 |### Roman Schaller
 |
