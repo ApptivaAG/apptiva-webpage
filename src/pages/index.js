@@ -317,6 +317,7 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
       </Section>
       <Section style={{ padding: 0, marginBottom: '-4rem' }}>
         <iframe
+          loading="lazy"
           title="Google Maps"
           scrolling="no"
           marginHeight="0"
