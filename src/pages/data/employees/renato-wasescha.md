@@ -36,7 +36,7 @@ skills:
   - title: Frontend
     items:
       - name: HTML5 / CSS3
-        value: 75
+        value: 90
       - name: styled-components
         value: 50
       - name: React
@@ -66,7 +66,7 @@ skills:
   - title: Mobile
     items:
       - name: React Native
-        value: 40
+        value: 65
       - name: Ionic
         value: 80
   - title: Cloud
@@ -78,9 +78,9 @@ skills:
   - title: Frameworks
     items:
       - name: GatsbyJS
-        value: 75
+        value: 85
       - name: Vue CLI
-        value: 80
+        value: 75
       - name: Gridsome
         value: 45
   - title: Digital Signage
@@ -89,6 +89,8 @@ skills:
         value: 85
       - name: easescreen
         value: 50
+      - name: screenPLAN
+        value: 30
 ---
 
 # Meine Erfahrungen
