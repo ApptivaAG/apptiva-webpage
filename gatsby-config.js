@@ -110,10 +110,10 @@ module.exports = {
       resolve: `gatsby-plugin-netlify`,
       options: {
         allPageHeaders: [
-          'Link: </font/Gentona-ExtraBold.woff2>; rel=preload; as=font',
-          'Link: </font/Gentona-Bold.woff2>; rel=preload; as=font',
-          'Link: </font/Gentona-Medium.woff2>; rel=preload; as=font',
-          'Link: </font/Gentona-ExtraLight.woff2>; rel=preload; as=font',
+          'Link: </font/Gentona-ExtraBold.woff2>; rel=preload; as=font; crossorigin=anonymous',
+          'Link: </font/Gentona-Bold.woff2>; rel=preload; as=font; crossorigin=anonymous',
+          'Link: </font/Gentona-Medium.woff2>; rel=preload; as=font; crossorigin=anonymous',
+          'Link: </font/Gentona-ExtraLight.woff2>; rel=preload; as=font; crossorigin=anonymous',
         ],
       },
     },
