@@ -9,9 +9,9 @@ subtitle:
   text: Behalten Sie Ihren Einsatzplan auch in Ausnahmesituationen im Griff.
 
 customers:
-  - ../../../img/sd.png
-  - ../../../img/schurch-logo.png
-  - ../../../img/hostettler-300x70.png
+  - ../img/sd.png
+  - ../img/schurch-logo.png
+  - ../img/hostettler-300x70.png
 
 solutions:
   - title: Übersichtlich
@@ -26,8 +26,7 @@ solutions:
 
 bulletGroups:
   - title: Weitere Vorteile
-    description:
-      Unsere Einsatzplanung macht Ihnen nicht nur das tägliche Leben einfacher. Wir übernehmen auch das Drumherum, damit Sie sorglos planen können.
+    description: Unsere Einsatzplanung macht Ihnen nicht nur das tägliche Leben einfacher. Wir übernehmen auch das Drumherum, damit Sie sorglos planen können.
 
     bulletList:
       - icon: cloud

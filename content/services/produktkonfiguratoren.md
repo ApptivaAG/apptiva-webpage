@@ -9,9 +9,9 @@ subtitle:
   text: Komplexe Angebote einfach auf Ihrer Webseite verkaufen
 
 customers:
-  - ../../img/schurch-logo.png
-  - ../../img/energie360-300x72.png
-  - ../../img/sanagate-300x65.png
+  - img/schurch-logo.png
+  - img/energie360-300x72.png
+  - img/sanagate-300x65.png
 
 solutions:
   - title: Formular
