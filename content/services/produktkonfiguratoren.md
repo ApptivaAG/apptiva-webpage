@@ -4,7 +4,7 @@ slug: /produktkonfiguratoren
 title: Angebots- & <br/>Produkt-Konfiguratoren
 image: img/partyplaner.png
 author: philip-schoenholzer
-description: Mit einem individuelle eCommerce Produkt- & Angebotskonfigurator verkaufen Sie komplexe Angebote einfach auf Ihrer Webseite oder in Ihrem Webshop.
+description: Mit einem individuellen eCommerce Produkt- & Angebotskonfigurator verkaufen Sie komplexe Angebote einfach auf Ihrer Webseite oder in Ihrem Webshop.
 subtitle:
   text: Komplexe Angebote einfach auf Ihrer Webseite verkaufen
 
@@ -26,7 +26,7 @@ solutions:
 
 bulletGroups:
   - title: Vorteile eines Produkt-Konfigurators von Apptiva
-    description: Mit einem individuelle E-Commerce Produkt- & Angebotskonfigurator verkaufen Sie komplexe Angebote einfach auf Ihrer Webseite oder in Ihrem Webshop.
+    description: Mit einem individuellen E-Commerce Produkt- & Angebotskonfigurator verkaufen Sie komplexe Angebote einfach auf Ihrer Webseite oder in Ihrem Webshop.
 
     bulletList:
       - icon: star

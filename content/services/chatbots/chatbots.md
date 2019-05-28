@@ -4,9 +4,13 @@ slug: /chatbots
 title: Chatbots
 image: chatbot.png
 author: Philip Schönholzer
-description: Individuell entwickelte Chatbots passend für Ihre Anforderungen
+description: Individuell entwickelte Chatbots auf Ihre Bedürfnisse zugeschnitten
 subtitle:
-  text: Behalten Sie Ihren Einsatzplan auch in Ausnahmesituationen im Griff.
+  text: Erreichen Sie Ihre Kunden und Partner
+  swaps:
+  - direkter.
+  - persönlicher.
+  - jederzeit.
 
 customers:
   - die-post-logo.png
@@ -14,33 +18,56 @@ customers:
   - sanagate-300x65.png
 
 solutions:
-  - title: Übersichtlich
+  - title: Web
     image: chatbot.png
-    text: Auf einer einfachen Übersicht sehen Sie, welche Objekte eingeplant sind und welche MitarbeiterInnen die Arbeiten erledigen werden. Der Einsatzplan weist Sie zudem auf Ferien, Feiertage, Betriebsferien und Kapazitätsengpässe hin.
-  - title: Unterstützend
+    text: Unsere Chatbots können in jegliche Webseiten integriert werden
+  - title: Messaging-Apps
     image: die-post-logo.png
-    text: Unsere Einsatzplanung unterstützt Sie bei der Planung. In der Abbildung oben sehen Sie, dass Frühauf Steffen bereits für 10 Stunden eingeplant ist. Sie können nun Gärtner Martin zu der Aufgabe hinzufügen, um ihn zu entlasten. Wenn Sie alle Engpässe bereinigt haben, erscheinen keine Warnungen mehr.
+    text: Unsere Chatbos laufen auch in den gängigen Messaging-Apps
   - title: Mobil
     image: sanagate-300x65.png
-    text: Ihre MitarbeiterInnen können ihren persönlichen Einsatzplan ganz einfach auf ihrem Smartphone abrufen. Er ist nahtlos in jede Kalender-App integrierbar. Zudem können Sie weitere Details und Anweisungen zu den einzelnen Aufgaben mitliefern.
+    text: Unsere Chatbots haben auch auf mobilen Geräten eine hohe Benutzerfreundlichkeit.
 
 bulletGroups:
-  - title: Weitere Vorteile
-    description: Unsere Einsatzplanung macht Ihnen nicht nur das tägliche Leben einfacher. Wir übernehmen auch das Drumherum, damit Sie sorglos planen können.
+  - title: Vorteile eines Chatbots von Apptiva
+    description: Mit einem individuellen Chatbot können Sie genau auf die Bedüfnisse Ihrer Kunden und Partner einegehen.
 
     bulletList:
       - icon: cloud
-        title: Betrieb bei der Swisscom
-        text: Die Einsatzplanung wird in der Schweiz in den Datencentern der Swisscom betrieben. Dadurch ist sie für Sie rund um die Uhr verfügbar.
-      - icon: stethoscope
-        title: Schweizer Support
-        text: Falls Sie Unterstützung benötigen, stehen wir Ihnen per Telefon oder Mail persönlich zur Verfügung.
+        title: Individuell
+        text: Wir können fast alle Wünsche mit unseren Chatbots erfüllen. Wir entwickeln einen Chatbot passend auf Ihre Bedürfnisse.
       - icon: database
-        title: Datensicherung
-        text: Wir sind uns bewusst, dass Ihre Daten geschäftskritisch sind. Darum sorgen wir für ein regelmässiges Backup.
+        title: Messaging-Apps
+        text: Unsere Chatbots kommunizieren auf den gängigen Messaging-Apps wie Facebook-Messagner, Slack, Telegram, Skype und Skype for Business.
       - icon: globe
-        title: Online
-        text: Für die Einsatzplanung müssen Sie nichts installieren. Sie steht Ihnen überall auf den unterschiedlichsten Geräten zur Verfügung.
+        title: Web
+        text: Unsere Chatbots können in jegliche Webseiten integriert werden. Wir sind auch in der Lage zu steuern wann, wo und welcher Form der Chatbot erscheinen soll. 
+      - icon: stethoscope
+        title: Integration mit Umsystemen
+        text: Ein Chatbot ist besonders Wertvoll wenn er mit Umsystemen wie CRMs, Branchenlösungen oder einem Ticketsystem kommunizieren kann.  
+
+  - title: Einsatz eines Chatbots
+    description: Wir haben Erfahrung im Einsatz von Chatbots in ganz unterschiedlichen Bereichen.
+
+    bulletList:
+      - icon: cloud
+        title: Kundensupport
+        text: Der klassiker unter den Chatbot-Anwendungen. Ein Chatbot hilft Ihren Kunden und Partnern bei deren Anliegen.
+      - icon: database
+        title: HRM FAQs
+        text: Haben Ihre Mitarbeiter immer wieder Fragen die selben Fragen? Ein Chatbot kann viele dieser Fragen beantworten.
+      - icon: globe
+        title: Wettbewerb oder Gewinnspiele
+        text: 
+      - icon: stethoscope
+        title: Verkaufsberatung
+        text: Ein Chatbot ist besonders Wertvoll wenn er mit Umsystemen wie CRMs, Branchenlösungen oder einem Ticketsystem kommunizieren kann.  
+      - icon: stethoscope
+        title: Umfragen
+        text: Ein Chatbot ist besonders Wertvoll wenn er mit Umsystemen wie CRMs, Branchenlösungen oder einem Ticketsystem kommunizieren kann.  
+      - icon: stethoscope
+        title: eLearning
+        text: Ein Chatbot ist besonders Wertvoll wenn er mit Umsystemen wie CRMs, Branchenlösungen oder einem Ticketsystem kommunizieren kann.  
 ---
 
 ## Kontakt
