@@ -18,56 +18,56 @@ customers:
   - sanagate-300x65.png
 
 solutions:
-  - title: Web
-    image: chatbot.png
-    text: Unsere Chatbots können in jegliche Webseiten integriert werden
-  - title: Messaging-Apps
-    image: die-post-logo.png
-    text: Unsere Chatbos laufen auch in den gängigen Messaging-Apps
-  - title: Mobil
-    image: sanagate-300x65.png
-    text: Unsere Chatbots haben auch auf mobilen Geräten eine hohe Benutzerfreundlichkeit.
+  - title: In Webseiten
+    image: smartacus.png
+    text: Unsere Chatbots können in jegliche Webseiten integriert werden.
+  - title: In Messaging-Apps
+    image: apps.png
+    text: Unsere Chatbos laufen auch in den gängigen Messaging-Apps.
+  - title: In Business-Apps
+    image: skype.png
+    text: Unsere Chatbots erreichen Sie auch in auf Ihren firmen-internen Kommunikationskanälen.
 
 bulletGroups:
   - title: Vorteile eines Chatbots von Apptiva
     description: Mit einem individuellen Chatbot können Sie genau auf die Bedüfnisse Ihrer Kunden und Partner einegehen.
 
     bulletList:
-      - icon: cloud
-        title: Individuell
+      - icon: user
+        title: Massgeschneidert
         text: Wir können fast alle Wünsche mit unseren Chatbots erfüllen. Wir entwickeln einen Chatbot passend auf Ihre Bedürfnisse.
-      - icon: database
-        title: Messaging-Apps
-        text: Unsere Chatbots kommunizieren auf den gängigen Messaging-Apps wie Facebook-Messagner, Slack, Telegram, Skype und Skype for Business.
-      - icon: globe
-        title: Web
-        text: Unsere Chatbots können in jegliche Webseiten integriert werden. Wir sind auch in der Lage zu steuern wann, wo und welcher Form der Chatbot erscheinen soll. 
-      - icon: stethoscope
+      - icon: flag
+        title: Unabhängig
+        text: Wir möchten Ihnen keine Technologie oder Service verkaufen, sondern die besten Komponenten für Ihren Chatbot wählen.
+      - icon: tasks
+        title: Erfahrung
+        text: Wir entwickeln Chatbots seit über drei Jahren und haben inzwischen über 20 Projekte erfolgreich umgesetzt.
+      - icon: expand-arrows-alt
         title: Integration mit Umsystemen
-        text: Ein Chatbot ist besonders Wertvoll wenn er mit Umsystemen wie CRMs, Branchenlösungen oder einem Ticketsystem kommunizieren kann.  
+        text: Mit unserer Kompetenz im Integrieren von Umsystemen wie CRMs, Branchenlösungen oder einem Ticketsystem können wir fast jeden Wunsch umsetzen.  
 
-  - title: Einsatz eines Chatbots
-    description: Wir haben Erfahrung im Einsatz von Chatbots in ganz unterschiedlichen Bereichen.
+  - title: Unsere Erfahrungen im Einsatz von Chatbots
+    description: Wir haben Erfahrung im Einsatz von Chatbots in ganz unterschiedlichen Bereichen. Eine Auswahl finden Sie hier.
 
     bulletList:
-      - icon: cloud
+      - icon: life-ring
         title: Kundensupport
         text: Der klassiker unter den Chatbot-Anwendungen. Ein Chatbot hilft Ihren Kunden und Partnern bei deren Anliegen.
-      - icon: database
+      - icon: question-circle
         title: HRM FAQs
-        text: Haben Ihre Mitarbeiter immer wieder Fragen die selben Fragen? Ein Chatbot kann viele dieser Fragen beantworten.
-      - icon: globe
+        text: Haben Ihre Mitarbeitenden immer wieder Fragen die selben Fragen? Ein Chatbot kann viele dieser Fragen beantworten.
+      - icon: bullseye
         title: Wettbewerb oder Gewinnspiele
-        text: 
-      - icon: stethoscope
+        text: Möchten Sie im Web oder auf Social Media ein Gewinnspiel durchführen? Wir haben bereits einige Chatbots für Marketing-Tätigkeiten umgesetzt. 
+      - icon: comments-dollar
         title: Verkaufsberatung
-        text: Ein Chatbot ist besonders Wertvoll wenn er mit Umsystemen wie CRMs, Branchenlösungen oder einem Ticketsystem kommunizieren kann.  
-      - icon: stethoscope
-        title: Umfragen
-        text: Ein Chatbot ist besonders Wertvoll wenn er mit Umsystemen wie CRMs, Branchenlösungen oder einem Ticketsystem kommunizieren kann.  
-      - icon: stethoscope
+        text: Ein Chatbot ist auch in der Lage Kunden beim Kauf zu beraten. Auch hier eignet sich ein Chatbot sehr gut.
+      - icon: project-diagram
+        title: Intere Geschäftsprozesse
+        text: Wollen Sie einen internen Geschäftsprozess mit einem Chatbot umsetzen? Nutzen Sie unsere Expertiese im Umgang mit Chatbots im Bereich der Produktivität.  
+      - icon: graduation-cap
         title: eLearning
-        text: Ein Chatbot ist besonders Wertvoll wenn er mit Umsystemen wie CRMs, Branchenlösungen oder einem Ticketsystem kommunizieren kann.  
+        text: Möchten sie eine Anspruchsgruppe wie beispielsweise ihre Mitarbeitenden mit Micro-Learings ausbilden? Da können wir helfen.
 ---
 
 ## Kontakt
