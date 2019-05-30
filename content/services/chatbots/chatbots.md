@@ -30,7 +30,7 @@ solutions:
 
 bulletGroups:
   - title: Vorteile eines Chatbots von Apptiva
-    description: Mit einem individuellen Chatbot können Sie genau auf die Bedüfnisse Ihrer Kunden und Partner einegehen.
+    description: Mit einem individuellen Chatbot können Sie gezielt auf die Bedüfnisse Ihrer Kunden und Partner einegehen.
 
     bulletList:
       - icon: user
@@ -43,8 +43,8 @@ bulletGroups:
         title: Erfahrung
         text: Wir entwickeln Chatbots seit über drei Jahren und haben inzwischen über 20 Projekte erfolgreich umgesetzt.
       - icon: expand-arrows-alt
-        title: Integration mit Umsystemen
-        text: Mit unserer Kompetenz im Integrieren von Umsystemen wie CRMs, Branchenlösungen oder einem Ticketsystem können wir fast jeden Wunsch umsetzen.  
+        title: Integration von Umsystemen
+        text: Mit unserer Kompetenz im Integrieren von Umsystemen wie CRMs, Branchenlösungen oder einem Ticketsystem können wir fast jede Anforderung umsetzen.  
 
   - title: Unsere Erfahrungen im Einsatz von Chatbots
     description: Wir haben Erfahrung im Einsatz von Chatbots in ganz unterschiedlichen Bereichen. Eine Auswahl finden Sie hier.
@@ -52,10 +52,10 @@ bulletGroups:
     bulletList:
       - icon: life-ring
         title: Kundensupport
-        text: Der klassiker unter den Chatbot-Anwendungen. Ein Chatbot hilft Ihren Kunden und Partnern bei deren Anliegen.
+        text: Der Klassiker unter den Chatbot-Anwendungen. Ein Chatbot hilft Ihren Kunden und Partnern bei deren Anliegen.
       - icon: question-circle
         title: HRM FAQs
-        text: Haben Ihre Mitarbeitenden immer wieder Fragen die selben Fragen? Ein Chatbot kann viele dieser Fragen beantworten.
+        text: Haben Ihre Mitarbeitenden immer wieder die selben Fragen? Ein Chatbot kann viele dieser Anfragen einfach und direkt beantworten.
       - icon: bullseye
         title: Wettbewerb oder Gewinnspiele
         text: Möchten Sie im Web oder auf Social Media ein Gewinnspiel durchführen? Wir haben bereits einige Chatbots für Marketing-Tätigkeiten umgesetzt. 
