@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Container as ContainerDefault } from '../layouts/style'
+import { Container as ContainerDefault } from '../style'
 import Layout from '../components/Layout'
 
 const Container = styled(ContainerDefault)`

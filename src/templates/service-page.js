@@ -7,7 +7,7 @@ import * as FontAwesome from 'react-icons/fa'
 import TextLoop from 'react-text-loop'
 
 import Content, { HTMLContent } from '../components/Content'
-import { Centered, Container, Section, Icon } from '../layouts/style'
+import { Centered, Container, Section, Icon } from '../style'
 import config from '../config'
 import SEO from '../components/SEO'
 import { stripHTML } from '../util'
@@ -91,7 +91,9 @@ const Header = ({ title, image, subtitle }) => (
     {subtitle && (
       <h2>
         {subtitle.text}{' '}
-        {subtitle.swaps && <TextLoop>{subtitle.swaps}</TextLoop>}
+        {subtitle.swaps && (
+          <TextLoop interval={1800}>{subtitle.swaps}</TextLoop>
+        )}
       </h2>
     )}
     {image && (

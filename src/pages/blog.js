@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import { Section, MainTitle, Container } from '../layouts/style'
+import { Section, MainTitle, Container } from '../style'
 import { truncate } from '../util'
 import Layout from '../components/Layout'
 

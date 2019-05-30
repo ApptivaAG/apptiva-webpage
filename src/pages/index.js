@@ -11,7 +11,7 @@ import {
   Right,
   Subtitle,
   Container,
-} from '../layouts/style'
+} from '../style'
 import Layout from '../components/Layout'
 import Testimonials from '../components/Testimonials'
 import Employees from '../components/Employees'

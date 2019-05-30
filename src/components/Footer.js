@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { description } from '../config'
 
-import { Container } from '../layouts/style'
+import { Container } from '../style'
 import chevron from '../img/chevron.svg'
 
 const year = new Date().getFullYear()

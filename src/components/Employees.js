@@ -8,7 +8,7 @@ import {
   FaTwitter as TwitterIcon,
 } from 'react-icons/fa'
 
-import { Section, Title, Subtitle, Container } from '../layouts/style'
+import { Section, Title, Subtitle, Container } from '../style'
 
 const EmployeeList = styled.div`
   display: flex;

@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
-import { Section as SectionDefault, Container } from '../layouts/style'
+import { Section as SectionDefault, Container } from '../style'
 
 const Section = styled(SectionDefault)`
   padding-top: 4em;

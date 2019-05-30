@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaStar } from 'react-icons/fa'
-import { Icon } from '../layouts/style'
+import { Icon } from '../style'
 
 class ErrorBoundary extends React.Component {
   constructor(props) {

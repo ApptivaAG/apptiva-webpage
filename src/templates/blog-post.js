@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 
 import Content, { HTMLContent } from '../components/Content'
-import { Container } from '../layouts/style'
+import { Container } from '../style'
 import config from '../config'
 import SEO from '../components/SEO'
 import { stripHTML } from '../util'

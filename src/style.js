@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styled, { css } from 'styled-components'
+import styled, { css, createGlobalStyle } from 'styled-components'
+import styledNormalize from 'styled-normalize'
+
+import fontFace from './font-face'
 
 export const Section = styled.section`
   position: relative;
@@ -117,4 +120,90 @@ export const Icon = styled.div`
   color: ${props => props.theme.color.bg};
   border-radius: 50%;
   background-color: ${props => props.theme.color.secondary};
+`
+
+export const theme = {
+  color: {
+    primary: '#008fd7',
+    secondary: '#81d742',
+    orange: '#ff7d00',
+    text: '#111',
+    bg: 'white',
+    lightBg: '#f6f6f6',
+    darkGray: '#3d525c',
+  },
+}
+
+export const GlobalStyle = createGlobalStyle`
+  ${styledNormalize}
+  ${fontFace}
+
+  html {
+    font-size: 20px;
+    font-family: Gentona, sans-serif;
+    font-weight: 200;
+    color: ${theme.color.text};
+  }
+
+  main { display: block; }
+
+  h1 {
+    font-weight: 800;
+  }
+  h1, h2 {
+    hyphens: auto;
+  }
+
+  p {
+    line-height: 1.3;
+  }
+
+  a {
+    text-decoration: none;
+    color: ${theme.color.primary};
+    
+    .gatsby-image-wrapper {
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.06);
+      }
+    }
+  }
+  
+  ul {
+
+    li {
+      margin-bottom: 0.5em;
+    }
+    h3 {
+      display: inline;
+    }
+  }
+
+  pre {
+    padding: 1rem;
+    background-color: hsla(0, 0%, 0%, 0.02);
+    overflow-x: auto;
+    border: 1px #eee solid;
+  }
+
+  blockquote {
+    margin: 1rem;
+    background: #F8f8f8;
+    padding: 0 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.04) ;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04) ;
+    border-right: 1px solid rgba(0, 0, 0, 0.04) ;
+    border-left: 3px solid #008FD7;
+  }
+
+  svg {
+    fill: currentColor;
+  }
+
+  iframe {
+    border: 0;
+  }
+
 `
