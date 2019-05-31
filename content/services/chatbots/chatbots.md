@@ -63,12 +63,13 @@ bulletGroups:
         title: Verkaufsberatung
         text: Ein Chatbot ist auch in der Lage Kunden beim Kauf zu beraten. Auch hier eignet sich ein Chatbot sehr gut.
       - icon: project-diagram
-        title: Intere Geschäftsprozesse
+        title: Interne Geschäftsprozesse
         text: Wollen Sie einen internen Geschäftsprozess mit einem Chatbot umsetzen? Nutzen Sie unsere Expertiese im Umgang mit Chatbots im Bereich der Produktivität.  
       - icon: graduation-cap
         title: eLearning
         text: Möchten sie eine Anspruchsgruppe wie beispielsweise ihre Mitarbeitenden mit Micro-Learings ausbilden? Da können wir helfen.
 ---
+#### Mehr Informationen zu unserem Chatbot-Angebot finden Sie auf [botfabrik.ch](https://botfabrik.ch).
 
 ## Kontakt
 
