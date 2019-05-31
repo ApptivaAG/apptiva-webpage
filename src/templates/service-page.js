@@ -92,7 +92,7 @@ const Header = ({ title, image, subtitle }) => (
       <h2>
         {subtitle.text}{' '}
         {subtitle.swaps && (
-          <TextLoop interval={1800}>{subtitle.swaps}</TextLoop>
+          <TextLoop interval={2000}>{subtitle.swaps}</TextLoop>
         )}
       </h2>
     )}
