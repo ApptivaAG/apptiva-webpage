@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { sharedButtonStyle } from '../layouts/style'
+import { sharedButtonStyle } from '../style'
 
 require('prismjs/themes/prism.css')
 

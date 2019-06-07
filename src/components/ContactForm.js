@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { Button } from '../layouts/style'
+import { Button } from '../style'
 
 const sharedInput = css`
   display: block;

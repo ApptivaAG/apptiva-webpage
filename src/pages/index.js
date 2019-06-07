@@ -11,7 +11,7 @@ import {
   Right,
   Subtitle,
   Container,
-} from '../layouts/style'
+} from '../style'
 import Layout from '../components/Layout'
 import Testimonials from '../components/Testimonials'
 import Employees from '../components/Employees'
@@ -28,8 +28,6 @@ import energie360 from '../img/energie360-300x72.png'
 import diepost from '../img/die-post-logo.png'
 import schurch from '../img/schurch-logo.png'
 import sd from '../img/sd.png'
-import Hero from '../components/Hero'
-import Navbar from '../components/Navbar'
 import SEO from '../components/SEO'
 import swisscom from '../img/swisscom-gold-partner-300.png'
 import { truncate } from '../util'
@@ -183,7 +181,7 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
               </Link>
             </ListItem>
             <ListItem>
-              <Link to="/bot-entwicklung/">
+              <Link to="/chatbots/">
                 <h3>Individuelle</h3>
                 <h2>Chatbots</h2>
                 <h4>Botfabrik by Apptiva</h4>

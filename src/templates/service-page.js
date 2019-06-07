@@ -4,9 +4,10 @@ import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import * as FontAwesome from 'react-icons/fa'
+import TextLoop from 'react-text-loop'
 
 import Content, { HTMLContent } from '../components/Content'
-import { Centered, Container, Section, Icon } from '../layouts/style'
+import { Centered, Container, Section, Icon } from '../style'
 import config from '../config'
 import SEO from '../components/SEO'
 import { stripHTML } from '../util'
@@ -66,7 +67,7 @@ const ListTitle = styled.header`
 const ItemList = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -1rem 4rem;
+  margin: 0 -1rem 1rem;
   padding: 0;
   list-style: none;
 `
@@ -89,8 +90,10 @@ const Header = ({ title, image, subtitle }) => (
     <HeaderTitle dangerouslySetInnerHTML={{ __html: title }} />
     {subtitle && (
       <h2>
-        {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
-        {subtitle.text} {subtitle.swaps && subtitle.swaps[0]}
+        {subtitle.text}{' '}
+        {subtitle.swaps && (
+          <TextLoop interval={2000}>{subtitle.swaps}</TextLoop>
+        )}
       </h2>
     )}
     {image && (

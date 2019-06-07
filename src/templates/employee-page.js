@@ -12,8 +12,8 @@ import {
 } from 'react-icons/fa'
 
 import Content, { HTMLContent } from '../components/Content'
-import { MainTitle, Subtitle, Section, Container } from '../layouts/style'
-import Layout, { theme } from '../components/Layout'
+import { MainTitle, Subtitle, Section, Container, theme } from '../style'
+import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 
 const EmployeeBanner = styled.div`
@@ -89,19 +89,23 @@ const Text = styled.div`
 const Color = styled.div`
   height: 100%;
 `
+const {
+  color: { primary, secondary, orange, darkGray },
+} = theme
+
 const colorPalett = {
-  0: theme.color.primary,
-  1: theme.color.secondary,
-  2: theme.color.orange,
-  3: theme.color.darkGray,
-  4: theme.color.primary,
-  5: theme.color.secondary,
-  6: theme.color.orange,
-  7: theme.color.darkGray,
-  8: theme.color.primary,
-  9: theme.color.secondary,
-  10: theme.color.orange,
-  11: theme.color.darkGray,
+  0: primary,
+  1: secondary,
+  2: orange,
+  3: darkGray,
+  4: primary,
+  5: secondary,
+  6: orange,
+  7: darkGray,
+  8: primary,
+  9: secondary,
+  10: orange,
+  11: darkGray,
 }
 
 const Skill = ({ title, color, items }) => (

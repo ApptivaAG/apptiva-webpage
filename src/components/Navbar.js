@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled, { css } from 'styled-components'
 
-import { Container as DefaultContainer } from '../layouts/style'
+import { Container as DefaultContainer } from '../style'
 import logo from '../img/logo.svg'
 
 const NavBar = styled.header`

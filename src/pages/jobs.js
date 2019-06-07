@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
-import { MainTitle, Container, Subtitle, Button } from '../layouts/style'
+import { MainTitle, Container, Subtitle, Button } from '../style'
 import SEO from '../components/SEO'
 import config from '../config'
 import Layout from '../components/Layout'
