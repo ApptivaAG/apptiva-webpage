@@ -24,7 +24,7 @@ Renato unterstützt uns mit Node.js im Backend und HTML, CSS und JS im Frontend.
 
 ## Patrik
 
-Patrik ist ebenfalls Software-Entwickler und hat eben bei zu Arbeiten begonnen.
+Patrik ist ebenfalls Software-Entwickler und hat eben bei uns zu Arbeiten begonnen.
 
 Patrik unterstützt uns mit Java/Node.js im Backend und React im Frontend. Er hilft uns als erstes bei einem Webshop-Backend für einen grossen deutschen B2B-Händler. Patrik hat uns mit seinem Tüftler-Enthusiasmus und grossem Interesse an moderner Software-Entwicklung überzeugt. Bereits in seiner ersten Woche hat er uns interessante Dinge an seiner Entwicklungsumgebung zeigen können. Patrik hat eine echt freundliche Art, die die Zusammenarbeit zur Freude macht.
 
