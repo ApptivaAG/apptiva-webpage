@@ -1,12 +1,12 @@
 ---
-title: Wir wachsen
-slug: wir-wachsen
+title: Die Apptiva wächst
+slug: die-apptiva-waechst
 templateKey: blog-post
 image: renato-patrik.jpg
-date: 2019-06-07
+date: 2019-06-12
 author: Philip Schönholzer
 description: >-
-  Aufgrund der guten Auftragslage sind wir in der Lage zu wachsen. Wir freuen uns Renato und Patrik neu bei uns im Team zu begrüssen.
+  Aufgrund der guten Auftragslage hat die Apptiva die Chance zu wachsen. Mit Renato und Patrik freuen wir uns zwei "Neue" bei uns im Team begrüssen zu dürfen.
 categories:
   - Allgemein
 ---
