@@ -11,18 +11,18 @@ This repo contains the website of [Apptiva AG](https://apptiva.ch/)
 
 ### Access Locally
 
-```
-$ git clone https://github.com/[GITHUB_USERNAME]/[REPO_NAME].git
-$ cd [REPO_NAME]
-$ npm i
-$ npm start
+```bash
+git clone https://github.com/[GITHUB_USERNAME]/[REPO_NAME].git
+cd [REPO_NAME]
+npm i
+npm start
 ```
 
 To test the CMS locally, you'll need run a production build of the site:
 
-```
-$ npm run build
-$ npm run serve
+```bash
+npm run build
+npm run serve
 ```
 
 ### Push update
@@ -34,7 +34,7 @@ Just make your changes locally, test and git commit/push. A new version will be 
 Windows users might encounter `node-gyp` errors when trying to npm install.
 To resolve, make sure that you have both Python 2.7 and the Visual C++ build environment installed.
 
-```
+```bash
 npm config set python python2.7
 npm install --global --production windows-build-tools
 ```
