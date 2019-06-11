@@ -6,7 +6,7 @@ image: renato-patrik.jpg
 date: 2019-06-12
 author: Philip Schönholzer
 description: >-
-  Aufgrund der guten Auftragslage hat die Apptiva die Chance zu wachsen. Mit Renato und Patrik freuen wir uns zwei "Neue" bei uns im Team begrüssen zu dürfen.
+  Die Apptiva hat Aufgrund der guten Auftragslage die Chance zu wachsen. Mit Renato und Patrik freuen wir uns zwei "Neue" bei uns im Team begrüssen zu dürfen.
 categories:
   - Allgemein
 ---
