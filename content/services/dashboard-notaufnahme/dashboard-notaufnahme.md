@@ -2,7 +2,7 @@
 templateKey: 'service-page'
 slug: /dashboard-notaufnahme
 title: Dashboard für die Notaufnahme
-image: img/eris-devices.png
+image: eris-devices.png
 author: philip-schoenholzer
 description: Das schlanke Patientenleitsystem für die Notaufnahme. Optimieren sie Ihre Administration, damit Sie mehr Zeit für Ihre Patienten haben.
 subtitle:
@@ -42,14 +42,14 @@ bulletGroups:
 
 Das Apptiva Dashboard ist ein schlankes Patientenleitsystem das Pflegepersonal, Ärztinnen und Ärzte bei der Bewältigung medizinischer Notfälle unterstützt.
 
-<img style="margin-top: 4rem; " src="img/emergency-universal.jpg" alt="Pflegeperson im Behandlungsraum" />
+<img style="margin-top: 4rem; " src="emergency-universal.jpg" alt="Pflegeperson im Behandlungsraum" />
 
 </div>
 </div>
 
 # TV Modus
 
-![TV Modus](img/monitor.png)
+![TV Modus](monitor.png)
 
 ## Für den Überblick auf der Notaufnahme
 
@@ -65,7 +65,7 @@ Das Apptiva Dashboard verschafft Pflegekräften, Ärztinnen und Ärzten der Nota
 ## In Sekunden Informationen aktualisieren – mit Touch!
 
 [[right]]
-|![Mit Touch bedienen](img/touch.png)
+|![Mit Touch bedienen](touch.png)
 
 Tätigen Sie die wichtigsten Aktionen direkt am TV/Monitor mittels Touch. So können Sie Aktionen innert Sekunden erledigen, so wie Sie sich dies von einem physischen Whiteboard gewohnt sind. Dank „Drag and Drop“ sind alle Aktionen sehr einfach zu bedienen.
 
@@ -87,7 +87,7 @@ Weiter Aktionen werden laufend hinzugefügt.
 
 # Desktop und Mobile
 
-![Für Desktop- und Mobile-Geräte](img/desktop-mobile.png)
+![Für Desktop- und Mobile-Geräte](desktop-mobile.png)
 
 ## Arbeiten Sie mit dem für Sie passenden Gerät
 
@@ -110,18 +110,12 @@ Das Apptiva Dashboard lässt sich einfach mit Ihren bestehenden Systemen verbind
 
 Änderungen, die im Dashboard gemacht werden (z.B. Aufenthaltsort ändern) können natürlich auch wieder in Ihr Zentralsystem zurückgeschrieben werden. Dadurch verhindern Sie doppelte Arbeiten und erhöhen die Transparenz.
 
-![Integration Apptiva Dashboard](img/integration.png)
+![Integration Apptiva Dashboard](integration.png)
 
 Mit dem Apptiva Dashboard erhalten Sie einen flexiblen Zusatz zu Ihrem bestehenden KIS und können damit einen Teil Ihres Geschäftsprozesses gezielt optimieren. Aufgrund der Synchronisierung von Datenänderungen in beide Richtungen ist in Ihrem bestehenden System weiterhin alles Notwendige verfügbar.
-
-<div class="full-width dark-section" style="margin-bottom: -4rem;">
-<div class="container">
 
 # Anfrage
 
 Gerne geben wir Ihnen weitere Informationen zu unserem Dashboard. Wir freuen uns über Ihre Anfrage.
 
-Rufen Sie uns an <a href="tel:+41413222626">041 322 26 26</a> oder schreiben Sie an <a href="mailto:info@apptiva.ch">info@­apptiva.ch</a>
-
-</div>
-</div>
+Rufen Sie uns an [041 322 26 26](tel:+41413222626) oder schreiben Sie an [info@­apptiva.ch](mailto:info@apptiva.ch)

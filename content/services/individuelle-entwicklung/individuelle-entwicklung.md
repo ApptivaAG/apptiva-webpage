@@ -2,7 +2,7 @@
 templateKey: 'service-page'
 slug: /individuelle-entwicklung
 title: Individuelle Softwareentwicklung
-image: ../../img/apps.png
+image: apps.png
 author: philip-schoenholzer
 description: Wir entwickeln individuelle, fokussierte und ausser­gewöhnlich benutzer­freundlich Anwendungen um Ihre einzigartigen Geschäftsprozesse zu beschleunigen.
 subtitle:
@@ -41,7 +41,7 @@ bulletGroups:
 <div class="container">
 
 [[left]]
-|![Jenny Hello](img/hello-jenny.png)
+|![Jenny Hello](hello-jenny.png)
 
 # Warum liebt Jenny ihre Lean Enterprise App?
 
@@ -53,7 +53,7 @@ Sehen Sie wie eine Lean Enterprise App beispielsweise den Telefonverkauf für Je
 </div>
 
 [[right]]
-|![Tiefe Kosten](img/sparschwein.svg)
+|![Tiefe Kosten](sparschwein.svg)
 
 ## Wir sind besonders effektiv
 
@@ -65,4 +65,4 @@ Für Sie heisst dies mehr Freude, weniger Stress und die Zuversicht die gesteckt
 
 ## Wir unterstützen Sie gerne bei der Entwicklung einer individuellen iOS, Android und Web-Anwendung.
 
-Rufen Sie uns an <a href="tel:+41413222626">041 322 26 26</a> oder schreiben Sie an <a href="mailto:info@apptiva.ch">info@­apptiva.ch</a>
+Rufen Sie uns an [041 322 26 26](tel:+41413222626) oder schreiben Sie an [info@­apptiva.ch](mailto:info@apptiva.ch)

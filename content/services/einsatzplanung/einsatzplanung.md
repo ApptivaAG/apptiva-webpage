@@ -9,9 +9,9 @@ subtitle:
   text: Behalten Sie Ihren Einsatzplan auch in Ausnahmesituationen im Griff.
 
 customers:
-  - ../img/sd.png
-  - ../img/schurch-logo.png
-  - ../img/hostettler-300x70.png
+  - sd.png
+  - schurch-logo.png
+  - hostettler-300x70.png
 
 solutions:
   - title: Übersichtlich

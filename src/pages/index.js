@@ -175,7 +175,7 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
                 <h4>Mobile und Desktop</h4>
                 <ImgStyled
                   style={{ width: '100%', marginTop: '2rem' }}
-                  fluid={images.appsImage.fluid}
+                  fluid={images.appsImage.childImageSharp.fluid}
                   alt="Apps"
                 />
               </Link>
@@ -197,7 +197,7 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
                 </h2>
                 <h4>Komplexe Angebote einfach verkaufen</h4>
                 <ImgStyled
-                  fluid={images.partyplaner.fluid}
+                  fluid={images.partyplaner.childImageSharp.fluid}
                   alt="Angebots- und Produktkonfiguratoren"
                 />
               </Link>
@@ -393,16 +393,22 @@ export const indexPageQuery = graphql`
         }
       }
     }
-    appsImage: imageSharp(fluid: { originalName: { regex: "/apps.png/" } }) {
-      fluid(maxWidth: 600) {
-        ...GatsbyImageSharpFluid_withWebp_noBase64
+    appsImage: file(
+      absolutePath: { regex: "/individuelle-entwicklung/apps.png/" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
       }
     }
-    partyplaner: imageSharp(
-      fluid: { originalName: { regex: "/partyplaner.png/" } }
+    partyplaner: file(
+      absolutePath: { regex: "/produktkonfiguratoren/partyplaner.png/" }
     ) {
-      fluid(maxWidth: 600) {
-        ...GatsbyImageSharpFluid_withWebp_noBase64
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
       }
     }
   }

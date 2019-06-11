@@ -3,7 +3,7 @@
 templateKey: 'service-page'
 slug: architektur-review
 title: Architektur-Review
-image: img/architektur-review.jpg
+image: architektur-review.jpg
 author: Markus Tanner
 description: Es gibt viele Situationen, bei welchen Architektur-Reviews von Bedarf sein können. Doch wieso entsteht dieser Bedarf überhaupt?
 ---
@@ -14,7 +14,7 @@ Bei einem etwas in die Jahre gekommenen Produkt stehen weitreichende Anpassungen
 
 Bei jedem Softwareprojekt befindet man sich im Spannungsfeld von Qualität, Zeit und Kosten. Das sogenannte „Qualitätsdreieck“ illustriert den Kompromiss, welcher bei der Entwicklung von Software eingegangen werden muss.
 
-<p style="text-align:center;"><img src="img/qualitaetsdreieck.png" style="width:50%;" alt="Qualitätsdreieck"></p>
+<p style="text-align:center;"><img src="qualitaetsdreieck.png" style="width:50%;" alt="Qualitätsdreieck"></p>
 
 Und wie das halt im Leben so ist, kann man nicht alles auf einmal haben. Bei einem Projekt liegen bestenfalls zwei Eigenschaften aus dem Dreieck drin. Will man wenig Geld investieren und dennoch schnell am Markt präsent sein, leidet bestimmt die Qualität bei diesem Vorhaben. Werden hohe Qualität und kurze Entwicklungszeit vorausgesetzt, braucht man exzellente Leute, welche die Lösung entwickeln. Meistens sind die besten Leute nicht die günstigsten.
 
@@ -35,7 +35,7 @@ Zu den einzelnen Zielen werden schliesslich Qualitätsszenarien definiert. Die S
 3.  Nun wird eine Verifikation auf Code-Ebene durchgeführt. Es mögen diverse Konzepte existieren, doch werden diese im Code auch widerspiegelt?
 
 [[right]]
-|![Review](img/review-analyse.png)
+|![Review](review-analyse.png)
 
 4.  Schliesslich werden die Ergebnisse aus den vorhergehenden Punkten zusammengeführt. Es werden die Risiken ermittelt und die wichtigsten Erkenntnisse formuliert. Dies passiert wiederum unter der Berücksichtigung der Qualitätsziele.
 
