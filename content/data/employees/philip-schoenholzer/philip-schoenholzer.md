@@ -3,8 +3,8 @@ templateKey: employee-page
 slug: /philip-schoenholzer
 name: Philip Schönholzer
 claim: Vorauszeichnender Querdenker
-preview: images/philip-schoenholzer-prev.jpg
-avatar: images/philip-schoenholzer.jpg
+preview: philip-schoenholzer-prev.jpg
+avatar: philip-schoenholzer.jpg
 role: Produktentwickler, UX-Experte, Unternehmer
 education: MAS in Requirements Engineering und Interaction Design
 slogan: Das Leben von Menschen zu erleichtern gibt mir den Kick. Deshalb kämpfe ich für einfach geniale Lösungen.
@@ -140,7 +140,7 @@ Verantwortlich für die Analyse, User Research, Anforderungen, Modellen, Design,
 ### Safira Client
 
 [[right]]
-|![Safira Client](images/safira.png)
+|![Safira Client](safira.png)
 
 Moderner Desktop-Client für grosse ERP-Lösung.
 

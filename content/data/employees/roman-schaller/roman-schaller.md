@@ -3,8 +3,8 @@ templateKey: employee-page
 slug: /roman-schaller
 name: Roman Schaller
 claim: Wissensschaffender Technologe
-preview: images/roman-schaller-prev.jpg
-avatar: images/roman-schaller.jpg
+preview: roman-schaller-prev.jpg
+avatar: roman-schaller.jpg
 role: Softwareentwickler und -architekt, Unternehmer
 # education: Informatik FH
 slogan: Ich kann mit Software den Menschen das Leben einfacher machen. Dafür liebe ich meinen Job.

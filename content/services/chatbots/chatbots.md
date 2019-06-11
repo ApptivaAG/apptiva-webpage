@@ -76,7 +76,7 @@ bulletGroups:
 
 [[right]]
 |[[avatar]]
-||![Linus Hüsler](../../data/employees/images/linus-huesler.jpg)
+||![Linus Hüsler](../../data/employees/linus-huesler/linus-huesler.jpg)
 
 Nehmen Sie jetzt Kontakt mit unserem Projektleiter auf.
 Er steht Ihnen gerne für Fragen zur Verfügung.

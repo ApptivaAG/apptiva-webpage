@@ -3,8 +3,8 @@ templateKey: employee-page
 slug: /markus-tanner
 name: Markus Tanner
 claim: Überlegender Gipfelstürmer
-preview: images/markus-tanner-prev.jpg
-avatar: images/markus-tanner.jpg
+preview: markus-tanner-prev.jpg
+avatar: markus-tanner.jpg
 role: Softwareentwickler und -architekt
 # education: Informatik FH
 slogan: Es gibt nicht genug gute Software auf der Welt. Daran möchte ich etwas ändern.

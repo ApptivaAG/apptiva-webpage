@@ -3,8 +3,8 @@ templateKey: employee-page
 slug: /linus-huesler
 name: Linus Hüsler
 claim: Ordentlich überraschender Entwerfer
-preview: images/linus-huesler-prev.jpg
-avatar: images/linus-huesler.jpg
+preview: linus-huesler-prev.jpg
+avatar: linus-huesler.jpg
 role: Softwareentwickler und -architekt, Unternehmer
 # education: Informatik FH
 slogan: Für komplexe Probleme gibt’s oft einfache Lösungen. Diese zusammen mit den Anwender zu entwickeln ist meine Faszination.

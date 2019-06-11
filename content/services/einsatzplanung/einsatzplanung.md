@@ -47,7 +47,7 @@ bulletGroups:
 
 [[right]]
 |[[avatar]]
-||![Roman Schaller](../../data/employees/images/roman-schaller.jpg)
+||![Roman Schaller](../../data/employees/roman-schaller/roman-schaller.jpg)
 
 Nehmen Sie jetzt Kontakt mit unserem Projektleiter auf.
 Er steht Ihnen gerne für Fragen zur Verfügung.

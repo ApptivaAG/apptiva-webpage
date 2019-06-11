@@ -64,7 +64,7 @@ specs:
 
 [[right]]
 |[[avatar]]
-||![Philip Schönholzer](../data/employees/images/philip-schoenholzer.jpg)
+||![Philip Schönholzer](../data/employees/philip-schoenholzer/philip-schoenholzer.jpg)
 
 Nehmen Sie jetzt Kontakt mit unserem Projektleiter auf.
 Er steht Ihnen gerne für Fragen zur Verfügung.
