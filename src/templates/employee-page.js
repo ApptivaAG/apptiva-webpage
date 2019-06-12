@@ -181,23 +181,23 @@ export const EmployeePageTemplate = ({
                     {contact.mail}
                   </a>
                 </li>
-                <li>
+                {contact.twitter&&<li>
                   <a href={`https://twitter.com/${contact.twitter}`}>
                     <TwitterIcon />@ {contact.twitter}
                   </a>
-                </li>
-                <li>
+                </li>}
+                {contact.xing&&<li>
                   <a href={contact.xing}>
                     <XingIcon />
                     Xing
                   </a>
-                </li>
-                <li>
+                </li>}
+                {contact.linkedin&&<li>
                   <a href={contact.linkedin}>
                     <LinkedinIcon style={{ paddingBottom: 5 }} />
                     Linkedin
                   </a>
-                </li>
+                </li>}
               </ContactList>
             </EmployeeData>
           </EmployeeBanner>
