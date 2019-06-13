@@ -100,9 +100,9 @@ export default ({ employees }) => (
                     <EnvelopeIcon />
                     {contact.mail}
                   </a>
-                  <a href={`https://twitter.com/${contact.twitter}`}>
+                  {contact.twitter&&<a href={`https://twitter.com/${contact.twitter}`}>
                     <TwitterIcon />@{contact.twitter}
-                  </a>
+                  </a>}
                 </Contact>
               </Employee>
             </EmployeeWrapper>
