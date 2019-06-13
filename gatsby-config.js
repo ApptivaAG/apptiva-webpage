@@ -106,6 +106,7 @@ module.exports = {
           'Link: </font/Gentona-ExtraBold.woff2>; rel=preload; as=font; crossorigin=anonymous',
           'Link: </font/Gentona-Bold.woff2>; rel=preload; as=font; crossorigin=anonymous',
           'Link: </font/Gentona-Medium.woff2>; rel=preload; as=font; crossorigin=anonymous',
+          'Link: </font/Gentona-Book.woff2>; rel=preload; as=font; crossorigin=anonymous',
           'Link: </font/Gentona-ExtraLight.woff2>; rel=preload; as=font; crossorigin=anonymous',
         ],
       },

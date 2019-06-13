@@ -63,7 +63,7 @@ export const blogListPage = graphql`
             description
             image {
               childImageSharp {
-                fixed(height: 150, width: 300) {
+                fixed(height: 150, width: 300, cropFocus: ENTROPY) {
                   ...GatsbyImageSharpFixed
                 }
               }

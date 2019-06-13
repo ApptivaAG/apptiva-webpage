@@ -379,7 +379,7 @@ export const indexPageQuery = graphql`
             slug
             image {
               childImageSharp {
-                fixed(height: 150, width: 300) {
+                fixed(height: 150, width: 300, cropFocus: ENTROPY) {
                   ...GatsbyImageSharpFixed_withWebp_noBase64
                 }
                 sqip(numberOfPrimitives: 8, blur: 6) {
