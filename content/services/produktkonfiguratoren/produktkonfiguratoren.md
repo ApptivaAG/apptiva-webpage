@@ -2,26 +2,26 @@
 templateKey: 'service-page'
 slug: /produktkonfiguratoren
 title: Angebots- & <br/>Produkt-Konfiguratoren
-image: img/partyplaner.png
+image: partyplaner.png
 author: philip-schoenholzer
 description: Mit einem individuellen eCommerce Produkt- & Angebotskonfigurator verkaufen Sie komplexe Angebote einfach auf Ihrer Webseite oder in Ihrem Webshop.
 subtitle:
   text: Komplexe Angebote einfach auf Ihrer Webseite verkaufen
 
 customers:
-  - img/schurch-logo.png
-  - img/energie360-300x72.png
-  - img/sanagate-300x65.png
+  - schurch-logo.png
+  - energie360-300x72.png
+  - sanagate-300x65.png
 
 solutions:
   - title: Formular
-    image: img/partyplaner-2.png
+    image: partyplaner-2.png
     text: Ein Produktkonfigurator, welcher über ein Formular gesteuert wird, ist der Klassiker unter den Produktkonfiguratoren. Dieser eignet sich besonders für mobile Geräte, sowie eine Bedienung über die Tastatur.
   - title: Grafisch
-    image: img/anhaenger-zubehoer.png
+    image: anhaenger-zubehoer.png
     text: Ein grafischer Produktkonfigurator erlaubt eine äusserst intuitive und attraktive Lösung. Diese eignen sich besonders um visuelle Eigenheiten der Produkte zu vermitteln.
   - title: Chatbot
-    image: img/chatbot.png
+    image: chatbot.png
     text: Immer öfter kommen auch Chatbots oder Konversations-Dialoge bei der Produktkonfiguration zum Einsatz. Dies ist eine modern und von Anwendern gern genutzte Möglichkeit ein Produkt zu konfigurieren.
 
 bulletGroups:
@@ -64,7 +64,7 @@ specs:
 
 [[right]]
 |[[avatar]]
-||![Philip Schönholzer](../data/employees/images/philip-schoenholzer.jpg)
+||![Philip Schönholzer](../../data/employees/philip-schoenholzer/philip-schoenholzer.jpg)
 
 Nehmen Sie jetzt Kontakt mit unserem Projektleiter auf.
 Er steht Ihnen gerne für Fragen zur Verfügung.

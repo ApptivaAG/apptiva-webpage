@@ -11,7 +11,7 @@ description:
 <div class="container">
 
 [[left]]
-|![Jenny](img/jenny.png)
+|![Jenny](jenny.png)
 
 # Lernen Sie Jenny kennen
 
@@ -28,7 +28,7 @@ Ihre Hauptaufgabe ist, den Kunden bei der Heizölbestellung zu unterstützen und
 <div class="container">
 
 [[right]]
-|![Jenny am Telefon](img/hello-jenny.png)
+|![Jenny am Telefon](hello-jenny.png)
 
 # Der nächste Kunde
 
@@ -45,7 +45,7 @@ Herr Richter ist am Telefon und möchte Heizöl für ein Einfamilienhaus der Kru
 <div class="container">
 
 [[left]]
-|![Jenny macht Notizen](img/jenny-notes.png)
+|![Jenny macht Notizen](jenny-notes.png)
 
 # Notizen
 
@@ -58,7 +58,7 @@ Da Jenny während dem Telefonat Daten in unterschiedlichen Applikationen festhal
 <div class="container">
 
 [[right]]
-|![Jenny berechnet den Preis](img/jenny-calc.png)
+|![Jenny berechnet den Preis](jenny-calc.png)
 
 # Preisberechnung
 
@@ -71,7 +71,7 @@ Herr Richter möchte 2’100 Liter Heizöl bestellen. Jenny berechnet den Preis 
 <div class="container">
 
 [[left]]
-|![Jenny erfasst Daten im CRM](img/jenny-crm.png)
+|![Jenny erfasst Daten im CRM](jenny-crm.png)
 
 # Aktivität im CRM erfassen
 
@@ -86,7 +86,7 @@ Jenny hofft, dass nicht gleich der nächste Kunde anruft.
 <div class="container">
 
 [[right]]
-|![Jenny erfasst Daten im ERP](img/jenny-erp.png)
+|![Jenny erfasst Daten im ERP](jenny-erp.png)
 
 # Auftrag im ERP erfassen
 
@@ -103,7 +103,7 @@ Dies dauert nicht nur lange, sondern führt auch zu Fehlern und ist auf die Daue
 <div class="container">
 
 [[left]]
-|![Anruf für Jenny](img/jenny-lucky.jpg)
+|![Anruf für Jenny](jenny-lucky.jpg)
 
 # Puh! Glück gehabt.
 
@@ -121,7 +121,7 @@ Vielleicht muss es nicht so sein?
 
 # Lean Enterprise App
 
-![Jenny nutzt die Lean Enterprise App](img/jenny-lea.gif)
+![Jenny nutzt die Lean Enterprise App](jenny-lea.gif)
 
 Seit kurzem hat Jenny eine Lean Enterprise App. Sie ist begeistert! Sie ist viel schneller, macht weniger Fehler und kann sich besser dem Kunden widmen.
 
@@ -132,7 +132,7 @@ Seit kurzem hat Jenny eine Lean Enterprise App. Sie ist begeistert! Sie ist viel
 <div class="container">
 
 [[left]]
-|![Alles in einem](img/jenny-allinone.png)
+|![Alles in einem](jenny-allinone.png)
 
 # Alles in Einem
 

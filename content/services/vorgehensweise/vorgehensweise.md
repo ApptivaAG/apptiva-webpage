@@ -31,7 +31,7 @@ bulletGroups:
 Sobald klar ist, wohin die Reise führt, starten wir mit zweiwöchigen Iterationen. Sie sind als Kunde fester Bestandteil davon. Jede Iteration durchläuft folgende Phasen:
 
 [[left]]
-|![Priorisieren, Lösungsfindung, Umsetzen, Lernen](img/iteration.svg)
+|![Priorisieren, Lösungsfindung, Umsetzen, Lernen](iteration.svg)
 
 ## Priorisieren
 
@@ -73,7 +73,7 @@ Wir auch nicht. Darum wenden wir UCD (User Centered Design) an. Diese Methode hi
 <div class="container">
 
 [[left]]
-|![Jenny nutzt das Branchensystem](img/jenny-erp.png)
+|![Jenny nutzt das Branchensystem](jenny-erp.png)
 
 ## Tag 1
 
@@ -92,8 +92,8 @@ Um dies herauszufinden, beobachten wir den Benutzer während seiner Arbeit und f
 <div class="container">
 
 [[right]]
-|![Personas](img/personas.jpg)
-|![Kontext Szenarios](img/kontext-szenarios.jpg)
+|![Personas](personas.jpg)
+|![Kontext Szenarios](kontext-szenarios.jpg)
 
 ## Tag 2
 
@@ -110,8 +110,8 @@ Um die Tätigkeiten der Benutzer optimal zu unterstützen, entwickeln wir den k�
 <div class="container">
 
 [[left]]
-|![Skizzen](img/sketch.jpg)
-|![Wireframes](img/wireframe.png)
+|![Skizzen](sketch.jpg)
+|![Wireframes](wireframe.png)
 
 ## Tag 3
 
@@ -130,7 +130,7 @@ Sobald sich eine Idee herauskristallisiert, verfeinern wir diese mit speziellen 
 <div class="container">
 
 [[right]]
-|![Prototyp](img/prototyp.png)
+|![Prototyp](prototyp.png)
 
 ## Tag 4
 
@@ -145,7 +145,7 @@ Mit spezieller Software entwickeln wir sehr schnell Prototypen einer App.
 <div class="container">
 
 [[left]]
-|![Test des Prototyps](img/jenny-allinone.png)
+|![Test des Prototyps](jenny-allinone.png)
 
 ## Tag 5
 
@@ -160,7 +160,7 @@ Mit diesem Prototyp testen wir eine Idee direkt am Arbeitsplatz der Benutzer. So
 <div class="container">
 
 [[right]]
-|![Lösung umsetzen](img/umsetzen.png)
+|![Lösung umsetzen](umsetzen.png)
 
 ## Iteratives Umsetzen
 

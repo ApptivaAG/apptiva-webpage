@@ -3,8 +3,8 @@ templateKey: employee-page
 slug: /patrik-stutz
 name: Patrik Stutz
 claim: Entdeckungsfreudiger Tüftler
-preview: images/patrik-stutz-prev.jpg
-avatar: images/patrik-stutz.jpg
+preview: patrik-stutz-prev.jpg
+avatar: patrik-stutz.jpg
 role: Softwareentwickler und -architekt
 education: Informatiker EFZ
 slogan: Ich liebe es, Prozesse so einfach & effizent wie möglich zu gestalten und den Menschen dadurch Zeit für wichtigere Dinge zu schenken.

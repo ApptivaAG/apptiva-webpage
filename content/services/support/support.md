@@ -2,7 +2,7 @@
 templateKey: 'service-page'
 slug: /unterstuetzung
 title: Unterstützung
-image: img/life-ring.png
+image: life-ring.png
 author: philip-schoenholzer
 description: ''
 ---

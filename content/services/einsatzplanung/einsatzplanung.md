@@ -9,9 +9,9 @@ subtitle:
   text: Behalten Sie Ihren Einsatzplan auch in Ausnahmesituationen im Griff.
 
 customers:
-  - ../img/sd.png
-  - ../img/schurch-logo.png
-  - ../img/hostettler-300x70.png
+  - sd.png
+  - schurch-logo.png
+  - hostettler-300x70.png
 
 solutions:
   - title: Übersichtlich
@@ -47,7 +47,7 @@ bulletGroups:
 
 [[right]]
 |[[avatar]]
-||![Roman Schaller](../../data/employees/images/roman-schaller.jpg)
+||![Roman Schaller](../../data/employees/roman-schaller/roman-schaller.jpg)
 
 Nehmen Sie jetzt Kontakt mit unserem Projektleiter auf.
 Er steht Ihnen gerne für Fragen zur Verfügung.

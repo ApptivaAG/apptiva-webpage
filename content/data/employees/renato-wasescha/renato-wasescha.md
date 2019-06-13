@@ -3,8 +3,8 @@ templateKey: employee-page
 slug: /renato-wasescha
 name: Renato Wasescha
 claim: Ausdauernder Lösungsfinder
-preview: images/renato-wasescha-prev.jpg
-avatar: images/renato-wasescha.jpg
+preview: renato-wasescha-prev.jpg
+avatar: renato-wasescha.jpg
 role: Fullstack Software-Entwickler und Unternehmer
 education: Informatiker EFZ, Software Engineer
 slogan: Die Entwicklung und Optimierung von herausragenden Applikationen ist meine Leidenschaft.

@@ -2,7 +2,7 @@
 templateKey: 'service-page'
 slug: persona-workshop
 title: Persona-Workshop
-image: img/persona-hero.jpg
+image: persona-hero.jpg
 author: philip-schoenholzer
 description: Mit Personas werden Ihre Lösungen in Zukunft besser auf die Bedürfnisse der Anwender und Stakeholder ausgerichtet und damit erfolgreicher sein.
 
