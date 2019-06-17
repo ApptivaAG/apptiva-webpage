@@ -19,11 +19,12 @@ für iOS und Android gleichzeitig zu entwickeln. Eine PWA geht noch einen Schrit
 solche installieren und verwenden.
 
 ## Was bietet eine PWA?
+
 Eine Progressive Web App kann erstaunlich viel mit Ihrem Smartphone erreichen:
 
 - **Als App installieren:** Aus dem Browser heraus kann die Webseite als richtige App installiert werden. Sie bekommen ein Start-Icon, dass sich in Ihre bestehenden Apps einreiht.
   Sie ist damit optisch nicht von einer App aus dem App Store zu unterscheiden.
-- **Push-Notifikationen:** Sie können Nachrichten gezielt an Ihre Benutzer als Push-Nachricht ausleifern.
+- **Push-Notifikationen:** Sie können Nachrichten gezielt an Ihre Benutzer als Push-Nachricht ausliefern.
 - **Offline-Fähigkeit:** Die App funktioniert auch dann, wenn Ihre Anwender mal in einem Funkloch sitzen.
 - **Zugriff auf diverse Sensoren:** Kamera, GPS und Beschleunigungs-Sensoren können wie bei nativen Apps verwendet werden.
 
@@ -47,4 +48,5 @@ Daneben gibt es noch viele weitere Möglichkeiten. Benutzen Sie die sozialen Net
 Nutzen Sie am besten Ihre bestehenden Kanäle.
 
 ## Fazit
+
 Für viele mobile Anwendungen ist eine Progressive Web App genau der richtige Weg. Sie spart Zeit und verkürzt die Time-To-Market.
