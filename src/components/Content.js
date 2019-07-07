@@ -22,6 +22,27 @@ const Markdown = styled.div`
     word-break: break-all;
   }
 
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    padding: 0.5em 6vw 0.5em 0;
+    border-bottom: 1px solid #ccc;
+  }
+
+  th {
+    text-align: left;
+  }
+
+  th:last-child {
+    width: 100%;
+  }
+
   .container {
     margin-right: auto;
     margin-left: auto;
