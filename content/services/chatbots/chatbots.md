@@ -19,7 +19,7 @@ customers:
 
 solutions:
   - title: In Webseiten
-    image: smartacus.png
+    image: sanagate-chatbot.png
     text: Unsere Chatbots können in jegliche Webseiten integriert werden.
   - title: In Messaging-Apps
     image: apps.png
