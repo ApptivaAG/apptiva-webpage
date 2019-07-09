@@ -19,7 +19,7 @@ Als Tabelle wenn möglich (iOS, Android)
 | Icon               | 1024px × 1024px PNG[![Externer Link](ext20-link.svg)][9] | 512px × 512px PNG[![Externer Link](ext20-link.svg)][5]  |
 | Kurzbeschreibung   | 30 Zeichen                                               | 80 Zeichen                                              |
 | Beschreibung       | Unbeschränkt                                             | 4000 Zeichen                                            |
-| Video (optional)   | bis 30 sek[![Externer Link](ext20-link.svg)][3]          | 30 - 120 sek                                            |
+| Video (optional)   | 15 - 30 sek[![Externer Link](ext20-link.svg)][3]         | 30 - 120 sek[![Externer Link](ext20-link.svg)][5]       |
 | Screenshots        | bis 10 Bilder[![Externer Link](ext20-link.svg)][4]       | 2 - 8 Bilder[![Externer Link](ext20-link.svg)][5]       |
 | Schlüsselwörter    | 100 Zeichen                                              | In der Beschreibung                                     |
 | Vorstellungsgrafik | Keine                                                    | 1024px × 500px PNG[![Externer Link](ext20-link.svg)][6] |
@@ -35,7 +35,7 @@ Als Tabelle wenn möglich (iOS, Android)
 [8]: https://support.google.com/googleplay/android-developer/answer/113475
 [9]: https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/
 
-Weitere Inhalte:
+Weitere zwingende Inhalte:
 
 - URL zur Datenschutzerklärung
 
