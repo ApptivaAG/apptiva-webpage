@@ -1,29 +1,29 @@
 ---
-title: Inahalte in den App Stores
+title: App Store - Eintragbeschreibung
 slug: app-store-content
 templateKey: blog-post
 image: renato-patrik.jpg
 date: 2019-07-12
 author: Philip Schönholzer
 description: >-
-  App-Store Inhalte
+  Wie lange dürfen der Name und die Beschreibung einer App im Apple App-Store oder dem Google Play-Store sein? Und viele Bilder in welche Auflösung? Diese und andere Angaben für die App-Stores listen wir hier.
 categories:
   - Allgemein
 ---
 
-Als Tabelle wenn möglich (iOS, Android)
+Apps im [Apple App-Store](https://www.apple.com/ios/app-store/) und [Google Play-Store](https://play.google.com/store) benötigen eine Beschreibung, damit die Kunden und Nutzer entscheiden können, ob sie die App Herunterladen wollen. Diese Beschreibung beinhaltet Icons, Name der App, eine Beschreibung, ein paar Screenshots usw. Für diese Inhalte geben die App-Stores die Qualität, Menge und Länge vor, wie zum Beispiel die Auflösung oder Menge der Zeichen. Jeder Store hat dabei leicht andere Vorgaben. In der folgenden Übersicht listen wir die wichtigsten Angaben.
 
-| Attribut           | iOS[![Externer Link](ext20-link.svg)][1]                 | Android[![Externer Link](ext20-link.svg)][2]            |
-| ------------------ | -------------------------------------------------------- | ------------------------------------------------------- |
-| Titel              | 30 Zeichen                                               | 30 Zeichen                                              |
-| Icon               | 1024px × 1024px PNG[![Externer Link](ext20-link.svg)][9] | 512px × 512px PNG[![Externer Link](ext20-link.svg)][5]  |
-| Kurzbeschreibung   | 30 Zeichen                                               | 80 Zeichen                                              |
-| Beschreibung       | Unbeschränkt                                             | 4000 Zeichen                                            |
-| Video (optional)   | 15 - 30 sek[![Externer Link](ext20-link.svg)][3]         | 30 - 120 sek[![Externer Link](ext20-link.svg)][5]       |
-| Screenshots        | bis 10 Bilder[![Externer Link](ext20-link.svg)][4]       | 2 - 8 Bilder[![Externer Link](ext20-link.svg)][5]       |
-| Schlüsselwörter    | 100 Zeichen                                              | In der Beschreibung                                     |
-| Vorstellungsgrafik | Keine                                                    | 1024px × 500px PNG[![Externer Link](ext20-link.svg)][6] |
-| Kategorie          | Auswählen[![Externer Link](ext20-link.svg)][7]           | Auswählen[![Externer Link](ext20-link.svg)][8]          |
+| Attribut           | iOS[![Externer Link](ext4-link.svg)][1]                 | Android[![Externer Link](ext4-link.svg)][2]             |
+| ------------------ | ------------------------------------------------------- | ------------------------------------------------------- |
+| Titel              | 30 Zeichen[![Externer Link](ext4-link.svg)][1]          | 30 Zeichen                                              |
+| Icon               | 1024px × 1024px PNG[![Externer Link](ext4-link.svg)][9] | 512px × 512px PNG[![Externer Link](ext4-link.svg)][5]   |
+| Kurzbeschreibung   | 30 Zeichen[![Externer Link](ext4-link.svg)][1]          | 80 Zeichen                                              |
+| Beschreibung       | Unbeschränkt                                            | 4000 Zeichen                                            |
+| Video (optional)   | 15 - 30 sek[![Externer Link](ext4-link.svg)][3]         | 30 - 120 sek[![Externer Link](ext4-link.svg)][5]        |
+| Screenshots        | bis 10 Bilder[![Externer Link](ext4-link.svg)][4]       | 2 - 8 Bilder[![Externer Link](ext4-link.svg)][5]        |
+| Schlüsselwörter    | 100 Zeichen[![Externer Link](ext4-link.svg)][1]         | In der Beschreibung                                     |
+| Vorstellungsgrafik | Keine                                                   | 1024px × 500px PNG[![Externer Link](ext4-link.svg)][6]  |
+| Kategorie          | Aus Liste auswählen[![Externer Link](ext4-link.svg)][7] | Aus Liste auswählen[![Externer Link](ext4-link.svg)][8] |
 
 [1]: https://developer.apple.com/app-store/product-page/
 [2]: https://developer.android.com/distribute/best-practices/launch/store-listing.html
