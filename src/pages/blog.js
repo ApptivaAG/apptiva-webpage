@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import { css } from 'styled-components'
 import { Section, MainTitle, Container } from '../style'
 import { truncate } from '../util'
 import Layout from '../components/Layout'
@@ -17,13 +18,18 @@ export default ({ data }) => {
 
             {posts.map(({ node: post }) => (
               <div key={post.id}>
-                <p style={{ marginTop: '4em', fontWeight: 600 }}>
-                  <Link to={`/${post.frontmatter.slug}`}>
-                    {post.frontmatter.title}
-                  </Link>
+                <h2
+                  css={`
+                    margin-top: 4em;
+                  `}
+                >
+                  <Link
+                    to={`/${post.frontmatter.slug}`}
+                    dangerouslySetInnerHTML={{ __html: post.frontmatter.title }}
+                  />
                   <span> &bull; </span>
                   <small>{post.frontmatter.date}</small>
-                </p>
+                </h2>
                 <Img fixed={post.frontmatter.image.childImageSharp.fixed} />
                 <p>
                   {post.frontmatter.description
