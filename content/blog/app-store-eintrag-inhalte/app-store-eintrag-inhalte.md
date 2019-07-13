@@ -1,5 +1,5 @@
 ---
-title: App Store - Eintragsbeschreibung
+title: App Store - Eintrags&#173;beschreibung
 slug: app-store-eintrag-inhalte
 templateKey: blog-post
 image: store-logos.png
