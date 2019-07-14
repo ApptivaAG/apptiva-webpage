@@ -1,6 +1,6 @@
 ---
-title: App Store - Eintrags&#173;beschreibung
-slug: app-store-eintrag-inhalte
+title: 'App Store Einträge: Alle Details auf einen Blick'
+slug: app-store-eintrag-details-ueberblick
 templateKey: blog-post
 image: store-logos.png
 date: 2019-07-14
