@@ -278,7 +278,10 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
                     }}
                     alt="Post image"
                   />
-                  <h2>{post.frontmatter.title}</h2>
+                  <h2
+                    // eslint-disable-next-line react/no-danger
+                    dangerouslySetInnerHTML={{ __html: post.frontmatter.title }}
+                  />
                   <h4>{post.frontmatter.date}</h4>
                   <p>
                     {post.frontmatter.description
