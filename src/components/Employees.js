@@ -1,6 +1,6 @@
 import React from 'react'
 import Img from 'gatsby-image'
-import { Link, graphql } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import {
   FaPhone as PhoneIcon,
@@ -67,75 +67,97 @@ const Contact = styled.div`
     }
   }
 `
-
-export default ({ employees }) => (
-  <Section id="team" dark>
-    <Container>
-      <Title>Team</Title>
-      <Subtitle>
-        Mehr als 40 Jahre Erfahrung bei der Entwicklung von Enterprise-Software.
-      </Subtitle>
-      <EmployeeList>
-        {employees.edges.map(edge => {
-          const { name, claim, contact, slug, preview } = edge.node.frontmatter
-          return (
-            <EmployeeWrapper key={edge.node.id}>
-              <Employee>
-                <LinkStyled to={slug}>
-                  <Avatar
-                    fixed={{
-                      ...preview.childImageSharp.fixed,
-                      base64: preview.childImageSharp.sqip.dataURI,
-                    }}
-                  />
-                  <Name>{name}</Name>
-                  <Claim>{claim}</Claim>
-                </LinkStyled>
-                <Contact>
-                  <a href={`tel:${contact.tel}`}>
-                    <PhoneIcon />
-                    {contact.tel}
-                  </a>
-                  <a href={`mailto:${contact.mail}`}>
-                    <EnvelopeIcon />
-                    {contact.mail}
-                  </a>
-                  {contact.twitter&&<a href={`https://twitter.com/${contact.twitter}`}>
-                    <TwitterIcon />@{contact.twitter}
-                  </a>}
-                </Contact>
-              </Employee>
-            </EmployeeWrapper>
-          )
-        })}
-      </EmployeeList>
-    </Container>
-  </Section>
-)
-
-export const employeeFragment = graphql`
-  fragment Employee_details on MarkdownRemark {
-    html
-    frontmatter {
-      templateKey
-      slug
-      name
-      claim
-      contact {
-        tel
-        mail
-        twitter
-      }
-      preview {
-        childImageSharp {
-          fixed(width: 200, height: 200) {
-            ...GatsbyImageSharpFixed_withWebp_noBase64
-          }
-          sqip(numberOfPrimitives: 8, blur: 16) {
-            dataURI
+const query = graphql`
+  query {
+    employees: allMarkdownRemark(
+      sort: { order: ASC, fields: [frontmatter___name] }
+      filter: { frontmatter: { templateKey: { eq: "employee-page" } } }
+    ) {
+      edges {
+        node {
+          id
+          html
+          frontmatter {
+            templateKey
+            slug
+            name
+            claim
+            contact {
+              tel
+              mail
+              twitter
+            }
+            preview {
+              childImageSharp {
+                fixed(width: 200, height: 200) {
+                  ...GatsbyImageSharpFixed_withWebp_noBase64
+                }
+                sqip(numberOfPrimitives: 8, blur: 16) {
+                  dataURI
+                }
+              }
+            }
           }
         }
       }
     }
   }
 `
+
+export default () => {
+  const { employees } = useStaticQuery(query)
+
+  return (
+    <Section id="team" dark>
+      <Container>
+        <Title>Team</Title>
+        <Subtitle>
+          Mehr als 40 Jahre Erfahrung bei der Entwicklung von
+          Enterprise-Software.
+        </Subtitle>
+        <EmployeeList>
+          {employees.edges.map(edge => {
+            const {
+              name,
+              claim,
+              contact,
+              slug,
+              preview,
+            } = edge.node.frontmatter
+            return (
+              <EmployeeWrapper key={edge.node.id}>
+                <Employee>
+                  <LinkStyled to={slug}>
+                    <Avatar
+                      fixed={{
+                        ...preview.childImageSharp.fixed,
+                        base64: preview.childImageSharp.sqip.dataURI,
+                      }}
+                    />
+                    <Name>{name}</Name>
+                    <Claim>{claim}</Claim>
+                  </LinkStyled>
+                  <Contact>
+                    <a href={`tel:${contact.tel}`}>
+                      <PhoneIcon />
+                      {contact.tel}
+                    </a>
+                    <a href={`mailto:${contact.mail}`}>
+                      <EnvelopeIcon />
+                      {contact.mail}
+                    </a>
+                    {contact.twitter && (
+                      <a href={`https://twitter.com/${contact.twitter}`}>
+                        <TwitterIcon />@{contact.twitter}
+                      </a>
+                    )}
+                  </Contact>
+                </Employee>
+              </EmployeeWrapper>
+            )
+          })}
+        </EmployeeList>
+      </Container>
+    </Section>
+  )
+}

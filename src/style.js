@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Img from 'gatsby-image'
 import styled, { css, createGlobalStyle } from 'styled-components'
 import styledNormalize from 'styled-normalize'
 
@@ -48,6 +49,12 @@ export const Title = styled.h2`
   @media (min-width: 381px) {
     font-size: 4em;
   }
+`
+
+export const DeemphasizedTitle = styled.h2`
+  font-size: 1.7em;
+  color: #cbcbcb;
+  text-align: center;
 `
 
 export const Subtitle = styled.h4`
@@ -120,6 +127,79 @@ export const Icon = styled.div`
   color: ${props => props.theme.color.bg};
   border-radius: 50%;
   background-color: ${props => props.theme.color.secondary};
+`
+
+export const ImgStyled = styled(Img)`
+  max-width: 340px;
+  transition: transform 0.3s;
+`
+
+export const ColList = styled.ul`
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.5em 2em;
+  padding: 0;
+  list-style: none;
+`
+
+export const ListItem = styled.li`
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 12rem;
+  margin: 0 0.5em 1em;
+  border: 1px solid lightgray;
+  border-radius: 0.2em;
+  background-color: white;
+  text-align: ${props => (props.align ? props.align : 'center')};
+
+  a {
+    flex: 1 1 auto;
+    padding: ${props => (props.full ? 0 : '1em')};
+    border-radius: 0.2em;
+    color: ${props => props.theme.color.text};
+    overflow: hidden;
+
+    svg {
+      transition: transform 0.3s;
+    }
+
+    &:hover {
+      color: ${props => props.theme.color.bg};
+      background-color: ${props => props.theme.color.primary};
+
+      ${ImgStyled}, svg {
+        transform: scale(1.06);
+        color: black;
+      }
+    }
+  }
+
+  h2,
+  h3,
+  h4 {
+    margin: 0.1em ${props => (props.full ? '1rem' : 0)};
+  }
+  h3 {
+    font-size: 1em;
+    font-weight: 300;
+  }
+  h4 {
+    font-size: 0.8em;
+    font-weight: 300;
+  }
+
+  ${ImgStyled} {
+    margin-top: ${props => (props.full ? 0 : '1rem')};
+    margin-bottom: ${props => (props.full ? '.6rem' : 0)};
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  p {
+    line-height: 1.2;
+    margin: 1em ${props => (props.full ? '1rem' : 0)};
+  }
 `
 
 export const theme = {

@@ -1,8 +1,12 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
-import { Section as SectionDefault, Container } from '../style'
+import {
+  Section as SectionDefault,
+  Container,
+  DeemphasizedTitle,
+} from '../style'
 
 const Section = styled(SectionDefault)`
   padding-top: 4em;
@@ -74,36 +78,49 @@ const TestimonialsStyle = styled.ul`
   padding-left: 0;
   list-style: none;
 `
-export default ({ testimonials }) => (
-  <Section>
-    <Container>
-      <TestimonialsStyle>
-        {testimonials.edges.map(edge => (
-          <Testimonial key={edge.node.id} {...edge.node.frontmatter} />
-        ))}
-      </TestimonialsStyle>
-    </Container>
-  </Section>
-)
-
-export const testimonialFragment = graphql`
-  fragment Testimonial_details on MarkdownRemark {
-    frontmatter {
-      templateKey
-      name
-      position
-      statement
-      company
-      avatar {
-        childImageSharp {
-          fixed(width: 50, height: 50) {
-            ...GatsbyImageSharpFixed_withWebp_noBase64
-          }
-          sqip(numberOfPrimitives: 2, blur: 16) {
-            dataURI
+const query = graphql`
+  query {
+    testimonials: allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "testimonial-data" } } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            templateKey
+            name
+            position
+            statement
+            company
+            avatar {
+              childImageSharp {
+                fixed(width: 50, height: 50) {
+                  ...GatsbyImageSharpFixed_withWebp_noBase64
+                }
+                sqip(numberOfPrimitives: 2, blur: 16) {
+                  dataURI
+                }
+              }
+            }
           }
         }
       }
     }
   }
 `
+
+export default () => {
+  const { testimonials } = useStaticQuery(query)
+  return (
+    <Section>
+      <Container>
+        <DeemphasizedTitle>Testimonials</DeemphasizedTitle>
+        <TestimonialsStyle>
+          {testimonials.edges.map(edge => (
+            <Testimonial key={edge.node.id} {...edge.node.frontmatter} />
+          ))}
+        </TestimonialsStyle>
+      </Container>
+    </Section>
+  )
+}
