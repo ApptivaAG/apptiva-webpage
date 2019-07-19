@@ -1,5 +1,8 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import styled from 'styled-components'
+
+import { company } from '../config'
 import {
   Container as ContainerDefault,
   Section,
@@ -8,15 +11,25 @@ import {
 } from '../style'
 import Layout from '../components/Layout'
 import ContactForm from '../components/ContactForm'
+import SEO from '../components/SEO'
 
 const Container = styled(ContainerDefault)`
   padding-top: 4em;
   padding-bottom: 12em;
 `
 
+const metadata = {
+  title: 'Kontakt',
+  description: 'Wir freuen uns auf Ihre Kontaktaufnahme.',
+  slug: 'kontakt',
+}
+
 const Contact = () => (
   <Layout>
     <main>
+      <Helmet title={`Kontakt - ${company}`} />
+      <SEO metaData={metadata} />
+
       <Section id="kontakt">
         <Container>
           <Title>Kontakt</Title>
@@ -44,28 +57,26 @@ const Contact = () => (
 
       <Container>
         <h1>Kontakt</h1>
-        <p>
-          Unsere Koordination
-          <ul>
-            <li>Adresse</li>
-            <li>Tel</li>
-            <li>Formular</li>
-            <li>Google Maps</li>
-            <li>
-              Sitemap erstellen und ev.{' '}
-              <a href="https://search.google.com/search-console/sitemaps?resource_id=https%3A%2F%2Fapptiva.ch%2F">
-                hier{' '}
-              </a>
-              einreichen
-            </li>
-            <li>
-              Sitelinks verbesser:{' '}
-              <a href="https://support.google.com/webmasters/answer/47334?hl=de">
-                hier
-              </a>
-            </li>
-          </ul>
-        </p>
+        <p>Unsere Koordinaten</p>
+        <ul>
+          <li>Adresse</li>
+          <li>Tel</li>
+          <li>Formular</li>
+          <li>Google Maps</li>
+          <li>
+            Sitemap erstellen und ev.{' '}
+            <a href="https://search.google.com/search-console/sitemaps?resource_id=https%3A%2F%2Fapptiva.ch%2F">
+              hier{' '}
+            </a>
+            einreichen
+          </li>
+          <li>
+            Sitelinks verbesser:{' '}
+            <a href="https://support.google.com/webmasters/answer/47334?hl=de">
+              hier
+            </a>
+          </li>
+        </ul>
         <a href="/">Zur Startseite</a>
       </Container>
     </main>

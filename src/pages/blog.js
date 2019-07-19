@@ -1,10 +1,19 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import { css } from 'styled-components'
+import Helmet from 'react-helmet'
+
+import { company } from '../config'
 import { Section, MainTitle, Container } from '../style'
 import { truncate } from '../util'
 import Layout from '../components/Layout'
+import SEO from '../components/SEO'
+
+const metadata = {
+  title: 'Blog',
+  description: 'Aktuelle News rund um die Apptiva.',
+  slug: 'blog',
+}
 
 export default ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
@@ -12,6 +21,9 @@ export default ({ data }) => {
   return (
     <Layout>
       <main>
+        <Helmet title={`Blog - ${company}`} />
+        <SEO metaData={metadata} />
+
         <Section>
           <Container>
             <MainTitle>Blogbeiträge</MainTitle>

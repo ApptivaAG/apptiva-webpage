@@ -1,14 +1,23 @@
 import React from 'react'
-import styled from 'styled-components'
-import { Container, Section, Title } from '../style'
-import { description } from '../config'
+import Helmet from 'react-helmet'
+import { Container, Section } from '../style'
+import { description, company } from '../config'
 
 import Layout from '../components/Layout'
 import Employees from '../components/Employees'
+import SEO from '../components/SEO'
+
+const metadata = {
+  title: 'Jobs',
+  description: 'Wir bieten Jobs für Erwachsene',
+  slug: 'jobs',
+}
 
 const AboutUs = () => (
   <Layout>
     <main>
+      <Helmet title={`Über uns - ${company}`} />
+      <SEO metaData={metadata} />
       <Section>
         <Container>
           <h1>Über uns</h1>
