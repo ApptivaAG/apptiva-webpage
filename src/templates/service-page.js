@@ -90,10 +90,7 @@ const Header = ({ title, image, subtitle }) => (
     <HeaderTitle dangerouslySetInnerHTML={{ __html: title }} />
     {subtitle && (
       <h2>
-        {subtitle.text}{' '}
-        {subtitle.swaps && (
-          <TextLoop interval={2000}>{subtitle.swaps}</TextLoop>
-        )}
+        {subtitle.text} {subtitle.swaps && subtitle.swaps[0]}
       </h2>
     )}
     {image && (
