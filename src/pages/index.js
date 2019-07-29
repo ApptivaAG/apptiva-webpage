@@ -28,6 +28,7 @@ import energie360 from '../img/energie360-300x72.png'
 import diepost from '../img/die-post-logo.png'
 import schurch from '../img/schurch-logo.png'
 import sd from '../img/sd.png'
+import globus from '../img/globus.png'
 import SEO from '../components/SEO'
 import swisscom from '../img/swisscom-gold-partner-300.png'
 import { truncate } from '../util'
@@ -250,6 +251,7 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
             <img src={sd} alt="sd Gebäudeunterhalt AG" />
             <img src={maxon} alt="maxon motor" />
             <img src={sanagate} alt="sanagate" />
+            <img src={globus} alt="Magazine zum Globus" />
             <img src={diepost} alt="Die Schweizerische Post AG" />
             <img src={suva} alt="suva" />
           </ImageList>
