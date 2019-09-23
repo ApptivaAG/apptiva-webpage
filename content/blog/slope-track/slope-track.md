@@ -25,27 +25,27 @@ Die Slope Track-App besteht aus zwei Kernkomponenten. Dies sind zum einen das Au
 
 ### Fahrten aufzeichnen
 
-![Daten filtern](aufzeichnung.jpg)
-
 Um die Fahrt aufzuzeichnen verwenden wir den Beschleunigungs- und den GPS-Sensor. Wir messen mit 50 Hz die Beschleunigung und jede Sekunden den GPS-Standort. Die rohen Beschleunigungs-Daten verarbeiten wir mit einem Tiefpassfilter um den "Lärm" aus den Messungen zu entfernen und ein klarere Resultate zu erhalten. Damit die Messung den ganzen Tag laufen kann filtern wir zudem Liftfahrten und Pausen aus den Messungen heraus. So sind wir in der Lage einzelne Abfahrten anzuzeigen. Zudem berechnen wir Distanz, Höhenmeter, Dauer und Geschwindigkeit aus den gesammelten GPS-Daten.
 
-### Fahrten präsentieren
+![Daten filtern](aufzeichnung.jpg)
 
-![Abfahrt von Wendy Holdener](track.jpg)
+### Fahrten präsentieren
 
 Um die aufgezeichneten Daten zu visualisieren nutzen wir ein interaktives Diagramm (zwei Kurven) und eine Karte (Kartografie). Die Abfahrten werden mit der Belastung auf der Karte eingezeichnet. Um die Abfahrt genauer zu studieren, können die Anwender die Karte stufenlos zoomen und scrollen, wie man es von Google Maps kennt. Die Karte und die eingezeichneten Pisten stellt Mapbox zur Verfügung. Ich die Integration der Karte in die App ist mittels Mapbox gelöst.
 
 Das interaktive Diagramm unter der Karte visualisiert zum einen die Belastung und die Geschwindigkeit der einzelne Abfahrten. Zum anderen nutzen wir das Diagramm auch um spezifische Punkte und Messwerte auf der Abfahrt anzuzeigen.
 
-## Visuelles Design und Interaktionskonzept
+![Abfahrt von Wendy Holdener](track.jpg)
 
-![Entwicklug der Benutzererfahrung](entwicklung.png)
+## Visuelles Design und Interaktionskonzept
 
 Wir wollten der App eine ansprechendes und leicht verspieltes Gesicht geben. So entstand unter anderem "Helm", die Figur die man herumzieht. _Helm_ fährt mit einem durch die App. Es ist bis heute unklar ob _Helm_ eine Mann oder ein Frau ist und auch die bevorzugte Fortbewegungsart (Ski oder Snowboard) ist _Helm_ nicht zu entlocken. Beim Grafik-Stil wollten wir ebenfalls eine spielerische Note mit einfachen klaren visuellen Elementen, die auch im Schnee gut sichtbar sind.
 
+![Entwicklug der Benutzererfahrung](entwicklung.png)
+
 ## Einfach mal ausprobieren
 
-Die Slope Track-App ist in Deutsch, Französisch und Italienisch verfügbar und kann aus dem App-Store von Apple und dem Play-Store von Google kostenlos heruntergeladen werden. Wir wünschen euch viel Spass und Hals- und Beinbruch.
+Die Slope Track-App ist in Deutsch, Französisch und Italienisch verfügbar und kann kostenlos aus dem App-Store von Apple und dem Play-Store von Google heruntergeladen werden. Wir wünschen euch viel Spass und Hals- und Beinbruch.
 
 <a href="https://apps.apple.com/ch/app/slope-track/id405253094?mt=8" target="_blank" rel="nofollow noopener noreferrer" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2010-12-20&kind=iossoftware&bubble=ios_apps) no-repeat;width:135px;height:40px;margin: 0.5em;"></a>
 <a href='https://play.google.com/store/apps/details?id=ch.suva.slopetrack.beta&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' target="_blank" rel="nofollow noopener noreferrer"><img style="height: 2.95em;" alt='Jetzt bei Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/de_badge_web_generic.png'/></a>
