@@ -43,6 +43,10 @@ Wir wollten der App eine ansprechendes und leicht verspieltes Gesicht geben. So 
 
 ![Entwicklug der Benutzererfahrung](entwicklung.png)
 
+## Technologie
+
+React Native in Typescript.
+
 ## Einfach mal ausprobieren
 
 Die Slope Track-App ist in Deutsch, Französisch und Italienisch verfügbar und kann kostenlos aus dem App-Store von Apple und dem Play-Store von Google heruntergeladen werden. Wir wünschen euch viel Spass und Hals- und Beinbruch.
