@@ -49,9 +49,3 @@ Die Slope Track-App ist in Deutsch, Französisch und Italienisch verfügbar und 
 
 <a href="https://apps.apple.com/ch/app/slope-track/id405253094?mt=8" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2010-12-20&kind=iossoftware&bubble=ios_apps) no-repeat;width:135px;height:40px;margin: 0.5em;"></a>
 <a href='https://play.google.com/store/apps/details?id=ch.suva.slopetrack.beta&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img style="height: 2.95em;" alt='Jetzt bei Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/de_badge_web_generic.png'/></a>
-
-## Danke
-
-- Samuli Aegerter
-- Giovanni Laportosa
-- Dr. M. H. Muser von AGU Zürich
