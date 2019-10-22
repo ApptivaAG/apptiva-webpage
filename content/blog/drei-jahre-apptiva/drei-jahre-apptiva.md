@@ -47,8 +47,3 @@ Neuenkirchstr. 19
 ## Apero von 16:00 bis 22:00
 
 Stosst mit uns auf das dreijährige Bestehen der Apptiva an. Wir schauen auf tolle Jahre zurück und wollen dies mit euch teilen.
-
-Bitte meldet euch an (dauert bloss 15 Sekunden).
-
-[[button]]
-|[Jetzt Anmelden](https://apptiva.typeform.com/to/jwwuyl)
