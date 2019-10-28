@@ -13,11 +13,25 @@ categories:
 
 ## Anforderungen
 
-Die Anforderungen der Suva an die Slope Track-App waren vor allem die Sicherheit von Schneesportlern zu erhöhen und deren Eigenverantwortung zu stärken. Dies wollten wir mit konkreten Messungen von Beschleunigungs- und Geschwindigkeitswerten und den daraus gewonnen Erkenntnissen erreichen. Diese Erkenntnisse sollten Ski- und Snowboardfahrer helfen ihrem eigenen Unfallrisiko entgegenwirken.
+Die Anforderungen der Suva an die Slope Track-App waren vor allem die Sicherheit von Schneesportlern zu erhöhen und deren Eigenverantwortung zu stärken. Dies wollten wir mit konkreten Messungen von Beschleunigungs- und Geschwindigkeitswerten und den daraus gewonnen Erkenntnissen erreichen. Diese Erkenntnisse sollten Ski- und Snowboardfahrer helfen ihrem eigenen Unfallrisiko entgegenwirken.
 
-Die Zielgruppe der App sind Suva-Kundinnen und Kunden. Dies sind bei der Suva versicherte Ski- und Snowboardfahrende Personen im Alter von 15 - 65 Jahren. Unser primäre Persona war "Jason". Er ist ein 30jähriger, gesundheitsbewusster Lüftungstechniker der seinen Fahrstil verbessern möchte und sich gerne mit anderen misst.
+Die Zielgruppe der App sind Suva-Kundinnen und Kunden. Dies sind bei der Suva versicherte Ski- und Snowboardfahrende Personen im Alter von 15 - 65 Jahren. Unser primäre Persona war "Jason". Er ist ein 30jähriger, gesundheitsbewusster Lüftungstechniker der seinen Fahrstil verbessern möchte und sich gerne mit anderen misst.
 
 Eine konkrete Metrik für die App ist, dass jede(r) AnwenderIn die vorhandenen Tipps studiert. Zudem sollten möglichst viele Personen das angebotene Training regelmässig ausführt.
+
+## Vorgehen
+
+### Visuelles Design und Interaktionskonzept
+
+Wir wollten der App eine ansprechendes und leicht verspieltes Gesicht geben. So entstand unter anderem "Helm", die Figur die man herumzieht. _Helm_ fährt mit einem durch die App. Es ist bis heute unklar ob _Helm_ eine Mann oder ein Frau ist und auch die bevorzugte Fortbewegungsart (Ski oder Snowboard) ist _Helm_ nicht zu entlocken. Beim Grafik-Stil wollten wir ebenfalls eine spielerische Note mit einfachen klaren visuellen Elementen, die auch im Schnee gut sichtbar sind.
+
+![Entwicklung der Benutzererfahrung](entwicklung.png)
+
+### Test-Tage
+
+Die Aufzeichnungs-Logik um die Beschleunigung und die Abfahrten aufzuzeichnen wollten wir möglichst früh in echten Verhältnissen testen. Deshalb gingen wir bereits nach wenigen Wochen mit einem frühen Prototyp der App in den Schnee. Da zeigte sich sehr schnell, dass unsere Ideen grundsätzlich funktionieren, aber noch einiges an Feinschliff bedürfen. Mit verfeinerten Versionen gingen wir später auch mit Wendy Holderen auf die Piste um die App in Grenzbereichen zu testen. Auch hier haben wir wertvolles Feedback erhalten, welches in die weitere Entwicklung geflossen ist.
+
+![Wendy Holdener zeichnet eine Abfahrt auf](wendy-abfahrt.jpg)
 
 ## Kernkomponenten
 
@@ -27,7 +41,7 @@ Die Slope Track-App besteht aus zwei Kernkomponenten. Dies sind zum einen das Au
 
 Um die Fahrt aufzuzeichnen verwenden wir den Beschleunigungs- und den GPS-Sensor. Wir messen mit 50 Hz die Beschleunigung und jede Sekunden den GPS-Standort. Die rohen Beschleunigungs-Daten verarbeiten wir mit einem Tiefpassfilter um den "Lärm" aus den Messungen zu entfernen und ein klarere Resultate zu erhalten. Damit die Messung den ganzen Tag laufen kann filtern wir zudem Liftfahrten und Pausen aus den Messungen heraus. So sind wir in der Lage einzelne Abfahrten anzuzeigen. Zudem berechnen wir Distanz, Höhenmeter, Dauer und Geschwindigkeit aus den gesammelten GPS-Daten.
 
-![Daten filtern](aufzeichnung.jpg)
+![Wendy Holdener schaut sich die Belastung ihrer Abfahrt am Computer an](wendy-belastung-zeigen.jpg)
 
 ### Fahrten präsentieren
 
@@ -36,12 +50,6 @@ Um die aufgezeichneten Daten zu visualisieren nutzen wir ein interaktives Diagra
 Das interaktive Diagramm unter der Karte visualisiert zum einen die Belastung und die Geschwindigkeit der einzelne Abfahrten. Zum anderen nutzen wir das Diagramm auch um spezifische Punkte und Messwerte auf der Abfahrt anzuzeigen.
 
 ![Abfahrt von Wendy Holdener](track.jpg)
-
-## Visuelles Design und Interaktionskonzept
-
-Wir wollten der App eine ansprechendes und leicht verspieltes Gesicht geben. So entstand unter anderem "Helm", die Figur die man herumzieht. _Helm_ fährt mit einem durch die App. Es ist bis heute unklar ob _Helm_ eine Mann oder ein Frau ist und auch die bevorzugte Fortbewegungsart (Ski oder Snowboard) ist _Helm_ nicht zu entlocken. Beim Grafik-Stil wollten wir ebenfalls eine spielerische Note mit einfachen klaren visuellen Elementen, die auch im Schnee gut sichtbar sind.
-
-![Entwicklug der Benutzererfahrung](entwicklung.png)
 
 ## Technologie
 
