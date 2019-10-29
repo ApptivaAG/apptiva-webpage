@@ -3,10 +3,10 @@ title: Suva Slope Track-App
 slug: suva-slope-track-app
 templateKey: blog-post
 image: vorstellung-slope-track.png
-date: 2019-10-04
+date: 2019-11-04
 author: Philip Schönholzer
 description: >-
-  Zusammen mit der Suva durften wir die letzen 9 Monate die Slope Track-App entwickelten. Slope Track ist eine native Tracking-App für iOS und Android, welche die Belastungen und Geschwindigkeiten während dem Ski oder Snowboard fahren aufzeichnet. Im folgenden Blogbeitrag zeigen wir auf, wie wir die Anforderungen der Suva umgesetzt haben.
+  Zusammen mit der Suva durften wir die letzen 10 Monate die Slope Track-App entwickelten. Slope Track ist eine native Tracking-App für iOS und Android, welche die Belastungen und Geschwindigkeiten während dem Ski- oder Snowboardfahren aufzeichnet. Im folgenden Blogbeitrag zeigen wir auf, wie wir die Anforderungen der Suva umgesetzt haben.
 categories:
   - Allgemein
 ---
@@ -17,25 +17,38 @@ Die Anforderungen der Suva an die Slope Track-App waren vor allem die Sicherheit
 
 Die Zielgruppe der App sind Suva-Kundinnen und Kunden. Dies sind bei der Suva versicherte Ski- und Snowboardfahrende Personen im Alter von 15 - 65 Jahren. Unser primäre Persona war "Jason". Er ist ein 30jähriger, gesundheitsbewusster Lüftungstechniker der seinen Fahrstil verbessern möchte und sich gerne mit anderen misst.
 
-Eine konkrete Metrik für die App ist, dass jede(r) AnwenderIn die vorhandenen Tipps studiert. Zudem sollten möglichst viele Personen das angebotene Training regelmässig ausführt.
+Eine konkrete Metrik für die App ist, dass jede(r) AnwenderIn die vorhandenen Tipps studiert. Zudem sollten möglichst viele Personen das angebotene Training regelmässig ausführen.
 
 ## Vorgehen
 
-### Visuelles Design und Interaktionskonzept
+Wie üblich haben wir das Projekt agil umgesetzt. Dies hatte in diesem Fall folgende Vorteile:
 
-Wir wollten der App eine ansprechendes und leicht verspieltes Gesicht geben. So entstand unter anderem "Helm", die Figur die man herumzieht. _Helm_ fährt mit einem durch die App. Es ist bis heute unklar ob _Helm_ eine Mann oder ein Frau ist und auch die bevorzugte Fortbewegungsart (Ski oder Snowboard) ist _Helm_ nicht zu entlocken. Beim Grafik-Stil wollten wir ebenfalls eine spielerische Note mit einfachen klaren visuellen Elementen, die auch im Schnee gut sichtbar sind.
+- Wir konnten bereits mit einem frühen Prototyp herausfinden, ob die Beschleunigungsaufzeichnung und Abfahrtenerkennung möglich ist und funktioniert.
+- Bereits zu Beginn mit vielen unterschiedlichen Mobile-Geräten und Sensoren die Beschleunigungsaufzeichnung testen.
+- Ideen beim Interaktionskonzept bereits in einer frühen Phase testen.
+- Neue Erkenntnisse und Ideen während der Entwicklung in das Projekt einfliessen lassen.
 
-![Entwicklung der Benutzererfahrung](entwicklung.png)
+Ebenfalls wie üblich haben wir ganz zu Beginn eine [Story Map](https://apptiva.ch/mehr-ueberblick-mit-storymap/) erstellt um den Umfang und die Abfolge der Entwicklung zu visualisieren.
+
+![Story Map der Slope Track-App](storymap.png)
 
 ### Test-Tage
 
-Die Aufzeichnungs-Logik um die Beschleunigung und die Abfahrten aufzuzeichnen wollten wir möglichst früh in echten Verhältnissen testen. Deshalb gingen wir bereits nach wenigen Wochen mit einem frühen Prototyp der App in den Schnee. Da zeigte sich sehr schnell, dass unsere Ideen grundsätzlich funktionieren, aber noch einiges an Feinschliff bedürfen. Mit verfeinerten Versionen gingen wir später auch mit Wendy Holderen auf die Piste um die App in Grenzbereichen zu testen. Auch hier haben wir wertvolles Feedback erhalten, welches in die weitere Entwicklung geflossen ist.
+Die Logik, um die Beschleunigung und die Abfahrten zu erkennen, wollten wir möglichst früh in echten Verhältnissen testen. Deshalb gingen wir bereits nach wenigen Wochen mit einem frühen Prototyp der App in den Schnee. Da zeigte sich sehr schnell, dass unsere Ideen grundsätzlich funktionieren, aber noch einiges an Feinschliff bedürfen.
+
+Mit einer verfeinerten Versionen gingen wir später auch mit der Skirennfahrerin [Wendy Holderen](https://de.wikipedia.org/wiki/Wendy_Holdener) auf die Piste um die App in Grenzbereichen zu testen. Auch hier haben wir wertvolles Feedback erhalten, welches in die weitere Entwicklung geflossen ist. Zudem haben wir eine Abfahrt von Wendy als Beispiel in der App hinterlegt. Diese zeigt eindrücklich auf, was für Kräfte bei Profis vorherrschen.
 
 ![Wendy Holdener zeichnet eine Abfahrt auf](wendy-abfahrt.jpg)
 
+### Visuelles Design und Interaktionskonzept
+
+Recht früh haben wir uns auch zum Aussehen und der Bedienung der App Gedanken gemacht. Dabei haben wir unterschiedliche Stile und Interaktionskonzepte in Betracht gezogen. Schlussendliche entschieden wir uns für etwas spielerisches und freundliches. So entstand unter anderem auch "Helm", die Figur die man herumzieht. _Helm_ fährt mit einem durch die App. Es ist bis heute unklar ob _Helm_ eine Mann oder ein Frau ist und auch die bevorzugte Fortbewegungsart (Ski oder Snowboard) ist _Helm_ nicht zu entlocken. Beim Grafik-Stil kam noch hinzu, dass die visuellen Elementen auch im Schnee gut sichtbar sein sollten.
+
+![Entwicklung der Benutzererfahrung](entwicklung.png)
+
 ## Kernkomponenten
 
-Die Slope Track-App besteht aus zwei Kernkomponenten. Dies sind zum einen das Aufzeichnen und zum anderen die Präsentation der Fahrt.
+Die Slope Track-App besteht aus zwei Kernkomponenten. Diese sind zum einen das Aufzeichnen und zum anderen die Präsentation der Fahrt.
 
 ### Fahrten aufzeichnen
 
@@ -45,7 +58,7 @@ Um die Fahrt aufzuzeichnen verwenden wir den Beschleunigungs- und den GPS-Sensor
 
 ### Fahrten präsentieren
 
-Um die aufgezeichneten Daten zu visualisieren nutzen wir ein interaktives Diagramm (zwei Kurven) und eine Karte (Kartografie). Die Abfahrten werden mit der Belastung auf der Karte eingezeichnet. Um die Abfahrt genauer zu studieren, können die Anwender die Karte stufenlos zoomen und scrollen, wie man es von Google Maps kennt. Die Karte und die eingezeichneten Pisten stellt Mapbox zur Verfügung. Ich die Integration der Karte in die App ist mittels Mapbox gelöst.
+Um die aufgezeichneten Daten zu visualisieren nutzen wir ein interaktives Diagramm mit zwei Kurven und eine Karte. Die Abfahrten werden mit der Belastung auf der Karte eingezeichnet. Um die Abfahrt genauer zu studieren, können die Anwender die Karte stufenlos zoomen und scrollen, wie man es von Google Maps kennt. Das Kartenmaterial mit den eingezeichneten Pisten stellt uns der Karten-Dienst [Mapbox](https://www.mapbox.com) zur Verfügung. Auch die Darstellung der Karte in die App ist mittels einer Komponente von [Mapbox](https://www.mapbox.com) gelöst.
 
 Das interaktive Diagramm unter der Karte visualisiert zum einen die Belastung und die Geschwindigkeit der einzelne Abfahrten. Zum anderen nutzen wir das Diagramm auch um spezifische Punkte und Messwerte auf der Abfahrt anzuzeigen.
 
