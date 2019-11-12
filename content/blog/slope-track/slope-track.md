@@ -66,9 +66,9 @@ Das interaktive Diagramm unter der Karte visualisiert die Belastung und die Gesc
 
 ## Technologie
 
-Bei der Entwicklung haben wir möglichst viel auf das Pferd [React Native](https://facebook.github.io/react-native/) gesetzt. Dies ermöglichte es uns, die ganze Benutzeroberfläche für beide Plattformen Android und iOS in einem Aufwisch zu entwickeln. Gleichzeitig bietet React Native die Möglichkeit, hardwarenahe Teile Plattformspezifisch zu entwickeln.
+Bei der App haben wir so viel wie möglich mit [React Native](https://facebook.github.io/react-native/) umgesetzt. Dies ermöglicht uns, die Benutzeroberfläche für Android und iOS nur einmal implementieren zu müssen. Gleichzeitig bietet React Native die Möglichkeit, hardwarenahe Teile Plattformspezifisch zu entwickeln.
 
-Beim Verarbeiten der Sensordaten kommt es auf jede Millisekunde an. Darum wollten wir diese Komponenten so nahe an der Platform wie möglich programmieren. Mit [Kotlin Native](https://kotlinlang.org/docs/reference/native-overview.html) konnten wir auch dort den Code nur einmal schreiben und für Android sowie iOS hardwarespezifisch kompilieren.
+Beim Verarbeiten der Sensordaten kommt es auf jede Millisekunde an. Deshalb programmierten wir diese Komponenten so nahe wie möglich an den Hardware-Plattformen. Mit [Kotlin Native](https://kotlinlang.org/docs/reference/native-overview.html) waren wir in der Lage auch dort den Code nur einmal zu schreiben und für Android sowie iOS hardwarespezifisch zu kompilieren.
 
 ## Einfach mal ausprobieren
 
