@@ -66,7 +66,9 @@ Das interaktive Diagramm unter der Karte visualisiert die Belastung und die Gesc
 
 ## Technologie
 
-React Native in Typescript.
+Bei der Entwicklung haben wir möglichst viel auf das Pferd [React Native](https://facebook.github.io/react-native/) gesetzt. Dies ermöglichte es uns, die ganze Benutzeroberfläche für beide Plattformen Android und iOS in einem Aufwisch zu entwickeln. Gleichzeitig bietet React Native die Möglichkeit, hardwarenahe Teile Plattformspezifisch zu entwickeln.
+
+Beim Verarbeiten der Sensordaten kommt es auf jede Millisekunde an. Darum wollten wir diese Komponenten so nahe an der Platform wie möglich programmieren. Mit [Kotlin Native](https://kotlinlang.org/docs/reference/native-overview.html) konnten wir auch dort den Code nur einmal schreiben und für Android sowie iOS hardwarespezifisch kompilieren.
 
 ## Einfach mal ausprobieren
 
