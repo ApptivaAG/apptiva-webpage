@@ -27,8 +27,6 @@ skills:
         value: 85
       - name: JavaScript
         value: 65
-  - title: Backend
-    items:
       - name: ReactJS
         value: 50
   - title: Sonstiges
