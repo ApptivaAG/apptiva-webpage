@@ -3,10 +3,10 @@ title: Suva Slope Track-App
 slug: suva-slope-track-app
 templateKey: blog-post
 image: vorstellung-slope-track.png
-date: 2019-11-04
+date: 2019-11-22
 author: Philip Schönholzer
 description: >-
-  Zusammen mit der Suva durften wir während den letzen 10 Monaten die Slope Track-App entwickeln. Slope Track ist eine native Tracking-App für iOS und Android, welche die Belastungen und Geschwindigkeiten während dem Ski- oder Snowboardfahren aufzeichnet. Im folgenden Blogbeitrag zeigen wir auf, wie wir die Anforderungen der Suva umgesetzt haben.
+  Zusammen mit der Suva durften wir während den letzen 11 Monaten die Slope Track-App entwickeln. Slope Track ist eine native Tracking-App für iOS und Android, welche die Belastungen und Geschwindigkeiten während dem Ski- oder Snowboardfahren aufzeichnet. Im folgenden Blogbeitrag zeigen wir auf, wie wir die Anforderungen der Suva umgesetzt haben.
 categories:
   - Allgemein
 ---
