@@ -162,15 +162,6 @@ export default () => {
           </AnimatedArrow>
         </Arrow>
       </ArrowContainer>
-      <Jobs>
-        <Container>
-          <h3>
-            Wir suchen: <a href="/jobs">Fullstack-EntwicklerIn</a>
-          </h3>
-          Gleich bewerben und einen der besten Jobs in der
-          Software&shy;entwicklung schnappen.
-        </Container>
-      </Jobs>
     </Section>
   )
 }
