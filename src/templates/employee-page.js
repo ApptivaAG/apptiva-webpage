@@ -3,13 +3,9 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
-import {
-  FaPhone as PhoneIcon,
-  FaEnvelope as EnvelopeIcon,
-  FaTwitter as TwitterIcon,
-  FaXing as XingIcon,
-  FaLinkedin as LinkedinIcon,
-} from 'react-icons/fa'
+import '@fortawesome/fontawesome-free/css/fontawesome.min.css'
+import '@fortawesome/fontawesome-free/css/solid.min.css'
+import '@fortawesome/fontawesome-free/css/brands.min.css'
 
 import Content, { HTMLContent } from '../components/Content'
 import { MainTitle, Subtitle, Section, Container, theme } from '../style'
@@ -58,6 +54,10 @@ const ContactList = styled.ul`
 
   a {
     white-space: nowrap;
+
+    i {
+      margin-right: 0.5em;
+    }
   }
 `
 const SkillList = styled.div`
@@ -175,27 +175,27 @@ export const EmployeePageTemplate = ({
               <ContactList>
                 <li>
                   <a href={`tel:${contact.tel}`}>
-                    <PhoneIcon />
+                    <i className="fas fa-phone" />
                     {contact.tel}
                   </a>
                 </li>
                 <li>
                   <a href={`mailto:${contact.mail}`}>
-                    <EnvelopeIcon />
+                    <i className="fas fa-envelope" />
                     {contact.mail}
                   </a>
                 </li>
                 {contact.twitter && (
                   <li>
                     <a href={`https://twitter.com/${contact.twitter}`}>
-                      <TwitterIcon />@ {contact.twitter}
+                      <i className="fab fa-twitter" />@ {contact.twitter}
                     </a>
                   </li>
                 )}
                 {contact.xing && (
                   <li>
                     <a href={contact.xing}>
-                      <XingIcon />
+                      <i className="fab fa-xing" />
                       Xing
                     </a>
                   </li>
@@ -203,7 +203,7 @@ export const EmployeePageTemplate = ({
                 {contact.linkedin && (
                   <li>
                     <a href={contact.linkedin}>
-                      <LinkedinIcon style={{ paddingBottom: 5 }} />
+                      <i className="fab fa-linkedin" />
                       Linkedin
                     </a>
                   </li>

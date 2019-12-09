@@ -17,7 +17,7 @@ bulletGroups:
     description: Bei der individuellen Softwareentwicklung halten wir uns an das <a href="http://www.lean-enterprise-app.com/">Manifest der Lean Enterprise App</a>.
 
     bulletList:
-      - icon: reg-clock
+      - icon: clock
         title: Individuell und dennoch schnell
         text: Dank einer überraschend direkten Zusammenarbeit und unserem agilen Vorgehen sind bereits nach wenigen Tagen die ersten Ergebnisse im Einsatz.
       - icon: database

@@ -3,7 +3,8 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
-import * as FontAwesome from 'react-icons/fa'
+import '@fortawesome/fontawesome-free/css/fontawesome.min.css'
+import '@fortawesome/fontawesome-free/css/solid.min.css'
 
 import Content, { HTMLContent } from '../components/Content'
 import { Centered, Container, Section, Icon } from '../style'
@@ -11,7 +12,6 @@ import config from '../config'
 import SEO from '../components/SEO'
 import { stripHTML } from '../util'
 import Layout from '../components/Layout'
-import IconErrorBoundary from '../components/IconErrorBoundary'
 
 const HeadArea = styled.header``
 
@@ -51,13 +51,8 @@ const Cols = styled.div`
     margin: 0 1rem 1rem;
   }
 `
-const faName = string => {
-  const faPrefix = `Fa-${string}`
-  const str = faPrefix.replace(/-([a-z])/g, g => g[1].toUpperCase())
-  return str
-}
 
-const icons = icon => React.createElement(FontAwesome[faName(icon)])
+const icons = icon => `fas fa-${icon}`
 
 const ListTitle = styled.header`
   margin-bottom: 3em;
@@ -184,18 +179,20 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
                 <p dangerouslySetInnerHTML={{ __html: group.description }} />
               </ListTitle>
               <ItemList>
-                {group.bulletList.map(item => (
-                  <Item key={item.title}>
-                    <IconErrorBoundary icon={item.icon}>
-                      <Icon>{icons(item.icon)}</Icon>
-                    </IconErrorBoundary>
-                    <ItemContent>
-                      <h3>{item.title}</h3>
-                      {/* eslint-disable-next-line react/no-danger */}
-                      <p dangerouslySetInnerHTML={{ __html: item.text }} />
-                    </ItemContent>
-                  </Item>
-                ))}
+                {group.bulletList.map(item => {
+                  return (
+                    <Item key={item.title}>
+                      <Icon>
+                        <i className={icons(item.icon)} />
+                      </Icon>
+                      <ItemContent>
+                        <h3>{item.title}</h3>
+                        {/* eslint-disable-next-line react/no-danger */}
+                        <p dangerouslySetInnerHTML={{ __html: item.text }} />
+                      </ItemContent>
+                    </Item>
+                  )
+                })}
               </ItemList>
             </Container>
           </Section>

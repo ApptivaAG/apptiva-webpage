@@ -114,9 +114,9 @@ export const Icon = styled.div`
   justify-content: center;
   align-items: center;
   flex: 0 0 auto;
-  height: 1.8em;
-  width: 1.8em;
-  font-size: 1.4em;
+  height: 2em;
+  width: 2em;
+  font-size: 1.5em;
   margin-right: 0.6em;
   color: ${props => props.theme.color.bg};
   border-radius: 50%;

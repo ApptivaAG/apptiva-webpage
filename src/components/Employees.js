@@ -2,11 +2,9 @@ import React from 'react'
 import Img from 'gatsby-image'
 import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
-import {
-  FaPhone as PhoneIcon,
-  FaEnvelope as EnvelopeIcon,
-  FaTwitter as TwitterIcon,
-} from 'react-icons/fa'
+import '@fortawesome/fontawesome-free/css/fontawesome.min.css'
+import '@fortawesome/fontawesome-free/css/solid.min.css'
+import '@fortawesome/fontawesome-free/css/brands.min.css'
 
 import { Section, Title, Subtitle, Container } from '../style'
 
@@ -60,7 +58,7 @@ const Contact = styled.div`
     color: #777;
     white-space: nowrap;
 
-    svg {
+    i {
       font-size: 0.9em;
       margin-right: 0.4em;
       color: #aaa;
@@ -93,16 +91,16 @@ export default ({ employees }) => (
                 </LinkStyled>
                 <Contact>
                   <a href={`tel:${contact.tel}`}>
-                    <PhoneIcon />
+                    <i className="fas fa-phone" />
                     {contact.tel}
                   </a>
                   <a href={`mailto:${contact.mail}`}>
-                    <EnvelopeIcon />
+                    <i className="fas fa-envelope" />
                     {contact.mail}
                   </a>
                   {contact.twitter && (
                     <a href={`https://twitter.com/${contact.twitter}`}>
-                      <TwitterIcon />@{contact.twitter}
+                      <i className="fab fa-twitter" />@{contact.twitter}
                     </a>
                   )}
                 </Contact>

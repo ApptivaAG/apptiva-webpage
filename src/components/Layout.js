@@ -1,7 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { ThemeProvider } from 'styled-components'
-import { IconContext } from 'react-icons'
 
 import Navbar from './Navbar'
 import Footer from './Footer'
@@ -25,9 +24,7 @@ const Layout = ({ children, showHero = false }) => (
       <Helmet title={config.title} />
       {showHero && <Hero />}
       <Navbar location={showHero && 'root'} />
-      <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
-        {children}
-      </IconContext.Provider>
+      {children}
       <Footer />
       <GlobalStyle />
     </Lightbox>

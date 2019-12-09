@@ -22,7 +22,7 @@ bulletGroups:
       - icon: expand
         title: Integriert in Ihre System­landschaft
         text: Integrieren Sie das Apptiva Dashboard in Ihre bestehende Systemlandschaft um gleiche Daten nur einmal erfassen zu müssen und diese sofort verfügbar zu haben.
-      - icon: reg-clock
+      - icon: clock
         title: Mehr Zeit für die Patienten
         text: Mit dem Apptiva Dashboard hat die Pflege weniger administrative Arbeit. Die notwendigen Informationen werden vorgelagert erfasst und mit wenigen Klicks aktualisiert. Die spätere Aufarbeitung der Daten entfällt.
       - icon: chart-bar
