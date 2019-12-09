@@ -4,7 +4,6 @@ import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import * as FontAwesome from 'react-icons/fa'
-import TextLoop from 'react-text-loop'
 
 import Content, { HTMLContent } from '../components/Content'
 import { Centered, Container, Section, Icon } from '../style'

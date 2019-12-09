@@ -86,8 +86,10 @@ const NavItemsA = styled.a`
 
 const DynLink = ({ type, nav, ...props }) =>
   type === 'root' ? (
+    // eslint-disable-next-line react/jsx-props-no-spreading
     <NavItemsA href={nav} {...props} />
   ) : (
+    // eslint-disable-next-line react/jsx-props-no-spreading
     <NavItemsLink to={nav} {...props} />
   )
 

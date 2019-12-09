@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react'
 import { Link } from 'gatsby'
 import styled, { css, createGlobalStyle } from 'styled-components'

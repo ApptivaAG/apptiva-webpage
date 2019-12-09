@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import { css } from 'styled-components'
 import { Section, MainTitle, Container } from '../style'
 import { truncate } from '../util'
 import Layout from '../components/Layout'

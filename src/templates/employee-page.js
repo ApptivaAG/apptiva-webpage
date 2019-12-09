@@ -185,23 +185,29 @@ export const EmployeePageTemplate = ({
                     {contact.mail}
                   </a>
                 </li>
-                {contact.twitter&&<li>
-                  <a href={`https://twitter.com/${contact.twitter}`}>
-                    <TwitterIcon />@ {contact.twitter}
-                  </a>
-                </li>}
-                {contact.xing&&<li>
-                  <a href={contact.xing}>
-                    <XingIcon />
-                    Xing
-                  </a>
-                </li>}
-                {contact.linkedin&&<li>
-                  <a href={contact.linkedin}>
-                    <LinkedinIcon style={{ paddingBottom: 5 }} />
-                    Linkedin
-                  </a>
-                </li>}
+                {contact.twitter && (
+                  <li>
+                    <a href={`https://twitter.com/${contact.twitter}`}>
+                      <TwitterIcon />@ {contact.twitter}
+                    </a>
+                  </li>
+                )}
+                {contact.xing && (
+                  <li>
+                    <a href={contact.xing}>
+                      <XingIcon />
+                      Xing
+                    </a>
+                  </li>
+                )}
+                {contact.linkedin && (
+                  <li>
+                    <a href={contact.linkedin}>
+                      <LinkedinIcon style={{ paddingBottom: 5 }} />
+                      Linkedin
+                    </a>
+                  </li>
+                )}
               </ContactList>
             </EmployeeData>
           </EmployeeBanner>
@@ -212,6 +218,7 @@ export const EmployeePageTemplate = ({
           <h1>Meine Skills</h1>
           <SkillList>
             {skills.map((skill, index) => (
+              // eslint-disable-next-line react/jsx-props-no-spreading
               <Skill key={skill.title} color={colorPalett[index]} {...skill} />
             ))}
           </SkillList>

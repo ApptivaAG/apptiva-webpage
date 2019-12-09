@@ -39,9 +39,11 @@ class ContactForm extends React.Component {
   /* Here’s the juicy bit for posting the form submission */
 
   handleSubmit(e) {
+    // eslint-disable-next-line react/destructuring-assignment
     if (this.state.email === '' || this.state.name === '') {
       /* eslint-disable-next-line no-alert */
       alert('Ups, ein zwingendes Feld ist noch nicht ausgefüllt.')
+      // eslint-disable-next-line react/destructuring-assignment
     } else if (this.state['bot-field'] === undefined) {
       const body = encode({
         'form-name': 'contact',

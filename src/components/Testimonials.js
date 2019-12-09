@@ -79,6 +79,7 @@ export default ({ testimonials }) => (
     <Container>
       <TestimonialsStyle>
         {testimonials.edges.map(edge => (
+          // eslint-disable-next-line react/jsx-props-no-spreading
           <Testimonial key={edge.node.id} {...edge.node.frontmatter} />
         ))}
       </TestimonialsStyle>
