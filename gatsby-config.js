@@ -53,6 +53,7 @@ module.exports = {
               maxWidth: 960,
             },
           },
+          'gatsby-remark-lazy-load',
           {
             resolve: 'gatsby-remark-custom-blocks',
             options: {
