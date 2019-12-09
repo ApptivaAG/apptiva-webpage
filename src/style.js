@@ -161,7 +161,9 @@ export const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: ${theme.color.primary};
+    ${'' /* higher contrast for accessability */}
+    color: rgb(0, 94, 140); 
+    font-weight: 400;
     
     .gatsby-image-wrapper {
       transition: transform 0.3s;
