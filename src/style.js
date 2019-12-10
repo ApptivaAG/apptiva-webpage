@@ -162,7 +162,7 @@ export const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
     ${'' /* higher contrast for accessability */}
-    color: rgb(0, 94, 140); 
+    color: hsla(200, 100%, 35%, 1); 
     font-weight: 400;
     
     .gatsby-image-wrapper {
