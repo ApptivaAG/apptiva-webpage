@@ -33,7 +33,7 @@ class Lightbox extends React.Component {
   handleOpen(e) {
     // TODO: improvement for keyboard users that keypress on link
     if (
-      e.target.className === 'gatsby-resp-image-image' ||
+      e.target.className.includes('gatsby-resp-image-image') ||
       e.target.closest('.lightbox') !== null
     ) {
       e.preventDefault()
