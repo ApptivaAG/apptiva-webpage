@@ -23,6 +23,8 @@ npm run serve #serve the local build
 
 To test and review an update make a Pull Request on Github. A preview will be built on netlify, which you can share.
 
+After changes of routes or usage of fonts run `npm run preload-fonts` to have the correct fonts be preloaded via http2.
+
 To make a change to the live page apptiva.ch just git commit/push to the master branch. A new version will be built automatically and deployed to netlify.
 
 ## Author blog post
