@@ -78,19 +78,19 @@ module.exports = {
     },
     'gatsby-plugin-svgr',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `Apptiva AG`,
-        short_name: `Apptiva`,
-        start_url: `/`,
-        background_color: `#252526`,
-        theme_color: `#008FD7`,
-        display: `standalone`,
-        icon: `src/img/icon.svg`,
+        name: 'Apptiva AG',
+        short_name: 'Apptiva',
+        start_url: '/',
+        background_color: '#252526',
+        theme_color: '#008FD7',
+        display: 'standalone',
+        icon: 'src/img/icon.svg',
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: 'UA-66015649-1',
         // Setting this parameter is optional
@@ -100,17 +100,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-netlify-cache',
-    {
-      resolve: `gatsby-plugin-netlify`,
-      options: {
-        allPageHeaders: [
-          'Link: </font/Gentona-ExtraBold.woff2>; rel=preload; as=font; crossorigin=anonymous',
-          'Link: </font/Gentona-Bold.woff2>; rel=preload; as=font; crossorigin=anonymous',
-          'Link: </font/Gentona-Medium.woff2>; rel=preload; as=font; crossorigin=anonymous',
-          'Link: </font/Gentona-Book.woff2>; rel=preload; as=font; crossorigin=anonymous',
-          'Link: </font/Gentona-ExtraLight.woff2>; rel=preload; as=font; crossorigin=anonymous',
-        ],
-      },
-    },
+    'gatsby-plugin-preload-fonts'
   ],
 }
