@@ -30,7 +30,6 @@ import schurch from '../img/schurch-logo.png'
 import sd from '../img/sd.png'
 import globus from '../img/globus.png'
 import SEO from '../components/SEO'
-import swisscom from '../img/swisscom-gold-partner-300.png'
 import { truncate } from '../util'
 
 const ColList = styled.ul`
@@ -151,17 +150,13 @@ const PartnerImage = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  margin: 1em -1em;
-  img {
-    flex: 1 1 6em;
-    width: 100%;
-    max-width: 12em;
-    height: 100%;
-    padding: 1em;
+
+  a {
+    margin: 2em;
   }
 `
 
-const IndexPage = ({ testimonials, posts, employees, images }) => (
+const IndexPage = ({ testimonials, posts, employees, partners, images }) => (
   <Layout showHero>
     <main>
       <SEO />
@@ -301,9 +296,18 @@ const IndexPage = ({ testimonials, posts, employees, images }) => (
       </Section>
       <Section dark>
         <Container>
-          <PartnerTitle>Partnerschaften</PartnerTitle>
+          <PartnerTitle>Partner</PartnerTitle>
           <PartnerImage>
-            <img src={swisscom} alt="Swisscom Gold Partner" />
+            {partners.edges.map(({ node }) => {
+              return (
+                <Link to={node.frontmatter.slug}>
+                  <Img
+                    fixed={node.frontmatter.logo.childImageSharp.fixed}
+                    alt={node.frontmatter.name}
+                  />
+                </Link>
+              )
+            })}
           </PartnerImage>
         </Container>
       </Section>
@@ -342,6 +346,7 @@ export default ({ data }) => {
       testimonials={data.testimonials}
       posts={posts}
       employees={data.employees}
+      partners={data.partners}
       images={data}
     />
   )
@@ -394,6 +399,28 @@ export const indexPageQuery = graphql`
             }
             date(formatString: "DD.MM.YYYY")
             description
+          }
+        }
+      }
+    }
+    partners: allMarkdownRemark(
+      sort: { order: ASC, fields: [frontmatter___prio] }
+      filter: { frontmatter: { templateKey: { eq: "partner-page" } } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            name
+            url
+            slug
+            logo {
+              childImageSharp {
+                fixed(width: 200) {
+                  ...GatsbyImageSharpFixed_withWebp
+                }
+              }
+            }
           }
         }
       }
