@@ -198,7 +198,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
               <ItemList>
                 {group.bulletList.map(item => {
                   return (
-                    <Item key={item.title}>
+                    <Item key={item.text}>
                       <Icon>
                         <i className={icons(item.icon)} />
                       </Icon>
@@ -216,7 +216,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
         ))}
       {references &&
         references.map(ref => (
-          <Section dark>
+          <Section key={ref.title} dark>
             <Container>
               <Centered>
                 <h2>{ref.title}</h2>
