@@ -135,7 +135,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
         <Section dark>
           <Container>
             {introduction.paragraphs.map(paragraph => (
-              <div>
+              <div key={paragraph.text + paragraph.textBold}>
                 {paragraph.text && <p>{paragraph.text}</p>}
                 {paragraph.textBold && (
                   <p>
