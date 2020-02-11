@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
@@ -7,7 +7,7 @@ import '@fortawesome/fontawesome-free/css/fontawesome.min.css'
 import '@fortawesome/fontawesome-free/css/solid.min.css'
 
 import Content, { HTMLContent } from '../components/Content'
-import { Centered, Container, Section, Icon } from '../style'
+import { Centered, Container, Section, Icon, Button } from '../style'
 import config from '../config'
 import SEO from '../components/SEO'
 import { stripHTML } from '../util'
@@ -61,7 +61,6 @@ const ListTitle = styled.header`
 const ItemList = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -1rem 1rem;
   padding: 0;
   list-style: none;
 `
@@ -103,8 +102,10 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
     image,
     subtitle,
     description,
+    introduction,
     customers,
     solutions,
+    references,
     specs,
     bulletGroups,
   } = metaData
@@ -129,7 +130,23 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
           )}
         </Container>
       </Section>
-
+      {introduction && (
+        <Section dark>
+          <Container>
+            <h2>{introduction.title}</h2>
+            {introduction.paragraphs.map(paragraph => (
+              <div key={paragraph.text + paragraph.textBold}>
+                {paragraph.text && <p>{paragraph.text}</p>}
+                {paragraph.textBold && (
+                  <p>
+                    <b>{paragraph.textBold}</b>
+                  </p>
+                )}
+              </div>
+            ))}
+          </Container>
+        </Section>
+      )}
       {customers && (
         <Section dark>
           <Container>
@@ -181,7 +198,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
               <ItemList>
                 {group.bulletList.map(item => {
                   return (
-                    <Item key={item.title}>
+                    <Item key={item.text}>
                       <Icon>
                         <i className={icons(item.icon)} />
                       </Icon>
@@ -194,6 +211,32 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
                   )
                 })}
               </ItemList>
+            </Container>
+          </Section>
+        ))}
+      {references &&
+        references.map(ref => (
+          <Section key={ref.title} dark>
+            <Container>
+              <Centered>
+                <h2>{ref.title}</h2>
+                <p>{ref.description}</p>
+                <Cols>
+                  {ref.referenceList.map(reference => (
+                    <div key={reference.title}>
+                      <h3>{reference.title}</h3>
+                      <Link to={reference.link}>
+                        <Img
+                          className="lightbox"
+                          fluid={reference.image.childImageSharp.fluid}
+                          alt={reference.title}
+                        />
+                      </Link>
+                      <p>{reference.text}</p>
+                    </div>
+                  ))}
+                </Cols>
+              </Centered>
             </Container>
           </Section>
         ))}
@@ -261,6 +304,13 @@ export const pageQuery = graphql`
           text
           swaps
         }
+        introduction {
+          title
+          paragraphs {
+            text
+            textBold
+          }
+        }
         description
         customers {
           childImageSharp {
@@ -276,6 +326,22 @@ export const pageQuery = graphql`
             childImageSharp {
               fluid(maxWidth: 960, srcSetBreakpoints: [340, 960, 1600]) {
                 ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+        references {
+          title
+          description
+          referenceList {
+            title
+            text
+            link
+            image {
+              childImageSharp {
+                fluid(maxWidth: 960, srcSetBreakpoints: [340, 960, 1600]) {
+                  ...GatsbyImageSharpFluid
+                }
               }
             }
           }
