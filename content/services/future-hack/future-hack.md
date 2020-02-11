@@ -2,7 +2,7 @@
 templateKey: 'service-page'
 slug: /future-hack-digitalisierung-gemeinsam-anpacken
 title: Future Hack
-image: future-hack.jpg
+image: future-hack.png
 author: apptiva-team
 description:
 subtitle:
