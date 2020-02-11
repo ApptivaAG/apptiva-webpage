@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
@@ -228,13 +228,13 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
                 {references.map(reference => (
                   <div key={reference.title}>
                     <h3>{reference.title}</h3>
-                    <a href={reference.image.childImageSharp.fluid.src}>
+                    <Link to={reference.link}>
                       <Img
                         className="lightbox"
                         fluid={reference.image.childImageSharp.fluid}
                         alt={reference.title}
                       />
-                    </a>
+                    </Link>
                     <p>{reference.text}</p>
                   </div>
                 ))}
@@ -335,6 +335,7 @@ export const pageQuery = graphql`
         references {
           title
           text
+          link
           image {
             childImageSharp {
               fluid(maxWidth: 960, srcSetBreakpoints: [340, 960, 1600]) {
