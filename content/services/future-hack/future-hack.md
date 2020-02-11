@@ -45,7 +45,7 @@ references:
 <div class="container">
 
 [[right]]
-|![50% reduziert](price-tag.svg)
+|![50% reduziert](price-tag-future-hack.svg)
 
 ## Kosten
 
