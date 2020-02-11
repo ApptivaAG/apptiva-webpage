@@ -31,11 +31,11 @@ bulletGroups:
 
 references:
   - title: Schürch-Getränke Party Planer
-    image: ../../blog/img/partyplaner.png
+    image: partyplaner.png
     text: Der Party Planer hat Getränke-Bestellungen bei Schürch-Getränke stark vereinfacht.
     link: /partyplaner-fuer-schuerch-getraenke/
   - title: SD Einsatzplanung
-    image: ../einsatzplanung/planung.png
+    image: einsatzplanung.png
     text: Die Einsatzplanungs-App erspart SD viel Kopfzerbrechen bei der Personalverwaltung.
     link: /einsatzplanung/
 ---
