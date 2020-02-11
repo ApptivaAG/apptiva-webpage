@@ -133,6 +133,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
       {introduction && (
         <Section dark>
           <Container>
+            <h2>{introduction.title}</h2>
             {introduction.paragraphs.map(paragraph => (
               <div key={paragraph.text + paragraph.textBold}>
                 {paragraph.text && <p>{paragraph.text}</p>}
@@ -304,6 +305,7 @@ export const pageQuery = graphql`
           swaps
         }
         introduction {
+          title
           paragraphs {
             text
             textBold
