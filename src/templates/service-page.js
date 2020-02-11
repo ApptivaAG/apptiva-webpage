@@ -106,6 +106,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
     introduction,
     customers,
     solutions,
+    references,
     specs,
     bulletGroups,
   } = metaData
@@ -213,6 +214,35 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
             </Container>
           </Section>
         ))}
+      {references && (
+        <Section>
+          <Container>
+            <Centered>
+              <h2>Erfolge</h2>
+              <p>
+                Future-Hacks haben schon vielen unserer Kunden geholfen, interne
+                Prozesse durch Digitalisierung angenehmer und effizienter zu
+                gestalten.
+              </p>
+              <Cols>
+                {references.map(reference => (
+                  <div key={reference.title}>
+                    <h3>{reference.title}</h3>
+                    <a href={reference.image.childImageSharp.fluid.src}>
+                      <Img
+                        className="lightbox"
+                        fluid={reference.image.childImageSharp.fluid}
+                        alt={reference.title}
+                      />
+                    </a>
+                    <p>{reference.text}</p>
+                  </div>
+                ))}
+              </Cols>
+            </Centered>
+          </Container>
+        </Section>
+      )}
       {specs && (
         <Section dark>
           <Container>
@@ -292,6 +322,17 @@ export const pageQuery = graphql`
           }
         }
         solutions {
+          title
+          text
+          image {
+            childImageSharp {
+              fluid(maxWidth: 960, srcSetBreakpoints: [340, 960, 1600]) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+        references {
           title
           text
           image {

@@ -28,6 +28,16 @@ bulletGroups:
       - icon: database
         title: asdf
         text: Die gewonnenen Erkenntnisse besprechen wir mit Ihnen und machen konkrete Vorschläge, wie diese Herausforderungen nachhaltig gelöst werden können (inkl. Schätzung des Sparpotentials und der Kosten).
+
+references:
+  - title: Schürch-Getränke Party Planer
+    image: ../../blog/img/partyplaner.png
+    text: Der Party Planer hat Getränke-Bestellungen bei Schürch-Getränke stark vereinfacht.
+    link: /partyplaner-fuer-schuerch-getraenke/
+  - title: SD Einsatzplanung
+    image: ../einsatzplanung/planung.png
+    text: Die Einsatzplanungs-App erspart SD viel Kopfzerbrechen bei der Personalverwaltung.
+    link: /einsatzplanung/
 ---
 
 <div class="full-width dark-section" style="overflow: auto;">
