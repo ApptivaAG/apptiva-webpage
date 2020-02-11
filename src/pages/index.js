@@ -216,6 +216,11 @@ const IndexPage = ({ testimonials, posts, employees, partners, images }) => (
                 <h3>Einsatzplanung für den Gebäudeunterhalt</h3>
               </Link>
             </li>
+            <li>
+              <Link to="/future-hack-digitalisierung-gemeinsam-anpacken">
+                <h3>Future Hack - Digitalisierung gemeinsam anpacken</h3>
+              </Link>
+            </li>
           </ul>
           <Blockquote>
             <h3>Unsere Spezialität</h3>
