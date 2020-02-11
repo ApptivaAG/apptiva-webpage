@@ -9,6 +9,7 @@ subtitle:
   text: Digitalisierung gemeinsam anpacken
 
 introduction:
+  title: Wozu ein Future Hack?
   paragraphs:
     - text: 'Gibt es Abläufe in Ihrem Unternehmen, wo Sie denken "Es kann doch nicht sein, dass wir das im Jahr 2020 noch so handgestrickt lösen?"'
     - text: 'Eine zeitgemässe Lösung zu finden ist aber oft schwieriger, als man denkt. Wenn eine Google-Recherche keine passenden Lösungen ausspuckt, bleibt meist alles beim Alten.'
@@ -31,11 +32,11 @@ references:
     description: Future Hacks haben schon vielen unserer Kunden geholfen, interne Prozesse durch Digitalisierung angenehmer und effizienter zu gestalten.
     referenceList:
       - title: Schürch-Getränke Party Planer
-        image: partyplaner.png
+        image: future-hack-partyplaner.png
         text: Der Party Planer hat Getränke-Bestellungen bei Schürch-Getränke stark vereinfacht.
         link: /partyplaner-fuer-schuerch-getraenke/
       - title: SD Einsatzplanung
-        image: einsatzplanung.png
+        image: future-hack-einsatzplanung.png
         text: Die Einsatzplanungs-App erspart SD viel Kopfzerbrechen bei der Personalverwaltung.
         link: /einsatzplanung/
 ---

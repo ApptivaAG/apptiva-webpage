@@ -52,10 +52,6 @@ const Cols = styled.div`
   }
 `
 
-const ReferenceImage = styled(Img)`
-  box-shadow: 0px 0px 20px 0px rgba(143, 143, 143, 1);
-`
-
 const icons = icon => `fas fa-${icon}`
 
 const ListTitle = styled.header`
@@ -137,6 +133,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
       {introduction && (
         <Section dark>
           <Container>
+            <h2>{introduction.title}</h2>
             {introduction.paragraphs.map(paragraph => (
               <div key={paragraph.text + paragraph.textBold}>
                 {paragraph.text && <p>{paragraph.text}</p>}
@@ -229,7 +226,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
                     <div key={reference.title}>
                       <h3>{reference.title}</h3>
                       <Link to={reference.link}>
-                        <ReferenceImage
+                        <Img
                           className="lightbox"
                           fluid={reference.image.childImageSharp.fluid}
                           alt={reference.title}
@@ -308,6 +305,7 @@ export const pageQuery = graphql`
           swaps
         }
         introduction {
+          title
           paragraphs {
             text
             textBold
