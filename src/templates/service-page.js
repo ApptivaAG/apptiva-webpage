@@ -52,6 +52,10 @@ const Cols = styled.div`
   }
 `
 
+const ReferenceImage = styled(Img)`
+  box-shadow: 0px 0px 20px 0px rgba(143, 143, 143, 1);
+`
+
 const icons = icon => `fas fa-${icon}`
 
 const ListTitle = styled.header`
@@ -229,7 +233,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
                   <div key={reference.title}>
                     <h3>{reference.title}</h3>
                     <Link to={reference.link}>
-                      <Img
+                      <ReferenceImage
                         className="lightbox"
                         fluid={reference.image.childImageSharp.fluid}
                         alt={reference.title}
