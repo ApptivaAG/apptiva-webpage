@@ -103,6 +103,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
     image,
     subtitle,
     description,
+    introduction,
     customers,
     solutions,
     specs,
@@ -129,7 +130,22 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
           )}
         </Container>
       </Section>
-
+      {introduction && (
+        <Section dark>
+          <Container>
+            {introduction.paragraphs.map(paragraph => (
+              <div>
+                {paragraph.text && <p>{paragraph.text}</p>}
+                {paragraph.textBold && (
+                  <p>
+                    <b>{paragraph.textBold}</b>
+                  </p>
+                )}
+              </div>
+            ))}
+          </Container>
+        </Section>
+      )}
       {customers && (
         <Section dark>
           <Container>
@@ -260,6 +276,12 @@ export const pageQuery = graphql`
         subtitle {
           text
           swaps
+        }
+        introduction {
+          paragraphs {
+            text
+            textBold
+          }
         }
         description
         customers {
