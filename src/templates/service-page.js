@@ -52,6 +52,10 @@ const Cols = styled.div`
   }
 `
 
+const ReferenceImage = styled(Img)`
+  box-shadow: 0px 0px 20px 0px rgba(143, 143, 143, 1);
+`
+
 const icons = icon => `fas fa-${icon}`
 
 const ListTitle = styled.header`
@@ -214,32 +218,35 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
             </Container>
           </Section>
         ))}
-      {references &&
-        references.map(ref => (
-          <Section dark>
-            <Container>
-              <Centered>
-                <h2>{ref.title}</h2>
-                <p>{ref.description}</p>
-                <Cols>
-                  {ref.referenceList.map(reference => (
-                    <div key={reference.title}>
-                      <h3>{reference.title}</h3>
-                      <Link to={reference.link}>
-                        <Img
-                          className="lightbox"
-                          fluid={reference.image.childImageSharp.fluid}
-                          alt={reference.title}
-                        />
-                      </Link>
-                      <p>{reference.text}</p>
-                    </div>
-                  ))}
-                </Cols>
-              </Centered>
-            </Container>
-          </Section>
-        ))}
+      {references && (
+        <Section>
+          <Container>
+            <Centered>
+              <h2>Erfolge</h2>
+              <p>
+                Future-Hacks haben schon vielen unserer Kunden geholfen, interne
+                Prozesse durch Digitalisierung angenehmer und effizienter zu
+                gestalten.
+              </p>
+              <Cols>
+                {references.map(reference => (
+                  <div key={reference.title}>
+                    <h3>{reference.title}</h3>
+                    <Link to={reference.link}>
+                      <ReferenceImage
+                        className="lightbox"
+                        fluid={reference.image.childImageSharp.fluid}
+                        alt={reference.title}
+                      />
+                    </Link>
+                    <p>{reference.text}</p>
+                  </div>
+                ))}
+              </Cols>
+            </Centered>
+          </Container>
+        </Section>
+      )}
       {specs && (
         <Section dark>
           <Container>
