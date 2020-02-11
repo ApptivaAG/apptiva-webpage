@@ -7,7 +7,7 @@ import '@fortawesome/fontawesome-free/css/fontawesome.min.css'
 import '@fortawesome/fontawesome-free/css/solid.min.css'
 
 import Content, { HTMLContent } from '../components/Content'
-import { Centered, Container, Section, Icon } from '../style'
+import { Centered, Container, Section, Icon, Button } from '../style'
 import config from '../config'
 import SEO from '../components/SEO'
 import { stripHTML } from '../util'
@@ -65,7 +65,6 @@ const ListTitle = styled.header`
 const ItemList = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -1rem 1rem;
   padding: 0;
   list-style: none;
 `
@@ -338,12 +337,16 @@ export const pageQuery = graphql`
         }
         references {
           title
-          text
-          link
-          image {
-            childImageSharp {
-              fluid(maxWidth: 960, srcSetBreakpoints: [340, 960, 1600]) {
-                ...GatsbyImageSharpFluid
+          description
+          referenceList {
+            title
+            text
+            link
+            image {
+              childImageSharp {
+                fluid(maxWidth: 960, srcSetBreakpoints: [340, 960, 1600]) {
+                  ...GatsbyImageSharpFluid
+                }
               }
             }
           }

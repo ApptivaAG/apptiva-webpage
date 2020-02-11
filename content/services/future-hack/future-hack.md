@@ -17,30 +17,30 @@ introduction:
 
 bulletGroups:
   - title: Unser Angebot
-    description: Ein Future-Hack setzt sich aus folgenden Schritten zusammen
+    description: 'Ein Future Hack setzt sich aus folgenden Schritten zusammen:'
     bulletList:
-      - icon: clock
-        title: 1aa
+      - icon: users
         text: Bei einem Treffen erklären Sie uns die grössten IT-Herausforderungen in Ihrem Unternehmen.
-      - icon: database
-        title: 2fs
+      - icon: wrench
         text: Während einem Arbeitstag begleiten wir Ihre Mitarbeiter bei ihrer täglichen Arbeit und lernen ihre Probleme.
-      - icon: database
-        title: asdf
+      - icon: lightbulb
         text: Die gewonnenen Erkenntnisse besprechen wir mit Ihnen und machen konkrete Vorschläge, wie diese Herausforderungen nachhaltig gelöst werden können (inkl. Schätzung des Sparpotentials und der Kosten).
 
 references:
-  - title: Schürch-Getränke Party Planer
-    image: partyplaner.png
-    text: Der Party Planer hat Getränke-Bestellungen bei Schürch-Getränke stark vereinfacht.
-    link: /partyplaner-fuer-schuerch-getraenke/
-  - title: SD Einsatzplanung
-    image: einsatzplanung.png
-    text: Die Einsatzplanungs-App erspart SD viel Kopfzerbrechen bei der Personalverwaltung.
-    link: /einsatzplanung/
+  - title: Erfolge
+    description: Future Hacks haben schon vielen unserer Kunden geholfen, interne Prozesse durch Digitalisierung angenehmer und effizienter zu gestalten.
+    referenceList:
+      - title: Schürch-Getränke Party Planer
+        image: partyplaner.png
+        text: Der Party Planer hat Getränke-Bestellungen bei Schürch-Getränke stark vereinfacht.
+        link: /partyplaner-fuer-schuerch-getraenke/
+      - title: SD Einsatzplanung
+        image: einsatzplanung.png
+        text: Die Einsatzplanungs-App erspart SD viel Kopfzerbrechen bei der Personalverwaltung.
+        link: /einsatzplanung/
 ---
 
-<div class="full-width dark-section" style="overflow: auto;">
+<div class="full-width" style="overflow: auto;">
 <div class="container">
 
 ## Kosten
