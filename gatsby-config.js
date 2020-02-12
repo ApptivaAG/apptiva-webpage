@@ -67,6 +67,7 @@ module.exports = {
                 button: { classes: 'custom-block-button' },
                 avatar: { classes: 'custom-block-avatar' },
                 'no-margin': { classes: 'custom-block-no-margin' },
+                'hide-on-mobile': { classes: 'custom-block-hide-on-mobile' },
               },
             },
           },
@@ -100,6 +101,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-netlify-cache',
-    'gatsby-plugin-preload-fonts'
+    'gatsby-plugin-preload-fonts',
   ],
 }
