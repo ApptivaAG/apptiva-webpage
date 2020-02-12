@@ -3,8 +3,7 @@ templateKey: 'service-page'
 slug: /future-hack-digitalisierung-gemeinsam-anpacken
 title: Future Hack
 image: future-hack.png
-author: apptiva-team
-description:
+description: Beim Future-Hack lösen wir die Herausforderungen der Digitalisierung in Ihrem Unternehmen gemeinsam mit Ihren Mitarbeitern.
 subtitle:
   text: Digitalisierung gemeinsam anpacken
 
