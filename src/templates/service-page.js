@@ -290,6 +290,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        slug
         image {
           childImageSharp {
             fluid(maxWidth: 960, srcSetBreakpoints: [340, 960, 1600]) {
