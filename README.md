@@ -25,7 +25,7 @@ To test and review an update make a Pull Request on Github. A preview will be bu
 
 After changes of routes or usage of fonts run `npm run preload-fonts` to have the correct fonts be preloaded via http2.
 
-To make a change to the live page apptiva.ch just git commit/push to the master branch. A new version will be built automatically and deployed to netlify.
+To make a change to the live page apptiva.ch just git commit/push to the master branch. A new version will be built automatically on Gatsby Cloud and deployed to netlify.
 
 ## Author blog post
 

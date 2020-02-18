@@ -129,6 +129,12 @@ const Markdown = styled.div`
     margin: 0 !important;
   }
 
+  .custom-block-hide-on-mobile {
+    @media (max-width: 640px) {
+      display: none !important;
+    }
+  }
+
   @media (min-width: 400px) {
     .gatsby-resp-image-wrapper .gatsby-resp-image-background-image {
       transform: translateZ(0);

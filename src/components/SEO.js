@@ -20,6 +20,7 @@ const getSchemaOrgJSONLD = ({
       '@type': 'WebSite',
       url,
       name: title,
+      description,
       alternateName: config.title,
     },
   ]
