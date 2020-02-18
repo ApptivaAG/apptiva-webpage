@@ -1,6 +1,6 @@
 ---
 templateKey: partner-page
-slug: /swisscom
+slug: swisscom
 prio: 1
 name: Swisscom
 logo: swisscom.png
