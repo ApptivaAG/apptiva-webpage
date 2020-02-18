@@ -26,11 +26,26 @@ bulletGroups:
       - icon: lightbulb
         text: Die gewonnenen Erkenntnisse besprechen wir mit Ihnen und machen konkrete Vorschläge, wie diese Herausforderungen nachhaltig gelöst werden können (inkl. Schätzung des Sparpotentials und der Kosten).
 
+  - title: Ihr Nutzen
+    bulletList:
+      - icon: comments-dollar
+        text: Sie erhalten mit wenig Aufwand konkrete Verbesserungsvorschläge und wissen, wie viel deren Umsetzung kosten wird.
+      - icon: smile-beam
+        text: Die gemachten Vorschläge werden von Ihren Mitarbeitern mitgetragen, da wir sie in den Prozess miteinbeziehen.
+      - icon: bullseye
+        text: Sie entlasten Ihre Mitarbeiter durch den Einsatz von zeitgemässen Applikationen.
+      - icon: exchange-alt
+        text: Sie schaffen einen transparenteren Kanal zu Ihren Lieferanten und Kunden.
+
 references:
   - title: Erfolge
     description: Future Hacks haben schon vielen unserer Kunden geholfen, interne Prozesse durch Digitalisierung angenehmer und effizienter zu gestalten.
     referenceList:
-      - title: Schürch-Getränke Party Planer
+      - title: Globus Innovationsprojekt
+        image: future-hack-globus.png
+        text: Das Innovationsprojekt «Trial Store» hatte zum Ziel, neue Geschäftsmodelle zu untersuchen.
+        link: /trial-store
+      - title: Schürch Party Planer
         image: future-hack-partyplaner.png
         text: Der Party Planer hat Getränke-Bestellungen bei Schürch-Getränke stark vereinfacht.
         link: /partyplaner-fuer-schuerch-getraenke/
