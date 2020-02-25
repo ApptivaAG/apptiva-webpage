@@ -94,6 +94,7 @@ class ContactForm extends React.Component {
             Nicht ausfüllen:{' '}
             <input type="text" name="bot-field" onChange={this.handleChange} />
           </label>
+          <input type="text" name="subject" />
         </p>
         <p>
           <label htmlFor="name">
