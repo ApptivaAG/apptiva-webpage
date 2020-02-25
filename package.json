@@ -51,6 +51,7 @@
     "striptags": "3.1.1",
     "styled-components": "^4.4.1",
     "styled-normalize": "^8.0.6",
+    "unfetch": "^4.1.0",
     "unist-util-visit": "^2.0.1"
   },
   "keywords": [
@@ -63,7 +64,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "preload-fonts": "gatsby-preload-fonts",
-    "serve": "gatsby serve",
+    "serve": "serve ./public",
     "clean": "gatsby clean",
     "update": "npx npm-check-updates -u",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
@@ -80,6 +81,7 @@
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^1.7.0",
     "gatsby-cli": "^2.8.15",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "serve": "^11.3.0"
   }
 }
