@@ -329,12 +329,12 @@ const IndexPage = ({ testimonials, posts, employees, partners, images }) => (
       </Section>
       <Section style={{ padding: 0, marginBottom: '-4rem' }}>
         <iframe
-          loading="lazy"
+          className="lazyload"
           title="Google Maps"
           scrolling="no"
           marginHeight="0"
           marginWidth="0"
-          src="https://maps.google.com/maps?q=Apptiva AG, Neuenkirchstrasse 19, Sempach Station&amp;hl=de&amp;geocode=+&amp;hnear=Apptiva AG+Neuenkirchstrasse 19,+Sempach Station&amp;t=m&amp;z=10&amp;iwloc=A&amp;output=embed"
+          data-src="https://maps.google.com/maps?q=Apptiva AG, Neuenkirchstrasse 19, Sempach Station&amp;hl=de&amp;geocode=+&amp;hnear=Apptiva AG+Neuenkirchstrasse 19,+Sempach Station&amp;t=m&amp;z=10&amp;iwloc=A&amp;output=embed"
           width="100%"
           height="550px"
           frameBorder="0"
