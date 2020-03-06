@@ -3,15 +3,16 @@ import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
+import useCollapse from 'react-collapsed'
 import '@fortawesome/fontawesome-free/css/fontawesome.min.css'
 import '@fortawesome/fontawesome-free/css/solid.min.css'
 
 import Content, { HTMLContent } from '../components/Content'
 import { Centered, Container, Section, Icon, Button } from '../style'
-import config from '../config'
 import SEO from '../components/SEO'
 import { stripHTML } from '../util'
 import Layout from '../components/Layout'
+import config from '../config'
 
 const HeadArea = styled.header``
 
@@ -95,6 +96,11 @@ const Header = ({ title, image, subtitle }) => (
   </HeadArea>
 )
 
+const variants = {
+  hidden: { opacity: 0, height: 0 },
+  visible: { opacity: 1, height: 'auto' },
+}
+
 const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
   const PostContent = contentComponent || Content
   const {
@@ -114,6 +120,10 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
     metaData.image.childImageSharp.resize &&
     metaData.image.childImageSharp.resize.src
 
+  const { getCollapseProps, getToggleProps, isOpen } = useCollapse({
+    expandStyles: { transitionDuration: '100ms' },
+    collapseStyles: { transitionDuration: '100ms' },
+  })
   return (
     <main>
       <Helmet title={`${stripHTML(title)} - ${config.company}`} />
@@ -261,6 +271,21 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
       <Section>
         <Container>
           <PostContent content={content} />
+        </Container>
+      </Section>
+      <Section>
+        <Container>
+          <Button
+            type="button"
+            style={isOpen ? { opacity: 0.3 } : {}}
+            {...getToggleProps()}
+          >
+            {!isOpen ? 'Call to Action' : 'close'}
+          </Button>
+          <div {...getCollapseProps()}>
+            <p>Hallo</p>
+            <p>There!</p>
+          </div>
         </Container>
       </Section>
     </main>
