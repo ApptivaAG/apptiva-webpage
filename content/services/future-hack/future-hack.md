@@ -58,15 +58,9 @@ references:
 <div class="full-width" style="overflow: auto;">
 <div class="container">
 
-[[right]]
-|[[hide-on-mobile]]
-||![50% reduziert](price-tag-future-hack.svg)
-
 ## Kosten
 
 Ein Future Hack kostet **CHF 3’000.-**
-
-**50% Früh-Hacker-Rabatt:** Falls Sie sich bereits im Februar 2020 anmelden.
 
 </div>
 </div>
