@@ -15,9 +15,9 @@ categories:
 
 ## Suva Slope Track-App
 
-Wie passend, dass eines meiner ersten Projekte bei Apptiva die SUVA Slope Track-App war.
+Wie passend, dass eines meiner ersten Projekte bei Apptiva die Suva Slope Track-App war.
 Das Ziel dieser App ist die Erfassung und Auswertung von Beschleunigungs- und Geschwindigkeitswerten (sogenannten «G-Kräfte») beim Wintersport. Damit sollen Skifahrer und Snowboarder auf die Auswirkungen der G-Kräfte und somit mögliche Unfallrisiken sensibilisiert werden. Diese App wurde mit React Native & der hardwarenahen Sprache Kotlin Native entwickelt.
-Dank der unkomplizierten und kollegialen Zusammenarbeit mit der SUVA konnten wir das Projekt plangemäss realisieren und ich konnte inzwischen sogar selbst ein paar meiner Abfahrten mit der Slope Track-App auswerten. Hätte ich als leidenschaftlicher Snowboarder dieses Tool doch nur schon früher nutzen können, dann wäre mein Start bei der Apptiva vielleicht etwas planmässiger verlaufen. Immerhin hätte ich mir als erstes Projekt kein Besseres Wünschen können und mein Einstieg ins Team war geglückt.
+Dank der unkomplizierten und kollegialen Zusammenarbeit mit der Suva konnten wir das Projekt plangemäss realisieren und ich konnte inzwischen sogar selbst ein paar meiner Abfahrten mit der Slope Track-App auswerten. Hätte ich als leidenschaftlicher Snowboarder dieses Tool doch nur schon früher nutzen können, dann wäre mein Start bei der Apptiva vielleicht etwas planmässiger verlaufen. Immerhin hätte ich mir als erstes Projekt kein Besseres Wünschen können und mein Einstieg ins Team war geglückt.
 
 ## Digital Signage
 
