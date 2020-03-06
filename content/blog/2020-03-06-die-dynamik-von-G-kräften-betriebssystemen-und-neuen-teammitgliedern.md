@@ -1,5 +1,5 @@
 ---
-title: Die Dynamik von </br> G-Kräften, Betriebssystemen und neuen Teammitgliedern
+title: Die Dynamik von G-Kräften, Betriebssystemen und neuen Teammitgliedern
 slug: die-dynamik-von-G-kräften-betriebssystemen-und-neuen-teammitgliedern
 templateKey: blog-post
 image: ./img/renato-snowboarding.jpg
