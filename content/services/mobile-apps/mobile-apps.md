@@ -55,6 +55,10 @@ bulletGroups:
         text: Egal ob Geo-Tracking, Hintergrund-Prozesse, Beschleunigungssensoren oder riesige Datenmengen, wir meistern technisch anspruchsvolle Herausforderungen souverän.
 ---
 
+## Für iOS und Android
+
+Dank unseren Entwicklungs-Tools können wir eine App einmal entwickeln die auf iOS und sowie Android läuft ohne Kompromisse eingehen zu müssen. Um keine Performance einbüssen zu müssen, entwickeln wir kritische Komponenten Plattformabhängig. Sie haben somit das beste aus zwei Welten: Wiederverwendbarkeit und hohe Leistung. Indem ein Grossteil der App auf iOS und Android läuft heisst dies nicht nur tiefere Kosten bei der Entwicklung, sondern auch schneller Resultate erhalten.
+
 ## Wir sind besonders effektiv
 
 Dank unserem effektiven Vorgehen sind erste nutzbare Resultate bereits nach zwei Wochen vorhanden.
