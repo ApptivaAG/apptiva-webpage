@@ -16,17 +16,19 @@ customers:
   - suva-300.png
   - baumgartner-fenster.png
   - globus.png
+  - hbtec.png
+  - digital-enterprise.png
 
 solutions:
   - title: Kunden-Apps
     image: slope-track.png
-    text: Ein Produktkonfigurator, welcher über ein Formular gesteuert wird, ist der Klassiker unter den Produktkonfiguratoren. Dieser eignet sich besonders für mobile Geräte, sowie eine Bedienung über die Tastatur.
+    text: Bei Kunden-Apps legen wir einen besonderen Fokus auf ein ansprechendes Design und einfache Bedienung. So steht einem guten Kundenerlebnis nichts im Weg.
   - title: Interne-Apps
-    image: companion.png
-    text: Ein grafischer Produktkonfigurator erlaubt eine äusserst intuitive und attraktive Lösung. Diese eignen sich besonders um visuelle Eigenheiten der Produkte zu vermitteln.
+    image: trial-store.png
+    text: Effizient und Effektiv Apps kommen im internen Gebrauch besonders gut an. Entsprechend legen wir den Fokus auf die Unterstützung des Anwenders ohne ihm im Weg zu stehen.
   - title: B2B-Apps
-    image: welti-furrer.png
-    text: Immer öfter kommen auch Chatbots oder Konversations-Dialoge bei der Produktkonfiguration zum Einsatz. Dies ist eine modern und von Anwendern gern genutzte Möglichkeit ein Produkt zu konfigurieren.
+    image: digital-enterprise-app.png
+    text: B2B-Apps fördern die Beziehung zwischen Unternehmen. Um dies optimal zu unterstützen, digitalisieren wir die entsprechenden Unternehmensprozesse einfach und verständlich.
 
 bulletGroups:
   - title: Vorteile einer Apptiva-App
