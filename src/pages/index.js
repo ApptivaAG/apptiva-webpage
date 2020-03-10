@@ -181,7 +181,10 @@ const IndexPage = ({ testimonials, posts, employees, partners, images }) => (
                 <h3>Individuelle</h3>
                 <h2>Chatbots</h2>
                 <h4>Botfabrik by Apptiva</h4>
-                <BotfabrikLogo />
+                <ImgStyled
+                  fluid={images.chatbot.childImageSharp.fluid}
+                  alt="Chatbots"
+                />
               </Link>
             </ListItem>
             <ListItem>
@@ -501,6 +504,15 @@ export const indexPageQuery = graphql`
     }
     partyplaner: file(
       absolutePath: { regex: "/produktkonfiguratoren/partyplaner.png/" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    chatbot: file(
+      absolutePath: { regex: "/services/chatbots/chatbot-screen2.png/" }
     ) {
       childImageSharp {
         fluid(maxWidth: 600) {
