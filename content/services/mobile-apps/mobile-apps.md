@@ -15,9 +15,9 @@ subtitle:
 customers:
   - suva-300.png
   - baumgartner-fenster.png
-  - globus.png
-  - hbtec.png
   - digital-enterprise.png
+  - hbtec.png
+  - globus.png
 
 solutions:
   - title: Kunden-Apps
