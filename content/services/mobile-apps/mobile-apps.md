@@ -2,7 +2,7 @@
 templateKey: 'service-page'
 slug: /mobile-apps-ios-android
 title: Mobile Apps für iOS und Android
-image: apps.png
+image: hero.png
 author: philip-schoenholzer
 description: Wir entwickeln benutzer­freundliche, optisch ansprechende und technisch anspruchsvolle mobile Apps für iOS und Android um Ihre einzigartigen Geschäftsprozesse abzubilden.
 subtitle:
@@ -55,13 +55,17 @@ bulletGroups:
         text: Egal ob Geo-Tracking, Hintergrund-Prozesse, Beschleunigungssensoren oder riesige Datenmengen, wir meistern technisch anspruchsvolle Herausforderungen souverän.
 ---
 
-## Für iOS und Android
+## Optimale Entwicklung für iOS und Android
 
-Dank unseren Entwicklungs-Tools können wir eine App einmal entwickeln die auf iOS und sowie Android läuft ohne Kompromisse eingehen zu müssen. Um keine Performance einbüssen zu müssen, entwickeln wir kritische Komponenten Plattformabhängig. Sie haben somit das beste aus zwei Welten: Wiederverwendbarkeit und hohe Leistung. Indem ein Grossteil der App auf iOS und Android läuft heisst dies nicht nur tiefere Kosten bei der Entwicklung, sondern auch schneller Resultate erhalten.
+Wir entwicklen optimierte Apps für iOS wie auch Android ohne die Apps zweimal entwickeln zu müssen. Dies erreichen wir in dem wir nur wenige, performancekritische Komponenten plattformabhängig (also zweimal) entwickeln. Die restlichen Komponenten implementieren wir plattformunabhängig. So haben wir das Beste aus zwei Welten: Wiederverwendbarkeit und hohe Leistung. Dies heisst nicht bloss tiefere Kosten bei der Entwicklung, sondern auch schneller Resultate erhalten.
+
+## Apps im Apple App Store, Google Play Store oder per MDM publizieren
+
+Wir publizieren Apps im Apple App Store, Google Play Store oder per Mobile Device Management für ihr Unternehmen. Falls sie wünschen publizieren wir die Apps im Namen ihres Unternehmes, damit ihre Kunden die Sicherheit haben, dir richtige App zu nutzen.
 
 ## Wir sind besonders effektiv
 
-Dank unserem effektiven Vorgehen sind erste nutzbare Resultate bereits nach zwei Wochen vorhanden.
+Dank unserem agilem Vorgehen sind erste nutzbare Resultate bereits nach zwei Wochen vorhanden.
 
 Mit der Apptiva haben Sie einen Partner, welcher unkompliziert und erfolgreich mit Ihnen zusammenarbeitet. Wir konnten bis jetzt jedes Projekt gemeinsam mit unseren Kunden erfolgreich lancieren und betreiben. Unsere Projekte sind aber nicht bloss zeitgerecht und im Budget, sondern kommen auch bei den Anwendern sehr gut an. Wir achten von Beginn an auf eine gute Usability.
 
