@@ -130,9 +130,29 @@ export default () => {
 
   return (
     <Section id="start">
-      <h1 css="font-size: 1em; margin: 0;">
-        <Logo src={logoSlogan} alt="Apptiva - Passgenaue Softwarelösungen" />
-      </h1>
+      <Columns css="align-items: center; justify-content: space-between; margin-bottom: 2em; ">
+        <h1 css="font-size: 1em; margin: 0;">
+          <Logo src={logoSlogan} alt="Apptiva - Passgenaue Softwarelösungen" />
+        </h1>
+        <div
+          css={`
+            font-size: 0.8em;
+            margin-left: 1em;
+            max-width: 300px;
+            background: ${p => p.theme.color.lightBg};
+            padding: 1em;
+            text-align: right;
+            color: #666;
+          `}
+        >
+          <p css="margin-bottom: 0.5em; margin-top: 0; font-weight: 600;">
+            Trotz Coronavirus bearbeiten wir alle Projekte in Vollbesetzung.
+          </p>
+          <small>
+            <Button to="/coronavirus">Coronavirus bei Apptiva</Button>
+          </small>
+        </div>
+      </Columns>
 
       <Columns>
         <ColHero>
