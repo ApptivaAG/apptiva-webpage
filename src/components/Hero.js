@@ -170,7 +170,7 @@ export default () => {
               alt=""
             />
             <p css="margin-bottom: 0; margin-top: 0; padding: 0.8em 1em; font-weight: 600;">
-              Trotz Coronavirus bearbeiten wir alle Projekte in Vollbesetzung.
+              Trotz Coronavirus arbeiten wir an allen Projekten in Vollbesetzung.
             </p>
             <div css="font-size: 0.9em; margin: 0 1em 1em; text-align: right;">
               <Button to="/coronavirus">Coronavirus bei Apptiva</Button>

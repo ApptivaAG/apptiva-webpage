@@ -8,7 +8,7 @@ import Layout from '../components/Layout'
 
 const metadata = {
   title: 'Coronavirus',
-  description: 'Wie geht die Apptiva mit COVID-19 um',
+  description: 'So geht die Apptiva mit COVID-19 um',
   slug: 'coronavirus',
 }
 
@@ -20,7 +20,7 @@ const Center = styled.div`
 export default () => (
   <Layout>
     <main>
-      <Helmet title={`Coronamassnahmen - ${config.company}`} />
+      <Helmet title={`${metadata.title} - ${config.company}`} />
       <SEO metaData={metadata} />
       <Container>
         <MainTitle>{metadata.title}</MainTitle>
