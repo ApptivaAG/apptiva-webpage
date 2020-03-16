@@ -8,7 +8,7 @@ import logoSlogan from '../img/logo-slogan.svg'
 import { Button, Container as CntnrDefault } from '../style'
 
 const Container = styled(CntnrDefault)`
-  box-sizing: border-box; 
+  box-sizing: border-box;
   width: 100%;
 `
 
@@ -17,7 +17,7 @@ const svgData =
 
 const Logo = styled.img`
   max-width: 12em;
-  @media(min-width: 600px) { 
+  @media (min-width: 600px) {
     height: 4em;
     width: 10em;
   }
@@ -42,7 +42,6 @@ const ColHero = styled.div`
 const ColTeaser = styled.div`
   flex: 1 1 18rem;
   padding: 2rem 1rem;
-
 `
 
 const Teaser = styled.h2`
@@ -138,15 +137,26 @@ export default () => {
 
   return (
     <Section id="start">
-      <Container css={`
+      <Container
+        css={`
         @media (min-width: 600px) {
+          max-width: 1080px
           padding-left: 3em;
           padding-right: 3em;
         }
       `}
       >
-        <Columns css="justify-content: space-between; align-items: center; margin: 3em 0;">
-          <h1 css={`flex: 1 0 10em; font-size: 1em; margin: 2em 0; @media(max-width: 599px) {text-align: center; }`}>
+        <Columns css="justify-content: space-between; align-items: center; margin: 2em 0;">
+          <h1
+            css={`
+              flex: 1 0 10em;
+              font-size: 1em;
+              margin: 2em 0;
+              @media (max-width: 599px) {
+                text-align: center;
+              }
+            `}
+          >
             <Logo
               src={logoSlogan}
               alt="Apptiva - Passgenaue Softwarelösungen"
@@ -155,7 +165,7 @@ export default () => {
           <div
             css={`
               flex: 1 1 auto;
-              font-size: 0.7em;
+              font-size: 0.6em;
               background: ${p => p.theme.color.lightBg};
               color: #666;
 
@@ -170,7 +180,8 @@ export default () => {
               alt=""
             />
             <p css="margin-bottom: 0; margin-top: 0; padding: 0.8em 1em; font-weight: 600;">
-              Trotz Coronavirus arbeiten wir an allen Projekten in Vollbesetzung.
+              Trotz Coronavirus arbeiten wir an allen Projekten in
+              Vollbesetzung.
             </p>
             <div css="font-size: 0.9em; margin: 0 1em 1em; text-align: right;">
               <Button to="/coronavirus">Coronavirus bei Apptiva</Button>
