@@ -31,11 +31,6 @@ export default () => (
 
         <ul>
           <li>
-            <h3>Alle Gesund</h3>
-            <br />
-            Wir sind alle Gesund und frohen Mutes.
-          </li>
-          <li>
             <h3>Projekte werden normal bearbeitet</h3>
             <br /> Alle Projekte werden in Vollbesetzung bearbeitet. Der
             Coronavirus hindert uns in keiner Weise an unserer Arbeit.
@@ -46,21 +41,22 @@ export default () => (
         <small>Seit dem 8. März gilt bei uns</small>
 
         <p>
-          Damit wir auch in Zeiten des Coronavirus Leistungs- und Reaktionsfähig
-          bleiben, haben wir seit dem 8. März folgende Massnahmen ergriffen:
+          Damit wir auch in Zeiten des Coronavirus&apos; leistungs- und
+          reaktionsfähig bleiben, haben wir seit dem 8. März folgende Massnahmen
+          ergriffen:
         </p>
 
         <ul>
           <li>
             <h3>Office-Splitting</h3>
             <br />
-            Die hälfte der Apptiva-Mitarbeiter macht Home-Office, während die
-            andere hälft im Büro ist.
+            Die Hälfte der Apptiva-Mitarbeiter macht Home-Office, während die
+            andere Hälfte im Büro ist.
           </li>
           <li>
             <h3>Remote-Meetings</h3>
             <br />
-            Wir führen alle Meetings Remote durch. Nur wenn dies nicht möglich
+            Wir führen alle Meetings remote durch. Nur wenn dies nicht möglich
             ist, treffen wir unsere Kunden in Persona.
           </li>
           <li>

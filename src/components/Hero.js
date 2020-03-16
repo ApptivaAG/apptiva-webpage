@@ -10,6 +10,12 @@ import { Button, Container as CntnrDefault } from '../style'
 const Container = styled(CntnrDefault)`
   box-sizing: border-box;
   width: 100%;
+
+  @media (min-width: 600px) {
+    max-width: 1080px;
+    padding-left: 3em;
+    padding-right: 3em;
+  }
 `
 
 const svgData =
@@ -111,10 +117,9 @@ const AnimatedArrow = styled.svg`
   animation: ${Slide} 2s cubic-bezier(0.87, -0.24, 0.77, 0.34) infinite;
 `
 
-const Jobs = styled.div`
-  font-weight: 500;
-  padding-top: 1em;
-  padding-bottom: 1em;
+const Info = styled.div`
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
   color: ${p => p.theme.color.darkGray};
   background-color: ${p => p.theme.color.lightBg};
 
@@ -137,15 +142,7 @@ export default () => {
 
   return (
     <Section id="start">
-      <Container
-        css={`
-        @media (min-width: 600px) {
-          max-width: 1080px
-          padding-left: 3em;
-          padding-right: 3em;
-        }
-      `}
-      >
+      <Container>
         <Columns css="justify-content: space-between; align-items: center; margin: 2em 0;">
           <h1
             css={`
@@ -162,31 +159,6 @@ export default () => {
               alt="Apptiva - Passgenaue Softwarelösungen"
             />
           </h1>
-          <div
-            css={`
-              flex: 1 1 auto;
-              font-size: 0.6em;
-              background: ${p => p.theme.color.lightBg};
-              color: #666;
-
-              @media (min-width: 600px) {
-                max-width: 280px;
-              }
-            `}
-          >
-            <img
-              css="display:block; margin: 1em auto 0 0; height: 2.4em;"
-              src={coronavirus}
-              alt=""
-            />
-            <p css="margin-bottom: 0; margin-top: 0; padding: 0.8em 1em; font-weight: 600;">
-              Trotz Coronavirus arbeiten wir an allen Projekten in
-              Vollbesetzung.
-            </p>
-            <div css="font-size: 0.9em; margin: 0 1em 1em; text-align: right;">
-              <Button to="/coronavirus">Coronavirus bei Apptiva</Button>
-            </div>
-          </div>
         </Columns>
       </Container>
 
@@ -218,15 +190,34 @@ export default () => {
           </AnimatedArrow>
         </Arrow>
       </ArrowContainer>
-      <Jobs>
+      <Info>
         <Container>
-          <h3>
-            Wir suchen: <a href="/jobs">Fullstack-EntwicklerIn</a>
-          </h3>
-          Gleich bewerben und einen der besten Jobs in der
-          Software&shy;entwicklung schnappen.
+          <div
+            css={`
+              display: flex;
+              align-items: center;
+              flex-wrap: wrap;
+              font-size: 0.6em;
+              margin: 0 -1em;
+              background: ${p => p.theme.color.lightBg};
+              color: #666;
+            `}
+          >
+            <img
+              css="display:block; height: 2.4em; margin: 0.5em 1em;"
+              src={coronavirus}
+              alt=""
+            />
+            <p css="flex: 1 1 auto; font-weight: 600; margin: 0.5em  1em;">
+              Trotz Coronavirus arbeiten wir an allen Projekten in
+              Vollbesetzung.
+            </p>
+            <div css="font-size: 0.9em; margin: 0.5em  1em;">
+              <Button to="/coronavirus">Coronavirus bei Apptiva</Button>
+            </div>
+          </div>
         </Container>
-      </Jobs>
+      </Info>
     </Section>
   )
 }
