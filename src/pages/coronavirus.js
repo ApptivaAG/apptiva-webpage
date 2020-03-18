@@ -58,8 +58,8 @@ export default () => (
           <li>
             <h3>Remote-Meetings</h3>
             <br />
-            Wir führen alle Meetings remote durch. Nur in Ausnahmefällen,
-            treffen wir unsere Kunden in Persona.
+            Wir führen alle Meetings remote durch. Nur in Ausnahmefällen treffen
+            wir unsere Kunden in persona.
           </li>
           <li>
             <h3>Befolgen der BAG-Regeln</h3>
