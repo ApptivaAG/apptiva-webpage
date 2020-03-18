@@ -38,26 +38,28 @@ export default () => (
         </ul>
 
         <h2 css="margin-bottom: 0; margin-top: 3em;">Unsere Massnahmen</h2>
-        <small>Seit dem 8. März gilt bei uns</small>
+        <small>Update vom 17. März 2020</small>
 
         <p>
           Damit wir auch in Zeiten des Coronavirus&apos; leistungs- und
-          reaktionsfähig bleiben, haben wir seit dem 8. März folgende Massnahmen
-          ergriffen:
+          reaktionsfähig bleiben, haben wir seit dem 8. März 2020
+          unterschiedliche Massnahmen ergriffen:
         </p>
 
         <ul>
           <li>
-            <h3>Office-Splitting</h3>
+            <h3>Home-Office</h3>
             <br />
-            Die Hälfte der Apptiva-Mitarbeiter macht Home-Office, während die
-            andere Hälfte im Büro ist.
+            Soweit möglich arbeiten wir zuhause. Dies tangiert uns kaum in
+            unserer Arbeit. Wir haben das Telefon umgeleitet und sind so zu
+            Bürozeiten immer noch unter 041 322 26 26 erreichbar. Wir freuen uns
+            auf ihren Anruf.
           </li>
           <li>
             <h3>Remote-Meetings</h3>
             <br />
-            Wir führen alle Meetings remote durch. Nur wenn dies nicht möglich
-            ist, treffen wir unsere Kunden in Persona.
+            Wir führen alle Meetings remote durch. Nur in Ausnahmefällen,
+            treffen wir unsere Kunden in Persona.
           </li>
           <li>
             <h3>Befolgen der BAG-Regeln</h3>
