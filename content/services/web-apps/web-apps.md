@@ -8,26 +8,25 @@ description: Wir entwickeln benutzer­freundliche, optisch ansprechende und tech
 subtitle:
   text: Wir entwickeln Web-Anwendungen um Ihre einzigartigen Geschäftsprozesse zu
   swaps:
-    - beschleunigen.
+    - unterstützen.
     - vereinfachen.
     - digitalisieren.
 
 customers:
   - suva-300.png
-  - baumgartner-fenster.png
+  - sd.png
   - globus.png
-  - hbtec.png
-  - digital-enterprise.png
+  - welti-furrer.png
 
 solutions:
   - title: Kunden-Apps
-    image: slope-track.png
+    image: trial-store.png
     text: Bei Kunden-Apps legen wir einen besonderen Fokus auf ein ansprechendes Design und einfache Bedienung. So steht einem guten Kundenerlebnis nichts im Weg.
   - title: Interne-Apps
-    image: trial-store.png
+    image: einsatzplanung.png
     text: Effizient und Effektiv Apps kommen im internen Gebrauch besonders gut an. Entsprechend legen wir den Fokus auf die Unterstützung des Anwenders ohne ihm im Weg zu stehen.
   - title: B2B-Apps
-    image: digital-enterprise-app.png
+    image: kran-app.png
     text: B2B-Apps fördern die Beziehung zwischen Unternehmen. Um dies optimal zu unterstützen, digitalisieren wir die entsprechenden Unternehmensprozesse einfach und verständlich.
 
 bulletGroups:
