@@ -3,8 +3,9 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { description } from '../config'
 
-import { Container } from '../style'
+import { Container, Button } from '../style'
 import chevron from '../img/chevron.svg'
+import coronavirus from '../img/coronavirus.svg'
 
 const year = new Date().getFullYear()
 
@@ -90,6 +91,27 @@ const Footer = () => (
       <About>
         <h2>Über Apptiva</h2>
         <p>{description}</p>
+        <div
+          css={`
+            margin-top: 5em;
+            flex: 1 1 auto;
+            font-size: 0.7em;
+            background: #e4e4e4;
+            color: #333;
+          `}
+        >
+          <img
+            css="display:block; padding-top: 1em; height: 2.4em;"
+            src={coronavirus}
+            alt=""
+          />
+          <p css="margin-bottom: 0; margin-top: 0; padding: 0.8em 1em; font-weight: 600;">
+            Trotz Coronavirus arbeiten wir an allen Projekten in Vollbesetzung.
+          </p>
+          <div css="font-size: 0.9em; padding: 0 1em 1em; text-align: right; color: white;">
+            <Button to="/coronavirus">Coronavirus bei Apptiva</Button>
+          </div>
+        </div>
       </About>
       <Contact>
         <h2>Kontakt</h2>
