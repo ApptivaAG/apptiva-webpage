@@ -169,7 +169,7 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     ${'' /* higher contrast for accessability */}
     color: hsla(200, 100%, 35%, 1); 
-    font-weight: 400;
+    font-weight: 600;
     
     .gatsby-image-wrapper {
       transition: transform 0.3s;

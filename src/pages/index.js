@@ -65,6 +65,10 @@ const ListItem = styled.li`
     color: ${props => props.theme.color.text};
     overflow: hidden;
 
+    p {
+      font-weight: 200;
+    }
+
     svg {
       transition: transform 0.3s;
     }
@@ -343,7 +347,8 @@ const IndexPage = ({ testimonials, posts, employees, partners, images }) => (
                     }}
                     alt="Post image"
                   />
-                  <h2
+                  <h3
+                    css="display: block;"
                     // eslint-disable-next-line react/no-danger
                     dangerouslySetInnerHTML={{ __html: post.frontmatter.title }}
                   />

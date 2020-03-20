@@ -57,6 +57,7 @@ const Grid = styled(Container)`
     }
   }
   a {
+    font-weight: 500;
     color: inherit;
     &:visited {
       color: inherit;
