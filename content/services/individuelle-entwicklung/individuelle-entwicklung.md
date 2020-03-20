@@ -62,7 +62,3 @@ Dank unserem effektiven Vorgehen sind erste nutzbare Resultate bereits nach zwe
 Mit der Apptiva haben Sie einen Partner, welcher unkompliziert und erfolgreich mit Ihnen zusammenarbeitet. Wir konnten bis jetzt jedes Projekt gemeinsam mit unseren Kunden erfolgreich lancieren und betreiben. Unsere Projekte sind aber nicht bloss zeitgerecht und im Budget, sondern kommen auch bei den Anwendern sehr gut an. Wir achten von Beginn an auf eine gute Usability.
 
 Für Sie heisst dies mehr Freude, weniger Stress und die Zuversicht die gesteckten Ziele erreichen zu können.
-
-## Wir unterstützen Sie gerne bei der Entwicklung einer individuellen iOS, Android und Web-Anwendung.
-
-Rufen Sie uns an [041 322 26 26](tel:+41413222626) oder schreiben Sie an [info@­apptiva.ch](mailto:info@apptiva.ch)

@@ -13,6 +13,7 @@ import SEO from '../components/SEO'
 import { stripHTML } from '../util'
 import Layout from '../components/Layout'
 import config from '../config'
+import ContactForm from '../components/ContactForm'
 
 const HeadArea = styled.header``
 
@@ -96,11 +97,6 @@ const Header = ({ title, image, subtitle }) => (
   </HeadArea>
 )
 
-const variants = {
-  hidden: { opacity: 0, height: 0 },
-  visible: { opacity: 1, height: 'auto' },
-}
-
 const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
   const PostContent = contentComponent || Content
   const {
@@ -121,8 +117,8 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
     metaData.image.childImageSharp.resize.src
 
   const { getCollapseProps, getToggleProps, isOpen } = useCollapse({
-    expandStyles: { transitionDuration: '100ms' },
-    collapseStyles: { transitionDuration: '100ms' },
+    expandStyles: { transitionDuration: '200ms' },
+    collapseStyles: { transitionDuration: '200ms' },
   })
   return (
     <main>
@@ -273,19 +269,31 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
           <PostContent content={content} />
         </Container>
       </Section>
-      <Section>
+      <Section dark>
         <Container>
-          <Button
-            type="button"
-            style={isOpen ? { opacity: 0.3 } : {}}
-            {...getToggleProps()}
-          >
-            {!isOpen ? 'Call to Action' : 'close'}
-          </Button>
+          <h2>
+            Wir unterstützen Sie gerne bei der Beschleunigung ihrer
+            Geschäftsprozesse
+          </h2>
+          {!isOpen && (
+            <p>
+              Rufen Sie uns an unter <a href="+41413222626">041 322 26 26</a>{' '}
+              oder schreiben Sie uns.
+            </p>
+          )}
           <div {...getCollapseProps()}>
-            <p>Hallo</p>
-            <p>There!</p>
+            <p>
+              Füllen Sie unser Formular aus oder schreiben Sie ein Mail an{' '}
+              <a href="mailto:info@apptiva.ch">info@­apptiva.ch</a> und wir
+              melden uns sobald wie möglich bei ihnen.
+            </p>
+            <ContactForm />
           </div>
+          {!isOpen && (
+            <Button type="button" {...getToggleProps()}>
+              Jetzt Nachricht schreiben
+            </Button>
+          )}
         </Container>
       </Section>
     </main>

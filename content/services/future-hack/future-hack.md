@@ -64,13 +64,3 @@ Ein Future Hack kostet **CHF 3’000.-**
 
 </div>
 </div>
-
-<div class="full-width " style="overflow: auto;">
-<div class="container">
-
-## Jetzt für einen Future Hack in Ihrer Firma anmelden
-
-Rufen Sie uns an [041 322 26 26](tel:+41413222626) oder schreiben Sie an [info@­apptiva.ch](mailto:info@apptiva.ch)
-
-</div>
-</div>

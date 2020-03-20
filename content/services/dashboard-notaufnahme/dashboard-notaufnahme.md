@@ -113,9 +113,3 @@ Das Apptiva Dashboard lässt sich einfach mit Ihren bestehenden Systemen verbind
 ![Integration Apptiva Dashboard](integration.png)
 
 Mit dem Apptiva Dashboard erhalten Sie einen flexiblen Zusatz zu Ihrem bestehenden KIS und können damit einen Teil Ihres Geschäftsprozesses gezielt optimieren. Aufgrund der Synchronisierung von Datenänderungen in beide Richtungen ist in Ihrem bestehenden System weiterhin alles Notwendige verfügbar.
-
-# Anfrage
-
-Gerne geben wir Ihnen weitere Informationen zu unserem Dashboard. Wir freuen uns über Ihre Anfrage.
-
-Rufen Sie uns an [041 322 26 26](tel:+41413222626) oder schreiben Sie an [info@­apptiva.ch](mailto:info@apptiva.ch)

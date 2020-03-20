@@ -11,6 +11,10 @@ export const Section = styled.section`
   padding-top: 2em;
   padding-bottom: 2em;
 
+  &:last-child {
+    padding-bottom: 4em;
+  }
+
   ${props =>
     props.dark &&
     css`
@@ -146,7 +150,9 @@ export const GlobalStyle = createGlobalStyle`
     color: ${theme.color.text};
   }
 
-  main { display: block; }
+  main { 
+    display: block; 
+  }
 
   h1 {
     font-weight: 800;

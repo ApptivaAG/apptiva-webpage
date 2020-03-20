@@ -390,7 +390,7 @@ const IndexPage = ({ testimonials, posts, employees, partners, images }) => (
           <ContactForm />
         </Container>
       </Section>
-      <Section style={{ padding: 0, marginBottom: '-4rem' }}>
+      <Section css="padding: 0 !important;">
         <iframe
           className="lazyload"
           title="Google Maps"
@@ -401,6 +401,7 @@ const IndexPage = ({ testimonials, posts, employees, partners, images }) => (
           width="100%"
           height="550px"
           frameBorder="0"
+          css="display: block;"
         />
       </Section>
     </main>
