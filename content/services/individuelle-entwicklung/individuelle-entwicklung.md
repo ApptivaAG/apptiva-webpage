@@ -37,7 +37,15 @@ bulletGroups:
         text: Durch die nutzerorientierte Gestaltung unserer iOS, Android und Web-Apps befinden sich die Anwender im Zentrum. Sie erhalten eine Lösung die verständlich, einfach und schnell zu bedienen ist.
 ---
 
-<div class="full-width dark-section" style="overflow: auto;">
+## Für Ihre Herausforderung die passende Lösung
+
+Wir entwickeln Softwarelösungen passende für Ihre Herausforderungen. So haben sie die Sicherheit, dass sie eine gute Lösung erhalten. Wir entwickeln unter anderem:
+
+- ### [Mobile Apps für iOS und Android](/mobile-apps-ios-android)
+- ### [Web Apps und Applikationen](/web-apps)
+- ### [Chatbots](/chatbots)
+
+<div class="full-width dark-section" style="overflow: auto; margin-top: 4em;">
 <div class="container">
 
 [[left]]
