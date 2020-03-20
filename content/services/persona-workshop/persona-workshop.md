@@ -19,7 +19,7 @@ bulletGroups:
       - icon: star
         title: Woher die Daten für Personas kommen
         text: Personas können ohne viel Aufwand erstellt werden, sind aber mit den entsprechenden Daten aus Erhebungen noch wirksamer.
-      - icon: star 
+      - icon: star
         title: Wie eine Persona erstellt wird
         text: Wie entsteht aus den erhobenen Daten nun genau eine Persona? Was muss beachtet werden?
       - icon: star
@@ -37,27 +37,7 @@ Ihre Lösungen werden in Zukunft besser auf die Bedürfnisse der Anwender und St
 
 ## Daten zu Workshop
 
-* 1/2 Tag
-* 5 - 15 Personen
-* Keine Vorkenntnisse nötig
-* Geeignet als Einstieg in die UX Thematik, erste Schritte in Richtung User Centered Design
-
-<style>
-.service h1, .service h2, .service p {
-  margin: 0;
-}
-</style>
-
-## Kontakt
-
-<div class="service">
-
-Rufen Sie uns an
-
-# <a href="tel:+41413222626">041 322 26 26</a>
-
-oder schreiben Sie an
-
-# <a href="mailto:info@apptiva.ch">info@­apptiva.ch</a>
-
-</div>
+- 1/2 Tag
+- 5 - 15 Personen
+- Keine Vorkenntnisse nötig
+- Geeignet als Einstieg in die UX Thematik, erste Schritte in Richtung User Centered Design

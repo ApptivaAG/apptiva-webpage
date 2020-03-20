@@ -3,15 +3,17 @@ import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
+import useCollapse from 'react-collapsed'
 import '@fortawesome/fontawesome-free/css/fontawesome.min.css'
 import '@fortawesome/fontawesome-free/css/solid.min.css'
 
 import Content, { HTMLContent } from '../components/Content'
 import { Centered, Container, Section, Icon, Button } from '../style'
-import config from '../config'
 import SEO from '../components/SEO'
 import { stripHTML } from '../util'
 import Layout from '../components/Layout'
+import config from '../config'
+import ContactForm from '../components/ContactForm'
 
 const HeadArea = styled.header``
 
@@ -114,6 +116,10 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
     metaData.image.childImageSharp.resize &&
     metaData.image.childImageSharp.resize.src
 
+  const { getCollapseProps, getToggleProps, isOpen } = useCollapse({
+    expandStyles: { transitionDuration: '200ms' },
+    collapseStyles: { transitionDuration: '200ms' },
+  })
   return (
     <main>
       <Helmet title={`${stripHTML(title)} - ${config.company}`} />
@@ -261,6 +267,33 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
       <Section>
         <Container>
           <PostContent content={content} />
+        </Container>
+      </Section>
+      <Section dark>
+        <Container>
+          <h2>
+            Wir unterstützen Sie gerne bei der Beschleunigung ihrer
+            Geschäftsprozesse
+          </h2>
+          {!isOpen && (
+            <p>
+              Rufen Sie uns an unter <a href="+41413222626">041 322 26 26</a>{' '}
+              oder schreiben Sie uns.
+            </p>
+          )}
+          <div {...getCollapseProps()}>
+            <p>
+              Füllen Sie unser Formular aus oder schreiben Sie ein Mail an{' '}
+              <a href="mailto:info@apptiva.ch">info@­apptiva.ch</a> und wir
+              melden uns sobald wie möglich bei ihnen.
+            </p>
+            <ContactForm />
+          </div>
+          {!isOpen && (
+            <Button type="button" {...getToggleProps()}>
+              Jetzt Nachricht schreiben
+            </Button>
+          )}
         </Container>
       </Section>
     </main>

@@ -10,7 +10,6 @@ import coronavirus from '../img/coronavirus.svg'
 const year = new Date().getFullYear()
 
 const Background = styled.footer`
-  margin-top: 4rem;
   padding: 3rem 0 1rem;
   color: white;
   background-color: ${props => props.theme.color.darkGray};
@@ -58,6 +57,7 @@ const Grid = styled(Container)`
     }
   }
   a {
+    font-weight: 500;
     color: inherit;
     &:visited {
       color: inherit;

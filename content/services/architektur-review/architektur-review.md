@@ -1,5 +1,4 @@
 ---
-
 templateKey: 'service-page'
 slug: architektur-review
 title: Architektur-Review
@@ -38,23 +37,3 @@ Zu den einzelnen Zielen werden schliesslich Qualitätsszenarien definiert. Die S
 |![Review](review-analyse.png)
 
 4.  Schliesslich werden die Ergebnisse aus den vorhergehenden Punkten zusammengeführt. Es werden die Risiken ermittelt und die wichtigsten Erkenntnisse formuliert. Dies passiert wiederum unter der Berücksichtigung der Qualitätsziele.
-
-<style>
-.service h1, .service h2, .service p {
-  margin: 0;
-}
-</style>
-
-## Interessiert?
-
-<div class="service">
-
-Rufen Sie uns an
-
-# [041 322 26 26](tel:+41413222626)
-
-oder schreiben Sie an
-
-# [info@­apptiva.ch](mailto:info@apptiva.ch)
-
-</div>

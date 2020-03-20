@@ -55,19 +55,20 @@ const Published = ({ author, date }) => {
   )
 }
 
+const LayoutNavigation = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -0.5em;
+`
+const NavigationLinks = styled(Link)`
+  font-weight: 500;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+  color: white;
+  background-color: ${p => p.theme.color.primary};
+  border-radius: 0.2em;
+`
 const Navigation = ({ next, prev }) => {
-  const LayoutNavigation = styled.div`
-    display: flex;
-    justify-content: space-between;
-    margin: 0 -0.5em;
-  `
-  const NavigationLinks = styled(Link)`
-    padding: 0.5em;
-    margin: 0.5em;
-    background-color: #eee;
-    border-radius: 0.2em;
-  `
-
   return (
     <LayoutNavigation>
       {prev && (
@@ -113,14 +114,16 @@ export const BlogPostTemplate = ({
             {description && <Description>{description}</Description>}
             {author && <Published author={author} date={date} />}
           </header>
-          <section>
+          <section css="margin-bottom: 4em;">
             <PostContent content={content} />
           </section>
-          <footer>
-            <Navigation next={navigation.next} prev={navigation.prev} />
-          </footer>
         </article>
       </Container>
+      <footer css="background: #eee; padding: 3em 0">
+        <Container>
+          <Navigation next={navigation.next} prev={navigation.prev} />
+        </Container>
+      </footer>
     </main>
   )
 }
