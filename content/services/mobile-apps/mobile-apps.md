@@ -55,7 +55,7 @@ bulletGroups:
         text: Egal ob Geo-Tracking, Hintergrund-Prozesse, Beschleunigungssensoren oder riesige Datenmengen, wir meistern technisch anspruchsvolle Herausforderungen souverän.
 ---
 
-## Optimale Entwicklung für iOS und Android
+## Optimale Entwicklung für iOS und Android mobile Apps
 
 Wir entwicklen optimierte Apps für iOS wie auch Android ohne die Apps zweimal entwickeln zu müssen. Dies erreichen wir in dem wir nur wenige, performancekritische Komponenten plattformabhängig (also zweimal) entwickeln. Die restlichen Komponenten implementieren wir plattformunabhängig. So haben wir das Beste aus zwei Welten: Wiederverwendbarkeit und hohe Leistung. Dies heisst nicht bloss tiefere Kosten bei der Entwicklung, sondern auch schneller Resultate erhalten.
 
@@ -70,7 +70,3 @@ Dank unserem agilem Vorgehen sind erste nutzbare Resultate bereits nach zwei Wo
 Mit der Apptiva haben Sie einen Partner, welcher unkompliziert und erfolgreich mit Ihnen zusammenarbeitet. Wir konnten bis jetzt jedes Projekt gemeinsam mit unseren Kunden erfolgreich lancieren und betreiben. Unsere Projekte sind aber nicht bloss zeitgerecht und im Budget, sondern kommen auch bei den Anwendern sehr gut an. Wir achten von Beginn an auf eine gute Usability.
 
 Für Sie heisst dies mehr Freude, weniger Stress und die Zuversicht die gesteckten Ziele erreichen zu können.
-
-## Wir unterstützen Sie gerne bei der Entwicklung einer individuellen iOS, Android und Web-Anwendung
-
-Rufen Sie uns an [041 322 26 26](tel:+41413222626) oder schreiben Sie an [info@­apptiva.ch](mailto:info@apptiva.ch)
