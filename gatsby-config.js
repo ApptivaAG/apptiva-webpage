@@ -3,6 +3,7 @@ const config = require('./src/config')
 module.exports = {
   siteMetadata: {
     title: config.company,
+    siteUrl: config.url, // needed in gatsby-plugin-sitemap
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -12,6 +13,7 @@ module.exports = {
         siteUrl: config.url,
       },
     },
+    `gatsby-plugin-sitemap`,
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-source-filesystem',
