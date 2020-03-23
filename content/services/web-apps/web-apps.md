@@ -56,7 +56,7 @@ bulletGroups:
 
 ## Web Apps für alle erdenklichen Geräte
 
-Egal ob Desktop, Smartphone, Tablet oder TV, unsere Webapplikationen sind auf die gewünschten Geräte optimiert. Je nach Gerät sind wir in der Lage, auf unterschiedliche Sensoren wie Kamera, Mikrofone und GPS zuzugreifen. Unsere Web Apps sind zudem offline-fähig und in der Lage, Notifikationen zu erhalten. Damit lassen sich auch spezielle Anwendungsfälle umsetzen.
+Egal ob Desktop, Smartphone, Tablet oder TV, unsere Webapplikationen sind für die benötigten Geräte optimiert. Je nach Gerät sind wir in der Lage, auf unterschiedliche Sensoren wie Kamera, Mikrofone und GPS zuzugreifen. Unsere Web Apps sind zudem offline-fähig und in der Lage, Notifikationen zu erhalten. Damit lassen sich auch spezielle Anwendungsfälle umsetzen.
 
 ## Wir sind besonders effektiv
 
