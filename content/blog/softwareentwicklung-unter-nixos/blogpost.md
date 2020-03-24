@@ -1,18 +1,18 @@
 ---
-title: Softwareentwicklung unter NixOS - Ein Erfahrungsbericht
+title: Softwareentwicklung unter NixOS - Mein Erfahrungsbericht
 slug: softwareentwicklung-unter-nixos
 templateKey: blog-post
 image: ./image.jpg
 date: 2020-03-24T16:24:00.000Z
 author: Patrik Stutz
-description: 'Vor über 9 Monaten startete ich meine Arbeite bei der Apptiva. Und gleichzeitig auch mein Experiment mit NixOS. Mein Erfahrungsbericht.'
+description: 'Vor über 9 Monaten startete ich meine Arbeit bei der Apptiva. Und gleichzeitig auch mein Experiment mit NixOS.'
 categories:
   - Linux
   - Nix
   - NixOS
 ---
 
-Gleich beim Antritt meiner Arbeit bei der Apptiva im letzten Juni, machte ich Gebrauch von einer der vielen Freiheiten, die den Mitarbeitern geboten werden: Die Wahl des Computers, Betriebssystems & der Entwicklungstools. Nach vielen Jahren der Entwicklung unter Windows bei meinem vorherigen Arbeitgeber, nutzte ich diese einmalige Gelegenheit um komplett auf Linux umzusteigen, nachdem ich dies privat schon länger getan hatte. Ein Erfahrungsbericht.
+Gleich beim Antritt meiner Arbeit bei der Apptiva im letzten Juni, machte ich Gebrauch von einer der vielen Freiheiten, die den Mitarbeitern geboten werden: Die Wahl des Computers, Betriebssystems & der Entwicklungstools. Nach vielen Jahren der Entwicklung unter Windows bei meinem vorherigen Arbeitgeber, nutzte ich diese einmalige Gelegenheit um komplett auf Linux umzusteigen, nachdem ich dies privat schon länger getan hatte.
 
 ## Mein Weg zu Apptiva & Linux
 
@@ -62,6 +62,20 @@ Im Endeffekt hat sich für mich der Aufwand aber ganz klar gelohnt.
 
 Obwohl die Nix-Shell ein geniales Entwicklertool ist, gestaltet sich die Nutzung mit anderen Entwicklertools teils gar nicht so einfach. Ich hoffe dies wird sich in Zukunft noch ändern.
 
+## Arbeiten unter Linux
+
+Viele hochwertige, kommerzielle Softwarepakete sind nicht für Linux erhältlich. Dies ist natürlich eine grosse Herausforderung, wenn trotzdem produktiv gearbeitet werden soll. Zum Glück ist Linux aber gerade bei Softwareentwicklern sehr beliebt, weshalb auch der Grossteil der unverzichtbaren Entwicklertools wie git, docker, VSCode, IntelliJ unter Linux verfügbar ist. Die Entwicklung selbst ist hier also äusserst angenehm und es fehlt einem an nichts.
+
+Die Arbeit bei der Apptiva besteht aber natürlich nicht nur aus Softwareentwicklung. Ab und zu müssen wir auch mal eine Rechnung schreiben, oder ein paar schöne Grafiken erstellen. Erst hier hat für mich die eigentliche Herausforderung begonnen. Da bei Apptiva sonst jeder mit einem Macbook arbeitet, werden Dokumente und Präsentationen meist mit "Pages" oder "Keynote" erstellt. Diese Software ist unter Linux leider nicht verfügbar, weshalb ich auf LibreOffice ausweichen muss. Das funktioniert zwar sehr gut, bestehende Dokumente meiner Teamkollegen kann ich aber auch damit nicht editieren.
+
+Ebenfalls etwas problematisch gestaltet sich das Erstellen von Grafiken. Weder die Adobe- noch die Affinity- Produkte werden für Linux angeboten. Es gibt hier zwar Alternativ-Software, diese spielen aber bei weitem nicht in der gleichen Liga. Ein Glück, dass sich Philip Schönholzer auch gerne den Grafiken annimmt.
+
+Zur Kommunikation innerhalb der Firma verwenden wir glücklicherweise Slack, welches auch einen Linux-Client anbietet. Viele andere Tools sind Web-Apps, welche unter Linux ebenfalls problemlos zu verwenden sind.
+
+[[right]]
+|[[avatar]]
+||![Renato Wasescha](../../data/employees/patrik-stutz/patrik-stutz-prev.jpg)
+
 ## Fazit
 
-NixOS macht sehr vieles richtig. Aber auch anders, was erst gelernt werden will. Ist diese Hürde aber erstmal genommen, wird es schwierig sich wieder von Vorteilen loszureissen. Deshalb beabsichtige ich auch weiterhin NixOS zu benutzen und irgendwann vielleicht auch den ein oder anderen Team-Kollegen zu überzeugen.
+NixOS macht sehr vieles richtig. Aber auch anders, was erst gelernt werden will. Ist diese Hürde aber erstmal genommen, wird es schwierig sich wieder von Vorteilen loszureissen. Deshalb beabsichtige ich auch weiterhin NixOS zu benutzen und irgendwann vielleicht auch den ein oder anderen Team-Kollegen zu überzeugen. Vielleicht werde ich aber auch plötzlich durch fehlende Software zurück zu Windows oder einen Mac verbannt.
