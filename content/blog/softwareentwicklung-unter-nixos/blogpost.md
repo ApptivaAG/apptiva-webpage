@@ -1,0 +1,67 @@
+---
+title: Softwareentwicklung unter NixOS - Ein Erfahrungsbericht
+slug: softwareentwicklung-unter-nixos
+templateKey: blog-post
+image: ./image.jpg
+date: 2020-03-24T16:24:00.000Z
+author: Patrik Stutz
+description: 'Vor über 9 Monaten startete ich meine Arbeite bei der Apptiva. Und gleichzeitig auch mein Experiment mit NixOS. Mein Erfahrungsbericht.'
+categories:
+  - Linux
+  - Nix
+  - NixOS
+---
+
+Gleich beim Antritt meiner Arbeit bei der Apptiva im letzten Juni, machte ich Gebrauch von einer der vielen Freiheiten, die den Mitarbeitern geboten werden: Die Wahl des Computers, Betriebssystems & der Entwicklungstools. Nach vielen Jahren der Entwicklung unter Windows bei meinem vorherigen Arbeitgeber, nutzte ich diese einmalige Gelegenheit um komplett auf Linux umzusteigen, nachdem ich dies privat schon länger getan hatte. Ein Erfahrungsbericht.
+
+## Mein Weg zu Apptiva & Linux
+
+Softwareentwicklung macht mir Spass. So viel Spass, dass ich auch privat immer wieder kleine Projekte für eigene Zwecke realisiere. Gerade für private Projekte, wo man kein Geld für teure Softwarelizenzen ausgeben kann (oder will), ist die riesige Anzahl an kostenloser und quelloffener Software einfach genial. Und wenn man schon überall wo es möglich ist, mit frei verfügbarer Software arbeitet, dann führt natürlich auch an Linux kein Weg vorbei.
+
+Dies war mein Motiv, als ich vor ca. 3 Jahren auf all meinen privaten Computern Arch Linux installiert habe. Das war zu Beginn nicht leicht. Doch durch das exzellente Wiki habe ich schnell & viel gelernt, sodass plötzlich alles ganz leicht von der Hand ging. Da die meisten Server-Anwendungen ohnehin unter Linux betrieben werden, und ich nun auch zum Entwickeln Linux verwendete, fühlte es sich immer komischer an, wenn ich dann im Büro plötzlich wieder Windows benutzen musste.
+
+Dann wechselte ich zu Apptiva. Hier wurde mir bei der Wahl des Betriebssystems freie Wahl gelassen. Dies war meine Gelegenheit um auszuprobieren, ob sich Linux auch bei der Arbeit bewähren kann. Da all meine Teamkollegen aber zufrieden & problemlos mit ihren Macbooks entwicklen, wollte ich mich natürlich nicht blamieren. Ich konnte es mir also nicht leisten, dass mein Notebook nach einem Update nicht mehr hochfährt, was bei Arch Linux schon mal vorkommen konnte. Ich machte mich also auf die Suche nach einer Linux-Distribution, bei der das nicht passiert, und wurde fünding:
+
+## NixOS
+
+NixOS ist eine Linux-Distribution wie keine andere: So gut wie jeder Aspekt des Computers kann über eine einzige Konfigurationsdatei eingestellt werden. Dazu gehören die installieren Programme, die Benutzer, Zeitzone, Format, Sprache, Desktopumgebung und vieles, vieles mehr. Diese Konfigurationsdatei wird in der Sprache "Nix" geschrieben, welche es erlaubt das System anhand der Konfigurationsdatei reproduzierbar wiederherzustellen. Wenn man eine Änderung an der Systemkonfiguration macht und einem diese nicht gefällt, oder das System danach erst gar nicht mehr hochfährt, kann man in Sekundenschnelle wieder zur vorherigen Version zurückwechseln, welche garantiert wieder funktioniert.
+
+Die Systemkonfiguration kann auch kinderleicht mit Git getrackt werden. Auf diese Weise weiss man immer genau was, wann und warum geändert wurde. Kauft man sich nach ein paar Jahren wiedermal ein neues Notebook, könnte dies nicht einfacher sein. Man nimmt einfach die Konfigurationsdatei, und richtet damit das neue Notebook genau so ein, wie es das alte war. Wenn man nicht mehr benötigte Software entfernt, hat man auch immer die Garantie, dass diese restlos entfernt wird. Ein NixOS-System muss also nicht von Zeit zu Zeit neu installiert werden. Das aktivieren einer Konfigurieren resultiert in exakt dem selben Ergebnis, wie ein neu-aufsetzen des Systems.
+
+Mein System verhält sich nun also ähnlich wie meine Software-Projekte. Ich kann unbekümmert Änderungen machen, im Wissen dass ich jederzeit zu einem alten Stand zurückkehren kann. Allein diese Eigenschaft machte NixOS für mich als Entwickler zur idealen Wahl.
+
+## Vorteile
+
+### Reproduzierbar & stabil
+
+Ich kann das System auf jeden beliebigen Zustand zurücksetzen, und das auf jedem beliebigen Computer.
+
+### Deklarativ & übersichtlich
+
+Ich habe die komplette Konfiguration meines Computers immer genau im Blick. Ich brauche mich nicht länger daran zu erinnern wo ich was verstellt habe.
+
+### Nix-Shell
+
+Die Nix-Shell ist unter NixOS natürlich bestens integriert. Dabei handelt es sich ein Entwicklungstool, mit dem man, genau wie bei NixOS das System, für ein Softwareprojekt eine eigene Umgebung mit klar definierten Abhängigkeiten erzeugen kann. Braucht also ein Projekt das JDK8 und ein anderes das JDK12, ist dies überhaupt kein Problem. Das selbe gilt für Node.JS, Python und alle anderen erdenklichen Abhängigkeiten. Die Nix-Shell ist allerdings auch für alle anderen Linux-Distributionen und sogar für Mac verfügbar! Nix kann also auch ohne einen kompletten Wechsel auf NixOS sehr hilfreich sein. Für mich ist die Nix-Shell jedenfalls nicht mehr wegzudenken.
+
+## Nachteile
+
+Ziemlich schnell, nachdem ich begonnen habe mit NixOS zu arbeiten wurde ich mit folgenden Nachteilen konfrontiert:
+
+### Komplett anders
+
+Bei NixOS ist kaum etwas so wie auf anderen Distributionen. Allein schon der Aufbau des Dateisystems. Ist man sich von anderen Distributionen die Verzeichnisse /bin, /etc, /lib usw. gewohnt, so gibt es unter NixOS im Prinzip nur einen Ordner: /nix
+Da viele Software aber darauf aufbaut, dass diese Verzeichnisse existieren, müssen Sie diesen vorgegaukelt werden. Bei allen Softwarepaketen aus dem riesigen **nixpkgs**-Repository wird das automatisch gemacht. Möchte man aber eine Software benutzen, die dort noch nicht vorhanden ist, muss man zu Tricks greifen.
+
+### Lernkurve
+
+Da für die Konfigurationsdatei die eigens entwickelte Sprache **Nix** zum Einsatz kommt, muss man diese natürlich erst lernen. Dies ist leider nicht so einfach, wie zu Beginn gedacht. Die Sprache ist zum Teil komplex, dafür aber auch sehr mächtig.
+Im Endeffekt hat sich für mich der Aufwand aber ganz klar gelohnt.
+
+### Entwicklertools zum Teil noch nicht gut integriert
+
+Obwohl die Nix-Shell ein geniales Entwicklertool ist, gestaltet sich die Nutzung mit anderen Entwicklertools teils gar nicht so einfach. Ich hoffe dies wird sich in Zukunft noch ändern.
+
+## Fazit
+
+NixOS macht sehr vieles richtig. Aber auch anders, was erst gelernt werden will. Ist diese Hürde aber erstmal genommen, wird es schwierig sich wieder von Vorteilen loszureissen. Deshalb beabsichtige ich auch weiterhin NixOS zu benutzen und irgendwann vielleicht auch den ein oder anderen Team-Kollegen zu überzeugen.
