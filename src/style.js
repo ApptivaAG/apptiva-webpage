@@ -39,9 +39,10 @@ export const Right = styled.div`
 
 export const MainTitle = styled.h1`
   font-size: 2.8em;
+  line-height: 1;
 
   text-align: center;
-  @media (min-width: 381px) {
+  @media (min-width: 640px) {
     font-size: 4em;
   }
 `
@@ -50,7 +51,7 @@ export const Title = styled.h2`
   font-size: 2.8em;
 
   text-align: center;
-  @media (min-width: 381px) {
+  @media (min-width: 640px) {
     font-size: 4em;
   }
 `

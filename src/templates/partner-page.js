@@ -5,21 +5,15 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 
 import { HTMLContent } from '../components/Content'
-import { Container, Section } from '../style'
+import { Container, Section, MainTitle } from '../style'
 import config from '../config'
 import SEO from '../components/SEO'
 import { stripHTML } from '../util'
 import Layout from '../components/Layout'
 
-const HeaderTitle = styled.h1`
-  font-size: 2.4rem;
-  font-weight: 800;
-  line-height: 1;
+const HeaderTitle = styled(MainTitle)`
   margin-bottom: 0.2em;
-
-  @media (min-width: 381px) {
-    font-size: 4rem;
-  }
+  text-align: left;
 `
 
 const Grid = styled.div`

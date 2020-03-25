@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 
 import Content, { HTMLContent } from '../components/Content'
-import { Container } from '../style'
+import { Container, MainTitle } from '../style'
 import config from '../config'
 import SEO from '../components/SEO'
 import { stripHTML } from '../util'
@@ -15,14 +15,8 @@ const HeadArea = styled.div`
   margin-bottom: 0.6em;
 `
 
-const HeaderTitle = styled.h1`
+const HeaderTitle = styled(MainTitle)`
   font-size: 2rem;
-  @media (min-width: 400px) {
-    font-size: 4rem;
-  }
-  font-weight: 800;
-  line-height: 1;
-  text-align: center;
 `
 
 const Header = ({ title, image }) => (

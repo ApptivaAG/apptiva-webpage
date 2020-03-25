@@ -8,7 +8,7 @@ import '@fortawesome/fontawesome-free/css/fontawesome.min.css'
 import '@fortawesome/fontawesome-free/css/solid.min.css'
 
 import Content, { HTMLContent } from '../components/Content'
-import { Centered, Container, Section, Icon, Button } from '../style'
+import { Centered, Container, Section, Icon, Button, MainTitle } from '../style'
 import SEO from '../components/SEO'
 import { stripHTML } from '../util'
 import Layout from '../components/Layout'
@@ -17,16 +17,6 @@ import ContactForm from '../components/ContactForm'
 
 const HeadArea = styled.header``
 
-const HeaderTitle = styled.h1`
-  font-size: 2.4rem;
-  font-weight: 800;
-  line-height: 1;
-  text-align: center;
-
-  @media (min-width: 381px) {
-    font-size: 4rem;
-  }
-`
 const CustomerTitle = styled.h2`
   font-size: 1.7em;
   color: #cbcbcb;
@@ -82,7 +72,7 @@ const ItemContent = styled.div`
 
 const Header = ({ title, image, subtitle }) => (
   <HeadArea>
-    <HeaderTitle dangerouslySetInnerHTML={{ __html: title }} />
+    <MainTitle dangerouslySetInnerHTML={{ __html: title }} />
     {subtitle && (
       <h2>
         {subtitle.text} {subtitle.swaps && subtitle.swaps[0]}
