@@ -74,7 +74,7 @@ Zur Kommunikation innerhalb der Firma verwenden wir glücklicherweise Slack, wel
 
 [[right]]
 |[[avatar]]
-||![Renato Wasescha](../../data/employees/patrik-stutz/patrik-stutz-prev.jpg)
+||![Patrik Stutz](../../data/employees/patrik-stutz/patrik-stutz-prev.jpg)
 
 ## Fazit
 
