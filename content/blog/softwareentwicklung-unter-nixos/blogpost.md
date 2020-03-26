@@ -24,9 +24,9 @@ Dann wechselte ich zu Apptiva. Hier wurde mir bei der Wahl des Betriebssystems f
 
 ## NixOS
 
-NixOS ist eine Linux-Distribution wie keine andere: So gut wie jeder Aspekt des Computers kann über eine einzige Konfigurationsdatei eingestellt werden. Dazu gehören die installieren Programme, die Benutzer, Zeitzone, Format, Sprache, Desktopumgebung und vieles, vieles mehr. Diese Konfigurationsdatei wird in der Sprache "Nix" geschrieben, welche es erlaubt das System anhand der Konfigurationsdatei reproduzierbar wiederherzustellen. Wenn man eine Änderung an der Systemkonfiguration macht und einem diese nicht gefällt, oder das System danach erst gar nicht mehr hochfährt, kann man in Sekundenschnelle wieder zur vorherigen Version zurückwechseln, welche garantiert wieder funktioniert.
+NixOS ist eine Linux-Distribution wie keine andere: So gut wie jeder Aspekt des Computers kann über eine einzige Konfigurationsdatei eingestellt werden. Dazu gehören die installierten Programme, die Benutzer, Zeitzone, Format, Sprache, Desktopumgebung und vieles, vieles mehr. Diese Konfigurationsdatei wird in der Sprache "Nix" geschrieben, und erlaubt es, das System reproduzierbar zu konfigurieren & wiederherzustellen. Wenn man eine Änderung an der Systemkonfiguration macht und einem diese nicht gefällt, oder das System danach erst gar nicht mehr hochfährt, kann man in Sekundenschnelle wieder zur vorherigen Version zurückwechseln, welche garantiert wieder funktioniert.
 
-Die Systemkonfiguration kann auch kinderleicht mit Git getrackt werden. Auf diese Weise weiss man immer genau was, wann und warum geändert wurde. Kauft man sich nach ein paar Jahren wiedermal ein neues Notebook, könnte dies nicht einfacher sein. Man nimmt einfach die Konfigurationsdatei, und richtet damit das neue Notebook genau so ein, wie es das alte war. Wenn man nicht mehr benötigte Software entfernt, hat man auch immer die Garantie, dass diese restlos entfernt wird. Ein NixOS-System muss also nicht von Zeit zu Zeit neu installiert werden. Das aktivieren einer Konfigurieren resultiert in exakt dem selben Ergebnis, wie ein neu-aufsetzen des Systems.
+Die Systemkonfiguration kann auch kinderleicht mit Git getrackt werden. Auf diese Weise weiss man immer genau was, wann und warum geändert wurde. Kauft man sich nach ein paar Jahren wiedermal ein neues Notebook, könnte dies nicht einfacher sein. Man nimmt einfach die Konfigurationsdatei, und richtet damit das neue Notebook genau so ein, wie es das alte war. Wenn man nicht mehr benötigte Software entfernt, hat man auch immer die Garantie, dass diese restlos entfernt wird. Ein NixOS-System muss also nicht von Zeit zu Zeit neu installiert werden. Das aktivieren einer Konfiguration resultiert in exakt dem selben Ergebnis, wie ein Neu-Aufsetzen des Systems.
 
 Mein System verhält sich nun also ähnlich wie meine Software-Projekte. Ich kann unbekümmert Änderungen machen, im Wissen dass ich jederzeit zu einem alten Stand zurückkehren kann. Allein diese Eigenschaft machte NixOS für mich als Entwickler zur idealen Wahl.
 
@@ -42,11 +42,11 @@ Ich habe die komplette Konfiguration meines Computers immer genau im Blick. Ich 
 
 ### Nix-Shell
 
-Die Nix-Shell ist unter NixOS natürlich bestens integriert. Dabei handelt es sich ein Entwicklungstool, mit dem man, genau wie bei NixOS das System, für ein Softwareprojekt eine eigene Umgebung mit klar definierten Abhängigkeiten erzeugen kann. Braucht also ein Projekt das JDK8 und ein anderes das JDK12, ist dies überhaupt kein Problem. Das selbe gilt für Node.JS, Python und alle anderen erdenklichen Abhängigkeiten. Die Nix-Shell ist allerdings auch für alle anderen Linux-Distributionen und sogar für Mac verfügbar! Nix kann also auch ohne einen kompletten Wechsel auf NixOS sehr hilfreich sein. Für mich ist die Nix-Shell jedenfalls nicht mehr wegzudenken.
+Die Nix-Shell ist unter NixOS natürlich bestens integriert. Dabei handelt es sich um ein Entwicklungstool, mit dem man, genau wie bei NixOS das System, für ein Softwareprojekt eine eigene Umgebung mit klar definierten Abhängigkeiten erzeugen kann. Braucht also ein Projekt das JDK8 und ein anderes das JDK12, ist dies überhaupt kein Problem. Das selbe gilt für Node.JS, Python und alle anderen erdenklichen Abhängigkeiten. Die Nix-Shell ist allerdings auch für alle anderen Linux-Distributionen und sogar für Mac verfügbar! Nix kann also auch ohne einen kompletten Wechsel auf NixOS sehr hilfreich sein. Für mich ist die Nix-Shell jedenfalls nicht mehr wegzudenken.
 
 ## Nachteile
 
-Ziemlich schnell, nachdem ich begonnen habe mit NixOS zu arbeiten wurde ich mit folgenden Nachteilen konfrontiert:
+Ziemlich schnell nachdem ich begonnen habe mit NixOS zu arbeiten, wurde ich mit folgenden Nachteilen konfrontiert:
 
 ### Komplett anders
 
@@ -64,9 +64,9 @@ Obwohl die Nix-Shell ein geniales Entwicklertool ist, gestaltet sich die Nutzung
 
 ## Arbeiten unter Linux
 
-Viele hochwertige, kommerzielle Softwarepakete sind nicht für Linux erhältlich. Dies ist natürlich eine grosse Herausforderung, wenn trotzdem produktiv gearbeitet werden soll. Zum Glück ist Linux aber gerade bei Softwareentwicklern sehr beliebt, weshalb auch der Grossteil der unverzichtbaren Entwicklertools wie git, docker, VSCode, IntelliJ unter Linux verfügbar ist. Die Entwicklung selbst ist hier also äusserst angenehm und es fehlt einem an nichts.
+Viele hochwertige, kommerzielle Softwarepakete sind nicht für Linux erhältlich. Dies ist natürlich eine grosse Herausforderung, wenn trotzdem produktiv gearbeitet werden soll. Zum Glück ist Linux aber gerade bei Softwareentwicklern sehr beliebt, weshalb auch der Grossteil der unverzichtbaren Entwicklertools wie git, docker, VSCode, IntelliJ unter Linux verfügbar sind. Die Entwicklung selbst ist hier also äusserst angenehm und es fehlt einem an nichts.
 
-Die Arbeit bei der Apptiva besteht aber natürlich nicht nur aus Softwareentwicklung. Ab und zu müssen wir auch mal eine Rechnung schreiben, oder ein paar schöne Grafiken erstellen. Erst hier hat für mich die eigentliche Herausforderung begonnen. Da bei Apptiva sonst jeder mit einem Macbook arbeitet, werden Dokumente und Präsentationen meist mit "Pages" oder "Keynote" erstellt. Diese Software ist unter Linux leider nicht verfügbar, weshalb ich auf LibreOffice ausweichen muss. Das funktioniert zwar sehr gut, bestehende Dokumente meiner Teamkollegen kann ich aber auch damit nicht editieren.
+Die Arbeit bei der Apptiva besteht aber natürlich nicht nur aus Softwareentwicklung. Ab und zu müssen wir auch mal eine Rechnung schreiben, oder ein paar schöne Grafiken erstellen. Erst hier hat für mich die eigentliche Herausforderung begonnen. Da bei Apptiva sonst jeder mit einem Macbook arbeitet, werden Dokumente und Präsentationen meist mit **Pages** oder **Keynote** erstellt. Diese Software ist unter Linux leider nicht verfügbar, weshalb ich auf **LibreOffice** ausweichen muss. Das funktioniert zwar sehr gut, bestehende Dokumente meiner Teamkollegen kann ich aber auch damit nicht editieren.
 
 Ebenfalls etwas problematisch gestaltet sich das Erstellen von Grafiken. Weder die Adobe- noch die Affinity- Produkte werden für Linux angeboten. Es gibt hier zwar Alternativ-Software, diese spielen aber bei weitem nicht in der gleichen Liga. Ein Glück, dass sich Philip Schönholzer auch gerne den Grafiken annimmt.
 
@@ -78,4 +78,4 @@ Zur Kommunikation innerhalb der Firma verwenden wir glücklicherweise Slack, wel
 
 ## Fazit
 
-NixOS macht sehr vieles richtig. Aber auch anders, was erst gelernt werden will. Ist diese Hürde aber erstmal genommen, wird es schwierig sich wieder von Vorteilen loszureissen. Deshalb beabsichtige ich auch weiterhin NixOS zu benutzen und irgendwann vielleicht auch den ein oder anderen Team-Kollegen zu überzeugen. Vielleicht werde ich aber auch plötzlich durch fehlende Software zurück zu Windows oder einen Mac verbannt.
+NixOS macht sehr vieles richtig. Aber auch anders, was erst gelernt werden will. Ist diese Hürde aber erstmal genommen, wird es schwierig sich wieder von Vorteilen loszureissen. Deshalb beabsichtige ich auch weiterhin NixOS zu benutzen und irgendwann vielleicht auch den ein oder anderen Team-Kollegen zu überzeugen. Vielleicht werde ich aber auch plötzlich durch fehlende Software zurück zu Windows oder einem Mac verbannt.
