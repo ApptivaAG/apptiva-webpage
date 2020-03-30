@@ -1,7 +1,9 @@
-// exports.onRouteUpdate = location => {
-//   if (location.hash) {
-//     setTimeout(() => {
-//       document.querySelector(`${location.hash}`).scrollIntoView()
-//     }, 0)
-//   }
-// }
+import 'lazysizes'
+
+export const onClientEntry = () => {
+  // IntersectionObserver polyfill for gatsby-background-image (Safari, IE)
+  if (!(`IntersectionObserver` in window)) {
+    import(`intersection-observer`)
+    console.log(`# IntersectionObserver is polyfilled!`)
+  }
+}

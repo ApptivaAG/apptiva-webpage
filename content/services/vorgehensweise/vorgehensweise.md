@@ -12,13 +12,13 @@ bulletGroups:
     description: Bevor wir mit der Umsetzung einer neuen App beginnen, setzen wir uns mit den folgenden drei Punkten auseinander
 
     bulletList:
-      - icon: reg-clock
+      - icon: cube
         title: Domäne
         text: Uns ist es wichtig zu verstehen, in welchem Umfeld die App zum Einsatz kommt. Nur mit genügend Verständnis für Ihr Business können wir Ihnen die für Ihr Geschäft passende Lösung liefern.
-      - icon: expand
+      - icon: bullseye
         title: Ziele
         text: Wir brauchen ein gemeinsames Ziel. Vielleicht heisst es „Die Telefonverkäufe können in der Hälfte der Zeit abgewickelt werden.“ Wie lautet Ihr Ziel?
-      - icon: database
+      - icon: image
         title: Big Picture
         text: Mit dem Verständnis Ihrer Domäne und einem klaren Ziel können wir ein grobes Bild davon zeichnen, aus welchen Funktionen Ihre App einmal besteht und wie sie eingesetzt wird.
 ---

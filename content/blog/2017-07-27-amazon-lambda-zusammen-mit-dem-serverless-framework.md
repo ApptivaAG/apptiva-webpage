@@ -26,7 +26,9 @@ Damit dieses Beispiel funktioniert, musst du Node installiert haben (z.B. mit <c
 <h3>1. Serverless installieren</h3>
 Das Serverless Framework ist ein NPM Modul. Du kannst es wie folgt installieren:
 
-`npm install -g serverless
+```bash
+npm install -g serverless
+```
 
 <h3>2. Beispielprojekt</h3>
 Für unser Beispiel brauchst du zwei Dateien:
@@ -44,23 +46,27 @@ module.exports.run = (event, context) =&gt; {
 
 ```yml
 provider:
- name: aws
- runtime: nodejs4.3
+  name: aws
+  runtime: nodejs4.3
 functions:
- cron:
-   handler: handler.run
-   events:
-     # Führe die Lambda Funktion jede Minute aus
-     - schedule: rate(1 minute)
+  cron:
+    handler: handler.run
+    events:
+      # Führe die Lambda Funktion jede Minute aus
+      - schedule: rate(1 minute)
 ```
 
 Du kannst nun die erstellte Lambda Funktion bereits lokal ausführen:
 
-`serverless invoke local -f cron`
+```bash
+serverless invoke local -f cron
+```
 
 Als Resultat solltest du folgende Ausgabe erhalten:
 
-`Your cron function "apptiva-demo-service" ran at Thu Jul 27 2017 11:42:03 GMT+0200 (CEST). Yea!`
+```bash
+Your cron function "apptiva-demo-service" ran at Thu Jul 27 2017 11:42:03 GMT+0200 (CEST). Yea!
+```
 
 ### 3. AWS Service Account einrichten
 
@@ -78,20 +84,28 @@ Damit das Serverless Framework Zugriff auf deinen AWS Account hat, erstellen wir
 
 In deiner Konsole musst du nun dem Serverless Framework den AWS API Key und das Secret mitteilen:
 
-`serverless config credentials --provider aws --key DEIN_API_KEY --secret DEIN_SECRET`
+```bash
+serverless config credentials --provider aws --key DEIN_API_KEY --secret DEIN_SECRET
+```
 
 <h3>4. Applikation deployen</h3>
 Du kannst nun die Applikation mit folgendem Befehl deployen:
 
-`serverless deploy -v`
+```bash
+serverless deploy -v
+```
 
 Ab jetzt wird die <em>run</em> Funktion jede Minute ausgeführt. Dies kannst du im Log sehen:
 
-`serverless logs -f cron`
+```bash
+serverless logs -f cron
+```
 
 Falls du nur eine Änderung an der Funktion gemacht hast, kannst du diese Änderung mittels folgendem Befehle neu deployen:
 
-`serverless deploy function -f cron`
+```bash
+serverless deploy function -f cron
+```
 
 <h2>Fazit</h2>
 Meiner Meinung nach vereinfachen Serverless Applikationen die Entwicklung von kostgünstigen und skalierbaren Applikationen enorm. Als Softwareentwickler muss ich mich nicht um die Skalierbarkeit und Verfügbarkeit der Applikation kümmern. So glaube ich, dass wir in Zukunft immer mehr solche Applikationen antreffen werden.

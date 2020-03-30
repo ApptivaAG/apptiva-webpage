@@ -5,8 +5,6 @@ import { sharedButtonStyle } from '../style'
 require('prismjs/themes/prism.css')
 
 const Markdown = styled.div`
-  margin-bottom: 4rem;
-
   h1,
   h2,
   h3 {
@@ -127,6 +125,12 @@ const Markdown = styled.div`
 
   .custom-block-no-margin > .custom-block-body > * {
     margin: 0 !important;
+  }
+
+  .custom-block-hide-on-mobile {
+    @media (max-width: 640px) {
+      display: none !important;
+    }
   }
 
   @media (min-width: 400px) {

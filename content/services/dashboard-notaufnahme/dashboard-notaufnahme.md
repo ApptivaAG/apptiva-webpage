@@ -22,7 +22,7 @@ bulletGroups:
       - icon: expand
         title: Integriert in Ihre System­landschaft
         text: Integrieren Sie das Apptiva Dashboard in Ihre bestehende Systemlandschaft um gleiche Daten nur einmal erfassen zu müssen und diese sofort verfügbar zu haben.
-      - icon: reg-clock
+      - icon: clock
         title: Mehr Zeit für die Patienten
         text: Mit dem Apptiva Dashboard hat die Pflege weniger administrative Arbeit. Die notwendigen Informationen werden vorgelagert erfasst und mit wenigen Klicks aktualisiert. Die spätere Aufarbeitung der Daten entfällt.
       - icon: chart-bar
@@ -113,9 +113,3 @@ Das Apptiva Dashboard lässt sich einfach mit Ihren bestehenden Systemen verbind
 ![Integration Apptiva Dashboard](integration.png)
 
 Mit dem Apptiva Dashboard erhalten Sie einen flexiblen Zusatz zu Ihrem bestehenden KIS und können damit einen Teil Ihres Geschäftsprozesses gezielt optimieren. Aufgrund der Synchronisierung von Datenänderungen in beide Richtungen ist in Ihrem bestehenden System weiterhin alles Notwendige verfügbar.
-
-# Anfrage
-
-Gerne geben wir Ihnen weitere Informationen zu unserem Dashboard. Wir freuen uns über Ihre Anfrage.
-
-Rufen Sie uns an [041 322 26 26](tel:+41413222626) oder schreiben Sie an [info@­apptiva.ch](mailto:info@apptiva.ch)

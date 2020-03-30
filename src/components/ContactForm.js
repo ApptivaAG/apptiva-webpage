@@ -1,5 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled, { css } from 'styled-components'
+import fetch from 'unfetch'
+
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 import { Button } from '../style'
 
 const sharedInput = css`
@@ -27,108 +30,110 @@ const encode = data =>
     .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
     .join('&')
 
-class ContactForm extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { name: '', email: '', message: '' }
+const analyticsFormSent = () =>
+  trackCustomEvent({
+    // string - required - The object that was interacted with (e.g.video)
+    category: 'Kontaktformular',
+    // string - required - Type of interaction (e.g. 'play')
+    action: 'Verschickt',
+    // string - optional - Useful for categorizing events (e.g. 'Spring Campaign')
+    label: 'Apptiva Zielvorhaben',
+    // number - optional - Numeric value associated with the event. (e.g. A product ID)
+    value: 1,
+  })
 
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
-  }
+const ContactForm = () => {
+  const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const { name, email, message, address } = form
 
-  /* Here’s the juicy bit for posting the form submission */
+  const handleSubmit = e => {
+    e.preventDefault()
 
-  handleSubmit(e) {
-    if (this.state.email === '' || this.state.name === '') {
+    if (address !== undefined) {
+      return // spam
+    }
+    if (email === '' || name === '') {
       /* eslint-disable-next-line no-alert */
       alert('Ups, ein zwingendes Feld ist noch nicht ausgefüllt.')
-    } else if (this.state['bot-field'] === undefined) {
-      const body = encode({
-        'form-name': 'contact',
-        subject: 'Kontaktformular apptiva.ch',
-        ...this.state,
-      })
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body,
-      })
-        .then(() => {
-          /* eslint-disable-next-line no-alert */
-          alert(
-            'Danke! Wir haben Ihre Nachricht erhalten und melden uns so bald wie möglich bei Ihnen.'
-          )
-          this.setState({ name: '', email: '', message: '' })
-        })
-        .catch(error => {
-          /* eslint-disable-next-line no-console */
-          console.log('Error', error)
-          /* eslint-disable-next-line no-alert */
-          alert(
-            `Leider hat dies nicht funktioniert. Entschuldigen Sie die Umstände. Wenn Sie uns auf info@apptiva.ch ein Email schicken melden wir uns sofort bei Ihnen.`
-          )
-        })
+      return
     }
-    e.preventDefault()
+
+    const body = encode({
+      'form-name': 'contact',
+      subject: 'Kontaktformular apptiva.ch',
+      ...form,
+    })
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body,
+    })
+      .then(() => {
+        /* eslint-disable-next-line no-alert */
+        alert(
+          'Danke! Wir haben Ihre Nachricht erhalten und melden uns so bald wie möglich bei Ihnen.'
+        )
+        setForm({ name: '', email: '', message: '' })
+      })
+      .catch(error => {
+        /* eslint-disable-next-line no-console */
+        console.log('Error', error)
+        /* eslint-disable-next-line no-alert */
+        alert(
+          `Leider hat dies nicht funktioniert. Entschuldigen Sie die Umstände. Wenn Sie uns auf info@apptiva.ch ein Email schicken melden wir uns sofort bei Ihnen.`
+        )
+      })
+
+    analyticsFormSent()
   }
 
-  handleChange(e) {
-    this.setState({ [e.target.name]: e.target.value })
+  const handleChange = e => {
+    setForm({ ...form, [e.target.name]: e.target.value })
   }
 
-  render() {
-    const { name, email, message } = this.state
-    return (
-      <form
-        name="contact"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        onSubmit={this.handleSubmit}
-      >
-        <p hidden>
-          <label htmlFor="bot-field">
-            Nicht ausfüllen:{' '}
-            <input type="text" name="bot-field" onChange={this.handleChange} />
-          </label>
-        </p>
-        <p>
-          <label htmlFor="name">
-            Ihr Name (Pflichtfeld){' '}
-            <Input
-              type="text"
-              name="name"
-              value={name}
-              onChange={this.handleChange}
-            />
-          </label>
-        </p>
-        <p>
-          <label htmlFor="email">
-            Ihre Email-Adresse (Pflichtfeld){' '}
-            <Input
-              type="email"
-              name="email"
-              value={email}
-              onChange={this.handleChange}
-            />
-          </label>
-        </p>
-        <p>
-          <label htmlFor="message">
-            Ihre Nachricht{' '}
-            <Textarea
-              name="message"
-              value={message}
-              onChange={this.handleChange}
-            />
-          </label>
-        </p>
-        <p>
-          <Button type="submit">Senden</Button>
-        </p>
-      </form>
-    )
-  }
+  return (
+    <form
+      name="contact"
+      data-netlify="true"
+      data-netlify-honeypot="address"
+      onSubmit={handleSubmit}
+    >
+      <p hidden>
+        <label htmlFor="address">
+          Nicht ausfüllen:{' '}
+          <input type="text" name="address" onChange={handleChange} />
+        </label>
+        <input type="text" name="subject" />
+      </p>
+      <p>
+        <label htmlFor="name">
+          Ihr Name (Pflichtfeld){' '}
+          <Input type="text" name="name" value={name} onChange={handleChange} />
+        </label>
+      </p>
+      <p>
+        <label htmlFor="email">
+          Ihre Email-Adresse (Pflichtfeld){' '}
+          <Input
+            type="email"
+            name="email"
+            value={email}
+            onChange={handleChange}
+          />
+        </label>
+      </p>
+      <p>
+        <label htmlFor="message">
+          Ihre Nachricht{' '}
+          <Textarea name="message" value={message} onChange={handleChange} />
+        </label>
+      </p>
+      <p>
+        <Button type="submit">Senden</Button>
+      </p>
+    </form>
+  )
 }
 
 export default ContactForm

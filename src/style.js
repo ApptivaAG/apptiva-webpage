@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
@@ -10,6 +11,10 @@ export const Section = styled.section`
   position: relative;
   padding-top: 2em;
   padding-bottom: 2em;
+
+  &:last-child {
+    padding-bottom: 4em;
+  }
 
   ${props =>
     props.dark &&
@@ -35,9 +40,10 @@ export const Right = styled.div`
 
 export const MainTitle = styled.h1`
   font-size: 2.8em;
+  line-height: 1;
 
   text-align: center;
-  @media (min-width: 381px) {
+  @media (min-width: 640px) {
     font-size: 4em;
   }
 `
@@ -46,7 +52,7 @@ export const Title = styled.h2`
   font-size: 2.8em;
 
   text-align: center;
-  @media (min-width: 381px) {
+  @media (min-width: 640px) {
     font-size: 4em;
   }
 `
@@ -120,9 +126,9 @@ export const Icon = styled.div`
   justify-content: center;
   align-items: center;
   flex: 0 0 auto;
-  height: 1.8em;
-  width: 1.8em;
-  font-size: 1.4em;
+  height: 2em;
+  width: 2em;
+  font-size: 1.5em;
   margin-right: 0.6em;
   color: ${props => props.theme.color.bg};
   border-radius: 50%;
@@ -160,6 +166,10 @@ export const ListItem = styled.li`
     color: ${props => props.theme.color.text};
     overflow: hidden;
 
+    p {
+      font-weight: 200;
+    }
+
     svg {
       transition: transform 0.3s;
     }
@@ -182,7 +192,6 @@ export const ListItem = styled.li`
   }
   h3 {
     font-size: 1em;
-    font-weight: 300;
   }
   h4 {
     font-size: 0.8em;
@@ -225,7 +234,9 @@ export const GlobalStyle = createGlobalStyle`
     color: ${theme.color.text};
   }
 
-  main { display: block; }
+  main { 
+    display: block; 
+  }
 
   h1 {
     font-weight: 800;
@@ -240,7 +251,9 @@ export const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: ${theme.color.primary};
+    ${'' /* higher contrast for accessability */}
+    color: hsla(200, 100%, 35%, 1); 
+    font-weight: 600;
     
     .gatsby-image-wrapper {
       transition: transform 0.3s;

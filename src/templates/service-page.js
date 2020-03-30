@@ -1,31 +1,22 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
-import * as FontAwesome from 'react-icons/fa'
-import TextLoop from 'react-text-loop'
+import useCollapse from 'react-collapsed'
+import '@fortawesome/fontawesome-free/css/fontawesome.min.css'
+import '@fortawesome/fontawesome-free/css/solid.min.css'
 
 import Content, { HTMLContent } from '../components/Content'
-import { Centered, Container, Section, Icon } from '../style'
-import config from '../config'
+import { Centered, Container, Section, Icon, Button, MainTitle } from '../style'
 import SEO from '../components/SEO'
 import { stripHTML } from '../util'
 import Layout from '../components/Layout'
-import IconErrorBoundary from '../components/IconErrorBoundary'
+import config from '../config'
+import ContactForm from '../components/ContactForm'
 
 const HeadArea = styled.header``
 
-const HeaderTitle = styled.h1`
-  font-size: 2.4rem;
-  font-weight: 800;
-  line-height: 1;
-  text-align: center;
-
-  @media (min-width: 381px) {
-    font-size: 4rem;
-  }
-`
 const CustomerTitle = styled.h2`
   font-size: 1.7em;
   color: #cbcbcb;
@@ -52,13 +43,8 @@ const Cols = styled.div`
     margin: 0 1rem 1rem;
   }
 `
-const faName = string => {
-  const faPrefix = `Fa-${string}`
-  const str = faPrefix.replace(/-([a-z])/g, g => g[1].toUpperCase())
-  return str
-}
 
-const icons = icon => React.createElement(FontAwesome[faName(icon)])
+const icons = icon => `fas fa-${icon}`
 
 const ListTitle = styled.header`
   margin-bottom: 3em;
@@ -67,7 +53,6 @@ const ListTitle = styled.header`
 const ItemList = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -1rem 1rem;
   padding: 0;
   list-style: none;
 `
@@ -87,7 +72,7 @@ const ItemContent = styled.div`
 
 const Header = ({ title, image, subtitle }) => (
   <HeadArea>
-    <HeaderTitle dangerouslySetInnerHTML={{ __html: title }} />
+    <MainTitle dangerouslySetInnerHTML={{ __html: title }} />
     {subtitle && (
       <h2>
         {subtitle.text} {subtitle.swaps && subtitle.swaps[0]}
@@ -109,8 +94,10 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
     image,
     subtitle,
     description,
+    introduction,
     customers,
     solutions,
+    references,
     specs,
     bulletGroups,
   } = metaData
@@ -119,6 +106,10 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
     metaData.image.childImageSharp.resize &&
     metaData.image.childImageSharp.resize.src
 
+  const { getCollapseProps, getToggleProps, isOpen } = useCollapse({
+    expandStyles: { transitionDuration: '200ms' },
+    collapseStyles: { transitionDuration: '200ms' },
+  })
   return (
     <main>
       <Helmet title={`${stripHTML(title)} - ${config.company}`} />
@@ -135,7 +126,23 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
           )}
         </Container>
       </Section>
-
+      {introduction && (
+        <Section dark>
+          <Container>
+            <h2>{introduction.title}</h2>
+            {introduction.paragraphs.map(paragraph => (
+              <div key={paragraph.text + paragraph.textBold}>
+                {paragraph.text && <p>{paragraph.text}</p>}
+                {paragraph.textBold && (
+                  <p>
+                    <b>{paragraph.textBold}</b>
+                  </p>
+                )}
+              </div>
+            ))}
+          </Container>
+        </Section>
+      )}
       {customers && (
         <Section dark>
           <Container>
@@ -185,19 +192,47 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
                 <p dangerouslySetInnerHTML={{ __html: group.description }} />
               </ListTitle>
               <ItemList>
-                {group.bulletList.map(item => (
-                  <Item key={item.title}>
-                    <IconErrorBoundary icon={item.icon}>
-                      <Icon>{icons(item.icon)}</Icon>
-                    </IconErrorBoundary>
-                    <ItemContent>
-                      <h3>{item.title}</h3>
-                      {/* eslint-disable-next-line react/no-danger */}
-                      <p dangerouslySetInnerHTML={{ __html: item.text }} />
-                    </ItemContent>
-                  </Item>
-                ))}
+                {group.bulletList.map(item => {
+                  return (
+                    <Item key={item.text}>
+                      <Icon>
+                        <i className={icons(item.icon)} />
+                      </Icon>
+                      <ItemContent>
+                        <h3>{item.title}</h3>
+                        {/* eslint-disable-next-line react/no-danger */}
+                        <p dangerouslySetInnerHTML={{ __html: item.text }} />
+                      </ItemContent>
+                    </Item>
+                  )
+                })}
               </ItemList>
+            </Container>
+          </Section>
+        ))}
+      {references &&
+        references.map(ref => (
+          <Section key={ref.title} dark>
+            <Container>
+              <Centered>
+                <h2>{ref.title}</h2>
+                <p>{ref.description}</p>
+                <Cols>
+                  {ref.referenceList.map(reference => (
+                    <div key={reference.title}>
+                      <h3>{reference.title}</h3>
+                      <Link to={reference.link}>
+                        <Img
+                          className="lightbox"
+                          fluid={reference.image.childImageSharp.fluid}
+                          alt={reference.title}
+                        />
+                      </Link>
+                      <p>{reference.text}</p>
+                    </div>
+                  ))}
+                </Cols>
+              </Centered>
             </Container>
           </Section>
         ))}
@@ -222,6 +257,33 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
       <Section>
         <Container>
           <PostContent content={content} />
+        </Container>
+      </Section>
+      <Section dark>
+        <Container>
+          <h2>
+            Wir unterstützen Sie gerne bei der Beschleunigung ihrer
+            Geschäftsprozesse
+          </h2>
+          {!isOpen && (
+            <p>
+              Rufen Sie uns an unter <a href="+41413222626">041 322 26 26</a>{' '}
+              oder schreiben Sie uns.
+            </p>
+          )}
+          <div {...getCollapseProps()}>
+            <p>
+              Füllen Sie unser Formular aus oder schreiben Sie ein Mail an{' '}
+              <a href="mailto:info@apptiva.ch">info@­apptiva.ch</a> und wir
+              melden uns sobald wie möglich bei ihnen.
+            </p>
+            <ContactForm />
+          </div>
+          {!isOpen && (
+            <Button type="button" {...getToggleProps()}>
+              Jetzt Nachricht schreiben
+            </Button>
+          )}
         </Container>
       </Section>
     </main>
@@ -251,6 +313,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        slug
         image {
           childImageSharp {
             fluid(maxWidth: 960, srcSetBreakpoints: [340, 960, 1600]) {
@@ -264,6 +327,13 @@ export const pageQuery = graphql`
         subtitle {
           text
           swaps
+        }
+        introduction {
+          title
+          paragraphs {
+            text
+            textBold
+          }
         }
         description
         customers {
@@ -280,6 +350,22 @@ export const pageQuery = graphql`
             childImageSharp {
               fluid(maxWidth: 960, srcSetBreakpoints: [340, 960, 1600]) {
                 ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+        references {
+          title
+          description
+          referenceList {
+            title
+            text
+            link
+            image {
+              childImageSharp {
+                fluid(maxWidth: 960, srcSetBreakpoints: [340, 960, 1600]) {
+                  ...GatsbyImageSharpFluid
+                }
               }
             }
           }

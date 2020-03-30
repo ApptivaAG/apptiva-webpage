@@ -44,7 +44,7 @@ bulletGroups:
       - icon: rocket
         title: Alleinstellungsmerkmal
         text: Mit unseren Produktkonfiguratoren stechen Sie aus dem E-Commerce-Jungle heraus. Seien Sie der Konkurrenz eine Nasenspitze voraus.
-      - icon: reg-lightbulb
+      - icon: lightbulb
         title: Komplexität reduzieren
         text: Wir machen das Leben Ihrer Kunden ein bisschen einfacher und erhöhen gleichzeitig Ihren Umsatz.
 

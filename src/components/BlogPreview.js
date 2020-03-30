@@ -69,7 +69,8 @@ export default () => {
                   }}
                   alt="Post image"
                 />
-                <h2
+                <h3
+                  css="display: block;"
                   // eslint-disable-next-line react/no-danger
                   dangerouslySetInnerHTML={{ __html: post.frontmatter.title }}
                 />

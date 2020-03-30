@@ -116,9 +116,25 @@ export default () => {
       <Container>
         <DeemphasizedTitle>Testimonials</DeemphasizedTitle>
         <TestimonialsStyle>
-          {testimonials.edges.map(edge => (
-            <Testimonial key={edge.node.id} {...edge.node.frontmatter} />
-          ))}
+          {testimonials.edges.map(edge => {
+            const {
+              name,
+              position,
+              statement,
+              avatar,
+              company,
+            } = edge.node.frontmatter
+            return (
+              <Testimonial
+                key={edge.node.id}
+                name={name}
+                position={position}
+                statement={statement}
+                avatar={avatar}
+                company={company}
+              />
+            )
+          })}
         </TestimonialsStyle>
       </Container>
     </Section>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import styled from 'styled-components'
 
 import {
@@ -19,13 +20,6 @@ import Testimonials from '../components/Testimonials'
 import BlogPreview from '../components/BlogPreview'
 import Customers from '../components/Customers'
 
-import { ReactComponent as Botfabrik } from '../img/botfabrik.svg'
-import swisscom from '../img/swisscom-gold-partner-300.png'
-
-const BotfabrikLogo = styled(Botfabrik)`
-  width: 70%;
-  margin: 2em 0.6em;
-`
 const Buttonlist = styled(Right)`
   a {
     margin-top: 1em;
@@ -40,23 +34,18 @@ const Blockquote = styled.blockquote`
   margin-top: 4em;
   padding-bottom: 1em;
 `
-
 const PartnerImage = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  margin: 1em -1em;
-  img {
-    flex: 1 1 6em;
-    width: 100%;
-    max-width: 12em;
-    height: 100%;
-    padding: 1em;
+
+  a {
+    margin: 2em;
   }
 `
 
-const IndexPage = ({ images }) => (
+const IndexPage = ({ partners, appsImage, chatbot, partyplaner }) => (
   <Layout showHero>
     <main>
       <SEO />
@@ -71,7 +60,7 @@ const IndexPage = ({ images }) => (
                 <h4>Mobile und Desktop</h4>
                 <ImgStyled
                   style={{ width: '100%', marginTop: '2rem' }}
-                  fluid={images.appsImage.childImageSharp.fluid}
+                  fluid={appsImage.childImageSharp.fluid}
                   alt="Apps"
                 />
               </Link>
@@ -81,7 +70,10 @@ const IndexPage = ({ images }) => (
                 <h3>Individuelle</h3>
                 <h2>Chatbots</h2>
                 <h4>Botfabrik by Apptiva</h4>
-                <BotfabrikLogo />
+                <ImgStyled
+                  fluid={chatbot.childImageSharp.fluid}
+                  alt="Chatbots"
+                />
               </Link>
             </ListItem>
             <ListItem>
@@ -93,7 +85,7 @@ const IndexPage = ({ images }) => (
                 </h2>
                 <h4>Komplexe Angebote einfach verkaufen</h4>
                 <ImgStyled
-                  fluid={images.partyplaner.childImageSharp.fluid}
+                  fluid={partyplaner.childImageSharp.fluid}
                   alt="Angebots- und Produktkonfiguratoren"
                 />
               </Link>
@@ -114,6 +106,11 @@ const IndexPage = ({ images }) => (
             <li>
               <Link to="/einsatzplanung">
                 <h3>Einsatzplanung für den Gebäudeunterhalt</h3>
+              </Link>
+            </li>
+            <li>
+              <Link to="/future-hack-digitalisierung-gemeinsam-anpacken">
+                <h3>Future Hack - Digitalisierung gemeinsam anpacken</h3>
               </Link>
             </li>
           </ul>
@@ -139,9 +136,18 @@ const IndexPage = ({ images }) => (
       <BlogPreview />
       <Section>
         <Container>
-          <DeemphasizedTitle>Partnerschaften</DeemphasizedTitle>
+          <DeemphasizedTitle>Partner</DeemphasizedTitle>
           <PartnerImage>
-            <img src={swisscom} alt="Swisscom Gold Partner" />
+            {partners.edges.map(({ node }) => {
+              return (
+                <Link to={node.frontmatter.slug}>
+                  <Img
+                    fixed={node.frontmatter.logo.childImageSharp.fixed}
+                    alt={node.frontmatter.name}
+                  />
+                </Link>
+              )
+            })}
           </PartnerImage>
         </Container>
       </Section>
@@ -149,12 +155,41 @@ const IndexPage = ({ images }) => (
   </Layout>
 )
 
-export default ({ data }) => {
-  return <IndexPage images={data} />
+export default ({ data: { chatbot, partyplaner, appsImage, partners } }) => {
+  return (
+    <IndexPage
+      chatbot={chatbot}
+      partyplaner={partyplaner}
+      appsImage={appsImage}
+      partners={partners}
+    />
+  )
 }
 
 export const indexPageQuery = graphql`
   query IndexPage {
+    partners: allMarkdownRemark(
+      sort: { order: ASC, fields: [frontmatter___prio] }
+      filter: { frontmatter: { templateKey: { eq: "partner-page" } } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            name
+            url
+            slug
+            logo {
+              childImageSharp {
+                fixed(width: 200) {
+                  ...GatsbyImageSharpFixed_withWebp
+                }
+              }
+            }
+          }
+        }
+      }
+    }
     appsImage: file(
       absolutePath: { regex: "/individuelle-entwicklung/apps.png/" }
     ) {
@@ -166,6 +201,15 @@ export const indexPageQuery = graphql`
     }
     partyplaner: file(
       absolutePath: { regex: "/produktkonfiguratoren/partyplaner.png/" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    chatbot: file(
+      absolutePath: { regex: "/services/chatbots/chatbot-screen2.png/" }
     ) {
       childImageSharp {
         fluid(maxWidth: 600) {
