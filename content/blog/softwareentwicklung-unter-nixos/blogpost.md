@@ -12,7 +12,7 @@ categories:
   - NixOS
 ---
 
-Gleich beim Antritt meiner Arbeit bei der Apptiva im letzten Juni machte ich Gebrauch von einer der vielen Freiheiten, die den Mitarbeitern geboten werden: Die Wahl des Computers, Betriebssystems & der Entwicklungstools. Nach vielen Jahren der Entwicklung unter Windows bei meinem vorherigen Arbeitgeber, nutzte ich diese einmalige Gelegenheit um komplett auf Linux umzusteigen, nachdem ich dies privat schon länger getan hatte.
+Gleich beim Antritt meiner Arbeit bei der Apptiva im letzten Juni machte ich Gebrauch von einer der vielen Freiheiten, die den Mitarbeitern geboten werden: Die Wahl des Computers, Betriebssystems & der Entwicklungstools. Nach vielen Jahren der Entwicklung unter Windows bei meinem vorherigen Arbeitgeber nutzte ich diese einmalige Gelegenheit, um komplett auf Linux umzusteigen, nachdem ich dies privat schon länger getan hatte.
 
 ## Mein Weg zu Apptiva & Linux
 
@@ -20,7 +20,7 @@ Softwareentwicklung macht mir Spass. So viel Spass, dass ich auch privat immer w
 
 Dies war mein Motiv, als ich vor ca. 3 Jahren auf all meinen privaten Computern Arch Linux installiert habe. Das war zu Beginn nicht leicht. Doch durch das exzellente Wiki habe ich schnell & viel gelernt, sodass plötzlich alles ganz leicht von der Hand ging. Da die meisten Server-Anwendungen ohnehin unter Linux betrieben werden und ich nun auch zum Entwickeln Linux verwendete, fühlte es sich immer komischer an, wenn ich dann im Büro plötzlich wieder Windows benutzen musste.
 
-Dann wechselte ich zu Apptiva. Hier wurde mir bei der Wahl des Betriebssystems freie Wahl gelassen. Dies war meine Gelegenheit, um auszuprobieren, ob sich Linux auch bei der Arbeit bewähren kann. Da all meine Teamkollegen aber zufrieden & problemlos mit ihren Macbooks entwickeln, wollte ich mich natürlich nicht blamieren. Ich konnte es mir also nicht leisten, dass mein Notebook nach einem Update nicht mehr hochfährt, was bei Arch Linux schon mal vorkommen konnte. Ich machte mich also auf die Suche nach einer Linux-Distribution, bei der das nicht passiert, und wurde fündig:
+Dann wechselte ich zu Apptiva. Hier wurde mir bei der Wahl des Betriebssystems freie Wahl gelassen. Dies war meine Gelegenheit, um auszuprobieren, ob sich Linux auch bei der Arbeit bewähren kann. Da all meine Teamkollegen aber zufrieden & problemlos mit ihren MacBooks entwickeln, wollte ich mich natürlich nicht blamieren. Ich konnte es mir also nicht leisten, dass mein Notebook nach einem Update nicht mehr hochfährt, was bei Arch Linux schon mal vorkommen konnte. Ich machte mich also auf die Suche nach einer Linux-Distribution, bei der das nicht passiert, und wurde fündig.
 
 ## NixOS
 
@@ -28,7 +28,7 @@ NixOS ist eine Linux-Distribution wie keine andere: So gut wie jeder Aspekt des 
 
 Die Systemkonfiguration kann auch kinderleicht mit Git getrackt werden. Auf diese Weise weiss man immer genau was wann und warum geändert wurde. Kauft man sich nach ein paar Jahren wiedermal ein neues Notebook, könnte dies nicht einfacher sein. Man nimmt einfach die Konfigurationsdatei, und richtet damit das neue Notebook genau so ein, wie es das alte war. Wenn man nicht mehr benötigte Software entfernt, hat man auch immer die Garantie, dass diese restlos entfernt wird. Ein NixOS-System muss also nicht von Zeit zu Zeit neu installiert werden. Das aktivieren einer Konfiguration resultiert in exakt demselben Ergebnis, wie ein Neu-Aufsetzen des Systems.
 
-Mein System verhält sich nun also ähnlich wie meine Software-Projekte. Ich kann unbekümmert Änderungen machen, im Wissen dass ich jederzeit zu einem alten Stand zurückkehren kann. Allein diese Eigenschaft machte NixOS für mich als Entwickler zur idealen Wahl.
+Mein System verhält sich nun also ähnlich wie meine Software-Projekte. Ich kann unbekümmert Änderungen machen, im Wissen, dass ich jederzeit zu einem alten Stand zurückkehren kann. Allein diese Eigenschaft machte NixOS für mich als Entwickler zur idealen Wahl.
 
 ## Vorteile
 
@@ -51,7 +51,7 @@ Ziemlich schnell nachdem ich begonnen habe mit NixOS zu arbeiten, wurde ich mit 
 ### Komplett anders
 
 Bei NixOS ist kaum etwas so wie auf anderen Distributionen. Allein schon der Aufbau des Dateisystems. Ist man sich von anderen Distributionen die Verzeichnisse /bin, /etc, /lib usw. gewohnt, so gibt es unter NixOS im Prinzip nur einen Ordner: /nix.
-Da viele Software aber darauf aufbauen, dass diese Verzeichnisse existieren, müssen sie diesen vorgegaukelt werden. Bei allen Softwarepaketen aus dem riesigen **nixpkgs**-Repository wird das automatisch gemacht. Möchte man aber eine Software benutzen, die dort noch nicht vorhanden ist, muss man zu Tricks greifen.
+Da viele Softwares aber darauf aufbauen, dass diese Verzeichnisse existieren, müssen sie diesen vorgegaukelt werden. Bei allen Softwarepaketen aus dem riesigen **nixpkgs**-Repository wird das automatisch gemacht. Möchte man aber eine Software benutzen, die dort noch nicht vorhanden ist, muss man zu Tricks greifen.
 
 ### Lernkurve
 
@@ -60,7 +60,7 @@ Im Endeffekt hat sich für mich der Aufwand aber ganz klar gelohnt.
 
 ### Entwicklertools zum Teil noch nicht gut integriert
 
-Obwohl die Nix-Shell ein geniales Entwicklertool ist, gestaltet sich die Nutzung mit anderen Entwicklertools teils gar nicht so einfach. Ich hoffe dies wird sich in Zukunft noch ändern.
+Obwohl die Nix-Shell ein geniales Entwicklertool ist, gestaltet sich die Nutzung mit anderen Entwicklertools teils gar nicht so einfach. Ich hoffe, dies wird sich in Zukunft noch ändern.
 
 ## Arbeiten unter Linux
 
@@ -68,7 +68,7 @@ Viele hochwertige, kommerzielle Softwarepakete sind nicht für Linux erhältlich
 
 Die Arbeit bei der Apptiva besteht aber natürlich nicht nur aus Softwareentwicklung. Ab und zu müssen wir auch mal eine Rechnung schreiben oder ein paar schöne Grafiken erstellen. Erst hier hat für mich die eigentliche Herausforderung begonnen. Da bei Apptiva sonst jeder mit einem Macbook arbeitet, werden Dokumente und Präsentationen meist mit **Pages** oder **Keynote** erstellt. Diese Software ist unter Linux leider nicht verfügbar, weshalb ich auf **LibreOffice** ausweichen muss. Das funktioniert zwar sehr gut, bestehende Dokumente meiner Teamkollegen kann ich aber auch damit nicht editieren.
 
-Ebenfalls etwas problematisch gestaltet sich das Erstellen von Grafiken. Weder die Adobe- noch die Affinity- Produkte werden für Linux angeboten. Es gibt hier zwar Alternativ-Software, diese spielen aber bei weitem nicht in der gleichen Liga. Ein Glück, dass sich Philip Schönholzer auch gerne der Grafiken annimmt.
+Ebenfalls etwas problematisch gestaltet sich das Erstellen von Grafiken. Weder die Adobe- noch die Affinity- Produkte werden für Linux angeboten. Es gibt hier zwar alternative Applikationen, diese spielen aber bei weitem nicht in der gleichen Liga. Ein Glück, dass sich Philip Schönholzer auch gerne der Grafiken annimmt.
 
 Zur Kommunikation innerhalb der Firma verwenden wir glücklicherweise Slack, welches auch einen Linux-Client anbietet. Viele andere Tools sind Web-Apps, welche unter Linux ebenfalls problemlos zu verwenden sind.
 
@@ -78,4 +78,4 @@ Zur Kommunikation innerhalb der Firma verwenden wir glücklicherweise Slack, wel
 |[[avatar]]
 ||![Patrik Stutz](../../data/employees/patrik-stutz/patrik-stutz-prev.jpg)
 
-NixOS macht sehr vieles richtig. Aber auch anders, was erst gelernt werden will. Ist diese Hürde aber erstmal genommen, wird es schwierig, sich wieder von den Vorteilen loszureissen. Deshalb beabsichtige ich auch weiterhin NixOS zu benutzen und irgendwann vielleicht auch den einen oder anderen Team-Kollegen zu überzeugen. Vielleicht werde ich aber auch plötzlich durch fehlende Software zurück zu Windows oder einem Mac verbannt.
+NixOS macht sehr vieles richtig, aber auch anders. Dies will zuerst gelernt werden. Ist diese Hürde aber erstmal genommen, wird es schwierig, sich wieder von den Vorteilen loszureissen. Deshalb beabsichtige ich auch weiterhin NixOS zu benutzen und irgendwann vielleicht auch den einen oder anderen Team-Kollegen zu überzeugen. Vielleicht werde ich aber auch plötzlich durch fehlende Software zurück zu Windows oder einem Mac verbannt.
