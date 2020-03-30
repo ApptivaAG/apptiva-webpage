@@ -27,18 +27,16 @@ export default () => (
         <Subtitle>{metadata.description}</Subtitle>
 
         <h2 css="margin-bottom: 0; margin-top: 3em;">Status bei Apptiva</h2>
-        <small>Update vom 14. März 2020</small>
 
         <ul>
           <li>
             <h3>Projekte werden normal bearbeitet</h3>
-            <br /> Alle Projekte werden in Vollbesetzung bearbeitet. Der
-            Coronavirus hindert uns in keiner Weise an unserer Arbeit.
+            <br /> Alle Projekte werden normal bearbeitet. Der Coronavirus
+            hindert uns in keiner Weise an unserer Arbeit.
           </li>
         </ul>
 
         <h2 css="margin-bottom: 0; margin-top: 3em;">Unsere Massnahmen</h2>
-        <small>Update vom 17. März 2020</small>
 
         <p>
           Damit wir auch in Zeiten des Coronavirus&apos; leistungs- und
