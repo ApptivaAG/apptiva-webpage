@@ -116,14 +116,14 @@ Via Videokonferenz führen wir kurze Interviews mit einigen Ihrer Mitarbeitern, 
 
 Mit den gewonnen Erkenntnissen erstellen wir einen groben Umsetzungsplan ([Storymap](/mehr-ueberblick-mit-storymap)) und beschreiben mögliche Lösungen.
 
-### 3. Kickoff (2h)
+### 4. Kickoff (2h)
 
 Die gewonnenen Erkenntnisse besprechen wir mit Ihnen und zeigen auf, wie wir Ihre Herausforderungen nachhaltig lösen (inkl. Schätzungen der Kosten und des Sparpotentials).
 
-### 4. Umsetzung in schnellen Iterationen (1 Woche)
+### 5. Umsetzung in schnellen Iterationen (1 Woche)
 
 Jede Woche digitalisieren wir priorisiert nach Risiko und Wert neue Prozessschritte. Die einsatzbereiten Lösungen unterziehen wir gemeinsam mit Ihnen am Ende jeder Woche einem Review. Anschliessend planen wir gemeinsam die nächste Iteration.
 
-### 5. Einsatz
+### 6. Einsatz
 
 Einsatzbereite Lösungen werden fortlaufend in Ihrem Unternehmen in Betrieb genommen. So validieren wir einerseits die bisherige Arbeit, andererseits leistet die Lösung so frühzeitig wertvolle Dienste.
