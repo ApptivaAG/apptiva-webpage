@@ -189,13 +189,16 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
   
-  ul {
+  ol, ul {
 
     li {
       margin-bottom: 0.5em;
     }
     h3 {
       display: inline;
+    }
+    h3 + p {
+      margin-top: 0.2em;
     }
   }
 

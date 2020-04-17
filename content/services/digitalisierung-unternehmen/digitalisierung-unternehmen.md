@@ -7,6 +7,7 @@ description: Die Coronakrise zeigt deutlich auf, wo der Schuh bezüglich Digital
 subtitle:
   text: Jetzt den Schritt in eine nachhaltige Zukunft machen
 
+callToAction: Machen Sie jetzt den Schritt in eine nachhaltige Zukunft
 introduction: |
   ## In Zeiten von Corona schnell und nachhaltig digitalisieren
 
@@ -14,13 +15,9 @@ introduction: |
 
   **Gemeinsam digitalisieren wir Ihr Unternehmen; schnell und nachhaltig.**
 
-  ## Unser Angebot
-
-  Wir analysieren Ihr Unternehmen und entwickeln passende Apps, Applikationen und Bots, um ihr Unternehmen fit für die Zukunft zu machen. Wir entwickeln spezifisch unter der Berücksichtigung Ihrer Bedürfnisse und Geschäftsprozesse. Gemeinsam mit uns transferieren Sie Ihr Unternehmen dabei zu einem digitalen Unternehmen.
-
   ## Unsere Lösungen, um Ihr Unternehmen zu digitalisieren
 
-  Die vielen Herausforderungen der Digitalisierung meistern wir mit den nachfolgenden Lösungen. Diese bieten sich auch in Zeiten des Coronavirus sehr gut an.
+  Wir analysieren Ihr Unternehmen und entwickeln passende Apps, Applikationen und Bots, um ihr Unternehmen fit für die Zukunft zu machen. Die vielen Herausforderungen der Digitalisierung meistern wir mit den nachfolgenden Lösungen. Diese bieten sich auch in Zeiten des Coronavirus sehr gut an.
 
   ### Web-Applikationen
 
@@ -104,26 +101,28 @@ references:
 Wir befinden uns mitten in der Coronakrise und Sie brauchen jetzt Resultate. Gerne unterstützen wir Sie zeitnah bei der Bewältigung der aktuellen Herausforderungen.
 Unser Vorgehen sieht dabei folgendermassen aus:
 
-### 1. Ausgangslage und Ziele (2h)
+1. ### Ausgangslage und Ziele (2h)
 
-Bei einem Videomeeting zeigen Sie uns Ihre grössten Herausforderungen in Sachen Digitalisierung im Unternehmen auf. Welche Ziele verfolgen Sie und was möchten Sie verändern?
+   Bei einem Videomeeting zeigen Sie uns Ihre grössten Herausforderungen in Sachen Digitalisierung im Unternehmen auf. Welche Ziele verfolgen Sie und was möchten Sie verändern?
 
-### 2. Interviews (2h)
+2. ### Interviews (2h)
 
-Via Videokonferenz führen wir kurze Interviews mit einigen Ihrer Mitarbeitern, um ihre Tätigkeiten, Herausforderungen und Schmerzpunkte im Detail kennen zu lernen.
+   Via Videokonferenz führen wir kurze Interviews mit einigen Ihrer Mitarbeitern, um ihre Tätigkeiten, Herausforderungen und Schmerzpunkte im Detail kennen zu lernen.
 
-### 3. Konzeption (1-3 Tage)
+3. ### Konzeption (1-3 Tage)
 
-Mit den gewonnen Erkenntnissen erstellen wir einen groben Umsetzungsplan ([Storymap](/mehr-ueberblick-mit-storymap)) und beschreiben mögliche Lösungen.
+   Mit den gewonnen Erkenntnissen erstellen wir einen groben Umsetzungsplan ([Storymap](/mehr-ueberblick-mit-storymap)) und beschreiben mögliche Lösungen.
 
-### 4. Kickoff (2h)
+4. ### Kickoff (2h)
 
-Die gewonnenen Erkenntnisse besprechen wir mit Ihnen und zeigen auf, wie wir Ihre Herausforderungen nachhaltig lösen (inkl. Schätzungen der Kosten und des Sparpotentials).
+   Die gewonnenen Erkenntnisse besprechen wir mit Ihnen und zeigen auf, wie wir Ihre Herausforderungen nachhaltig lösen (inkl. Schätzungen der Kosten und des Sparpotentials).
 
-### 5. Umsetzung in schnellen Iterationen (1 Woche)
+5. ### Umsetzung in schnellen Iterationen (1 Woche)
 
-Jede Woche digitalisieren wir priorisiert nach Risiko und Wert neue Prozessschritte. Die einsatzbereiten Lösungen unterziehen wir gemeinsam mit Ihnen am Ende jeder Woche einem Review. Anschliessend planen wir gemeinsam die nächste Iteration.
+   Jede Woche digitalisieren wir priorisiert nach Risiko und Wert neue Prozessschritte. Die einsatzbereiten Lösungen unterziehen wir gemeinsam mit Ihnen am Ende jeder Woche einem Review. Anschliessend planen wir gemeinsam die nächste Iteration.
 
-### 6. Einsatz
+6. ### Einsatz (nach 2 Wochen)
 
-Einsatzbereite Lösungen werden fortlaufend in Ihrem Unternehmen in Betrieb genommen. So validieren wir einerseits die bisherige Arbeit, andererseits leistet die Lösung so frühzeitig wertvolle Dienste.
+   Einsatzbereite Lösungen werden sofort und fortlaufend in Betrieb genommen. Erste Lösungen sind somit bereits nach zwei Wochen im Einsatz. So validieren wir einerseits die bisherige Arbeit, andererseits leistet die Lösung so frühzeitig wertvolle Dienste.
+
+&nbsp;

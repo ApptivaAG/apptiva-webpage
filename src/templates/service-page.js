@@ -113,6 +113,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
     references,
     specs,
     bulletGroups,
+    callToAction,
   } = metaData
   const seoImage =
     metaData.image &&
@@ -123,6 +124,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
     expandStyles: { transitionDuration: '200ms' },
     collapseStyles: { transitionDuration: '200ms' },
   })
+
   return (
     <main>
       <Helmet title={`${stripHTML(title)} - ${config.company}`} />
@@ -265,8 +267,8 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
       <Section dark>
         <Container>
           <h2>
-            Wir unterstützen Sie gerne bei der Beschleunigung ihrer
-            Geschäftsprozesse
+            {callToAction ||
+              'Wir unterstützen Sie gerne bei der Beschleunigung ihrer Geschäftsprozesse'}
           </h2>
           {!isOpen && (
             <p>
@@ -337,6 +339,7 @@ export const pageQuery = graphql`
           text
           swaps
         }
+        callToAction
         description
         customers {
           childImageSharp {
