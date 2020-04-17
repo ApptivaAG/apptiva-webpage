@@ -9,3 +9,6 @@
 [[redirects]]
   from = "/entwicklung"
   to = "/individuelle-entwicklung"
+
+[[plugins]]
+package = "netlify-plugin-gatsby-cache"
