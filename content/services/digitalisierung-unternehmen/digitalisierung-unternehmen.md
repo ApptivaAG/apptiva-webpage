@@ -5,7 +5,7 @@ title: Mit Digitalisierung Corona meistern
 image: digitalisieren-corona.png
 description: Die Coronakrise zeigt deutlich auf, wo der Schuh bezüglich Digitalisierung drückt. Wir helfen Ihnen, diese Herausforderungen zielgerichtet und effektiv zu lösen.
 subtitle:
-  text: Jetzt den Schritt in einen nachhaltige Zukunft machen
+  text: Jetzt den Schritt in eine nachhaltige Zukunft machen
 
 introduction: |
   ## In Zeiten von Corona schnell und nachhaltig digitalisieren
