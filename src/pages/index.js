@@ -11,6 +11,7 @@ import {
   Right,
   Subtitle,
   Container,
+  SubtleTitle,
 } from '../style'
 import Layout from '../components/Layout'
 import Testimonials from '../components/Testimonials'
@@ -120,11 +121,6 @@ const Buttonlist = styled(Right)`
     }
   }
 `
-const CustomerTitle = styled.h2`
-  font-size: 1.7em;
-  color: #cbcbcb;
-  text-align: center;
-`
 const ImageList = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -143,12 +139,6 @@ const Blockquote = styled.blockquote`
   margin-top: 4em;
   padding-bottom: 1em;
 `
-const PartnerTitle = styled.h2`
-  font-size: 1.7em;
-  color: #cbcbcb;
-  text-align: center;
-`
-
 const PartnerImage = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -249,7 +239,7 @@ const IndexPage = ({ testimonials, posts, employees, partners, images }) => (
 
       <Section dark>
         <Container>
-          <CustomerTitle>Auswahl unserer Kunden</CustomerTitle>
+          <SubtleTitle>Auswahl unserer Kunden</SubtleTitle>
           <ImageList>
             <img
               className="lazyload"
@@ -369,7 +359,7 @@ const IndexPage = ({ testimonials, posts, employees, partners, images }) => (
       </Section>
       <Section dark>
         <Container>
-          <PartnerTitle>Partner</PartnerTitle>
+          <SubtleTitle>Partner</SubtleTitle>
           <PartnerImage>
             {partners.edges.map(({ node }) => {
               return (

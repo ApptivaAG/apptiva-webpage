@@ -8,7 +8,15 @@ import '@fortawesome/fontawesome-free/css/fontawesome.min.css'
 import '@fortawesome/fontawesome-free/css/solid.min.css'
 
 import Content, { HTMLContent } from '../components/Content'
-import { Centered, Container, Section, Icon, Button, MainTitle } from '../style'
+import {
+  Centered,
+  Container,
+  Section,
+  Icon,
+  Button,
+  MainTitle,
+  SubtleTitle,
+} from '../style'
 import SEO from '../components/SEO'
 import { stripHTML } from '../util'
 import Layout from '../components/Layout'
@@ -17,11 +25,16 @@ import ContactForm from '../components/ContactForm'
 
 const HeadArea = styled.header``
 
-const CustomerTitle = styled.h2`
-  font-size: 1.7em;
-  color: #cbcbcb;
+const Subtitle = styled.p`
+  font-size: 1.2;
+  font-weight: 600;
+  line-height: 1;
   text-align: center;
+  @media (min-width: 640px) {
+    font-size: 1.4em;
+  }
 `
+
 const Customers = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -74,9 +87,9 @@ const Header = ({ title, image, subtitle }) => (
   <HeadArea>
     <MainTitle dangerouslySetInnerHTML={{ __html: title }} />
     {subtitle && (
-      <h2>
+      <Subtitle>
         {subtitle.text} {subtitle.swaps && subtitle.swaps[0]}
-      </h2>
+      </Subtitle>
     )}
     {image && (
       <Img
@@ -100,6 +113,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
     references,
     specs,
     bulletGroups,
+    callToAction,
   } = metaData
   const seoImage =
     metaData.image &&
@@ -110,6 +124,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
     expandStyles: { transitionDuration: '200ms' },
     collapseStyles: { transitionDuration: '200ms' },
   })
+
   return (
     <main>
       <Helmet title={`${stripHTML(title)} - ${config.company}`} />
@@ -129,24 +144,14 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
       {introduction && (
         <Section dark>
           <Container>
-            <h2>{introduction.title}</h2>
-            {introduction.paragraphs.map(paragraph => (
-              <div key={paragraph.text + paragraph.textBold}>
-                {paragraph.text && <p>{paragraph.text}</p>}
-                {paragraph.textBold && (
-                  <p>
-                    <b>{paragraph.textBold}</b>
-                  </p>
-                )}
-              </div>
-            ))}
+            <HTMLContent content={introduction} />
           </Container>
         </Section>
       )}
       {customers && (
         <Section dark>
           <Container>
-            <CustomerTitle>Auswahl unserer Kunden</CustomerTitle>
+            <SubtleTitle>Auswahl unserer Kunden</SubtleTitle>
             <Customers>
               {customers.map(customer => (
                 <Img
@@ -262,8 +267,8 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
       <Section dark>
         <Container>
           <h2>
-            Wir unterstützen Sie gerne bei der Beschleunigung ihrer
-            Geschäftsprozesse
+            {callToAction ||
+              'Wir unterstützen Sie gerne bei der Beschleunigung ihrer Geschäftsprozesse'}
           </h2>
           {!isOpen && (
             <p>
@@ -275,7 +280,8 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
             <p>
               Füllen Sie unser Formular aus oder schreiben Sie ein Mail an{' '}
               <a href="mailto:info@apptiva.ch">info@­apptiva.ch</a> und wir
-              melden uns sobald wie möglich bei ihnen.
+              melden uns sobald wie möglich bei ihnen. Sie erreichen uns auch
+              per Telefon unter <a href="+41413222626">041 322 26 26</a>.
             </p>
             <ContactForm />
           </div>
@@ -295,12 +301,14 @@ export default props => {
     data: { markdownRemark: post },
   } = props
 
+  const frontmatter = { ...post.frontmatter, ...post.fields }
+
   return (
     <Layout>
       <ServicePageTemplate
         content={post.html}
         contentComponent={HTMLContent}
-        metaData={post.frontmatter}
+        metaData={frontmatter}
       />
     </Layout>
   )
@@ -311,6 +319,9 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       id
       html
+      fields {
+        introduction
+      }
       frontmatter {
         title
         slug
@@ -328,13 +339,7 @@ export const pageQuery = graphql`
           text
           swaps
         }
-        introduction {
-          title
-          paragraphs {
-            text
-            textBold
-          }
-        }
+        callToAction
         description
         customers {
           childImageSharp {

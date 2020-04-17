@@ -38,7 +38,7 @@ export const Right = styled.div`
 `
 
 export const MainTitle = styled.h1`
-  font-size: 2.8em;
+  font-size: 2em;
   line-height: 1;
 
   text-align: center;
@@ -53,6 +53,14 @@ export const Title = styled.h2`
   text-align: center;
   @media (min-width: 640px) {
     font-size: 4em;
+  }
+`
+export const SubtleTitle = styled.h2`
+  font-size: 1.7em;
+  color: #cbcbcb;
+  text-align: center;
+  @media (min-width: 640px) {
+    font-size: 1.4em;
   }
 `
 
@@ -181,13 +189,16 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
   
-  ul {
+  ol, ul {
 
     li {
       margin-bottom: 0.5em;
     }
     h3 {
       display: inline;
+    }
+    h3 + p {
+      margin-top: 0.2em;
     }
   }
 

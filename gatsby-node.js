@@ -1,5 +1,8 @@
 const path = require('path')
 
+const remark = require('remark')
+const remarkHTML = require('remark-html')
+
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
@@ -89,4 +92,21 @@ exports.createPages = ({ actions, graphql }) => {
   })
 
   return Promise.all([posts, pages])
+}
+
+exports.onCreateNode = ({ node, actions: { createNodeField } }) => {
+  const { frontmatter: { introduction } = {} } = node
+
+  if (introduction) {
+    const value = remark()
+      .use(remarkHTML)
+      .processSync(introduction)
+      .toString()
+
+    createNodeField({
+      name: `introduction`,
+      node,
+      value,
+    })
+  }
 }
