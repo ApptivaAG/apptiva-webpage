@@ -1,7 +1,7 @@
 ---
 templateKey: partner-page
 slug: dox42
-prio: 2
+prio: 3
 name: dox42
 logo: dox42.png
 url: https://www.dox42.com

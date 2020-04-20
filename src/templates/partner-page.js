@@ -14,6 +14,9 @@ import Layout from '../components/Layout'
 const HeaderTitle = styled(MainTitle)`
   margin-bottom: 0.2em;
   text-align: left;
+  @media (min-width: 640px) {
+    font-size: 3em;
+  }
 `
 
 const Grid = styled.div`
