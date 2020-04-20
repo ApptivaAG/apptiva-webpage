@@ -37,7 +37,10 @@ const Address = styled.address`
 
 const query = graphql`
   query {
-    buildingImage: file(absolutePath: { regex: "/gebaeude.jpg/" }sourceInstanceName: { eq: "images" }) {
+    buildingImage: file(
+      absolutePath: { regex: "/gebaeude.jpg/" }
+      sourceInstanceName: { eq: "images" }
+    ) {
       childImageSharp {
         fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
@@ -47,23 +50,23 @@ const query = graphql`
   }
 `
 
-const Kontakt = ({ location }) => {
+const Kontakt = () => {
   const { buildingImage } = useStaticQuery(query)
 
+  const metadata = {
+    title: 'Kontakt',
+    description: `Möchten Sie uns kennenlernen oder haben Sie Fragen zu unseren
+      Dienstleistungen? Zögern Sie nicht und nehmen Sie mit uns Kontakt
+      auf!`,
+    slug: 'kontakt',
+  }
   return (
     <Layout callToAction={false}>
-      <Seo
-        title="Kontakt"
-        description="Haben sie ein Anliegen im Berich von Chatbots? Nehmens sie Kontakt mit uns auf."
-        slug={location.pathname}
-      />
+      <Seo metaData={metadata} />
       <Section>
         <Container>
           <h1>Kontakt</h1>
-          <p>
-            Möchten Sie uns kennenlernen oder haben Sie Fragen zu unseren
-            Dienstleistungen? Zögern Sie nicht und nehmen Sie mit uns Kontakt auf!
-          </p>
+          <p>{metadata.description}</p>
           <Grid>
             <div>
               <p>Telefon</p>
@@ -77,7 +80,9 @@ const Kontakt = ({ location }) => {
                 Neuenkirchstrasse 19 <br />
                 6203 Sempach Station
               </Address>
-              <Button css="font-size: 0.7em; margin-top: 1em;" href="#anfahrt">Anfahrt</Button>            
+              <Button css="font-size: 0.7em; margin-top: 1em;" href="#anfahrt">
+                Anfahrt
+              </Button>
             </div>
             <ContactForm />
           </Grid>

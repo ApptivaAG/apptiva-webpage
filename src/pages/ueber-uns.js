@@ -25,11 +25,11 @@ const query = graphql`
   }
 `
 
-const AboutUs = ({ location }) => {
+const AboutUs = () => {
   const metadata = {
     title: 'Über uns',
-    description: 'Wer ist die Botfabrik?',
-    slug: location.pathname,
+    description,
+    slug: 'ueber-uns',
   }
   const { officeImage } = useStaticQuery(query)
 
