@@ -10,6 +10,7 @@ import insel from '../img/insel-gruppe-logo-300x70.png'
 import hostettler from '../img/hostettler-300x70.png'
 import energie360 from '../img/energie360-300x72.png'
 import diepost from '../img/die-post-logo.png'
+import globus from '../img/globus.png'
 import schurch from '../img/schurch-logo.png'
 import sd from '../img/sd.png'
 
@@ -34,15 +35,76 @@ export default () => {
       <Container>
         <DeemphasizedTitle>Auswahl unserer Kunden</DeemphasizedTitle>
         <ImageList>
-          <img src={energie360} alt="Energie 360° AG" />
-          <img src={schurch} alt="Schürch Getränke AG" />
-          <img src={hostettler} alt="hostettler" />
-          <img src={insel} alt="Insel Gruppe" />
-          <img src={sd} alt="sd Gebäudeunterhalt AG" />
-          <img src={maxon} alt="maxon motor" />
-          <img src={sanagate} alt="sanagate" />
-          <img src={diepost} alt="Die Schweizerische Post AG" />
-          <img src={suva} alt="suva" />
+          <img
+            className="lazyload"
+            data-src={energie360}
+            alt="Energie 360° AG"
+            width="160"
+            height="69"
+          />
+          <img
+            className="lazyload"
+            data-src={schurch}
+            alt="Schürch Getränke AG"
+            width="160"
+            height="104"
+          />
+          <img
+            className="lazyload"
+            data-src={hostettler}
+            alt="hostettler"
+            width="160"
+            height="68"
+          />
+          <img
+            className="lazyload"
+            data-src={insel}
+            alt="Insel Gruppe"
+            width="160"
+            height="68"
+          />
+          <img
+            className="lazyload"
+            data-src={sd}
+            alt="sd Gebäudeunterhalt AG"
+            width="160"
+            height="99"
+          />
+          <img
+            className="lazyload"
+            data-src={maxon}
+            alt="maxon motor"
+            width="160"
+            height="58"
+          />
+          <img
+            className="lazyload"
+            data-src={sanagate}
+            alt="sanagate"
+            width="160"
+            height="66"
+          />
+          <img
+            className="lazyload"
+            data-src={globus}
+            alt="Magazine zum Globus"
+            width="160"
+            height="75"
+          />
+          <img
+            className="lazyload"
+            data-src={diepost}
+            alt="Die Schweizerische Post AG"
+            width="160"
+            height="81"
+          />
+          <img
+            className="lazyload"
+            data-src={suva}
+            alt="suva"
+            width="160"
+            height="70"
+          />
         </ImageList>
       </Container>
     </Section>
