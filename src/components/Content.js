@@ -5,10 +5,14 @@ import { sharedButtonStyle } from '../style'
 require('prismjs/themes/prism.css')
 
 const Markdown = styled.div`
+  h2:not(:first-child),
+  h3:not(:first-child) {
+    margin-top: 2em;
+  }
+
   h1,
   h2,
   h3 {
-    margin-top: 1.6em;
     margin-bottom: 0.6em;
   }
 

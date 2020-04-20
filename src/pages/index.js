@@ -94,6 +94,11 @@ const IndexPage = ({ partners, appsImage, chatbot, partyplaner }) => (
           <h2>Weitere Angebote</h2>
           <ul>
             <li>
+              <Link to="/digitalisierung-unternehmen-corona">
+                <h3>Unternehmen digitalisieren</h3>
+              </Link>
+            </li>
+            <li>
               <Link to="/dashboard-notaufnahme/">
                 <h3>Dashboard für die Notaufnahme</h3>
               </Link>

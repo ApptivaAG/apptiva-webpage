@@ -7,13 +7,16 @@ description: Beim Future Hack lösen wir die Herausforderungen der Digitalisieru
 subtitle:
   text: Digitalisierung gemeinsam anpacken
 
-introduction:
-  title: Wozu ein Future Hack?
-  paragraphs:
-    - text: 'Gibt es Abläufe in Ihrem Unternehmen, wo Sie denken "Es kann doch nicht sein, dass wir das im Jahr 2020 noch so handgestrickt lösen?"'
-    - text: 'Eine zeitgemässe Lösung zu finden ist aber oft schwieriger, als man denkt. Wenn eine Google-Recherche keine passenden Lösungen ausspuckt, bleibt meist alles beim Alten.'
-    - text: 'Wir als professionelle Softwareentwicklungsfirma wissen, wie Probleme durch den Einsatz von passenden IT-Lösungen nachhaltig gelöst werden können.'
-    - textBold: 'Lassen Sie uns die Digitalisierung gemeinsam anpacken!'
+introduction: |
+  ## Wozu ein Future Hack?
+
+  Gibt es Abläufe in Ihrem Unternehmen, wo Sie denken "Es kann doch nicht sein, dass wir das im Jahr 2020 noch so handgestrickt lösen?"
+
+  Eine zeitgemässe Lösung zu finden ist aber oft schwieriger, als man denkt. Wenn eine Google-Recherche keine passenden Lösungen ausspuckt, bleibt meist alles beim Alten.
+
+  Wir als professionelle Softwareentwicklungsfirma wissen, wie Probleme durch den Einsatz von passenden IT-Lösungen nachhaltig gelöst werden können.
+
+  **Lassen Sie uns die Digitalisierung gemeinsam anpacken!**
 
 bulletGroups:
   - title: Unser Angebot
