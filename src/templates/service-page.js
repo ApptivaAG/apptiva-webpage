@@ -15,7 +15,7 @@ import {
   Icon,
   Button,
   MainTitle,
-  SubtleTitle,
+  DeemphasizedTitle,
 } from '../style'
 import SEO from '../components/SEO'
 import { stripHTML } from '../util'
@@ -151,7 +151,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
       {customers && (
         <Section dark>
           <Container>
-            <SubtleTitle>Auswahl unserer Kunden</SubtleTitle>
+            <DeemphasizedTitle>Auswahl unserer Kunden</DeemphasizedTitle>
             <Customers>
               {customers.map(customer => (
                 <Img

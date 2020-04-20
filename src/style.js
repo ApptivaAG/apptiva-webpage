@@ -56,19 +56,13 @@ export const Title = styled.h2`
     font-size: 4em;
   }
 `
-export const SubtleTitle = styled.h2`
+export const DeemphasizedTitle = styled.h2`
   font-size: 1.7em;
   color: #cbcbcb;
   text-align: center;
   @media (min-width: 640px) {
     font-size: 1.4em;
   }
-`
-
-export const DeemphasizedTitle = styled.h2`
-  font-size: 1.7em;
-  color: #cbcbcb;
-  text-align: center;
 `
 
 export const Subtitle = styled.h4`
