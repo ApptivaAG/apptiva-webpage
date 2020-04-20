@@ -10,5 +10,17 @@
   from = "/entwicklung"
   to = "/individuelle-entwicklung"
 
+[[redirects]]
+  from = "/#team"
+  to = "/ueber-uns#team"
+
+[[redirects]]
+  from = "/#blog"
+  to = "/blog"
+
+[[redirects]]
+  from = "/#kontakt"
+  to = "/kontakt"
+
 [[plugins]]
 package = "netlify-plugin-gatsby-cache"
