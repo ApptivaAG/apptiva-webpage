@@ -135,7 +135,7 @@ const IndexPage = ({ partners, appsImage, chatbot, partyplaner }) => (
           <PartnerImage>
             {partners.edges.map(({ node }) => {
               return (
-                <Link to={node.frontmatter.slug}>
+                <Link key={node.frontmatter.slug} to={node.frontmatter.slug}>
                   <Img
                     fixed={node.frontmatter.logo.childImageSharp.fixed}
                     alt={node.frontmatter.name}

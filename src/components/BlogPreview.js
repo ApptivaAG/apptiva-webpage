@@ -4,8 +4,6 @@ import { Link, useStaticQuery, graphql } from 'gatsby'
 import {
   Section,
   Container,
-  Subtitle,
-  Title,
   ColList,
   ImgStyled,
   ListItem,

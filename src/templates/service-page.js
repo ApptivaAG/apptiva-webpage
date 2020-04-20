@@ -276,6 +276,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
               oder schreiben Sie uns.
             </p>
           )}
+          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
           <div {...getCollapseProps()}>
             <p>
               Füllen Sie unser Formular aus oder schreiben Sie ein Mail an{' '}
@@ -286,6 +287,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
             <ContactForm />
           </div>
           {!isOpen && (
+            // eslint-disable-next-line react/jsx-props-no-spreading
             <Button type="button" {...getToggleProps()}>
               Jetzt Nachricht schreiben
             </Button>
