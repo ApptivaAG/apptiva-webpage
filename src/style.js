@@ -10,11 +10,7 @@ import fontFace from './font-face'
 export const Section = styled.section`
   position: relative;
   padding-top: 2em;
-  padding-bottom: 2em;
-
-  &:last-child {
-    padding-bottom: 4em;
-  }
+  padding-bottom: 4em;
 
   ${props =>
     props.dark &&
