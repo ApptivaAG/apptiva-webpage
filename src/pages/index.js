@@ -7,12 +7,12 @@ import {
   Title,
   Section,
   Button,
-  Right,
   Container,
   ColList,
   ListItem,
   ImgStyled,
   DeemphasizedTitle,
+  Buttonlist,
 } from '../style'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
@@ -20,16 +20,6 @@ import Testimonials from '../components/Testimonials'
 import BlogPreview from '../components/BlogPreview'
 import Customers from '../components/Customers'
 
-const Buttonlist = styled(Right)`
-  a {
-    margin-top: 1em;
-  }
-  @media (min-width: 381px) {
-    a {
-      margin-left: 1em;
-    }
-  }
-`
 const Blockquote = styled.blockquote`
   margin-top: 4em;
   padding-bottom: 1em;

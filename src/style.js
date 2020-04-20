@@ -123,6 +123,17 @@ export const Button = ({ type, href, to, ...props }) => {
   )
 }
 
+export const Buttonlist = styled(Right)`
+  a {
+    margin-top: 1em;
+  }
+  @media (min-width: 381px) {
+    a {
+      margin-left: 1em;
+    }
+  }
+`
+
 export const Icon = styled.div`
   display: flex;
   justify-content: center;
@@ -277,6 +288,10 @@ export const GlobalStyle = createGlobalStyle`
     h3 + p {
       margin-top: 0.2em;
     }
+  }
+
+  strong, b {
+    font-weight: bold;
   }
 
   pre {

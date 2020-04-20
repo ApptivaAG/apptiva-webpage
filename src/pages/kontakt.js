@@ -1,86 +1,117 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 import styled from 'styled-components'
+import { graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 
-import { company } from '../config'
-import {
-  Container as ContainerDefault,
-  Section,
-  Subtitle,
-  Title,
-} from '../style'
 import Layout from '../components/Layout'
+import { Container, Section, Button } from '../style'
 import ContactForm from '../components/ContactForm'
-import SEO from '../components/SEO'
+import Seo from '../components/SEO'
 
-const Container = styled(ContainerDefault)`
-  padding-top: 4em;
-  padding-bottom: 12em;
+const Grid = styled.div`
+  display: grid;
+  margin-top: 4em;
+  gap: 1em;
+
+  p {
+    margin: 0;
+  }
+  @media (min-width: 1024px) {
+    grid: 1fr / 1fr 2fr;
+
+    form {
+      padding-left: 2em;
+      border-left: 1px solid #ddd;
+    }
+  }
+`
+const ContactInfo = styled.a`
+  display: block;
+  font-weight: 500;
+  margin-bottom: 1.4em !important;
+`
+const Address = styled.address`
+  font-weight: 500;
+  font-style: normal;
 `
 
-const metadata = {
-  title: 'Kontakt',
-  description: 'Wir freuen uns auf Ihre Kontaktaufnahme.',
-  slug: 'kontakt',
-}
+const query = graphql`
+  query {
+    buildingImage: file(absolutePath: { regex: "/gebaeude.jpg/" }sourceInstanceName: { eq: "images" }) {
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
 
-const Contact = () => (
-  <Layout>
-    <main>
-      <Helmet title={`Kontakt - ${company}`} />
-      <SEO metaData={metadata} />
+const Kontakt = ({ location }) => {
+  const { buildingImage } = useStaticQuery(query)
 
-      <Section id="kontakt">
+  return (
+    <Layout callToAction={false}>
+      <Seo
+        title="Kontakt"
+        description="Haben sie ein Anliegen im Berich von Chatbots? Nehmens sie Kontakt mit uns auf."
+        slug={location.pathname}
+      />
+      <Section>
         <Container>
-          <Title>Kontakt</Title>
-          <Subtitle>Wir freuen uns, von Ihnen zu hören.</Subtitle>
-          Möchten Sie uns kennenlernen oder haben Sie Fragen zu unseren
-          Dienstleistungen?
-          <br />
-          Zögern Sie nicht und nehmen Sie mit uns Kontakt auf!
-          <ContactForm />
+          <h1>Kontakt</h1>
+          <p>
+            Möchten Sie uns kennenlernen oder haben Sie Fragen zu unseren
+            Dienstleistungen? Zögern Sie nicht und nehmen Sie mit uns Kontakt auf!
+          </p>
+          <Grid>
+            <div>
+              <p>Telefon</p>
+              <ContactInfo href="tel:+41413222626">041 322 26 26</ContactInfo>
+              <p>Mail</p>
+              <ContactInfo href="mailto:info@apptiva.ch">
+                info@apptiva.ch
+              </ContactInfo>
+              <p>Adresse</p>
+              <Address>
+                Neuenkirchstrasse 19 <br />
+                6203 Sempach Station
+              </Address>
+              <Button css="font-size: 0.7em; margin-top: 1em;" href="#anfahrt">Anfahrt</Button>            
+            </div>
+            <ContactForm />
+          </Grid>
         </Container>
       </Section>
-      <Section style={{ padding: 0, marginBottom: '-4rem' }}>
-        <iframe
-          loading="lazy"
-          title="Google Maps"
-          scrolling="no"
-          marginHeight="0"
-          marginWidth="0"
-          src="https://maps.google.com/maps?q=Apptiva AG, Neuenkirchstrasse 19, Sempach Station&amp;hl=de&amp;geocode=+&amp;hnear=Apptiva AG+Neuenkirchstrasse 19,+Sempach Station&amp;t=m&amp;z=10&amp;iwloc=A&amp;output=embed"
-          width="100%"
-          height="550px"
-          frameBorder="0"
-        />
+      <Img fluid={buildingImage.childImageSharp.fluid} />
+      <Section dark id="anfahrt">
+        <Container>
+          <h2>Standort</h2>
+
+          <p>
+            Die Botfabrik befindet sich in Sempach an der Autobahn A2 und der
+            Bahnlinie zwischen Luzern und Sursee.
+          </p>
+          <Address>
+            Neuenkirchstrasse 19 <br />
+            6203 Sempach Station
+          </Address>
+
+          <iframe
+            css="margin-top: 3em;"
+            title="Google Maps"
+            frameBorder="0"
+            height="550px"
+            marginHeight="0"
+            marginWidth="0"
+            scrolling="no"
+            src="https://maps.google.com/maps?q=Apptiva%20AG,%20Neuenkirchstrasse%2019,%20Sempach%20Station&hl=de&geocode=+&hnear=Apptiva%20AG+Neuenkirchstrasse%2019,+Sempach%20Station&t=m&z=10&iwloc=A&output=embed"
+            width="100%"
+          />
+        </Container>
       </Section>
+    </Layout>
+  )
+}
 
-      <Container>
-        <h1>Kontakt</h1>
-        <p>Unsere Koordinaten</p>
-        <ul>
-          <li>Adresse</li>
-          <li>Tel</li>
-          <li>Formular</li>
-          <li>Google Maps</li>
-          <li>
-            Sitemap erstellen und ev.{' '}
-            <a href="https://search.google.com/search-console/sitemaps?resource_id=https%3A%2F%2Fapptiva.ch%2F">
-              hier{' '}
-            </a>
-            einreichen
-          </li>
-          <li>
-            Sitelinks verbesser:{' '}
-            <a href="https://support.google.com/webmasters/answer/47334?hl=de">
-              hier
-            </a>
-          </li>
-        </ul>
-        <a href="/">Zur Startseite</a>
-      </Container>
-    </main>
-  </Layout>
-)
-
-export default Contact
+export default Kontakt
