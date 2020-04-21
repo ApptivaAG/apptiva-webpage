@@ -43,22 +43,17 @@ const AboutUs = () => {
             <MainTitle>Über uns</MainTitle>
             <p>{description}</p>
             <p>
-              Seit 2015 entwickeln wir Apps, Applikationen und Chatbots. Dabei
-              achten wir auf eine agile Vorgehensweise, technisch hochwertige
-              Resultate und benutzerfreundliche Lösungen.
+              Seit 2015 entwickeln wir Apps, Applikationen und Chatbots. Uns ist
+              es wichtig, die Herausforderungen unserer Kunden zu verstehen, um
+              eine optimale Lösung in kurzer Zeit umsetzen zu können. Dies
+              erreichen wir unter anderem dank unserem benutzerzentrierten
+              Vorgehen.
             </p>
             <p>
-              Uns ist es wichtig die Herausforderungen unserer Kunden zu
-              verstehen, um eine optimale Lösung in kurzer Zeit umsetzen zu
-              können. Dies erreichen wir unter anderem dank unserem
-              benutzerzentrierten Vorgehen.
-            </p>
-            <p>
-              In allen Projekten pflegen wir den engen und direkt Kontakt mit
-              unseren Kunden. Unsere Kunden haben während der ganzen
-              Projektdauer von Anfang bis Schluss dieselbe Ansprechsperson.
-              Zudem findet alle Entwicklung in der Schweiz mit unseren eigenen
-              Entwicklern statt.
+              In allen Projekten pflegen wir den engen und direkten Kontakt mit
+              unseren Kunden. Während der ganzen Projektdauer haben unsere
+              Kunden dieselbe Ansprechperson. Zudem findet die gesamte
+              Entwicklung in der Schweiz bei Apptiva statt.
             </p>
             <Buttonlist>
               <Button to="/vorgehensweise">Unser Vorgehen</Button>
@@ -75,7 +70,6 @@ const AboutUs = () => {
               jedes Projekt gemeinsam mit unseren Kunden erfolgreich lancieren
               und betreiben. Unsere Projekte sind aber nicht bloss zeitgerecht
               und im Budget, sondern kommen auch bei den Anwendern sehr gut an.
-              Wir achten von Beginn an auf eine gute Usability.
             </p>
             <Buttonlist>
               <Button to="/zusammenarbeit">Ihr Vorteil mit Apptiva</Button>

@@ -114,7 +114,7 @@ const ContactForm = () => {
       </p>
       <p>
         <label htmlFor="email">
-          Ihre Email-Adresse (Pflichtfeld){' '}
+          Ihre E-Mail-Adresse (Pflichtfeld){' '}
           <Input
             type="email"
             name="email"

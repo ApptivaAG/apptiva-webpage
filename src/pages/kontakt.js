@@ -94,7 +94,7 @@ const Kontakt = () => {
           <h2>Standort</h2>
 
           <p>
-            Die Botfabrik befindet sich in Sempach an der Autobahn A2 und der
+            Apptiva befindet sich in Sempach an der Autobahn A2 und an der
             Bahnlinie zwischen Luzern und Sursee.
           </p>
           <Address>
