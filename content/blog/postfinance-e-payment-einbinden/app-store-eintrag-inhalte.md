@@ -1,0 +1,47 @@
+---
+title: 'Unsere Erfahrungen mit PostFinance E-Payment'
+slug: unsere-erfahrungen-mit-postfinance-e-payment-service
+templateKey: blog-post
+image: postfinance-e-payment.png
+date: 2020-04-27
+author: Philip Schönholzer
+description: >-
+  In unserem aktuellen Projekt setzten wir PostFinance E-Payment ein und teilen hier unsere Erfahrungen und Eindrücke mit.
+categories:
+  - Allgemein
+---
+
+In unserem aktuellen Projekt setzten wir PostFinance E-Payment ein, um Zahlungs-Transaktionen durchzuführen. Unsere gewonnenen Eindrücke, teilen wir nun im folgenden Video. Es sollte betont werden, dass wir PostFinance nicht gewählt haben, weil es der "beste" Anbieter ist, sondern weil unser Kunde bereits PostFinance einsetzt. Der Kunde war froh, dass er nicht nochmals den ganzen administrativen Aufwand hatte und für uns spielte nicht so eine wichtige Rolle. So fiel die Wahl auf PostFinance E-Payment.
+
+`youtube: https://youtu.be/feFnkgM9Mpw`
+
+## PostFinance E-Payment einbinden
+
+Grundsätzlich funktionierte die Einbindung von PostFinance E-Payment recht gut. Es gab zwei Dinge, die nicht optimal waren.
+
+Zum einen dauerte es ein paar Tage, bis wir einen Test-Account erhalten haben. Bei anderen Anbietern kann man direkt online einen Test-Account erstellen. Die PostFinance begründete die Verzögerung nachvollziehbar mit der Corona-Krise. Laut ihrer Aussage gab es viele Anfragen, da aktuell viele Webshops eröffnet wurden.
+
+Zum anderen war die Dokumentation nicht so gut. Auch da sind andere Anbieter besser aufgestellt. Erschwerend kommt hinzu, dass die Einbindung technisch kompliziert als nötig ist und so eine gute Dokumentation noch wichtiger wäre. Nachdem wir diese Hürden genommen hatten, war die Einbindung recht schnell und sauber möglich.
+
+> ### Hilfreiche Links zur Einbindung von PostFinance E-Payment
+>
+> Folgende Links haben uns bei der Einbindung unterstützt:
+>
+> - [Dokumentation von PostFinance E-Payment](https://e-payment-postfinance.ecom-psp.com/en/integration/all-sales-channels/integrate-with-e-commerce/guide)
+> - [Test-Zahlungsmittel (PDF)](https://shared.ecom-psp.com/v2/docs/guides/TestCards_3DS%20v2_EN.pdf)
+
+## Unsere Eindrücke zur Plattform
+
+PostFinance E-Payment scheint uns eine gut funktionierende und sicher Zahlungsplattform zu sein. Wir sind damit gut in der Lage die Zahlungs-Transaktionen durchzuführen. Der Dienst war bisher stabil und korrekt. Dies ist natürlich das Fundament jedes Zahlungssystems, wo man keine Kompromisse eingehen kann.
+
+Trotzdem sind uns einige weniger positiven Punkte aufgefallen. Diese sind im Besonderen die folgenden.
+
+Die Zahlungsplattform zeigt unverkennbar ihr Alter und wurde in den letzten Jahren offensichtlich nicht gross geupdated. Dies zeigt sich an der gewählten Art der Einbindung. Sie ist auf einem POST-Request an ein PostFinance-Server aufgebaut, welcher HTML zurück liefert. Dies hat folgende Konsequenzen. Zum einen muss auf unserer Seite ein HTML-Formular (ohne JavaScript) die Zahlung übermitteln. Eine andere Möglichkeit wie z.B. Fetch gibt es nicht, soviel wir aus der Dokumentation entnehmen konnten. Dies ist eine bewährte aber eher "klassische" Art der Kommunikation.
+
+Zum anderen heisst dies auch, dass der Anwender zwingend auf der Seite der PostFinance die Zahlungsmittel wählt und die entsprechenden Daten eingibt. Dieser Wechsel ist unschön und kann für Verwirrung sorgen. Auch optisch macht die Seite von der PostFinance nicht den frischesten Eindruck. Da ist sind andere Anbieter bereits einige Schritte voraus.
+
+Ein weiterer Aspekt, welcher uns bei PostFinance nicht so gut gefiel war die Admin-Benutzeroberfläche. Neben der altbackenen Optik ist vor allem der verwirrende Aufbau der Einstellungen und Übersichten zu kritisieren. Selbst Einstellungen, die wir bereits einmal vorgenommen haben, konnte wir erst nach mehrmaligen Durchklicken wieder auffinden.
+
+## Fazit
+
+Trotz der eben genannten Punkte würden wir die Plattform wieder einsetzen, falls es aus Projektsicht sinnvoll ist. Mit den gemachten Erfahrungen sind wir in der Lage eine gute Lösung mit der Zahlungslösung von PostFinance zu entwickeln. Falls PostFinance ihre Integrations-Strategie, Dokumentation und Benutzeroberfläche verbessert wären wir aber auch nicht böse. Wir freuen uns in jedem Fall auf das nächst Projekt.
