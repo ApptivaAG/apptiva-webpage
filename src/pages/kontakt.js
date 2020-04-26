@@ -19,9 +19,10 @@ const Grid = styled.div`
   @media (min-width: 1024px) {
     grid: 1fr / 1fr 2fr;
 
-    form {
+    div + div {
       padding-left: 2em;
       border-left: 1px solid #ddd;
+      padding-bottom: 2em;
     }
   }
 `
@@ -68,7 +69,7 @@ const Kontakt = () => {
           <h1>Kontakt</h1>
           <p>{metadata.description}</p>
           <Grid>
-            <div>
+            <div css="pading-top: 2em;">
               <p>Telefon</p>
               <ContactInfo href="tel:+41413222626">041 322 26 26</ContactInfo>
               <p>Mail</p>
@@ -84,7 +85,10 @@ const Kontakt = () => {
                 Anfahrt
               </Button>
             </div>
-            <ContactForm />
+            <div>
+              <h2>Kontaktformular</h2>
+              <ContactForm />
+            </div>
           </Grid>
         </Container>
       </Section>
