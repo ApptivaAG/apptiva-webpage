@@ -19,20 +19,20 @@ introduction: |
   Haben Sie spezielle Anforderungen an Ihren Webshop haben, wie besondere Zahlungsarten, einzigartige Konditionen, ein spezielles Geschäftsmodell oder Integrationen in ihr ERP, PIM und CRM, dann stossen Sie mit einer Standard-Lösung schnell an deren Grenzen. Wenn Sie maximale Flexibilität wünschen, sind sie bei uns richtig. Wir entwickeln einen Webshop passend auf *alle* Ihre Anforderungen die keine Wünsche offen lässt. So sind Sie ihrer Konkurrenz immer einen Schritt voraus.
 
 customers:
-  - suva-300.png
-  - sd.png
   - globus.png
-  - welti-furrer.png
+  - vivanco.png
+  - hostettler.png
+  - energie360.png
 
 solutions:
   - title: Kunden-Apps
     image: trial-store.png
     text: Bei Kunden-Apps legen wir einen besonderen Fokus auf ein ansprechendes Design und einfache Bedienung. So steht einem guten Kundenerlebnis nichts im Weg.
   - title: Interne Apps
-    image: einsatzplanung.png
+    image: vivanco-shop.png
     text: Effiziente und effektive Apps kommen im internen Gebrauch besonders gut an. Entsprechend legen wir den Fokus auf die Unterstützung des Anwenders, ohne ihm im Weg zu stehen.
   - title: B2B-Apps
-    image: kran-app.png
+    image: smartacus.png
     text: B2B-Apps fördern die Beziehung zwischen Unternehmen. Um dies optimal zu unterstützen, digitalisieren wir die entsprechenden Unternehmensprozesse einfach und verständlich.
 
 bulletGroups:
