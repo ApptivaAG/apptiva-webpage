@@ -1,6 +1,7 @@
 ---
 templateKey: 'testimonial-data'
-avatar: img/francesco-marinelli.png
+avatar: img/francesco-marinelli.jpg
+
 statement: >-
   Das Apptiva Team hat mit seiner unkomplizierten Art eine sensationelle Arbeit geleistet. Die professionell umgesetzte Weblösung war die Grundlage für ein erfolgreiches Projekt.
 name: Francesco Marinelli
