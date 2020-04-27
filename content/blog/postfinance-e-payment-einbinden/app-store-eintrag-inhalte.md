@@ -11,7 +11,7 @@ categories:
   - Allgemein
 ---
 
-In unserem aktuellen Projekt setzten wir PostFinance E-Payment ein, um Zahlungs-Transaktionen durchzuführen. Unsere gewonnenen Eindrücke, teilen wir nun im folgenden Video. Es sollte betont werden, dass wir PostFinance nicht gewählt haben, weil es der "beste" Anbieter ist, sondern weil unser Kunde bereits PostFinance einsetzt. Der Kunde war froh, dass er nicht nochmals den ganzen administrativen Aufwand hatte und für uns spielte nicht so eine wichtige Rolle. So fiel die Wahl auf PostFinance E-Payment.
+In unserem aktuellen Projekt setzten wir PostFinance E-Payment ein, um Zahlungs-Transaktionen durchzuführen. Unsere gewonnenen Eindrücke teilen wir nun im folgenden Video. Wir möchten betonen, dass wir PostFinance nicht gewählt haben, weil es der "beste" Anbieter ist, sondern weil unser Kunde bereits PostFinance einsetzt. Der Kunde war froh, dass er nicht nochmals den ganzen administrativen Aufwand für einen neuen Anbieter treiben musste. Für uns spielte die Wahl des Zahlungsdiestleisters keine grosse Rolle. So fiel die Wahl auf PostFinance E-Payment.
 
 `youtube: https://youtu.be/feFnkgM9Mpw`
 
@@ -21,7 +21,7 @@ Grundsätzlich funktionierte die Einbindung von PostFinance E-Payment recht gut.
 
 Zum einen dauerte es ein paar Tage, bis wir einen Test-Account erhalten haben. Bei anderen Anbietern kann man direkt online einen Test-Account erstellen. Die PostFinance begründete die Verzögerung nachvollziehbar mit der Corona-Krise. Laut ihrer Aussage gab es viele Anfragen, da aktuell viele Webshops eröffnet wurden.
 
-Zum anderen war die Dokumentation nicht so gut. Auch da sind andere Anbieter besser aufgestellt. Erschwerend kommt hinzu, dass die Einbindung technisch kompliziert als nötig ist und so eine gute Dokumentation noch wichtiger wäre. Nachdem wir diese Hürden genommen hatten, war die Einbindung recht schnell und sauber möglich.
+Zum anderen war die Dokumentation nicht so gut. Auch da sind andere Anbieter besser aufgestellt. Erschwerend kommt hinzu, dass die Einbindung technisch komplizierter als nötig ist und so eine gute Dokumentation noch wichtiger wäre. Nachdem wir diese Hürden genommen hatten, war die Einbindung recht schnell und sauber möglich.
 
 > ### Hilfreiche Links zur Einbindung von PostFinance E-Payment
 >
@@ -32,13 +32,13 @@ Zum anderen war die Dokumentation nicht so gut. Auch da sind andere Anbieter bes
 
 ## Unsere Eindrücke zur Plattform
 
-PostFinance E-Payment scheint uns eine gut funktionierende und sicher Zahlungsplattform zu sein. Wir sind damit gut in der Lage die Zahlungs-Transaktionen durchzuführen. Der Dienst war bisher stabil und korrekt. Dies ist natürlich das Fundament jedes Zahlungssystems, wo man keine Kompromisse eingehen kann.
+PostFinance E-Payment scheint uns eine gut funktionierende und sichere Zahlungsplattform zu sein. Wir sind damit gut in der Lage die Zahlungs-Transaktionen durchzuführen. Der Dienst war bisher stabil und korrekt. Dies ist natürlich das Fundament jedes Zahlungssystems. Da kann niemand Kompromisse eingehen.
 
-Trotzdem sind uns einige weniger positiven Punkte aufgefallen. Diese sind im Besonderen die folgenden.
+Trotzdem sind uns einige weniger positive Punkte aufgefallen. Diese sind im Besonderen die folgenden.
 
-Die Zahlungsplattform zeigt unverkennbar ihr Alter und wurde in den letzten Jahren offensichtlich nicht gross geupdated. Dies zeigt sich an der gewählten Art der Einbindung. Sie ist auf einem POST-Request an ein PostFinance-Server aufgebaut, welcher HTML zurück liefert. Dies hat folgende Konsequenzen. Zum einen muss auf unserer Seite ein HTML-Formular (ohne JavaScript) die Zahlung übermitteln. Eine andere Möglichkeit wie z.B. Fetch gibt es nicht, soviel wir aus der Dokumentation entnehmen konnten. Dies ist eine bewährte aber eher "klassische" Art der Kommunikation.
+Die Zahlungsplattform zeigt unverkennbar ihr Alter und wurde in den letzten Jahren offensichtlich nicht gross aktualisiert. Dies zeigt sich an der gewählten Art der Einbindung. Sie ist auf einem POST-Request an ein PostFinance-Server aufgebaut, welcher HTML zurück liefert. Dies hat folgende Konsequenzen. Zum einen muss auf unserer Seite ein HTML-Formular (ohne JavaScript) die Zahlung übermitteln. Eine andere Möglichkeit wie z.B. Fetch gibt es nicht, soviel wir aus der Dokumentation entnehmen konnten. Dies ist eine bewährte aber eher "klassische" Art der Kommunikation.
 
-Zum anderen heisst dies auch, dass der Anwender zwingend auf der Seite der PostFinance die Zahlungsmittel wählt und die entsprechenden Daten eingibt. Dieser Wechsel ist unschön und kann für Verwirrung sorgen. Auch optisch macht die Seite von der PostFinance nicht den frischesten Eindruck. Da ist sind andere Anbieter bereits einige Schritte voraus.
+Zum anderen heisst dies auch, dass der Anwender zwingend auf der Seite der PostFinance die Zahlungsmittel wählt und die entsprechenden Daten eingibt. Dieser Wechsel ist unschön und kann für Verwirrung sorgen. Auch optisch macht die Seite von der PostFinance nicht den frischesten Eindruck. Es sind ettliche Konfigurationen notwendig, um das Erscheinungsbild ansprechend zu gestalten. Da ist sind andere Anbieter bereits einige Schritte voraus.
 
 Ein weiterer Aspekt, welcher uns bei PostFinance nicht so gut gefiel war die Admin-Benutzeroberfläche. Neben der altbackenen Optik ist vor allem der verwirrende Aufbau der Einstellungen und Übersichten zu kritisieren. Selbst Einstellungen, die wir bereits einmal vorgenommen haben, konnte wir erst nach mehrmaligen Durchklicken wieder auffinden.
 
