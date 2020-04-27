@@ -16,8 +16,7 @@ const TestimonialStyle = styled.li`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  flex: 1 1 18em;
-  max-width: 24rem;
+  flex: 0 1 20em;
   padding: 1rem;
 `
 const Person = styled.div`
@@ -49,29 +48,31 @@ const Statement = styled.p`
   font-style: italic;
   margin-top: 0.8em;
 `
-export const Testimonial = ({ name, position, statement, avatar, company }) => (
-  <TestimonialStyle>
-    <Person>
-      <Avatar
-        fixed={{
-          ...avatar.childImageSharp.fixed,
-          base64: avatar.childImageSharp.sqip.dataURI,
-        }}
-      />
-      <div>
-        <Name>{name}</Name>
-        <Position>{position}</Position>
-        <Company>{company}</Company>
-      </div>
-    </Person>
-    <Statement>«{statement}» </Statement>
-  </TestimonialStyle>
-)
+export const Testimonial = ({ name, position, statement, avatar, company }) => {
+  return (
+    <TestimonialStyle>
+      <Person>
+        <Avatar
+          fixed={{
+            ...avatar.childImageSharp.fixed,
+            base64: avatar.childImageSharp.sqip.dataURI,
+          }}
+        />
+        <div>
+          <Name>{name}</Name>
+          <Position>{position}</Position>
+          <Company>{company}</Company>
+        </div>
+      </Person>
+      <Statement>«{statement}» </Statement>
+    </TestimonialStyle>
+  )
+}
 
 const TestimonialsStyle = styled.ul`
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-around;
   font-size: 0.8rem;
   margin-left: -1rem;
   margin-right: -1rem;
