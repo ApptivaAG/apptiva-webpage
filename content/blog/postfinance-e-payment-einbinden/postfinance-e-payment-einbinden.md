@@ -38,14 +38,8 @@ Trotzdem sind uns einige weniger positive Punkte aufgefallen. Auf diese möchten
 
 Die Zahlungsplattform zeigt unverkennbar ihr Alter und wurde in den letzten Jahren offensichtlich nicht gross aktualisiert. Dies zeigt sich an der gewählten Art der Einbindung. Sie ist auf einem POST-Request an ein PostFinance-Server aufgebaut, welcher HTML zurück liefert. Dies hat folgende Konsequenzen:
 
-<ul>
-  <li>
-  Auf unserer Seite muss ein HTML-Formular (ohne JavaScript) die Zahlung übermitteln. Eine andere Möglichkeit wie z.B. Fetch gibt es nicht, soweit wir das aus der Dokumentation entnehmen konnten. Dies ist eine bewährte aber eher "klassische" Art der Kommunikation.
-  </li>
-  <li>
-  Die Auswahl der Zahlungsmittel und die Eingabe der entsprechenden Daten findet zwingend auf der Webseite der PostFinance statt. Dieser Wechsel ist unschön und kann für Verwirrung sorgen. Auch optisch macht die Seite von der PostFinance nicht den frischesten Eindruck. Es sind etliche Konfigurationen notwendig, um das Erscheinungsbild ansprechend zu gestalten. Da sind andere Anbieter bereits einige Schritte voraus.
-  </li>
-</ul>
+- Auf unserer Seite muss ein HTML-Formular (ohne JavaScript) die Zahlung übermitteln. Eine andere Möglichkeit wie z.B. Fetch gibt es nicht, soweit wir das aus der Dokumentation entnehmen konnten. Dies ist eine bewährte aber eher "klassische" Art der Kommunikation.
+- Die Auswahl der Zahlungsmittel und die Eingabe der entsprechenden Daten findet zwingend auf der Webseite der PostFinance statt. Dieser Wechsel ist unschön und kann für Verwirrung sorgen. Auch optisch macht die Seite von der PostFinance nicht den frischesten Eindruck. Es sind etliche Konfigurationen notwendig, um das Erscheinungsbild ansprechend zu gestalten. Da sind andere Anbieter bereits einige Schritte voraus.
 
 Ein weiterer Aspekt, welcher uns bei PostFinance nicht so gut gefiel, war die Admin-Benutzeroberfläche. Neben der altbackenen Optik ist vor allem der verwirrende Aufbau der Einstellungen und Übersichten zu kritisieren. Selbst Einstellungen, die wir bereits einmal vorgenommen hatten, konnten wir erst nach mehrmaligem Durchklicken wieder auffinden.
 
