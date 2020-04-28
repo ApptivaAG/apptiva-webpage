@@ -1,10 +1,10 @@
 ---
 templateKey: 'service-page'
-slug: /spezialisierte-webshops
+slug: /einzigartige-webshops
 title: Einzigartige Webshops
 image: hero.png
 author: philip-schoenholzer
-description: Wir entwickeln spezialisierte, benutzer­freundliche, optisch ansprechende und technisch anspruchsvolle Webshops um Ihre einzigartigen Geschäftsprozesse abzubilden.
+description: Wir entwickeln einzigartige, benutzer­freundliche, optisch ansprechende und technisch anspruchsvolle Webshops um Ihre einzigartigen Geschäftsprozesse abzubilden.
 subtitle:
   text: Wir entwickeln einzigartige Webshops, um Ihre einzigartigen Geschäftsprozesse zu
   swaps:
@@ -22,6 +22,7 @@ customers:
   - globus.png
   - vivanco.png
   - hostettler.png
+  - schurch-logo.png
   - energie360.png
 
 solutions:

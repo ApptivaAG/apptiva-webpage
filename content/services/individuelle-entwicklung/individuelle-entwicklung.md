@@ -42,7 +42,11 @@ bulletGroups:
 Wir entwickeln Softwarelösungen passend für Ihre Herausforderungen. So haben sie die Sicherheit, dass sie eine gute Lösung erhalten. Wir entwickeln unter anderem:
 
 - ### [Mobile Apps für iOS und Android](/mobile-apps-ios-android)
+
 - ### [Web Apps und Applikationen](/web-apps)
+
+- ### [Webshops](/einzigartige-webshops)
+
 - ### [Chatbots](/chatbots)
 
 <div class="full-width dark-section" style="overflow: auto; margin-top: 4em;">
@@ -51,7 +55,7 @@ Wir entwickeln Softwarelösungen passend für Ihre Herausforderungen. So haben s
 [[left]]
 |![Jenny Hello](hello-jenny.png)
 
-# Warum liebt Jenny ihre Lean Enterprise App?
+# Warum liebt Jenny ihre Lean Enterprise App
 
 Sehen Sie wie eine Lean Enterprise App beispielsweise den Telefonverkauf für Jenny vereinfacht und beschleunigt.
 
