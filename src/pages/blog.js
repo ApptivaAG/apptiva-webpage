@@ -4,6 +4,13 @@ import Img from 'gatsby-image'
 import { Section, MainTitle, Container } from '../style'
 import { truncate } from '../util'
 import Layout from '../components/Layout'
+import SEO from '../components/SEO'
+
+const metadata = {
+  title: 'Blog',
+  description: 'Aktuelle News rund um die Apptiva',
+  slug: 'blog',
+}
 
 export default ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
@@ -11,6 +18,8 @@ export default ({ data }) => {
   return (
     <Layout>
       <main>
+        <SEO metaData={metadata} />
+
         <Section>
           <Container>
             <MainTitle>Blogbeiträge</MainTitle>
