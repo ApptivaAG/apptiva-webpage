@@ -368,7 +368,7 @@ const IndexPage = ({ testimonials, posts, employees, partners, images }) => (
           <PartnerImage>
             {partners.edges.map(({ node }) => {
               return (
-                <Link to={node.frontmatter.slug}>
+                <Link key={node.id} to={node.frontmatter.slug}>
                   <Img
                     fixed={node.frontmatter.logo.childImageSharp.fixed}
                     alt={node.frontmatter.name}
