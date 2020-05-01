@@ -7,12 +7,6 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    {
-      resolve: `gatsby-plugin-canonical-urls`,
-      options: {
-        siteUrl: config.url,
-      },
-    },
     `gatsby-plugin-sitemap`,
     'gatsby-plugin-styled-components',
     {
