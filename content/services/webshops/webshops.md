@@ -1,7 +1,7 @@
 ---
 templateKey: 'service-page'
-slug: /einzigartige-webshops
-title: Einzigartige Webshops
+slug: /einzigartiger-webshop
+title: Einzigartiger Webshop
 image: hero.png
 author: philip-schoenholzer
 description: Wir entwickeln einzigartige, benutzer­freundliche, optisch ansprechende und technisch anspruchsvolle Webshops um Ihre einzigartigen Geschäftsprozesse abzubilden.
@@ -12,7 +12,7 @@ subtitle:
     - vereinfachen.
     - digitalisieren.
 
-callToAction: Nehmen Sie jetzt Kontakt auf, um ihre Anforderungen zu besprechen.
+callToAction: Nehmen Sie jetzt Kontakt auf, um ihren Webshop zu besprechen.
 introduction: |
   ## Wenn Shopify und WooCommerce nicht mehr weiterhelfen
 
@@ -60,6 +60,10 @@ bulletGroups:
         title: Alle erdenklichen Umsysteme
         text: Egal ob ERP, PIM, CRM, CMS, Buchhaltungs- oder Branchenlösung, wir integrieren technisch anspruchsvolle Umsysteme souverän.
 ---
+
+## Einzigartig heisst nicht aufwändig
+
+Wenn Sie einen einzigartigen Webshop benötigen, muss dies nicht aufwändig sein. Je nach Anforderungen können wir ihren individuellen Webshop innerhalb weniger Tage entwickeln und online schalten. Dies hängt ganz von den Anforderungen und Voraussetzungen ab.
 
 ## Wir sind besonders effektiv
 

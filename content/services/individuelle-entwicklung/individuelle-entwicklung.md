@@ -45,7 +45,7 @@ Wir entwickeln Softwarelösungen passend für Ihre Herausforderungen. So haben s
 
 - ### [Web Apps und Applikationen](/web-apps)
 
-- ### [Webshops](/einzigartige-webshops)
+- ### [Einzigartiger Webshop](/einzigartiger-webshop)
 
 - ### [Chatbots](/chatbots)
 
