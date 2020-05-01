@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
 import '@fortawesome/fontawesome-free/css/fontawesome.min.css'
 import '@fortawesome/fontawesome-free/css/solid.min.css'
@@ -111,7 +111,7 @@ const colorPalett = {
 const Skill = ({ title, color, items }) => (
   <SkillItem>
     <h2>{title}</h2>
-    {items.map(item => (
+    {items.map((item) => (
       <Bar key={item.name}>
         <Text>{item.name}</Text>
         <Color
@@ -233,7 +233,7 @@ export const EmployeePageTemplate = ({
   )
 }
 
-export default props => {
+export default (props) => {
   const {
     data: { markdownRemark: post },
   } = props

@@ -7,6 +7,8 @@ import Layout from '../components/Layout'
 import { Container, Section, Button } from '../style'
 import ContactForm from '../components/ContactForm'
 import Seo from '../components/SEO'
+import { Helmet } from 'react-helmet'
+import config from '../config'
 
 const Grid = styled.div`
   display: grid;
@@ -63,6 +65,7 @@ const Kontakt = () => {
   }
   return (
     <Layout callToAction={false}>
+      <Helmet title={`${metadata.title} - ${config.company}`} />
       <Seo metaData={metadata} />
       <Section>
         <Container>

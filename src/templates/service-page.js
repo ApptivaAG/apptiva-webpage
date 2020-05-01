@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
 import useCollapse from 'react-collapsed'
 import '@fortawesome/fontawesome-free/css/fontawesome.min.css'
@@ -57,7 +57,7 @@ const Cols = styled.div`
   }
 `
 
-const icons = icon => `fas fa-${icon}`
+const icons = (icon) => `fas fa-${icon}`
 
 const ListTitle = styled.header`
   margin-bottom: 3em;
@@ -120,9 +120,8 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
     metaData.image.childImageSharp.resize &&
     metaData.image.childImageSharp.resize.src
 
-  const { getCollapseProps, getToggleProps, isOpen } = useCollapse({
-    expandStyles: { transitionDuration: '200ms' },
-    collapseStyles: { transitionDuration: '200ms' },
+  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse({
+    duration: 200,
   })
 
   return (
@@ -153,7 +152,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
           <Container>
             <DeemphasizedTitle>Auswahl unserer Kunden</DeemphasizedTitle>
             <Customers>
-              {customers.map(customer => (
+              {customers.map((customer) => (
                 <Img
                   key={customer.childImageSharp.fixed.src}
                   fixed={customer.childImageSharp.fixed}
@@ -169,7 +168,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
             <Centered>
               <h2>Lösungen</h2>
               <Cols>
-                {solutions.map(solution => (
+                {solutions.map((solution) => (
                   <div key={solution.title}>
                     <h3>{solution.title}</h3>
                     <a href={solution.image.childImageSharp.fluid.src}>
@@ -188,7 +187,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
         </Section>
       )}
       {bulletGroups &&
-        bulletGroups.map(group => (
+        bulletGroups.map((group) => (
           <Section key={group.title}>
             <Container key={group.title}>
               <ListTitle>
@@ -197,7 +196,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
                 <p dangerouslySetInnerHTML={{ __html: group.description }} />
               </ListTitle>
               <ItemList>
-                {group.bulletList.map(item => {
+                {group.bulletList.map((item) => {
                   return (
                     <Item key={item.text}>
                       <Icon>
@@ -216,14 +215,14 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
           </Section>
         ))}
       {references &&
-        references.map(ref => (
+        references.map((ref) => (
           <Section key={ref.title} dark>
             <Container>
               <Centered>
                 <h2>{ref.title}</h2>
                 <p>{ref.description}</p>
                 <Cols>
-                  {ref.referenceList.map(reference => (
+                  {ref.referenceList.map((reference) => (
                     <div key={reference.title}>
                       <h3>{reference.title}</h3>
                       <Link to={reference.link}>
@@ -247,7 +246,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
             <Centered>
               <h2>{specs.title}</h2>
               <Cols>
-                {specs.specItems.map(spec => (
+                {specs.specItems.map((spec) => (
                   <div key={spec.title}>
                     <h3>{spec.title}</h3>
                     {/* eslint-disable-next-line react/no-danger */}
@@ -270,7 +269,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
             {callToAction ||
               'Wir unterstützen Sie gerne bei der Beschleunigung ihrer Geschäftsprozesse'}
           </h2>
-          {!isOpen && (
+          {!isExpanded && (
             <p>
               Rufen Sie uns an unter <a href="+41413222626">041 322 26 26</a>{' '}
               oder schreiben Sie uns.
@@ -286,7 +285,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
             </p>
             <ContactForm />
           </div>
-          {!isOpen && (
+          {!isExpanded && (
             // eslint-disable-next-line react/jsx-props-no-spreading
             <Button type="button" {...getToggleProps()}>
               Jetzt Nachricht schreiben
@@ -298,7 +297,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
   )
 }
 
-export default props => {
+export default (props) => {
   const {
     data: { markdownRemark: post },
   } = props

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 
 import { company } from '../config'
 import { Section, MainTitle, Container } from '../style'

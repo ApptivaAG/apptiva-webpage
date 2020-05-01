@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
 
 import Content, { HTMLContent } from '../components/Content'
@@ -59,7 +59,7 @@ const NavigationLinks = styled(Link)`
   padding: 0.5em 1em;
   margin: 0.5em;
   color: white;
-  background-color: ${p => p.theme.color.primary};
+  background-color: ${(p) => p.theme.color.primary};
   border-radius: 0.2em;
 `
 const Navigation = ({ next, prev }) => {
