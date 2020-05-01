@@ -256,6 +256,7 @@ export const employeePageQuery = graphql`
       html
       frontmatter {
         name
+        slug
         claim
         avatar {
           childImageSharp {

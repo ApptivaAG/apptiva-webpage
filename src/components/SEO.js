@@ -84,7 +84,7 @@ const SEO = ({ metaData, postImage, isBlogPost }) => {
     metaData.description || metaData.excerpt || config.description
   const image = postImage ? `${config.url}${postImage}` : config.logo
   const url = metaData.slug
-    ? `${config.url}${path.sep}${metaData.slug}`
+    ? path.join(config.url, metaData.slug, '/')
     : config.url
   const date = isBlogPost ? metaData.isoDate : false
   const author = metaData.author || config.company
@@ -104,6 +104,12 @@ const SEO = ({ metaData, postImage, isBlogPost }) => {
       {/* General tags */}
       <meta name="description" content={description} />
       <meta name="image" content={image} />
+      <link
+        rel="canonical"
+        href={url}
+        data-baseprotocol="https:"
+        data-basehost="apptiva.ch"
+      />
 
       {/* Schema.org tags */}
       <script type="application/ld+json">
