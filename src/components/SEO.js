@@ -1,9 +1,8 @@
-import path from 'path'
 import React from 'react'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 import config from '../config'
-import { stripHTML } from '../util'
+import { stripHTML, compose } from '../util'
 
 const getSchemaOrgJSONLD = ({
   isBlogPost,
@@ -78,14 +77,17 @@ const getSchemaOrgJSONLD = ({
     : schemaOrgJSONLD
 }
 
+const addSlash = (url) => `${url}/`
+const baseOrSlugUrl = (baseUrl) => (slug) =>
+  slug ? new URL(slug, baseUrl).href : baseUrl
+const composeUrl = compose(addSlash, baseOrSlugUrl(config.url))
+
 const SEO = ({ metaData, postImage, isBlogPost }) => {
   const title = stripHTML(metaData.title) || config.title
   const description =
     metaData.description || metaData.excerpt || config.description
   const image = postImage ? `${config.url}${postImage}` : config.logo
-  const url = metaData.slug
-    ? path.join(config.url, metaData.slug, '/')
-    : config.url
+  const url = composeUrl(metaData.slug)
   const date = isBlogPost ? metaData.isoDate : false
   const author = metaData.author || config.company
 
