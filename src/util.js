@@ -5,3 +5,6 @@ export const stripHTML = (content) =>
 
 export const truncate = (text, length) =>
   text.length > length ? `${text.slice(0, length)}...` : text
+
+export const compose = (...fns) =>
+  fns.reduce((f, g) => (...args) => f(g(...args)))
