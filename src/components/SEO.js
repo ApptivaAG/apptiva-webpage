@@ -77,17 +77,16 @@ const getSchemaOrgJSONLD = ({
     : schemaOrgJSONLD
 }
 
-const addSlash = (url) => `${url}/`
-const baseOrSlugUrl = (baseUrl) => (slug) =>
-  slug ? new URL(slug, baseUrl).href : baseUrl
-const composeUrl = compose(addSlash, baseOrSlugUrl(config.url))
+const addSlash = url => (url.endsWith('/') ? url : `${url}/`)
+const baseOrSlugUrl = (baseUrl, slug) => new URL(slug || '', baseUrl).href
+const composeUrl = compose(addSlash, baseOrSlugUrl)
 
 const SEO = ({ metaData, postImage, isBlogPost }) => {
   const title = stripHTML(metaData.title) || config.title
   const description =
     metaData.description || metaData.excerpt || config.description
   const image = postImage ? `${config.url}${postImage}` : config.logo
-  const url = composeUrl(metaData.slug)
+  const url = composeUrl(config.url, metaData.slug)
   const date = isBlogPost ? metaData.isoDate : false
   const author = metaData.author || config.company
 
@@ -158,3 +157,6 @@ SEO.defaultProps = {
 }
 
 export default SEO
+
+// eslint-disable-next-line no-underscore-dangle
+export const __test__ = { composeUrl }

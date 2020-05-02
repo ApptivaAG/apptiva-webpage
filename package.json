@@ -72,9 +72,14 @@
     "update": "npx npm-check-updates -u",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "lint": "eslint ./src",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "ava"
   },
   "devDependencies": {
+    "@ava/babel": "^1.0.1",
+    "@babel/preset-react": "^7.9.4",
+    "@babel/register": "^7.9.0",
+    "ava": "^3.8.1",
+    "babel-preset-gatsby": "^0.4.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.10.0",
@@ -86,5 +91,11 @@
     "gatsby-cli": "^2.10.11",
     "prettier": "^1.19.1",
     "serve": "^11.3.0"
+  },
+  "ava": {
+    "babel": true,
+    "require": [
+      "@babel/register"
+    ]
   }
 }
