@@ -34,7 +34,7 @@ Ziel der Interviews ist einerseits die Auswirkungen und Bedürfnisse zu kennen, 
 
 <h3>Anwender</h3>
 
-Die Anwender sind eine spezielle Gruppe der Stakeholder. Mit diesen wird nicht bloss ein Interview geführt, sondern sie werden bei ihrer Tätigkeit beobachtet. Dieses Beobachten mit vorgelagertem Interview wird <a href="https://en.wikipedia.org/wiki/Contextual_inquiry" target="_blank">Contextual Inquiry</a> oder auch <a href="https://de.wikipedia.org/wiki/Ethnographisches_Interview" target="_blank">ethnografische Interviews</a> genannt. Contextual Inquiries sollten im Gegensatz zu andern Stakeholder-Interviews wenn möglich von zwei Teammitglieder durchgeführt werden. Zudem liegt hier der Fokus eindeutig auf den Tätigkeiten und warum diese ausgeführt werden.
+Die Anwender sind eine spezielle Gruppe der Stakeholder. Mit diesen wird nicht bloss ein Interview geführt, sondern sie werden bei ihrer Tätigkeit beobachtet. Dieses Beobachten mit vorgelagertem Interview wird [Contextual Inquiry](https://en.wikipedia.org/wiki/Contextual_inquiry) oder auch [ethnografisches Interview](https://de.wikipedia.org/wiki/Ethnographisches_Interview) genannt. Contextual Inquiries sollten im Gegensatz zu andern Stakeholder-Interviews wenn möglich von zwei Teammitglieder durchgeführt werden. Zudem liegt hier der Fokus eindeutig auf den Tätigkeiten und warum diese ausgeführt werden.
 
 <h3>Nachgelagerte Anwender</h3>
 

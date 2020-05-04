@@ -101,13 +101,13 @@ skills:
 
 Viele Unternehmen setzen in der Softwareentwicklung auf agile Vorgehensweisen wie Scrum oder Kanban. Diese Ansätze legen einen starken Fokus auf die Effizienz der Produktentwicklung. Oft bleiben die Sicht der Benutzer und somit die Effektivität der Lösung auf der Strecke. Ist es möglich, stimmige Kundenlösungen zu bauen und dies schnell zu tun? Falls ja, was gilt es dabei zu beachten?
 
-Quelle: <a href="http://www.sigs.de/publications/newsletter/2015/04/schoenholzer_zurkirchen_OS_03_15.pdf" target="_blank">Nutzerorientiertes Design - Schnell zu stimmigen Lösungen</a> im <a href="http://www.sigs-datacom.de/fachzeitschriften/objektspektrum/archiv/artikelansicht.html?tx_mwjournals_pi1%5Bpointer%5D=0&amp;tx_mwjournals_pi1%5Bmode%5D=1&amp;tx_mwjournals_pi1%5BshowUid%5D=7879" target="_blank">OBJEKTspektrum-Magazin</a>
+Quelle: [Nutzerorientiertes Design - Schnell zu stimmigen Lösungen](http://www.sigs.de/publications/newsletter/2015/04/schoenholzer_zurkirchen_OS_03_15.pdf) im [OBJEKTspektrum-Magazin](http://www.sigs-datacom.de/fachzeitschriften/objektspektrum/archiv/artikelansicht.html?tx_mwjournals_pi1%5Bpointer%5D=0&tx_mwjournals_pi1%5Bmode%5D=1&tx_mwjournals_pi1%5BshowUid%5D=7879)
 
 # Meine Erfahrungen
 
 ## Ausschnitte aus früheren Projekten
 
-Als Mitarbeiter der <a href="http://www.bison-group.com" target="_blank">Bison Schweiz AG</a>.
+Als Mitarbeiter der [Bison Schweiz AG](http://www.bison-group.com).
 
 ### ESL Store Manager Handheld
 
@@ -121,7 +121,7 @@ Desktop Webapp um die Electronic Shelf Labels zu managen.
 
 Verantwortlich für die Analyse, User Research, Anforderungen, Modellen, Design, visuelle Darstellung, Prototyp.
 
-<a href="http://www.bison-group.com/produkte/bison-esl/" target="_blank">Link</a>
+[Link](http://www.bison-group.com/produkte/bison-esl/)
 
 ### Ernte App
 
@@ -129,7 +129,7 @@ Mobile Webapp für die Meldung der Ernte an die fenaco Landesprodukte.
 
 Verantwortlich für die Analyse, User Research, Anforderungen, Modellen, Design, visuelle Darstellung, Prototyp und Tests.
 
-<a href="http://www.bison-group.com/produkte/bison-mobile-solutions/" target="_blank">Link</a>
+[Link](http://www.bison-group.com/produkte/bison-mobile-solutions/)
 
 ### Telesales App
 
@@ -154,7 +154,7 @@ Fragen, fragen, fragen. Donald Rumsfeld nannte es die "unknown unkowns". Oft gla
 
 ## Zeichnen
 
-Sachverhalte aufzuzeichnen sorgt für Klarheit. Dies habe ich von <a href="https://twitter.com/martin_talamona">Martin Talamona</a> gelernt, mit dem ich über 10 Jahre zusammenarbeiten durfte. Beim Diskutieren und Erklären entstehen unweigerlich Missverständnisse. Viele davon können mit einer einfachen Zeichnung beseitigt werden. Zudem wird eine Zeichnung eher angeschaut, als dass ein Text gelesen wird.
+Sachverhalte aufzuzeichnen sorgt für Klarheit. Dies habe ich von [Martin Talamona](https://twitter.com/martin_talamona) gelernt, mit dem ich über 10 Jahre zusammenarbeiten durfte. Beim Diskutieren und Erklären entstehen unweigerlich Missverständnisse. Viele davon können mit einer einfachen Zeichnung beseitigt werden. Zudem wird eine Zeichnung eher angeschaut, als dass ein Text gelesen wird.
 
 ## Probleme
 

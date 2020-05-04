@@ -22,7 +22,7 @@ categories:
 
 Heute ist Version 15.4.0 von React veröffentlicht worden. Mit der neuen Version können React Komponenten in der Chrome Timeline visualisiert werden. Damit lässt sich erkennen, welche Komponenten mounted, aktualisiert und unmounted werden und wie lange sie im Vergleich zu den anderen Komponenten brauchen.
 
-Ich will prüfen, ob ich mithilfe dieser neuen Visualisierung in unserem Botfabrik-Projekt (<a href="http://www.botfabrik.ch" target="_blank" rel="noopener">www.botfabrik.ch</a>) etwas auffälliges erkennen kann. Dazu aktualisiere ich zuerst die beiden Node Module <em>react</em> und <em>react-dom</em> auf Version 15.4.0. und starte dann die Applikation.
+Ich will prüfen, ob ich mithilfe dieser neuen Visualisierung in unserem Botfabrik-Projekt ([www.botfabrik.ch](http://www.botfabrik.ch)) etwas auffälliges erkennen kann. Dazu aktualisiere ich zuerst die beiden Node Module <em>react</em> und <em>react-dom</em> auf Version 15.4.0. und starte dann die Applikation.
 
 Um nun die Timeline in Chrome anschauen zu können, muss ich folgendes machen:
 

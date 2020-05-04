@@ -53,7 +53,7 @@ Wir brauchen mehr Flexibilität um auf neue Trends eingehen zu können. Ich sehe
 
 <h3>Eigenständige Apps</h3>
 
-Mit dem Manifest der <a href="http://www.lean-enterprise-app.com/">Lean Enterprise App</a> haben wir schon geschildert, wie wir uns dedizierte und benutzerzentrierte Apps vorstellen. Über die Zeit entstehen mit dieser Strategie viele relativ eigenständige Apps mit ihren eigenen Releasezyklen. Wir schaffen uns damit die Grundlage zu sehr viel Flexibilität. Wir können gerade im UI-Bereich einer App Änderungen vornehmen und nur eine beschränkte Anwendergruppe damit konfrontieren.
+Mit dem Manifest der [Lean Enterprise App](http://www.lean-enterprise-app.com/) haben wir schon geschildert, wie wir uns dedizierte und benutzerzentrierte Apps vorstellen. Über die Zeit entstehen mit dieser Strategie viele relativ eigenständige Apps mit ihren eigenen Releasezyklen. Wir schaffen uns damit die Grundlage zu sehr viel Flexibilität. Wir können gerade im UI-Bereich einer App Änderungen vornehmen und nur eine beschränkte Anwendergruppe damit konfrontieren.
 
 <h3>Freiheit bei der Wahl des UI-Frameworks</h3>
 
@@ -74,9 +74,9 @@ Natürlich lässt sich diese Aussage nicht verallgemeinern. Es gibt sicher gute 
 <h2>Referenzen und passende Links:</h2>
 
 <ul>
-	<li><a href="https://speakerdeck.com/stilkov/sustainable-architecture">Vortrag von Stefan Tilkov über Self Contained Systems</a></li>
-	<li><a href="http://dev.otto.de/2015/09/30/on-monoliths-and-microservices/">Otto Development-Blog über Monolithen und Microservices</a></li>
-	<li><a href="http://www.todaysoftmag.com/article/907/template-engines-for-java-web-development">Template engines im Überblick</a></li>
-	<li><a href="https://twitter.com/ModernWebUI/status/636940299801989120">JS-Framweork-Tweet</a></li>
-	<li><a href="http://www.usercentered.de/design/ueber-designprinzipien/">Über Designprinzipien</a></li>
+	<li>[Vortrag von Stefan Tilkov über Self Contained Systems](https://speakerdeck.com/stilkov/sustainable-architecture)</li>
+	<li>[Otto Development-Blog über Monolithen und Microservices](http://dev.otto.de/2015/09/30/on-monoliths-and-microservices/)</li>
+	<li>[Template engines im Überblick](http://www.todaysoftmag.com/article/907/template-engines-for-java-web-development)</li>
+	<li>[JS-Framweork-Tweet](https://twitter.com/ModernWebUI/status/636940299801989120)</li>
+	<li>[Über Designprinzipien](http://www.usercentered.de/design/ueber-designprinzipien/)</li>
 </ul>

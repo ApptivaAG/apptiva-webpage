@@ -11,18 +11,18 @@ categories:
   - Bots und Chatbots
 ---
 
-In unserem letzten Blogpost hat Philip über die <a href="http://apptiva.ch/bot-entwicklung/">Lancierung der Botfabrik</a> berichtet. Ich möchte in diesem Post etwas technischer werden und dir zeigen, wie wir unseren Chatbot Pit entwickelt haben. Pits Fähigkeiten kannst du übrigens hier ausprobieren: <a href="http://www.botfabrik.ch" target="_blank">www.botfabrik.ch</a>
+In unserem letzten Blogpost hat Philip über die [Lancierung der Botfabrik](/bot-entwicklung/) berichtet. Ich möchte in diesem Post etwas technischer werden und dir zeigen, wie wir unseren Chatbot Pit entwickelt haben. Pits Fähigkeiten kannst du übrigens hier ausprobieren: [www.botfabrik.ch](http://www.botfabrik.ch)
 
 <h2>Über Pit</h2>
 
-Pit ist ein Chatbot. Von Chatbots spricht man, wenn ein Bot, also ein Computerprogramm dass eine Aufgabe automatisiert und selbständig erledigt, mit einem Menschen eine Konversation führt. Chatbots laufen oft innerhalb von Webseiten oder Messaging-Anwendungen wie z.B. Facebook Chat oder Slack und vermitteln einem das Gefühl, mit einem richtigen Menschen zu chatten. Pit läuft innerhalb einer Webseite und hat die Aufgabe, Webseitenbesucher das Thema Bot näher zu bringen und sie bei Interesse ans Botfabrik Team weiterzuleiten; also ein Mischung von <a href="http://www.botfabrik.ch/bots/faq" target="_blank">FAQ</a>- und <a href="http://www.botfabrik.ch/bots/akquise" target="_blank">Akquise</a>-Bot.
+Pit ist ein Chatbot. Von Chatbots spricht man, wenn ein Bot, also ein Computerprogramm dass eine Aufgabe automatisiert und selbständig erledigt, mit einem Menschen eine Konversation führt. Chatbots laufen oft innerhalb von Webseiten oder Messaging-Anwendungen wie z.B. Facebook Chat oder Slack und vermitteln einem das Gefühl, mit einem richtigen Menschen zu chatten. Pit läuft innerhalb einer Webseite und hat die Aufgabe, Webseitenbesucher das Thema Bot näher zu bringen und sie bei Interesse ans Botfabrik Team weiterzuleiten; also ein Mischung von [FAQ](http://www.botfabrik.ch/bots/faq)- und [Akquise](http://www.botfabrik.ch/bots/akquise)-Bot.
 
 <h2>Der Client</h2>
 
 Wenn immer möglich versuchen wir, unsere Lösungen als Webapplikationen zu implementieren. Im Falle eines Chatbots setzen wir auf Single-page Applikationen (SPA), da wir damit dem Anwender das Gefühl einer nativen Chatapplikation vermitteln können.
-Wenn wir freie Wahl haben, bevorzugen wir <a href="https://facebook.github.io/react/" target="_blank">React</a> als JavaScript Framework zur Erstellung von SPAs.
+Wenn wir freie Wahl haben, bevorzugen wir [React](https://facebook.github.io/react/) als JavaScript Framework zur Erstellung von SPAs.
 
-Damit dir das Lesen dieses Beitrags einfacher fällt, hilft es, wenn du React und ES6 bereits etwas kennst. Als Einführung in React empfehle ich das Buch <a href="https://www.amazon.de/dp/3864903270" target="_blank">React: Die praktische Einführung in React, React Router und Redux</a> und natürlich die offizielle Dokumentation von Facebook <a href="https://facebook.github.io/react/" target="_blank">https://facebook.github.io/react/</a>.
+Damit dir das Lesen dieses Beitrags einfacher fällt, hilft es, wenn du React und ES6 bereits etwas kennst. Als Einführung in React empfehle ich das Buch [React: Die praktische Einführung in React, React Router und Redux](https://www.amazon.de/dp/3864903270) und natürlich die offizielle Dokumentation von Facebook [https://facebook.github.io/react/](https://facebook.github.io/react/).
 
 Um eine übersichtliche und wartbare Applikation zu erstellen, hilft eine einheitliche Architektur. Im React Umfeld kommt dafür vermehrt Redux zum Einsatz. Redux übernimmt den Zustand der Applikation sowie die Funktionalität die z.B. bei Benutzerinteraktionen ausgelöst wird.
 
@@ -185,14 +185,14 @@ Dank den Action-Creators, Actions und Reducers von Redux fliesst nun der Daten- 
 
 Wie bereits oben erwähnt, verlieren mit Redux die Komponenten neben dem Zustand auch die Verantwortung über der Funktionalität. Damit werden sie einfacher, verständlicher und besser wiederverwendbar. Die Action-Creators übernehmen neu die Funktionalität. Dies ist auch die einzige Stelle, in der asynchrone Aktivitäten (z.B. Serverzugriffe) ausgeführt werden.
 
-Nun kommen wir an den Punkt, wo wir die Benutzereingabe nicht nur in die Liste aller Chat-Nachrichten eintragen, und damit die Chat-Komponente neu rendern lassen, sondern wir möchten die Nachricht auch von unserem Chatbot Pit beantworten lassen. Dazu setzen wir Wit ein. Wit bietet eine API an, welches Texte in natürlicher Sprache in strukturierte Daten übersetzt. Unser Chatbot verwendet Wit um zu erkennen, was der Benutzer genau möchte und um die Steuerung von einfachen Abläufen inkl. Verzweigungen zu übernehmen. Antworten von Pit an den Besucher werden via Action ‘MESSAGE_FROM_PIT’ in den Store gestellt. Infos zu Wit findest du unter <a href="http://wit.ai" target="_blank">wit.ai</a>.
+Nun kommen wir an den Punkt, wo wir die Benutzereingabe nicht nur in die Liste aller Chat-Nachrichten eintragen, und damit die Chat-Komponente neu rendern lassen, sondern wir möchten die Nachricht auch von unserem Chatbot Pit beantworten lassen. Dazu setzen wir Wit ein. Wit bietet eine API an, welches Texte in natürlicher Sprache in strukturierte Daten übersetzt. Unser Chatbot verwendet Wit um zu erkennen, was der Benutzer genau möchte und um die Steuerung von einfachen Abläufen inkl. Verzweigungen zu übernehmen. Antworten von Pit an den Besucher werden via Action ‘MESSAGE_FROM_PIT’ in den Store gestellt. Infos zu Wit findest du unter [wit.ai](http://wit.ai).
 
 Wir erweitern also unseren Action-Creator sendMessageFromGuest(msg) mit dem Aufruf von Wit:
 
 ```javascript
 export function sendMessageFromGuest(msg) {
   const WIT_TOKEN = 'abc123def456'
-  return dispatch => {
+  return (dispatch) => {
     // Meldung dem Store übergeben, damit diese anschliessend via Reducer in den State kommt.
     dispatch({
       type: MESSAGE_FROM_GUEST,
@@ -200,14 +200,14 @@ export function sendMessageFromGuest(msg) {
     })
 
     // Text an Wit zur Analyse senden und von Wit erhaltenes Resultat als Meldung von Pit dem Store übergeben
-    wit.call(WIT_TOKEN, msg).then(result => {
+    wit.call(WIT_TOKEN, msg).then((result) => {
       dispatch(sendMessageFromPit(result))
     })
   }
 }
 ```
 
-Wie du an diesem Beispiel siehst, kann ein Action-Creator mittels der dispatch-Methode auch mehrere Actions an Redux weitergeben. Der Aufruf von Wit ist hier nur als Pseudocode dargestellt. Wie man Wit innerhalb einer JavaScript Anwendung verwenden kannst, findest du unter <a href="https://github.com/wit-ai/node-wit" target="_blank">https://github.com/wit-ai/node-wit</a>.
+Wie du an diesem Beispiel siehst, kann ein Action-Creator mittels der dispatch-Methode auch mehrere Actions an Redux weitergeben. Der Aufruf von Wit ist hier nur als Pseudocode dargestellt. Wie man Wit innerhalb einer JavaScript Anwendung verwenden kannst, findest du unter [https://github.com/wit-ai/node-wit](https://github.com/wit-ai/node-wit).
 
 &nbsp;
 
@@ -219,7 +219,7 @@ Wir haben nun zwei Action-Creators welche mit unserem Backend kommunizieren und 
 
 <h3>Redux: Middleware</h3>
 
-Eine Middleware ermöglicht, in den Ablauf zwischen dem Dispatchen einer Action und dem Verteilen der Action an die Reducers einzugreifen. Dies wird oft verwendet, um z.B. asynchrone Actions auszuführen oder um Änderungen am Zustand der Applikation zu loggen. Eine gute Einführung in die Redux Middleware findest du hier: <a href="http://redux.js.org/docs/advanced/Middleware.html" target="_blank">http://redux.js.org/docs/advanced/Middleware.html</a>
+Eine Middleware ermöglicht, in den Ablauf zwischen dem Dispatchen einer Action und dem Verteilen der Action an die Reducers einzugreifen. Dies wird oft verwendet, um z.B. asynchrone Actions auszuführen oder um Änderungen am Zustand der Applikation zu loggen. Eine gute Einführung in die Redux Middleware findest du hier: [http://redux.js.org/docs/advanced/Middleware.html](http://redux.js.org/docs/advanced/Middleware.html)
 
 Wir schreiben eine eigene WebSocket Middleware fürs Senden und Empfangen von Chat-Nachrichten. Der Ablauf sieht danach wie folgt aus:
 
@@ -233,15 +233,15 @@ SocketMiddleware erstellt eine WebSocket Verbindung mit dem Backend und fängt a
 import * as Actions from '../actions'
 import io from 'socket.io-client'
 
-const socketMiddleware = store => next => {
+const socketMiddleware = (store) => (next) => {
   let socket = null
 
   // Meldungen vom Server als Actions an Redux übergeben
-  const onMessageFromServer = (socket, store) => action => {
+  const onMessageFromServer = (socket, store) => (action) => {
     store.dispatch(action)
   }
 
-  return action => {
+  return (action) => {
     let result = next(action)
 
     switch (action.type) {
@@ -272,6 +272,6 @@ export default socketMiddleware
 Wir haben hier eine weitere Action vom Typ ‘CONNECT’ eingeführt. Diese wird innerhalb der componentDidMount() Methode der Chat Component aufgerufen, um die Verbindung mit dem Server herzustellen.
 
 <h2>Ausblick</h2>
-Wir haben jetzt den Client soweit, dass dieser mittels WebSocket mit dem Backend kommunizieren kann. Meldungen die der Benutzer eingibt, werden via Redux in den State gestellt und via Middleware an den Server übermittelt. Der Server kann beliebige Actions an den Client senden und diese werden via Redux vom Client verarbeitet. Im zweiten Teil dieses Blogposts kannst du dann lesen, wie wir das Backend implementiert haben. Folge uns auf Twitter <a href="http://twitter.com/ApptivaTeam" target="_blank">@ApptivaTeam</a> damit du nichts verpasst.
+Wir haben jetzt den Client soweit, dass dieser mittels WebSocket mit dem Backend kommunizieren kann. Meldungen die der Benutzer eingibt, werden via Redux in den State gestellt und via Middleware an den Server übermittelt. Der Server kann beliebige Actions an den Client senden und diese werden via Redux vom Client verarbeitet. Im zweiten Teil dieses Blogposts kannst du dann lesen, wie wir das Backend implementiert haben. Folge uns auf Twitter [@ApptivaTeam](http://twitter.com/ApptivaTeam) damit du nichts verpasst.
 
 > Du möchtest auch einen Chatbot der für dich wichtige Arbeiten erledigt? Brauchst du Unterstützung bei der Implementation eines Bots bzw. Chatbots? Nimm mit uns Kontakt auf, wir helfen gerne.

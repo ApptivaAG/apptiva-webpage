@@ -14,7 +14,7 @@ categories:
   - Qualitätssicherung
 ---
 
-Unsere JavaScript Projekte testen wir in der Regel mittels <a href="https://facebook.github.io/jest/" target="_blank" rel="noopener">Jest</a>, eine Testbibliothek von Facebook. Als Code-Editor verwenden wir <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a> von Microsoft.
+Unsere JavaScript Projekte testen wir in der Regel mittels [Jest](https://facebook.github.io/jest/), eine Testbibliothek von Facebook. Als Code-Editor verwenden wir [Visual Studio Code](https://code.visualstudio.com/) von Microsoft.
 
 Mit untenstehender Launch-Konfiguration kannst du Jest Tests in Visual Studio Code debuggen. Nachdem du sie zu deinen Launch-Konfigurationen hinzugefügt hast, kannst du den Jest Test selektieren und dann die Launch-Konfiguration starten. Alternativ kannst du auch die Datei, welche du testen möchtest selektieren. Jest sucht dann automatisch den dazugehörigen Test und führt diesen aus.
 
@@ -26,21 +26,21 @@ Unsere Launch-Konfiguration sieht nun so aus:
 
 ```json
 {
- "type": "node",
- "request": "launch",
- "name": "Debug Jest Test",
- "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
- "args": [
-   "${fileDirname}/${fileBasenameNoExtension}",
-   "--runInBand",
-   "--no-cache",
-   "--env=jsdom"
- ],
- "preLaunchTask": "npm: build:server",
- "envFile": "${workspaceRoot}/.env",
- "cwd": "${workspaceRoot}",
- "protocol": "inspector",
- "console": "integratedTerminal",
- "internalConsoleOptions": "neverOpen"
+  "type": "node",
+  "request": "launch",
+  "name": "Debug Jest Test",
+  "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+  "args": [
+    "${fileDirname}/${fileBasenameNoExtension}",
+    "--runInBand",
+    "--no-cache",
+    "--env=jsdom"
+  ],
+  "preLaunchTask": "npm: build:server",
+  "envFile": "${workspaceRoot}/.env",
+  "cwd": "${workspaceRoot}",
+  "protocol": "inspector",
+  "console": "integratedTerminal",
+  "internalConsoleOptions": "neverOpen"
 }
 ```

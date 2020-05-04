@@ -66,7 +66,7 @@ Qualitätsziele und -szenarien helfen beim Fällen von Architekturentscheide und
 
 <h2 class="p1">Weitere Infos</h2>
 <ul>
-	<li class="li1"><a href="http://www.swadok.de" target="_blank">http://www.swadok.de</a> - das Buch über Architekturdokumentation, von Stefan Zörner</li>
-	<li class="li1"><a href="http://www.arc42.de" target="_blank">http://www.arc42.de</a> - ein praktisches Template zur Dokumentation von Softwarearchitekturen</li>
-	<li class="li1"><a href="https://de.wikipedia.org/wiki/ISO/IEC_9126" target="_blank">https://de.wikipedia.org/wiki/ISO/IEC_9126</a> - Beschreibung der Norm sowie der Teilmerkmale</li>
+	<li class="li1">[http://www.swadok.de](http://www.swadok.de) - das Buch über Architekturdokumentation, von Stefan Zörner</li>
+	<li class="li1">[http://www.arc42.de](http://www.arc42.de) - ein praktisches Template zur Dokumentation von Softwarearchitekturen</li>
+	<li class="li1">[https://de.wikipedia.org/wiki/ISO/IEC_9126](https://de.wikipedia.org/wiki/ISO/IEC_9126) - Beschreibung der Norm sowie der Teilmerkmale</li>
 </ul>

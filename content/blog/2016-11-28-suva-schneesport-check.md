@@ -34,12 +34,12 @@ Uns wurde gleich zu Beginn ein grosses Konzept in die Hand gedrückt. Darin ware
 
 In der Runde haben wir alle Risiken auf Post-it-Zetteln gesammelt. Diese haben wir dann auf den Achsen “Wahrscheinlichkeit” und “Schweregrad” auf einem Flipchart platziert. Für alle Zettel im Quadranten “Wahrscheinlich und Schwerwiegend” haben wir eine Mitigationsstrategie beschrieben und die nötigen Task dafür festgehalten.
 
-<img src="img/schneesport-check-risiken.jpg" alt="Risiko-Matrix für die Entwicklung des Schneesport-Checks"  /> 
+<img src="img/schneesport-check-risiken.jpg" alt="Risiko-Matrix für die Entwicklung des Schneesport-Checks"  />
 
 Ein Risiko war fehlendes Suva-Framework Know-how. Unsere Strategie um dieses Risiko zu reduzieren war damals:
 
 <ul>
- 	<li>Möglichste schnell ein <a href="http://alistair.cockburn.us/Walking+skeleton" target="_blank">walking skeleton</a> zu haben</li>
+ 	<li>Möglichste schnell ein [walking skeleton](http://alistair.cockburn.us/Walking+skeleton) zu haben</li>
  	<li>Review durch das Suva-Framework-Team</li>
  	<li>Einführung in das Framework erhalten</li>
  	<li>Eine Beispielapplikation im Zugriff zu haben</li>
@@ -48,11 +48,11 @@ Unsere festgehaltenen Risiken hatten wir jederzeit im Griff und sind glückliche
 
 <h2>Storymap</h2>
 
-Die Storymap erlaubt es wie kein zweites Werkzeug ein gemeinsames Verständnis zwischen Personen zu schaffen. Zudem zeigt die Storymap eindrücklich den erwarteten Umfang auf und den geplanten Ablauf des Projekts in Bezug auf die Umsetzung. Eine Beschreibung des Werkzeuges “Storymaps” findet man hier: <a href="http://apptiva.ch/mehr-ueberblick-mit-storymap/">http://apptiva.ch/mehr-ueberblick-mit-storymap/</a>
+Die Storymap erlaubt es wie kein zweites Werkzeug ein gemeinsames Verständnis zwischen Personen zu schaffen. Zudem zeigt die Storymap eindrücklich den erwarteten Umfang auf und den geplanten Ablauf des Projekts in Bezug auf die Umsetzung. Eine Beschreibung des Werkzeuges “Storymaps” findet man hier: [apptiva.ch/mehr-ueberblick-mit-storymap/](/mehr-ueberblick-mit-storymap/)
 
 Die horizontalen Striche, die mit einem Titel versehen sind, zeigen, dass die Funktionalität des Schneesport-Checks in sechs Phasen unterteilt ist. Eine der wichtigsten Phasen ist bestimmt die erste; hier “Walking Skeleton” genannt. Mit dem Walking Skeleton will man möglichst schnell die grössten Risiken angehen. In unserem Falls war dies die technische Herausforderung und die grobe grafische Darstellung. Zudem wollten wir bereits eine erste Auswertung haben, um sicher zu stellen, dass wir diese korrekt verstanden haben.
 
-<img src="img/schneesport-check-storymap.jpg" alt="Schneesport-Check Story Map" /> 
+<img src="img/schneesport-check-storymap.jpg" alt="Schneesport-Check Story Map" />
 
 <h2>Release und Review</h2>
 
@@ -87,7 +87,7 @@ In einer zweiten Evolution haben wir die Texte überarbeitet und ein Hintergrund
 
 Mit der dritten und vierten Evolution haben wir je ein Hintergrundbild für Ski, Snowboard und Freeriding als Animation hinzugefügt, die Text auf Mobile kürzer gemacht und zusätzlich den “Neustart” eleganter gelöst. Auch bei dieser Evolutionsstufe gab es noch Dinge die wir gerne verbessert hätte, aber im Hinblick auf das Gesamtprojekt war dies ein Stand der seinen Zweck sehr gut erfüllt.
 
-<img src="img/schneesport-check-intro-screen.jpg" alt="Schneesport-Check Intro Screen"  /> 
+<img src="img/schneesport-check-intro-screen.jpg" alt="Schneesport-Check Intro Screen"  />
 
 <h3>Fragen</h3>
 
@@ -97,13 +97,13 @@ Mit der zweiten Evolutionsstufe haben wir nach Ideen gesucht, wie wir alle Frage
 
 Mit der dritten Evolutionsstufe haben wir einen Fortschrittsbalken im Panorama und einen expliziten “Zurück”-Button oben hinzugefügt. Diese Evolutionsstufe hat ihren Zweck erfüllt.
 
-<img src="img/schneesport-check-fragen-screen.jpg" alt="Schneesport-Check Fragen-Screen" /> 
+<img src="img/schneesport-check-fragen-screen.jpg" alt="Schneesport-Check Fragen-Screen" />
 
 <h2>Feinschliff</h2>
 
 Als wir das Beta-Stadium des Schneesport-Checks erreicht hatten, stellten wir von regelmässigen Reviews auf ein Trello-Board um. Da es sich nun um kleine Details und Korrekturen handelte, wollten wir diese tracken können, um den Überblick zu behalten. Alle die beim Schneesport-Check mitgearbeitet haben, hatten auf ein Trello-Board zugriff. Dort konnten sie sehr einfach und schnell ein Problem erfassen.
 
-<img src="img/schneesport-check-trello.jpg" alt="schneesport-check-trello"  /> 
+<img src="img/schneesport-check-trello.jpg" alt="schneesport-check-trello"  />
 
 Nach der Korrektur eines Tasks, schoben wir diesen von “In Bearbeitung” über “Behoben” zu “Veröffentlicht”. Diejenige Person die den Task ursprünglich erfasste, schaute ob das Problem behoben war. Diese Vorgehensweise war sehr leichtgewichtig und hat perfekt funktioniert.
 
@@ -111,4 +111,4 @@ Nach der Korrektur eines Tasks, schoben wir diesen von “In Bearbeitung” übe
 
 Zum Abschluss führten wir eine Retrospektive des gesamten Projektes durch. Alles in Allem wurde das Projekt von allen Beteiligten als grosser Erfolg bewertet. Alle waren der Meinung, dass die konstruktive Zusammenarbeit und das iterative Vorgehen massgebend waren. Die resultierende Lösung funktioniert sehr gut und die gesteckten Meilensteine wurden alle erreicht. Wir sind stolz darauf, Teil dieses Projektes gewesen zu sein.
 
-Der Schneesport-Check ist erreichbar unter: <a href="http://www.suva.ch/schneesportcheck" target="_blank">http://www.suva.ch/schneesportcheck</a>
+Der Schneesport-Check ist erreichbar unter: [http://www.suva.ch/schneesportcheck](http://www.suva.ch/schneesportcheck)

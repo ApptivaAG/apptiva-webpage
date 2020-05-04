@@ -30,7 +30,7 @@ Für Unternehmen welche die künftigen Umsatzverhältnisse nicht beurteilen kön
 
 Nun ist es aber nicht so, dass sich damit das Thema für ein Jahr erledigt hätte. Spätestens nach drei Monaten muss wieder geprüft werden, ob der Jahresumsatz über 100’000.- sein könnte. Dies berechnet die Dame vom Steueramt so:
 
-> Umsatz der ersten drei Monate * 4 >= 100’000.- CHF?
+> Umsatz der ersten drei Monate \* 4 >= 100’000.- CHF?
 
 Wenn ja, so muss spätestens ab diesem Zeitpunkt bezahlt werden. Punkt. Wer nicht sicher ist, sollte sich lieber zu früh als zu spät mit dem Steueramt in Verbindung setzen.
 
@@ -41,4 +41,4 @@ Wenn ja, so muss spätestens ab diesem Zeitpunkt bezahlt werden. Punkt. Wer nic
 <a href="https://www.gate.estv.admin.ch/mwst-webpublikationen/public/pages/taxInfos/cipherDisplay.xhtml?publicationId=1010164&amp;componentId=1010314&amp;winid=701377">https://www.gate.estv.admin.ch/mwst-webpublikationen/public/pages/taxInfos/cipherDisplay.xhtml?publicationId=1010164&amp;componentId=1010314&amp;winid=701377
 </a>
 
-<a href="https://www.gate.estv.admin.ch/mwst-webpublikationen/public/pages/taxInfos/cipherDisplay.xhtml?publicationId=1010164&amp;componentId=1010319&amp;winid=701377">https://www.gate.estv.admin.ch/mwst-webpublikationen/public/pages/taxInfos/cipherDisplay.xhtml?publicationId=1010164&amp;componentId=1010319&amp;winid=701377</a>
+[https://www.gate.estv.admin.ch/mwst-webpublikationen/public/pages/taxInfos/cipherDisplay.xhtml?publicationId=1010164&amp;componentId=1010319&amp;winid=701377](https://www.gate.estv.admin.ch/mwst-webpublikationen/public/pages/taxInfos/cipherDisplay.xhtml?publicationId=1010164&componentId=1010319&winid=701377)
