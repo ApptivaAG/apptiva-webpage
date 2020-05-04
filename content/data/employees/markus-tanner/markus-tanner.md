@@ -19,58 +19,75 @@ skills:
     items:
       - name: Scrum
         value: 100
-      - name: Lean
-        value: 50
       - name: User Centered Design
-        value: 75
+        value: 80
       - name: User Story Mapping
-        value: 75
+        value: 90
   - title: Architektur
     items:
       - name: Zusammenarbeit und Organisation
-        value: 50
+        value: 90
       - name: Entscheiden
-        value: 75
+        value: 80
       - name: Dokumentieren
-        value: 75
+        value: 80
   - title: Frontend
     items:
       - name: HTML5 / CSS3
-        value: 75
-      - name: Twitter Bootstrap
-        value: 75
+        value: 80
+      - name: React
+        value: 90
       - name: Angular
-        value: 75
-      - name: JavaScript
-        value: 50
+        value: 80
       - name: TypeScript
-        value: 100
-      - name: npm
-        value: 75
+        value: 90
   - title: Backend
     items:
       - name: Java
         value: 100
+      - name: Kotlin
+        value: 90
       - name: Java EE
-        value: 75
+        value: 80
       - name: Spring Boot
         value: 100
-      - name: RESTful
-        value: 100
+      - name: Node.js
+        value: 90
+
   - title: Mobile
     items:
-      - name: Android Platfrom
-        value: 50
+      - name: React Native
+        value: 90
       - name: Ionic
-        value: 100
+        value: 70
+      - name: Android
+        value: 80
+      - name: iOS
+        value: 80
+
+  - title: Cloud
+    items:
+      - name: Microsoft Azure
+        value: 60
+      - name: Amazon AWS
+        value: 70
+      - name: Google GCP
+        value: 70
+
   - title: Verschiedenes
     items:
       - name: Jenkins
-        value: 75
+        value: 80
       - name: Maven / Gradle
-        value: 75
-      - name: AsciiDoc / Markdown
-        value: 75
+        value: 80
+      - name: NPM
+        value: 90
+      - name: RESTful
+        value: 100
+      - name: GraphQL
+        value: 80
+      - name: Docker
+        value: 80
 ---
 
 # Meine Erfahrungen
