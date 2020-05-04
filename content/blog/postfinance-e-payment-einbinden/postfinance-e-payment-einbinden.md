@@ -6,7 +6,7 @@ image: postfinance-e-payment.png
 date: 2020-04-27
 author: Philip Schönholzer
 description: >-
-  In einem aktuellen Projekt setzen wir PostFinance E-Payment ein. Hier teilen wir hier unsere Erfahrungen und Eindrücke mit.
+  In einem aktuellen Projekt setzen wir PostFinance E-Payment ein. Hier teilen wir unsere Erfahrungen und Eindrücke.
 categories:
   - Allgemein
 ---
@@ -36,7 +36,7 @@ PostFinance E-Payment scheint uns eine gut funktionierende und sichere Zahlungsp
 
 Trotzdem sind uns einige weniger positive Punkte aufgefallen. Auf diese möchten wir nun auch noch kurz eingehen.
 
-Die Zahlungsplattform zeigt unverkennbar ihr Alter und wurde in den letzten Jahren offensichtlich nicht gross aktualisiert. Dies zeigt sich an der gewählten Art der Einbindung. Sie ist auf einem POST-Request an ein PostFinance-Server aufgebaut, welcher HTML zurück liefert. Dies hat folgende Konsequenzen:
+Die Zahlungsplattform zeigt unverkennbar ihr Alter und wurde in den letzten Jahren offensichtlich nicht gross aktualisiert. Dies zeigt sich an der gewählten Art der Einbindung. Sie ist auf einem POST-Request an einen PostFinance-Server aufgebaut, welcher HTML zurückliefert. Dies hat folgende Konsequenzen:
 
 - Auf unserer Seite muss ein HTML-Formular (ohne JavaScript) die Zahlung übermitteln. Eine andere Möglichkeit wie z.B. Fetch gibt es nicht, soweit wir das aus der Dokumentation entnehmen konnten. Dies ist eine bewährte aber eher "klassische" Art der Kommunikation.
 - Die Auswahl der Zahlungsmittel und die Eingabe der entsprechenden Daten findet zwingend auf der Webseite der PostFinance statt. Dieser Wechsel ist unschön und kann für Verwirrung sorgen. Auch optisch macht die Seite von der PostFinance nicht den frischesten Eindruck. Es sind etliche Konfigurationen notwendig, um das Erscheinungsbild ansprechend zu gestalten. Da sind andere Anbieter bereits einige Schritte voraus.
