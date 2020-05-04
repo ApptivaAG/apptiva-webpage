@@ -78,7 +78,7 @@ const Arrow = styled.a`
   border-radius: 50%;
   font-weight: 800;
   color: white;
-  background-color: ${props => props.theme.color.primary};
+  background-color: ${(props) => props.theme.color.primary};
   transition: transform 30ms ease-out;
   transform: translate3d(0, 0, 0);
   overflow: hidden;
@@ -120,12 +120,12 @@ const AnimatedArrow = styled.svg`
 const Info = styled.div`
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  color: ${p => p.theme.color.darkGray};
-  background-color: ${p => p.theme.color.lightBg};
+  color: ${(p) => p.theme.color.darkGray};
+  background-color: ${(p) => p.theme.color.lightBg};
 
   h3 {
     margin: 0;
-    color: ${p => p.theme.color.text};
+    color: ${(p) => p.theme.color.text};
   }
 `
 
@@ -179,7 +179,7 @@ export default () => {
       </Columns>
 
       <ArrowContainer>
-        <Arrow href="/#dienstleistungen">
+        <Arrow href="/#dienstleistungen" title="Zu den Dienstleistungen">
           <AnimatedArrow viewBox="0 0 16 10">
             <path
               d="M 2 2 L 8 8 L 14 2"
@@ -199,7 +199,7 @@ export default () => {
               flex-wrap: wrap;
               font-size: 0.6em;
               margin: 0 -1em;
-              background: ${p => p.theme.color.lightBg};
+              background: ${(p) => p.theme.color.lightBg};
               color: #666;
             `}
           >
