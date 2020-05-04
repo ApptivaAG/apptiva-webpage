@@ -8,7 +8,7 @@
 # Redirect for Google Ads in case that someone enters the URL written in the ad
 [[redirects]]
   from = "/entwicklung"
-  to = "/individuelle-entwicklung"
+  to = "/individuelle-entwicklung/"
 
 [[redirects]]
   from = "/#team"
@@ -16,11 +16,11 @@
 
 [[redirects]]
   from = "/#blog"
-  to = "/blog"
+  to = "/blog/"
 
 [[redirects]]
   from = "/#kontakt"
-  to = "/kontakt"
+  to = "/kontakt/"
 
 [[plugins]]
 package = "netlify-plugin-gatsby-cache"
