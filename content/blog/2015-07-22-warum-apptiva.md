@@ -24,8 +24,6 @@ Apptiva hat den Anspruch, der beste Arbeitgeber der Branche zu sein. Wir glauben
 
 > Apptiva zusammengefasst:
 >
-> * Mit passgenauen Lösungen die Anwender und Kunden glücklich machen
-> * Erfolgreiche Softwareprojekte sind die Norm
-> * Ein grossartiger Arbeitsplatz für Softwareentwickler
-
-Philip Schönholzer
+> - Mit passgenauen Lösungen die Anwender und Kunden glücklich machen.
+> - Erfolgreiche Softwareprojekte sind die Norm.
+> - Ein grossartiger Arbeitsplatz für Softwareentwickler.

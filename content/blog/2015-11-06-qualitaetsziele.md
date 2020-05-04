@@ -49,24 +49,23 @@ Um Architekturentscheide treffen oder eine bestehende Architektur bewerten zu k�
 ### Szenario zu Benutzbarkeit
 
 <ul>
-	<li>Eine Pflegefachfrau ruft das Patientendossier eines Patienten auf. Das System zeigt alle relevanten Daten unter einer Sekunde an.</li>
+ <li>Eine Pflegefachfrau ruft das Patientendossier eines Patienten auf. Das System zeigt alle relevanten Daten unter einer Sekunde an.</li>
 </ul>
 
 ### Szenario zu Verfügbarkeit
 
 <ul>
-	<li>Das Netzwerk fällt komplett aus. Die Mitarbeiter der Notfallabteilung können auf speziell definierten Arbeitsstationen alle Funktionen des Dashboards für bereits angemeldete Patienten aufrufen und zusätzlich neue Patienten voranmelden.</li>
+ <li>Das Netzwerk fällt komplett aus. Die Mitarbeiter der Notfallabteilung können auf speziell definierten Arbeitsstationen alle Funktionen des Dashboards für bereits angemeldete Patienten aufrufen und zusätzlich neue Patienten voranmelden.</li>
 </ul>
 
 # Fazit
 
 Qualitätsziele und -szenarien helfen beim Fällen von Architekturentscheide und machen Softwarearchitektur nachvollziehbar. Wir nehmen sie bei all unseren Entwicklungsprojekten zur Hilfe und haben damit durchwegs gute Erfahrungen gemacht.
 
-[PDF herunterladen](attachment/qualitaetsziele-a4.pdf)
+- [PDF herunterladen](attachment/qualitaetsziele-a4.pdf)
 
 <h2 class="p1">Weitere Infos</h2>
-<ul>
-	<li class="li1">[http://www.swadok.de](http://www.swadok.de) - das Buch über Architekturdokumentation, von Stefan Zörner</li>
-	<li class="li1">[http://www.arc42.de](http://www.arc42.de) - ein praktisches Template zur Dokumentation von Softwarearchitekturen</li>
-	<li class="li1">[https://de.wikipedia.org/wiki/ISO/IEC_9126](https://de.wikipedia.org/wiki/ISO/IEC_9126) - Beschreibung der Norm sowie der Teilmerkmale</li>
-</ul>
+
+- [http://www.swadok.de](http://www.swadok.de) - das Buch über Architekturdokumentation, von Stefan Zörner
+- [http://www.arc42.de](http://www.arc42.de) - ein praktisches Template zur Dokumentation von Softwarearchitekturen
+- [https://de.wikipedia.org/wiki/ISO/IEC_9126](https://de.wikipedia.org/wiki/ISO/IEC_9126) - Beschreibung der Norm sowie der Teilmerkmale

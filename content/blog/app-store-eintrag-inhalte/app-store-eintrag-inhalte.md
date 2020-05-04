@@ -13,17 +13,17 @@ categories:
 
 Apps im [Apple App-Store](https://www.apple.com/ios/app-store/) und [Google Play-Store](https://play.google.com/store) benötigen eine Beschreibung, damit die Kunden und Nutzer entscheiden können, ob sie eine App herunterladen wollen. Diese Beschreibung beinhaltet Icons, Name der App, eine Beschreibung, ein paar Screenshots usw. Für diese Inhalte geben die App-Stores die Qualität, Menge und Dimensionen vor, wie zum Beispiel die Auflösung oder Menge der Zeichen. Jeder Store hat dabei leicht andere Vorgaben. In der folgenden Übersicht listen wir die wichtigsten Store-Attribute.
 
-| Attribut           | iOS[![Externer Link](ext4-link.svg)][1]                 | Android[![Externer Link](ext4-link.svg)][2]             |
-| ------------------ | ------------------------------------------------------- | ------------------------------------------------------- |
-| Titel              | 30 Zeichen[![Externer Link](ext4-link.svg)][1]          | 50 Zeichen [![Externer Link](ext4-link.svg)][10]        |
-| Icon               | 1024px × 1024px PNG[![Externer Link](ext4-link.svg)][9] | 512px × 512px PNG[![Externer Link](ext4-link.svg)][11]  |
-| Kurzbeschreibung   | 30 Zeichen[![Externer Link](ext4-link.svg)][1]          | 80 Zeichen [![Externer Link](ext4-link.svg)][10]        |
-| Beschreibung       | Unbeschränkt                                            | 4000 Zeichen [![Externer Link](ext4-link.svg)][10]      |
-| Video (optional)   | 15 - 30 sek[![Externer Link](ext4-link.svg)][3]         | 30 - 120 sek[![Externer Link](ext4-link.svg)][5]        |
-| Screenshots        | bis 10 Bilder[![Externer Link](ext4-link.svg)][4]       | 2 - 8 Bilder[![Externer Link](ext4-link.svg)][5]        |
-| Schlüsselwörter    | 100 Zeichen[![Externer Link](ext4-link.svg)][1]         | In der Beschreibung                                     |
-| Vorstellungsgrafik | Keine                                                   | 1024px × 500px PNG[![Externer Link](ext4-link.svg)][6]  |
-| Kategorie          | Aus Liste auswählen[![Externer Link](ext4-link.svg)][7] | Aus Liste auswählen[![Externer Link](ext4-link.svg)][8] |
+| Attribut           | iOS [][1]                 | Android [][2]             |
+| ------------------ | ------------------------- | ------------------------- |
+| Titel              | 30 Zeichen [][1]          | 50 Zeichen [][10]         |
+| Icon               | 1024px × 1024px PNG [][9] | 512px × 512px PNG [][11]  |
+| Kurzbeschreibung   | 30 Zeichen [][1]          | 80 Zeichen [][10]         |
+| Beschreibung       | Unbeschränkt              | 4000 Zeichen [][10]       |
+| Video (optional)   | 15 - 30 sek [][3]         | 30 - 120 sek [][5]        |
+| Screenshots        | bis 10 Bilder [][4]       | 2 - 8 Bilder [][5]        |
+| Schlüsselwörter    | 100 Zeichen [][1]         | In der Beschreibung       |
+| Vorstellungsgrafik | Keine                     | 1024px × 500px PNG [][6]  |
+| Kategorie          | Aus Liste auswählen [][7] | Aus Liste auswählen [][8] |
 
 [1]: https://developer.apple.com/app-store/product-page/
 [2]: https://developer.android.com/distribute/best-practices/launch/store-listing.html

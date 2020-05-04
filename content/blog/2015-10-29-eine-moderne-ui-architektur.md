@@ -17,10 +17,10 @@ In den letzten Jahren durfte ich viele Erfahrungen mit Web-Anwendungen für den 
 Im Vergleich zu heutigen Web-GUI-Technologien wie z.B. AngularJS, React, Thymeleaf oder Rythm haben die alten Frameworks oft die folgenden Mängel:
 
 <ul>
-	<li>Für einfache Dinge oft zu komplex</li>
-	<li>Features, die heute von Web-GUIs erwartet werden, lassen sich oft nicht umsetzen.</li>
-	<li>Erweiterungen an den GUIs dauern zu lange.</li>
-	<li>Mobile-fähige UIs sind nicht möglich.</li>
+ <li>Für einfache Dinge oft zu komplex</li>
+ <li>Features, die heute von Web-GUIs erwartet werden, lassen sich oft nicht umsetzen.</li>
+ <li>Erweiterungen an den GUIs dauern zu lange.</li>
+ <li>Mobile-fähige UIs sind nicht möglich.</li>
 </ul>
 
 Viele arbeiten sogar mit Frameworks, die sie selbst entwickelt haben, weil vor ein paar  Jahren vieles einfach noch nicht vorhanden war. Die damals gute Entscheidung fühlt sich heute wie Ballast an. Wir müssen nicht nur damit arbeiten - wir müssen es auch noch pflegen und warten.
@@ -34,9 +34,9 @@ Was ist naheliegender als ein neues Framework zu evaluieren? Wir haben in der Zw
 Im Grunde ist das die gleiche Vorgehensweise, wie wir sie vor vielleicht zehn Jahren schon gewählt haben. Dieses mal einfach richtig. Aus damaliger Sicht haben wir uns aber auch schon für das perfekte Framework entschieden. Ich glaube, dass wir gerade an dieser Vorgehensweise etwas ändern müssen, wollen wir innert Kürze nicht wieder an diesem Punkt sein:
 
 <ul>
-	<li>Wir können aktuellen GUI-Trends nicht folgen.</li>
-	<li>Wir haben kaum Mitarbeiter, welche fit für neue UIs sind.</li>
-	<li>Hohe Investitionshürden hindern uns daran “modern” zu werden.</li>
+ <li>Wir können aktuellen GUI-Trends nicht folgen.</li>
+ <li>Wir haben kaum Mitarbeiter, welche fit für neue UIs sind.</li>
+ <li>Hohe Investitionshürden hindern uns daran “modern” zu werden.</li>
 </ul>
 
 Dieses Problem ist bei UI-Frameworks umso grösser. Die Halbwärtszeit ist verglichen zu den Server-Frameworks noch immer sehr kurz, was uns ein Blick auf Google Trend zeigt:
@@ -73,10 +73,8 @@ Natürlich lässt sich diese Aussage nicht verallgemeinern. Es gibt sicher gute 
 
 <h2>Referenzen und passende Links:</h2>
 
-<ul>
-	<li>[Vortrag von Stefan Tilkov über Self Contained Systems](https://speakerdeck.com/stilkov/sustainable-architecture)</li>
-	<li>[Otto Development-Blog über Monolithen und Microservices](http://dev.otto.de/2015/09/30/on-monoliths-and-microservices/)</li>
-	<li>[Template engines im Überblick](http://www.todaysoftmag.com/article/907/template-engines-for-java-web-development)</li>
-	<li>[JS-Framweork-Tweet](https://twitter.com/ModernWebUI/status/636940299801989120)</li>
-	<li>[Über Designprinzipien](http://www.usercentered.de/design/ueber-designprinzipien/)</li>
-</ul>
+- [Vortrag von Stefan Tilkov über Self Contained Systems](https://speakerdeck.com/stilkov/sustainable-architecture)
+- [Otto Development-Blog über Monolithen und Microservices](http://dev.otto.de/2015/09/30/on-monoliths-and-microservices/)
+- [Template engines im Überblick](http://www.todaysoftmag.com/article/907/template-engines-for-java-web-development)
+- [JS-Framweork-Tweet](https://twitter.com/ModernWebUI/status/636940299801989120)
+- [Über Designprinzipien](http://www.usercentered.de/design/ueber-designprinzipien/)

@@ -28,4 +28,4 @@ Zu guter Letzt können auch die Mitarbeiter von Schürch Getränke den Partyplan
 
 Mit dem Partyplaner konnten wir für die Schürch Getränke AG den Prozess der Festlieferungen digitalisieren. Dies erlaubt es Mitarbeitern, Bestellungen effizient und strukturiert zu erfassen, sowie Privatpersonen selber Festlieferungen zu konfigurieren. Durch Nutzung der Schnittstellen zum VinX konnten wir den Partyplaner in die bestehenden Prozesse integrieren, ohne dass dadurch hohe Kosten an dieser standardisierten Branchenlösung entstanden wären.
 
-Jetzt ausprobieren: [schurch.ch/partyplaner/](https://www.schurch.ch/partyplaner/)
+Jetzt ausprobieren: [schurch.ch/partyplaner](https://www.schurch.ch/partyplaner/)

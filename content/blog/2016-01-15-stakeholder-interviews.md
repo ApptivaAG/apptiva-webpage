@@ -56,9 +56,8 @@ Die Interviews sind die Basis für die Entwicklung. Um aus der Flut an Informati
 
 <h3>Anhang</h3>
 
-[Cheat sheet für Stakeholder-Interviews](attachment/stakeholder-interviews.pdf)
-
-[Vorlagen für Stakeholderfragen](https://github.com/ApptivaAG/kompakt-stakeholder-interview)
+- [Cheat sheet für Stakeholder-Interviews](attachment/stakeholder-interviews.pdf)
+- [Vorlagen für Stakeholderfragen](https://github.com/ApptivaAG/kompakt-stakeholder-interview)
 
 <h3>Weitere Literatur</h3>
 

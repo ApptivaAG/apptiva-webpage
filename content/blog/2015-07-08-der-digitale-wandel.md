@@ -35,5 +35,3 @@ Unternehmen setzen für einzelne Geschäftsprozesse vermehrt auf Standardsoftwar
 
 Oft werden in solchen Situationen Umgehungslösungen eingesetzt, welche in der Betreuung schwierig sind und häufig zu Fehlern führen.
 All diese Überlegungen und unsere Erfahrung in der Entwicklung von Enterprise Software haben uns dazu bewogen, die Apptiva AG zu gründen und damit in eine neue Ära vorzurücken. Folgen Sie mit uns zusammen in eine spannende und lehrreiche Zeit.
-
-Linus Hüsler
