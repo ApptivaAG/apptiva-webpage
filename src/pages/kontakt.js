@@ -12,13 +12,13 @@ import config from '../config'
 
 const Grid = styled.div`
   display: grid;
-  margin-top: 4em;
+  margin-top: 2em;
   gap: 1em;
 
   p {
-    margin: 0;
+    margin: 1.2em 0 0 0;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 800px) {
     grid: 1fr / 1fr 2fr;
 
     div + div {
@@ -30,11 +30,7 @@ const Grid = styled.div`
 `
 const ContactInfo = styled.a`
   display: block;
-  font-weight: 500;
-  margin-bottom: 1.4em !important;
-`
-const Address = styled.address`
-  font-weight: 500;
+  font-weight: bold;
   font-style: normal;
 `
 
@@ -72,7 +68,7 @@ const Kontakt = () => {
           <h1>Kontakt</h1>
           <p>{metadata.description}</p>
           <Grid>
-            <div css="pading-top: 2em;">
+            <div>
               <p>Telefon</p>
               <ContactInfo href="tel:+41413222626">041 322 26 26</ContactInfo>
               <p>Mail</p>
@@ -80,10 +76,10 @@ const Kontakt = () => {
                 info@apptiva.ch
               </ContactInfo>
               <p>Adresse</p>
-              <Address>
-                Neuenkirchstrasse 19 <br />
+              <ContactInfo as="address">
+                Apptiva AG <br /> Neuenkirchstrasse 19 <br />
                 6203 Sempach Station
-              </Address>
+              </ContactInfo>
               <Button css="font-size: 0.7em; margin-top: 1em;" href="#anfahrt">
                 Anfahrt
               </Button>
@@ -104,10 +100,11 @@ const Kontakt = () => {
             Apptiva befindet sich in Sempach an der Autobahn A2 und an der
             Bahnlinie zwischen Luzern und Sursee.
           </p>
-          <Address>
+          <ContactInfo as="address">
+            Apptiva AG <br />
             Neuenkirchstrasse 19 <br />
             6203 Sempach Station
-          </Address>
+          </ContactInfo>
 
           <iframe
             css="margin-top: 3em;"
