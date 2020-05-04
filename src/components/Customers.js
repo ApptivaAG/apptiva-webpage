@@ -31,7 +31,7 @@ const ImageList = styled.div`
 
 export default () => {
   return (
-    <Section dark>
+    <Section>
       <Container>
         <DeemphasizedTitle>Auswahl unserer Kunden</DeemphasizedTitle>
         <ImageList>

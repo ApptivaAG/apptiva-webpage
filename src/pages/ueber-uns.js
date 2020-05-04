@@ -9,6 +9,7 @@ import { description, company } from '../config'
 import Layout from '../components/Layout'
 import Employees from '../components/Employees'
 import SEO from '../components/SEO'
+import CallToAction from '../components/CallToAction'
 
 const query = graphql`
   query {
@@ -78,6 +79,7 @@ const AboutUs = () => {
         </Section>
         <Img fluid={officeImage.childImageSharp.fluid} />
         <Employees />
+        <CallToAction />
       </main>
     </Layout>
   )

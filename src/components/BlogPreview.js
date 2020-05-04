@@ -51,7 +51,7 @@ export default () => {
     blogs: { edges: posts },
   } = useStaticQuery(query)
   return (
-    <Section id="blog" dark>
+    <Section id="blog">
       <Container>
         <DeemphasizedTitle>Blog</DeemphasizedTitle>
 

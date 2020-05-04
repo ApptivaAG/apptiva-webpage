@@ -19,6 +19,7 @@ import SEO from '../components/SEO'
 import Testimonials from '../components/Testimonials'
 import BlogPreview from '../components/BlogPreview'
 import Customers from '../components/Customers'
+import CallToAction from '../components/CallToAction'
 
 const Blockquote = styled.blockquote`
   margin-top: 4em;
@@ -126,10 +127,12 @@ const IndexPage = ({ partners, appsImage, chatbot, partyplaner }) => (
           </Blockquote>
         </Container>
       </Section>
+      <CallToAction dark />
+
       <Customers />
       <Testimonials />
       <BlogPreview />
-      <Section>
+      <Section dark>
         <Container>
           <DeemphasizedTitle>Partner</DeemphasizedTitle>
           <PartnerImage>
@@ -146,6 +149,7 @@ const IndexPage = ({ partners, appsImage, chatbot, partyplaner }) => (
           </PartnerImage>
         </Container>
       </Section>
+      <CallToAction />
     </main>
   </Layout>
 )

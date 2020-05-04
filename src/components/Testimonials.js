@@ -113,11 +113,11 @@ const query = graphql`
 export default () => {
   const { testimonials } = useStaticQuery(query)
   return (
-    <Section>
+    <Section dark>
       <Container>
         <DeemphasizedTitle>Testimonials</DeemphasizedTitle>
         <TestimonialsStyle>
-          {testimonials.edges.map(edge => {
+          {testimonials.edges.map((edge) => {
             const {
               name,
               position,
