@@ -48,12 +48,14 @@ const ContactList = styled.ul`
   list-style: none;
   padding: 0;
 
-  li {
-    margin-bottom: 0.3em;
-  }
-
   a {
+    display: inline-block;
+    padding: 0.1em 0;
     white-space: nowrap;
+    transition: transform 0.3s;
+    &:hover {
+      transform: scale(1.06);
+    }
 
     i {
       margin-right: 0.5em;

@@ -11,59 +11,37 @@ import { Section, Title, Subtitle, Container } from '../style'
 const EmployeeList = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 auto;
-  max-width: 800px;
+  justify-content: space-around;
+  margin: 0 -0.5rem;
 `
-const EmployeeWrapper = styled.div`
+const Employee = styled.div`
   font-size: 0.8em;
-  flex: 1 0 10rem;
-  margin: 2rem 0.5rem;
+  flex: 0 1 10rem;
+  margin: 1.5rem 0.5rem;
 
   @media (max-width: 500px) {
     text-align: center;
   }
 `
-const Employee = styled.div`
-  width: 10rem;
-  margin-left: auto;
-  margin-right: auto;
-`
 const Avatar = styled(Img)`
   border: 3px solid #eee;
   border-radius: 50%;
   margin-right: 1em;
-  transform: translateZ(0); /* Safari bug rounded image flicker  */
+  transform: none !important; /* Don't transform img because LinkStyled is already */
 `
 const LinkStyled = styled(Link)`
   display: block;
-  /* transition: transform 0.3s;
+  transition: transform 0.3s;
   &:hover {
     transform: scale(1.06);
-  } */
+  }
 `
 const Name = styled.h2`
   margin: 0;
-  color: ${props => props.theme.color.primary};
+  color: ${(props) => props.theme.color.primary};
 `
 const Claim = styled.div`
   font-size: 0.8em;
-`
-const Contact = styled.div`
-  font-size: 0.9em;
-  margin-top: 1em;
-  a {
-    display: block;
-    margin-top: 0.4em;
-    color: #777;
-    white-space: nowrap;
-
-    i {
-      font-size: 0.9em;
-      margin-right: 0.4em;
-      color: #aaa;
-    }
-  }
 `
 const query = graphql`
   query {
@@ -80,11 +58,6 @@ const query = graphql`
             slug
             name
             claim
-            contact {
-              tel
-              mail
-              twitter
-            }
             preview {
               childImageSharp {
                 fixed(width: 200, height: 200) {
@@ -114,44 +87,21 @@ export default () => {
           Enterprise-Software.
         </Subtitle>
         <EmployeeList>
-          {employees.edges.map(edge => {
-            const {
-              name,
-              claim,
-              contact,
-              slug,
-              preview,
-            } = edge.node.frontmatter
+          {employees.edges.map((edge) => {
+            const { name, claim, slug, preview } = edge.node.frontmatter
             return (
-              <EmployeeWrapper key={edge.node.id}>
-                <Employee>
-                  <LinkStyled to={slug}>
-                    <Avatar
-                      fixed={{
-                        ...preview.childImageSharp.fixed,
-                        base64: preview.childImageSharp.sqip.dataURI,
-                      }}
-                    />
-                    <Name>{name}</Name>
-                    <Claim>{claim}</Claim>
-                  </LinkStyled>
-                  <Contact>
-                    <a href={`tel:${contact.tel}`}>
-                      <i className="fas fa-phone" />
-                      {contact.tel}
-                    </a>
-                    <a href={`mailto:${contact.mail}`}>
-                      <i className="fas fa-envelope" />
-                      {contact.mail}
-                    </a>
-                    {contact.twitter && (
-                      <a href={`https://twitter.com/${contact.twitter}`}>
-                        <i className="fab fa-twitter" />@{contact.twitter}
-                      </a>
-                    )}
-                  </Contact>
-                </Employee>
-              </EmployeeWrapper>
+              <Employee key={edge.node.id}>
+                <LinkStyled to={slug}>
+                  <Avatar
+                    fixed={{
+                      ...preview.childImageSharp.fixed,
+                      base64: preview.childImageSharp.sqip.dataURI,
+                    }}
+                  />
+                  <Name>{name}</Name>
+                  <Claim>{claim}</Claim>
+                </LinkStyled>
+              </Employee>
             )
           })}
         </EmployeeList>
