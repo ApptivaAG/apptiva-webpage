@@ -48,7 +48,9 @@ export const PartnerTemplate = ({
           <Grid>
             <div>
               <HeaderTitle dangerouslySetInnerHTML={{ __html: name }} />
-              <a href={url}>{url}</a>
+              <a href={url} target="_blank" rel="noopener noreferrer">
+                {url}
+              </a>
             </div>
             <Img css="margin: 2em 0" fixed={logo.childImageSharp.fixed} />
             <HTMLContent css="grid-area: content" content={content} />

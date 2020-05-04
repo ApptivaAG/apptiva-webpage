@@ -7,12 +7,14 @@ import styledNormalize from 'styled-normalize'
 
 import fontFace from './font-face'
 
+import newTab from './img/new-tab.svg'
+
 export const Section = styled.section`
   position: relative;
   padding-top: 2em;
   padding-bottom: 4em;
 
-  ${props =>
+  ${(props) =>
     props.dark &&
     css`
       background-color: ${props.theme.color.lightBg};
@@ -77,7 +79,7 @@ export const sharedButtonStyle = css`
   border-radius: 0.1em;
   font-weight: 500;
   color: white;
-  background-color: ${props => props.theme.color.primary};
+  background-color: ${(props) => props.theme.color.primary};
   transition: transform 30ms ease-out;
   transform: translate3d(0, 0, 0);
   box-sizing: border-box;
@@ -139,9 +141,9 @@ export const Icon = styled.div`
   width: 2em;
   font-size: 1.5em;
   margin-right: 0.6em;
-  color: ${props => props.theme.color.bg};
+  color: ${(props) => props.theme.color.bg};
   border-radius: 50%;
-  background-color: ${props => props.theme.color.secondary};
+  background-color: ${(props) => props.theme.color.secondary};
 `
 
 export const ImgStyled = styled(Img)`
@@ -166,13 +168,13 @@ export const ListItem = styled.li`
   border: 1px solid lightgray;
   border-radius: 0.2em;
   background-color: white;
-  text-align: ${props => (props.align ? props.align : 'center')};
+  text-align: ${(props) => (props.align ? props.align : 'center')};
 
   a {
     flex: 1 1 auto;
-    padding: ${props => (props.full ? 0 : '1em')};
+    padding: ${(props) => (props.full ? 0 : '1em')};
     border-radius: 0.2em;
-    color: ${props => props.theme.color.text};
+    color: ${(props) => props.theme.color.text};
     overflow: hidden;
 
     p {
@@ -184,8 +186,8 @@ export const ListItem = styled.li`
     }
 
     &:hover {
-      color: ${props => props.theme.color.bg};
-      background-color: ${props => props.theme.color.primary};
+      color: ${(props) => props.theme.color.bg};
+      background-color: ${(props) => props.theme.color.primary};
 
       ${ImgStyled}, svg {
         transform: scale(1.06);
@@ -197,7 +199,7 @@ export const ListItem = styled.li`
   h2,
   h3,
   h4 {
-    margin: 0.1em ${props => (props.full ? '1rem' : 0)};
+    margin: 0.1em ${(props) => (props.full ? '1rem' : 0)};
   }
   h3 {
     font-size: 1em;
@@ -208,15 +210,15 @@ export const ListItem = styled.li`
   }
 
   ${ImgStyled} {
-    margin-top: ${props => (props.full ? 0 : '1rem')};
-    margin-bottom: ${props => (props.full ? '.6rem' : 0)};
+    margin-top: ${(props) => (props.full ? 0 : '1rem')};
+    margin-bottom: ${(props) => (props.full ? '.6rem' : 0)};
     margin-left: auto;
     margin-right: auto;
   }
 
   p {
     line-height: 1.2;
-    margin: 1em ${props => (props.full ? '1rem' : 0)};
+    margin: 1em ${(props) => (props.full ? '1rem' : 0)};
   }
 `
 
@@ -270,6 +272,13 @@ export const GlobalStyle = createGlobalStyle`
       &:hover {
         transform: scale(1.06);
       }
+    }
+
+    &[target="_blank"]:not(.gatsby-resp-image-link):after {
+      content: url(${newTab});
+      vertical-align: middle;
+      padding: 0.1em 0.4em;
+      transform: scale(0.8)
     }
   }
   

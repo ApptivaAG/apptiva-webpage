@@ -6,9 +6,6 @@ module.exports = {
     siteUrl: config.url, // needed in gatsby-plugin-sitemap
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    `gatsby-plugin-sitemap`,
-    'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -37,7 +34,6 @@ module.exports = {
       options: {
         plugins: [
           'gatsby-remark-external-links',
-          'gatsby-plugin-catch-links',
           'gatsby-remark-smartypants',
           {
             resolve: 'gatsby-remark-emoji',
@@ -80,6 +76,10 @@ module.exports = {
         ],
       },
     },
+    'gatsby-plugin-react-helmet',
+    `gatsby-plugin-sitemap`,
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-catch-links',
     'gatsby-plugin-svgr',
     {
       resolve: 'gatsby-plugin-manifest',
