@@ -271,8 +271,9 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
           </h2>
           {!isExpanded && (
             <p>
-              Rufen Sie uns an unter <a href="+41413222626">041 322 26 26</a>{' '}
-              oder schreiben Sie uns.
+              Rufen Sie uns an unter{' '}
+              <a href="tel:+41413222626">041 322 26 26</a> oder schreiben Sie
+              uns.
             </p>
           )}
           {/* eslint-disable-next-line react/jsx-props-no-spreading */}
@@ -281,7 +282,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
               Füllen Sie unser Formular aus oder schreiben Sie ein Mail an{' '}
               <a href="mailto:info@apptiva.ch">info@­apptiva.ch</a> und wir
               melden uns sobald wie möglich bei ihnen. Sie erreichen uns auch
-              per Telefon unter <a href="+41413222626">041 322 26 26</a>.
+              per Telefon unter <a href="tel:+41413222626">041 322 26 26</a>.
             </p>
             <ContactForm />
           </div>
