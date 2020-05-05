@@ -5,8 +5,6 @@ import Img from 'gatsby-image'
 import styled, { css, createGlobalStyle } from 'styled-components'
 import styledNormalize from 'styled-normalize'
 
-import fontFace from './font-face'
-
 import newTab from './img/new-tab.svg'
 
 export const Section = styled.section`
@@ -236,7 +234,6 @@ export const theme = {
 
 export const GlobalStyle = createGlobalStyle`
   ${styledNormalize}
-  ${fontFace}
 
   html {
     font-size: 20px;
