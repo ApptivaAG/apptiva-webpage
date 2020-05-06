@@ -21,9 +21,7 @@ if (typeof window !== 'undefined') {
 const Layout = ({ children, showHero = false }) => (
   <ThemeProvider theme={theme}>
     <Lightbox>
-      <Helmet title={config.title}>
-        <link rel="stylesheet" type="text/css" href="/fonts.css" />
-      </Helmet>
+      <Helmet title={config.title} />
       {showHero && <Hero />}
       <Navbar location={showHero && 'root'} />
       {children}
