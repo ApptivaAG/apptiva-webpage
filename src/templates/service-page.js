@@ -330,7 +330,7 @@ export const pageQuery = graphql`
         image {
           childImageSharp {
             fluid(maxWidth: 960, srcSetBreakpoints: [340, 960, 1600]) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
             resize(width: 1200, height: 630, cropFocus: ENTROPY) {
               src
@@ -356,7 +356,7 @@ export const pageQuery = graphql`
           image {
             childImageSharp {
               fluid(maxWidth: 960, srcSetBreakpoints: [340, 960, 1600]) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
@@ -371,7 +371,7 @@ export const pageQuery = graphql`
             image {
               childImageSharp {
                 fluid(maxWidth: 960, srcSetBreakpoints: [340, 960, 1600]) {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
