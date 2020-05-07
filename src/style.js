@@ -3,7 +3,6 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import styled, { css, createGlobalStyle } from 'styled-components'
-import styledNormalize from 'styled-normalize'
 
 import newTab from './img/new-tab.svg'
 
@@ -233,8 +232,6 @@ export const theme = {
 }
 
 export const GlobalStyle = createGlobalStyle`
-  ${styledNormalize}
-
   html {
     font-size: 20px;
     font-family: Gentona, sans-serif;
