@@ -113,14 +113,15 @@ const IndexPage = ({ partners, appsImage, chatbot, partyplaner }) => (
           <Blockquote>
             <h3>Unsere Spezialität</h3>
             <p css="margin-bottom: 0">
-              Das Erstellen von individuellen Softwarelösungen ist unsere
-              Spezialität. Wir unterstützen Sie bei der digitalen Transformation
-              Ihres Unternehmens und beschleunigen Ihre Geschäftsprozesse. Dazu
-              setzen wir modernste Methoden und Technologien ein und liefern
-              schlanke und passgenaue Lösungen: „Lean Enterprise Apps“. Unsere
-              Apps füllen die Lücken, die Standardsoftware nicht füllen kann.
+              Das Entwickeln von individuellen Apps und Applikationen ist unsere
+              Spezialität. Damit beschleunigen wir Ihre Geschäftsprozesse und
+              unterstützen Sie bei der digitalen Transformation Ihres
+              Unternehmens. Wir pflegen eine enge und direkte Zusammenarbeit mit
+              unseren Kunden, um schnell und in hoher Qualität schlanke und
+              passgenaue Lösungen bereitzustellen.
             </p>
             <Buttonlist>
+              <Button to="/ueber-uns">Mehr über uns erfahren</Button>
               <Button to="/vorgehensweise">Unser Vorgehen</Button>
               <Button to="/unsere-kompetenzen">Unsere Kompetenzen</Button>
             </Buttonlist>
