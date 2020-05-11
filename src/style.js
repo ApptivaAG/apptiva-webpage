@@ -301,13 +301,18 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   blockquote {
-    margin: 1rem;
+    margin: 1rem 0;
     background: #F8f8f8;
     padding: 0 1rem;
     border-top: 1px solid rgba(0, 0, 0, 0.04) ;
     border-bottom: 1px solid rgba(0, 0, 0, 0.04) ;
     border-right: 1px solid rgba(0, 0, 0, 0.04) ;
     border-left: 3px solid #008FD7;
+
+    @media (min-width: 768px) {
+      margin: 1rem 2rem;
+      
+    }
   }
 
   svg {
