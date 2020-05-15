@@ -3,7 +3,7 @@ title: 'Erfahrungen mit Electron und Webview'
 slug: erfahrungen-mit-electron-webview
 templateKey: blog-post
 image: electron-webview.png
-date: 2020-05-18
+date: 2020-05-15
 author: Renato Wasescha
 description: >-
   In einigen Projekten konnten wir wertvolle Erfahrungen mit dem Electron Framework sammeln. In diesem Blogbeitrag gebe ich einen Überblick über meine Erkenntnisse.
