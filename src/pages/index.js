@@ -117,8 +117,8 @@ const IndexPage = ({ partners, appsImage, chatbot, partyplaner }) => (
               Spezialität. Damit beschleunigen wir Ihre Geschäftsprozesse und
               unterstützen Sie bei der digitalen Transformation Ihres
               Unternehmens. Wir pflegen eine enge und direkte Zusammenarbeit mit
-              unseren Kunden, um schnell und in hoher Qualität schlanke und
-              passgenaue Lösungen bereitzustellen.
+              unseren Kunden, um schnell und in hoher Qualität passgenaue
+              Lösungen bereitstellen zu können.
             </p>
             <Buttonlist>
               <Button to="/ueber-uns">Mehr über uns erfahren</Button>
