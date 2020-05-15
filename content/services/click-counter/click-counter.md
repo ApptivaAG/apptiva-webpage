@@ -25,7 +25,7 @@ introduction: |
 
   ## Installation
 
-  Installieren Sie die App gleich jetzt ...
+  Installieren Sie die App gleich jetzt: https://silly-lichterman-dc46d6.netlify.app/
 
 bulletGroups:
   - title: PRO Features
