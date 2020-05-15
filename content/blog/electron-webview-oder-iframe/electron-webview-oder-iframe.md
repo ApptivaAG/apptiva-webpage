@@ -32,7 +32,7 @@ Eines der grössten Herausforderungen war wohl die Navigation von mehreren Seite
 > ### Warnung
 >
 > Der Webview-Tag von Electron basiert auf dem Webview von Chromium, dessen Architektur dramatischen Veränderungen unterworfen ist. Dies wirkt sich auf die Stabilität der Webansichten aus, einschliesslich Rendering, Navigation und Ereignis-Routing. Wir empfehlen derzeit, das Webview-Tag nicht zu verwenden und Alternativen wie iframe, Electron's BrowserView oder eine Architektur in Betracht zu ziehen, die ganz auf eingebettete Inhalte verzichtet.
-> <br></Auf>
+> <br></br>
 > Quelle: [electronjs.org/Docs/API/Webview-Tag](https://www.electronjs.org/docs/api/webview-tag)
 
 Aufgrund dieser aktuellen Entwicklungen müsste man eigentlich auf Webview in Electron Apps verzichten. Jedenfalls haben iframe oder BrowserView ebenfalls ihre Nachteile, die dann wieder eher für den Einsatz von Webview sprechen.
@@ -79,7 +79,6 @@ Anschliessend wird die eingebundene Webseite in unsere Electron Applikation gela
 Mit Electron ist es auch möglich, authentifizierte Seiten anzuzeigen, ohne dass sich der Benutzer anmelden muss. Auch wenn ein Proxy dazwischen steht, ist es möglich, sich per Electron anzumelden. Dies wird folgendermassen realisiert:
 
 ```typescript
-// Basic-Authentifizierung Login
 app.on(
   'login',
   async (
