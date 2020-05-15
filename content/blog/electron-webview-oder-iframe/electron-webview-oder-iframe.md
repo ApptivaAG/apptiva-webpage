@@ -1,33 +1,33 @@
 ---
-title: 'Unsere Erfahrungen mit Electron und Webview'
-slug: unsere-erfahrungen-mit-electron-webview
+title: 'Erfahrungen mit Electron und Webview'
+slug: erfahrungen-mit-electron-webview
 templateKey: blog-post
 image: electron-webview.png
 date: 2020-05-18
 author: Renato Wasescha
 description: >-
-  In einigen Projekten, die wir für unsere Kunden realisieren durften, haben wir wertvolle Erfahrungen mit dem Electron Framework gemacht.
+  In einigen Projekten konnten wir wertvolle Erfahrungen mit dem Electron Framework sammeln. In diesem Blogbeitrag gebe ich einen Überblick über meine Erkenntnisse.
 categories:
   - Allgemein
 ---
 
-Folgende Kriterien für eine Desktop Applikation wurden von unseren Kunden in Auftrag gegeben:
+## Anforderungen
 
-- Navigation von mehreren Tabs müssen flexibel und editierbar sein
-  <br>Drag'n'Drop</br>
-- Automatisches Login für basic authentifizierte Seiten
-- Globale Tastenkombinationen erstellen und eigene Befehle ausführen können
-  - Beispiel für eine Hausautomation
-    <br>Ctrl + 1, https://apptiva.ch/?lightOn=true</br>
-  - Aus markierten Telefonnummern einen Webservice auslösen können
-    <br>F8, https://apptiva.ch/?tel=+413222626</br>
-- Applikation im Kiosk-Modus oder Vollbildmodus starten können
-- Applikation per Konfiguration (config.json) starten und diese während der Installation in den vorrausgesehen Pfad kopieren können. Dies ermöglicht dem Herausgeber eine vorkonfigurierte Applikation.
+Bei Anforderungen für eine Desktop Applikation werden oft folgende Punkte genannt:
+
+- Navigation in mehreren Tabs muss flexibel und editierbar sein
+- Drag & Drop
+- Automatisches Login für Basic authentifizierte Seiten
+- Globale Tastenkombinationen erstellen und eigene Befehle ausführen
+- Applikation im Kiosk-Modus oder Vollbildmodus starten
+- Applikation per Konfiguration (config.json) starten und diese während der Installation in den vordefinierten Pfad kopieren
 - Automatische Updates
 - EV Code Signing Certificates
 - Für Windows und Linux bereitstellen
 
-Eines der grössten Herausforderungen war wohl die Navigation von mehreren Seiten. Da die Applikation mit mehreren Tabs, wie in einem Browser klar kommen sollte, haben wir die Electron Dokumentation zur Hilfe genommen. Auf der offiziellen Electron-Webview Dokumentation erscheint zu Beginn folgende Warnung:
+## Herausforderungen
+
+Dabei ist eine der grössten Herausforderungen wohl die Navigation zwischen mehreren Seiten. Da die Applikation mit mehreren Tabs - wie in einem Browser - klarkommen sollte, haben wir zunächst mal etwas Recherche betrieben. Auf der offiziellen Electron-Webview Dokumentation erscheint zu Beginn dann aber leider folgende Warnung:
 
 > ### Warnung
 >
@@ -35,23 +35,23 @@ Eines der grössten Herausforderungen war wohl die Navigation von mehreren Seite
 > <br></br>
 > Quelle: [electronjs.org/Docs/API/Webview-Tag](https://www.electronjs.org/docs/api/webview-tag)
 
-Aufgrund dieser aktuellen Entwicklungen müsste man eigentlich auf Webview in Electron Apps verzichten. Jedenfalls haben iframe oder BrowserView ebenfalls ihre Nachteile, die dann wieder eher für den Einsatz von Webview sprechen.
+Aufgrund dieser aktuellen Entwicklungen müsste man eigentlich auf Webview in Electron Apps verzichten. Allerdings haben iframe oder BrowserView ebenfalls ihre Nachteile, die dann wieder eher für den Einsatz von Webview sprechen. Auf diese Vor- und Nachteile möchte ich nun kurz eingehen.
 
-## Nachteile iframe
+## Vor- und Nachteile
 
-Ein iframe kennt wohl jeder Entwickler und hat höchstwahrscheinlich Erfahrungen damit. Der Vorteil liegt eigentlich nur darin, dass diese schnell eingebunden werden können und man schnell an Ergebnisse kommt. In einer Electron Applikation würden alle Frames im gleichen Prozess laufen. Bei Gebrauch von mehreren iframes könnte dies zu Problemen führen. Eine einzelne Webseite, die abstürzt, könnte somit die ganze Applikation zum Absturz bringen.
+### iframe
 
-## Nachteile BrowserView
+Ein iframe kennt wohl jeder Entwickler und hat höchstwahrscheinlich Erfahrung damit. Der Vorteil liegt eigentlich nur darin, dass iframes schnell eingebunden werden können und man schnell zu Ergebnissen kommt. In einer Electron Applikation würden alle Frames im gleichen Prozess laufen. Bei der Verwendung von mehreren iframes könnte dies zu Problemen führen. Eine einzelne Webseite, die abstürzt, könnte somit die ganze Applikation zum Absturz bringen.
 
-Das Hauptfenster wird in Electron in einer BrowserView gestartet. Meistens reicht dies aus und ist wohl die beste Wahl, Inhalte darzustellen. Wenn jedoch in diesem Hauptfenster andere Inhalte von anderen Webseiten dargestellt werden sollen, geht kaum ein Weg an iframes oder Webview vorbei.
+### BrowserView
 
-## Nachteile Webview
+Das Hauptfenster wird in Electron in einer BrowserView gestartet. Meistens reicht dies aus und ist wohl die beste Wahl, Inhalte darzustellen. Wenn jedoch in diesem Hauptfenster andere Inhalte von anderen Webseiten dargestellt werden sollen, geht kaum ein Weg an iframes oder Webviews vorbei.
 
-Der einzige Nachteil ist, dass die Webview unter Electron aktuell einschneidenden Veränderungen unterworfen ist. Dies fordert vom Entwickler mehr Aufwand und viel Flexibilität. Dennoch sind wir von der Apptiva überzeugt, dass Webview nach wie vor die qualitativ beste Lösung ist und wir diesen Mehraufwand gerne auf uns nehmen.
+### Webview
 
-## Vorteile Webview
+Der einzige Nachteil ist, dass die Webview unter Electron aktuell einschneidenden Veränderungen unterworfen ist. Dies fordert vom Entwickler mehr Aufwand und viel Flexibilität. Dennoch sind wir von der Apptiva überzeugt, dass Webview nach wie vor die qualitativ beste Lösung ist, und wir diesen Mehraufwand gerne auf uns nehmen.
 
-Abgesehen davon, hat Webview immer noch zahlreiche überzeugende Vorteile. Einer davon ist wohl, dass jede Webseite, die in einer Webview geladen wird, in einem separaten isolierten Prozess läuft. Die Interaktionen zwischen ihrer Anwendung und dem eingebetteten Inhalt erfolgen asynchron. Dies sollte sich auf die Stabilität der Applikation positiv auswirken, falls eine eingebundene Webseite abstürzen sollte. Ihre Anwendung ist vor dem eingebetteten Inhalt geschützt. Ausserdem laufen gewisse Webseiten, die in iframes nicht alle Funktionalitäten haben, in Webview reibungslos.
+Webview hat immer noch zahlreiche überzeugende Vorteile. Einer davon ist, dass jede Webseite, die in einer Webview geladen wird, in einem separaten isolierten Prozess läuft. Die Interaktionen zwischen der Anwendung und dem eingebetteten Inhalt erfolgen asynchron. Dies sollte sich auf die Stabilität der Applikation positiv auswirken, auch wenn eine eingebundene Webseite abstürzen sollte. Die Anwendung ist vor dem eingebetteten Inhalt geschützt. Ausserdem laufen gewisse Webseiten, die in iframes nicht alle Funktionalitäten haben, in Webview reibungslos.
 
 ## Wichtiges in der Entwicklung mit Electron
 
@@ -76,7 +76,7 @@ Anschliessend wird die eingebundene Webseite in unsere Electron Applikation gela
 
 ### Basic-Authentifizierung
 
-Mit Electron ist es auch möglich, authentifizierte Seiten anzuzeigen, ohne dass sich der Benutzer anmelden muss. Auch wenn ein Proxy dazwischen steht, ist es möglich, sich per Electron anzumelden. Dies wird folgendermassen realisiert:
+Mit Electron ist es auch möglich, authentifizierte Seiten anzuzeigen, ohne dass sich der Benutzer anmelden muss. Auch wenn ein Proxy dazwischensteht, ist es möglich, sich per Electron anzumelden. Dies wird folgendermassen realisiert:
 
 ```typescript
 app.on(
@@ -101,4 +101,6 @@ app.on(
 |[[avatar]]
 ||![Renato Wasescha](./renato-wasescha.jpg)
 
-Electron ist ein sehr mächtiges Framework, das eine Plattform-unabhängige Programmierung zulässt. Ausserdem ist die Dokumentation einfach und übersichtlich, und lässt schnelle Ergebnisse zu. In Verbindung mit React und Typescript, macht es richtig Spass, damit zu arbeiten. Gerne können Sie auf uns zukommen, wenn Sie einen ähnlichen Use Case, wie bei unseren anderen Kunden haben. Egal ob Windows, Mac oder Linux. Unser Team hat für jedes dieser Betriebsysteme die geeignete Person, da jeder von uns auf eines dieser Betriebsysteme spezialisiert ist.
+Electron ist ein sehr mächtiges Framework, das eine Plattform-unabhängige Programmierung zulässt. Ausserdem ist die Dokumentation einfach und übersichtlich, und lässt schnelle Ergebnisse zu. In Verbindung mit React und Typescript macht es richtig Spass, damit zu arbeiten.
+
+Gerne können Sie auf uns zukommen, wenn Sie einen ähnlichen Use Case wie unsere bisherigen Kunden haben. Egal ob Windows, Mac oder Linux - mit Electron können wir eine passgenaue Lösung bauen.
