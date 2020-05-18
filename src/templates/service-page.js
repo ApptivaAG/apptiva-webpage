@@ -94,7 +94,10 @@ const Header = ({ title, image, subtitle }) => (
     )}
     {image && (
       <Img
-        style={{ width: '80%', margin: '2rem auto' }}
+        css={`
+          width: 80%;
+          margin: 2rem auto 0;
+        `}
         fluid={image.childImageSharp.fluid}
       />
     )}
@@ -142,7 +145,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
         </Container>
       </Section>
       {introduction && (
-        <Section dark>
+        <Section>
           <Container>
             <HTMLContent content={introduction} />
           </Container>
