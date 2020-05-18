@@ -25,7 +25,7 @@ introduction: |
 
   ## Installation
 
-  Installieren Sie die App gleich jetzt: https://silly-lichterman-dc46d6.netlify.app/
+  Installieren Sie die App gleich jetzt: https://apptivacounter.netlify.app/
 
 bulletGroups:
   - title: PRO Features
