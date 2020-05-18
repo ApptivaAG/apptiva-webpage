@@ -12,27 +12,31 @@ callToAction: Nehmen Sie jetzt Kontakt auf, um Ihren Kunden bargeldloses bezahle
 introduction: |
   ## Schnell, sicher und einfach ohne Bargeld bezahlen
 
-  Seit Covid-19 hat das Bezahlen ohne Bargeld betreffend der Hygiene an Attraktivität gewonnen. Aber auch schon davor war das bargeldlose Bezahlen schneller, sicherer und einfacher. Zudem sind Ihre Kunden zunehmend ohne Bargeld unterwegs.
+  Seit Covid-19 hat das Bezahlen ohne Bargeld aufgrund von Hygienemassnahmen an Attraktivität gewonnen. Aber auch schon davor war das bargeldlose Bezahlen schneller, sicherer und einfacher. Zudem sind Ihre Kunden zunehmend ohne Bargeld unterwegs.
 
-  ## Alle Branchen, jegliche Angbote
+  ## Alle Branchen, jegliche Angebote
 
-  Egal ob sie ein Schwimmbad, eine Landwirtschaftsbetrieb, ein Restaurant, ein Museum, eine Entsorgungsstelle etc. sind, wir entwickeln einen Lösung die für Sie und Ihre Kunden passt. Praktisch alle Verkäufe die Sie heute bereits tätigen, lassen sich auch online abwickeln.
+  Egal ob Sie ein Schwimmbad, ein Hofladen, ein Restaurant, ein Museum, eine Entsorgungsstelle etc. sind, wir entwickeln einen Lösung die für Sie und Ihre Kunden passt. Praktisch alle Verkäufe die Sie heute bereits tätigen, lassen sich auch ohne Bargeld abwickeln.
+
+  ## Individuell auf Sie abgestimmt
+
+  Entsprechend Ihren Anforderungen erhalten sie eine bargeldlose Zahlungslösung die auf Sie abgestimmt ist. Wir integrieren zudem Ihre bestehenden Systeme soweit nötig, um einen reibungslosen Arbeitsablauf zu gewährleisten. Egal was ihre Situation ist, wir finden eine passende Lösung.
 
 customers:
   - globus.png
-  - vivanco.png
+  - grand-casino-bern.png
   - schurch-logo.png
 
 solutions:
-  - title: Mit Apps
-    image: qr-code.png
-    text: Bei B2C-Shops legen wir einen besonderen Fokus auf ein ansprechendes Design und einfache Bedienung; auch bei speziellen Anforderungen wie Mietmodellen oder besonderen Zahlungsmodalitäten.
-  - title: Mit QR-Codes
-    image: qr-code.png
-    text: Wir integrieren Ihre bestehenden Umsysteme in den Webshop, um Ihre Prozesse optimal abzubilden und zu beschleunigen.
-  - title: Mit Weblösungen
-    image: qr-code.png
-    text: Je nach Produktpalette ist es sinnvoller, Ihre Kunden nicht mit Ihrem Sortiment zu erschlagen, sondern auf deren Bedürfnisse zugeschnittene Angebote zusammenzustellen.
+  - title: Vor Ort mit dem Handy bezahlen
+    image: vor-ort-bezahlen.png
+    text: Ihre Kunden nehmen eine Dienstleistung in Anspruch oder wählen Produkt aus, welche sie nun direkt vor Ort auf dem Handy sehen und bezahlen können.
+  - title: Online mit Kreditkarte oder Twint bezahlen
+    image: online-bezahlen.png
+    text: Ihre Kunden bestellen und bezahlen die Produkte oder Dienstleistung im Voraus aus und bezahlen diese direkt online.
+  - title: Rechnung automatisch per Email versenden
+    image: rechnung-bezahlen.png
+    text: Ihre Kunden sind vor Ort oder online und möchten per Rechnung bezahlen. Sie schicken einen Rechnung per Email direkt an den Kunden.
 
 bulletGroups:
   - title: Vorteile einer Apptiva-Lösung
@@ -47,7 +51,7 @@ bulletGroups:
         text: Unsere Lösungen für das Bezahlen ohne Bargeld sind nicht bloss benutzerfreundlich, sie sind auch optisch ansprechend - egal ob auf dem Desktop-PC oder dem Handy.
       - icon: clock
         title: Individuell und dennoch schnell
-        text: Dank einer überraschend direkten Zusammenarbeit und unserem agilen Vorgehen sind bereits nach wenigen Tagen die ersten Ergebnisse im Einsatz.
+        text: Dank einer überraschend direkten Zusammenarbeit und unserem agilen Vorgehen sind bereits nach wenigen Tagen erste bargeldlose Zahlungen möglich.
       - icon: database
         title: Integriert in Ihre System­landschaft
         text: Führen Sie Ihre Daten nicht doppelt. Die Daten werden aus bestehenden Systemen bezogen und die Resultate zurückgeschrieben.
@@ -62,24 +66,23 @@ references:
   - title: Erfolge
     description: Unsere Applikationen haben schon vielen unserer Kunden geholfen, ihr Angebot ohne Bargeld zu verkaufen.
     referenceList:
-      - title: Globus Innovationsprojekt
-        image: globus.png
-        text: Das Innovationsprojekt «Trial Store» hatte zum Ziel, neue Geschäftsmodelle zu untersuchen.
-        link: /trial-store
-      - title: Schürch Party Planer
-        image: qr-code.png
-        text: Der Party Planer hat Getränke-Bestellungen bei Schürch-Getränke stark vereinfacht.
+      - title: Globus
+        image: trial-store.png
+        text: Der Globus «Trial Store» vermietet viele Gegenstände vor Ort auf Rechnung.
+        link: /trial-store/
+      - title: Grand Casino Bern
+        image: package-konfigurator.png
+        text: Das Grand Casino Bern verkauft per Kreditkarte und Twint Voucher, die für die einfache Verifizierung mit einem QR-Code versehen sind.
+        link: /unsere-erfahrungen-mit-postfinance-e-payment-service/
+      - title: Schürch Getränke
+        image: party-planer.png
+        text: Der Partyplaner erlaubt den Online-Verkauf von Partylieferungen auf Rechnung.
         link: /partyplaner-fuer-schuerch-getraenke/
-      - title: SD Einsatzplanung
-        image: qr-code.png
-        text: Die Einsatzplanungs-App erspart SD viel Kopfzerbrechen bei der Personalverwaltung.
-        link: /einsatzplanung/
-
 ---
 
 ## Einzigartig heisst nicht aufwändig
 
-Wenn Sie einen einzigartigen Webshop benötigen, muss dies nicht aufwändig sein. Je nach Anforderungen und Voraussetzungen können wir ihren individuellen Webshop innerhalb weniger Tage entwickeln und online schalten.
+Wenn Sie einen einzigartige Zahlungslösung benötigen, muss dies nicht aufwändig sein. Je nach Anforderungen und Voraussetzungen können wir eine erste Version Ihrer Zahlungslösung innerhalb weniger Tage entwickeln und online schalten.
 
 ## Wir sind besonders effektiv
 
@@ -88,5 +91,3 @@ Dank unserem agilen Vorgehen sind erste nutzbare Resultate bereits nach zwei Woc
 Mit der Apptiva haben Sie einen Partner, welcher unkompliziert und erfolgreich mit Ihnen zusammenarbeitet. Wir konnten bis jetzt jedes Projekt gemeinsam mit unseren Kunden erfolgreich lancieren und betreiben. Unsere Projekte sind aber nicht bloss zeitgerecht und im Budget, sondern kommen auch bei den Anwendern sehr gut an. Wir achten von Beginn an auf eine gute Usability.
 
 Für Sie heisst dies mehr Freude, weniger Stress und die Zuversicht, die gesteckten Ziele erreichen zu können.
-
-&nbsp;
