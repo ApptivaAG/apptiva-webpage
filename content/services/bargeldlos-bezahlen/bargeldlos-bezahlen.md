@@ -20,7 +20,7 @@ introduction: |
 
   ## Individuell auf Sie abgestimmt
 
-  Entsprechend Ihren Anforderungen erhalten Sie eine bargeldlose Zahlungslösung die auf Sie abgestimmt ist. Wir integrieren zudem Ihre bestehenden Systeme soweit nötig, um einen reibungslosen Arbeitsablauf zu gewährleisten. Egal wie Ihre Situation ist, wir finden eine passende Lösung.
+  Entsprechend Ihren Anforderungen erhalten Sie eine bargeldlose Zahlungslösung, die auf Sie abgestimmt ist. Wir integrieren zudem Ihre bestehenden Systeme soweit nötig, um einen reibungslosen Arbeitsablauf zu gewährleisten. Egal wie Ihre Situation ist, wir finden eine passende Lösung.
 
 customers:
   - globus.png
