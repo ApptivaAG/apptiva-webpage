@@ -95,8 +95,11 @@ const Header = ({ title, image, subtitle }) => (
     {image && (
       <Img
         css={`
-          width: 80%;
           margin: 2rem auto 0;
+          width: 90%;
+          @media (min-width: 640px) {
+            width: 80%;
+          }
         `}
         fluid={image.childImageSharp.fluid}
       />
