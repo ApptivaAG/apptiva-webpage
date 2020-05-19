@@ -30,7 +30,7 @@ customers:
 solutions:
   - title: Vor Ort mit dem Handy bezahlen
     image: vor-ort-bezahlen.png
-    text: Ihre Kunden nehmen eine Dienstleistung in Anspruch oder wählen Produkt aus, welche sie nun direkt vor Ort auf dem Handy sehen und bezahlen können.
+    text: Ihre Kunden nehmen eine Dienstleistung in Anspruch oder wählen Produkte aus, welche sie nun direkt vor Ort auf dem Handy sehen und bezahlen können.
   - title: Online mit Kreditkarte oder Twint bezahlen
     image: online-bezahlen.png
     text: Ihre Kunden bestellen und bezahlen die Produkte oder Dienstleistungen im Voraus und bezahlen diese direkt online.
@@ -48,7 +48,7 @@ bulletGroups:
         text: Durch die nutzerorientierte Gestaltung unserer bargeldlosen Zahlungslösungen befinden sich die Anwender stets im Zentrum. Sie erhalten eine Möglichkeit zu Bezahlen, die verständlich, einfach und schnell ist.
       - icon: mobile-alt
         title: Optisch ansprechend
-        text: Unsere Lösungen für das Bezahlen ohne Bargeld sind nicht bloss benutzerfreundlich, sie sind auch optisch ansprechend - egal ob auf dem Desktop-PC oder dem Handy.
+        text: Unsere Lösungen für das Bezahlen ohne Bargeld sind nicht bloss benutzerfreundlich, sie sind auch optisch ansprechend - egal ob auf dem Desktop-PC oder Handy.
       - icon: clock
         title: Individuell und dennoch schnell
         text: Dank einer überraschend direkten Zusammenarbeit und unserem agilen Vorgehen sind bereits nach wenigen Tagen erste bargeldlose Zahlungen möglich.
@@ -60,11 +60,11 @@ bulletGroups:
         text: Zahlungslösungen entsprechen technisch dem neusten Stand. Unsere Software-Ingenieure können auch komplexe Anforderungen erfolgreich und hochwertig umsetzen.
       - icon: tachometer-alt
         title: Alle erdenklichen Umsysteme
-        text: Egal ob ERP, PIM, CRM, CMS, Buchhaltungs- oder Branchenlösung, wir integrieren technisch anspruchsvolle Umsysteme souverän. Sie haben keine Umsystem? Kein Problem, dies macht es noch einfacher.
+        text: Egal ob ERP, PIM, CRM, CMS, Buchhaltungs- oder Branchenlösung, wir integrieren technisch anspruchsvolle Umsysteme souverän. Sie haben kein Umsystem? Kein Problem, dies macht es noch einfacher.
 
 references:
   - title: Erfolge
-    description: Unsere Applikationen haben schon vielen unserer Kunden geholfen, ihr Angebot ohne Bargeld zu verkaufen.
+    description: Unsere Applikationen haben schon vielen Kunden geholfen, ihr Angebot ohne Bargeld zu verkaufen.
     referenceList:
       - title: Globus
         image: trial-store.png
@@ -72,7 +72,7 @@ references:
         link: /trial-store/
       - title: Grand Casino Bern
         image: package-konfigurator.png
-        text: Das Grand Casino Bern verkauft per Kreditkarte und Twint Voucher, die für die einfache Verifizierung mit einem QR-Code versehen sind.
+        text: Das Grand Casino Bern verkauft per Kreditkarte und Twint Voucher, die für eine einfache Verifizierung mit einem QR-Code versehen sind.
         link: /unsere-erfahrungen-mit-postfinance-e-payment-service/
       - title: Schürch Getränke
         image: party-planer.png
@@ -82,7 +82,7 @@ references:
 
 ## Einzigartig heisst nicht aufwändig
 
-Wenn Sie einen einzigartige Zahlungslösung benötigen, muss dies nicht aufwändig sein. Je nach Anforderungen und Voraussetzungen können wir eine erste Version Ihrer Zahlungslösung innerhalb weniger Tage entwickeln und online schalten.
+Wenn Sie eine einzigartige Zahlungslösung benötigen, muss dies nicht aufwändig sein. Je nach Anforderungen und Voraussetzungen können wir eine erste Version Ihrer Zahlungslösung innerhalb weniger Tage entwickeln und online schalten.
 
 ## Wir sind besonders effektiv
 
