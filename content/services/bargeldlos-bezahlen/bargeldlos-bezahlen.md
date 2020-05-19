@@ -8,7 +8,7 @@ description: Wir entwickeln Apps und Webseiten, damit ihre Kunden bargeldlos bez
 subtitle:
   text: Ermöglichen Sie Ihren Kunden das bargeldlose Bezahlen.
 
-callToAction: Nehmen Sie jetzt Kontakt auf, um Ihren Kunden bargeldloses bezahlen anzubieten.
+callToAction: Nehmen Sie jetzt Kontakt auf, um Ihren Kunden bargeldloses Bezahlen anzubieten.
 introduction: |
   ## Schnell, sicher und einfach ohne Bargeld bezahlen
 
@@ -16,11 +16,11 @@ introduction: |
 
   ## Alle Branchen, jegliche Angebote
 
-  Egal ob Sie ein Schwimmbad, ein Hofladen, ein Restaurant, ein Museum, eine Entsorgungsstelle etc. sind, wir entwickeln einen Lösung die für Sie und Ihre Kunden passt. Praktisch alle Verkäufe die Sie heute bereits tätigen, lassen sich auch ohne Bargeld abwickeln.
+  Egal ob Sie ein Schwimmbad, ein Hofladen, ein Restaurant, ein Museum, eine Entsorgungsstelle, oder sonst was sind, wir entwickeln eine Lösung die für Sie und Ihre Kunden passt. Praktisch alle Verkäufe die Sie heute bereits tätigen, lassen sich auch ohne Bargeld abwickeln.
 
   ## Individuell auf Sie abgestimmt
 
-  Entsprechend Ihren Anforderungen erhalten sie eine bargeldlose Zahlungslösung die auf Sie abgestimmt ist. Wir integrieren zudem Ihre bestehenden Systeme soweit nötig, um einen reibungslosen Arbeitsablauf zu gewährleisten. Egal was ihre Situation ist, wir finden eine passende Lösung.
+  Entsprechend Ihren Anforderungen erhalten Sie eine bargeldlose Zahlungslösung die auf Sie abgestimmt ist. Wir integrieren zudem Ihre bestehenden Systeme soweit nötig, um einen reibungslosen Arbeitsablauf zu gewährleisten. Egal wie Ihre Situation ist, wir finden eine passende Lösung.
 
 customers:
   - globus.png
@@ -33,10 +33,10 @@ solutions:
     text: Ihre Kunden nehmen eine Dienstleistung in Anspruch oder wählen Produkt aus, welche sie nun direkt vor Ort auf dem Handy sehen und bezahlen können.
   - title: Online mit Kreditkarte oder Twint bezahlen
     image: online-bezahlen.png
-    text: Ihre Kunden bestellen und bezahlen die Produkte oder Dienstleistung im Voraus aus und bezahlen diese direkt online.
+    text: Ihre Kunden bestellen und bezahlen die Produkte oder Dienstleistungen im Voraus und bezahlen diese direkt online.
   - title: Rechnung automatisch per Email versenden
     image: rechnung-bezahlen.png
-    text: Ihre Kunden sind vor Ort oder online und möchten per Rechnung bezahlen. Sie schicken einen Rechnung per Email direkt an den Kunden.
+    text: Ihre Kunden sind vor Ort oder online und möchten per Rechnung bezahlen. Sie schicken eine Rechnung per Email direkt an den Kunden.
 
 bulletGroups:
   - title: Vorteile einer Apptiva-Lösung
