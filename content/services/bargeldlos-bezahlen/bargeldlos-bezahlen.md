@@ -80,9 +80,9 @@ references:
         link: /partyplaner-fuer-schuerch-getraenke/
 ---
 
-## Einzigartig heisst nicht aufwändig
+## Einzigartig heisst nicht aufwendig
 
-Wenn Sie eine einzigartige Zahlungslösung benötigen, muss dies nicht aufwändig sein. Je nach Anforderungen und Voraussetzungen können wir eine erste Version Ihrer Zahlungslösung innerhalb weniger Tage entwickeln und online schalten.
+Wenn Sie eine einzigartige Zahlungslösung benötigen, muss dies nicht aufwendig sein. Je nach Anforderungen und Voraussetzungen können wir eine erste Version Ihrer Zahlungslösung innerhalb weniger Tage entwickeln und online schalten.
 
 ## Wir sind besonders effektiv
 
