@@ -47,6 +47,8 @@ Wir entwickeln Softwarelösungen passend für Ihre Herausforderungen. So haben s
 
 - ### [Einzigartiger Webshop](/einzigartiger-webshop)
 
+- ### [Bargeldlose Zahlungslösungen](/bargeldlos-bezahlen)
+
 - ### [Chatbots](/chatbots)
 
 <div class="full-width dark-section" style="overflow: auto; margin-top: 4em;">

@@ -32,6 +32,7 @@ const Avatar = styled(Img)`
 const LinkStyled = styled(Link)`
   display: block;
   transition: transform 0.3s;
+  text-align: center;
   &:hover {
     transform: scale(1.06);
   }
