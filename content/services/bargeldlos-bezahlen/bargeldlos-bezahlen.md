@@ -12,7 +12,7 @@ callToAction: Nehmen Sie jetzt Kontakt auf, um Ihren Kunden bargeldloses Bezahle
 introduction: |
   ## Schnell, sicher und einfach ohne Bargeld bezahlen
 
-  Seit Covid-19 hat das Bezahlen ohne Bargeld aufgrund von Hygienemassnahmen an Attraktivität gewonnen. Aber auch schon davor war das bargeldlose Bezahlen schneller, sicherer und einfacher. Zudem sind Ihre Kunden zunehmend ohne Bargeld unterwegs.
+  Seit Covid-19 hat das Bezahlen ohne Bargeld aufgrund von Hygienemassnahmen an Attraktivität gewonnen. Aber auch schon davor war das bargeldlose Bezahlen schnell, sicher und einfach. Zudem sind Ihre Kunden zunehmend ohne Bargeld unterwegs.
 
   ## Alle Branchen, jegliche Angebote
 
