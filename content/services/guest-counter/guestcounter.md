@@ -20,12 +20,7 @@ introduction: |
 
   Die Corona-Krise stellt uns alle vor Herausforderungen der unterschiedlichsten Arten. Dazu gehören das Social Distancing und die eingeschränkten Kapazitäten in Läden oder öffentlichen Einrichtungen. Der Gästezähler ist eine simple App, welche Sie dabei unterstützt, diese Herausforderungen zu meistern.
 
-  Falls rudimentäres Zählen für Sie nicht ganz ausreicht, kann der Gästezähler Ihnen vermutlich mit den **PRO Features** weiterhelfen.
-
-
-  ## Installation
-
-  Installieren Sie die App gleich jetzt auf Ihrem Handy oder Computer: https://guestcounter.ch
+  Falls rudimentäres Zählen für Sie nicht ganz ausreicht, kann der Gästezähler Ihnen vermutlich mit den PRO Features weiterhelfen.
 
 bulletGroups:
   - title: PRO Features
