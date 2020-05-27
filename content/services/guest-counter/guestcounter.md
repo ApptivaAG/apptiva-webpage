@@ -50,3 +50,9 @@ bulletGroups:
         title: Da fehlt was?
         text: Sie haben eine spezielle Anforderung? Gerne erweitern wir den Gästezähler passgenau zu Ihren Wünschen.
 ---
+
+## Legen Sie los
+
+Jetzt unkompliziert und kostenlos Ihre Gäste zählen.
+[[button]]
+| [Zum Gästezähler](https://guestcounter.ch)
