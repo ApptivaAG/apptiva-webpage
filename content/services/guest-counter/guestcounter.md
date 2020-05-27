@@ -18,7 +18,7 @@ introduction: |
 
   Der Apptiva Gästezähler kann in den unterschiedlichsten Bereichen eingesetzt werden: Zählen Sie die Eintritte in Ihrem Schwimmbad, die Besucher in Ihrem Museum, oder die Gäste in Ihrer Bar.
 
-  Die Corona-Krise stellt uns alle vor Herausforderungen der unterschiedlichsten Arten. Dazu gehören das Social Distancing und die eingeschränkten Kapazitäten in Läden oder öffentlichen Einrichtungen. Der Gästezähler ist eine simple App, welche Sie dabei untersützt, diese Herausforderungen zu meistern.
+  Die Corona-Krise stellt uns alle vor Herausforderungen der unterschiedlichsten Arten. Dazu gehören das Social Distancing und die eingeschränkten Kapazitäten in Läden oder öffentlichen Einrichtungen. Der Gästezähler ist eine simple App, welche Sie dabei unterstützt, diese Herausforderungen zu meistern.
 
   Falls rudimentäres Zählen für Sie nicht ganz ausreicht, kann der Gästezähler Ihnen vermutlich mit den **PRO Features** weiterhelfen.
 
