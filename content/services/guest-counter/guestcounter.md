@@ -11,7 +11,7 @@ callToAction: Auf uns können Sie zählen.
 introduction: |
   ## Installieren und loszählen
 
-  Der Gästezähler von Apptiva ist eine simple Handzähler-App. Er kann Werte hoch- und runterzählen und selbstverständlich wieder zurücksetzen. Der Gästezähler verfügt über eine hervorragende Usability und beinhaltet keine lästige Werbung.
+  Der Gästezähler von Apptiva ist eine einfache Handzähler-App. Er kann Werte hoch- und runterzählen und selbstverständlich wieder zurücksetzen. Der Gästezähler verfügt über eine hervorragende Usability und beinhaltet keine lästige Werbung.
 
 
   ## Anwendungsbereiche
