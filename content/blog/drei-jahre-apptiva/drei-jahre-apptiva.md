@@ -20,7 +20,7 @@ Die letzten Jahre haben wir so einiges erlebt und arbeiteten an vielen spannende
 ⭐ sd Einsatzplanung  
 ⭐ Neuentwicklung Digital Signage Software  
 ⭐ Allianz Cinema Chatbot  
-⭐ Chatbot für Sanagate Krankenkasse  
+⭐ Chatbot für Sanagate - ein Unternehmen der CSS Gruppe
 ⭐ Partyplaner für Schürch Getränke AG  
 ⭐ Umzug nach Sempach Station  
 ⭐ Und natürlich die Verstärkung durch Markus Tanner

@@ -11,7 +11,7 @@ subtitle:
 customers:
   - schurch-logo.png
   - energie360-300x72.png
-  - sanagate-300x65.png
+  - gcb.png
 
 solutions:
   - title: Formular

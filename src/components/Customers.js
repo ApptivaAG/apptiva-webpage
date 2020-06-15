@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import { Section, Container, DeemphasizedTitle } from '../style'
 
 import suva from '../img/suva-300.png'
-import sanagate from '../img/sanagate-300x65.png'
 import maxon from '../img/maxonmotor-300x45.png'
 import insel from '../img/insel-gruppe-logo-300x70.png'
 import hostettler from '../img/hostettler-300x70.png'
@@ -76,13 +75,6 @@ export default () => {
             alt="maxon motor"
             width="160"
             height="58"
-          />
-          <img
-            className="lazyload"
-            data-src={sanagate}
-            alt="sanagate"
-            width="160"
-            height="66"
           />
           <img
             className="lazyload"

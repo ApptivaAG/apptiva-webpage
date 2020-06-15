@@ -15,11 +15,11 @@ subtitle:
 customers:
   - die-post-logo.png
   - energie360-300x72.png
-  - sanagate-300x65.png
+  - suva-300.png
 
 solutions:
   - title: In Webseiten
-    image: sanagate-chatbot.png
+    image: webseiten.png
     text: Unsere Chatbots können in jegliche Webseiten integriert werden.
   - title: In Messaging-Apps
     image: apps.png
@@ -70,7 +70,7 @@ bulletGroups:
         text: Möchten Sie eine Anspruchsgruppe wie beispielsweise Ihre Mitarbeitenden mit Micro-Learings ausbilden? Da können wir helfen.
 ---
 
-#### Mehr Informationen zu unserem Chatbot-Angebot finden Sie auf [botfabrik.ch](https://botfabrik.ch).
+#### Mehr Informationen zu unserem Chatbot-Angebot finden Sie auf [botfabrik.ch](https://botfabrik.ch)
 
 ## Ihr Kontakt
 
