@@ -45,6 +45,9 @@ bulletGroups:
       - icon: expand-arrows-alt
         title: Integration von Umsystemen
         text: Mit unserer Kompetenz im Integrieren von Umsystemen wie CRMs, Branchenlösungen oder Ticketsystemen können wir fast jede Anforderung umsetzen.
+      - icon: shield-alt
+        title: Hosting in der Schweiz
+        text: Chatbotsysteme verwenden unter der Haube oft Dienste von Drittanbietern die auf Servern im Ausland laufen. Für den respektvollen Umgang mit den Daten Ihrer Kunden, können wir Chatbots anbieten, die komplett in der Schweiz, oder sogar ausschliesslich auf ihren eigenen Servern laufen.
 
   - title: Unsere Erfahrungen im Einsatz von Chatbots
     description: Wir haben Erfahrung im Einsatz von Chatbots in ganz unterschiedlichen Bereichen. Eine Auswahl finden Sie hier.
