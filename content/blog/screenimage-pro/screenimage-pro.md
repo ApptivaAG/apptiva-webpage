@@ -43,4 +43,4 @@ Marc Menz ist bei Screenimage Systems AG fürs Marketing und die Unternehmensent
 
 Über die Zusammenarbeit mit uns sagt Marc:
 
-_"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."_
+_"Vom ersten Meeting an war ich begeistert, von der Professionalität und der Zielstrebigkeit mit der Apptiva das Projekt anging. Dank ihrem User Centred Design Ansatz «zwingt» mich Apptiva immer wieder dazu, Bestehendes zu hinterfragen, um so die Lösung noch benutzerfreundlicher zu machen. Für mich ist die Zusammenarbeit ein absoluter Glücksfall sowohl technisch als auch menschlich."_
