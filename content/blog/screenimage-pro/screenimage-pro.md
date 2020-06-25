@@ -6,7 +6,7 @@ image: screenimage-board.png
 date: 2020-06-24
 author: Linus Hüsler
 description: >-
-  In den letzten Monaten konnten wir die Screenimage Systems AG aus Root intensiv bei der Entwicklung von „Screenimage Pro“ unterstüzen.
+  In den letzten Monaten konnten wir die Screenimage Systems AG aus Root intensiv bei der Entwicklung von „Screenimage Pro“ unterstützen.
 categories:
   - Allgemein
 ---
