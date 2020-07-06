@@ -20,30 +20,32 @@ const LinkItem = styled(LinkItemDefault)`
   }
 `
 
-const BlogLinkItem = ({ frontmatter, excerpt }) => (
-  <LinkItem to={frontmatter.slug} key={frontmatter.slug} align="left">
-    <h2
-      css="grid-area: title"
-      dangerouslySetInnerHTML={{ __html: frontmatter.title }}
-    />
-    {frontmatter.image && (
-      <Img
-        css="grid-area: image; justify-self: center;"
-        fixed={frontmatter.image.childImageSharp.fixed}
+const BlogLinkItem = ({ frontmatter, excerpt }) => {
+  return (
+    <LinkItem to={`/${frontmatter.slug}`} key={frontmatter.slug} align="left">
+      <h2
+        css="grid-area: title"
+        dangerouslySetInnerHTML={{ __html: frontmatter.title }}
       />
-    )}
-    <p css="grid-area: excerpt">{excerpt}</p>
-    <p
-      css={`
-        grid-area: date;
-        @media (max-width: 768px) {
-          justify-self: right;
-        }
-      `}
-    >
-      <small>{frontmatter.date}</small>
-    </p>
-  </LinkItem>
-)
+      {frontmatter.image && (
+        <Img
+          css="grid-area: image; justify-self: center;"
+          fixed={frontmatter.image.childImageSharp.fixed}
+        />
+      )}
+      <p css="grid-area: excerpt">{excerpt}</p>
+      <p
+        css={`
+          grid-area: date;
+          @media (max-width: 768px) {
+            justify-self: right;
+          }
+        `}
+      >
+        <small>{frontmatter.date}</small>
+      </p>
+    </LinkItem>
+  )
+}
 
 export default BlogLinkItem
