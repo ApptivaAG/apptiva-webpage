@@ -1,13 +1,12 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
 import { company } from '../config'
 import { Section, MainTitle, Container } from '../style'
-import { truncate } from '../util'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
+import BlogLinkItem from '../components/BlogLinkItem'
 
 const metadata = {
   title: 'Blog',
@@ -29,32 +28,13 @@ export default ({ data }) => {
             <MainTitle>Blogbeiträge</MainTitle>
 
             {posts.map(({ node: post }) => (
-              <div key={post.id}>
-                <h2
-                  css={`
-                    margin-top: 4em;
-                  `}
-                >
-                  <Link
-                    to={`/${post.frontmatter.slug}`}
-                    dangerouslySetInnerHTML={{ __html: post.frontmatter.title }}
-                  />
-                  <span> &bull; </span>
-                  <small>{post.frontmatter.date}</small>
-                </h2>
-                <Img fixed={post.frontmatter.image.childImageSharp.fixed} />
-                <p>
-                  {post.frontmatter.description
-                    ? truncate(post.frontmatter.description, 400)
-                    : post.excerpt}
-                  <Link
-                    style={{ fontWeight: 500, marginLeft: 5 }}
-                    to={`/${post.frontmatter.slug}`}
-                  >
-                    Weiterlesen →
-                  </Link>
-                </p>
-              </div>
+              <BlogLinkItem
+                css={`
+                  background: ${(p) => p.theme.color.lightBg};
+                `}
+                frontmatter={post.frontmatter}
+                excerpt={post.frontmatter.description}
+              />
             ))}
           </Container>
         </Section>

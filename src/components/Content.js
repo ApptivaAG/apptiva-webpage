@@ -5,6 +5,13 @@ import { sharedButtonStyle } from '../style'
 require('prismjs/themes/prism.css')
 
 const Markdown = styled.div`
+  /* Clearfix floats */
+  &:after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+
   h2:not(:first-child),
   h3:not(:first-child) {
     margin-top: 2em;
