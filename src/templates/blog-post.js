@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
@@ -10,6 +10,7 @@ import config from '../config'
 import SEO from '../components/SEO'
 import { stripHTML } from '../util'
 import Layout from '../components/Layout'
+import BlogLinkItem from '../components/BlogLinkItem'
 
 const HeadArea = styled.div`
   margin-bottom: 0.6em;
@@ -49,31 +50,22 @@ const Published = ({ author, date }) => {
   )
 }
 
-const LayoutNavigation = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin: 0 -0.5em;
-`
-const NavigationLinks = styled(Link)`
-  font-weight: 500;
-  padding: 0.5em 1em;
-  margin: 0.5em;
-  color: white;
-  background-color: ${(p) => p.theme.color.primary};
-  border-radius: 0.2em;
-`
+const LayoutNavigation = styled.div``
+
 const Navigation = ({ next, prev }) => {
   return (
     <LayoutNavigation>
       {prev && (
-        <NavigationLinks to={prev.frontmatter.slug}>
-          {prev.frontmatter.title}
-        </NavigationLinks>
+        <BlogLinkItem
+          frontmatter={prev.frontmatter}
+          excerpt={prev.frontmatter.description}
+        />
       )}
       {next && (
-        <NavigationLinks to={next.frontmatter.slug}>
-          {next.frontmatter.title}
-        </NavigationLinks>
+        <BlogLinkItem
+          frontmatter={next.frontmatter}
+          excerpt={next.frontmatter.description}
+        />
       )}
     </LayoutNavigation>
   )

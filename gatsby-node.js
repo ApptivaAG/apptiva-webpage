@@ -17,15 +17,32 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             id
             frontmatter {
+              title
               slug
               templateKey
-              title
+              date(formatString: "DD.MM.YYYY")
+              description
+              image {
+                childImageSharp {
+                  fixed(width: 260) {
+                    srcSet
+                    srcWebp
+                    src
+                    base64
+                    width
+                    srcSetWebp
+                    aspectRatio
+                    height
+                    originalName
+                  }
+                }
+              }
             }
           }
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     if (result.errors) {
       throw result.errors
     }
@@ -69,7 +86,7 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     if (result.errors) {
       throw result.errors
     }
@@ -98,10 +115,7 @@ exports.onCreateNode = ({ node, actions: { createNodeField } }) => {
   const { frontmatter: { introduction } = {} } = node
 
   if (introduction) {
-    const value = remark()
-      .use(remarkHTML)
-      .processSync(introduction)
-      .toString()
+    const value = remark().use(remarkHTML).processSync(introduction).toString()
 
     createNodeField({
       name: `introduction`,
