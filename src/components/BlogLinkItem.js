@@ -20,9 +20,14 @@ const LinkItem = styled(LinkItemDefault)`
   }
 `
 
-const BlogLinkItem = ({ frontmatter, excerpt }) => {
+const BlogLinkItem = ({ frontmatter, excerpt, className }) => {
   return (
-    <LinkItem to={`/${frontmatter.slug}`} key={frontmatter.slug} align="left">
+    <LinkItem
+      to={`/${frontmatter.slug}`}
+      key={frontmatter.slug}
+      align="left"
+      className={className}
+    >
       <h2
         css="grid-area: title"
         dangerouslySetInnerHTML={{ __html: frontmatter.title }}
