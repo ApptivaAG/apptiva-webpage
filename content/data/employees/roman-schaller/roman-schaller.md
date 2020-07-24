@@ -17,7 +17,7 @@ contact:
 skills:
   - title: Methodiken
     items:
-      - name: Scrum
+      - name: Agile
         value: 100
       - name: Lean
         value: 25
@@ -35,48 +35,51 @@ skills:
         value: 75
   - title: Backend
     items:
-      - name: Java
-        value: 100
-      - name: Java EE
-        value: 100
-      - name: Spring Boot
-        value: 75
-      - name: RESTful
-        value: 100
+      - name: express.js (node)
+        value: 80
+      - name: Spring Boot (Java)
+        value: 90
+      - name: GraphQL
+        value: 80
+
   - title: Frontend
     items:
       - name: HTML5 / CSS3
         value: 75
-      - name: Twitter Bootstrap
-        value: 75
+      - name: React
+        value: 100
       - name: Angular
         value: 50
       - name: JavaScript / TypeScript
+        value: 75
+      - name: npm / Webpack
         value: 50
-      - name: npm / Grunt / Bower
-        value: 30
   - title: Mobile
     items:
+      - name: React Native
+        value: 80
       - name: Android Platfrom
-        value: 50
-      - name: Hybrid mit Cordova
-        value: 50
-      - name: Ionic
-        value: 25
+        value: 60
+      - name: iOS Platfrom
+        value: 40
   - title: Cloud
     items:
-      - name: Coding / Building / Testing
-        value: 75
-      - name: Deploying
-        value: 50
-      - name: Scaling
-        value: 25
+      - name: Amazon Web Services
+        value: 70
+      - name: Microsoft Azure
+        value: 30
+      - name: Google Cloud Platform
+        value: 65
+      - name: Kubernetes
+        value: 55
 ---
 
 # Meine Erfahrungen
 
-Seit Ende 2007 entwickle ich Web-Applikationen auf dem Java-Stack. Ich arbeite in Projekten als Architekt, Backend- und als Frontend-Entwickler. Anwender- und Kundenkontakt sowie agile Prozesse sind mir sehr wichtig.
+2015 gründete ich zusammen mit Linus und Philip die Apptiva AG. Seither haben wir dutzende Projekte umgesetzt. Ich durfte für Kunden von Versicherungen über Warenhäuser bis lokalen KMUs tätig sein. Meine Aufgaben reichen von der Projektleitung bis zur Programmierung.
+
+Von Ende 2007 bis 2015 entwickelte ich Web-Applikationen auf dem Java-Stack. Ich arbeitete in Projekten als Architekt, Backend- und als Frontend-Entwickler. Anwender- und Kundenkontakt sowie agile Prozesse waren und sind mir sehr wichtig.
 
 2008 bis 2013 durfte ich viele Erfahrungen in der Entwicklung von ERP-Systemen sammeln. Ich habe viel Arbeit in Core-Funktionen und die technischen Herausforderungen von grossen Server-Anwendungen gesteckt.
 
-Seit beginn meines Studiums 2004 konzentriere ich mich auf die Java-Plattform und dessen Ökosystem.
+2004 bis 2008 studierte ich berufsbegleitend an der Hochschule Luzern und absolvierte als Eidg. Dipl. Ingenieur in Informatik.
