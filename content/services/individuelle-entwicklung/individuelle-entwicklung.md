@@ -45,7 +45,9 @@ Wir entwickeln Softwarelösungen passend für Ihre Herausforderungen. So haben s
 
 - ### [Web Apps und Applikationen](/web-apps)
 
-- ### [Einzigartiger Webshop](/einzigartiger-webshop)
+- ### [Individuelle Dashboards](/custom-dashboard)
+
+- ### [Einzigartige Webshops](/einzigartiger-webshop)
 
 - ### [Bargeldlose Zahlungslösungen](/bargeldlos-bezahlen)
 
