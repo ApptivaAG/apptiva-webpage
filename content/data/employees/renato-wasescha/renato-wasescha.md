@@ -40,13 +40,13 @@ skills:
       - name: styled-components
         value: 50
       - name: React
-        value: 65
+        value: 80
       - name: Vue
-        value: 75
+        value: 60
       - name: JavaScript
         value: 85
       - name: TypeScript
-        value: 50
+        value: 70
       - name: npm / yarn
         value: 75
   - title: Backend
@@ -66,15 +66,23 @@ skills:
   - title: Mobile
     items:
       - name: React Native
-        value: 65
-      - name: Ionic
         value: 80
+      - name: Ionic
+        value: 65
+      - name: iOS
+        value: 80
+      - name: Android
+        value: 70
   - title: Cloud
     items:
       - name: Docker
         value: 80
       - name: Kubernetes (K8s)
         value: 65
+      - name: Microsoft Azure
+        value: 70
+      - name: Google GCP
+        value: 80
   - title: Frameworks
     items:
       - name: GatsbyJS
