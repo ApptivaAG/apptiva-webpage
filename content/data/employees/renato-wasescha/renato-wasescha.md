@@ -89,8 +89,8 @@ skills:
         value: 85
       - name: Vue CLI
         value: 75
-      - name: Gridsome
-        value: 45
+      - name: Next.js
+        value: 80
   - title: Digital Signage
     items:
       - name: PADS4
