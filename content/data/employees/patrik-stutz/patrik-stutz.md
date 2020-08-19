@@ -22,41 +22,66 @@ skills:
   - title: Architektur
     items:
       - name: Zusammenarbeit und Organisation
-        value: 70
+        value: 75
       - name: Entscheiden
         value: 90
       - name: Dokumentieren
-        value: 50
-  - title: Frontend
+        value: 60
+  - title: Sprachen
     items:
       - name: HTML5 / CSS3
-        value: 85
-      - name: React
-        value: 90
+        value: 80
       - name: JavaScript
         value: 95
-      - name: Pug
-        value: 80
-  - title: Backend
+      - name: TypeScript
+        value: 90
+      - name: C#
+        value: 70
+      - name: Java
+        value: 50
+      - name: Kotlin
+        value: 85
+  - title: Frameworks & Libraries
     items:
+      - name: React
+        value: 90
+      - name: React-Native
+        value: 40
       - name: Node.js
         value: 90
       - name: Express
         value: 70
       - name: Koa
         value: 90
-      - name: C# / .NET Core
-        value: 85
-      - name: Java
+      - name: .NET Core
+        value: 70
+      - name: Spring Boot
         value: 50
-      - name: RESTful
+      - name: Twitter Bootstrap
+        value: 65
+  - title: Datenbanken
+    items:
+      - name: MongoDB
         value: 90
+      - name: MariaDB/MySQL
+        value: 50
+      - name: PostgreSQL
+        value: 85
+      - name: MSSQL Server
+        value: 70
+      - name: SQLite
+        value: 60
   - title: Cloud
     items:
       - name: Docker
-        value: 60
+        value: 70
       - name: Linux
-        value: 75
+        value: 85
+      - name: Kubernetes
+        value: 60
+      - name: Nix / NixOS
+        value: 70
+
   - title: Sonstiges
     items:
       - name: Internet of Things
@@ -65,7 +90,6 @@ skills:
         value: 90
       - name: Kiosk Devices
         value: 80
-
 ---
 
 # Meine Erfahrungen
