@@ -15,7 +15,7 @@ Von Zeit zu Zeit muss man sich Gedanken dazu machen, woher man kommt, wo man ste
 
 ## Woher wir kommen
 
-Linus, Philip und Roman haben vor fünf Jahren sämtlichen Mut zusammengenommen und die Apptiva gegründet. Allzu viel Kundschaft oder konkrete Projekte waren zunächst nicht vorhanden. Doch dies sollte sich glücklicherweise relativ rasch ändern. Apps, Chatbots und Unterstützung von Kunden vor Ort prägten schon bald den Alltag von den dreien. Es war von Anfang an klar, dass die Apptiva nicht eine 3-Mann-Show bleiben sollte. Und weil inzwischen mehr als genug Arbeit da war, stiess im 2017 Markus als erster Mitarbeiter zum Team dazu. Die Arbeit sollte nicht weniger werden, weshalb Renato, Patrik und David seit dem 2019 unser schlagkräftiges Team komplettieren.
+Linus, Philip und Roman haben vor fünf Jahren sämtlichen Mut zusammengenommen und die Apptiva gegründet. Kundschaft oder konkrete Projekte waren zunächst nicht vorhanden. Doch dies sollte sich glücklicherweise relativ rasch ändern. Apps, Chatbots und Unterstützung von Kunden vor Ort prägten schon bald den Alltag von den dreien. Es war von Anfang an klar, dass die Apptiva nicht eine 3-Mann-Show bleiben sollte. Und weil inzwischen mehr als genug Arbeit da war, stiess im 2017 Markus als erster Mitarbeiter zum Team dazu. Die Arbeit sollte nicht weniger werden, weshalb Renato, Patrik und David seit dem 2019 unser schlagkräftiges Team komplettieren.
 
 ## Organisation
 
@@ -31,6 +31,7 @@ Die meisten von uns haben einen eher technischen Hintergrund. Direkten Kontakt m
 
 An dieser Stelle möchten wir drei Projekte resp. Produkte erwähnen, welche die Apptiva in den vergangenen Jahren stark geprägt haben:
 
+- [Dashboard für die Notaufnahme](https://apptiva.ch/dashboard-notaufnahme/): Vor allem in den Anfängen der Apptiva haben wir sehr viel Herzblut in die Entwicklung des Dashboards für die Notaufnahme gesteckt. Wir haben über 20 Spitäler besucht, um die Bedürfnisse der Ärztinnen und Pflegerinnen zu verstehen. Auf Basis dieser Erfahrungen entstand schliesslich eine Lösung für das Inselspital in Bern.
 - [Botfabrik](https://www.botfabrik.ch): Das Thema Chatbots fanden wir von Anfang an spannend. Nach der Lancierung von der Botfabrik durften schon ziemlich bald die ersten Apptiva-Bots die Fabrik verlassen. Chatbot-Projekte nehmen nach wie vor einen beachtlichen Teil unserer Arbeitszeit in Anspruch.
 - [SUVA Slope Track](https://www.suva.ch/de-CH/material/Factsheets/slope-track-de): Mit dieser mobilen App kann man Fahrten auf der Skipiste aufzeichnen und kriegt anschliessend Tipps abhängig vom Fitnesslevel. Bis anhin ist das die komplexeste App, die wir umsetzen durften. Doch nicht nur die Entwicklung war sehr spannend, sondern auch die Tests im Schnee zusammen mit Wendy Holdener.
 - [Screenimage Pro](https://screenimage.ch/): Screenimage Systems AG dürfen wir bei der Neuentwicklung ihrer Digital Signage Lösung tatkräftig unterstützen. Das neue Produkt wird nun Schritt für Schritt bei bestehenden und neuen Kunden eingeführt. Da wir von Anfang an sehr stark involviert waren, fühlt sich das auch ein bisschen wie unser eigenes Baby an.
