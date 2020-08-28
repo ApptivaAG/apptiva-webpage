@@ -25,9 +25,9 @@ Wenn man die Verantwortung für ein gewisses Thema hat, müssen hin und wieder E
 
 ## Kundschaft
 
-Auch wenn man noch so gut organisiert ist, ohne Kundschaft läuft natürlich nichts. Weit über 200 Kundenkontakte konnten wir in den letzten 5 Jahren knüpfen. Tolle Projekte haben mit einem simplen Telefonat oder E-Mail begonnen. Es ist immer wieder spannend, wenn neue Projektanfrage reinkommen.
+Auch wenn man noch so gut organisiert ist, ohne Kundschaft läuft natürlich nichts. Weit über 200 Kundenkontakte konnten wir in den letzten 5 Jahren knüpfen. Tolle Projekte haben mit einem simplen Telefonat oder E-Mail begonnen. Es ist immer wieder spannend, wenn eine neue Projektanfrage reinkommt.
 
-Die meisten von uns haben einen eher technischen Hintergrund. Direkten Kontakt mit Kunden war bei unseren vorhergehenden Jobs eher Mangelware. Bei der Apptiva sieht das natürlich ganz anders aus. Bei uns gibt es keinen Puffer zwischen Kunden und Entwicklung. Von Beginn weg reden die Kunden mit den Leuten, welche die Projekt auch umsetzen. Wir finden, das ist ein grosses Plus.
+Die meisten von uns haben einen eher technischen Hintergrund. Direkten Kontakt mit Kunden war bei unseren vorhergehenden Jobs eher Mangelware. Bei der Apptiva sieht das natürlich ganz anders aus. Bei uns gibt es keinen Puffer zwischen Kunden und Entwicklung. Von Beginn weg reden die Kunden mit den Leuten, welche die Projekte auch umsetzen. Wir finden, das ist ein grosses Plus.
 
 An dieser Stelle möchten wir drei Projekte resp. Produkte erwähnen, welche die Apptiva in den vergangenen Jahren stark geprägt haben:
 
