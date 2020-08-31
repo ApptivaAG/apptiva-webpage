@@ -2,7 +2,7 @@
 title: Apptiva feiert den 5. Geburtstag
 slug: apptiva-5
 templateKey: blog-post
-image: apptiva-guys.png
+image: 5-jahre.png
 date: 2020-08-25
 author: Markus Tanner
 description: >-
