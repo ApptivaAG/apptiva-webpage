@@ -5,7 +5,7 @@ title: Individuelles Dashboard
 image: monitor.png
 author: philip-schoenholzer
 description: Wir entwickeln benutzer­freundliche, optisch ansprechende und technisch anspruchsvolle Dashboards um Ihre einzigartigen Geschäftsprozesse abzubilden.
-callToAction: Wir unterstützen Sie gerne bei der Visualisierung ihrer Geschäftsprozesse
+callToAction: Wir unterstützen Sie bei der Visualisierung ihrer Geschäftsprozesse
 subtitle:
   text: Wir entwickeln Dashboards, um Ihre einzigartigen Geschäftsprozesse zu
   swaps:
@@ -20,15 +20,15 @@ customers:
   - insel-gruppe.png
 
 solutions:
-  - title: Kunden-Apps
+  - title: Einsatzplanung
     image: einsatzplanung.png
-    text: Bei Kunden-Apps legen wir einen besonderen Fokus auf ein ansprechendes Design und einfache Bedienung. So steht einem guten Kundenerlebnis nichts im Weg.
-  - title: Interne Apps
+    text: Das von uns entwickelte Einsatzplanungs-Dashboard für sd Gebäudereinigung, zeigt die aktuelle Planung der Mitarbeiter an. Zusätzlich lassen sich die Einsatzzeiten bei Abwesenheit oder Feiertagen einfach anpassen.
+  - title: Echtzeit Geo-Position
     image: live-geodata.png
-    text: Effiziente und effektive Apps kommen im internen Gebrauch besonders gut an. Entsprechend legen wir den Fokus auf die Unterstützung des Anwenders, ohne ihm im Weg zu stehen.
-  - title: B2B-Apps
+    text: Beim Dashboard, welches wir für Baumgartner Fenster erstellten, sieht man die Positionen von Geräten in Echtzeit. Die Positionen werden mittels GPS-Daten gesammelt und auf dem Dashboard dargestelle.
+  - title: Notaufnahme
     image: desktop-mobile.png
-    text: B2B-Apps fördern die Beziehung zwischen Unternehmen. Um dies optimal zu unterstützen, digitalisieren wir die entsprechenden Unternehmensprozesse einfach und verständlich.
+    text: Für die Notaufnahme des Inselspitals entwickelten wir das Dashboard für die Notaufnahme. Dieses stellt nicht bloss die Belegung der Kojen dar, sondern auch den Status der Verordnungen.
 
 bulletGroups:
   - title: Vorteile eines Apptiva-Dashboards
@@ -55,9 +55,9 @@ bulletGroups:
         text: Egal ob Geo-Daten mapping, komplexe Grafiken oder riesige Datenmengen, wir meistern technisch anspruchsvolle Herausforderungen souverän.
 ---
 
-## Wir sind besonders effektiv
+## Wir sind besonders effektiv bei der Entwicklung eines Dashboards
 
-Dank unserem agilem Vorgehen sind erste nutzbare Dashboards bereits nach zwei Wochen vorhanden.
+Dank unserem agilem Vorgehen nutzen Sie eine erste Version des Dashboards bereits nach zwei Wochen.
 
 Mit der Apptiva haben Sie einen Partner, welcher unkompliziert und erfolgreich mit Ihnen zusammenarbeitet. Wir konnten bis jetzt jedes Projekt gemeinsam mit unseren Kunden erfolgreich lancieren und betreiben. Unsere Projekte sind aber nicht bloss zeitgerecht und im Budget, sondern kommen auch bei den Anwendern sehr gut an. Wir achten von Beginn an auf eine gute Usability.
 
