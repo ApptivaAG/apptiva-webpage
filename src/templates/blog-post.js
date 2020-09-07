@@ -23,7 +23,14 @@ const HeaderTitle = styled(MainTitle)`
 const Header = ({ title, image }) => (
   <HeadArea>
     <HeaderTitle dangerouslySetInnerHTML={{ __html: title }} />
-    <Img style={{ width: '100%' }} fluid={image.childImageSharp.fluid} />
+    <Img
+      style={{ width: '100%' }}
+      fluid={image.childImageSharp.fluid}
+      placeholderStyle={{
+        filter: `blur(16px)`,
+        transform: `scale(1.04)`,
+      }}
+    />
   </HeadArea>
 )
 
