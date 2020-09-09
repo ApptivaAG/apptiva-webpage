@@ -4,8 +4,8 @@ slug: /custom-dashboard
 title: Individuelles Dashboard
 image: monitor.png
 author: philip-schoenholzer
-description: Wir entwickeln benutzer­freundliche, optisch ansprechende und technisch anspruchsvolle Dashboards um Ihre einzigartigen Geschäftsprozesse abzubilden.
-callToAction: Wir unterstützen Sie bei der Visualisierung ihrer Geschäftsprozesse
+description: Wir entwickeln benutzer­freundliche, optisch ansprechende und technisch anspruchsvolle Dashboards, um Ihre einzigartigen Geschäftsprozesse abzubilden.
+callToAction: Wir unterstützen Sie bei der Visualisierung ihrer Geschäftsprozesse.
 subtitle:
   text: Wir entwickeln Dashboards, um Ihre einzigartigen Geschäftsprozesse zu
   swaps:
@@ -22,13 +22,13 @@ customers:
 solutions:
   - title: Einsatzplanung
     image: einsatzplanung.png
-    text: Das von uns entwickelte Einsatzplanungs-Dashboard für sd Gebäudereinigung, zeigt die aktuelle Planung der Mitarbeiter an. Zusätzlich lassen sich die Einsatzzeiten bei Abwesenheit oder Feiertagen einfach anpassen.
+    text: Das von uns entwickelte Einsatzplanungs-Dashboard für sd Gebäudereinigung zeigt die aktuelle Planung der Mitarbeiter an. Zusätzlich lassen sich die Einsatzzeiten bei Abwesenheit oder Feiertagen einfach anpassen.
   - title: Echtzeit Geo-Position
     image: live-geodata.png
-    text: Beim Dashboard, welches wir für Baumgartner Fenster erstellten, sieht man die Positionen von Geräten in Echtzeit. Die Positionen werden mittels GPS-Daten gesammelt und auf dem Dashboard dargestelle.
+    text: Beim Dashboard, welches wir für Baumgartner Fenster erstellten, sieht man die Positionen von Geräten in Echtzeit. Die Positionen werden mittels GPS-Daten gesammelt und auf dem Dashboard dargestellt.
   - title: Notaufnahme
     image: desktop-mobile.png
-    text: Für die Notaufnahme des Inselspitals entwickelten wir das Dashboard für die Notaufnahme. Dieses stellt nicht bloss die Belegung der Kojen dar, sondern auch den Status der Verordnungen.
+    text: Für das Inselspital haben wir das Dashboard für die Notaufnahme entwickelt. Dieses stellt nicht bloss die Belegung der Kojen dar, sondern auch den Status der Verordnungen.
 
 bulletGroups:
   - title: Vorteile eines Apptiva-Dashboards
@@ -49,7 +49,7 @@ bulletGroups:
         text: Führen Sie Ihre Daten nicht doppelt. Die Daten für ein Dashboard werden aus Ihren bestehenden Systemen bezogen. Entsprechende Schnittstellen entwickeln wir passend auf Ihre Anforderungen.
       - icon: expand
         title: Technisch anspruchsvoll
-        text: Unser Dashboards entsprechen technisch dem neusten Stand. Unsere Software-Ingenieure können auch komplexe Anforderungen erfolgreich und hochwertig umsetzen.
+        text: Unsere Dashboards entsprechen technisch dem neusten Stand. Unsere Software-Ingenieure können auch komplexe Anforderungen erfolgreich und hochwertig umsetzen.
       - icon: tachometer-alt
         title: Alle erdenklichen Features
         text: Egal ob Geo-Daten mapping, komplexe Grafiken oder riesige Datenmengen, wir meistern technisch anspruchsvolle Herausforderungen souverän.
