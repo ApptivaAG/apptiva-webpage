@@ -2,7 +2,7 @@
 templateKey: 'service-page'
 slug: /custom-dashboard
 title: Individuelles Dashboard
-image: monitor.png
+image: notaufnahme-frame.png
 author: philip-schoenholzer
 description: Wir entwickeln benutzer­freundliche, optisch ansprechende und technisch anspruchsvolle Dashboards um Ihre einzigartigen Geschäftsprozesse abzubilden.
 callToAction: Wir unterstützen Sie bei der Visualisierung ihrer Geschäftsprozesse
