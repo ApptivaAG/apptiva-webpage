@@ -32,9 +32,6 @@ const query = graphql`
                 fixed(height: 150, width: 300, cropFocus: ENTROPY) {
                   ...GatsbyImageSharpFixed_withWebp_noBase64
                 }
-                sqip(numberOfPrimitives: 8, blur: 6) {
-                  dataURI
-                }
               }
             }
             date(formatString: "DD.MM.YYYY")
@@ -61,9 +58,10 @@ export default () => {
               <Link to={post.frontmatter.slug}>
                 <ImgStyled
                   style={{ width: '100%' }}
-                  fixed={{
-                    ...post.frontmatter.image.childImageSharp.fixed,
-                    base64: post.frontmatter.image.childImageSharp.sqip.dataURI,
+                  fixed={post.frontmatter.image.childImageSharp.fixed}
+                  placeholderStyle={{
+                    filter: `blur(16px)`,
+                    transform: `scale(1.04)`,
                   }}
                   alt="Post image"
                 />
