@@ -1,6 +1,6 @@
 ---
 title: 'Anwendungs­beispiele für VR und AR'
-slug: vr-anwendungs­beispiele
+slug: vr-anwendungsbeispiele
 templateKey: blog-post
 image: vr-in-action.jpg
 date: 2020-10-02
