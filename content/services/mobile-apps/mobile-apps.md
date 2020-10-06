@@ -73,8 +73,8 @@ Für Sie heisst dies mehr Freude, weniger Stress und die Zuversicht, die gesteck
 
 ## Kosten für eine iOS- und Android-App
 
-Die Kosten für eine iOS- und Android-App hängen sehr stark von der Komplexität, dem Umfang, den Features und der gewünschten Qualität ab.
+Die Kosten für eine iOS- und Android-App hängen stark von der Komplexität, dem Umfang, den Features und der gewünschten Finesse ab.
 
 ![Kosten für eine mobile iOS und Android App](kosten-mobile-app-ios-android.png)
 
-Aus unserer Erfahrung können wir sagen, dass eine simple App einen 5-stelligen Betrag voraussetzt. Dies ist der Mindestbetrag, um eine Version für iOS und Android zu erstellen und diese in den jeweiligen Stores zu veröffentlichen. Die Kosten für eine durchschnittliche App liegen hingegen eher bei ca. 50'000 CHF. Eine Obergrenze der Kosten für die Entwicklung einer App gibt es nicht. Je nach Anforderungen kann einen App auch durchaus im 6-stelligen Bereich liegen. Sie können uns gerne kontaktieren, um einen ungefähren Rahmen der Kosten für Ihre App zu erhalten. Wir beraten Sie gerne.
+Aus unserer Erfahrung können wir sagen, dass auch die einfachste App einen 5-stelligen Betrag voraussetzt. Dies ist der Mindestbetrag, um eine Version für iOS und Android zu erstellen und diese in den jeweiligen Stores zu veröffentlichen. Die Kosten für eine durchschnittlich App, in Bezug auf Komplexität, Umfang, Features und Finesse, liegen bei ungefähr 50'000 CHF. Eine Obergrenze der Kosten für die Entwicklung einer App gibt es hingegen nicht. Je nach Anforderungen kann eine App so auch durchaus im 6-stelligen Bereich liegen. Sie können uns gerne kontaktieren, um einen ungefähren Rahmen der Kosten für Ihre App zu erhalten. Wir beraten Sie gerne.
