@@ -70,3 +70,11 @@ Dank unserem agilem Vorgehen sind erste nutzbare Resultate bereits nach zwei Wo
 Mit der Apptiva haben Sie einen Partner, welcher unkompliziert und erfolgreich mit Ihnen zusammenarbeitet. Wir konnten bis jetzt jedes Projekt gemeinsam mit unseren Kunden erfolgreich lancieren und betreiben. Unsere Projekte sind aber nicht bloss zeitgerecht und im Budget, sondern kommen auch bei den Anwendern sehr gut an. Wir achten von Beginn an auf eine gute Usability.
 
 Für Sie heisst dies mehr Freude, weniger Stress und die Zuversicht, die gesteckten Ziele erreichen zu können.
+
+## Kosten für eine iOS- und Android-App
+
+Die Kosten für eine iOS- und Android-App hängen stark von der Komplexität, dem Umfang, den Features und der gewünschten Finesse ab.
+
+![Kosten für eine mobile iOS und Android App](kosten-mobile-app-ios-android.png)
+
+Aus unserer Erfahrung können wir sagen, dass auch die einfachste App einen 5-stelligen Betrag voraussetzt. Dies ist der Mindestbetrag, um eine Version für iOS und Android zu erstellen und diese in den jeweiligen Stores zu veröffentlichen. Die Kosten für eine durchschnittlich App, in Bezug auf Komplexität, Umfang, Features und Finesse, liegen bei ungefähr 50'000 CHF. Eine Obergrenze der Kosten für die Entwicklung einer App gibt es hingegen nicht. Je nach Anforderungen kann eine App so auch durchaus im 6-stelligen Bereich liegen. Sie können uns gerne kontaktieren, um einen ungefähren Rahmen der Kosten für Ihre App zu erhalten. Wir beraten Sie gerne.
