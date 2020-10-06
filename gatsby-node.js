@@ -134,12 +134,10 @@ exports.onCreateNode = ({ node, actions: { createNodeField } }) => {
     const gitCreateTime = execSync(
       `git log -1 --diff-filter=A --follow --pretty=format:%aI ${node.fileAbsolutePath}`
     ).toString()
-
     const hasBeenUpdated = !isSameDay(
       new Date(gitCreateTime),
       new Date(gitModificationTime)
     )
-
     createNodeField({
       node,
       name: 'updatedAt',
