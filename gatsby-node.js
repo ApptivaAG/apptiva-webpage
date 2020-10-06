@@ -1,4 +1,7 @@
 const path = require('path')
+const { execSync } = require('child_process')
+
+const isSameDay = require('date-fns/isSameDay')
 
 const remark = require('remark')
 const remarkHTML = require('remark-html')
@@ -121,6 +124,26 @@ exports.onCreateNode = ({ node, actions: { createNodeField } }) => {
       name: `introduction`,
       node,
       value,
+    })
+  }
+
+  if (node.internal.type === 'MarkdownRemark') {
+    const gitModificationTime = execSync(
+      `git log -1 --pretty=format:%aI ${node.fileAbsolutePath}`
+    ).toString()
+    const gitCreateTime = execSync(
+      `git log -1 --diff-filter=A --follow --pretty=format:%aI ${node.fileAbsolutePath}`
+    ).toString()
+
+    const hasBeenUpdated = !isSameDay(
+      new Date(gitCreateTime),
+      new Date(gitModificationTime)
+    )
+
+    createNodeField({
+      node,
+      name: 'updatedAt',
+      value: hasBeenUpdated ? gitModificationTime : null,
     })
   }
 }

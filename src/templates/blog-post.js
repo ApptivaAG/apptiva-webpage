@@ -34,7 +34,7 @@ const Header = ({ title, image }) => (
   </HeadArea>
 )
 
-const Published = ({ author, date }) => {
+const Published = ({ author, date, updatedAt }) => {
   const Wrapper = styled.div`
     margin-top: 0;
     margin-bottom: 3em;
@@ -53,6 +53,12 @@ const Published = ({ author, date }) => {
       {/* eslint-disable-next-line react/jsx-one-expression-per-line  */}
       Publiziert von <Author>{author.replace('-', ' ')}</Author> am{' '}
       <Date>{date}</Date>
+      {updatedAt && (
+        <span>
+          {' '}
+          - Aktualisiert am: <Date>{updatedAt}</Date>
+        </span>
+      )}
     </Wrapper>
   )
 }
@@ -85,7 +91,7 @@ export const BlogPostTemplate = ({
   navigation,
 }) => {
   const PostContent = contentComponent || Content
-  const { title, image, description, author, date } = metaData
+  const { title, image, description, author, date, updatedAt } = metaData
 
   const Description = styled.p`
     font-weight: 600;
@@ -105,7 +111,9 @@ export const BlogPostTemplate = ({
           <header>
             <Header title={title} image={image} />
             {description && <Description>{description}</Description>}
-            {author && <Published author={author} date={date} />}
+            {author && (
+              <Published author={author} date={date} updatedAt={updatedAt} />
+            )}
           </header>
           <section css="margin-bottom: 4em;">
             <PostContent content={content} />
@@ -125,6 +133,8 @@ export default ({ data, pageContext }) => {
   const { markdownRemark: post } = data
 
   post.frontmatter.excerpt = post.excerpt
+  post.frontmatter.updatedAt = post.fields.updatedAt
+  post.frontmatter.dateModified = post.fields.dateModified
 
   return (
     <Layout>
@@ -144,12 +154,16 @@ export const pageQuery = graphql`
       id
       html
       excerpt(pruneLength: 300)
+      fields {
+        updatedAt(formatString: "DD.MM.YYYY")
+        dateModified: updatedAt(formatString: "DD.MM.YYYY")
+      }
       frontmatter {
         title
         description
         author
         date(formatString: "DD.MM.YYYY")
-        isoDate: date(formatString: "DD-MM-YYYY")
+        datePublished: date(formatString: "DD-MM-YYYY")
         slug
         image {
           childImageSharp {
