@@ -2,6 +2,7 @@ const path = require('path')
 const { execSync } = require('child_process')
 
 const isSameDay = require('date-fns/isSameDay')
+const isBefore = require('date-fns/isBefore')
 
 const remark = require('remark')
 const remarkHTML = require('remark-html')
@@ -115,7 +116,7 @@ exports.createPages = ({ actions, graphql }) => {
 }
 
 exports.onCreateNode = ({ node, actions: { createNodeField } }) => {
-  const { frontmatter: { introduction } = {} } = node
+  const { frontmatter, frontmatter: { introduction } = {} } = node
 
   if (introduction) {
     const value = remark().use(remarkHTML).processSync(introduction).toString()
@@ -138,10 +139,15 @@ exports.onCreateNode = ({ node, actions: { createNodeField } }) => {
       new Date(gitCreateTime),
       new Date(gitModificationTime)
     )
+    const publishedBeforeModified = isBefore(
+      new Date(frontmatter.date),
+      new Date(gitModificationTime)
+    )
     createNodeField({
       node,
       name: 'updatedAt',
-      value: hasBeenUpdated ? gitModificationTime : null,
+      value:
+        hasBeenUpdated && publishedBeforeModified ? gitModificationTime : null,
     })
   }
 }
