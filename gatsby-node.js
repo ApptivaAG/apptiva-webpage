@@ -129,6 +129,7 @@ exports.onCreateNode = ({ node, actions: { createNodeField } }) => {
   }
 
   if (node.internal.type === 'MarkdownRemark') {
+    console.log('is Markdown')
     const gitModificationTime = execSync(
       `git log -1 --pretty=format:%aI ${node.fileAbsolutePath}`
     ).toString()
@@ -143,11 +144,19 @@ exports.onCreateNode = ({ node, actions: { createNodeField } }) => {
       new Date(frontmatter.date),
       new Date(gitModificationTime)
     )
+    console.log(
+      'Modification date info:',
+      gitModificationTime,
+      gitCreateTime,
+      hasBeenUpdated,
+      publishedBeforeModified
+    )
     createNodeField({
       node,
       name: 'updatedAt',
       value:
         hasBeenUpdated && publishedBeforeModified ? gitModificationTime : null,
     })
+    console.log('created updateAt for ', node.fileAbsolutePath)
   }
 }
