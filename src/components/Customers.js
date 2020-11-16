@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import { Section, Container, DeemphasizedTitle } from '../style'
 
-import suva from '../img/suva-300.png'
+import suva from '../img/suva-300x75.png'
 import maxon from '../img/maxonmotor-300x45.png'
 import insel from '../img/insel-gruppe-logo-300x70.png'
 import hostettler from '../img/hostettler-300x70.png'
@@ -11,9 +11,9 @@ import energie360 from '../img/energie360-300x72.png'
 import diepost from '../img/die-post-logo.png'
 import globus from '../img/globus.png'
 import schurch from '../img/schurch-logo.png'
-import sd from '../img/sd.png'
-import weltiFurrer from '../img/welti-furrer-500x.png'
-import vivanco from '../img/vivanco.png'
+import sd from '../img/sd-295x145.png'
+import weltiFurrer from '../img/welti-furrer-300x66.png'
+import vivanco from '../img/vivanco-300x116.png'
 
 const ImageList = styled.div`
   display: flex;
