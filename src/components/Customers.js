@@ -12,6 +12,8 @@ import diepost from '../img/die-post-logo.png'
 import globus from '../img/globus.png'
 import schurch from '../img/schurch-logo.png'
 import sd from '../img/sd.png'
+import weltiFurrer from '../img/welti-furrer-500x.png'
+import vivanco from '../img/vivanco.png'
 
 const ImageList = styled.div`
   display: flex;
@@ -71,10 +73,24 @@ export default () => {
           />
           <img
             className="lazyload"
+            data-src={weltiFurrer}
+            alt="Welti-Furrer"
+            width="160"
+            height="35"
+          />
+          <img
+            className="lazyload"
             data-src={maxon}
             alt="maxon motor"
             width="160"
             height="58"
+          />
+          <img
+            className="lazyload"
+            data-src={vivanco}
+            alt="Vivanco Gruppe AG"
+            width="160"
+            height="61"
           />
           <img
             className="lazyload"
