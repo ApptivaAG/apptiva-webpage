@@ -164,9 +164,10 @@ export const EmployeePageTemplate = ({
           <EmployeeBanner>
             <Avatar>
               <ImgRound
-                fluid={{
-                  ...avatar.childImageSharp.fluid,
-                  base64: avatar.childImageSharp.sqip.dataURI,
+                fluid={avatar.childImageSharp.fluid}
+                placeholderStyle={{
+                  filter: `blur(16px)`,
+                  transform: `scale(1.04)`,
                 }}
               />
             </Avatar>
@@ -267,9 +268,6 @@ export const employeePageQuery = graphql`
             }
             resize(width: 1200, height: 630, cropFocus: NORTH) {
               src
-            }
-            sqip(numberOfPrimitives: 8, blur: 12) {
-              dataURI
             }
           }
         }

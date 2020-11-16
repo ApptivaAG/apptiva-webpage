@@ -30,7 +30,7 @@ const query = graphql`
             image {
               childImageSharp {
                 fixed(height: 150, width: 300, cropFocus: ENTROPY) {
-                  ...GatsbyImageSharpFixed_withWebp_noBase64
+                  ...GatsbyImageSharpFixed_withWebp
                 }
               }
             }

@@ -28,7 +28,6 @@ module.exports = {
       },
     },
     'gatsby-transformer-sharp',
-    'gatsby-transformer-sqip',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
