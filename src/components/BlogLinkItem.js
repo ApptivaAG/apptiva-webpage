@@ -36,6 +36,10 @@ const BlogLinkItem = ({ frontmatter, excerpt, className }) => {
         <Img
           css="grid-area: image; justify-self: center;"
           fixed={frontmatter.image.childImageSharp.fixed}
+          placeholderStyle={{
+            filter: `blur(16px)`,
+            transform: `scale(1.04)`,
+          }}
         />
       )}
       <p css="grid-area: excerpt">{excerpt}</p>

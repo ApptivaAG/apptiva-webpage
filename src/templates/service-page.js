@@ -102,6 +102,10 @@ const Header = ({ title, image, subtitle }) => (
           }
         `}
         fluid={image.childImageSharp.fluid}
+        placeholderStyle={{
+          filter: `blur(16px)`,
+          transform: `scale(1.04)`,
+        }}
       />
     )}
   </HeadArea>

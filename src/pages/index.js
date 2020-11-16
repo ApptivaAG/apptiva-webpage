@@ -53,6 +53,10 @@ const IndexPage = ({ partners, appsImage, chatbot, partyplaner }) => (
                   style={{ width: '100%', marginTop: '2rem' }}
                   fluid={appsImage.childImageSharp.fluid}
                   alt="Apps"
+                  placeholderStyle={{
+                    filter: `blur(16px)`,
+                    transform: `scale(1.04)`,
+                  }}
                 />
               </Link>
             </ListItem>
@@ -64,6 +68,10 @@ const IndexPage = ({ partners, appsImage, chatbot, partyplaner }) => (
                 <ImgStyled
                   fluid={chatbot.childImageSharp.fluid}
                   alt="Chatbots"
+                  placeholderStyle={{
+                    filter: `blur(16px)`,
+                    transform: `scale(1.04)`,
+                  }}
                 />
               </Link>
             </ListItem>
@@ -78,6 +86,10 @@ const IndexPage = ({ partners, appsImage, chatbot, partyplaner }) => (
                 <ImgStyled
                   fluid={partyplaner.childImageSharp.fluid}
                   alt="Angebots- und Produktkonfiguratoren"
+                  placeholderStyle={{
+                    filter: `blur(16px)`,
+                    transform: `scale(1.04)`,
+                  }}
                 />
               </Link>
             </ListItem>
