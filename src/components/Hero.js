@@ -134,7 +134,7 @@ export default () => {
     query {
       imageSharp(fluid: { originalName: { regex: "/solution-collage.png/" } }) {
         fluid(maxWidth: 1800) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

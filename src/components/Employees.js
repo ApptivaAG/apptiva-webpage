@@ -62,10 +62,7 @@ const query = graphql`
             preview {
               childImageSharp {
                 fixed(width: 200, height: 200) {
-                  ...GatsbyImageSharpFixed_withWebp_noBase64
-                }
-                sqip(numberOfPrimitives: 8, blur: 16) {
-                  dataURI
+                  ...GatsbyImageSharpFixed_withWebp
                 }
               }
             }
@@ -94,9 +91,10 @@ export default () => {
               <Employee key={edge.node.id}>
                 <LinkStyled to={slug}>
                   <Avatar
-                    fixed={{
-                      ...preview.childImageSharp.fixed,
-                      base64: preview.childImageSharp.sqip.dataURI,
+                    fixed={preview.childImageSharp.fixed}
+                    placeholderStyle={{
+                      filter: `blur(16px)`,
+                      transform: `scale(1.04)`,
                     }}
                   />
                   <Name>{name}</Name>
