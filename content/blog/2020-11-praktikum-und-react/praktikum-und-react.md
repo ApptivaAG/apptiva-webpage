@@ -2,7 +2,7 @@
 title: 'Erste Schritte in der Informatik'
 slug: intern-and-react
 templateKey: blog-post
-# image: vr-in-action.jpg
+image: kaffee-praktikum.jpg
 date: 2020-11-26
 author: David Decker
 description: >-
@@ -25,7 +25,8 @@ Meine ersten kleinen Projekte waren in Javascript, ich durfte aber relativ schne
 Die Vorteile sind die vielen zusätzlichen Funktionalitäten, die ReactJS bietet. Ein Beispiel sind die [React Hooks](https://reactjs.org/docs/hooks-intro.html), mit denen man z.B. den Zustand einer Klasse extrem einfach definieren und auch ändern kann.
 Der Nachteil ist, dass ich jetzt verwöhnt bin. Wenn wir das Beispiel des React State Hooks weiterspinnen, so hätte ich heute wahrscheinlich grosse Mühe, den Zustand einer Klasse in gewöhnlichem Javascript zu definieren und zu ändern.
 
-Mittlerweile bin ich auch mit Typescript in Kontakt gekommen und habe vor allem einen wichtigen Punkt festgestellt: wie angenehm es ist. Ja, es ist aufwändiger im Vergleich zum nicht typisierten Javascript, aber es unterstützt enorm beim Code-Schreiben und bei der Fehlersuche und -vermeidung. Wie angenehm Typescript ist, war mir am Anfang nur wenig bewusst, erst als ich dieses Jahr mein Studium startete und dort Java kennenlernte sah ich den krassen Unterschied im Komfort.
+Mittlerweile bin ich auch mit Typescript in Kontakt gekommen und habe vor allem einen wichtigen Punkt festgestellt: wie angenehm es ist. Ja, es ist aufwändiger im Vergleich zum nicht typisierten Javascript, aber es unterstützt enorm beim Code-Schreiben und bei der Fehlersuche und -vermeidung.
+Wie angenehm Typescript ist, war mir am Anfang nur wenig bewusst, erst als ich dieses Jahr mein Studium startete und dort Java kennenlernte sah ich den krassen Unterschied im Komfort. Generell kann man, denke ich, sagen, dass TypeScript mit weniger Code auskommt. Dazu kommt aber noch der Komfort von JavaScript, wie zum Beispiel der Typ _number_, welcher alle Nummern beschreibt. In Java muss man sich zwischen bis zu 6 Nummern-Typen entscheiden. Auch eine grosse Annehmlichkeit von JavaScript/TypeScript ist, dass Werte als truthy oder falsy gelesen werden können, während Java nur strikt Booleans akzeptiert. Das vereinfacht die Überprüfung, ob ein Wert überhaupt existiert, sehr. Dazu kommt dann auch noch die ganze Funktionalität von React, welches schliesslich auch auf JavaScript basiert und sich deshalb hervorragend mit TypeScript verbinden lässt.
 
 ## Und jetzt?
 
