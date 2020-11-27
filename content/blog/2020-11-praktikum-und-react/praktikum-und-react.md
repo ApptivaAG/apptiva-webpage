@@ -1,5 +1,5 @@
 ---
-title: 'Erste Schritte in der Entwicklung'
+title: 'Erste Schritte in der Informatik'
 slug: intern-and-react
 templateKey: blog-post
 # image: vr-in-action.jpg
