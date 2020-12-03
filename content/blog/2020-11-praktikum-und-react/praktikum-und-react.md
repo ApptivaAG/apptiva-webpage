@@ -2,7 +2,7 @@
 title: 'Erste Schritte in der Informatik'
 slug: intern-and-react
 templateKey: blog-post
-image: kaffee-praktikum.jpg
+image: dave-4gewinnt.jpg
 date: 2020-11-26
 author: David Decker
 description: >-
