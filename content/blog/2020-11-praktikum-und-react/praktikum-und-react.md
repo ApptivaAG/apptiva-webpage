@@ -1,6 +1,6 @@
 ---
 title: 'Erste Schritte in der Informatik'
-slug: intern-and-react
+slug: praktikum-und-react
 templateKey: blog-post
 image: dave-4gewinnt.jpg
 date: 2020-11-26
