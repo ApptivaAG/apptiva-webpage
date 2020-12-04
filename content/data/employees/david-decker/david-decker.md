@@ -28,16 +28,17 @@ skills:
       - name: JavaScript
         value: 65
       - name: ReactJS
-        value: 50
+        value: 70
+      - name: TypeScript
+        value: 30
   - title: Sonstiges
     items:
       - name: Englisch
         value: 95
-
 ---
 
 # Meine Erfahrungen
 
-Bereits als Kind haben mich die logischen Abläufe im Computer fasziniert. Diese Faszination hat mich nie verlassen, allerdings hatte ich viele Interessen, sodass ich erst auf Umwegen über ein Musikstudium zum Programmieren gefunden habe. 
+Bereits als Kind haben mich die logischen Abläufe im Computer fasziniert. Diese Faszination hat mich nie verlassen, allerdings hatte ich viele Interessen, sodass ich erst auf Umwegen über ein Musikstudium zum Programmieren gefunden habe.
 
 Als Gitarrenlehrer habe ich viel Freude, Inhalte zur Verständlichkeit zu vereinfachen. Als Entwickler nehme ich diese Einstellung mit.
