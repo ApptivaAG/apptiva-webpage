@@ -18,16 +18,16 @@ const sharedInput = css`
   box-sizing: border-box;
 `
 
-const Input = styled.input`
+export const Input = styled.input`
   ${sharedInput};
 `
-const Textarea = styled.textarea`
+export const Textarea = styled.textarea`
   ${sharedInput};
 `
 
-const encode = data =>
+const encode = (data) =>
   Object.keys(data)
-    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
     .join('&')
 
 const analyticsFormSent = () =>
@@ -46,7 +46,7 @@ const ContactForm = () => {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
   const { name, email, message, address } = form
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault()
 
     if (address !== undefined) {
@@ -76,7 +76,7 @@ const ContactForm = () => {
         )
         setForm({ name: '', email: '', message: '' })
       })
-      .catch(error => {
+      .catch((error) => {
         /* eslint-disable-next-line no-console */
         console.log('Error', error)
         /* eslint-disable-next-line no-alert */
@@ -88,7 +88,7 @@ const ContactForm = () => {
     analyticsFormSent()
   }
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
