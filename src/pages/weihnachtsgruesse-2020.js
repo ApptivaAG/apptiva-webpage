@@ -34,7 +34,7 @@ const query = graphql`
 const metadata = {
   title: 'Weihnachtsgrüsse 2020',
   description:
-    'Herzlichen Dank an alle die in irgend einer Form mit uns zusammen gearbeitet haben, in diesem ganz speziellen Jahr 2020.',
+    'Herzlichen Dank an alle, die in irgendeiner Form mit uns zusammengearbeitet haben in diesem ganz speziellen Jahr 2020.',
   slug: 'weihnachtsgruesse-2020',
 }
 
@@ -52,11 +52,11 @@ const Weihnachtsgruesse2020 = () => {
         <Section css="font-size: 1.8em; padding: 0;">
           <Img css="margin: 3em 0;" fluid={xmas2020.childImageSharp.fluid} />
           <p>
-            <b>Herzlichen Dank</b> an alle die in irgend einer Form mit uns
-            zusammen gearbeitet haben, in diesem ganz speziellen Jahr 2020.
+            <b>Herzlichen Dank</b> an alle, die in irgendeiner Form mit uns
+            zusammengearbeitet haben in diesem ganz speziellen Jahr 2020.
           </p>
           <p>
-            Hoffentlich ergibt sich auch im nächsten Jahr die Chance mit euch
+            Hoffentlich ergibt sich auch im nächsten Jahr die Chance, mit euch
             die Welt ein kleines bisschen besser zu machen. Wir wünschen euch
             allen <b>von Herzen frohe Weihnachten und ein gutes, neues Jahr</b>.
           </p>
