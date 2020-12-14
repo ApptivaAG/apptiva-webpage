@@ -1,5 +1,9 @@
 import React from 'react'
+import { graphql, useStaticQuery, navigate } from 'gatsby'
 import Img from 'gatsby-image'
+import { useForm } from 'react-hook-form'
+import { Helmet } from 'react-helmet'
+import fetch from 'unfetch'
 
 import Layout from '../components/Layout'
 import {
@@ -10,9 +14,7 @@ import {
   Right,
   Section,
 } from '../style'
-import { graphql, useStaticQuery } from 'gatsby'
-import { Input, Textarea } from '../components/ContactForm'
-import { Helmet } from 'react-helmet'
+import { encode, Input, Textarea } from '../components/ContactForm'
 import SEO from '../components/SEO'
 import config from '../config'
 
@@ -40,6 +42,33 @@ const metadata = {
 
 const Weihnachtsgruesse2020 = () => {
   const { xmas2020 } = useStaticQuery(query)
+  const { register, handleSubmit, errors } = useForm()
+
+  const onSubmit = (data) => {
+    const body = encode({
+      'form-name': 'greetings_2020',
+      subject: 'Weihnachtsgrüsse',
+      ...data,
+    })
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body,
+    })
+      .then(() => {
+        navigate('/gruss-erhalten/')
+      })
+      .catch((error) => {
+        /* eslint-disable-next-line no-console */
+        console.log('Error', error)
+        /* eslint-disable-next-line no-alert */
+        alert(
+          `Leider hat dies nicht funktioniert. Versuche es später nochmals.`
+        )
+      })
+  }
+
   return (
     <Layout>
       <Container>
@@ -74,17 +103,35 @@ const Weihnachtsgruesse2020 = () => {
           </p>
           <form
             name="greetings_2020"
-            action="/gruss-erhalten/"
-            method="POST"
-            netlify
+            data-netlify
+            onSubmit={handleSubmit(onSubmit)}
           >
             <div>
               <label htmlFor="name">Name</label>
-              <Input type="text" name="name" id="name" />
+              <Input
+                type="text"
+                name="name"
+                id="name"
+                ref={register({ required: true })}
+              />
+              {errors.name && (
+                <p css="color: red;">
+                  Bitte gib deinen Namen an, damit wir wissen, wer uns den Gruss
+                  schickt.
+                </p>
+              )}
             </div>
             <div>
               <label htmlFor="greeting">Gruss</label>
-              <Textarea name="greeting" id="greeting" rows="10"></Textarea>
+              <Textarea
+                name="greeting"
+                id="greeting"
+                rows="10"
+                ref={register({ required: true })}
+              ></Textarea>
+              {errors.greeting && (
+                <p css="color: red;">Bitte gib deinen Gruss ein.</p>
+              )}
             </div>
             <Right>
               <Button type="submit">Gruss senden</Button>

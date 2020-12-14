@@ -12,7 +12,7 @@ const query = graphql`
       sourceInstanceName: { eq: "images" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1920, toFormat: JPG) {
+        fluid(maxWidth: 1024, toFormat: JPG) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

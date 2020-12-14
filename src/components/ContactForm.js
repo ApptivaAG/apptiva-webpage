@@ -25,7 +25,7 @@ export const Textarea = styled.textarea`
   ${sharedInput};
 `
 
-const encode = (data) =>
+export const encode = (data) =>
   Object.keys(data)
     .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
     .join('&')
