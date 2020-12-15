@@ -31,7 +31,7 @@ Eine ganz spezielle Herausforderung war, dass bei Vivanco noch keine zentrale & 
 
 ### Ausblick
 
-In den nächsten Jahren plant Vivanco den neuen Webshop in weiteren Ländern anzbieten. Dazu gehören auch Standorte, die andere Systeme als Microsoft Dynamics verwenden. Der Webshop ist darauf bereits vorbereitet. Für Vivanco bedeutet das eine Vereinheitlichung des Webauftritts und eine Reduzierung der Kosten durch ein zentrales System.
+In den nächsten Jahren plant Vivanco den neuen Webshop in weiteren Ländern anzubieten. Dazu gehören auch Standorte, die andere Systeme als Microsoft Dynamics verwenden. Der Webshop ist darauf bereits vorbereitet. Für Vivanco bedeutet das eine Vereinheitlichung des Webauftritts und eine Reduzierung der Kosten durch ein zentrales System.
 
 <br/>
 
