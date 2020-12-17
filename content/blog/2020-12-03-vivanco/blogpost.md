@@ -19,11 +19,11 @@ werden auch im B2B Umfeld Bestellungen online getätigt. Doch der alte Webshop w
 
 ### Spezifische Anforderungen
 
-Nach ersten Gesprächen war schnell klar, dass die Anforderungen zu spezifisch waren, um diesen mit einer Shop-Software von der Stange gerecht zu werden. Vivanco ist ein sehr grosses Unternehmen, mit vielen Standorten weltweit. Die einzelnen Standorte verwenden zum Teil völlig unterschiedliche Software und Geschäftsprozesse sind anders strukturiert. Dennoch muss am Ende alles in einem Shop zusammenführen.
+Nach ersten Gesprächen war schnell klar, dass die Anforderungen zu spezifisch waren, um diesen mit einer Shop-Software von der Stange gerecht zu werden. Vivanco ist ein sehr grosses Unternehmen, mit vielen Standorten weltweit. Die einzelnen Standorte verwenden zum Teil völlig unterschiedliche Software und Geschäftsprozesse sind anders strukturiert. Dennoch muss am Ende alles in einem Shop zusammengeführt werden.
 
 ### Zusammenspiel mit Microsoft Dynamics
 
-Der Webshop ist zum Start in der Schweiz, Deutschland und Österreich verfügbar. An allen drei Standorten ist Microsoft Dynamics (ehemals Navision) im Einsatz. Für das Abrufen der Preise, Warenbestände und zum Auslösen von Bestellungen muss der Webshop laufend mit Dynamics kommunizieren.
+Der Webshop ist zum Start in der Schweiz, Deutschland und Österreich verfügbar. An allen drei Standorten ist Microsoft Dynamics (ehemals Navision) im Einsatz. Für das Abrufen der Preise und Warenbestände und zum Auslösen von Bestellungen muss der Webshop laufend mit Dynamics kommunizieren.
 
 ### Einführung einer PIM Software
 
