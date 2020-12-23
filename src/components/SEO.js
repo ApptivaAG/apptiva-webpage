@@ -11,7 +11,8 @@ const getSchemaOrgJSONLD = ({
   image,
   description,
   author,
-  date,
+  datePublished,
+  dateModified,
 }) => {
   const schemaOrgJSONLD = [
     {
@@ -71,13 +72,14 @@ const getSchemaOrgJSONLD = ({
             '@type': 'WebSite',
             '@id': config.url,
           },
-          datePublished: date,
+          datePublished,
+          dateModified,
         },
       ]
     : schemaOrgJSONLD
 }
 
-const addSlash = url => (url.endsWith('/') ? url : `${url}/`)
+const addSlash = (url) => (url.endsWith('/') ? url : `${url}/`)
 const baseOrSlugUrl = (baseUrl, slug) => new URL(slug || '', baseUrl).href
 const composeUrl = compose(addSlash, baseOrSlugUrl)
 
@@ -87,7 +89,8 @@ const SEO = ({ metaData, postImage, isBlogPost }) => {
     metaData.description || metaData.excerpt || config.description
   const image = postImage ? `${config.url}${postImage}` : config.logo
   const url = composeUrl(config.url, metaData.slug)
-  const date = isBlogPost ? metaData.isoDate : false
+  const datePublished = isBlogPost && metaData.datePublished
+  const dateModified = isBlogPost && metaData.dateModified
   const author = metaData.author || config.company
 
   const schemaOrgJSONLD = getSchemaOrgJSONLD({
@@ -97,7 +100,8 @@ const SEO = ({ metaData, postImage, isBlogPost }) => {
     image,
     description,
     author,
-    date,
+    datePublished,
+    dateModified,
   })
 
   return (
@@ -144,7 +148,8 @@ SEO.propTypes = {
     image: PropTypes.any,
     description: PropTypes.string,
     author: PropTypes.string,
-    isoDate: PropTypes.any,
+    datePublished: PropTypes.any,
+    dateModified: PropTypes.any,
     slug: PropTypes.string,
   }),
   postImage: PropTypes.string,

@@ -1,7 +1,12 @@
 const path = require('path')
 
+const isSameDay = require('date-fns/isSameDay')
+const isBefore = require('date-fns/isBefore')
+
 const remark = require('remark')
 const remarkHTML = require('remark-html')
+
+const timestampsData = require('./content/timestamps.json')
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
@@ -123,4 +128,41 @@ exports.onCreateNode = ({ node, actions: { createNodeField } }) => {
       value,
     })
   }
+}
+
+const getUpdatedAtDate = (node) => {
+  const timestamps =
+    timestampsData[node.fileAbsolutePath?.replace(`${__dirname}/`, '')]
+
+  if (timestamps) {
+    const { created, modified } = timestamps
+    const gitCreateTime = new Date(created * 1000)
+    const gitModificationTime = new Date(modified * 1000)
+    const hasBeenUpdated = !isSameDay(gitCreateTime, gitModificationTime)
+    const publishedBeforeModified = isBefore(
+      new Date(node.frontmatter.date),
+      gitModificationTime
+    )
+
+    if (hasBeenUpdated && publishedBeforeModified)
+      return gitModificationTime.toISOString()
+  }
+}
+
+exports.createSchemaCustomization = ({ actions, schema, getNode }) => {
+  actions.createTypes([
+    schema.buildObjectType({
+      name: 'MarkdownRemark',
+      interfaces: ['Node'],
+      fields: {
+        updatedAt: {
+          type: 'Date',
+          extensions: {
+            dateformat: {},
+          },
+          resolve: getUpdatedAtDate,
+        },
+      },
+    }),
+  ])
 }
