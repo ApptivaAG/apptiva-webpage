@@ -1,11 +1,12 @@
 const path = require('path')
-const { execSync } = require('child_process')
 
 const isSameDay = require('date-fns/isSameDay')
 const isBefore = require('date-fns/isBefore')
 
 const remark = require('remark')
 const remarkHTML = require('remark-html')
+
+const timestampsData = require('./content/timestamps.json')
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
@@ -116,7 +117,7 @@ exports.createPages = ({ actions, graphql }) => {
 }
 
 exports.onCreateNode = ({ node, actions: { createNodeField } }) => {
-  const { frontmatter, frontmatter: { introduction } = {} } = node
+  const { frontmatter: { introduction } = {} } = node
 
   if (introduction) {
     const value = remark().use(remarkHTML).processSync(introduction).toString()
@@ -127,36 +128,41 @@ exports.onCreateNode = ({ node, actions: { createNodeField } }) => {
       value,
     })
   }
+}
 
-  if (node.internal.type === 'MarkdownRemark') {
-    console.log('is Markdown')
-    const gitModificationTime = execSync(
-      `git log -1 --pretty=format:%aI ${node.fileAbsolutePath}`
-    ).toString()
-    const gitCreateTime = execSync(
-      `git log -1 --diff-filter=A --follow --pretty=format:%aI ${node.fileAbsolutePath}`
-    ).toString()
-    const hasBeenUpdated = !isSameDay(
-      new Date(gitCreateTime),
-      new Date(gitModificationTime)
-    )
+const getUpdatedAtDate = (node) => {
+  const timestamps =
+    timestampsData[node.fileAbsolutePath?.replace(`${__dirname}/`, '')]
+
+  if (timestamps) {
+    const { created, modified } = timestamps
+    const gitCreateTime = new Date(created * 1000)
+    const gitModificationTime = new Date(modified * 1000)
+    const hasBeenUpdated = !isSameDay(gitCreateTime, gitModificationTime)
     const publishedBeforeModified = isBefore(
-      new Date(frontmatter.date),
-      new Date(gitModificationTime)
+      new Date(node.frontmatter.date),
+      gitModificationTime
     )
-    console.log(
-      'Modification date info:',
-      gitModificationTime,
-      gitCreateTime,
-      hasBeenUpdated,
-      publishedBeforeModified
-    )
-    createNodeField({
-      node,
-      name: 'updatedAt',
-      value:
-        hasBeenUpdated && publishedBeforeModified ? gitModificationTime : null,
-    })
-    console.log('created updateAt for ', node.fileAbsolutePath)
+
+    if (hasBeenUpdated && publishedBeforeModified)
+      return gitModificationTime.toISOString()
   }
+}
+
+exports.createSchemaCustomization = ({ actions, schema, getNode }) => {
+  actions.createTypes([
+    schema.buildObjectType({
+      name: 'MarkdownRemark',
+      interfaces: ['Node'],
+      fields: {
+        updatedAt: {
+          type: 'Date',
+          extensions: {
+            dateformat: {},
+          },
+          resolve: getUpdatedAtDate,
+        },
+      },
+    }),
+  ])
 }

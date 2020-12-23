@@ -1,0 +1,334 @@
+{
+  "content/blog/2020-10-vr-anwendungsbeispiele/vr-anwendungsbeispiele.md": {
+    "created": 1601626544,
+    "modified": 1601640052
+  },
+  "content/blog/app-store-eintrag-inhalte/app-store-eintrag-inhalte.md": {
+    "created": 1562229127,
+    "modified": 1588617481
+  },
+  "content/blog/apptiva-5/apptiva-5.md": {
+    "created": 1598511781,
+    "modified": 1598944647
+  },
+  "content/blog/bubble-cms-release/bubble-cms-release.md": {
+    "created": 1566473425,
+    "modified": 1566473425
+  },
+  "content/blog/bubble-cms/bubble-cms.md": {
+    "created": 1542729581,
+    "modified": 1558973414
+  },
+  "content/blog/datenmodell-eines-chatbots-testen/datenmodell-eines-chatbots-testen.md": {
+    "created": 1570453079,
+    "modified": 1570453079
+  },
+  "content/blog/die-apptiva-waechst/die-apptiva-waechst.md": {
+    "created": 1559916009,
+    "modified": 1560442011
+  },
+  "content/blog/drei-jahre-apptiva/drei-jahre-apptiva.md": {
+    "created": 1532697036,
+    "modified": 1592236783
+  },
+  "content/blog/electron-webview-oder-iframe/electron-webview-oder-iframe.md": {
+    "created": 1589528300,
+    "modified": 1589548377
+  },
+  "content/blog/g-kraefte-teammitglied/2020-03-06-die-dynamik-von-G-kräften-betriebssystemen-und-neuen-teammitgliedern.md": {
+    "created": 1583480187,
+    "modified": 1583826361
+  },
+  "content/blog/mit-chatbot-rapportieren/mit-chatbot-rapportieren.md": {
+    "created": 1556455269,
+    "modified": 1558973414
+  },
+  "content/blog/postfinance-e-payment-einbinden/postfinance-e-payment-einbinden.md": {
+    "created": 1588000147,
+    "modified": 1588583136
+  },
+  "content/blog/pwa-apps/pwa-apps.md": {
+    "created": 1545405331,
+    "modified": 1560772971
+  },
+  "content/blog/sacralis-app/sacralis-app.md": {
+    "created": 1545639822,
+    "modified": 1558973414
+  },
+  "content/blog/screenimage-pro/screenimage-pro.md": {
+    "created": 1593017269,
+    "modified": 1593093894
+  },
+  "content/blog/serverless/serverless.md": {
+    "created": 1550474495,
+    "modified": 1558973414
+  },
+  "content/blog/slope-track/slope-track.md": {
+    "created": 1574428481,
+    "modified": 1588617481
+  },
+  "content/blog/softwareentwicklung-unter-nixos/blogpost.md": {
+    "created": 1585074148,
+    "modified": 1585567927
+  },
+  "content/blog/trial-store/trial-store.md": {
+    "created": 1542029854,
+    "modified": 1558973414
+  },
+  "content/blog/vsponse/vsponse.md": {
+    "created": 1539007961,
+    "modified": 1558973414
+  },
+  "content/blog/werkausstellung/werkausstellung.md": {
+    "created": 1536770971,
+    "modified": 1558973414
+  },
+  "content/data/testimonials/andres-quandt.md": {
+    "created": 1587986854,
+    "modified": 1587986854
+  },
+  "content/data/testimonials/brigit-fischer.md": {
+    "created": 1525003220,
+    "modified": 1587986832
+  },
+  "content/data/testimonials/carl-ehrhardt.md": {
+    "created": 1523478708,
+    "modified": 1587986832
+  },
+  "content/data/testimonials/daniel-portmann.md": {
+    "created": 1523478708,
+    "modified": 1587986832
+  },
+  "content/data/testimonials/francesco-marinelli.md": {
+    "created": 1525003220,
+    "modified": 1587990014
+  },
+  "content/data/testimonials/marc-menz.md": {
+    "created": 1593077579,
+    "modified": 1593077579
+  },
+  "content/data/testimonials/samuli-aegerter.md": {
+    "created": 1522405321,
+    "modified": 1587986832
+  },
+  "content/data/testimonials/tobias-stahel.md": {
+    "created": 1522405321,
+    "modified": 1587986832
+  },
+  "content/services/architektur-review/architektur-review.md": {
+    "created": 1535470242,
+    "modified": 1584719542
+  },
+  "content/services/bargeldlos-bezahlen/bargeldlos-bezahlen.md": {
+    "created": 1589967141,
+    "modified": 1589967141
+  },
+  "content/services/chatbots/chatbots.md": {
+    "created": 1539584636,
+    "modified": 1592236783
+  },
+  "content/services/dashboard-notaufnahme/dashboard-notaufnahme.md": {
+    "created": 1525107867,
+    "modified": 1584719542
+  },
+  "content/services/dashboard/dashboard.md": {
+    "created": 1599806781,
+    "modified": 1599806781
+  },
+  "content/services/digitalisierung-unternehmen/digitalisierung-unternehmen.md": {
+    "created": 1587123486,
+    "modified": 1587123486
+  },
+  "content/services/einsatzplanung/einsatzplanung.md": {
+    "created": 1539584636,
+    "modified": 1560273363
+  },
+  "content/services/future-hack/future-hack.md": {
+    "created": 1581416583,
+    "modified": 1587123486
+  },
+  "content/services/guest-counter/guestcounter.md": {
+    "created": 1589369061,
+    "modified": 1590582952
+  },
+  "content/services/impressum/impressum.md": {
+    "created": 1521817718,
+    "modified": 1560273363
+  },
+  "content/services/individuelle-entwicklung/individuelle-entwicklung.md": {
+    "created": 1525015293,
+    "modified": 1599806781
+  },
+  "content/services/mobile-apps/mobile-apps.md": {
+    "created": 1584719542,
+    "modified": 1584719542
+  },
+  "content/services/persona-workshop/persona-workshop.md": {
+    "created": 1526482190,
+    "modified": 1584719542
+  },
+  "content/services/produktkonfiguratoren/produktkonfiguratoren.md": {
+    "created": 1527865119,
+    "modified": 1592236783
+  },
+  "content/services/support/support.md": {
+    "created": 1525709929,
+    "modified": 1584719542
+  },
+  "content/services/telefonverkauf-showcase/telefonverkauf-showcase.md": {
+    "created": 1526117197,
+    "modified": 1560273363
+  },
+  "content/services/unsere-kompetenzen/unsere-kompetenzen.md": {
+    "created": 1525875060,
+    "modified": 1560273363
+  },
+  "content/services/vorgehensweise/vorgehensweise.md": {
+    "created": 1525884383,
+    "modified": 1575908549
+  },
+  "content/services/web-apps/web-apps.md": {
+    "created": 1584719542,
+    "modified": 1584980332
+  },
+  "content/services/webshops/webshops.md": {
+    "created": 1588350893,
+    "modified": 1588350893
+  },
+  "content/services/zusammenarbeit/zusammenarbeit.md": {
+    "created": 1525724147,
+    "modified": 1560273363
+  },
+  "content/blog/2015-07-08-der-digitale-wandel.md": {
+    "created": 1521817699,
+    "modified": 1588617481
+  },
+  "content/blog/2015-07-22-warum-apptiva.md": {
+    "created": 1521817699,
+    "modified": 1588617481
+  },
+  "content/blog/2015-07-29-anwender-im-vordergrund.md": {
+    "created": 1521817699,
+    "modified": 1558973414
+  },
+  "content/blog/2015-10-29-eine-moderne-ui-architektur.md": {
+    "created": 1521817699,
+    "modified": 1588617481
+  },
+  "content/blog/2015-11-06-qualitaetsziele.md": {
+    "created": 1521817699,
+    "modified": 1588617481
+  },
+  "content/blog/2015-12-03-geschaeftsprozesse-beschleunigen.md": {
+    "created": 1521817699,
+    "modified": 1588616096
+  },
+  "content/blog/2016-01-15-stakeholder-interviews.md": {
+    "created": 1521817699,
+    "modified": 1588617481
+  },
+  "content/blog/2016-03-03-digitale-kluft.md": {
+    "created": 1521817699,
+    "modified": 1558973414
+  },
+  "content/blog/2016-04-15-mehr-ueberblick-mit-storymap.md": {
+    "created": 1521817699,
+    "modified": 1558973414
+  },
+  "content/blog/2016-04-22-it-landschaft-einer-organisation-langfristig-positiv-beeinflussen.md": {
+    "created": 1521817699,
+    "modified": 1588616096
+  },
+  "content/blog/2016-07-29-1-jahr-apptiva.md": {
+    "created": 1521817699,
+    "modified": 1558973414
+  },
+  "content/blog/2016-10-14-mwst-startups.md": {
+    "created": 1521817699,
+    "modified": 1588616096
+  },
+  "content/blog/2016-10-28-bot-entwicklung.md": {
+    "created": 1521817699,
+    "modified": 1558973414
+  },
+  "content/blog/2016-11-03-chatbot-entwickeln-mit-react-redux-wit-ai-und-slack-teil-1.md": {
+    "created": 1521817699,
+    "modified": 1588616096
+  },
+  "content/blog/2016-11-16-react-komponenten-mit-chrome-timeline-analysieren.md": {
+    "created": 1521817699,
+    "modified": 1588616096
+  },
+  "content/blog/2016-11-28-suva-schneesport-check.md": {
+    "created": 1521817699,
+    "modified": 1588616096
+  },
+  "content/blog/2017-07-20-allianz-cinema-chatbot.md": {
+    "created": 1521817699,
+    "modified": 1588616096
+  },
+  "content/blog/2017-07-27-amazon-lambda-zusammen-mit-dem-serverless-framework.md": {
+    "created": 1521817699,
+    "modified": 1588616096
+  },
+  "content/blog/2018-01-04-jest-test-debuggen-mit-visual-studio-code.md": {
+    "created": 1521817699,
+    "modified": 1588616096
+  },
+  "content/blog/2018-02-01-bots-holzoepfel-ond-zipfelchappe.md": {
+    "created": 1521817699,
+    "modified": 1601989865
+  },
+  "content/blog/2018-02-06-wir-sind-in-die-startup-station-umgezogen.md": {
+    "created": 1521817699,
+    "modified": 1558973414
+  },
+  "content/blog/partyplaner-fuer-schuerch-getraenke.md": {
+    "created": 1526483139,
+    "modified": 1588617481
+  },
+  "content/blog/usability-audit.md": {
+    "created": 1527698359,
+    "modified": 1558973414
+  },
+  "content/data/employees/david-decker/david-decker.md": {
+    "created": 1572863475,
+    "modified": 1573546724
+  },
+  "content/data/employees/linus-huesler/linus-huesler.md": {
+    "created": 1524669899,
+    "modified": 1560268511
+  },
+  "content/data/employees/markus-tanner/markus-tanner.md": {
+    "created": 1524669899,
+    "modified": 1588571792
+  },
+  "content/data/employees/patrik-stutz/patrik-stutz.md": {
+    "created": 1560320322,
+    "modified": 1597826511
+  },
+  "content/data/employees/philip-schoenholzer/philip-schoenholzer.md": {
+    "created": 1524669899,
+    "modified": 1588616096
+  },
+  "content/data/employees/renato-wasescha/renato-wasescha.md": {
+    "created": 1557765906,
+    "modified": 1596716188
+  },
+  "content/data/employees/roman-schaller/roman-schaller.md": {
+    "created": 1524669899,
+    "modified": 1595577303
+  },
+  "content/data/partners/digital-enterprise/digital-enterprise.md": {
+    "created": 1587392472,
+    "modified": 1587392472
+  },
+  "content/data/partners/dox42/dox42.md": {
+    "created": 1578928504,
+    "modified": 1587392472
+  },
+  "content/data/partners/swisscom/swisscom.md": {
+    "created": 1578928504,
+    "modified": 1587392472
+  }
+}

@@ -133,8 +133,8 @@ export default ({ data, pageContext }) => {
   const { markdownRemark: post } = data
 
   post.frontmatter.excerpt = post.excerpt
-  post.frontmatter.updatedAt = post.fields.updatedAt
-  post.frontmatter.dateModified = post.fields.dateModified
+  post.frontmatter.updatedAt = post.updatedAt
+  post.frontmatter.dateModified = post.updatedAt
 
   return (
     <Layout>
@@ -154,10 +154,7 @@ export const pageQuery = graphql`
       id
       html
       excerpt(pruneLength: 300)
-      fields {
-        updatedAt(formatString: "DD.MM.YYYY")
-        dateModified: updatedAt(formatString: "DD.MM.YYYY")
-      }
+      updatedAt(formatString: "DD.MM.YYYY")
       frontmatter {
         title
         description
