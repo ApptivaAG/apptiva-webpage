@@ -1,6 +1,10 @@
 const config = require('./src/config')
 
 module.exports = {
+  flags: {
+    FAST_DEV: true,
+    FAST_REFRESH: true,
+  },
   siteMetadata: {
     title: config.company,
     siteUrl: config.url, // needed in gatsby-plugin-sitemap
