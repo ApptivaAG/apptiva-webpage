@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled, { keyframes } from 'styled-components'
 
+import coronavirus from '../img/coronavirus.svg'
 import logoSlogan from '../img/logo-slogan.svg'
 import { Button, Container as CntnrDefault } from '../style'
 
@@ -196,26 +197,23 @@ export default () => {
               display: flex;
               align-items: center;
               flex-wrap: wrap;
-              font-size: 1.2em;
+              font-size: 0.6em;
               margin: 0 -1em;
               background: ${(p) => p.theme.color.lightBg};
               color: #666;
             `}
           >
-            <span
-              css="font-size: 2em; margin: 0 0 0 0.5em;"
-              role="img"
-              aria-label="Weihnachtsbäume"
-            >
-              🎄
-            </span>
-            <p css="flex: 1; font-weight: 600; margin: 0.5em  1em;">
-              Frohe Weihnachten und ein gutes, neues Jahr!
+            <img
+              css="display:block; height: 2.4em; margin: 0.5em 1em;"
+              src={coronavirus}
+              alt=""
+            />
+            <p css="flex: 1 1 auto; font-weight: 600; margin: 0.5em  1em;">
+              Trotz Coronavirus arbeiten wir an allen Projekten in
+              Vollbesetzung.
             </p>
-            <div css="font-size: 0.8em; margin: 0.5em  1em;">
-              <Button to="/weihnachtsgruesse-2020/">
-                Unser Weihnachtsgruss
-              </Button>
+            <div css="font-size: 0.9em; margin: 0.5em  1em;">
+              <Button to="/coronavirus">Coronavirus bei Apptiva</Button>
             </div>
           </div>
         </Container>
