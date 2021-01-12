@@ -12,17 +12,9 @@ import { stripHTML } from '../util'
 import Layout from '../components/Layout'
 import BlogLinkItem from '../components/BlogLinkItem'
 
-const HeadArea = styled.div`
-  margin-bottom: 0.6em;
-`
-
-const HeaderTitle = styled(MainTitle)`
-  font-size: 2rem;
-`
-
 const Header = ({ title, image }) => (
   <HeadArea>
-    <HeaderTitle dangerouslySetInnerHTML={{ __html: title }} />
+    <MainTitle dangerouslySetInnerHTML={{ __html: title }} />
     <Img
       style={{ width: '100%' }}
       fluid={image.childImageSharp.fluid}
@@ -35,19 +27,6 @@ const Header = ({ title, image }) => (
 )
 
 const Published = ({ author, date, updatedAt }) => {
-  const Wrapper = styled.div`
-    margin-top: 0;
-    margin-bottom: 3em;
-    color: #0009;
-    font-size: 0.8rem;
-  `
-  const Author = styled.span`
-    font-weight: 400;
-    text-transform: capitalize;
-  `
-  const Date = styled.span`
-    font-weight: 400;
-  `
   return (
     <Wrapper>
       {/* eslint-disable-next-line react/jsx-one-expression-per-line  */}
@@ -62,8 +41,6 @@ const Published = ({ author, date, updatedAt }) => {
     </Wrapper>
   )
 }
-
-const LayoutNavigation = styled.div``
 
 const Navigation = ({ next, prev }) => {
   return (
@@ -93,11 +70,6 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content
   const { title, image, description, author, date, updatedAt } = metaData
 
-  const Description = styled.p`
-    font-weight: 600;
-    margin-bottom: 0.4em;
-    margin-top: 2em;
-  `
   return (
     <main>
       <Helmet title={`${stripHTML(title)} - Blog - ${config.company}`} />
@@ -175,4 +147,28 @@ export const pageQuery = graphql`
       }
     }
   }
+`
+
+const HeadArea = styled.div`
+  margin-bottom: 0.6em;
+`
+const Wrapper = styled.div`
+  margin-top: 0;
+  margin-bottom: 3em;
+  color: #0009;
+  font-size: 0.8rem;
+`
+const Author = styled.span`
+  font-weight: 400;
+  text-transform: capitalize;
+`
+const Date = styled.span`
+  font-weight: 400;
+`
+const LayoutNavigation = styled.div``
+
+const Description = styled.p`
+  font-weight: 600;
+  margin-bottom: 0.4em;
+  margin-top: 2em;
 `
