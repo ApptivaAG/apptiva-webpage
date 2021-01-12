@@ -60,6 +60,16 @@ specs:
       text: Unsere Konfiguratoren können sehr gut in bereits vorhandene statische Webseiten integriert werden.
 ---
 
+## Kosten für einen individuellen Produktkonfigurator
+
+Die Kosten für einen individuellen Produktkonfigurator hängen stark von der Komplexität, dem Umfang, den Features und der gewünschten Finesse ab.
+
+![Kosten für einen individuellen Produktkonfigurator](kosten-produktkonfigurator.png)
+
+Aus unserer Erfahrung können wir sagen, dass auch der einfachste Produktkonfigurator einen mittleren 4-stelligen Betrag voraussetzt. Dies ist der Mindestbetrag, um einen produktiven Produktkonfigurator bereitstellen zu können. Die Kosten für einen durchschnittlich Produktkonfigurator - in Bezug auf Komplexität, Umfang, Features und Finesse - liegen bei ungefähr 30'000 CHF. Eine Obergrenze der Kosten für die Entwicklung eines Produktkonfigurators gibt es hingegen nicht. Je nach Anforderungen kann ein Produktkonfigurator so auch durchaus im 6-stelligen Bereich liegen.
+
+Sie können uns gerne kontaktieren, um einen ungefähren Rahmen der Kosten für Ihren Produktkonfigurator zu erhalten. Wir beraten Sie gerne.
+
 ## Kontakt
 
 [[right]]
