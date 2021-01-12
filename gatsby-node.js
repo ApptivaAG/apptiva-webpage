@@ -29,7 +29,7 @@ exports.createPages = ({ actions, graphql }) => {
               description
               image {
                 childImageSharp {
-                  fixed(width: 260) {
+                  fixed(width: 240) {
                     srcSet
                     srcWebp
                     src
