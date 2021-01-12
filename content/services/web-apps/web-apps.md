@@ -64,7 +64,9 @@ Die Kosten für eine Web App hängen stark von der Komplexität, dem Umfang, den
 
 ![Kosten für eine Web App](kosten-web-app.png)
 
-Aus unserer Erfahrung können wir sagen, dass auch die einfachste Web App einen mittleren 4-stelligen Betrag voraussetzt. Dies ist der Mindestbetrag, um eine produktive eine Web App bereitstellen zu können. Die Kosten für eine durchschnittliche Web App, in Bezug auf Komplexität, Umfang, Features und Finesse, liegen bei ungefähr 40'000 CHF. Eine Obergrenze der Kosten für die Entwicklung einer Web App gibt es hingegen nicht. Je nach Anforderungen kann eine Web App so auch durchaus im 6-stelligen Bereich liegen. Sie können uns gerne kontaktieren, um einen ungefähren Rahmen der Kosten für Ihre Web App zu erhalten. Wir beraten Sie gerne.
+Aus unserer Erfahrung können wir sagen, dass auch die einfachste Web App einen mittleren 4-stelligen Betrag voraussetzt. Dies ist der Mindestbetrag, um eine produktive eine Web App bereitstellen zu können. Die Kosten für eine durchschnittliche Web App - in Bezug auf Komplexität, Umfang, Features und Finesse - liegen bei ungefähr 40'000 CHF. Eine Obergrenze der Kosten für die Entwicklung einer Web App gibt es hingegen nicht. Je nach Anforderungen kann eine Web App so auch durchaus im 6-stelligen Bereich liegen.
+
+Sie können uns gerne kontaktieren, um einen ungefähren Rahmen der Kosten für Ihre Web App zu erhalten. Wir beraten Sie gerne.
 
 ## Wir sind besonders effektiv
 
