@@ -3,7 +3,7 @@ title: Suva Slope Track-App Update 2021
 slug: suva-slope-track-app-update-2021
 templateKey: blog-post
 image: slope-track-2021.jpg
-date: 2021-01-12
+date: 2021-01-14
 author: Philip Schönholzer
 description: >-
   Für 2021 durften wir einige schöne Verbesserungen und Erweiterungen an der Slope Track App von Suva vornehmen.

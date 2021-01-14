@@ -161,7 +161,7 @@
   },
   "content/services/mobile-apps/mobile-apps.md": {
     "created": 1584719542,
-    "modified": 1584719542
+    "modified": 1601974346
   },
   "content/services/persona-workshop/persona-workshop.md": {
     "created": 1526482190,
@@ -169,7 +169,7 @@
   },
   "content/services/produktkonfiguratoren/produktkonfiguratoren.md": {
     "created": 1527865119,
-    "modified": 1592236783
+    "modified": 1610436413
   },
   "content/services/support/support.md": {
     "created": 1525709929,
@@ -189,7 +189,7 @@
   },
   "content/services/web-apps/web-apps.md": {
     "created": 1584719542,
-    "modified": 1584980332
+    "modified": 1610436413
   },
   "content/services/webshops/webshops.md": {
     "created": 1588350893,
@@ -277,7 +277,7 @@
   },
   "content/blog/2018-02-01-bots-holzoepfel-ond-zipfelchappe.md": {
     "created": 1521817699,
-    "modified": 1601989865
+    "modified": 1608745043
   },
   "content/blog/2018-02-06-wir-sind-in-die-startup-station-umgezogen.md": {
     "created": 1521817699,
@@ -293,7 +293,7 @@
   },
   "content/data/employees/david-decker/david-decker.md": {
     "created": 1572863475,
-    "modified": 1573546724
+    "modified": 1606387418
   },
   "content/data/employees/linus-huesler/linus-huesler.md": {
     "created": 1524669899,
@@ -330,5 +330,17 @@
   "content/data/partners/swisscom/swisscom.md": {
     "created": 1578928504,
     "modified": 1587392472
+  },
+  "content/blog/2020-11-erste-schritte-in-der-informatik/erste-schritte-in-der-informatik.md": {
+    "created": 1606387418,
+    "modified": 1608217362
+  },
+  "content/blog/2020-12-03-vivanco/blogpost.md": {
+    "created": 1606989168,
+    "modified": 1608220006
+  },
+  "content/blog/slope-track-update-2021/slope-track-update-2021.md": {
+    "created": 1610619397,
+    "modified": 1610619397
   }
 }
