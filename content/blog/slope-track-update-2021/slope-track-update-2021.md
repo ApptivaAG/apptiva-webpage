@@ -29,7 +29,7 @@ Mit diesem Update wurde die Abfahrtenerkennung stark verbessert. Falsche oder fe
 
 ## Neue Tipps
 
-Zusätzlich zu den bestehenden Tipps gesellen sich sich zwei neue:
+Zusätzlich zu den bestehenden Tipps gesellen sich zwei neue:
 
 - **Pausen**: Es ist bekannt, dass vor dem Mittagessen und ab 15:00 die meisten Unfälle im Schneesport passieren. Entsprechend zeigen wir zur gegebenen Zeit den Tipp "Pause machen" an.
 - **Schneesport-Check**: Um die Risiken zu reduzieren, ist es hilfreich, die eigenen Risikopotentiale im Schneesport zu kennen. Entsprechend verweisen wir auf den Schneesport-Check von Suva, wo die Nutzer ihre persönlichen Risiken kennenlernen können.
