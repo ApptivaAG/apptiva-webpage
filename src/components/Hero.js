@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled, { keyframes } from 'styled-components'
 
-import coronavirus from '../img/coronavirus.svg'
 import logoSlogan from '../img/logo-slogan.svg'
 import { Button, Container as CntnrDefault } from '../style'
 
@@ -130,15 +129,32 @@ const Info = styled.div`
 `
 
 export default () => {
-  const heroImage = useStaticQuery(graphql`
+  const images = useStaticQuery(graphql`
     query {
-      imageSharp(fluid: { originalName: { regex: "/solution-collage.png/" } }) {
-        fluid(maxWidth: 1800) {
-          ...GatsbyImageSharpFluid_withWebp
+      hero: file(
+        absolutePath: { regex: "/solution-collage.png/" }
+        sourceInstanceName: { eq: "images" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 1920) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      mail: file(
+        absolutePath: { regex: "/mail9.png/" }
+        sourceInstanceName: { eq: "images" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 200) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
         }
       }
     }
-  `).imageSharp.fluid
+  `)
+
+  console.log('images', images)
 
   return (
     <Section id="start">
@@ -165,7 +181,7 @@ export default () => {
       <Columns css="margin-right: 10%;">
         <ColHero>
           <Img
-            fluid={{ ...heroImage, base64: svgData }}
+            fluid={{ ...images.hero.childImageSharp.fluid, base64: svgData }}
             alt="Erfolgreich umgesetzte Desktop, Mobile und Weblösungen"
           />
         </ColHero>
@@ -203,17 +219,17 @@ export default () => {
               color: #666;
             `}
           >
-            <img
-              css="display:block; height: 2.4em; margin: 0.5em 1em;"
-              src={coronavirus}
-              alt=""
+            <Img
+              css="width: 100px;"
+              fluid={images.mail.childImageSharp.fluid}
+              alt="Newsletter"
             />
             <p css="flex: 1 1 auto; font-weight: 600; margin: 0.5em  1em;">
-              Trotz Coronavirus arbeiten wir an allen Projekten in
-              Vollbesetzung.
+              Bleiben Sie mit dem Apptiva Newsletter auf dem Laufenden. Jedes
+              Quartal aktuelle Apptiva-News erhalten.
             </p>
             <div css="font-size: 0.9em; margin: 0.5em  1em;">
-              <Button to="/coronavirus">Coronavirus bei Apptiva</Button>
+              <Button to="/newsletter">Newsletter abonnieren</Button>
             </div>
           </div>
         </Container>
