@@ -36,7 +36,7 @@ const NewsletterForm = () => {
         <div>
           <label htmlFor="email">Email</label>
           <Input
-            type="text"
+            type="email"
             name="email"
             id="email"
             ref={register({ required: true })}
