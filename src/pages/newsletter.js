@@ -33,28 +33,33 @@ const Newsletter = () => {
 
   return (
     <Layout>
-      <Container>
-        <Helmet title={`Apptiva Newsletter - ${config.company}`} />
-        <SEO metaData={metadata} />
+      <Helmet title={`Apptiva Newsletter - ${config.company}`} />
+      <SEO metaData={metadata} />
 
-        <Section>
+      <Section>
+        <Container>
           <MainTitle>Apptiva Newsletter</MainTitle>
-          <Img css="margin: 3em 0;" fluid={mail.childImageSharp.fluid} />
-          <p css="font-size: 1.8em; padding: 0;">
+          <Img fluid={mail.childImageSharp.fluid} />
+        </Container>
+        <Container css="max-width: 600px;">
+          <h2 css="margin-top: 0;">
             Bleiben Sie mit dem Apptiva Newsletter auf dem Laufenden.
-          </p>
+          </h2>
           <p>
-            Der Apptiva Newsletter wird einmal pro Quartal verschickt mit den
-            neuesten News rund um die Apptiva:
+            Den Apptiva Newsletter versenden wir <b>einmal pro Quartal</b> mit
+            den neuesten News rund um die Apptiva:
           </p>
           <ul>
-            <li>Was unseren aktuellen Projekte sind.</li>
-            <li>Welche Erkenntnisse wir gewonnen haben.</li>
-            <li>Wie die Apptiva täglich besser wird.</li>
+            <li>Umgesetzte Projekte</li>
+            <li>Gewonnene Erkenntnisse</li>
+            <li>Wie wir uns laufend verbessern</li>
           </ul>
-          <NewsletterForm />
-        </Section>
-      </Container>
+          <p>Hört sich gut an?</p>
+          <div css="margin-bottom: 4em;">
+            <NewsletterForm />
+          </div>
+        </Container>
+      </Section>
     </Layout>
   )
 }
