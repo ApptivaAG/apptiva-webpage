@@ -47,7 +47,7 @@ const Newsletter = () => {
           </h2>
           <p>
             Den Apptiva Newsletter versenden wir <b>einmal pro Quartal</b> mit
-            den neuesten News rund um die Apptiva:
+            News rund um die Apptiva:
           </p>
           <ul>
             <li>Umgesetzte Projekte</li>
