@@ -6,6 +6,7 @@ import { description } from '../config'
 import { Container, Button } from '../style'
 import chevron from '../img/chevron.svg'
 import coronavirus from '../img/coronavirus.svg'
+import NewsletterForm from './NewsletterForm'
 
 const year = new Date().getFullYear()
 
@@ -110,6 +111,10 @@ const Footer = () => (
         <About>
           <h2>Über Apptiva</h2>
           <p>{description}</p>
+          <div css="margin-top: 3em;">
+            <h3>Jedes Quartal aktuelle News erhalten</h3>
+            <NewsletterForm />
+          </div>
           <div
             css={`
               margin-top: 5em;

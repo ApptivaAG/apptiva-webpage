@@ -108,5 +108,13 @@ module.exports = {
     },
     'gatsby-plugin-netlify-cache',
     'gatsby-plugin-preload-fonts',
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint:
+          'https://apptiva.us13.list-manage.com/subscribe/post?u=3ca7971bb5ee8b57e94b2b925&id=9612e94e98', // string; add your MC list endpoint here; see instructions below
+        timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
+      },
+    },
   ],
 }
