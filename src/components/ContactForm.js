@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import styled, { css } from 'styled-components'
 import fetch from 'unfetch'
 
-import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 import { Button } from '../style'
 
 const sharedInput = css`
@@ -31,13 +30,14 @@ export const encode = (data) =>
     .join('&')
 
 const analyticsFormSent = () =>
-  trackCustomEvent({
+  typeof window !== 'undefined' &&
+  window.gtag('event', 'submit', {
     // string - required - The object that was interacted with (e.g.video)
-    category: 'Kontaktformular',
+    event_category: 'Kontaktformular',
     // string - required - Type of interaction (e.g. 'play')
-    action: 'Verschickt',
+    event_action: 'Verschickt',
     // string - optional - Useful for categorizing events (e.g. 'Spring Campaign')
-    label: 'Apptiva Zielvorhaben',
+    event_label: 'Apptiva Zielvorhaben',
     // number - optional - Numeric value associated with the event. (e.g. A product ID)
     value: 1,
   })
