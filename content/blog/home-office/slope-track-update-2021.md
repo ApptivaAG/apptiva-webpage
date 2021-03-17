@@ -11,17 +11,17 @@ categories:
   - Allgemein
 ---
 
-Wie viele andere auch, arbeiten wir von Apptiva seit über einem Jahr zu Hause. Wenn ich dies jemandem erzähle, kommen oft die selben Fragen. Geht dies denn? Fehlen dir die Kollegen nicht? Was ist mit den Kunden? Ja was ist damit? Fangen wir an.
+Wie viele andere auch arbeiten wir von Apptiva seit über einem Jahr zu Hause. Wenn ich dies jemandem erzähle, kommen oft dieselben Fragen. Geht dies denn? Fehlen dir die Kollegen nicht? Was ist mit den Kunden? Ja, was ist damit?
 
 ## Ist es möglich zu Hause zu arbeiten?
 
 Als wir vor einem Jahr am 17. März 2020 das erste Mal alle zu Hause arbeiteten, wurden wir etwas ins kalte Wasser geworfen. Wir hatten uns zwar zwei Wochen vorher bereits auf dieses Szenario vorbereitet, trotzdem waren wir gespannt, als es Tatsache wurde.
 
-Zu unserer aller Überraschung funktionierte der erste Tag reibungslos. Wir mussten uns nur ein bisschen umorganisieren, aber grundsätzlich konnten wir fast wie bisher arbeiten. Natürlich gab es Situationen, wo wir etwas mehr Mühe hatten. So z.B. bei Aktivitäten, die wir normalerweise vor einem Whiteboard oder mit Post-it's arbeiteten. Doch mit etwas googeln und herumfragen fanden wir Tools und Techniken, um damit umgehen zu können.
+Zu unserer Überraschung funktionierte der erste Tag reibungslos. Wir mussten uns nur ein bisschen umorganisieren, aber grundsätzlich konnten wir fast wie bisher arbeiten. Natürlich gab es Situationen, wo wir etwas mehr Mühe hatten. So z.B. bei Aktivitäten, die wir normalerweise vor einem Whiteboard ausübten, oder wenn wir mit Post-its arbeiteten. Doch mit etwas googeln und herumfragen fanden wir Tools und Techniken, um damit umgehen zu können.
 
 &nbsp;
 
-> ### Unsere Tools für Home-Office
+> ### Unsere Tools fürs Home-Office
 >
 > Mit folgenden Tools stellen wir ein reibungsloses Arbeiten zu Hause sicher:
 >
@@ -39,13 +39,13 @@ Was auch gleich von Beginn an gut funktionierte, waren die Kunden-Meetings. Dank
 
 ## Macht es Spass, zu Hause zu arbeiten?
 
-Die pauschal zu beantworten ist mMn nicht möglich. Wenn die Arbeit im Büro keinen Spass macht, dann wird es zu Hause nicht besser. Hinzu kommt noch die private Situation. Singles und Familienväter und -mütter haben besondere Challenges, wo ein Büro mit Kollegen wahrscheinlich teilweise herbeigesehnt wird.
+Dies pauschal zu beantworten ist mMn nicht möglich. Wenn die Arbeit im Büro keinen Spass macht, dann wird es zu Hause nicht besser. Hinzu kommt noch die private Situation. Singles und Familienväter und -mütter haben besondere Challenges, bei welchen ein Büro mit Kollegen wahrscheinlich machmal herbeigesehnt wird.
 
 Ich persönlich bin in der glücklichen Lage, dass meine Frau ebenfalls zu Hause arbeitet und wir in unserer Wohnung etwas "Büro-Stimmung" haben. Wir machen gemeinsame Kaffee-Pausen und treiben zusammen Sport über den Mittag.
 
 ## Möchtest du nicht deine Kollegen wieder mal sehen?
 
-Natürlich! Wir "sehen" uns alle zwar jeden Tag zumindest ein Mal, bei unserem morgendlichen Call, aber dies ist nicht dasselbe wie vorher. Die Gespräche während der Pause und beim Bier fehlen. Wir versuchen dies zumindest mit virtuellen Treffen zu kompensieren. Trotzdem ist es nicht dasselbe.
+Natürlich! Wir "sehen" uns alle zwar jeden Tag mindestens einmal bei unserem morgendlichen Call, aber dies ist nicht dasselbe wie vorher. Die Gespräche während der Pause und beim Bier fehlen. Wir versuchen dies mit virtuellen Treffen zu kompensieren. Trotzdem ist es nicht dasselbe.
 
 Dies ganz auf das Home-Office abzuschieben, ist aber auch nicht ganz fair. Ich kann mir nämlich sehr gut vorstellen, dass wir uns zum Mittagessen oder für Soziales trotz Home-Office regelmässig treffen würden, wenn Corona nicht wäre.
 
@@ -62,7 +62,7 @@ Mein Gefühl sagt mir, dass die Arbeit glücklicherweise nicht unter Home-Office
 > - Standup um den Tag zu organisieren
 > - Wöchentliche Reviews mit den Kunden
 > - Regelmässige Retrospektiven
-> - Wöchentliche Feedback-Runde um sich 1 zu 1 auszutauschen
+> - Wöchentliche Feedback-Runde um sich 1:1 auszutauschen
 > - Bier am Do.-Abend
 >
 > Die meisten dieser Techniken haben wir bereits vor dem Lockdown eingesetzt, eignen sich aber bei Remote-Work mit einem Video-Call genauso gut.
@@ -74,6 +74,6 @@ Wenn man zu Hause arbeitet, ist es für den Chef natürlich schwieriger zu sehen
 ## Traum oder Albtraum?
 
 Je nach Situation wird die Frage nach Home-Office wohl mit Traum oder Albtraum oder etwas dazwischen beantwortet.
-Wir von Apptiva haben uns dafür entschieden, Home-Office-First zu betreiben. Dies heisst man kann ins Büro, aber wir arbeiten in erster Linie zu Hause. Entsprechend werden wir an unserem Büro einer Verschlankung vornehmen.
+Wir von Apptiva haben uns dafür entschieden, Home-Office-First zu betreiben. Dies heisst, man kann ins Büro, aber wir arbeiten in erster Linie zu Hause. Entsprechend werden wir an unserem Büro einer Verschlankung vornehmen.
 
-Für mich persönlich ist Home-Office ein Traum, welchen ich nie geträumt habe. Ich war mit dem Büro immer zufrieden und hatte kein Bedürfnis zu Hause zu arbeiten. Jetzt nach einem Jahr möchte ich nicht mehr zurück. Ich kann von überall her Arbeiten, sehe meine Familie mehr und geniesse jeden Tag ohne Arbeitsanreise über eine Stunde mehr Freizeit.
+Für mich persönlich ist Home-Office ein Traum, welchen ich nie geträumt habe. Ich war mit dem Büro immer zufrieden und hatte kein Bedürfnis zu Hause zu arbeiten. Jetzt nach einem Jahr möchte ich nicht mehr zurück. Ich kann von überall her arbeiten, sehe meine Familie öfters und geniesse jeden Tag ohne Arbeitsweg über eine Stunde mehr Freizeit.
