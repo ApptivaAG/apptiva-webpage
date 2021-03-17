@@ -15,9 +15,9 @@ Wie viele andere auch, arbeiten wir von Apptiva seit über einem Jahr zu Hause. 
 
 ## Ist es möglich zu Hause zu arbeiten?
 
-Als wir vor einem Jahr am 17. März 2020 das erste Mal alle zu Hause arbeiteten, wurden wir etwas ins kalte Wasser geworfen. Wir hatten uns zwar zwei Wochen vorher bereits auf dieses Szenario vorbereitet, trotzdem waren wir gespannt als es Tatsache wurde.
+Als wir vor einem Jahr am 17. März 2020 das erste Mal alle zu Hause arbeiteten, wurden wir etwas ins kalte Wasser geworfen. Wir hatten uns zwar zwei Wochen vorher bereits auf dieses Szenario vorbereitet, trotzdem waren wir gespannt, als es Tatsache wurde.
 
-Zu unserer aller Überraschung funktionierte der erste Tag reibungslos. Wir mussten uns nur ein bisschen umorganisieren, aber grundsätzlich konnten wir fast wie bisher arbeiten. Natürlich gabt es Situationen, wo wir etwas mehr Mühe hatten. So z.B. bei Aktivitäten die wir normalerweise vor einem Whiteboard oder mit Post-it's arbeiteten. Doch mit etwas googeln und herumfragen fanden wir Tools und Techniken um damit umgehen zu können.
+Zu unserer aller Überraschung funktionierte der erste Tag reibungslos. Wir mussten uns nur ein bisschen umorganisieren, aber grundsätzlich konnten wir fast wie bisher arbeiten. Natürlich gab es Situationen, wo wir etwas mehr Mühe hatten. So z.B. bei Aktivitäten, die wir normalerweise vor einem Whiteboard oder mit Post-it's arbeiteten. Doch mit etwas googeln und herumfragen fanden wir Tools und Techniken, um damit umgehen zu können.
 
 &nbsp;
 
@@ -35,9 +35,9 @@ Zu unserer aller Überraschung funktionierte der erste Tag reibungslos. Wir muss
 
 &nbsp;
 
-Was auch gleich von Beginn an gut funktionierte, waren die Kunden-Meetings. Mit dem Wegfall der Anreise führen wir unsere Kunden-Reviews sogar häufiger durch.
+Was auch gleich von Beginn an gut funktionierte, waren die Kunden-Meetings. Dank dem Wegfall der Anreise führen wir unsere Kunden-Reviews sogar häufiger durch.
 
-## Macht es Spass zu Hause zu arbeiten?
+## Macht es Spass, zu Hause zu arbeiten?
 
 Die pauschal zu beantworten ist mMn nicht möglich. Wenn die Arbeit im Büro keinen Spass macht, dann wird es zu Hause nicht besser. Hinzu kommt noch die private Situation. Singles und Familienväter und -mütter haben besondere Challenges, wo ein Büro mit Kollegen wahrscheinlich teilweise herbeigesehnt wird.
 
@@ -74,6 +74,6 @@ Wenn man zu Hause arbeitet, ist es für den Chef natürlich schwieriger zu sehen
 ## Traum oder Albtraum?
 
 Je nach Situation wird die Frage nach Home-Office wohl mit Traum oder Albtraum oder etwas dazwischen beantwortet.
-Wir von Apptiva haben uns entschieden Home-Office-First zu betreiben. Dies heisst man kann ins Büro, aber wir arbeiten in erster Linie zu Hause. Entsprechend werden wir an unserem Büro einer Verschlankung vornehmen.
+Wir von Apptiva haben uns dafür entschieden, Home-Office-First zu betreiben. Dies heisst man kann ins Büro, aber wir arbeiten in erster Linie zu Hause. Entsprechend werden wir an unserem Büro einer Verschlankung vornehmen.
 
 Für mich persönlich ist Home-Office ein Traum, welchen ich nie geträumt habe. Ich war mit dem Büro immer zufrieden und hatte kein Bedürfnis zu Hause zu arbeiten. Jetzt nach einem Jahr möchte ich nicht mehr zurück. Ich kann von überall her Arbeiten, sehe meine Familie mehr und geniesse jeden Tag ohne Arbeitsanreise über eine Stunde mehr Freizeit.
