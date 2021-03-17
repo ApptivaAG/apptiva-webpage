@@ -74,6 +74,6 @@ Wenn man zu Hause arbeitet, ist es für den Chef natürlich schwieriger zu sehen
 ## Traum oder Albtraum?
 
 Je nach Situation wird die Frage nach Home-Office wohl mit Traum oder Albtraum oder etwas dazwischen beantwortet.
-Wir von Apptiva haben uns dafür entschieden, Home-Office-First zu betreiben. Dies heisst, man kann ins Büro, aber wir arbeiten in erster Linie zu Hause. Entsprechend werden wir an unserem Büro einer Verschlankung vornehmen.
+Wir von Apptiva haben uns dafür entschieden, Home-Office-First zu betreiben. Dies heisst, man kann ins Büro, aber wir arbeiten in erster Linie zu Hause. Entsprechend werden wir an unserem Büro eine Verschlankung vornehmen.
 
-Für mich persönlich ist Home-Office ein Traum, welchen ich nie geträumt habe. Ich war mit dem Büro immer zufrieden und hatte kein Bedürfnis zu Hause zu arbeiten. Jetzt nach einem Jahr möchte ich nicht mehr zurück. Ich kann von überall her arbeiten, sehe meine Familie öfters und geniesse jeden Tag ohne Arbeitsweg über eine Stunde mehr Freizeit.
+Für mich persönlich ist Home-Office ein Traum, welchen ich nie geträumt habe. Ich war mit dem Büro immer zufrieden und hatte kein Bedürfnis, zu Hause zu arbeiten. Jetzt nach einem Jahr möchte ich nicht mehr zurück. Ich kann von überall her arbeiten, sehe meine Familie öfters und geniesse jeden Tag ohne Arbeitsweg eine Stunde mehr Freizeit.
