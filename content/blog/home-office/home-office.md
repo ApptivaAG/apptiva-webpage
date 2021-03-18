@@ -39,7 +39,7 @@ Was auch gleich von Beginn an gut funktionierte, waren die Kunden-Meetings. Dank
 
 ## Macht es Spass, zu Hause zu arbeiten?
 
-Dies pauschal zu beantworten ist mMn nicht möglich. Wenn die Arbeit im Büro keinen Spass macht, dann wird es zu Hause nicht besser. Hinzu kommt noch die private Situation. Singles und Familienväter und -mütter haben besondere Challenges, bei welchen ein Büro mit Kollegen wahrscheinlich machmal herbeigesehnt wird.
+Dies pauschal zu beantworten ist mMn nicht möglich. Wenn die Arbeit im Büro keinen Spass macht, dann wird es zu Hause nicht besser. Hinzu kommt noch die private Situation. Singles und Familienväter und -mütter haben besondere Challenges, bei welchen ein Büro mit Kollegen wahrscheinlich manchmal herbeigesehnt wird.
 
 Ich persönlich bin in der glücklichen Lage, dass meine Frau ebenfalls zu Hause arbeitet und wir in unserer Wohnung etwas "Büro-Stimmung" haben. Wir machen gemeinsame Kaffee-Pausen und treiben zusammen Sport über den Mittag.
 
