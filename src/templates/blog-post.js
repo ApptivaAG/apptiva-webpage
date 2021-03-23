@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage, getSrc } from 'gatsby-plugin-image'
 import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
 
@@ -15,13 +15,9 @@ import BlogLinkItem from '../components/BlogLinkItem'
 const Header = ({ title, image }) => (
   <HeadArea>
     <MainTitle dangerouslySetInnerHTML={{ __html: title }} />
-    <Img
+    <GatsbyImage
+      image={image.childImageSharp.gatsbyImageData}
       style={{ width: '100%' }}
-      fluid={image.childImageSharp.fluid}
-      placeholderStyle={{
-        filter: `blur(16px)`,
-        transform: `scale(1.04)`,
-      }}
     />
   </HeadArea>
 )
@@ -76,7 +72,7 @@ export const BlogPostTemplate = ({
       <SEO
         isBlogPost
         metaData={metaData}
-        postImage={metaData.image.childImageSharp.resize.src}
+        postImage={getSrc(metaData.image.childImageSharp.resize)}
       />
       <Container>
         <article>
@@ -136,12 +132,13 @@ export const pageQuery = graphql`
         slug
         image {
           childImageSharp {
-            fluid(maxWidth: 960, srcSetBreakpoints: [340, 960, 1600]) {
-              ...GatsbyImageSharpFluid
-            }
-            resize(width: 1200, height: 630, cropFocus: ENTROPY) {
-              src
-            }
+            gatsbyImageData(width: 1280, layout: CONSTRAINED)
+            resize: gatsbyImageData(
+              width: 1200
+              height: 630
+              transformOptions: { cropFocus: ENTROPY }
+              layout: FIXED
+            )
           }
         }
       }

@@ -11,43 +11,32 @@ const timestampsData = require('./content/timestamps.json')
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const posts = graphql(`
-    query {
-      allMarkdownRemark(
-        limit: 1000
-        sort: { order: DESC, fields: [frontmatter___date] }
-        filter: { frontmatter: { templateKey: { regex: "/post/" } } }
-      ) {
-        edges {
-          node {
-            id
-            frontmatter {
-              title
-              slug
-              templateKey
-              date(formatString: "DD.MM.YYYY")
-              description
-              image {
-                childImageSharp {
-                  fixed(width: 240) {
-                    srcSet
-                    srcWebp
-                    src
-                    base64
-                    width
-                    srcSetWebp
-                    aspectRatio
-                    height
-                    originalName
-                  }
-                }
-              }
+  const posts = graphql(`{
+  allMarkdownRemark(
+    limit: 1000
+    sort: {order: DESC, fields: [frontmatter___date]}
+    filter: {frontmatter: {templateKey: {regex: "/post/"}}}
+  ) {
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          slug
+          templateKey
+          date(formatString: "DD.MM.YYYY")
+          description
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 240, placeholder: BLURRED, layout: FIXED)
             }
           }
         }
       }
     }
-  `).then((result) => {
+  }
+}
+`).then((result) => {
     if (result.errors) {
       throw result.errors
     }

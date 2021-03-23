@@ -1,5 +1,5 @@
 import React from 'react'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import '@fortawesome/fontawesome-free/css/fontawesome.min.css'
@@ -23,7 +23,7 @@ const Employee = styled.div`
     text-align: center;
   }
 `
-const Avatar = styled(Img)`
+const Avatar = styled(GatsbyImage)`
   border: 3px solid #eee;
   border-radius: 50%;
   margin-right: 1em;
@@ -45,7 +45,7 @@ const Claim = styled.div`
   font-size: 0.8em;
 `
 const query = graphql`
-  query {
+  {
     employees: allMarkdownRemark(
       sort: { order: ASC, fields: [frontmatter___name] }
       filter: { frontmatter: { templateKey: { eq: "employee-page" } } }
@@ -61,9 +61,7 @@ const query = graphql`
             claim
             preview {
               childImageSharp {
-                fixed(width: 200, height: 200) {
-                  ...GatsbyImageSharpFixed_withWebp
-                }
+                gatsbyImageData(width: 200, height: 200, layout: FIXED)
               }
             }
           }
@@ -90,13 +88,7 @@ export default () => {
             return (
               <Employee key={edge.node.id}>
                 <LinkStyled to={slug}>
-                  <Avatar
-                    fixed={preview.childImageSharp.fixed}
-                    placeholderStyle={{
-                      filter: `blur(16px)`,
-                      transform: `scale(1.04)`,
-                    }}
-                  />
+                  <Avatar image={preview.childImageSharp.gatsbyImageData} />
                   <Name>{name}</Name>
                   <Claim>{claim}</Claim>
                 </LinkStyled>

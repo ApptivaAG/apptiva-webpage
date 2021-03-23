@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage, getSrc } from 'gatsby-plugin-image'
 import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
 import '@fortawesome/fontawesome-free/css/fontawesome.min.css'
@@ -23,7 +23,7 @@ const Avatar = styled.div`
   margin: 1rem;
   min-width: 8rem;
 `
-const ImgRound = styled(Img)`
+const ImgRound = styled(GatsbyImage)`
   max-width: 16rem;
   margin-left: auto;
   margin-right: auto;
@@ -144,10 +144,7 @@ export const EmployeePageTemplate = ({
     skills,
   } = metaData
 
-  const seoImage =
-    metaData.avatar &&
-    metaData.avatar.childImageSharp.resize &&
-    metaData.avatar.childImageSharp.resize.src
+  const seoImage = getSrc(metaData.avatar.childImageSharp.resize)
 
   return (
     <main>
@@ -163,13 +160,7 @@ export const EmployeePageTemplate = ({
         <Container>
           <EmployeeBanner>
             <Avatar>
-              <ImgRound
-                fluid={avatar.childImageSharp.fluid}
-                placeholderStyle={{
-                  filter: `blur(16px)`,
-                  transform: `scale(1.04)`,
-                }}
-              />
+              <ImgRound image={avatar.childImageSharp.gatsbyImageData} />
             </Avatar>
             <EmployeeData>
               <h3>{role}</h3>
@@ -263,12 +254,13 @@ export const employeePageQuery = graphql`
         claim
         avatar {
           childImageSharp {
-            fluid(srcSetBreakpoints: [340, 600]) {
-              ...GatsbyImageSharpFluid
-            }
-            resize(width: 1200, height: 630, cropFocus: NORTH) {
-              src
-            }
+            gatsbyImageData(layout: CONSTRAINED, width: 300)
+            resize: gatsbyImageData(
+              width: 1200
+              height: 630
+              transformOptions: { cropFocus: NORTH }
+              layout: FIXED
+            )
           }
         }
         role

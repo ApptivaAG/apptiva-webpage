@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 
 import {
@@ -51,12 +51,8 @@ const IndexPage = ({ partners, appsImage, chatbot, partyplaner }) => (
                 <h4>Mobile und Desktop</h4>
                 <ImgStyled
                   style={{ width: '100%', marginTop: '2rem' }}
-                  fluid={appsImage.childImageSharp.fluid}
+                  image={appsImage.childImageSharp.gatsbyImageData}
                   alt="Apps"
-                  placeholderStyle={{
-                    filter: `blur(16px)`,
-                    transform: `scale(1.04)`,
-                  }}
                 />
               </Link>
             </ListItem>
@@ -66,12 +62,8 @@ const IndexPage = ({ partners, appsImage, chatbot, partyplaner }) => (
                 <h2>Chatbots</h2>
                 <h4>Botfabrik by Apptiva</h4>
                 <ImgStyled
-                  fluid={chatbot.childImageSharp.fluid}
+                  image={chatbot.childImageSharp.gatsbyImageData}
                   alt="Chatbots"
-                  placeholderStyle={{
-                    filter: `blur(16px)`,
-                    transform: `scale(1.04)`,
-                  }}
                 />
               </Link>
             </ListItem>
@@ -84,12 +76,8 @@ const IndexPage = ({ partners, appsImage, chatbot, partyplaner }) => (
                 </h2>
                 <h4>Komplexe Angebote einfach verkaufen</h4>
                 <ImgStyled
-                  fluid={partyplaner.childImageSharp.fluid}
+                  image={partyplaner.childImageSharp.gatsbyImageData}
                   alt="Angebots- und Produktkonfiguratoren"
-                  placeholderStyle={{
-                    filter: `blur(16px)`,
-                    transform: `scale(1.04)`,
-                  }}
                 />
               </Link>
             </ListItem>
@@ -152,8 +140,10 @@ const IndexPage = ({ partners, appsImage, chatbot, partyplaner }) => (
             {partners.edges.map(({ node }) => {
               return (
                 <Link key={node.id} to={node.frontmatter.slug}>
-                  <Img
-                    fixed={node.frontmatter.logo.childImageSharp.fixed}
+                  <GatsbyImage
+                    image={
+                      node.frontmatter.logo.childImageSharp.gatsbyImageData
+                    }
                     alt={node.frontmatter.name}
                   />
                 </Link>
@@ -193,9 +183,7 @@ export const indexPageQuery = graphql`
             slug
             logo {
               childImageSharp {
-                fixed(width: 200) {
-                  ...GatsbyImageSharpFixed_withWebp
-                }
+                gatsbyImageData(width: 200, layout: FIXED)
               }
             }
           }
@@ -206,27 +194,21 @@ export const indexPageQuery = graphql`
       absolutePath: { regex: "/individuelle-entwicklung/apps.png/" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
+        gatsbyImageData(width: 600, layout: CONSTRAINED)
       }
     }
     partyplaner: file(
       absolutePath: { regex: "/produktkonfiguratoren/partyplaner.png/" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
+        gatsbyImageData(width: 600, layout: CONSTRAINED)
       }
     }
     chatbot: file(
       absolutePath: { regex: "/services/chatbots/chatbot-screen2.png/" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
+        gatsbyImageData(width: 600, layout: CONSTRAINED)
       }
     }
   }

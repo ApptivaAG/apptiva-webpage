@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react'
 import { Link } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import styled, { css, createGlobalStyle } from 'styled-components'
 
 import newTab from './img/new-tab.svg'
@@ -143,7 +143,7 @@ export const Icon = styled.div`
   background-color: ${(props) => props.theme.color.secondary};
 `
 
-export const ImgStyled = styled(Img)`
+export const ImgStyled = styled(GatsbyImage)`
   max-width: 340px;
   transition: transform 0.3s;
 `
@@ -323,4 +323,8 @@ export const GlobalStyle = createGlobalStyle`
     border: 0;
   }
 
+  .gatsby-image-wrapper [data-placeholder-image] {
+    filter: blur(26px);
+    transform: scale(1.04);
+  }
 `

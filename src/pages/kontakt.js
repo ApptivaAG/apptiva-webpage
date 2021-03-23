@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 import Layout from '../components/Layout'
 import { Container, Section, Button } from '../style'
@@ -35,15 +35,13 @@ const ContactInfo = styled.a`
 `
 
 const query = graphql`
-  query {
+  {
     buildingImage: file(
       absolutePath: { regex: "/gebaeude.jpg/" }
       sourceInstanceName: { eq: "images" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1920) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
   }
@@ -91,7 +89,7 @@ const Kontakt = () => {
           </Grid>
         </Container>
       </Section>
-      <Img fluid={buildingImage.childImageSharp.fluid} />
+      <GatsbyImage image={buildingImage.childImageSharp.gatsbyImageData} />
       <Section dark id="anfahrt">
         <Container>
           <h2>Standort</h2>
