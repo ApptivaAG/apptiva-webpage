@@ -29,6 +29,7 @@ const Blog = ({ data }) => {
 
             {posts.map(({ node: post }) => (
               <BlogLinkItem
+                key={post.id}
                 css={`
                   background: ${(p) => p.theme.color.lightBg};
                 `}

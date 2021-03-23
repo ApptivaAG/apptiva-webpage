@@ -95,6 +95,7 @@ const Header = ({ title, image, subtitle }) => (
     {image && (
       <GatsbyImage
         image={image.childImageSharp.gatsbyImageData}
+        alt={title}
         css={`
           margin: 2rem auto 0;
           width: 90%;
@@ -159,7 +160,8 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
               {customers.map((customer) => (
                 <GatsbyImage
                   image={customer.childImageSharp.gatsbyImageData}
-                  key={customer}
+                  key={getSrc(customer.childImageSharp.gatsbyImageData)}
+                  alt=""
                 />
               ))}
             </Customers>

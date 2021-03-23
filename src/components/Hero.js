@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { GatsbyImage } from 'gatsby-plugin-image'
+import { GatsbyImage, StaticImage } from 'gatsby-plugin-image'
 import styled, { keyframes } from 'styled-components'
 
 import logoSlogan from '../img/logo-slogan.svg'
@@ -139,14 +139,6 @@ const Hero = () => {
           gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
         }
       }
-      mail: file(
-        absolutePath: { regex: "/mail9.png/" }
-        sourceInstanceName: { eq: "images" }
-      ) {
-        childImageSharp {
-          gatsbyImageData(width: 200, layout: CONSTRAINED)
-        }
-      }
     }
   `)
 
@@ -219,11 +211,11 @@ const Hero = () => {
               color: #666;
             `}
           >
-            <GatsbyImage
-              image={images.mail.childImageSharp.gatsbyImageData}
-              css="width: 100px;"
-              alt="Newsletter"
-            />
+            <StaticImage
+              src="../img/mail9.png"
+              width={100}
+              alt="Apptiva Newsletter"
+            ></StaticImage>
             <p css="flex: 1 1 auto; font-weight: 600; margin: 0.5em  1em;">
               Bleiben Sie mit dem Apptiva Newsletter auf dem Laufenden. Jedes
               Quartal aktuelle Apptiva-News erhalten.

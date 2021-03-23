@@ -1,7 +1,6 @@
 import React from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
 import { Helmet } from 'react-helmet'
-import { graphql, useStaticQuery } from 'gatsby'
-import { GatsbyImage } from 'gatsby-plugin-image'
 
 import { Container, Section, Buttonlist, Button, MainTitle } from '../style'
 import { description, company } from '../config'
@@ -11,26 +10,12 @@ import Employees from '../components/Employees'
 import SEO from '../components/SEO'
 import CallToAction from '../components/CallToAction'
 
-const query = graphql`
-  {
-    officeImage: file(
-      absolutePath: { regex: "/buero.jpg/" }
-      sourceInstanceName: { eq: "images" }
-    ) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH)
-      }
-    }
-  }
-`
-
 const AboutUs = () => {
   const metadata = {
     title: 'Über uns',
     description,
     slug: 'ueber-uns',
   }
-  const { officeImage } = useStaticQuery(query)
 
   return (
     <Layout>
@@ -76,7 +61,7 @@ const AboutUs = () => {
             </Buttonlist>
           </Container>
         </Section>
-        <GatsbyImage image={officeImage.childImageSharp.gatsbyImageData} />
+        <StaticImage src="../img/buero.jpg" alt="Unser Büro"></StaticImage>
         <Employees />
         <CallToAction />
       </main>
