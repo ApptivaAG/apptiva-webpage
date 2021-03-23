@@ -36,7 +36,7 @@ const PartnerImage = styled.div`
   }
 `
 
-const IndexPage = ({ partners, appsImage, chatbot, partyplaner }) => (
+const HomePageTemplate = ({ partners, appsImage, chatbot, partyplaner }) => (
   <Layout showHero>
     <main>
       <SEO />
@@ -157,9 +157,9 @@ const IndexPage = ({ partners, appsImage, chatbot, partyplaner }) => (
   </Layout>
 )
 
-export default ({ data: { chatbot, partyplaner, appsImage, partners } }) => {
+const HomePage = ({ data: { chatbot, partyplaner, appsImage, partners } }) => {
   return (
-    <IndexPage
+    <HomePageTemplate
       chatbot={chatbot}
       partyplaner={partyplaner}
       appsImage={appsImage}
@@ -167,6 +167,8 @@ export default ({ data: { chatbot, partyplaner, appsImage, partners } }) => {
     />
   )
 }
+
+export default HomePage
 
 export const indexPageQuery = graphql`
   query IndexPage {

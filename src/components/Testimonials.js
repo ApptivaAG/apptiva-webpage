@@ -48,7 +48,7 @@ const Statement = styled.p`
   font-style: italic;
   margin-top: 0.8em;
 `
-export const Testimonial = ({ name, position, statement, avatar, company }) => {
+const Testimonial = ({ name, position, statement, avatar, company }) => {
   return (
     <TestimonialStyle>
       <Person>
@@ -100,7 +100,7 @@ const query = graphql`
   }
 `
 
-export default () => {
+const Testimonials = () => {
   const { testimonials } = useStaticQuery(query)
   return (
     <Section dark>
@@ -131,3 +131,5 @@ export default () => {
     </Section>
   )
 }
+
+export default Testimonials

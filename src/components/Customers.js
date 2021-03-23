@@ -30,7 +30,7 @@ const ImageList = styled.div`
   }
 `
 
-export default () => {
+const Customers = () => {
   return (
     <Section>
       <Container>
@@ -118,3 +118,5 @@ export default () => {
     </Section>
   )
 }
+
+export default Customers

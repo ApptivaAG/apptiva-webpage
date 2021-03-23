@@ -71,7 +71,7 @@ const query = graphql`
   }
 `
 
-export default () => {
+const Employees = () => {
   const { employees } = useStaticQuery(query)
 
   return (
@@ -100,3 +100,5 @@ export default () => {
     </Section>
   )
 }
+
+export default Employees

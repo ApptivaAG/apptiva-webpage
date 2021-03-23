@@ -23,7 +23,7 @@ const Center = styled.div`
   padding-top: 1em;
 `
 
-export default () => (
+const Jobs = () => (
   <Layout>
     <main>
       <Helmet title={`Jobs - ${config.company}`} />
@@ -112,3 +112,5 @@ export default () => (
     </main>
   </Layout>
 )
+
+export default Jobs

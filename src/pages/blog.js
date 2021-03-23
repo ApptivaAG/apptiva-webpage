@@ -14,7 +14,7 @@ const metadata = {
   slug: 'blog',
 }
 
-export default ({ data }) => {
+const Blog = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
 
   return (
@@ -43,34 +43,37 @@ export default ({ data }) => {
   )
 }
 
-export const blogListPage = graphql`query BlogQuery {
-  allMarkdownRemark(
-    sort: {order: DESC, fields: [frontmatter___date]}
-    filter: {frontmatter: {templateKey: {eq: "blog-post"}}}
-  ) {
-    edges {
-      node {
-        excerpt(pruneLength: 400)
-        id
-        frontmatter {
-          title
-          slug
-          templateKey
-          date(formatString: "D. MMMM YYYY", locale: "de")
-          description
-          image {
-            childImageSharp {
-              gatsbyImageData(
-                height: 150
-                width: 300
-                transformOptions: {cropFocus: ENTROPY}
-                layout: FIXED
-              )
+export default Blog
+
+export const blogListPage = graphql`
+  query BlogQuery {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+    ) {
+      edges {
+        node {
+          excerpt(pruneLength: 400)
+          id
+          frontmatter {
+            title
+            slug
+            templateKey
+            date(formatString: "D. MMMM YYYY", locale: "de")
+            description
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  height: 150
+                  width: 300
+                  transformOptions: { cropFocus: ENTROPY }
+                  layout: FIXED
+                )
+              }
             }
           }
         }
       }
     }
   }
-}
 `

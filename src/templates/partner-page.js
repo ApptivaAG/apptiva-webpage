@@ -30,14 +30,7 @@ const Grid = styled.div`
   }
 `
 
-export const PartnerTemplate = ({
-  content,
-  excerpt,
-  name,
-  logo,
-  url,
-  slug,
-}) => {
+const PartnerTemplate = ({ content, excerpt, name, logo, url, slug }) => {
   const metaData = { excerpt, title: name, slug }
   return (
     <main>
@@ -69,7 +62,7 @@ export const PartnerTemplate = ({
   )
 }
 
-export default ({ data }) => {
+const PartnerPage = ({ data }) => {
   const {
     partner: {
       html,
@@ -91,6 +84,8 @@ export default ({ data }) => {
     </Layout>
   )
 }
+
+export default PartnerPage
 
 export const pageQuery = graphql`
   query PartnerByID($slug: String!) {

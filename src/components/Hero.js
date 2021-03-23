@@ -128,7 +128,7 @@ const Info = styled.div`
   }
 `
 
-export default () => {
+const Hero = () => {
   const images = useStaticQuery(graphql`
     {
       hero: file(
@@ -149,8 +149,6 @@ export default () => {
       }
     }
   `)
-
-  console.log('images', images)
 
   return (
     <Section id="start">
@@ -239,3 +237,5 @@ export default () => {
     </Section>
   )
 }
+
+export default Hero

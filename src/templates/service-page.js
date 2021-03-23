@@ -308,7 +308,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
   )
 }
 
-export default (props) => {
+const ServicPage = (props) => {
   const {
     data: { markdownRemark: post },
   } = props
@@ -325,6 +325,8 @@ export default (props) => {
     </Layout>
   )
 }
+
+export default ServicPage
 
 export const pageQuery = graphql`
   query ServicePageByID($slug: String!) {
