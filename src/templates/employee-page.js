@@ -140,7 +140,7 @@ const EmployeePageTemplate = ({ content, contentComponent, metaData }) => {
     skills,
   } = metaData
 
-  const seoImage = getSrc(metaData.avatar.childImageSharp.resize)
+  const seoImage = getSrc(metaData.avatar.childImageSharp.gatsbyImageData)
 
   return (
     <main>
@@ -256,12 +256,6 @@ export const employeePageQuery = graphql`
         avatar {
           childImageSharp {
             gatsbyImageData(layout: CONSTRAINED, width: 300)
-            resize: gatsbyImageData(
-              width: 1200
-              height: 630
-              transformOptions: { cropFocus: NORTH }
-              layout: FIXED
-            )
           }
         }
         role

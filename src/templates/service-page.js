@@ -123,7 +123,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
     bulletGroups,
     callToAction,
   } = metaData
-  const seoImage = getSrc(image?.childImageSharp.resize)
+  const seoImage = getSrc(image?.childImageSharp.gatsbyImageData)
 
   const { getCollapseProps, getToggleProps, isExpanded } = useCollapse({
     duration: 200,
@@ -344,12 +344,6 @@ export const pageQuery = graphql`
         image {
           childImageSharp {
             gatsbyImageData(width: 1280, layout: CONSTRAINED)
-            resize: gatsbyImageData(
-              width: 1200
-              height: 630
-              transformOptions: { cropFocus: ENTROPY }
-              layout: FIXED
-            )
           }
         }
         subtitle {

@@ -72,7 +72,7 @@ const BlogPostTemplate = ({
       <SEO
         isBlogPost
         metaData={metaData}
-        postImage={getSrc(metaData.image.childImageSharp.resize)}
+        postImage={getSrc(metaData.image.childImageSharp.gatsbyImageData)}
       />
       <Container>
         <article>
@@ -135,12 +135,6 @@ export const pageQuery = graphql`
         image {
           childImageSharp {
             gatsbyImageData(width: 1280, layout: CONSTRAINED)
-            resize: gatsbyImageData(
-              width: 1200
-              height: 630
-              transformOptions: { cropFocus: ENTROPY }
-              layout: FIXED
-            )
           }
         }
       }
