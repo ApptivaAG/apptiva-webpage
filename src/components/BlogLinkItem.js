@@ -36,6 +36,7 @@ const BlogLinkItem = ({ frontmatter, excerpt, className }) => {
         <GatsbyImage
           image={frontmatter.image.childImageSharp.gatsbyImageData}
           css="grid-area: image; justify-self: center;"
+          alt={frontmatter.title}
         />
       )}
       <p css="grid-area: excerpt">{excerpt}</p>

@@ -1,36 +1,21 @@
 import React from 'react'
-import { GatsbyImage } from 'gatsby-plugin-image'
+import { StaticImage } from 'gatsby-plugin-image'
 
 import Layout from '../components/Layout'
-import { Centered, Container, Section } from '../style'
-import { graphql, useStaticQuery } from 'gatsby'
-
-const query = graphql`
-  {
-    thankYou: file(
-      absolutePath: { regex: "/dankeschoen.png/" }
-      sourceInstanceName: { eq: "images" }
-    ) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH)
-      }
-    }
-  }
-`
+import { Centered, Container, MainTitle, Section } from '../style'
 
 const ThankYou = () => {
-  const { thankYou } = useStaticQuery(query)
   return (
     <Layout>
       <Container>
-        {/* <Section css="padding-bottom: 0;">
+        <Section css="padding-bottom: 0;">
           <MainTitle>Vielen Dank</MainTitle>
-        </Section> */}
+        </Section>
         <Section css="font-size: 1.8em;">
-          <GatsbyImage
-            image={thankYou.childImageSharp.gatsbyImageData}
-            css="margin: 2em 20%;"
-          />
+          <Centered css="padding: 0 1em;">
+            <StaticImage src="../img/dankeschoen.png" width="400"></StaticImage>
+          </Centered>
+
           <Centered>
             <p>
               Wir haben deinen Gruss erhalten.{' '}

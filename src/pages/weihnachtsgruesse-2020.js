@@ -1,6 +1,6 @@
 import React from 'react'
-import { graphql, useStaticQuery, navigate } from 'gatsby'
-import { GatsbyImage } from 'gatsby-plugin-image'
+import { navigate } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
 import { useForm } from 'react-hook-form'
 import { Helmet } from 'react-helmet'
 import fetch from 'unfetch'
@@ -18,19 +18,6 @@ import { encode, Input, Textarea } from '../components/ContactForm'
 import SEO from '../components/SEO'
 import config from '../config'
 
-const query = graphql`
-  {
-    xmas2020: file(
-      absolutePath: { regex: "/weihnachtsgruesse-2020.png/" }
-      sourceInstanceName: { eq: "images" }
-    ) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH)
-      }
-    }
-  }
-`
-
 const metadata = {
   title: 'Weihnachtsgrüsse 2020',
   description:
@@ -39,7 +26,6 @@ const metadata = {
 }
 
 const Weihnachtsgruesse2020 = () => {
-  const { xmas2020 } = useStaticQuery(query)
   const { register, handleSubmit, errors } = useForm()
 
   const onSubmit = (data) => {
@@ -77,10 +63,8 @@ const Weihnachtsgruesse2020 = () => {
           <MainTitle>Weihnachts&shy;grüsse 2020</MainTitle>
         </Section>
         <Section css="font-size: 1.8em; padding: 0;">
-          <GatsbyImage
-            image={xmas2020.childImageSharp.gatsbyImageData}
-            css="margin: 3em 0;"
-          />
+          <StaticImage src="../img/weihnachtsgruesse-2020.png"></StaticImage>
+
           <p>
             <b>Herzlichen Dank</b> an alle, die in irgendeiner Form mit uns
             zusammengearbeitet haben in diesem ganz speziellen Jahr 2020.

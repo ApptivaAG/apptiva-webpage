@@ -156,7 +156,10 @@ const EmployeePageTemplate = ({ content, contentComponent, metaData }) => {
         <Container>
           <EmployeeBanner>
             <Avatar>
-              <ImgRound image={avatar.childImageSharp.gatsbyImageData} />
+              <ImgRound
+                image={avatar.childImageSharp.gatsbyImageData}
+                alt={name}
+              />
             </Avatar>
             <EmployeeData>
               <h3>{role}</h3>

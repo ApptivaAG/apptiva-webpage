@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { graphql, useStaticQuery } from 'gatsby'
-import { GatsbyImage } from 'gatsby-plugin-image'
+import { StaticImage } from 'gatsby-plugin-image'
 
 import Layout from '../components/Layout'
 import { Container, Section, Button } from '../style'
@@ -34,22 +33,7 @@ const ContactInfo = styled.a`
   font-style: normal;
 `
 
-const query = graphql`
-  {
-    buildingImage: file(
-      absolutePath: { regex: "/gebaeude.jpg/" }
-      sourceInstanceName: { eq: "images" }
-    ) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH)
-      }
-    }
-  }
-`
-
 const Kontakt = () => {
-  const { buildingImage } = useStaticQuery(query)
-
   const metadata = {
     title: 'Kontakt',
     description: `Möchten Sie uns kennenlernen oder haben Sie Fragen zu unseren
@@ -89,7 +73,10 @@ const Kontakt = () => {
           </Grid>
         </Container>
       </Section>
-      <GatsbyImage image={buildingImage.childImageSharp.gatsbyImageData} />
+      <StaticImage
+        src="../img/gebaeude.jpg"
+        alt="Gebäude wo sich unser Büro befindet."
+      ></StaticImage>
       <Section dark id="anfahrt">
         <Container>
           <h2>Standort</h2>

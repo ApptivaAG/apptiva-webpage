@@ -1,13 +1,12 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { GatsbyImage } from 'gatsby-plugin-image'
+import { StaticImage } from 'gatsby-plugin-image'
 
 import Layout from '../components/Layout'
 import { Container, MainTitle, Section } from '../style'
 import SEO from '../components/SEO'
 import config from '../config'
 import NewsletterForm from '../components/NewsletterForm'
-import { graphql, useStaticQuery } from 'gatsby'
 
 const metadata = {
   title: 'Apptiva Newsletter',
@@ -16,19 +15,6 @@ const metadata = {
 }
 
 const Newsletter = () => {
-  const { mail } = useStaticQuery(graphql`
-    {
-      mail: file(
-        absolutePath: { regex: "/mail9.png/" }
-        sourceInstanceName: { eq: "images" }
-      ) {
-        childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH)
-        }
-      }
-    }
-  `)
-
   return (
     <Layout>
       <Helmet title={`Apptiva Newsletter - ${config.company}`} />
@@ -37,7 +23,10 @@ const Newsletter = () => {
       <Section>
         <Container>
           <MainTitle>Apptiva Newsletter</MainTitle>
-          <GatsbyImage image={mail.childImageSharp.gatsbyImageData} />
+          <StaticImage
+            src="../img/mail9.png"
+            alt="Apptiva Newsletter"
+          ></StaticImage>
         </Container>
         <Container css="max-width: 600px;">
           <h2 css="margin-top: 0;">

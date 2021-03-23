@@ -88,7 +88,10 @@ const Employees = () => {
             return (
               <Employee key={edge.node.id}>
                 <LinkStyled to={slug}>
-                  <Avatar image={preview.childImageSharp.gatsbyImageData} />
+                  <Avatar
+                    image={preview.childImageSharp.gatsbyImageData}
+                    alt={name}
+                  />
                   <Name>{name}</Name>
                   <Claim>{claim}</Claim>
                 </LinkStyled>
