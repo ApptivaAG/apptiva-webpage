@@ -37,7 +37,7 @@ const PartnerTemplate = ({ content, excerpt, name, logo, url, slug }) => {
       <Helmet title={`${stripHTML(name)} - Partner - ${config.company}`} />
       <SEO
         metaData={metaData}
-        postImage={getSrc(logo.childImageSharp?.resize)}
+        postImage={getSrc(logo.childImageSharp?.gatsbyImageData)}
       />
       <Container>
         <Section>
@@ -100,12 +100,6 @@ export const pageQuery = graphql`
         logo {
           childImageSharp {
             gatsbyImageData(width: 320, layout: FIXED)
-            resize: gatsbyImageData(
-              width: 1200
-              height: 630
-              transformOptions: { cropFocus: ENTROPY }
-              layout: FIXED
-            )
           }
         }
       }
