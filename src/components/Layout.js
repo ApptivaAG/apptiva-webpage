@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { ThemeProvider } from 'styled-components'
+import 'normalize.css/normalize.css'
 
 import Navbar from './Navbar'
 import Footer from './Footer'
@@ -8,6 +9,7 @@ import Lightbox from './Lightbox'
 import config from '../config'
 import Hero from './Hero'
 import { GlobalStyle, theme } from '../style'
+import '../fonts.css'
 
 if (typeof window !== 'undefined') {
   // make scroll behavior of internal links smooth
