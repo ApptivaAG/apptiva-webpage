@@ -1,19 +1,8 @@
 import React from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 
 import { Section, Container, DeemphasizedTitle } from '../style'
-
-import suva from '../img/suva-300x75.png'
-import maxon from '../img/maxonmotor-300x45.png'
-import insel from '../img/insel-gruppe-logo-300x70.png'
-import hostettler from '../img/hostettler-300x70.png'
-import energie360 from '../img/energie360-300x72.png'
-import diepost from '../img/die-post-logo.png'
-import globus from '../img/globus.png'
-import schurch from '../img/schurch-logo.png'
-import sd from '../img/sd-295x145.png'
-import weltiFurrer from '../img/welti-furrer-300x66.png'
-import vivanco from '../img/vivanco-300x116.png'
 
 const ImageList = styled.div`
   display: flex;
@@ -21,12 +10,8 @@ const ImageList = styled.div`
   align-items: center;
   justify-content: space-around;
   margin: 1em -1em;
-  img {
-    flex: 0 1 6em;
-    width: 100%;
-    max-width: 6em;
-    height: 100%;
-    padding: 1em;
+  > div {
+    margin: 1em;
   }
 `
 
@@ -36,82 +21,71 @@ const Customers = () => {
       <Container>
         <DeemphasizedTitle>Auswahl unserer Kunden</DeemphasizedTitle>
         <ImageList>
-          <img
-            className="lazyload"
-            data-src={energie360}
+          <StaticImage
+            src="../img/energie360-300x72.png"
             alt="Energie 360° AG"
-            width="160"
-            height="69"
+            height={34}
+            objectFit="contain"
           />
-          <img
-            className="lazyload"
-            data-src={schurch}
+          <StaticImage
+            src="../img/schurch-logo.png"
             alt="Schürch Getränke AG"
-            width="160"
-            height="104"
+            height={52}
+            objectFit="contain"
           />
-          <img
-            className="lazyload"
-            data-src={hostettler}
+          <StaticImage
+            src="../img/hostettler-300x70.png"
             alt="hostettler"
-            width="160"
-            height="68"
+            height={34}
+            objectFit="contain"
           />
-          <img
-            className="lazyload"
-            data-src={insel}
+          <StaticImage
+            src="../img/insel-gruppe-logo-300x70.png"
             alt="Insel Gruppe"
-            width="160"
-            height="68"
+            height={34}
+            objectFit="contain"
           />
-          <img
-            className="lazyload"
-            data-src={sd}
+          <StaticImage
+            src="../img/sd-295x145.png"
             alt="sd Gebäudeunterhalt AG"
-            width="160"
-            height="99"
+            height={50}
+            objectFit="contain"
           />
-          <img
-            className="lazyload"
-            data-src={weltiFurrer}
+          <StaticImage
+            src="../img/welti-furrer-300x66.png"
             alt="Welti-Furrer"
-            width="160"
-            height="35"
+            height={28}
+            objectFit="contain"
           />
-          <img
-            className="lazyload"
-            data-src={maxon}
+          <StaticImage
+            src="../img/maxonmotor-300x45.png"
             alt="maxon motor"
-            width="160"
-            height="58"
+            height={20}
+            objectFit="contain"
           />
-          <img
-            className="lazyload"
-            data-src={vivanco}
+          <StaticImage
+            src="../img/vivanco-300x116.png"
             alt="Vivanco Gruppe AG"
-            width="160"
-            height="61"
+            height={46}
+            objectFit="contain"
           />
-          <img
-            className="lazyload"
-            data-src={globus}
+          <StaticImage
+            src="../img/globus.png"
             alt="Magazine zum Globus"
-            width="160"
-            height="75"
+            height={38}
+            objectFit="contain"
           />
-          <img
-            className="lazyload"
-            data-src={diepost}
+          <StaticImage
+            src="../img/die-post-logo.png"
             alt="Die Schweizerische Post AG"
-            width="160"
-            height="81"
+            height={40}
+            objectFit="contain"
           />
-          <img
-            className="lazyload"
-            data-src={suva}
+          <StaticImage
+            src="../img/suva-300x75.png"
             alt="suva"
-            width="160"
-            height="70"
+            height={35}
+            objectFit="contain"
           />
         </ImageList>
       </Container>
