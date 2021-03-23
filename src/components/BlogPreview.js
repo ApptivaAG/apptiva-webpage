@@ -14,7 +14,7 @@ import {
 import { truncate } from '../util'
 
 const query = graphql`
-  query {
+  {
     blogs: allMarkdownRemark(
       limit: 3
       sort: { order: DESC, fields: [frontmatter___date] }
@@ -29,9 +29,12 @@ const query = graphql`
             slug
             image {
               childImageSharp {
-                fixed(height: 150, width: 300, cropFocus: ENTROPY) {
-                  ...GatsbyImageSharpFixed_withWebp
-                }
+                gatsbyImageData(
+                  height: 150
+                  width: 300
+                  transformOptions: { cropFocus: ENTROPY }
+                  layout: FIXED
+                )
               }
             }
             date(formatString: "DD.MM.YYYY")
@@ -58,11 +61,7 @@ export default () => {
               <Link to={post.frontmatter.slug}>
                 <ImgStyled
                   style={{ width: '100%' }}
-                  fixed={post.frontmatter.image.childImageSharp.fixed}
-                  placeholderStyle={{
-                    filter: `blur(16px)`,
-                    transform: `scale(1.04)`,
-                  }}
+                  image={post.frontmatter.image.childImageSharp.gatsbyImageData}
                   alt="Post image"
                 />
                 <h3

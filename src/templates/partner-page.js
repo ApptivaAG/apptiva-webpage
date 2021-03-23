@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage, getSrc } from 'gatsby-plugin-image'
 import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
 
@@ -42,7 +42,10 @@ export const PartnerTemplate = ({
   return (
     <main>
       <Helmet title={`${stripHTML(name)} - Partner - ${config.company}`} />
-      <SEO metaData={metaData} postImage={logo.childImageSharp.resize.src} />
+      <SEO
+        metaData={metaData}
+        postImage={getSrc(logo.childImageSharp?.resize)}
+      />
       <Container>
         <Section>
           <Grid>
@@ -52,7 +55,12 @@ export const PartnerTemplate = ({
                 {url}
               </a>
             </div>
-            <Img css="margin: 2em 0" fixed={logo.childImageSharp.fixed} />
+            {logo.childImageSharp && (
+              <GatsbyImage
+                image={logo.childImageSharp.gatsbyImageData}
+                css="margin: 2em 0"
+              />
+            )}
             <HTMLContent css="grid-area: content" content={content} />
           </Grid>
         </Section>
@@ -96,12 +104,13 @@ export const pageQuery = graphql`
         slug
         logo {
           childImageSharp {
-            fixed(width: 320) {
-              ...GatsbyImageSharpFixed
-            }
-            resize(width: 1200, height: 630, cropFocus: ENTROPY) {
-              src
-            }
+            gatsbyImageData(width: 320, layout: FIXED)
+            resize: gatsbyImageData(
+              width: 1200
+              height: 630
+              transformOptions: { cropFocus: ENTROPY }
+              layout: FIXED
+            )
           }
         }
       }

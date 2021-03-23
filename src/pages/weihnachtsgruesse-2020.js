@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery, navigate } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { useForm } from 'react-hook-form'
 import { Helmet } from 'react-helmet'
 import fetch from 'unfetch'
@@ -19,15 +19,13 @@ import SEO from '../components/SEO'
 import config from '../config'
 
 const query = graphql`
-  query {
+  {
     xmas2020: file(
       absolutePath: { regex: "/weihnachtsgruesse-2020.png/" }
       sourceInstanceName: { eq: "images" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1920, toFormat: JPG) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
   }
@@ -79,7 +77,10 @@ const Weihnachtsgruesse2020 = () => {
           <MainTitle>Weihnachts&shy;grüsse 2020</MainTitle>
         </Section>
         <Section css="font-size: 1.8em; padding: 0;">
-          <Img css="margin: 3em 0;" fluid={xmas2020.childImageSharp.fluid} />
+          <GatsbyImage
+            image={xmas2020.childImageSharp.gatsbyImageData}
+            css="margin: 3em 0;"
+          />
           <p>
             <b>Herzlichen Dank</b> an alle, die in irgendeiner Form mit uns
             zusammengearbeitet haben in diesem ganz speziellen Jahr 2020.

@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 import {
   Section as SectionDefault,
@@ -27,7 +27,7 @@ const Person = styled.div`
     line-height: 1;
   }
 `
-const Avatar = styled(Img)`
+const Avatar = styled(GatsbyImage)`
   border: 2px solid #e2e2e2;
   border-radius: 50%;
   margin-right: 1em;
@@ -52,13 +52,7 @@ export const Testimonial = ({ name, position, statement, avatar, company }) => {
   return (
     <TestimonialStyle>
       <Person>
-        <Avatar
-          fixed={avatar.childImageSharp.fixed}
-          placeholderStyle={{
-            filter: `blur(16px)`,
-            transform: `scale(1.04)`,
-          }}
-        />
+        <Avatar image={avatar.childImageSharp.gatsbyImageData} />
         <div>
           <Name>{name}</Name>
           <Position>{position}</Position>
@@ -81,7 +75,7 @@ const TestimonialsStyle = styled.ul`
   list-style: none;
 `
 const query = graphql`
-  query {
+  {
     testimonials: allMarkdownRemark(
       filter: { frontmatter: { templateKey: { eq: "testimonial-data" } } }
     ) {
@@ -96,9 +90,7 @@ const query = graphql`
             company
             avatar {
               childImageSharp {
-                fixed(width: 50, height: 50) {
-                  ...GatsbyImageSharpFixed_withWebp
-                }
+                gatsbyImageData(width: 50, height: 50, layout: FIXED)
               }
             }
           }

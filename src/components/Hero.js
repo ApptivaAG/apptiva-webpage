@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import styled, { keyframes } from 'styled-components'
 
 import logoSlogan from '../img/logo-slogan.svg'
@@ -130,15 +130,13 @@ const Info = styled.div`
 
 export default () => {
   const images = useStaticQuery(graphql`
-    query {
+    {
       hero: file(
         absolutePath: { regex: "/solution-collage.png/" }
         sourceInstanceName: { eq: "images" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1920) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+          gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
         }
       }
       mail: file(
@@ -146,9 +144,7 @@ export default () => {
         sourceInstanceName: { eq: "images" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 200) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+          gatsbyImageData(width: 200, layout: CONSTRAINED)
         }
       }
     }
@@ -180,8 +176,14 @@ export default () => {
 
       <Columns css="margin-right: 10%;">
         <ColHero>
-          <Img
-            fluid={{ ...images.hero.childImageSharp.fluid, base64: svgData }}
+          <GatsbyImage
+            // Don't change " to ' because otherwise url(svgData) does not work anymore
+            // prettier-ignore
+            css={`
+              background: url("${svgData}");
+            `}
+            imgStyle={{ backgroundColor: 'white' }}
+            image={images.hero.childImageSharp.gatsbyImageData}
             alt="Erfolgreich umgesetzte Desktop, Mobile und Weblösungen"
           />
         </ColHero>
@@ -219,9 +221,9 @@ export default () => {
               color: #666;
             `}
           >
-            <Img
+            <GatsbyImage
+              image={images.mail.childImageSharp.gatsbyImageData}
               css="width: 100px;"
-              fluid={images.mail.childImageSharp.fluid}
               alt="Newsletter"
             />
             <p css="flex: 1 1 auto; font-weight: 600; margin: 0.5em  1em;">

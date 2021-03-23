@@ -1,10 +1,6 @@
 const config = require('./src/config')
 
 module.exports = {
-  flags: {
-    FAST_DEV: true,
-    FAST_REFRESH: true,
-  },
   siteMetadata: {
     title: config.company,
     siteUrl: config.url, // needed in gatsby-plugin-sitemap
@@ -24,14 +20,18 @@ module.exports = {
         name: 'images',
       },
     },
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
-        useMozJpeg: false,
+        defaults: {
+          formats: ['auto', 'avif'],
+          placeholder: 'blurred',
+        },
         stripMetadata: true,
       },
     },
-    'gatsby-transformer-sharp',
+    `gatsby-transformer-sharp`,
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -119,7 +119,6 @@ module.exports = {
       },
     },
 
-    'gatsby-plugin-netlify-cache',
     'gatsby-plugin-preload-fonts',
     {
       resolve: 'gatsby-plugin-mailchimp',

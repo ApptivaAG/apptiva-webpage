@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 import { Container, Section, Buttonlist, Button, MainTitle } from '../style'
 import { description, company } from '../config'
@@ -12,15 +12,13 @@ import SEO from '../components/SEO'
 import CallToAction from '../components/CallToAction'
 
 const query = graphql`
-  query {
+  {
     officeImage: file(
       absolutePath: { regex: "/buero.jpg/" }
       sourceInstanceName: { eq: "images" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1920) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
   }
@@ -78,7 +76,7 @@ const AboutUs = () => {
             </Buttonlist>
           </Container>
         </Section>
-        <Img fluid={officeImage.childImageSharp.fluid} />
+        <GatsbyImage image={officeImage.childImageSharp.gatsbyImageData} />
         <Employees />
         <CallToAction />
       </main>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage, getSrc } from 'gatsby-plugin-image'
 import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
 import useCollapse from 'react-collapsed'
@@ -93,7 +93,8 @@ const Header = ({ title, image, subtitle }) => (
       </Subtitle>
     )}
     {image && (
-      <Img
+      <GatsbyImage
+        image={image.childImageSharp.gatsbyImageData}
         css={`
           margin: 2rem auto 0;
           width: 90%;
@@ -101,11 +102,6 @@ const Header = ({ title, image, subtitle }) => (
             width: 80%;
           }
         `}
-        fluid={image.childImageSharp.fluid}
-        placeholderStyle={{
-          filter: `blur(16px)`,
-          transform: `scale(1.04)`,
-        }}
       />
     )}
   </HeadArea>
@@ -126,10 +122,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
     bulletGroups,
     callToAction,
   } = metaData
-  const seoImage =
-    metaData.image &&
-    metaData.image.childImageSharp.resize &&
-    metaData.image.childImageSharp.resize.src
+  const seoImage = getSrc(image?.childImageSharp.resize)
 
   const { getCollapseProps, getToggleProps, isExpanded } = useCollapse({
     duration: 200,
@@ -164,9 +157,9 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
             <DeemphasizedTitle>Auswahl unserer Kunden</DeemphasizedTitle>
             <Customers>
               {customers.map((customer) => (
-                <Img
-                  key={customer.childImageSharp.fixed.src}
-                  fixed={customer.childImageSharp.fixed}
+                <GatsbyImage
+                  image={customer.childImageSharp.gatsbyImageData}
+                  key={customer}
                 />
               ))}
             </Customers>
@@ -182,10 +175,14 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
                 {solutions.map((solution) => (
                   <div key={solution.title}>
                     <h3>{solution.title}</h3>
-                    <a href={solution.image.childImageSharp.fluid.src}>
-                      <Img
+                    <a
+                      href={getSrc(
+                        solution.image.childImageSharp.gatsbyImageData
+                      )}
+                    >
+                      <GatsbyImage
+                        image={solution.image.childImageSharp.gatsbyImageData}
                         className="lightbox"
-                        fluid={solution.image.childImageSharp.fluid}
                         alt={solution.title}
                       />
                     </a>
@@ -237,9 +234,11 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
                     <div key={reference.title}>
                       <h3>{reference.title}</h3>
                       <Link to={reference.link}>
-                        <Img
+                        <GatsbyImage
+                          image={
+                            reference.image.childImageSharp.gatsbyImageData
+                          }
                           className="lightbox"
-                          fluid={reference.image.childImageSharp.fluid}
                           alt={reference.title}
                         />
                       </Link>
@@ -340,12 +339,13 @@ export const pageQuery = graphql`
         slug
         image {
           childImageSharp {
-            fluid(maxWidth: 960, srcSetBreakpoints: [340, 960, 1600]) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-            resize(width: 1200, height: 630, cropFocus: ENTROPY) {
-              src
-            }
+            gatsbyImageData(width: 1280, layout: CONSTRAINED)
+            resize: gatsbyImageData(
+              width: 1200
+              height: 630
+              transformOptions: { cropFocus: ENTROPY }
+              layout: FIXED
+            )
           }
         }
         subtitle {
@@ -356,9 +356,12 @@ export const pageQuery = graphql`
         description
         customers {
           childImageSharp {
-            fixed(width: 200, grayscale: true) {
-              ...GatsbyImageSharpFixed_noBase64
-            }
+            gatsbyImageData(
+              width: 200
+              placeholder: NONE
+              transformOptions: { grayscale: true }
+              layout: FIXED
+            )
           }
         }
         solutions {
@@ -366,9 +369,7 @@ export const pageQuery = graphql`
           text
           image {
             childImageSharp {
-              fluid(maxWidth: 960, srcSetBreakpoints: [340, 960, 1600]) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
+              gatsbyImageData(width: 960, layout: CONSTRAINED)
             }
           }
         }
@@ -381,9 +382,7 @@ export const pageQuery = graphql`
             link
             image {
               childImageSharp {
-                fluid(maxWidth: 960, srcSetBreakpoints: [340, 960, 1600]) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+                gatsbyImageData(width: 960, layout: CONSTRAINED)
               }
             }
           }
