@@ -167,11 +167,7 @@ const Hero = () => {
       <Columns css="margin-right: 10%;">
         <ColHero>
           <GatsbyImage
-            // Don't change " to ' because otherwise url(svgData) does not work anymore
-            // prettier-ignore
-            css={`
-              background: url("${svgData}");
-            `}
+            style={{ background: `url("${svgData}")` }}
             imgStyle={{ backgroundColor: 'white' }}
             image={images.hero.childImageSharp.gatsbyImageData}
             alt="Erfolgreich umgesetzte Desktop, Mobile und Weblösungen"
