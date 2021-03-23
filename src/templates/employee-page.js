@@ -127,11 +127,7 @@ const Skill = ({ title, color, items }) => (
   </SkillItem>
 )
 
-export const EmployeePageTemplate = ({
-  content,
-  contentComponent,
-  metaData,
-}) => {
+const EmployeePageTemplate = ({ content, contentComponent, metaData }) => {
   const PostContent = contentComponent || Content
   const {
     name,
@@ -227,7 +223,7 @@ export const EmployeePageTemplate = ({
   )
 }
 
-export default (props) => {
+const EmployeePage = (props) => {
   const {
     data: { markdownRemark: post },
   } = props
@@ -242,6 +238,8 @@ export default (props) => {
     </Layout>
   )
 }
+
+export default EmployeePage
 
 export const employeePageQuery = graphql`
   query EmployeePageByID($slug: String!) {

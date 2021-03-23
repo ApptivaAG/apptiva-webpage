@@ -176,7 +176,7 @@ const Markdown = styled.div`
   }
 `
 
-export default ({ content, className }) => (
+const Content = ({ content, className }) => (
   <Markdown className={className}>{content}</Markdown>
 )
 export const HTMLContent = ({ content, className }) => (
@@ -185,3 +185,5 @@ export const HTMLContent = ({ content, className }) => (
     dangerouslySetInnerHTML={{ __html: content }}
   />
 )
+
+export default Content

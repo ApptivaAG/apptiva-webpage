@@ -17,7 +17,7 @@ const Center = styled.div`
   padding-top: 1em;
 `
 
-export default () => (
+const Coronavirus = () => (
   <Layout>
     <main>
       <Helmet title={`${metadata.title} - ${config.company}`} />
@@ -90,3 +90,5 @@ export default () => (
     </main>
   </Layout>
 )
+
+export default Coronavirus

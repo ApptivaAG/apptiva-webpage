@@ -46,7 +46,7 @@ const query = graphql`
   }
 `
 
-export default () => {
+const BlogPreview = () => {
   const {
     blogs: { edges: posts },
   } = useStaticQuery(query)
@@ -86,3 +86,5 @@ export default () => {
     </Section>
   )
 }
+
+export default BlogPreview

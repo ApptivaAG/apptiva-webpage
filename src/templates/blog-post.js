@@ -57,7 +57,7 @@ const Navigation = ({ next, prev }) => {
   )
 }
 
-export const BlogPostTemplate = ({
+const BlogPostTemplate = ({
   content,
   contentComponent,
   metaData,
@@ -97,7 +97,7 @@ export const BlogPostTemplate = ({
   )
 }
 
-export default ({ data, pageContext }) => {
+const BlogPost = ({ data, pageContext }) => {
   const { markdownRemark: post } = data
 
   post.frontmatter.excerpt = post.excerpt
@@ -115,6 +115,8 @@ export default ({ data, pageContext }) => {
     </Layout>
   )
 }
+
+export default BlogPost
 
 export const pageQuery = graphql`
   query BlogPostByID($slug: String!) {
