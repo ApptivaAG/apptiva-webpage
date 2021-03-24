@@ -6,7 +6,6 @@ import { description } from '../config'
 import { Container, Button } from '../style'
 import chevron from '../img/chevron.svg'
 import coronavirus from '../img/coronavirus.svg'
-import NewsletterForm from './NewsletterForm'
 
 const year = new Date().getFullYear()
 
