@@ -11,19 +11,19 @@ callToAction: Sie möchten die Weiterentwicklung Ihrer Software-Produkte mit App
 
 ## Wenn es nicht so läuft, wie es sollte
 
-Im Zeitalter der Digitalisierung gibt es sehr viele Hersteller von Software-Produkten. Die Zufriedenheit der Kunden und die Qualität der Arbeit hat allerdings nicht für alle Hersteller oberste Priorität. So kann es durchaus vorkommen, dass Kunden sich gezwungen sehen, sich nach anderen Herstellern umzusehen. Glücklicherweise ist noch keiner unserer Kunden aus den genannten Gründen "abgesprungen". Wir durften aber schon einige Apps und Produkte übernehmen, welche ursprünglich nicht von uns entwickelt wurden.
+Im Zeitalter der Digitalisierung gibt es sehr viele Entwickler von Software-Produkten. Die Zufriedenheit der Kunden und die Qualität der Arbeit hat allerdings nicht für alle Entwickler oberste Priorität. So kann es durchaus vorkommen, dass Kunden sich gezwungen sehen, sich nach anderen Entwicklern umzusehen. Glücklicherweise ist noch keiner unserer Kunden aus den genannten Gründen "abgesprungen". Wir durften aber schon einige Apps und Produkte übernehmen, welche ursprünglich nicht von uns entwickelt wurden.
 
 Folgende Ausgangslagen haben wir schon angetroffen:
 
 - Die Software ist sehr fehleranfällig. Bei zusätzlichen Funktionen kommen immer auch neue Fehler mit.
-- Der Hersteller ist sehr unzuverlässig. Termine werden nicht eingehalten.
+- Der Entwickler ist sehr unzuverlässig. Termine werden nicht eingehalten.
 - Supportanfragen werden immer erst mit grosser Verspätung behandelt.
 
-Selbstverständlich kann es auch vorkommen, dass ein Software-Hersteller eine App oder ein Produkt nicht mehr weiterentwickelt; sei es aus strategischen oder wirtschaftlichen Gründen.
+Selbstverständlich kann es auch vorkommen, dass ein Software-Entwickler eine App oder ein Produkt nicht mehr weiterentwickelt; sei es aus strategischen oder wirtschaftlichen Gründen.
 
-Es gibt verschiedenste Varianten, diese Probleme anzupacken. Eine davon ist: man sucht sich einen neuen Software-Hersteller.
+Es gibt verschiedenste Varianten, diese Probleme anzupacken. Eine davon ist: man sucht sich einen neuen Software-Entwickler.
 
-## Unterstützung von Apptiva
+## Weiterentwicklung durch Apptiva
 
 Dank unserer langjährigen Erfahrung in der Software-Entwicklung, sind wir in der Lage, Apps und Produkte zu übernehmen und die Weiterentwicklung in einer guten Qualität sicherzustellen.
 
