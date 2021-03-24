@@ -2,9 +2,6 @@ import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
-import '@fortawesome/fontawesome-free/css/fontawesome.min.css'
-import '@fortawesome/fontawesome-free/css/solid.min.css'
-import '@fortawesome/fontawesome-free/css/brands.min.css'
 
 import { Section, Title, Subtitle, Container } from '../style'
 

@@ -75,7 +75,12 @@ module.exports = {
           },
           'gatsby-remark-embed-responsive-video',
           'gatsby-remark-responsive-iframe',
-          'gatsby-remark-prismjs',
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              throwInlineCodeLanguageWarning: false,
+            },
+          },
         ],
       },
     },
@@ -118,8 +123,6 @@ module.exports = {
         },
       },
     },
-
-    'gatsby-plugin-preload-fonts',
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {

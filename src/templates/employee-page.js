@@ -3,9 +3,6 @@ import { graphql } from 'gatsby'
 import { GatsbyImage, getSrc } from 'gatsby-plugin-image'
 import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
-import '@fortawesome/fontawesome-free/css/fontawesome.min.css'
-import '@fortawesome/fontawesome-free/css/solid.min.css'
-import '@fortawesome/fontawesome-free/css/brands.min.css'
 
 import Content, { HTMLContent } from '../components/Content'
 import { MainTitle, Subtitle, Section, Container, theme } from '../style'
@@ -144,7 +141,22 @@ const EmployeePageTemplate = ({ content, contentComponent, metaData }) => {
 
   return (
     <main>
-      <Helmet title={`Mitarbeiter | ${name}`} />
+      <Helmet>
+        <title>Mitarbeiter | {name}</title>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css"
+        />
+      </Helmet>
+
       <SEO metaData={metaData} postImage={seoImage} />
       <Section>
         <Container>
