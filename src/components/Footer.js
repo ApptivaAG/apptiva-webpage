@@ -113,7 +113,7 @@ const Footer = () => (
           <p>{description}</p>
           <div css="margin-top: 3em;">
             <h3>Jedes Quartal aktuelle News erhalten</h3>
-            <NewsletterForm />
+            <Button to="/newsletter">Newsletter abonnieren</Button>
           </div>
           <div
             css={`
