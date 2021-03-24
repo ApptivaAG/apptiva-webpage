@@ -4,8 +4,6 @@ import { GatsbyImage, getSrc } from 'gatsby-plugin-image'
 import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
 import useCollapse from 'react-collapsed'
-import '@fortawesome/fontawesome-free/css/fontawesome.min.css'
-import '@fortawesome/fontawesome-free/css/solid.min.css'
 
 import Content, { HTMLContent } from '../components/Content'
 import {
@@ -131,7 +129,19 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
 
   return (
     <main>
-      <Helmet title={`${stripHTML(title)} - ${config.company}`} />
+      <Helmet>
+        <title>
+          {stripHTML(title)} - {config.company}
+        </title>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css"
+        />
+      </Helmet>
       <SEO metaData={metaData} postImage={seoImage} />
       <Section>
         <Container>
