@@ -19,11 +19,8 @@ const Container = styled(CntnrDefault)`
 `
 
 const Logo = styled.img`
-  max-width: 12em;
-  @media (min-width: 600px) {
-    height: 4em;
-    width: 10em;
-  }
+  height: 4em;
+  width: 10em;
 `
 const Section = styled.section`
   display: flex;
@@ -155,6 +152,8 @@ const Hero = () => {
             `}
           >
             <Logo
+              height="200"
+              width="80"
               src={logoSlogan}
               alt="Apptiva - Passgenaue Softwarelösungen"
             />

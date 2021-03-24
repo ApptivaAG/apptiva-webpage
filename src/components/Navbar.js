@@ -8,7 +8,7 @@ import logo from '../img/logo.svg'
 const NavBar = styled.header`
   position: sticky;
   top: 0;
-  background-color: ${props => props.theme.color.primary};
+  background-color: ${(props) => props.theme.color.primary};
   z-index: 90;
 `
 
@@ -20,7 +20,7 @@ const Container = styled(DefaultContainer)`
 
 const Logo = styled.img`
   display: block;
-  height: 2.1rem;
+  height: 42px;
   padding: 1rem 0;
 `
 const Navigation = styled.nav`
@@ -34,7 +34,7 @@ const Navigation = styled.nav`
     bottom: 0;
     right: -20rem;
     padding: 1em 1em 1em 0;
-    background-color: ${p => p.theme.color.primary};
+    background-color: ${(p) => p.theme.color.primary};
     transition: all 200ms ease 200ms;
   }
 `
@@ -56,7 +56,7 @@ const MenuButton = styled.div`
   }
 `
 
-const shared = props =>
+const shared = (props) =>
   props['data-element'] !== 'logo' &&
   css`
     display: inline-block;
@@ -98,7 +98,7 @@ const Navbar = ({ location }) => (
     <Container>
       <h1 css="margin: 0;">
         <DynLink type={location} nav="/#start" data-element="logo">
-          <Logo src={logo} alt="Apptiva" />
+          <Logo src={logo} alt="Apptiva" width="206" height="42" />
         </DynLink>
       </h1>
 

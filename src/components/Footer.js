@@ -124,10 +124,12 @@ const Footer = () => (
             `}
           >
             <img
-              css="display:block; padding-top: 1em; height: 2.4em;"
+              css="display:block; padding-top: 1em; height: 30px;"
               src={coronavirus}
               alt=""
               loading="lazy"
+              height="30"
+              width="124"
             />
             <p css="margin-bottom: 0; margin-top: 0; padding: 0.8em 1em; font-weight: 600;">
               Trotz Coronavirus arbeiten wir an allen Projekten in
