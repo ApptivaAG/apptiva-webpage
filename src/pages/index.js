@@ -122,9 +122,7 @@ const HomePageTemplate = ({ partners, appsImage, chatbot, partyplaner }) => (
             </p>
             <Buttonlist>
               <Button to="/ueber-uns">Mehr über uns erfahren</Button>
-              <Button to="/vorgehen-software-entwicklung">
-                Unser Vorgehen
-              </Button>
+              <Button to="/vorgehen">Unser Vorgehen</Button>
               <Button to="/unsere-kompetenzen">Unsere Kompetenzen</Button>
             </Buttonlist>
           </Blockquote>
