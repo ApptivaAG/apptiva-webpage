@@ -1,70 +1,19 @@
 ---
 templateKey: 'service-page'
-slug: /vorgehensweise
-title: Vorgehen
+slug: /user-centered-design
+title: Benutzerzentriertes Design
 author: philip-schoenholzer
-description: Wir gehen agil, iterativ und zielorientiert vor. Um  optimale Ergebnis zu liefern, studieren wir die Domäne, die Herausforderungen und Potentiale der Kunden und die Bedrüfnisse der Anwender. So entwickeln wir passgenaue Lösungen.
+description: Kennen Sie Software, von der sie nur einen Bruchteil der Funktionalität benutzen? Die Funktionen, welche Sie wirklich benötigen, sind aber mehr schlecht als recht zu bedienen? Möchten Sie eine solche Lösung finanzieren? Wir auch nicht.
 subtitle:
-  text: Unser agiles Vorgehen ist Teil unseres Erfolgsrezepts. Profitieren Sie davon!
-
-bulletGroups:
-  - title: Initialisierung
-    description: Bevor wir mit der Umsetzung einer neuen App beginnen, setzen wir uns mit den folgenden drei Punkten auseinander
-
-    bulletList:
-      - icon: cube
-        title: Domäne
-        text: Uns ist es wichtig zu verstehen, in welchem Umfeld die App zum Einsatz kommt. Nur mit genügend Verständnis für Ihr Business können wir Ihnen die für Ihr Geschäft passende Lösung liefern.
-      - icon: bullseye
-        title: Ziele
-        text: Wir brauchen ein gemeinsames Ziel. Vielleicht heisst es „Die Telefonverkäufe können in der Hälfte der Zeit abgewickelt werden.“ Wie lautet Ihr Ziel?
-      - icon: image
-        title: Big Picture
-        text: Mit dem Verständnis Ihrer Domäne und einem klaren Ziel können wir ein grobes Bild davon zeichnen, aus welchen Funktionen Ihre App einmal besteht und wie sie eingesetzt wird.
+  text: Kennen Sie Software, von der sie nur einen Bruchteil der Funktionalität benutzen? Die Funktionen, welche Sie wirklich benötigen, sind aber mehr schlecht als recht zu bedienen? Möchten Sie eine solche Lösung finanzieren? Wir auch nicht.
 ---
-
-<div class="full-width dark-section" style="overflow: auto;">
-<div class="container">
-
-# Iterationen
-
-Sobald klar ist, wohin die Reise führt, starten wir mit zweiwöchigen Iterationen. Sie sind als Kunde fester Bestandteil davon. Jede Iteration durchläuft folgende Phasen:
-
-[[left]]
-|![Priorisieren, Lösungsfindung, Umsetzen, Lernen](iteration.svg)
-
-## Priorisieren
-
-Als erstes legen wir die Prioritäten für die nächsten zwei Wochen fest. Wir orientieren uns dabei an dem, was für Sie die grösste Wertschöpfung darstellt
-
-## Lösungsfindung
-
-Mit Prototypen auf Papier oder gar klickbaren Mockups untersuchen wir verschiedene Lösungsvarianten. Diese werden sofort mit den Anwendern getestet.
-
-## Umsetzen
-
-Jetzt, wo alles klar ist, geht es an die Entwicklung. Anschliessend wird die neue Version der App bei Ihnen installiert und in Betrieb genommen.
-
-## Lernen
-
-Ist die Lösung im Einsatz, beobachten wir, wie die Anwender sie einsetzen und lernen daraus für die nächste Iteration.
-<br/>
-<br/>
-<br/>
-
-`youtube: https://www.youtube.com/embed/62l0zM_Xqxc`
-
-</div>
-</div>
 
 <div id="ucd" class="full-width" style="overflow: auto;">
 <div class="container">
 
 # User Centered Design
 
-Kennen Sie Software, von der sie nur einen Bruchteil der Funktionalität benutzen? Die Funktionen, welche Sie wirklich benötigen, sind aber mehr schlecht als recht zu bedienen? Möchten Sie eine solche Lösung finanzieren?
-
-Wir auch nicht. Darum wenden wir UCD (User Centered Design) an. Diese Methode hilft uns, die benötigte Funktionalität umzusetzen. Und zwar genau so, wie Sie es erwarten. Sehen Sie sich an folgendem Beispiel an, wie UCD funktioniert:
+Darum wenden wir UCD (User Centered Design auf Deutsch: Benutzerzentriertes Design) an. Diese Methode hilft uns, die benötigte Funktionalität umzusetzen. Und zwar genau so, wie Sie es erwarten. Sehen Sie sich an folgendem Beispiel an, wie UCD funktioniert:
 
 </div>
 </div>

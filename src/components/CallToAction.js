@@ -7,7 +7,7 @@ const CallToAction = ({ dark = false }) => {
       <Container>
         <h2>Beschleunigen Sie jetzt Ihre Geschäftsprozesse</h2>
         <p>Rufen Sie uns an oder schreiben Sie uns eine Nachricht.</p>
-        <Button to="kontakt">Jetzt Kontakt aufnehmen</Button>
+        <Button to="/kontakt">Jetzt Kontakt aufnehmen</Button>
       </Container>
     </Section>
   )

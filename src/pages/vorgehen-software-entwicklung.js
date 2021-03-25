@@ -1,0 +1,317 @@
+import { StaticImage } from 'gatsby-plugin-image'
+import React from 'react'
+import styled from 'styled-components'
+import CallToAction from '../components/CallToAction'
+import Layout from '../components/Layout'
+import { Button, Centered, Container, MainTitle, Section } from '../style'
+
+const orgTools = [
+  { name: 'Reviews / Planung', size: 'small', description: 'Wöchentlich' },
+  {
+    name: 'Umsetzung',
+    size: 'small',
+    description: 'Wöchentlich',
+  },
+  {
+    name: 'Veröffentlichung von neuen Funktionen',
+    size: 'small',
+    description: 'Wöchentlich',
+  },
+  {
+    name: 'Bezahlung',
+    size: 'small',
+    description: 'Monatlich / mit jedem Release',
+  },
+]
+
+const initialTools = [
+  { name: 'Proof of concept / Technische Abklärung', size: 'medium' },
+  { name: 'Ziele / Outcome', size: 'small', link: null },
+  { name: 'Story Map', size: 'medium' },
+  { name: 'Domaine kennenlernen', size: 'small' },
+  { name: 'Anwender-Interviews', size: 'medium' },
+  { name: 'Sketches / Wireframes', size: 'medium' },
+  { name: 'Persona modellieren', size: 'large' },
+  { name: 'Budget festlegen / Aufwandschätzung', size: 'large' },
+  {
+    name: 'Rahmenbedingungen definieren',
+    size: 'large',
+    description:
+      'Datenschutz, Datensicherheit, Meilensteine, technische Vorgaben, ... ',
+  },
+]
+
+const implementationTools = [
+  { name: 'Priorisieren', size: 'medium' },
+  {
+    name: 'Anforderungen erfassen oder anpassen',
+    size: 'medium',
+  },
+  { name: 'Anforderungen umsetzen', size: 'small' },
+  { name: 'Tests durch den Kunden', size: 'medium' },
+  { name: 'Lösungs-Inhalte erfassen', size: 'small' },
+  { name: 'Hallway-Tests', size: 'medium', link: null },
+  { name: 'Anwender-Dokumentation', size: 'large' },
+  { name: 'System für lauffähige Lösung', size: 'small' },
+  { name: 'Usability-Tests', size: 'large' },
+  { name: 'App-Store Inhalte erfassen', size: 'large' },
+  { name: 'Datenschutzrichtlinien erfassen', size: 'large' },
+  { name: 'Anwenderschulung', size: 'large' },
+  { name: 'Support', size: 'small' },
+  { name: 'Backups', size: 'small' },
+  { name: 'Betrieb der Systeme', size: 'small' },
+  { name: 'Penetration-Tests', size: 'large' },
+]
+
+const Vorgehen = () => (
+  <Layout>
+    <main>
+      <article>
+        <Section>
+          <Container>
+            <MainTitle>Vorgehen Software-Entwicklung</MainTitle>
+            <Centered>
+              <p>
+                <b>
+                  Das Apptiva Vorgehen für optimale Software-Entwicklung. Unser
+                  agiles Vorgehen ist Teil unseres Erfolgsrezepts. Profitieren
+                  Sie davon!
+                </b>
+              </p>
+            </Centered>
+          </Container>
+        </Section>
+        <Section>
+          <Container>
+            <Centered>
+              <h2>Ablauf</h2>
+              <StaticImage
+                src="../img/vorgehen.png"
+                alt="Vorgehen"
+                width={600}
+                layout="constrained"
+              />
+            </Centered>
+            <p>
+              Mit den folgenden organisatorischen Tätigkeiten möchten wir die
+              Transparenz und Steuerungsmöglichkeiten für alle Partien des
+              Projekts gewährleisten.
+            </p>
+            <Grid>
+              {orgTools.map((tool) => (
+                <React.Fragment key={tool.name}>
+                  <div></div>
+                  <div
+                    css={
+                      tool.name === 'Bezahlung' &&
+                      `@media (min-width: 768px) {grid-column: 5;}`
+                    }
+                  >
+                    <Tool size={tool.size} description={tool.description}>
+                      {tool.name}
+                    </Tool>
+                  </div>
+                </React.Fragment>
+              ))}
+            </Grid>
+          </Container>
+        </Section>
+        <Section>
+          <Container>
+            <Centered>
+              <h2>Initialisierung</h2>
+              <StaticImage
+                src="../img/gemeinsames-verstaendnis.png"
+                alt="Gemeinsames Verständnis"
+                width={600}
+                layout="constrained"
+              />
+            </Centered>
+
+            <p>
+              Bei der Initialisierung geht es darum ein grobes, gemeinsames
+              Verständnis und übereinkunft über das Projekt und die Lösung zu
+              erhalten. Die folgenden Aufgaben gehen wir zwar zu beginn des
+              Projekts an, passen oder erweitern die Ergebnisse aber während dem
+              ganzen Projekt immer wieder an.
+            </p>
+            <Grid>
+              {initialTools.map((tool) => (
+                <React.Fragment key={tool.name}>
+                  <div></div>
+                  <div>
+                    <Tool size={tool.size} description={tool.description}>
+                      {tool.name}
+                    </Tool>
+                  </div>
+                </React.Fragment>
+              ))}
+            </Grid>
+            <Description />
+          </Container>
+        </Section>
+        <Section>
+          <Container>
+            <Centered>
+              <h2>Umsetzung & Betrieb</h2>
+              <StaticImage
+                src="../img/iterativ.png"
+                alt="Iteratives Vorgehen"
+                width={600}
+                layout="constrained"
+              />
+            </Centered>
+
+            <p>
+              Bei der Umsetzung wird die Lösung laufend entwickelt und
+              erweitert. Die Lösung wird dabei so früh wie möglich produktiv
+              eingesetzt. Neue Features werden laufend zur Verfügung gestellt.
+            </p>
+            <Grid>
+              {implementationTools.map((tool, i) => (
+                <React.Fragment key={tool.name}>
+                  <div key={tool.name + '1'}></div>
+                  <div key={tool.name + '2'}>
+                    <Tool size={tool.size} description={tool.description}>
+                      {tool.name}
+                    </Tool>
+                  </div>
+                </React.Fragment>
+              ))}
+            </Grid>
+            <Description />
+          </Container>
+        </Section>
+        <Section>
+          <Container>
+            <iframe
+              width="100%"
+              height="500"
+              src="https://www.youtube.com/embed/62l0zM_Xqxc"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </Container>
+        </Section>
+        <Section>
+          <Container>
+            <Centered>
+              <h2>User Centered Design</h2>
+            </Centered>
+            <p>
+              Viele der oben genannten Tätigkeiten stammen aus der Disziplin
+              <i>User Centered Design</i>. Diese helfen bei der Entwicklung
+              einer Lösung, welche passgenau die vorherschenden Potentiale
+              freisetzt.
+            </p>
+            <Button to="/user-centered-design">Mehr über UCD erfahren</Button>
+          </Container>
+        </Section>
+      </article>
+      <CallToAction dark={true} />
+    </main>
+  </Layout>
+)
+
+const Tool = ({ children, size, description }) => {
+  return (
+    <ToolStyle size={size}>
+      <div>
+        {children} <br></br>
+        <small>{description}</small>
+      </div>
+    </ToolStyle>
+  )
+}
+
+const Description = () => (
+  <Legend>
+    <ul>
+      <Item color="#008fd7">In jedem Projekt</Item>
+      <Item color="#ddd">Wenn möglich</Item>
+      <Item color="white">Falls sinnvoll</Item>
+    </ul>
+  </Legend>
+)
+
+export default Vorgehen
+
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding-top: 2em;
+  padding-bottom: 6em;
+  padding-left: 2em;
+  padding-right: 2em;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(7, 1fr);
+  }
+`
+const ToolStyle = styled.div`
+  position: relative;
+  margin-bottom: 1em;
+  div {
+    font-size: 0.8em;
+    font-weight: 400;
+    padding: 0.5em;
+    margin: 0 -2em;
+    min-height: 3em;
+    border: 1px solid #eee;
+    border-radius: 0.5em;
+    color: ${(p) =>
+      p.size === 'small' ? p.theme.color.bg : p.theme.color.text};
+    background: ${(p) =>
+      p.size === 'small'
+        ? p.theme.color.primary
+        : p.size === 'medium'
+        ? '#ddd'
+        : 'white'};
+
+    small {
+      opacity: 0.5;
+    }
+  }
+  :before {
+    z-index: -1;
+    content: '';
+    background: rgb(212, 212, 212);
+    background: linear-gradient(
+      180deg,
+      rgba(212, 212, 212, 1) 0%,
+      rgba(212, 212, 212, 0) 100%
+    );
+    height: 11em;
+    width: 4px;
+    display: block;
+    position: absolute;
+    top: 1em;
+    left: calc(50% - 4px / 2);
+  }
+`
+const Legend = styled.div`
+  font-size: 0.6em;
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 0;
+  }
+`
+const Item = styled.li`
+  display: flex;
+  :before {
+    content: '';
+    display: block;
+    height: 1em;
+    width: 1em;
+    margin-right: 0.5em;
+    border: 1px solid #aaa;
+    background: ${(p) => p.color};
+  }
+`
