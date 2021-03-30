@@ -5,7 +5,7 @@ import 'normalize.css/normalize.css'
 
 import Navbar from './Navbar'
 import Footer from './Footer'
-import Lightbox from './Lightbox'
+import Lightbox, { LightboxImageStyle } from './Lightbox'
 import config from '../config'
 import Hero from './Hero'
 import { GlobalStyle, theme } from '../style'
@@ -29,6 +29,7 @@ const Layout = ({ children, showHero = false }) => (
       {children}
       <Footer />
       <GlobalStyle />
+      <LightboxImageStyle />
     </Lightbox>
   </ThemeProvider>
 )

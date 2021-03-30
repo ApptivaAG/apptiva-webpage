@@ -90,6 +90,7 @@ const Vorgehen = () => (
                 alt="Vorgehen"
                 width={800}
                 layout="constrained"
+                className="lightbox"
               />
             </Centered>
             <p>
@@ -125,6 +126,7 @@ const Vorgehen = () => (
                 alt="Gemeinsames Verständnis"
                 width={600}
                 layout="constrained"
+                className="lightbox"
               />
             </Centered>
 
@@ -159,6 +161,7 @@ const Vorgehen = () => (
                 alt="Iteratives Vorgehen"
                 width={600}
                 layout="constrained"
+                className="lightbox"
               />
             </Centered>
 
