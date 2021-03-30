@@ -131,11 +131,11 @@ const Vorgehen = () => (
             </Centered>
 
             <p>
-              Bei der Initialisierung geht es darum ein grobes, gemeinsames
-              Verständnis und übereinkunft über das Projekt und die Lösung zu
-              erhalten. Die folgenden Aufgaben gehen wir zwar zu beginn des
-              Projekts an, passen oder erweitern die Ergebnisse aber während dem
-              ganzen Projekt immer wieder an.
+              Bei der Initialisierung geht es darum, ein grobes, gemeinsames
+              Verständnis und eine übereinkunft über das Projekt und die Lösung
+              zu erhalten. Die folgenden Aufgaben gehen wir zwar zu Beginn des
+              Projekts an, passen oder erweitern diese aber während dem ganzen
+              Projekt stets den Ergebnissen an.
             </p>
             <Grid>
               {initialTools.map((tool) => (
@@ -166,9 +166,9 @@ const Vorgehen = () => (
             </Centered>
 
             <p>
-              Bei der Umsetzung wird die Lösung laufend entwickelt und
-              erweitert. Die Lösung wird dabei so früh wie möglich produktiv
-              eingesetzt. Neue Features werden laufend zur Verfügung gestellt.
+              Wir streben stets einen frühen produktiven Einsatz der Endlösung
+              an, stellen dabei aber die laufende Weiterentwicklung sicher. Neue
+              Features werden fortlaufend zur Verfügung gestellt.
             </p>
             <Grid>
               {implementationTools.map((tool, i) => (
@@ -207,7 +207,7 @@ const Vorgehen = () => (
             <p>
               Viele der oben genannten Tätigkeiten stammen aus der Disziplin
               <i>User Centered Design</i>. Diese helfen bei der Entwicklung
-              einer Lösung, welche passgenau die vorherschenden Potentiale
+              einer Lösung, welche passgenau die vorherrschenden Potenziale
               freisetzt.
             </p>
             <Button to="/user-centered-design">Mehr über UCD erfahren</Button>
