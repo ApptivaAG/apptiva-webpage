@@ -88,7 +88,7 @@ const Vorgehen = () => (
               <StaticImage
                 src="../img/vorgehen.png"
                 alt="Vorgehen"
-                width={700}
+                width={800}
                 layout="constrained"
               />
             </Centered>
