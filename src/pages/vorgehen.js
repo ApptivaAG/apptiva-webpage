@@ -28,7 +28,7 @@ const initialTools = [
   { name: 'Proof of concept / Technische Abklärung', size: 'medium' },
   { name: 'Ziele / Outcome', size: 'small', link: null },
   { name: 'Story Map', size: 'medium' },
-  { name: 'Domaine kennenlernen', size: 'small' },
+  { name: 'Domäne kennenlernen', size: 'small' },
   { name: 'Anwender-Interviews', size: 'medium' },
   { name: 'Sketches / Wireframes', size: 'medium' },
   { name: 'Persona modellieren', size: 'large' },
@@ -49,7 +49,7 @@ const implementationTools = [
   },
   { name: 'Anforderungen umsetzen', size: 'small' },
   { name: 'Tests durch den Kunden', size: 'medium' },
-  { name: 'Lösungs-Inhalte erfassen', size: 'small' },
+  { name: 'Lösungsinhalte erfassen', size: 'small' },
   { name: 'Hallway-Tests', size: 'medium', link: null },
   { name: 'Anwender-Dokumentation', size: 'large' },
   { name: 'System für lauffähige Lösung', size: 'small' },
@@ -73,9 +73,8 @@ const Vorgehen = () => (
             <Centered>
               <p>
                 <b>
-                  Das Apptiva Vorgehen für optimale Software-Entwicklung. Unser
-                  agiles Vorgehen ist Teil unseres Erfolgsrezepts. Profitieren
-                  Sie davon!
+                  Unser agiles Vorgehen für optimale Software-Entwicklung ist
+                  Teil des Erfolgsrezepts von Apptiva. Profitieren Sie davon!
                 </b>
               </p>
             </Centered>
@@ -94,7 +93,7 @@ const Vorgehen = () => (
               />
             </Centered>
             <p>
-              Mit den folgenden organisatorischen Tätigkeiten möchten wir die
+              Mit den folgenden organisatorischen Tätigkeiten möchten wir
               Transparenz und Steuerungsmöglichkeiten für alle Partien des
               Projekts gewährleisten.
             </p>
@@ -132,10 +131,10 @@ const Vorgehen = () => (
 
             <p>
               Bei der Initialisierung geht es darum, ein grobes, gemeinsames
-              Verständnis und eine übereinkunft über das Projekt und die Lösung
-              zu erhalten. Die folgenden Aufgaben gehen wir zwar zu Beginn des
-              Projekts an, passen oder erweitern diese aber während dem ganzen
-              Projekt stets den Ergebnissen an.
+              Verständnis über das Projekt und die Lösung zu erhalten. Die
+              folgenden Aufgaben gehen wir zwar zu Beginn des Projekts an,
+              passen diese aber während dem ganzen Projekt stets den gewünschten
+              Ergebnissen an.
             </p>
             <Grid>
               {initialTools.map((tool) => (
@@ -166,9 +165,9 @@ const Vorgehen = () => (
             </Centered>
 
             <p>
-              Wir streben stets einen frühen produktiven Einsatz der Endlösung
-              an, stellen dabei aber die laufende Weiterentwicklung sicher. Neue
-              Features werden fortlaufend zur Verfügung gestellt.
+              Wir streben stets einen frühen produktiven Einsatz der Lösung an,
+              stellen dabei aber die kontinuierliche Weiterentwicklung sicher.
+              Neue Features werden fortlaufend zur Verfügung gestellt.
             </p>
             <Grid>
               {implementationTools.map((tool, i) => (
@@ -205,10 +204,10 @@ const Vorgehen = () => (
               <h2>User Centered Design</h2>
             </Centered>
             <p>
-              Viele der oben genannten Tätigkeiten stammen aus der Disziplin
+              Viele der oben genannten Tätigkeiten stammen aus der
+              Disziplin&nbsp;
               <i>User Centered Design</i>. Diese helfen bei der Entwicklung
-              einer Lösung, welche passgenau die vorherrschenden Potenziale
-              freisetzt.
+              einer Lösung, welche passgenau das volle Potenzial ausschöpfen.
             </p>
             <Button to="/user-centered-design">Mehr über UCD erfahren</Button>
           </Container>
@@ -233,7 +232,7 @@ const Tool = ({ children, size, description }) => {
 const Description = () => (
   <Legend>
     <ul>
-      <Item color="#008fd7">In jedem Projekt</Item>
+      <Item color="#008fd7">Bei jedem Projekt</Item>
       <Item color="#ddd">Wenn möglich</Item>
       <Item color="white">Falls sinnvoll</Item>
     </ul>
