@@ -53,6 +53,7 @@ const implementationTools = [
   { name: 'Hallway-Tests', size: 'medium', link: null },
   { name: 'Anwender-Dokumentation', size: 'large' },
   { name: 'System für lauffähige Lösung', size: 'small' },
+  { name: 'Service Level Vereinbarung (SLA)', size: 'medium' },
   { name: 'Usability-Tests', size: 'large' },
   { name: 'App-Store Inhalte erfassen', size: 'large' },
   { name: 'Datenschutzrichtlinien erfassen', size: 'large' },
