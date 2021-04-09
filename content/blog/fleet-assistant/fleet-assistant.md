@@ -20,7 +20,7 @@ helfen, die Abläufe zu standardisieren und die Datenflüsse von verschiedenen S
 
 ## Die Herausforderungen
 
-Für den Räderwechsle einer ganzen Flotte braucht es mehr als man denkt. Auf einige der Herausforderungen wollen wir hier kurz eingehen:
+Für den Räderwechsel einer ganzen Flotte braucht es mehr als man denkt. Auf einige der Herausforderungen wollen wir hier kurz eingehen:
 
 ### Flottenmanagement
 
@@ -28,11 +28,11 @@ Der Prozess fängt bereits bei Axa UPTO an. Zu- und Abgänge von Fahrzeugen werd
 
 ### Terminbuchung
 
-hostettler autotechnik ag verfügt über ein Netz von Parntergaragen. Der Fleet Assistant sucht automatisch die nächste Garage der Fahrzeuglenker\*in aus und hilft bei der Terminbuchung zwischen den beiden Parteien.
+hostettler autotechnik ag verfügt über ein Netz von Partnergaragen. Der Fleet Assistant sucht automatisch die nächste Garage der Fahrzeuglenker\*in aus und hilft bei der Terminbuchung zwischen den beiden Parteien.
 
 ### Wo sind die neuen Reifen?
 
-Der Fleet Assistant erkennt selbstständig, für welche Fahrzeuge noch Reifen bestellt werden müssen und welche Transporte notwendig sind, damit alles bereit ist, wenn der Termin statt findet.
+Der Fleet Assistant erkennt selbstständig, für welche Fahrzeuge noch Reifen bestellt werden müssen und welche Transporte notwendig sind, damit alles bereit ist, wenn der Termin stattfindet.
 
 ### Rapportierung und Verrechnung
 
@@ -43,12 +43,12 @@ Schlussendlich digitalisiert der Fleet Assistant auch die Rapportierung und die 
 Für den ersten Räderwechsel steht nun alles bereit. Die neuen Prozesse werden in Zukunft viel Zeit und Nerven sparen. Ausbaupotential gibt es auch:
 
 - Die Autolenker\*innen werden in Zukunft ihre Garage selber wählen können.
-- Die Terminbuchung wird direkt mit dem Terminkalender der Garagen verknüpft.
-- Transportaufträge werden elektronisch an den Transporteur übermittelt.
+- Die Terminbuchung wird direkt mit dem Terminkalender der Garagen verknüpft werden.
+- Transportaufträge werden elektronisch an den Transporteur übermittelt werden.
 
 > ### Axa UPTO
 >
-> UPTO – Das Auto-Abo ist für Privatpersonen und Unternehmen, die ein Auto besitzen wollen, dabei aber die Flexibilität und die Freiheit
+> UPTO – Das Auto-Abo ist für Privatpersonen und Unternehmen die ein Auto besitzen wollen, dabei aber die Flexibilität und die Freiheit
 > in den Vordergrund stellen.
 
 <sub>[Gears](https://thenounproject.com/search/?q=gear&i=441265) by David from [the Noun Project](https://thenounproject.com/)</sub>  
