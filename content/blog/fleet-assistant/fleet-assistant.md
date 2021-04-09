@@ -6,7 +6,7 @@ image: fleet-assistant-header.png
 date: 2021-04-08
 author: Roman Schaller
 description: >-
-  Um Prozesse von Unternehmen zu optimieren und das Leben von Mitarbeiter*innen zu vereinfachen sind wir als Apptiva AG angetreten. Für die hostettler autotechnik ag durften wir genau das einmal mehr tun.
+  Mit dem Fleet Assistant durften wir der hostettler autotechnik ag und Axa UPTO helfen, die Organisation des halbjährlichen Reifenwechsels von hunderten Fahrzeugen zu automatisieren.
 categories:
   - Allgemein
 ---
@@ -14,9 +14,13 @@ categories:
 hostettler autotechnik ag kümmert sich um den Unterhalt der gesamten Flotte von Axa UPTO. Da kann ein einfacher Reifenwechsel für die ganze Flotte schnell zur grossen Herausforderung werden. Mit dem Fleet Assistant durften wir der hostettler autotechnik ag
 helfen, die Abläufe zu standardisieren und die Datenflüsse von verschiedenen Systemen und Akteuren zu digitalisieren.
 
+&nbsp;
+
 > ### hostettler autotechnik ag
 >
 > Die hostettler autotechnik ag ist der Partner des Schweizer Garagengewerbes für Ersatz- und Verschleissteile, Zubehör und Werkstatteinrichtung. Rund 300 Mitarbeitende sorgen für einen professionellen und persönlichen Service.
+
+&nbsp;
 
 ## Die Herausforderungen
 
@@ -46,10 +50,14 @@ Für den ersten Räderwechsel steht nun alles bereit. Die neuen Prozesse werden 
 - Die Terminbuchung wird direkt mit dem Terminkalender der Garagen verknüpft werden.
 - Transportaufträge werden elektronisch an den Transporteur übermittelt werden.
 
+&nbsp;
+
 > ### Axa UPTO
 >
 > UPTO – Das Auto-Abo ist für Privatpersonen und Unternehmen die ein Auto besitzen wollen, dabei aber die Flexibilität und die Freiheit
 > in den Vordergrund stellen.
+
+&nbsp;
 
 <sub>[Gears](https://thenounproject.com/search/?q=gear&i=441265) by David from [the Noun Project](https://thenounproject.com/)</sub>  
 <sub>[technical service](https://thenounproject.com/search/?q=technical+service&i=3844482) by Soremba from [the Noun Project](https://thenounproject.com/)</sub>
