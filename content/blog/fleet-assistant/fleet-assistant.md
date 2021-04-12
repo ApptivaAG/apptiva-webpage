@@ -11,7 +11,7 @@ categories:
   - Allgemein
 ---
 
-hostettler autotechnik ag kümmert sich um den Unterhalt der gesamten Flotte von Axa UPTO. Da kann ein einfacher Reifenwechsel für die ganze Flotte schnell zur grossen Herausforderung werden. Mit dem Fleet Assistant durften wir der hostettler autotechnik ag
+hostettler autotechnik ag kümmert sich um den Reifenservice der gesamten Flotte von Axa UPTO. Da kann ein einfacher Reifenwechsel für die ganze Flotte schnell zur grossen Herausforderung werden. Mit dem Fleet Assistant durften wir der hostettler autotechnik ag
 helfen, die Abläufe zu standardisieren und die Datenflüsse von verschiedenen Systemen und Akteuren zu digitalisieren.
 
 &nbsp;
