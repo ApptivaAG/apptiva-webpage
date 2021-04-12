@@ -105,6 +105,12 @@ const Customers = () => {
             height={45}
             objectFit="contain"
           />
+          <StaticImage
+            src="../img/kanton-bern-200.png"
+            alt="Amt für Informatik und Organisation des Kantons Bern"
+            height={50}
+            objectFit="contain"
+          />
         </ImageList>
       </Container>
     </Section>

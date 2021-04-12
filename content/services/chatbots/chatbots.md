@@ -18,6 +18,7 @@ customers:
   - suva-300.png
   - luzerner-kantonsspital-500x113.png
   - roche.png
+  - kanton-bern-200.png
 
 solutions:
   - title: In Webseiten
