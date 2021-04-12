@@ -70,7 +70,7 @@ const Customers = () => {
             objectFit="contain"
           />
           <StaticImage
-            src="../img/vivanco-300x116.png"
+            src="../img/vivanco-200.png"
             alt="Vivanco Gruppe AG"
             height={60}
             objectFit="contain"
