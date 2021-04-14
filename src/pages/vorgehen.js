@@ -256,11 +256,10 @@ const Grid = styled.div`
   @media (min-width: 768px) {
     grid-template-columns: repeat(7, 1fr);
     padding-bottom: 6em;
-    background: rgb(255, 255, 255);
     background: linear-gradient(
       0deg,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(212, 212, 212, 0) 30%
+      rgb(255, 255, 255) 0%,
+      rgba(255, 255, 255, 0) 30%
     );
     overflow: hidden;
   }
