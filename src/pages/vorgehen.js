@@ -5,6 +5,9 @@ import CallToAction from '../components/CallToAction'
 import Layout from '../components/Layout'
 import { Button, Centered, Container, MainTitle, Section } from '../style'
 
+import arrow from '../img/arrow.svg'
+import arrowMobile from '../img/arrow-mobile.svg'
+
 const orgTools = [
   { name: 'Reviews / Planung', size: 'small', description: 'Wöchentlich' },
   {
@@ -246,12 +249,20 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   padding-top: 2em;
-  padding-bottom: 6em;
+  padding-bottom: 2em;
   padding-left: 2em;
   padding-right: 2em;
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(7, 1fr);
+    padding-bottom: 6em;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(212, 212, 212, 0) 30%
+    );
+    overflow: hidden;
   }
 `
 const ToolStyle = styled.div`
@@ -280,19 +291,19 @@ const ToolStyle = styled.div`
   }
   :before {
     z-index: -1;
-    content: '';
-    background: rgb(212, 212, 212);
-    background: linear-gradient(
-      180deg,
-      rgba(212, 212, 212, 1) 0%,
-      rgba(212, 212, 212, 0) 100%
-    );
-    height: 11em;
-    width: 4px;
+    content: url(${arrowMobile});
+    height: 40px;
+    width: 45px;
     display: block;
     position: absolute;
-    top: 1em;
-    left: calc(50% - 4px / 2);
+    left: calc(50% - 22px / 2);
+    top: 100%;
+  }
+  @media (min-width: 768px) {
+    :before {
+      content: url(${arrow});
+      height: 200px;
+    }
   }
 `
 const Legend = styled.div`
