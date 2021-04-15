@@ -16,6 +16,9 @@ customers:
   - die-post-logo.png
   - energie360-300x72.png
   - suva-300.png
+  - luzerner-kantonsspital-500x113.png
+  - roche.png
+  - kanton-bern-200.png
 
 solutions:
   - title: In Webseiten

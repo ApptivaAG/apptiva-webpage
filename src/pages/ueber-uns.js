@@ -41,7 +41,7 @@ const AboutUs = () => {
             </p>
             <Buttonlist>
               <Button to="/ueber-uns#team">Unser Team</Button>
-              <Button to="/vorgehensweise">Unser Vorgehen</Button>
+              <Button to="/vorgehen">Unser Vorgehen</Button>
               <Button to="/unsere-kompetenzen">Unsere Kompetenzen</Button>
             </Buttonlist>
           </Container>

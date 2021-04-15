@@ -40,6 +40,12 @@ const Customers = () => {
             objectFit="contain"
           />
           <StaticImage
+            src="../img/hbTec.png"
+            alt="hbTec AG"
+            height={28}
+            objectFit="contain"
+          />
+          <StaticImage
             src="../img/insel-gruppe-logo-300x70.png"
             alt="Insel Gruppe"
             height={34}
@@ -64,9 +70,9 @@ const Customers = () => {
             objectFit="contain"
           />
           <StaticImage
-            src="../img/vivanco-300x116.png"
+            src="../img/vivanco-200.png"
             alt="Vivanco Gruppe AG"
-            height={46}
+            height={60}
             objectFit="contain"
           />
           <StaticImage
@@ -78,13 +84,31 @@ const Customers = () => {
           <StaticImage
             src="../img/die-post-logo.png"
             alt="Die Schweizerische Post AG"
-            height={40}
+            height={45}
             objectFit="contain"
           />
           <StaticImage
             src="../img/suva-300x75.png"
             alt="suva"
             height={35}
+            objectFit="contain"
+          />
+          <StaticImage
+            src="../img/roche.png"
+            alt="F. Hoffmann-La Roche AG"
+            height={50}
+            objectFit="contain"
+          />
+          <StaticImage
+            src="../img/luzerner-kantonsspital-500x113.png"
+            alt="Luzerner Kantonsspital"
+            height={45}
+            objectFit="contain"
+          />
+          <StaticImage
+            src="../img/kanton-bern-200.png"
+            alt="Amt für Informatik und Organisation des Kantons Bern"
+            height={50}
             objectFit="contain"
           />
         </ImageList>

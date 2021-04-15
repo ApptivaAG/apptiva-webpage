@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 const Modal = styled.div`
   display: grid;
@@ -10,15 +10,27 @@ const Modal = styled.div`
   right: 0;
   bottom: 0;
   padding: 2rem;
-  background-color: hsla(0, 0%, 100%, 0.9);
+  background-color: hsla(0, 0%, 100%, 0.99);
   text-align: center;
   z-index: 100;
+  cursor: pointer;
 `
 const ImgStyled = styled.img`
   max-height: 100%;
   max-width: 100%;
   justify-self: center;
   align-self: center;
+`
+
+export const LightboxImageStyle = createGlobalStyle`
+  .lightbox, .gatsby-resp-image-wrapper {
+      cursor: pointer;
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.06);
+      }
+    }
 `
 
 class Lightbox extends React.Component {
@@ -40,7 +52,7 @@ class Lightbox extends React.Component {
       // only on tablet and larger
       if (window.innerWidth > 400) {
         const { src, srcset, alt } = e.target
-        this.setState(prev => ({
+        this.setState((prev) => ({
           open: !prev.open,
           src,
           srcset,
