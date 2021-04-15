@@ -19,6 +19,14 @@ helfen, die Abläufe zu standardisieren und die Datenflüsse von verschiedenen S
 > ### hostettler autotechnik ag
 >
 > Die hostettler autotechnik ag ist der Partner des Schweizer Garagengewerbes für Ersatz- und Verschleissteile, Zubehör und Werkstatteinrichtung. Rund 300 Mitarbeitende sorgen für einen professionellen und persönlichen Service.
+>
+> [[right]]
+> |[[avatar]]
+> ||![Marcel Stocker](./marcel-stocker.jpg)
+>
+> Über die Zusammenarbeit mit uns sagt Marcel Stocker:
+>
+> _"Das Team der Apptiva hat uns sehr zielgerichtet, strukturiert und trotzdem effizient durch die Konzeption des Fleet-Assistant geführt. Bei der Umsetzung gefiel der unkomplizierte Austausch mit den kurzen Iterationen. So konnten wir das Projekt in sehr kurzer Zeit in der benötigten Qualität umsetzen."_
 
 &nbsp;
 
