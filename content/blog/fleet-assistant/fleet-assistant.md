@@ -6,19 +6,19 @@ image: fleet-assistant-header.png
 date: 2021-04-08
 author: Roman Schaller
 description: >-
-  Mit dem Fleet Assistant durften wir der hostettler autotechnik ag und Axa UPTO helfen, die Organisation des halbjährlichen Reifenwechsels von hunderten Fahrzeugen zu automatisieren.
+  Mit dem Fleet Assistant durften wir der hostettler autotechnik ag und UPTO helfen, die Organisation des halbjährlichen Reifenwechsels von hunderten Fahrzeugen zu automatisieren.
 categories:
   - Allgemein
 ---
 
-hostettler autotechnik ag kümmert sich um den Reifenservice der gesamten Flotte von Axa UPTO. Da kann ein einfacher Reifenwechsel für die ganze Flotte schnell zur grossen Herausforderung werden. Mit dem Fleet Assistant durften wir der hostettler autotechnik ag
+hostettler autotechnik ag kümmert sich um den Reifenservice sämtlicher Autos von [UPTO](https://www.upto.ch/?utm_source=apptiva&utm_medium=blogextern&utm_campaign=fleetassistant&utm_content=upto/). Da kann ein einfacher Reifenwechsel für die ganze Flotte schnell zur grossen Herausforderung werden. Mit dem Fleet Assistant durften wir der hostettler autotechnik ag
 helfen, die Abläufe zu standardisieren und die Datenflüsse von verschiedenen Systemen und Akteuren zu digitalisieren.
 
 &nbsp;
 
 > ### hostettler autotechnik ag
 >
-> Die hostettler autotechnik ag ist der Partner des Schweizer Garagengewerbes für Ersatz- und Verschleissteile, Zubehör und Werkstatteinrichtung. Rund 300 Mitarbeitende sorgen für einen professionellen und persönlichen Service.
+> Die [hostettler autotechnik ag](https://www.autotechnik.ch/) ist der Partner des Schweizer Garagengewerbes für Ersatz- und Verschleissteile, Zubehör und Werkstatteinrichtung. Rund 300 Mitarbeitende sorgen für einen professionellen und persönlichen Service.
 >
 > [[right]]
 > |[[avatar]]
@@ -36,7 +36,7 @@ Für den Räderwechsel einer ganzen Flotte braucht es mehr als man denkt. Auf ei
 
 ### Flottenmanagement
 
-Der Prozess fängt bereits bei Axa UPTO an. Zu- und Abgänge von Fahrzeugen werden automatisch an den Fleet-Assistant übermittelt. So wissen wir immer genau, um welche Fahrzeuge wir uns kümmern müssen.
+Der Prozess fängt bereits bei UPTO an. Zu- und Abgänge von Fahrzeugen werden automatisch an den Fleet-Assistant übermittelt. So wissen wir immer genau, um welche Fahrzeuge wir uns kümmern müssen.
 
 ### Terminbuchung
 
@@ -48,7 +48,7 @@ Der Fleet Assistant erkennt selbstständig, für welche Fahrzeuge noch Reifen be
 
 ### Rapportierung und Verrechnung
 
-Schlussendlich digitalisiert der Fleet Assistant auch die Rapportierung und die Verrechnung aller Arbeiten.
+Schlussendlich digitalisiert der Fleet Assistant auch die Rapportierung und die Verrechnung aller angefallenen Aufwände.
 
 ## Fazit
 
@@ -60,10 +60,11 @@ Für den ersten Räderwechsel steht nun alles bereit. Die neuen Prozesse werden 
 
 &nbsp;
 
-> ### Axa UPTO
+> ### UPTO
 >
-> UPTO – Das Auto-Abo ist für Privatpersonen und Unternehmen die ein Auto besitzen wollen, dabei aber die Flexibilität und die Freiheit
-> in den Vordergrund stellen.
+> UPTO bietet all-inclusive Mobility für Privat- und Geschäftskunden an. [Auto-Abos](https://www.upto.ch/auto-abo/?utm_source=apptiva&utm_medium=blogextern&utm_campaign=fleetassistant&utm_content=auto-abo/)
+> mit flexiblen Mindestlaufzeiten gehören genauso zu ihrer Expertise wie [smartes Flottenmanagement](https://www.upto.ch/flotte/?utm_source=apptiva&utm_medium=blogextern&utm_campaign=fleetassistant&utm_content=flotte/).
+> Hinter der Marke UPTO steht die AXA Mobility Services AG (AMS) eine 100%ige Tochtergesellschaft der AXA.
 
 &nbsp;
 
