@@ -3,7 +3,7 @@ title: Fleet Assistant für hostettler autotechnik ag
 slug: fleet-assistant-hostettler-autotechnik-ag
 templateKey: blog-post
 image: fleet-assistant-header.png
-date: 2021-04-08
+date: 2021-04-16
 author: Roman Schaller
 description: >-
   Mit dem Fleet Assistant durften wir der hostettler autotechnik ag und UPTO helfen, die Organisation des halbjährlichen Reifenwechsels von hunderten Fahrzeugen zu automatisieren.
