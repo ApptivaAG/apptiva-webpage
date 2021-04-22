@@ -11,8 +11,7 @@ callToAction: Auf uns können Sie zählen.
 introduction: |
   ## Installieren und loszählen
 
-  Der Gästezähler von Apptiva ist eine einfache Handzähler-App. Er kann Werte hoch- und runterzählen und selbstverständlich wieder zurücksetzen. Der Gästezähler verfügt über eine hervorragende Usability und beinhaltet keine lästige Werbung.
-
+  Der [Gästezähler von Apptiva](https://guestcounter.ch) ist eine einfache Handzähler-App. Er kann Werte hoch- und runterzählen und selbstverständlich wieder zurücksetzen. Der Gästezähler verfügt über eine hervorragende Usability und beinhaltet keine lästige Werbung.
 
   ## Anwendungsbereiche
 
@@ -20,15 +19,15 @@ introduction: |
 
   Die Corona-Krise stellt uns alle vor Herausforderungen der unterschiedlichsten Arten. Dazu gehören das Social Distancing und die eingeschränkten Kapazitäten in Läden oder öffentlichen Einrichtungen. Der Gästezähler ist eine simple App, welche Sie dabei unterstützt, diese Herausforderungen zu meistern.
 
-  Falls rudimentäres Zählen für Sie nicht ganz ausreicht, kann der Gästezähler Ihnen vermutlich mit den PRO Features weiterhelfen.
+  ## Mehrbenutzer-Synchronisation
+  Wenn der Event oder die Lokalität etwas grösser ist, gibt es normalerweise mehrere Ein- und Ausgänge. Dank der Mehrbenutzer-Synchronisation kann die Anzahl Gäste von mehreren Anwendern gleichzeitig aktualisiert werden. Die Daten werden via Cloud untereinander ausgetauscht.
+
+  ![Mehrbenutzer-Synchronisation](HowItWorks.svg)
 
 bulletGroups:
-  - title: PRO Features
-    description: 'Sie möchten mehr als nur rauf- und runterzählen?<br/>Der Apptiva Gästezähler hat natürlich noch mehr auf dem Kasten:'
+  - title: Weitere Features
+    description: 'Sie möchten mehr als nur rauf- und runterzählen?<br/>Der Apptiva Gästezähler hat natürlich noch mehr auf dem Kasten.'
     bulletList:
-      - icon: share-alt
-        title: Mehrbenutzer-Synchronisation
-        text: Mehrere Benutzer können auf denselben Zähler zugreifen. Die Daten werden via Cloud untereinander ausgetauscht.
       - icon: globe
         title: Integration
         text: Integrieren Sie den Zähler auf Ihrer Webseite. Informieren Sie Ihre Kundschaft über verfügbare Kapazitäten.
@@ -43,7 +42,7 @@ bulletGroups:
         text: Passen Sie den die optische Erscheinung nach Ihren Vorstellungen an. Integrieren Sie Ihr Logo.
       - icon: lightbulb
         title: Da fehlt was?
-        text: Sie haben eine spezielle Anforderung? Gerne erweitern wir den Gästezähler passgenau zu Ihren Wünschen.
+        text: Sie haben eine spezielle Anforderung oder ein besonderes Anwendungsszenario? Gerne erweitern wir den Gästezähler passgenau zu Ihren Wünschen.
 ---
 
 ## Legen Sie los
