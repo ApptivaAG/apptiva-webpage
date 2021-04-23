@@ -15,12 +15,12 @@ introduction: |
 
   ## Anwendungsbereiche
 
-  Der Apptiva Gästezähler kann in den unterschiedlichsten Bereichen eingesetzt werden: Zählen Sie die Eintritte in Ihrem Schwimmbad, die Besucher in Ihrem Museum, oder die Gäste in Ihrer Bar.
+  Der Apptiva Gästezähler kann in den unterschiedlichsten Bereichen eingesetzt werden: Zählen Sie die Eintritte in Ihrem Schwimmbad, die Besucher an ihrer Veranstaltung, oder die Gäste in Ihrer Bar.
 
   Die Corona-Krise stellt uns alle vor Herausforderungen der unterschiedlichsten Arten. Dazu gehören das Social Distancing und die eingeschränkten Kapazitäten in Läden oder öffentlichen Einrichtungen. Der Gästezähler ist eine simple App, welche Sie dabei unterstützt, diese Herausforderungen zu meistern.
 
   ## Mehrbenutzer-Synchronisation
-  Wenn der Event oder die Lokalität etwas grösser ist, gibt es normalerweise mehrere Ein- und Ausgänge. Dank der Mehrbenutzer-Synchronisation kann die Anzahl Gäste von mehreren Anwendern gleichzeitig aktualisiert werden. Die Daten werden via Cloud untereinander ausgetauscht.
+  Wenn der Event oder die Lokalität etwas grösser ist, gibt es normalerweise mehrere Ein- und Ausgänge. Dank der Mehrbenutzer-Synchronisation kann die Anzahl Gäste von mehreren Anwendern gleichzeitig aktualisiert werden. Die Daten werden via Cloud untereinander synchronisiert.
 
   ![Mehrbenutzer-Synchronisation](HowItWorks.svg)
 
