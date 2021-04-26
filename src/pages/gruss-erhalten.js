@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet'
 const ThankYou = () => {
   return (
     <Layout>
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: 'de-CH' }}>
         <meta name="robots" content="noindex" />
       </Helmet>
 
