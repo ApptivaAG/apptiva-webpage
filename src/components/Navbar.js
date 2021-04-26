@@ -96,11 +96,9 @@ const DynLink = ({ type, nav, ...props }) =>
 const Navbar = ({ location }) => (
   <NavBar>
     <Container>
-      <h1 css="margin: 0;">
-        <DynLink type={location} nav="/#start" data-element="logo">
-          <Logo src={logo} alt="Apptiva" width="206" height="42" />
-        </DynLink>
-      </h1>
+      <DynLink type={location} nav="/#start" data-element="logo">
+        <Logo src={logo} alt="Apptiva" width="206" height="42" />
+      </DynLink>
 
       <MenuButton tabIndex="0">Menu</MenuButton>
       <Navigation>
