@@ -3,7 +3,7 @@ templateKey: 'service-page'
 slug: /zusammenarbeit
 title: Zusammenarbeit
 author: philip-schoenholzer
-description: ''
+description: 'Mit uns arbeiten heisst: Transparent, direkte Kommunikation, benutzerfreundliche Lösungen, eindrucksvolle Resultate.'
 
 bulletGroups:
   - title: Es gibt viele Gründe, warum Sie mit uns zusammenarbeiten sollten.
