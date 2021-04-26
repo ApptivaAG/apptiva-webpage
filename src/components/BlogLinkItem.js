@@ -23,7 +23,7 @@ const LinkItem = styled(LinkItemDefault)`
 const BlogLinkItem = ({ frontmatter, excerpt, className }) => {
   return (
     <LinkItem
-      to={`/${frontmatter.slug}`}
+      to={`/${frontmatter.slug}/`}
       key={frontmatter.slug}
       align="left"
       className={className}

@@ -112,7 +112,7 @@ const Footer = () => (
           <p>{description}</p>
           <div css="margin-top: 3em;">
             <h3>Jedes Quartal aktuelle News erhalten</h3>
-            <Button to="/newsletter">Newsletter abonnieren</Button>
+            <Button to="/newsletter/">Newsletter abonnieren</Button>
           </div>
           <div
             css={`
@@ -136,7 +136,7 @@ const Footer = () => (
               Vollbesetzung.
             </p>
             <div css="font-size: 0.9em; padding: 0 1em 1em; text-align: right; color: white;">
-              <Button to="/coronavirus">Coronavirus bei Apptiva</Button>
+              <Button to="/coronavirus/">Coronavirus bei Apptiva</Button>
             </div>
           </div>
         </About>
@@ -280,7 +280,7 @@ const Footer = () => (
             ©
           </span>{' '}
           2015 - {year} Apptiva AG. Passgenaue Softwarelösungen.{' '}
-          <Link to="/impressum">Impressum</Link>
+          <Link to="/impressum/">Impressum</Link>
         </Company>
       </Grid>
     </LinkStyle>

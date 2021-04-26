@@ -214,7 +214,7 @@ const Hero = () => {
               Quartal aktuelle Apptiva-News erhalten.
             </p>
             <div css="font-size: 0.9em; margin: 0.5em  1em;">
-              <Button to="/newsletter">Newsletter abonnieren</Button>
+              <Button to="/newsletter/">Newsletter abonnieren</Button>
             </div>
           </div>
         </Container>

@@ -83,7 +83,7 @@ const Coronavirus = () => (
           <p>Bei Fragen stehen wir jederzeit zur Verfügung.</p>
 
           <Center>
-            <Button to="/kontakt">Frage stellen</Button>
+            <Button to="/kontakt/">Frage stellen</Button>
           </Center>
         </Container>
       </Section>

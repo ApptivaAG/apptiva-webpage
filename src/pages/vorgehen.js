@@ -213,7 +213,7 @@ const Vorgehen = () => (
               <i>User Centered Design</i>. Diese helfen bei der Entwicklung
               einer Lösung, welche passgenau das volle Potenzial ausschöpfen.
             </p>
-            <Button to="/user-centered-design">Mehr über UCD erfahren</Button>
+            <Button to="/user-centered-design/">Mehr über UCD erfahren</Button>
           </Container>
         </Section>
       </article>

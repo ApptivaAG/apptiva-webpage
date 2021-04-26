@@ -40,9 +40,9 @@ const AboutUs = () => {
               Entwicklung in der Schweiz bei Apptiva statt.
             </p>
             <Buttonlist>
-              <Button to="/ueber-uns#team">Unser Team</Button>
-              <Button to="/vorgehen">Unser Vorgehen</Button>
-              <Button to="/unsere-kompetenzen">Unsere Kompetenzen</Button>
+              <Button to="/ueber-uns/#team">Unser Team</Button>
+              <Button to="/vorgehen/">Unser Vorgehen</Button>
+              <Button to="/unsere-kompetenzen/">Unsere Kompetenzen</Button>
             </Buttonlist>
           </Container>
         </Section>
@@ -57,7 +57,7 @@ const AboutUs = () => {
               und im Budget, sondern kommen auch bei den Anwendern sehr gut an.
             </p>
             <Buttonlist>
-              <Button to="/zusammenarbeit">Ihr Vorteil mit Apptiva</Button>
+              <Button to="/zusammenarbeit/">Ihr Vorteil mit Apptiva</Button>
             </Buttonlist>
           </Container>
         </Section>
