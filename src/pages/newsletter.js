@@ -26,6 +26,7 @@ const Newsletter = () => {
           <StaticImage
             src="../img/mail9.png"
             alt="Apptiva Newsletter"
+            width={960}
           ></StaticImage>
         </Container>
         <Container css="max-width: 600px;">
