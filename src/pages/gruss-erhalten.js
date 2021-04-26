@@ -3,10 +3,15 @@ import { StaticImage } from 'gatsby-plugin-image'
 
 import Layout from '../components/Layout'
 import { Centered, Container, MainTitle, Section } from '../style'
+import { Helmet } from 'react-helmet'
 
 const ThankYou = () => {
   return (
     <Layout>
+      <Helmet>
+        <meta name="robots" content="noindex" />
+      </Helmet>
+
       <Container>
         <Section css="padding-bottom: 0;">
           <MainTitle>Vielen Dank</MainTitle>
