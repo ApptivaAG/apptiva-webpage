@@ -3,7 +3,7 @@ templateKey: 'service-page'
 slug: /impressum
 title: Impressum
 author: philip-schoenholzer
-description: ''
+description: 'Impressum der Webseite der Apptiva AG. Kontakt: Apptiva AG, Neuenkirchstrasse 19, 6203 Sempach Station, Schweiz, 041 322 26 26, info@apptiva.ch'
 ---
 
 # Kontaktadresse
@@ -16,14 +16,12 @@ Schweiz
 041 322 26 26 <br />
 info@apptiva.ch
 
- 
 # Handelsregistereintrag
 
 Eingetragener Firmenname: Apptiva AG
 
 Nummer: CHE-300.253.749
 
- 
 # Haftungsausschluss
 
 Der Autor übernimmt keinerlei Gewähr hinsichtlich der inhaltlichen Richtigkeit, Genauigkeit, Aktualität, Zuverlässigkeit und Vollständigkeit der Informationen.
@@ -32,17 +30,14 @@ Haftungsansprüche gegen den Autor wegen Schäden materieller oder immaterieller
 
 Alle Angebote sind unverbindlich. Der Autor behält es sich ausdrücklich vor, Teile der Seiten oder das gesamte Angebot ohne gesonderte Ankündigung zu verändern, zu ergänzen, zu löschen oder die Veröffentlichung zeitweise oder endgültig einzustellen.
 
- 
 # Haftung für Links
 
 Verweise und Links auf Webseiten Dritter liegen ausserhalb unseres Verantwortungsbereichs. Es wird jegliche Verantwortung für solche Webseiten abgelehnt. Der Zugriff und die Nutzung solcher Webseiten erfolgen auf eigene Gefahr des Nutzers oder der Nutzerin.
 
- 
 # Urheberrechte
 
 Die Urheber- und alle anderen Rechte an Inhalten, Bildern, Fotos oder anderen Dateien auf der Website gehören ausschliesslich der Firma Apptiva AG oder den speziell genannten Rechtsinhabern. Für die Reproduktion jeglicher Elemente ist die schriftliche Zustimmung der Urheberrechtsträger im Voraus einzuholen.
 
- 
 # Datenschutz
 
 Gestützt auf Artikel 13 der schweizerischen Bundesverfassung und die datenschutzrechtlichen Bestimmungen des Bundes (Datenschutzgesetz, DSG) hat jede Person Anspruch auf Schutz ihrer Privatsphäre sowie auf Schutz vor Missbrauch ihrer persönlichen Daten. Wir halten diese Bestimmungen ein. Persönliche Daten werden streng vertraulich behandelt und weder an Dritte verkauft noch weiter gegeben.
@@ -51,7 +46,6 @@ In enger Zusammenarbeit mit unseren Hosting-Providern bemühen wir uns, die Date
 
 Beim Zugriff auf unsere Webseiten werden folgende Daten in Logfiles gespeichert: IP-Adresse, Datum, Uhrzeit, Browser-Anfrage und allg. übertragene Informationen zum Betriebssystem resp. Browser. Diese Nutzungsdaten bilden die Basis für statistische, anonyme Auswertungen, so dass Trends erkennbar sind, anhand derer wir unsere Angebote entsprechend verbessern können.
 
- 
 # Datenschutzerklärung für die Nutzung von Twitter
 
 Auf unseren Seiten sind Funktionen des Dienstes Twitter eingebunden. Diese Funktionen werden angeboten durch die Twitter Inc., 795 Folsom St., Suite 600, San Francisco, CA 94107, USA. Durch das Benutzen von Twitter und der Funktion „Re-Tweet“ werden die von Ihnen besuchten Webseiten mit Ihrem Twitter-Account verknüpft und anderen Nutzern bekannt gegeben. Dabei werden u.a. Daten wie IP-Adresse, Browsertyp, aufgerufene Domains, besuchte Seiten, Mobilfunkanbieter, Geräte- und Applikations-IDs und Suchbegriffe an Twitter übertragen.
@@ -60,7 +54,6 @@ Wir weisen darauf hin, dass wir als Anbieter der Seiten keine Kenntnis vom Inhal
 
 Ihre Datenschutzeinstellungen bei Twitter können Sie in den Konto-Einstellungen unter http://twitter.com/account/settings ändern. Bei Fragen wenden Sie sich an privacy@twitter.com.
 
- 
 # Datenschutzerklärung für die Nutzung von Google Analytics
 
 Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. („Google“). Google Analytics verwendet sog. „Cookies“, Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen. Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert. Im Falle der Aktivierung der IP-Anonymisierung auf dieser Webseite wird Ihre IP-Adresse von Google jedoch innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt.

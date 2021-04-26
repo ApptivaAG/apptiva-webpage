@@ -106,6 +106,8 @@ const SEO = ({ metaData, postImage, isBlogPost }) => {
 
   return (
     <Helmet htmlAttributes={{ lang: 'de-CH' }}>
+      <title>{title}</title>
+
       {/* General tags */}
       <meta name="description" content={description} />
       <meta name="image" content={image} />

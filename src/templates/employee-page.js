@@ -124,7 +124,7 @@ const Skill = ({ title, color, items }) => (
   </SkillItem>
 )
 
-const EmployeePageTemplate = ({ content, contentComponent, metaData }) => {
+const EmployeePageTemplate = ({ content, contentComponent, frontmatter }) => {
   const PostContent = contentComponent || Content
   const {
     name,
@@ -135,14 +135,22 @@ const EmployeePageTemplate = ({ content, contentComponent, metaData }) => {
     slogan,
     contact,
     skills,
-  } = metaData
+    slug,
+  } = frontmatter
 
-  const seoImage = getSrc(metaData.avatar.childImageSharp.gatsbyImageData)
+  const metaData = {
+    title: `Mitarbeiter | ${name}`,
+    description: [name, claim, role, education, slogan]
+      .filter((i) => i)
+      .join(' - '),
+    slug,
+  }
+
+  const seoImage = getSrc(frontmatter.avatar.childImageSharp.gatsbyImageData)
 
   return (
     <main>
       <Helmet>
-        <title>Mitarbeiter | {name}</title>
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css"
@@ -248,7 +256,7 @@ const EmployeePage = (props) => {
       <EmployeePageTemplate
         content={post.html}
         contentComponent={HTMLContent}
-        metaData={post.frontmatter}
+        frontmatter={post.frontmatter}
       />
     </Layout>
   )

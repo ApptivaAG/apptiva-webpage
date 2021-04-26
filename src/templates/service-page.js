@@ -130,9 +130,6 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
   return (
     <main>
       <Helmet>
-        <title>
-          {stripHTML(title)} - {config.company}
-        </title>
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css"

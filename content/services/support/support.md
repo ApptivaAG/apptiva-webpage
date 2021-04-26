@@ -4,7 +4,7 @@ slug: /unterstuetzung
 title: Unterstützung
 image: life-ring.png
 author: philip-schoenholzer
-description: ''
+description: 'Wir unterstützen Sie mit Brainpower und Wissen bei Ihrem Vorhaben: Persona Workshop, Usability Audit, Architektur Review, Innovations Workshop, Softwarekonzepte mit hoher Usability'
 ---
 
 <style>

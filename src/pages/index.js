@@ -36,10 +36,16 @@ const PartnerImage = styled.div`
   }
 `
 
+const metadata = {
+  title: 'Apptiva AG - iOS, Android, Desktop und Web-Applikationen',
+  description: `Agile Entwicklung von iOS, Android, Desktop und Web-Applikationen. 
+  Bei uns erhalten Sie passende, benutzerfreundliche Lösungen mit attraktivem Design in der Schweiz entwickelt.`,
+}
+
 const HomePageTemplate = ({ partners, appsImage, chatbot, partyplaner }) => (
   <Layout showHero>
     <main>
-      <SEO />
+      <SEO metaData={metadata} />
       <Section id="dienstleistungen">
         <Container>
           <Title>Dienst&shy;leistungen</Title>
