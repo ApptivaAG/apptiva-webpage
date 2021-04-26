@@ -3,6 +3,8 @@ import React from 'react'
 import styled from 'styled-components'
 import CallToAction from '../components/CallToAction'
 import Layout from '../components/Layout'
+import SEO from '../components/SEO'
+
 import { Button, Centered, Container, MainTitle, Section } from '../style'
 
 import arrow from '../img/arrow.svg'
@@ -67,9 +69,17 @@ const implementationTools = [
   { name: 'Penetration-Tests', size: 'large' },
 ]
 
+const metadata = {
+  title: 'Unser agiles Vorgehen für Software-Entwicklung',
+  description: `Unser agiles Vorgehen für optimale Software-Entwicklung ist
+  Teil des Erfolgsrezepts von Apptiva. Profitieren Sie davon!`,
+  slug: 'vorgehen',
+}
+
 const Vorgehen = () => (
   <Layout>
     <main>
+      <SEO metaData={metadata} />
       <article>
         <Section>
           <Container>
