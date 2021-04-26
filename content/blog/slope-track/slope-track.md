@@ -28,7 +28,7 @@ Wie üblich haben wir das Projekt agil umgesetzt. Dies hatte in diesem Fall folg
 - Ideen beim Interaktionskonzept bereits in einer frühen Phase testen.
 - Neue Erkenntnisse und Ideen während der Entwicklung in das Projekt einfliessen lassen.
 
-Zu Beginn haben wir wie gewohnt eine [Story Map](https://apptiva.ch/mehr-ueberblick-mit-storymap/) erstellt, um den Umfang und die Abfolge der Entwicklung zu visualisieren.
+Zu Beginn haben wir wie gewohnt eine [Story Map](/mehr-ueberblick-mit-storymap/) erstellt, um den Umfang und die Abfolge der Entwicklung zu visualisieren.
 
 ![Story Map der Slope Track-App](storymap.png)
 
