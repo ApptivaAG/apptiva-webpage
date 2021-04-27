@@ -19,15 +19,13 @@ introduction: |
 
   Die Corona-Krise stellt uns alle vor Herausforderungen der unterschiedlichsten Arten. Dazu gehören das Social Distancing und die eingeschränkten Kapazitäten in Läden oder öffentlichen Einrichtungen. Der Gästezähler ist eine simple App, welche Sie dabei unterstützt, diese Herausforderungen zu meistern.
 
-  ## Mehrbenutzer-Synchronisation
-  Wenn der Event oder die Lokalität etwas grösser ist, gibt es normalerweise mehrere Ein- und Ausgänge. Dank der Mehrbenutzer-Synchronisation kann die Anzahl Gäste von mehreren Anwendern gleichzeitig aktualisiert werden. Die Daten werden via Cloud untereinander synchronisiert.
-
-  ![Mehrbenutzer-Synchronisation](HowItWorks.svg)
-
 bulletGroups:
   - title: Weitere Features
     description: 'Sie möchten mehr als nur rauf- und runterzählen?<br/>Der Apptiva Gästezähler hat natürlich noch mehr auf dem Kasten.'
     bulletList:
+      - icon: share-alt
+        title: Mehrbenutzer-Synchronisation
+        text: Mehrere Benutzer können auf denselben Zähler zugreifen. Die Daten werden via Cloud untereinander ausgetauscht.
       - icon: globe
         title: Integration
         text: Integrieren Sie den Zähler auf Ihrer Webseite. Informieren Sie Ihre Kundschaft über verfügbare Kapazitäten.
@@ -44,6 +42,12 @@ bulletGroups:
         title: Da fehlt was?
         text: Sie haben eine spezielle Anforderung oder ein besonderes Anwendungsszenario? Gerne erweitern wir den Gästezähler passgenau zu Ihren Wünschen.
 ---
+
+## Mehrbenutzer-Synchronisation
+
+Wenn der Event oder die Lokalität etwas grösser ist, gibt es normalerweise mehrere Ein- und Ausgänge. Dank der Mehrbenutzer-Synchronisation kann die Anzahl Gäste von mehreren Anwendern gleichzeitig aktualisiert werden. Die Daten werden via Cloud untereinander synchronisiert.
+
+![Mehrbenutzer-Synchronisation](shared-counter.svg)
 
 ## Legen Sie los
 
