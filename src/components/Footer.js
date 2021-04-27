@@ -255,6 +255,9 @@ const Footer = () => (
               </Link>
             </li>
             <li>
+              <Link to="/guestcounter/">Gästezähler</Link>
+            </li>
+            <li>
               <a
                 href="https://gastonsolution.com"
                 target="_blank"
