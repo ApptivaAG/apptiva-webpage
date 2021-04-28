@@ -115,6 +115,11 @@ const HomePageTemplate = ({ partners, appsImage, chatbot, partyplaner }) => (
                 <h3>Future Hack - Digitalisierung gemeinsam anpacken</h3>
               </Link>
             </li>
+            <li>
+              <Link to="/weiterentwicklung-apps-produkte">
+                <h3>Weiterentwicklung von Apps und Produkten</h3>
+              </Link>
+            </li>
           </ul>
           <Blockquote>
             <h3>Unsere Spezialität</h3>
