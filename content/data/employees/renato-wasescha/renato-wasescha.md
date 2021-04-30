@@ -92,6 +92,8 @@ skills:
         value: 90
       - name: Prisma
         value: 80
+      - name: Electron
+        value: 85
   - title: CMS
     items:
       - name: Wordpress
