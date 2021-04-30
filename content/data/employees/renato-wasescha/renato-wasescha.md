@@ -28,7 +28,7 @@ skills:
   - title: Architektur
     items:
       - name: Zusammenarbeit und Organisation
-        value: 55
+        value: 65
       - name: Entscheiden
         value: 80
       - name: Dokumentieren
@@ -38,17 +38,16 @@ skills:
       - name: HTML5 / CSS3
         value: 90
       - name: styled-components
-        value: 50
-      - name: React
         value: 80
+      - name: React
+        value: 85
       - name: Vue
-        value: 60
+        value: 50
       - name: JavaScript
         value: 85
       - name: TypeScript
-        value: 70
-      - name: npm / yarn
-        value: 75
+        value: 80
+
   - title: Backend
     items:
       - name: Node.js
@@ -70,9 +69,9 @@ skills:
       - name: Ionic
         value: 65
       - name: iOS
-        value: 80
+        value: 90
       - name: Android
-        value: 70
+        value: 80
   - title: Cloud
     items:
       - name: Docker
@@ -88,17 +87,29 @@ skills:
       - name: GatsbyJS
         value: 85
       - name: Vue CLI
-        value: 75
+        value: 60
       - name: Next.js
+        value: 90
+      - name: Prisma
         value: 80
+  - title: CMS
+    items:
+      - name: Wordpress
+        value: 70
+      - name: Sanity
+        value: 80
+  - title: Kassensysteme (POS)
+    items:
+      - name: Xenia
+        value: 75
   - title: Digital Signage
     items:
       - name: PADS4
         value: 85
       - name: easescreen
-        value: 50
-      - name: screenPLAN
         value: 30
+      - name: Screenimage
+        value: 50
 ---
 
 # Meine Erfahrungen
