@@ -91,7 +91,7 @@ const HomePageTemplate = ({ partners, appsImage, chatbot, partyplaner }) => (
           <h2>Weitere Angebote</h2>
           <ul>
             <li>
-              <Link to="/digitalisierung-unternehmen-corona">
+              <Link to="/digitalisierung-unternehmen-corona/">
                 <h3>Unternehmen digitalisieren</h3>
               </Link>
             </li>
@@ -101,22 +101,22 @@ const HomePageTemplate = ({ partners, appsImage, chatbot, partyplaner }) => (
               </Link>
             </li>
             <li>
-              <Link to="/unterstuetzung">
+              <Link to="/unterstuetzung/">
                 <h3>Erstklassige Unterstützung</h3>
               </Link>
             </li>
             <li>
-              <Link to="/einsatzplanung">
+              <Link to="/einsatzplanung/">
                 <h3>Einsatzplanung für den Gebäudeunterhalt</h3>
               </Link>
             </li>
             <li>
-              <Link to="/future-hack-digitalisierung-gemeinsam-anpacken">
+              <Link to="/future-hack-digitalisierung-gemeinsam-anpacken/">
                 <h3>Future Hack - Digitalisierung gemeinsam anpacken</h3>
               </Link>
             </li>
             <li>
-              <Link to="/weiterentwicklung-apps-produkte">
+              <Link to="/weiterentwicklung-apps-produkte/">
                 <h3>Weiterentwicklung von Apps und Produkten</h3>
               </Link>
             </li>
@@ -150,7 +150,7 @@ const HomePageTemplate = ({ partners, appsImage, chatbot, partyplaner }) => (
           <PartnerImage>
             {partners.edges.map(({ node }) => {
               return (
-                <Link key={node.id} to={node.frontmatter.slug}>
+                <Link key={node.id} to={`${node.frontmatter.slug}/`}>
                   <GatsbyImage
                     image={
                       node.frontmatter.logo.childImageSharp.gatsbyImageData

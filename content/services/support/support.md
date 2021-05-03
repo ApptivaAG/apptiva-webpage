@@ -19,9 +19,9 @@ description: 'Wir unterstützen Sie mit Brainpower und Wissen bei Ihrem Vorhaben
 
 ## Aktuelle Angebote
 
-- ### [Persona Workshop](/persona-workshop)
-- ### [Usability Audit](/usability-audit)
-- ### [Architektur Review](/architektur-review)
+- ### [Persona Workshop](/persona-workshop/)
+- ### [Usability Audit](/usability-audit/)
+- ### [Architektur Review](/architektur-review/)
+- ### [User Centered Design-Workshop](/user-centered-design/)
 - ### Innovations Workshop
 - ### Softwarekonzepte mit hoher Usability
-- ### User Centered Design-Workshop

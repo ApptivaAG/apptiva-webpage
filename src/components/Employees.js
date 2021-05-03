@@ -84,7 +84,7 @@ const Employees = () => {
             const { name, claim, slug, preview } = edge.node.frontmatter
             return (
               <Employee key={edge.node.id}>
-                <LinkStyled to={slug}>
+                <LinkStyled to={`${slug}/`}>
                   <Avatar
                     image={preview.childImageSharp.gatsbyImageData}
                     alt={name}

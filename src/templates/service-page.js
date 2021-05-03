@@ -16,9 +16,7 @@ import {
   DeemphasizedTitle,
 } from '../style'
 import SEO from '../components/SEO'
-import { stripHTML } from '../util'
 import Layout from '../components/Layout'
-import config from '../config'
 import ContactForm from '../components/ContactForm'
 
 const HeadArea = styled.header``

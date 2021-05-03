@@ -32,7 +32,7 @@ Um eine Lean Enterprise App entwickeln zu können, müssen wir die Tätigkeiten 
 
 Um dies herauszufinden, beobachten wir den Benutzer während seiner Arbeit und führen Interviews mit den Stakeholder durch. Wir wollen die Wirkung der Arbeit verstehen. Dafür eignet sich ein Contextual Inquiry wie es Whiteside, Bennet und Holtzblatt entwickelt haben.
 
-[Ansehen](/telefonverkauf-showcase)
+[Ansehen](/telefonverkauf-showcase/)
 
 </div>
 </div>
