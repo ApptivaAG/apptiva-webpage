@@ -65,7 +65,7 @@
   },
   "content/blog/slope-track/slope-track.md": {
     "created": 1574428481,
-    "modified": 1588617481
+    "modified": 1619441797
   },
   "content/blog/softwareentwicklung-unter-nixos/blogpost.md": {
     "created": 1585074148,
@@ -85,7 +85,7 @@
   },
   "content/data/testimonials/andres-quandt.md": {
     "created": 1587986854,
-    "modified": 1587986854
+    "modified": 1616577584
   },
   "content/data/testimonials/brigit-fischer.md": {
     "created": 1525003220,
@@ -125,7 +125,7 @@
   },
   "content/services/chatbots/chatbots.md": {
     "created": 1539584636,
-    "modified": 1592236783
+    "modified": 1618235932
   },
   "content/services/dashboard-notaufnahme/dashboard-notaufnahme.md": {
     "created": 1525107867,
@@ -149,15 +149,15 @@
   },
   "content/services/guest-counter/guestcounter.md": {
     "created": 1589369061,
-    "modified": 1590582952
+    "modified": 1619507818
   },
   "content/services/impressum/impressum.md": {
     "created": 1521817718,
-    "modified": 1560273363
+    "modified": 1619449569
   },
   "content/services/individuelle-entwicklung/individuelle-entwicklung.md": {
     "created": 1525015293,
-    "modified": 1599806781
+    "modified": 1620057682
   },
   "content/services/mobile-apps/mobile-apps.md": {
     "created": 1584719542,
@@ -173,7 +173,7 @@
   },
   "content/services/support/support.md": {
     "created": 1525709929,
-    "modified": 1584719542
+    "modified": 1620057682
   },
   "content/services/telefonverkauf-showcase/telefonverkauf-showcase.md": {
     "created": 1526117197,
@@ -181,7 +181,7 @@
   },
   "content/services/unsere-kompetenzen/unsere-kompetenzen.md": {
     "created": 1525875060,
-    "modified": 1560273363
+    "modified": 1619441906
   },
   "content/services/vorgehensweise/vorgehensweise.md": {
     "created": 1525884383,
@@ -197,7 +197,7 @@
   },
   "content/services/zusammenarbeit/zusammenarbeit.md": {
     "created": 1525724147,
-    "modified": 1560273363
+    "modified": 1619447716
   },
   "content/blog/2015-07-08-der-digitale-wandel.md": {
     "created": 1521817699,
@@ -309,11 +309,11 @@
   },
   "content/data/employees/philip-schoenholzer/philip-schoenholzer.md": {
     "created": 1524669899,
-    "modified": 1588616096
+    "modified": 1617028459
   },
   "content/data/employees/renato-wasescha/renato-wasescha.md": {
     "created": 1557765906,
-    "modified": 1596716188
+    "modified": 1619785764
   },
   "content/data/employees/roman-schaller/roman-schaller.md": {
     "created": 1524669899,
@@ -329,7 +329,7 @@
   },
   "content/data/partners/swisscom/swisscom.md": {
     "created": 1578928504,
-    "modified": 1587392472
+    "modified": 1619449569
   },
   "content/blog/2020-11-erste-schritte-in-der-informatik/erste-schritte-in-der-informatik.md": {
     "created": 1606387418,
@@ -349,6 +349,18 @@
   },
   "content/services/weiterentwicklung-apps-produkte/weiterentwicklung-apps-produkte.md": {
     "created": 1616503118,
-    "modified": 1616503491
+    "modified": 1616568254
+  },
+  "content/blog/fleet-assistant/fleet-assistant.md": {
+    "created": 1617914546,
+    "modified": 1618556684
+  },
+  "content/data/testimonials/simon-infanger.md": {
+    "created": 1618231184,
+    "modified": 1618231184
+  },
+  "content/services/user-centered-design/user-centered-design.md": {
+    "created": 1525884383,
+    "modified": 1620057682
   }
 }
