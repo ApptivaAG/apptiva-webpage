@@ -130,5 +130,13 @@ module.exports = {
         timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
       },
     },
+    {
+      resolve: '@sentry/gatsby',
+      options: {
+        dsn:
+          'https://007bbea8c3d841a08706c5f0cf775835@o419688.ingest.sentry.io/5747330',
+        sampleRate: 0.7,
+      },
+    },
   ],
 }
