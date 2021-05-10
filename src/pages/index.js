@@ -150,7 +150,7 @@ const HomePageTemplate = ({ partners, appsImage, chatbot, partyplaner }) => (
           <PartnerImage>
             {partners.edges.map(({ node }) => {
               return (
-                <Link key={node.id} to={`${node.frontmatter.slug}/`}>
+                <Link key={node.id} to={`/${node.frontmatter.slug}/`}>
                   <GatsbyImage
                     image={
                       node.frontmatter.logo.childImageSharp.gatsbyImageData

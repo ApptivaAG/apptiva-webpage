@@ -58,7 +58,7 @@ const BlogPreview = () => {
         <ColList>
           {posts.map(({ node: post }) => (
             <ListItem key={post.id} full align="left">
-              <Link to={post.frontmatter.slug}>
+              <Link to={`/${post.frontmatter.slug}/`}>
                 <ImgStyled
                   style={{ width: '100%' }}
                   image={post.frontmatter.image.childImageSharp.gatsbyImageData}
