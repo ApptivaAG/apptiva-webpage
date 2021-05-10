@@ -44,6 +44,7 @@ const initialTools = [
     description:
       'Datenschutz, Datensicherheit, Meilensteine, technische Vorgaben, ... ',
   },
+  { name: 'Testkonzept erstellen', size: 'medium' },
 ]
 
 const implementationTools = [
@@ -55,6 +56,7 @@ const implementationTools = [
   { name: 'Anforderungen umsetzen', size: 'small' },
   { name: 'Tests durch den Kunden', size: 'medium' },
   { name: 'Lösungsinhalte erfassen', size: 'small' },
+  { name: 'Testautomatisierung aufsetzen', size: 'medium' },
   { name: 'Hallway-Tests', size: 'medium', link: null },
   { name: 'Anwender-Dokumentation', size: 'large' },
   { name: 'System für lauffähige Lösung', size: 'small' },
