@@ -11,7 +11,7 @@ callToAction: Machen Sie jetzt den Schritt in eine nachhaltige Zukunft
 introduction: |
   ## In Zeiten von Corona schnell und nachhaltig digitalisieren
 
-  Die Coronakrise zeigt Ihnen deutlich auf, wo der Schuh bezüglich Digitalisierung drückt. Ihre Kunden erreichen Sie nicht und Ihre Lieferanten können Sie nicht treffen. Ihre Mitarbeiter arbeiten von Zuhause. Ihre Tools und Prozesse sind unzureichend auf die neue Situation ausgelegt und müssen dringend ein Update erhalten. Digitalisierungprojekte haben Sie bis anhin eher auf die lange Bank geschoben. Aber nun möchten Sie Ihr Unternehmen fit für [Covid-19](/coronavirus) und somit fit für die Zukunft machen.
+  Die Coronakrise zeigt Ihnen deutlich auf, wo der Schuh bezüglich Digitalisierung drückt. Ihre Kunden erreichen Sie nicht und Ihre Lieferanten können Sie nicht treffen. Ihre Mitarbeiter arbeiten von Zuhause. Ihre Tools und Prozesse sind unzureichend auf die neue Situation ausgelegt und müssen dringend ein Update erhalten. Digitalisierungprojekte haben Sie bis anhin eher auf die lange Bank geschoben. Aber nun möchten Sie Ihr Unternehmen fit für [Covid-19](/coronavirus/) und somit fit für die Zukunft machen.
 
   **Gemeinsam digitalisieren wir Ihr Unternehmen; schnell und nachhaltig.**
 
@@ -85,7 +85,7 @@ references:
       - title: Globus Innovationsprojekt
         image: globus.png
         text: Das Innovationsprojekt «Trial Store» hatte zum Ziel, neue Geschäftsmodelle zu untersuchen.
-        link: /trial-store
+        link: /trial-store/
       - title: Schürch Party Planer
         image: partyplaner.png
         text: Der Party Planer hat Getränke-Bestellungen bei Schürch-Getränke stark vereinfacht.
@@ -111,7 +111,7 @@ Unser Vorgehen sieht dabei folgendermassen aus:
 
 3. ### Konzeption (1-3 Tage)
 
-   Mit den gewonnen Erkenntnissen erstellen wir einen groben Umsetzungsplan ([Storymap](/mehr-ueberblick-mit-storymap)) und beschreiben mögliche Lösungen.
+   Mit den gewonnen Erkenntnissen erstellen wir einen groben Umsetzungsplan ([Storymap](/mehr-ueberblick-mit-storymap/)) und beschreiben mögliche Lösungen.
 
 4. ### Kickoff (2h)
 

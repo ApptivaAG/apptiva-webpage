@@ -47,7 +47,7 @@ references:
       - title: Globus Innovationsprojekt
         image: future-hack-globus.png
         text: Das Innovationsprojekt «Trial Store» hatte zum Ziel, neue Geschäftsmodelle zu untersuchen.
-        link: /trial-store
+        link: /trial-store/
       - title: Schürch Party Planer
         image: future-hack-partyplaner.png
         text: Der Party Planer hat Getränke-Bestellungen bei Schürch-Getränke stark vereinfacht.

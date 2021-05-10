@@ -18,7 +18,7 @@ Die hervorragende Auftragslage des Jahres 2018 geht für die Apptiva in diesem J
 
 ## Renato
 
-[Renato](/renato-wasescha) ist Software-Entwickler und nun bereits ein paar Wochen bei uns.
+[Renato](/renato-wasescha/) ist Software-Entwickler und nun bereits ein paar Wochen bei uns.
 
 Renato unterstützt uns mit Node.js im Backend und HTML, CSS und JS im Frontend. Im Moment hilft er uns bei einer React-Native-App, zu welcher wir zu einem späteren Zeitpunkt mehr erzählen dürfen. Renato kommt ursprünglich aus dem Bündnerland. Entsprechend macht er uns regelmässig mit seinen Wochenend-Erlebnissen in Graubünden eifersüchtig. Wir haben ihn als offenen Kollegen kennengelernt, der positive Stimmung verbreitet.
 
@@ -27,7 +27,7 @@ Renato unterstützt uns mit Node.js im Backend und HTML, CSS und JS im Frontend.
 [[right]]
 |![Patrik Stutz](../../data/employees/patrik-stutz/patrik-stutz.jpg)
 
-[Patrik](/patrik-stutz) ist ebenfalls Software-Entwickler und hat eben bei uns zu arbeiten begonnen.
+[Patrik](/patrik-stutz/) ist ebenfalls Software-Entwickler und hat eben bei uns zu arbeiten begonnen.
 
 Patrik unterstützt uns mit Java/Node.js im Backend und React im Frontend. Er hilft uns als erstes bei einem Webshop-Backend für einen grossen deutschen B2B-Händler. Patrik hat uns mit seinem Tüftler-Enthusiasmus und grossem Interesse an moderner Software-Entwicklung überzeugt. Bereits in seiner ersten Woche hat er uns interessante Dinge an seiner Entwicklungsumgebung zeigen können. Patrik hat eine echt freundliche Art, die die Zusammenarbeit zur Freude macht.
 
