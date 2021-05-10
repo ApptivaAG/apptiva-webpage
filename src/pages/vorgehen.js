@@ -59,7 +59,7 @@ const implementationTools = [
   {
     name: 'Testautomatisierung',
     size: 'medium',
-    description: 'Hauptprozesse mit Integrationstests abdecken',
+    description: 'Hauptprozesse mit Integrationstests abdecken, Mail-Mock',
   },
   { name: 'Hallway-Tests', size: 'medium', link: null },
   { name: 'Anwender-Dokumentation', size: 'large' },
