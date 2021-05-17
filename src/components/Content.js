@@ -33,6 +33,7 @@ const Markdown = styled.div`
 
   table {
     display: block;
+    font-size: 0.8em;
     overflow-x: auto;
     white-space: nowrap;
     border-collapse: collapse;
