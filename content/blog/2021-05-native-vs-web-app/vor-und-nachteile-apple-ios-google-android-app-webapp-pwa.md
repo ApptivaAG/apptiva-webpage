@@ -25,7 +25,7 @@ Wird von einer Web-App gesprochen, so heisst dies, dass die App mit Web-Technolo
 
 ### PWA
 
-Eine PWA ist eine spezielle Web App. PWA steht für Progressive Web App. Damit ist gemeint, dass die Web App spezielle Instruktionen für Google und Apple haben, damit die App einer nativen App ähnlicher sieht. Eine PWA lässt sich dadurch einfacher auf einem mobilen Gerät installieren als eine Web App. Ansonsten gilt dasselbe wie für eine Web App. (Siehe auch https://apptiva.ch/pwa-apps/)
+Eine PWA ist eine spezielle Web App. PWA steht für Progressive Web App. Damit ist gemeint, dass die Web App spezielle Instruktionen für Google und Apple haben, damit die App einer nativen App ähnlicher sieht. Eine PWA lässt sich dadurch einfacher auf einem mobilen Gerät installieren als eine Web App. Ansonsten gilt dasselbe wie für eine Web App. (Siehe auch [PWA Apps](/pwa-apps/))
 
 ## Unterschiede von nativen und Web Apps
 
@@ -43,7 +43,7 @@ Native und Web Apps haben vieles gemeinsam, aber doch einige klare Unterschiede.
 | Eintrag im Store        | Automatisch mit Eintrag-Inhalt      | Nur mit zusätzlichem Aufwand      |
 | Monetarisierung der App | Über den Store + Anteil an Store    | Aufwändiger, aber flexibler       |
 | Review                  | Review durch Apple/Google zwingend  | Kein Review nötig                 |
-| Installation            | Fast immer nötig                    | Keine Installation                |
+| Installation            | Fast immer nötig                    | Keine Installation nötig          |
 | Update                  | Über den Store                      | Durch Öffnen der Web App          |
 | Deinstallation          | Zwingend über das Icon der App      | Nicht nötig                       |
 | Updates verfügbar       | Tage / Wochen nach dem Einreichen   | Sofort                            |
@@ -57,7 +57,7 @@ Kosten, Entwicklungsdauer und Aufwand hängen alle zusammen. Der Aufwand für ei
 
 Bei den Features gibt es einige Dinge, die nur mit einer nativen App möglich sind. Dies sind bei iOS die Notifikationen. Das ist nur bei einer nativen iOS-App möglich. Zudem ist es bei Android wie auch iOS nicht möglich, eine Web App im Hintergrund arbeiten zu lassen, während der Bildschirm ausgeschaltet ist oder eine andere App im Vordergrund ist. Falls dies möglich sein soll, muss zwingend eine native App bevorzugt werden.
 
-Ein grosser Vorteil von nativen, installierten Apps aus den Stores ist zudem, dass die App jederzeit über das App-Icon auf dem Startbildschirm aufgerufen werden kann. Dies ist bei Web Apps nur mit umständlicher Arbeit der Anwender möglich.
+Ein grosser Vorteil von nativen, installierten Apps aus den Stores ist zudem, dass die App jederzeit über das App-Icon auf dem Startbildschirm aufgerufen werden kann. Bei Web Apps müssen die Anwender selber daran denken die App auf den Startbildschirm hinzufügen, falls sie überhaupt wissen, wie dies möglich ist.
 
 ### Stores von Apple und Google
 
