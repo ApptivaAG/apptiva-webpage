@@ -136,6 +136,7 @@ module.exports = {
         dsn:
           'https://007bbea8c3d841a08706c5f0cf775835@o419688.ingest.sentry.io/5747330',
         sampleRate: 0.7,
+        ignoreErrors: ['ChunkLoadError'],
       },
     },
   ],
