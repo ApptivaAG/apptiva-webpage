@@ -164,7 +164,7 @@ export const Col = styled.div`
 
 export const Card = styled.div`
   padding: 1em;
-  background-color: #eee;
+  background-color: ${(props) => props.theme.color.lightBg};
   border-radius: 0.2em;
 
   h3,
