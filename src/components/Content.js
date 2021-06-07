@@ -64,8 +64,8 @@ const Markdown = styled.div`
   .full-width {
     position: relative;
     width: 100vw;
-    left: 49.4%;
-    right: 50%;
+    left: 49%;
+    right: 49%;
     margin-left: -50vw;
     margin-right: -50vw;
   }

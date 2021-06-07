@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { StaticImage } from 'gatsby-plugin-image'
 
 import Layout from '../components/Layout'
-import { Container, Section, Button } from '../style'
+import { Container, Section, Button, MainTitle } from '../style'
 import ContactForm from '../components/ContactForm'
 import Seo from '../components/SEO'
 import { Helmet } from 'react-helmet'
@@ -47,7 +47,7 @@ const Kontakt = () => {
       <Seo metaData={metadata} />
       <Section>
         <Container>
-          <h1>Kontakt</h1>
+          <MainTitle>Kontakt</MainTitle>
           <p>{metadata.description}</p>
           <Grid>
             <div>

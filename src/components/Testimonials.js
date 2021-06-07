@@ -2,15 +2,6 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
-import {
-  Section as SectionDefault,
-  Container,
-  DeemphasizedTitle,
-} from '../style'
-
-const Section = styled(SectionDefault)`
-  padding-top: 4em;
-`
 
 const TestimonialStyle = styled.li`
   box-sizing: border-box;
@@ -103,32 +94,30 @@ const query = graphql`
 const Testimonials = () => {
   const { testimonials } = useStaticQuery(query)
   return (
-    <Section dark>
-      <Container>
-        <DeemphasizedTitle>Testimonials</DeemphasizedTitle>
-        <TestimonialsStyle>
-          {testimonials.edges.map((edge) => {
-            const {
-              name,
-              position,
-              statement,
-              avatar,
-              company,
-            } = edge.node.frontmatter
-            return (
-              <Testimonial
-                key={edge.node.id}
-                name={name}
-                position={position}
-                statement={statement}
-                avatar={avatar}
-                company={company}
-              />
-            )
-          })}
-        </TestimonialsStyle>
-      </Container>
-    </Section>
+    <>
+      <h2>Testimonials</h2>
+      <TestimonialsStyle>
+        {testimonials.edges.map((edge) => {
+          const {
+            name,
+            position,
+            statement,
+            avatar,
+            company,
+          } = edge.node.frontmatter
+          return (
+            <Testimonial
+              key={edge.node.id}
+              name={name}
+              position={position}
+              statement={statement}
+              avatar={avatar}
+              company={company}
+            />
+          )
+        })}
+      </TestimonialsStyle>
+    </>
   )
 }
 

@@ -37,7 +37,6 @@ export const MainTitle = styled.h1`
   font-size: 2em;
   line-height: 1;
 
-  text-align: center;
   @media (min-width: 640px) {
     font-size: 4em;
   }
@@ -46,7 +45,6 @@ export const MainTitle = styled.h1`
 export const Title = styled.h2`
   font-size: 2.8em;
 
-  text-align: center;
   @media (min-width: 640px) {
     font-size: 4em;
   }
@@ -148,74 +146,49 @@ export const ImgStyled = styled(GatsbyImage)`
   transition: transform 0.3s;
 `
 
-export const ColList = styled.ul`
-  box-sizing: border-box;
+export const Row = styled.div`
   display: flex;
+  gap: 1em;
   flex-wrap: wrap;
-  margin: 0 -0.5em 2em;
-  padding: 0;
-  list-style: none;
 `
 
-export const ListItem = styled.li`
+export const Col = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 1em;
   flex: 1 1 12rem;
-  margin: 0 0.5em 1em;
-  border: 1px solid lightgray;
-  border-radius: 0.2em;
-  background-color: white;
-  text-align: ${(props) => (props.align ? props.align : 'center')};
-
-  a {
-    flex: 1 1 auto;
-    padding: ${(props) => (props.full ? 0 : '1em')};
-    border-radius: 0.2em;
-    color: ${(props) => props.theme.color.text};
-    overflow: hidden;
-
-    p {
-      font-weight: 200;
-    }
-
-    svg {
-      transition: transform 0.3s;
-    }
-
-    &:hover {
-      color: ${(props) => props.theme.color.bg};
-      background-color: ${(props) => props.theme.color.primary};
-
-      ${ImgStyled}, svg {
-        transform: scale(1.06);
-        color: black;
-      }
-    }
-  }
-
-  h2,
-  h3,
-  h4 {
-    margin: 0.1em ${(props) => (props.full ? '1rem' : 0)};
-  }
   h3 {
-    font-size: 1em;
+    margin: 0;
   }
-  h4 {
-    font-size: 0.8em;
-    font-weight: 300;
-  }
+`
 
-  ${ImgStyled} {
-    margin-top: ${(props) => (props.full ? 0 : '1rem')};
-    margin-bottom: ${(props) => (props.full ? '.6rem' : 0)};
-    margin-left: auto;
-    margin-right: auto;
-  }
+export const Card = styled.div`
+  padding: 1em;
+  background-color: #eee;
+  border-radius: 0.2em;
 
+  h3,
   p {
-    line-height: 1.2;
-    margin: 1em ${(props) => (props.full ? '1rem' : 0)};
+    margin-top: 0.1em;
+    margin-bottom: 0.2em;
+  }
+  p {
+    margin-bottom: 0.5em;
+    font-size: 0.8em;
+    font-weight: 200;
+  }
+  svg {
+    transition: transform 0.3s;
+  }
+
+  &:hover {
+    color: ${(props) => props.theme.color.bg};
+    background-color: ${(props) => props.theme.color.primary};
+
+    ${ImgStyled}, svg {
+      transform: scale(1.06);
+      color: black;
+    }
   }
 `
 
@@ -232,6 +205,16 @@ export const theme = {
 }
 
 export const GlobalStyle = createGlobalStyle`
+  :root {
+    box-sizing: border-box;
+  }
+
+  *:not(img):not(video):not(svg),
+  *:after,
+  *:before {
+    box-sizing: inherit;
+  }
+
   html {
     font-size: 20px;
     font-family: Gentona, sans-serif;
