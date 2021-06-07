@@ -4,12 +4,12 @@ import { Link, useStaticQuery, graphql } from 'gatsby'
 import {
   Section,
   Container,
-  ColList,
+  Row,
   ImgStyled,
-  ListItem,
+  Col,
   Centered,
   Button,
-  DeemphasizedTitle,
+  Card,
 } from '../style'
 import { truncate } from '../util'
 
@@ -30,10 +30,9 @@ const query = graphql`
             image {
               childImageSharp {
                 gatsbyImageData(
-                  height: 150
-                  width: 300
+                  height: 140
                   transformOptions: { cropFocus: ENTROPY }
-                  layout: FIXED
+                  layout: CONSTRAINED
                 )
               }
             }
@@ -53,32 +52,40 @@ const BlogPreview = () => {
   return (
     <Section id="blog">
       <Container>
-        <DeemphasizedTitle>Blog</DeemphasizedTitle>
+        <h2>Blog</h2>
 
-        <ColList>
+        <Row css="margin-bottom: 2em;">
           {posts.map(({ node: post }) => (
-            <ListItem key={post.id} full align="left">
-              <Link to={`/${post.frontmatter.slug}/`}>
-                <ImgStyled
-                  style={{ width: '100%' }}
-                  image={post.frontmatter.image.childImageSharp.gatsbyImageData}
-                  alt="Post image"
-                />
-                <h3
-                  css="display: block;"
-                  // eslint-disable-next-line react/no-danger
-                  dangerouslySetInnerHTML={{ __html: post.frontmatter.title }}
-                />
-                <h4>{post.frontmatter.date}</h4>
-                <p>
-                  {post.frontmatter.description
-                    ? truncate(post.frontmatter.description, 140)
-                    : post.excerpt}
-                </p>
+            <Col key={post.id} full align="left">
+              <Link
+                to={`/${post.frontmatter.slug}/`}
+                css="display: block; height: 100%;"
+              >
+                <Card css="display: flex; flex-direction: column; height: 100%;">
+                  <h3
+                    // eslint-disable-next-line react/no-danger
+                    dangerouslySetInnerHTML={{ __html: post.frontmatter.title }}
+                  />
+                  <p>
+                    {post.frontmatter.description
+                      ? truncate(post.frontmatter.description, 140)
+                      : post.excerpt}
+                  </p>
+                  <div css="flex: 1;"></div>
+                  <ImgStyled
+                    image={
+                      post.frontmatter.image.childImageSharp.gatsbyImageData
+                    }
+                    alt="Post image"
+                  />
+                  <p css="margin-top: 0.5em !important;">
+                    {post.frontmatter.date}
+                  </p>
+                </Card>
               </Link>
-            </ListItem>
+            </Col>
           ))}
-        </ColList>
+        </Row>
         <Centered>
           <Button to="/blog/">Zum Apptiva Blog</Button>
         </Centered>

@@ -1,11 +1,12 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { GatsbyImage, StaticImage } from 'gatsby-plugin-image'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 
 import logoSlogan from '../img/logo-slogan.svg'
 import svgData from '../img/collage.svg'
 import { Button, Container as CntnrDefault } from '../style'
+import Customers from './Customers'
 
 const Container = styled(CntnrDefault)`
   box-sizing: border-box;
@@ -56,60 +57,6 @@ const Teaser = styled.h2`
 const Fat = styled.span`
   color: black;
 `
-const ArrowContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  flex: 1;
-  @media (max-width: 380px) {
-    display: none;
-  }
-`
-const Arrow = styled.a`
-  margin-bottom: 1.9rem;
-  padding: 0.5em 0.7em;
-  border-radius: 50%;
-  font-weight: 800;
-  color: white;
-  background-color: ${(props) => props.theme.color.primary};
-  transition: transform 30ms ease-out;
-  transform: translate3d(0, 0, 0);
-  overflow: hidden;
-
-  &:hover {
-    transform: translate3d(0, -1px, 0);
-  }
-
-  &:active {
-    transform: translateY(1px);
-  }
-`
-const Slide = keyframes`
-  from {
-    transform: translate3d(0,0,0);
-    opacity: 1;
-  }
-  53% {
-    opacity: 0;
-  }
-
-  60% {
-    opacity: 0;
-    transform: translate3d(0,2rem,0);
-  }
-
-  to {
-    opacity: 0;
-    transform: translate3d(0,2rem,0);
-    
-  }
-`
-const AnimatedArrow = styled.svg`
-  width: 1em;
-  height: 1em;
-  animation: ${Slide} 2s cubic-bezier(0.87, -0.24, 0.77, 0.34) infinite;
-`
 
 const Info = styled.div`
   padding-top: 0.5em;
@@ -145,7 +92,6 @@ const Hero = () => {
             css={`
               flex: 1 0 10em;
               font-size: 1em;
-              margin: 2em 0;
               @media (max-width: 599px) {
                 text-align: center;
               }
@@ -161,7 +107,7 @@ const Hero = () => {
         </Columns>
       </Container>
 
-      <Columns css="margin-right: 10%;">
+      <Columns css="@media (min-width: 640px) {margin-right: 10%;}">
         <ColHero>
           <GatsbyImage
             style={{ background: `url("${svgData}")` }}
@@ -179,18 +125,9 @@ const Hero = () => {
         </ColTeaser>
       </Columns>
 
-      <ArrowContainer>
-        <Arrow href="/#dienstleistungen" title="Zu den Dienstleistungen">
-          <AnimatedArrow viewBox="0 0 16 10">
-            <path
-              d="M 2 2 L 8 8 L 14 2"
-              fill="transparent"
-              stroke="white"
-              strokeWidth="2"
-            />
-          </AnimatedArrow>
-        </Arrow>
-      </ArrowContainer>
+      <div css="flex: 1; margin-top: 3em;"></div>
+      <Customers />
+
       <Info>
         <Container>
           <div

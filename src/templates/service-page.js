@@ -7,7 +7,6 @@ import useCollapse from 'react-collapsed'
 
 import Content, { HTMLContent } from '../components/Content'
 import {
-  Centered,
   Container,
   Section,
   Icon,
@@ -25,7 +24,6 @@ const Subtitle = styled.p`
   font-size: 1.2;
   font-weight: 600;
   line-height: 1;
-  text-align: center;
   @media (min-width: 640px) {
     font-size: 1.4em;
   }
@@ -57,7 +55,6 @@ const icons = (icon) => `fas fa-${icon}`
 
 const ListTitle = styled.header`
   margin-bottom: 3em;
-  text-align: center;
 `
 const ItemList = styled.ul`
   display: flex;
@@ -94,10 +91,6 @@ const Header = ({ title, image, subtitle }) => (
         alt={title}
         css={`
           margin: 2rem auto 0;
-          width: 90%;
-          @media (min-width: 640px) {
-            width: 80%;
-          }
         `}
       />
     )}
@@ -140,14 +133,8 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
       <SEO metaData={metaData} postImage={seoImage} />
       <Section>
         <Container>
-          <Centered>
-            <Header title={title} image={image} subtitle={subtitle} />
-          </Centered>
-          {!subtitle && description && (
-            <Centered>
-              <p>{description}</p>
-            </Centered>
-          )}
+          <Header title={title} image={image} subtitle={subtitle} />
+          {!subtitle && description && <p>{description}</p>}
         </Container>
       </Section>
       {introduction && (
@@ -176,28 +163,26 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
       {solutions && (
         <Section>
           <Container>
-            <Centered>
-              <h2>Lösungen</h2>
-              <Cols>
-                {solutions.map((solution) => (
-                  <div key={solution.title}>
-                    <h3>{solution.title}</h3>
-                    <a
-                      href={getSrc(
-                        solution.image.childImageSharp.gatsbyImageData
-                      )}
-                    >
-                      <GatsbyImage
-                        image={solution.image.childImageSharp.gatsbyImageData}
-                        className="lightbox"
-                        alt={solution.title}
-                      />
-                    </a>
-                    <p>{solution.text}</p>
-                  </div>
-                ))}
-              </Cols>
-            </Centered>
+            <h2>Lösungen</h2>
+            <Cols>
+              {solutions.map((solution) => (
+                <div key={solution.title}>
+                  <h3>{solution.title}</h3>
+                  <a
+                    href={getSrc(
+                      solution.image.childImageSharp.gatsbyImageData
+                    )}
+                  >
+                    <GatsbyImage
+                      image={solution.image.childImageSharp.gatsbyImageData}
+                      className="lightbox"
+                      alt={solution.title}
+                    />
+                  </a>
+                  <p>{solution.text}</p>
+                </div>
+              ))}
+            </Cols>
           </Container>
         </Section>
       )}
@@ -233,45 +218,39 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
         references.map((ref) => (
           <Section key={ref.title} dark>
             <Container>
-              <Centered>
-                <h2>{ref.title}</h2>
-                <p>{ref.description}</p>
-                <Cols>
-                  {ref.referenceList.map((reference) => (
-                    <div key={reference.title}>
-                      <h3>{reference.title}</h3>
-                      <Link to={reference.link}>
-                        <GatsbyImage
-                          image={
-                            reference.image.childImageSharp.gatsbyImageData
-                          }
-                          className="lightbox"
-                          alt={reference.title}
-                        />
-                      </Link>
-                      <p>{reference.text}</p>
-                    </div>
-                  ))}
-                </Cols>
-              </Centered>
+              <h2>{ref.title}</h2>
+              <p>{ref.description}</p>
+              <Cols>
+                {ref.referenceList.map((reference) => (
+                  <div key={reference.title}>
+                    <h3>{reference.title}</h3>
+                    <Link to={reference.link}>
+                      <GatsbyImage
+                        image={reference.image.childImageSharp.gatsbyImageData}
+                        className="lightbox"
+                        alt={reference.title}
+                      />
+                    </Link>
+                    <p>{reference.text}</p>
+                  </div>
+                ))}
+              </Cols>
             </Container>
           </Section>
         ))}
       {specs && (
         <Section dark>
           <Container>
-            <Centered>
-              <h2>{specs.title}</h2>
-              <Cols>
-                {specs.specItems.map((spec) => (
-                  <div key={spec.title}>
-                    <h3>{spec.title}</h3>
-                    {/* eslint-disable-next-line react/no-danger */}
-                    <p>{spec.text}</p>
-                  </div>
-                ))}
-              </Cols>
-            </Centered>
+            <h2>{specs.title}</h2>
+            <Cols>
+              {specs.specItems.map((spec) => (
+                <div key={spec.title}>
+                  <h3>{spec.title}</h3>
+                  {/* eslint-disable-next-line react/no-danger */}
+                  <p>{spec.text}</p>
+                </div>
+              ))}
+            </Cols>
           </Container>
         </Section>
       )}
