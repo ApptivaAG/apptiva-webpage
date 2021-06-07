@@ -64,12 +64,7 @@ export const blogListPage = graphql`
             description
             image {
               childImageSharp {
-                gatsbyImageData(
-                  height: 150
-                  width: 300
-                  transformOptions: { cropFocus: ENTROPY }
-                  layout: FIXED
-                )
+                gatsbyImageData(width: 240, layout: CONSTRAINED)
               }
             }
           }
