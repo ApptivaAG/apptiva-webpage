@@ -64,7 +64,6 @@ export const Subtitle = styled.h4`
   text-transform: uppercase;
   margin-top: -1em;
   margin-bottom: 1em;
-  text-align: center;
 `
 
 export const sharedButtonStyle = css`
