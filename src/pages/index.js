@@ -110,20 +110,20 @@ const HomePageTemplate = ({ partners, appsImage, chatbot, partyplaner }) => (
           <Title>Produkte</Title>
           <Row>
             <Col>
-              <Link>
+              <a href="https://gastonsolution.com/">
                 <Card>
                   <h3>Gaston</h3>
                   <p>Digitale Speisekarte</p>
                 </Card>
-              </Link>
+              </a>
             </Col>
             <Col>
-              <Link>
+              <a href="https://bubblecms.io/">
                 <Card>
                   <h3>Bubble CMS</h3>
                   <p>Chatbotinhalte Verwalten</p>
                 </Card>
-              </Link>
+              </a>
             </Col>
             <Col>
               <Link to="/einsatzplanung/">
@@ -169,18 +169,14 @@ const HomePageTemplate = ({ partners, appsImage, chatbot, partyplaner }) => (
         <Container>
           <h2>Partner</h2>
           <PartnerImage>
-            {partners.edges.map(({ node }) => {
-              return (
-                <Link key={node.id} to={`/${node.frontmatter.slug}/`}>
-                  <GatsbyImage
-                    image={
-                      node.frontmatter.logo.childImageSharp.gatsbyImageData
-                    }
-                    alt={node.frontmatter.name}
-                  />
-                </Link>
-              )
-            })}
+            {partners.edges.map(({ node }) => (
+              <Link key={node.id} to={`/${node.frontmatter.slug}/`}>
+                <GatsbyImage
+                  image={node.frontmatter.logo.childImageSharp.gatsbyImageData}
+                  alt={node.frontmatter.name}
+                />
+              </Link>
+            ))}
           </PartnerImage>
         </Container>
       </Section>
@@ -191,16 +187,14 @@ const HomePageTemplate = ({ partners, appsImage, chatbot, partyplaner }) => (
   </Layout>
 )
 
-const HomePage = ({ data: { chatbot, partyplaner, appsImage, partners } }) => {
-  return (
-    <HomePageTemplate
-      chatbot={chatbot}
-      partyplaner={partyplaner}
-      appsImage={appsImage}
-      partners={partners}
-    />
-  )
-}
+const HomePage = ({ data: { chatbot, partyplaner, appsImage, partners } }) => (
+  <HomePageTemplate
+    chatbot={chatbot}
+    partyplaner={partyplaner}
+    appsImage={appsImage}
+    partners={partners}
+  />
+)
 
 export default HomePage
 
