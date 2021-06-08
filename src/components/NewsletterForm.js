@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 import { useForm } from 'react-hook-form'
 import { Button, Right } from '../style'
-import { Input } from '../components/ContactForm'
+import { Input } from './ContactForm'
 
 const NewsletterForm = () => {
   const { register, handleSubmit, errors, reset } = useForm()
@@ -34,6 +34,7 @@ const NewsletterForm = () => {
     <>
       <form name="newsletter" onSubmit={handleSubmit(onSubmit)}>
         <div>
+          {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
           <label htmlFor="email">Email</label>
           <Input
             type="email"
@@ -52,6 +53,7 @@ const NewsletterForm = () => {
           <Button type="submit">Newsletter abonnieren</Button>
         </Right>
       </form>
+      {/* eslint-disable-next-line react/no-danger */}
       {response && <p dangerouslySetInnerHTML={{ __html: response }} />}
     </>
   )

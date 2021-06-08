@@ -63,7 +63,7 @@ const Weihnachtsgruesse2020 = () => {
           <MainTitle>Weihnachts&shy;grüsse 2020</MainTitle>
         </Section>
         <Section css="font-size: 1.8em; padding: 0;">
-          <StaticImage src="../img/weihnachtsgruesse-2020.png"></StaticImage>
+          <StaticImage src="../img/weihnachtsgruesse-2020.png" />
 
           <p>
             <b>Herzlichen Dank</b> an alle, die in irgendeiner Form mit uns
@@ -92,6 +92,7 @@ const Weihnachtsgruesse2020 = () => {
             onSubmit={handleSubmit(onSubmit)}
           >
             <div>
+              {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
               <label htmlFor="name">Name</label>
               <Input
                 type="text"
@@ -107,13 +108,14 @@ const Weihnachtsgruesse2020 = () => {
               )}
             </div>
             <div>
+              {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
               <label htmlFor="greeting">Gruss</label>
               <Textarea
                 name="greeting"
                 id="greeting"
                 rows="10"
                 ref={register({ required: true })}
-              ></Textarea>
+              />
               {errors.greeting && (
                 <p css="color: red;">Bitte gib deinen Gruss ein.</p>
               )}

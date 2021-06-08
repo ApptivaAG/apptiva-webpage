@@ -39,21 +39,19 @@ const Statement = styled.p`
   font-style: italic;
   margin-top: 0.8em;
 `
-const Testimonial = ({ name, position, statement, avatar, company }) => {
-  return (
-    <TestimonialStyle>
-      <Person>
-        <Avatar image={avatar.childImageSharp.gatsbyImageData} alt={name} />
-        <div>
-          <Name>{name}</Name>
-          <Position>{position}</Position>
-          <Company>{company}</Company>
-        </div>
-      </Person>
-      <Statement>«{statement}» </Statement>
-    </TestimonialStyle>
-  )
-}
+const Testimonial = ({ name, position, statement, avatar, company }) => (
+  <TestimonialStyle>
+    <Person>
+      <Avatar image={avatar.childImageSharp.gatsbyImageData} alt={name} />
+      <div>
+        <Name>{name}</Name>
+        <Position>{position}</Position>
+        <Company>{company}</Company>
+      </div>
+    </Person>
+    <Statement>«{statement}» </Statement>
+  </TestimonialStyle>
+)
 
 const TestimonialsStyle = styled.ul`
   display: flex;

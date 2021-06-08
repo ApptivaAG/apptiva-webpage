@@ -196,20 +196,18 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
                 <p dangerouslySetInnerHTML={{ __html: group.description }} />
               </ListTitle>
               <ItemList>
-                {group.bulletList.map((item) => {
-                  return (
-                    <Item key={item.text}>
-                      <Icon>
-                        <i className={icons(item.icon)} />
-                      </Icon>
-                      <ItemContent>
-                        <h3>{item.title}</h3>
-                        {/* eslint-disable-next-line react/no-danger */}
-                        <p dangerouslySetInnerHTML={{ __html: item.text }} />
-                      </ItemContent>
-                    </Item>
-                  )
-                })}
+                {group.bulletList.map((item) => (
+                  <Item key={item.text}>
+                    <Icon>
+                      <i className={icons(item.icon)} />
+                    </Icon>
+                    <ItemContent>
+                      <h3>{item.title}</h3>
+                      {/* eslint-disable-next-line react/no-danger */}
+                      <p dangerouslySetInnerHTML={{ __html: item.text }} />
+                    </ItemContent>
+                  </Item>
+                ))}
               </ItemList>
             </Container>
           </Section>
