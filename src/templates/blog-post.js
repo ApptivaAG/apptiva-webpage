@@ -22,40 +22,36 @@ const Header = ({ title, image }) => (
   </HeadArea>
 )
 
-const Published = ({ author, date, updatedAt }) => {
-  return (
-    <Wrapper>
-      {/* eslint-disable-next-line react/jsx-one-expression-per-line  */}
-      Publiziert von <Author>{author.replace('-', ' ')}</Author> am{' '}
-      <Date>{date}</Date>
-      {updatedAt && (
-        <span>
-          {' '}
-          - Aktualisiert am: <Date>{updatedAt}</Date>
-        </span>
-      )}
-    </Wrapper>
-  )
-}
+const Published = ({ author, date, updatedAt }) => (
+  <Wrapper>
+    {/* eslint-disable-next-line react/jsx-one-expression-per-line  */}
+    Publiziert von <Author>{author.replace('-', ' ')}</Author> am{' '}
+    <Date>{date}</Date>
+    {updatedAt && (
+      <span>
+        {' '}
+        - Aktualisiert am: <Date>{updatedAt}</Date>
+      </span>
+    )}
+  </Wrapper>
+)
 
-const Navigation = ({ next, prev }) => {
-  return (
-    <LayoutNavigation>
-      {prev && (
-        <BlogLinkItem
-          frontmatter={prev.frontmatter}
-          excerpt={prev.frontmatter.description}
-        />
-      )}
-      {next && (
-        <BlogLinkItem
-          frontmatter={next.frontmatter}
-          excerpt={next.frontmatter.description}
-        />
-      )}
-    </LayoutNavigation>
-  )
-}
+const Navigation = ({ next, prev }) => (
+  <LayoutNavigation>
+    {prev && (
+      <BlogLinkItem
+        frontmatter={prev.frontmatter}
+        excerpt={prev.frontmatter.description}
+      />
+    )}
+    {next && (
+      <BlogLinkItem
+        frontmatter={next.frontmatter}
+        excerpt={next.frontmatter.description}
+      />
+    )}
+  </LayoutNavigation>
+)
 
 const BlogPostTemplate = ({
   content,

@@ -71,7 +71,7 @@ const BlogPreview = () => {
                       ? truncate(post.frontmatter.description, 140)
                       : post.excerpt}
                   </p>
-                  <div css="flex: 1;"></div>
+                  <div css="flex: 1;" />
                   <ImgStyled
                     image={
                       post.frontmatter.image.childImageSharp.gatsbyImageData

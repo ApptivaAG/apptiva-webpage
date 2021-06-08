@@ -61,7 +61,7 @@ const AboutUs = () => {
             </Buttonlist>
           </Container>
         </Section>
-        <StaticImage src="../img/buero.jpg" alt="Unser Büro"></StaticImage>
+        <StaticImage src="../img/buero.jpg" alt="Unser Büro" />
         <Employees />
         <CallToAction />
       </main>

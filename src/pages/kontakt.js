@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import { StaticImage } from 'gatsby-plugin-image'
+import { Helmet } from 'react-helmet'
 
 import Layout from '../components/Layout'
 import { Container, Section, Button, MainTitle } from '../style'
 import ContactForm from '../components/ContactForm'
 import Seo from '../components/SEO'
-import { Helmet } from 'react-helmet'
 import config from '../config'
 
 const Grid = styled.div`
@@ -76,7 +76,7 @@ const Kontakt = () => {
       <StaticImage
         src="../img/gebaeude.jpg"
         alt="Gebäude wo sich unser Büro befindet."
-      ></StaticImage>
+      />
       <Section dark id="anfahrt">
         <Container>
           <h2>Standort</h2>

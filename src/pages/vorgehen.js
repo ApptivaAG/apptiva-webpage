@@ -120,7 +120,7 @@ const Vorgehen = () => (
             <Grid>
               {orgTools.map((tool) => (
                 <React.Fragment key={tool.name}>
-                  <div></div>
+                  <div />
                   <div
                     css={
                       tool.name === 'Bezahlung' &&
@@ -159,7 +159,7 @@ const Vorgehen = () => (
             <Grid>
               {initialTools.map((tool) => (
                 <React.Fragment key={tool.name}>
-                  <div></div>
+                  <div />
                   <div>
                     <Tool size={tool.size} description={tool.description}>
                       {tool.name}
@@ -190,10 +190,10 @@ const Vorgehen = () => (
               Neue Features werden fortlaufend zur Verfügung gestellt.
             </p>
             <Grid>
-              {implementationTools.map((tool, i) => (
+              {implementationTools.map((tool) => (
                 <React.Fragment key={tool.name}>
-                  <div key={tool.name + '1'}></div>
-                  <div key={tool.name + '2'}>
+                  <div key={`${tool.name}1`} />
+                  <div key={`${tool.name}2`}>
                     <Tool size={tool.size} description={tool.description}>
                       {tool.name}
                     </Tool>
@@ -211,11 +211,11 @@ const Vorgehen = () => (
               height="500"
               src="https://www.youtube.com/embed/62l0zM_Xqxc"
               title="YouTube video player"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
               loading="lazy"
-            ></iframe>
+            />
           </Container>
         </Section>
         <Section>
@@ -233,21 +233,19 @@ const Vorgehen = () => (
           </Container>
         </Section>
       </article>
-      <CallToAction dark={true} />
+      <CallToAction dark />
     </main>
   </Layout>
 )
 
-const Tool = ({ children, size, description }) => {
-  return (
-    <ToolStyle size={size}>
-      <div>
-        {children} <br></br>
-        <small>{description}</small>
-      </div>
-    </ToolStyle>
-  )
-}
+const Tool = ({ children, size, description }) => (
+  <ToolStyle size={size}>
+    <div>
+      {children} <br />
+      <small>{description}</small>
+    </div>
+  </ToolStyle>
+)
 
 const Description = () => (
   <Legend>

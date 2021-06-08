@@ -125,7 +125,7 @@ const Hero = () => {
         </ColTeaser>
       </Columns>
 
-      <div css="flex: 1; margin-top: 3em;"></div>
+      <div css="flex: 1; margin-top: 3em;" />
       <Customers />
 
       <Info>
@@ -145,7 +145,7 @@ const Hero = () => {
               src="../img/mail9.png"
               width={100}
               alt="Apptiva Newsletter"
-            ></StaticImage>
+            />
             <p css="flex: 1 1 auto; font-weight: 600; margin: 0.5em  1em;">
               Bleiben Sie mit dem Apptiva Newsletter auf dem Laufenden. Jedes
               Quartal aktuelle Apptiva-News erhalten.

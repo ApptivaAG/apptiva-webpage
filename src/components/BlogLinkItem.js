@@ -20,38 +20,37 @@ const LinkItem = styled(LinkItemDefault)`
   }
 `
 
-const BlogLinkItem = ({ frontmatter, excerpt, className }) => {
-  return (
-    <LinkItem
-      to={`/${frontmatter.slug}/`}
-      key={frontmatter.slug}
-      align="left"
-      className={className}
-    >
-      <h2
-        css="grid-area: title"
-        dangerouslySetInnerHTML={{ __html: frontmatter.title }}
+const BlogLinkItem = ({ frontmatter, excerpt, className }) => (
+  <LinkItem
+    to={`/${frontmatter.slug}/`}
+    key={frontmatter.slug}
+    align="left"
+    className={className}
+  >
+    <h2
+      css="grid-area: title"
+      // eslint-disable-next-line react/no-danger
+      dangerouslySetInnerHTML={{ __html: frontmatter.title }}
+    />
+    {frontmatter.image && (
+      <GatsbyImage
+        image={frontmatter.image.childImageSharp.gatsbyImageData}
+        css="grid-area: image; justify-self: center;"
+        alt={frontmatter.title}
       />
-      {frontmatter.image && (
-        <GatsbyImage
-          image={frontmatter.image.childImageSharp.gatsbyImageData}
-          css="grid-area: image; justify-self: center;"
-          alt={frontmatter.title}
-        />
-      )}
-      <p css="grid-area: excerpt">{excerpt}</p>
-      <p
-        css={`
-          grid-area: date;
-          @media (max-width: 768px) {
-            justify-self: right;
-          }
-        `}
-      >
-        <small>{frontmatter.date}</small>
-      </p>
-    </LinkItem>
-  )
-}
+    )}
+    <p css="grid-area: excerpt">{excerpt}</p>
+    <p
+      css={`
+        grid-area: date;
+        @media (max-width: 768px) {
+          justify-self: right;
+        }
+      `}
+    >
+      <small>{frontmatter.date}</small>
+    </p>
+  </LinkItem>
+)
 
 export default BlogLinkItem
