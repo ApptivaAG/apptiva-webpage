@@ -62,10 +62,10 @@ const HomePageTemplate = ({ partners, appsImage, chatbot, partyplaner }) => (
               <Link to="/custom-dashboard/">
                 <h3>Individuelle Dashboards</h3>
               </Link>
-              <Link to="/custom-dashboard/">
+              <Link to="/webshops/">
                 <h3>Einzigartige Webshops</h3>
               </Link>
-              <Link to="/custom-dashboard/">
+              <Link to="/bargeldlos-bezahlen/">
                 <h3>Bargeldlose Zahlungslösungen</h3>
               </Link>
             </Col>
