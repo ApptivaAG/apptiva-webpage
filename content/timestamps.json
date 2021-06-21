@@ -25,7 +25,7 @@
   },
   "content/blog/die-apptiva-waechst/die-apptiva-waechst.md": {
     "created": 1559916009,
-    "modified": 1560442011
+    "modified": 1620660251
   },
   "content/blog/drei-jahre-apptiva/drei-jahre-apptiva.md": {
     "created": 1532697036,
@@ -137,7 +137,7 @@
   },
   "content/services/digitalisierung-unternehmen/digitalisierung-unternehmen.md": {
     "created": 1587123486,
-    "modified": 1587123486
+    "modified": 1620660251
   },
   "content/services/einsatzplanung/einsatzplanung.md": {
     "created": 1539584636,
@@ -145,7 +145,7 @@
   },
   "content/services/future-hack/future-hack.md": {
     "created": 1581416583,
-    "modified": 1587123486
+    "modified": 1620660251
   },
   "content/services/guest-counter/guestcounter.md": {
     "created": 1589369061,
@@ -341,7 +341,7 @@
   },
   "content/blog/slope-track-update-2021/slope-track-update-2021.md": {
     "created": 1610619397,
-    "modified": 1610619978
+    "modified": 1620660251
   },
   "content/blog/home-office/home-office.md": {
     "created": 1615998943,
@@ -362,5 +362,9 @@
   "content/services/user-centered-design/user-centered-design.md": {
     "created": 1525884383,
     "modified": 1620057682
+  },
+  "content/blog/2021-05-native-vs-web-app/vor-und-nachteile-apple-ios-google-android-app-webapp-pwa.md": {
+    "created": 1621267966,
+    "modified": 1621414734
   }
 }
