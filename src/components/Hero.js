@@ -38,6 +38,7 @@ const ColHero = styled.div`
 
   @media (min-width: 381px) {
     margin-right: 3rem;
+    margin-bottom: 2rem;
   }
 `
 const ColTeaser = styled.div`
@@ -74,7 +75,7 @@ const Hero = () => {
   const images = useStaticQuery(graphql`
     {
       hero: file(
-        absolutePath: { regex: "/solution-collage.png/" }
+        absolutePath: { regex: "/collage.png/" }
         sourceInstanceName: { eq: "images" }
       ) {
         childImageSharp {
@@ -118,8 +119,8 @@ const Hero = () => {
         </ColHero>
         <ColTeaser>
           <Teaser>
-            Hier kann schon bald Ihre{' '}
-            <Fat>iOS, Android, Desktop oder Web-Applikation</Fat> stehen.
+            Erfolgreiche Entwicklung von <Fat>iOS-, Android-, Desktop-</Fat> und{' '}
+            <Fat>Web-Apps.</Fat>
           </Teaser>
           <Button href="/#dienstleistungen">Unser Angebot</Button>
         </ColTeaser>
