@@ -5,7 +5,7 @@ name: David Decker
 claim: Wissensstaubsauger
 preview: david-decker-prev.jpg
 avatar: david-decker.jpg
-role: Praktikant
+role: Softwareentwickler
 education: in Ausbildung
 slogan: Ich lerne soviel ich kann, damit ich danach Andere unterstützen kann.
 contact:
@@ -15,8 +15,10 @@ contact:
 skills:
   - title: Architektur
     items:
-      - name: Zusammenarbeit und Organisation
-        value: 80
+      - name: Zusammenarbeit
+        value: 90
+      - name: Organisation
+        value: 45
       - name: Entscheiden
         value: 60
       - name: Dokumentieren
@@ -24,12 +26,14 @@ skills:
   - title: Frontend
     items:
       - name: HTML5 / CSS3
-        value: 85
+        value: 75
       - name: JavaScript
         value: 65
       - name: ReactJS
-        value: 70
+        value: 80
       - name: TypeScript
+        value: 50
+      - name: Java
         value: 30
   - title: Sonstiges
     items:
