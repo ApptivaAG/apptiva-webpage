@@ -12,13 +12,17 @@ import { stripHTML } from '../util'
 import Layout from '../components/Layout'
 import BlogLinkItem from '../components/BlogLinkItem'
 
-const Header = ({ title, image }) => (
+const Header = ({ title, image, imageCaption }) => (
   <HeadArea>
     <MainTitle dangerouslySetInnerHTML={{ __html: title }} />
-    <GatsbyImage
-      image={image.childImageSharp.gatsbyImageData}
-      style={{ width: '100%' }}
-    />
+    <figure>
+      <GatsbyImage
+        image={image.childImageSharp.gatsbyImageData}
+        style={{ width: '100%' }}
+      />
+
+      {imageCaption && <figcaption>{imageCaption}</figcaption>}
+    </figure>
   </HeadArea>
 )
 
@@ -60,7 +64,15 @@ const BlogPostTemplate = ({
   navigation,
 }) => {
   const PostContent = contentComponent || Content
-  const { title, image, description, author, date, updatedAt } = metaData
+  const {
+    title,
+    image,
+    description,
+    author,
+    date,
+    updatedAt,
+    imageCaption,
+  } = metaData
 
   return (
     <main>
@@ -73,7 +85,7 @@ const BlogPostTemplate = ({
       <Container>
         <article>
           <header>
-            <Header title={title} image={image} />
+            <Header title={title} image={image} imageCaption={imageCaption} />
             {description && <Description>{description}</Description>}
             {author && (
               <Published author={author} date={date} updatedAt={updatedAt} />
@@ -133,6 +145,7 @@ export const pageQuery = graphql`
             gatsbyImageData(width: 1280, layout: CONSTRAINED)
           }
         }
+        imageCaption
       }
     }
   }

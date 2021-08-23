@@ -305,6 +305,18 @@ export const GlobalStyle = createGlobalStyle`
     border: 0;
   }
 
+  figure {
+    margin: 0;
+  }
+
+  figcaption {
+    font-size: 0.8em;
+    margin-top: 0.5em;
+    color: gray;
+    text-align: center;
+  }
+
+
   .gatsby-image-wrapper [data-placeholder-image] {
     filter: blur(26px);
     transform: scale(1.04);
