@@ -3,7 +3,7 @@ title: 'Unsere eigenen Solarpanels'
 slug: solarify
 templateKey: blog-post
 image: solar-panels-wikipedia.jpg
-imageCaption: Quelle Wikipedia
+imageCaption: Quelle Wikipedia, Creative Commons
 date: 2021-08-23
 author: Roman Schaller
 description: >-
@@ -22,7 +22,7 @@ Wir verfügen zwar über kein eigenes Dach, aber dank [Solarify](https://solarif
 
 Unsere Panels wurden in Opfikon auf folgendem Dach montiert:
 
-![Unsere Solarpanels in Opfikon](./solarpanels-opfikon.jpg "Unsere Solarpanels sind auf diesem Dach in Opfikon montiert.")
+![Unsere Solarpanels in Opfikon](./solarpanels-opfikon.jpg 'Unsere Solarpanels sind auf diesem Dach in Opfikon montiert.')
 
 ## Was könnte man sonst noch tun?
 
