@@ -34,7 +34,7 @@ const Columns = styled.div`
   flex-wrap: wrap;
 `
 const ColHero = styled.div`
-  flex: 6 1 24rem;
+  flex: 1 1 24rem;
 
   @media (min-width: 381px) {
     margin-right: 3rem;
@@ -43,7 +43,7 @@ const ColHero = styled.div`
 `
 const ColTeaser = styled.div`
   flex: 1 1 18rem;
-  padding: 2rem 1rem;
+  padding: 1vw 2rem 1rem;
 `
 
 const Teaser = styled.h2`
@@ -136,23 +136,21 @@ const Hero = () => {
               display: flex;
               align-items: center;
               flex-wrap: wrap;
-              font-size: 0.6em;
-              margin: 0 -1em;
-              background: ${(p) => p.theme.color.lightBg};
-              color: #666;
+              font-size: 0.8em;
+              gap: 0.5rem 1rem;
             `}
           >
-            <StaticImage
-              src="../img/mail9.png"
-              width={100}
-              alt="Apptiva Newsletter"
-            />
-            <p css="flex: 1 1 auto; font-weight: 600; margin: 0.5em  1em;">
-              Bleiben Sie mit dem Apptiva Newsletter auf dem Laufenden. Jedes
-              Quartal aktuelle Apptiva-News erhalten.
-            </p>
-            <div css="font-size: 0.9em; margin: 0.5em  1em;">
-              <Button to="/newsletter/">Newsletter abonnieren</Button>
+            <div>
+              <h3>
+                Wir suchen: <a href="/jobs">Fullstack-Entwickler:in</a>
+              </h3>
+              <p css="margin:0;">
+                Gleich bewerben und einen der besten
+                Software&shy;entwicklung-Jobs schnappen.
+              </p>
+            </div>
+            <div css="font-size: 0.9em; margin-left: auto;">
+              <Button to="/jobs/">Jetzt bewerben</Button>
             </div>
           </div>
         </Container>
