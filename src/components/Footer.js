@@ -141,25 +141,19 @@ const Footer = () => (
           </div>
         </About>
         <Contact className="arrow-links">
-          <h2>Kontakt</h2>
+          <h2>Apptiva</h2>
           <ul>
             <li>
-              <Link to="/kontakt/#anfahrt">
-                Apptiva AG
-                <br />
-                Neuenkirchstrasse 19
-                <br />
-                6203 Sempach Station
-              </Link>
+              <Link to="/kontakt/">Kontakt</Link>
             </li>
             <li>
-              <a href="tel:+41413222626">041 322 26 26</a>
+              <a href="/ueber-uns/">Über uns</a>
             </li>
             <li>
-              <a href="mailto:info@apptiva.ch">info@apptiva.ch</a>
+              <a href="/ueber-uns/#team">Team</a>
             </li>
             <li>
-              <Link to="/">www.apptiva.ch</Link>
+              <a href="/jobs/">Jobs</a>
             </li>
           </ul>
         </Contact>

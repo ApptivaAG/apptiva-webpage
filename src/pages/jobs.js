@@ -31,16 +31,12 @@ const Jobs = () => (
       <Section>
         <Container>
           <MainTitle>Jobs</MainTitle>
-          <Subtitle>{metadata.description}</Subtitle>
-
-          <Searching>Wir suchen</Searching>
-
           <h2
             style={{
               marginBottom: 0,
             }}
           >
-            Fullstack Software-EntwicklerIn und UnternehmerIn
+            Fullstack Software-Entwickler:in und Unternehmer:in*
           </h2>
           <small>80% - 100%, ab sofort</small>
 
@@ -53,6 +49,17 @@ const Jobs = () => (
             der Arbeit haben. Es würde uns freuen, dich schon bald kennen zu
             lernen!
           </p>
+          <p>
+            <small>
+              * Was hat es mit &quot;Unternehmer:in&quot; auf sich? <br /> Bei
+              uns haben alle die Möglichkeit — im kleinen und grossen Still —
+              auf das Unternehmen einfluss zu nehmen. Egal ob Projektumsetzung,
+              Produktidee, Vorgehen, neue Mitarbeiter:innen oder Organisation,
+              bei uns setzt du deine Visionen um! Entsprechend sind wir an
+              Personen interessiert, die diese Chance nutzen und auf das
+              Unternehmen einfluss nehmen.
+            </small>
+          </p>
 
           <h3>Deine Stärken</h3>
 
@@ -63,8 +70,10 @@ const Jobs = () => (
             <li>
               Du hast Freude, in unterschiedlichen Tätigkeitsgebieten zu wirken.
             </li>
-            <li>Du bist gierig darauf, dich weiterzuentwickeln.</li>
-            <li>Du steckst voller Ideen und Tatendrang.</li>
+            <li>
+              Du willst dich als Mensch und Entwickler:in weiterzuentwickeln.
+            </li>
+            <li>Dein Team mag es mit dir zusammenzuarbeiten.</li>
           </ul>
 
           <h3>Deine fachlichen Fähigkeiten</h3>
@@ -84,14 +93,13 @@ const Jobs = () => (
           <h3>Deine Vorteile</h3>
 
           <ul>
-            <li>Du wirst nicht mehr wie ein Kind behandelt.</li>
             <li>
               Du entscheidest über deine Tätigkeiten, deine Arbeitszeiten, deine
               Ferienzeit und deinen Lohn.
             </li>
             <li>
-              Du arbeitest an spannenden Projekten wie Chatbots oder einem
-              Partyplaner.
+              Du arbeitest an spannenden Projekten wie Chatbots oder einer
+              digitalen Speisekarte.
             </li>
             <li>Du verwendest moderne Tools und Libraries.</li>
             <li>Du hast die Chance, dich bei uns zu entfalten.</li>
