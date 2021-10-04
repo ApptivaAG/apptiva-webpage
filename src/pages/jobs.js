@@ -53,11 +53,11 @@ const Jobs = () => (
             <small>
               * Was hat es mit &quot;Unternehmer:in&quot; auf sich? <br /> Bei
               uns haben alle die Möglichkeit — im kleinen und grossen Still —
-              auf das Unternehmen einfluss zu nehmen. Egal ob Projektumsetzung,
+              auf das Unternehmen Einfluss zu nehmen. Egal ob Projektumsetzung,
               Produktidee, Vorgehen, neue Mitarbeiter:innen oder Organisation,
               bei uns setzt du deine Visionen um! Entsprechend sind wir an
               Personen interessiert, die diese Chance nutzen und auf das
-              Unternehmen einfluss nehmen.
+              Unternehmen Einfluss nehmen.
             </small>
           </p>
 
@@ -71,7 +71,7 @@ const Jobs = () => (
               Du hast Freude, in unterschiedlichen Tätigkeitsgebieten zu wirken.
             </li>
             <li>
-              Du willst dich als Mensch und Entwickler:in weiterzuentwickeln.
+              Du willst dich als Mensch und Entwickler:in weiterentwickeln.
             </li>
             <li>Dein Team mag es mit dir zusammenzuarbeiten.</li>
           </ul>
