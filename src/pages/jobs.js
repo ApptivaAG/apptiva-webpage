@@ -1,23 +1,20 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
-import { MainTitle, Container, Subtitle, Button, Section } from '../style'
+import { MainTitle, Container, Button, Section } from '../style'
 import SEO from '../components/SEO'
 import config from '../config'
 import Layout from '../components/Layout'
 
 const metadata = {
   title: 'Jobs',
-  description: 'Wir bieten Jobs für Erwachsene',
+  description: `Fullstack Software-Entwickler:in und Unternehmer:in. 
+    Du findest bei uns spannende und abwechslungsreiche Arbeit vor. 
+    Wir möchten mit dir gemeinsam Herausforderungen meistern und Spass an der Arbeit haben. 
+    Es würde uns freuen, dich schon bald kennen zu lernen!`,
   slug: 'jobs',
 }
 
-const Searching = styled.h4`
-  text-align: center;
-  /* padding-top: 1em; */
-  font-size: 3em;
-  font-weight: 100;
-`
 const Center = styled.div`
   text-align: center;
   padding-top: 1em;
