@@ -1,23 +1,20 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
-import { MainTitle, Container, Subtitle, Button, Section } from '../style'
+import { MainTitle, Container, Button, Section } from '../style'
 import SEO from '../components/SEO'
 import config from '../config'
 import Layout from '../components/Layout'
 
 const metadata = {
   title: 'Jobs',
-  description: 'Wir bieten Jobs für Erwachsene',
+  description: `Fullstack Software-Entwickler:in und Unternehmer:in. 
+    Du findest bei uns spannende und abwechslungsreiche Arbeit vor. 
+    Wir möchten mit dir gemeinsam Herausforderungen meistern und Spass an der Arbeit haben. 
+    Es würde uns freuen, dich schon bald kennen zu lernen!`,
   slug: 'jobs',
 }
 
-const Searching = styled.h4`
-  text-align: center;
-  /* padding-top: 1em; */
-  font-size: 3em;
-  font-weight: 100;
-`
 const Center = styled.div`
   text-align: center;
   padding-top: 1em;
@@ -31,16 +28,12 @@ const Jobs = () => (
       <Section>
         <Container>
           <MainTitle>Jobs</MainTitle>
-          <Subtitle>{metadata.description}</Subtitle>
-
-          <Searching>Wir suchen</Searching>
-
           <h2
             style={{
               marginBottom: 0,
             }}
           >
-            Fullstack Software-EntwicklerIn und UnternehmerIn
+            Fullstack Software-Entwickler:in und Unternehmer:in*
           </h2>
           <small>80% - 100%, ab sofort</small>
 
@@ -53,6 +46,17 @@ const Jobs = () => (
             der Arbeit haben. Es würde uns freuen, dich schon bald kennen zu
             lernen!
           </p>
+          <p>
+            <small>
+              * Was hat es mit &quot;Unternehmer:in&quot; auf sich? <br /> Bei
+              uns haben alle die Möglichkeit — im kleinen und grossen Still —
+              auf das Unternehmen Einfluss zu nehmen. Egal ob Projektumsetzung,
+              Produktidee, Vorgehen, neue Mitarbeiter:innen oder Organisation,
+              bei uns setzt du deine Visionen um! Entsprechend sind wir an
+              Personen interessiert, die diese Chance nutzen und auf das
+              Unternehmen Einfluss nehmen.
+            </small>
+          </p>
 
           <h3>Deine Stärken</h3>
 
@@ -63,8 +67,10 @@ const Jobs = () => (
             <li>
               Du hast Freude, in unterschiedlichen Tätigkeitsgebieten zu wirken.
             </li>
-            <li>Du bist gierig darauf, dich weiterzuentwickeln.</li>
-            <li>Du steckst voller Ideen und Tatendrang.</li>
+            <li>
+              Du willst dich als Mensch und Entwickler:in weiterentwickeln.
+            </li>
+            <li>Dein Team mag es mit dir zusammenzuarbeiten.</li>
           </ul>
 
           <h3>Deine fachlichen Fähigkeiten</h3>
@@ -84,14 +90,17 @@ const Jobs = () => (
           <h3>Deine Vorteile</h3>
 
           <ul>
-            <li>Du wirst nicht mehr wie ein Kind behandelt.</li>
+            <li>
+              &quot;Work From Home&quot;. Wir arbeiten normalerweise von zu
+              Hause aus.
+            </li>
             <li>
               Du entscheidest über deine Tätigkeiten, deine Arbeitszeiten, deine
               Ferienzeit und deinen Lohn.
             </li>
             <li>
-              Du arbeitest an spannenden Projekten wie Chatbots oder einem
-              Partyplaner.
+              Du arbeitest an spannenden Projekten wie Chatbots oder einer
+              digitalen Speisekarte.
             </li>
             <li>Du verwendest moderne Tools und Libraries.</li>
             <li>Du hast die Chance, dich bei uns zu entfalten.</li>
