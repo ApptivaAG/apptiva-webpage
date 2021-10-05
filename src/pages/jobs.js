@@ -91,6 +91,10 @@ const Jobs = () => (
 
           <ul>
             <li>
+              &quot;Work From Home&quot;. Wir arbeiten normalerweise von zu
+              Hause aus.
+            </li>
+            <li>
               Du entscheidest über deine Tätigkeiten, deine Arbeitszeiten, deine
               Ferienzeit und deinen Lohn.
             </li>
