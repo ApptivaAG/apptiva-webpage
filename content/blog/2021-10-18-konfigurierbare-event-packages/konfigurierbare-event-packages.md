@@ -20,7 +20,7 @@ Als das Casino uns vor über zwei Jahren kontaktierte, war ihre Hoffnung mit wen
 - Bei der Buchung wird die Leistungen direkt beim Leistungserbringer reserviert.
 - Die Gäste erhalten einen QR-Code, mit welchem alle Leistungen eingelöst werden können.
 - Die Casino-Backoffice-Mitarbeiter:innen erfassen neue Angebote oder Angebotsanpassungen direkt im Konfigurator.
-- Die Buchhaltung hat Zugriff auf Verkaufs- und Einlöse-Daten und sehen welche Leistungen noch einlösbar sind.
+- Die Buchhaltung hat Zugriff auf Verkaufs- und Einlöse-Daten und sieht, welche Leistungen noch einlösbar sind.
 
 ## Der Angebots-Konfigurator
 
