@@ -118,10 +118,10 @@ const HomePageTemplate = ({ partners, appsImage, chatbot, partyplaner }) => (
               </a>
             </Col>
             <Col>
-              <a href="https://bubblecms.io/">
+              <a href="https://bubble-chat.ch/">
                 <Card>
-                  <h3>Bubble CMS</h3>
-                  <p>Chatbotinhalte Verwalten</p>
+                  <h3>Bubble Chat</h3>
+                  <p>KI-basierte Chatbot Lösung</p>
                 </Card>
               </a>
             </Col>

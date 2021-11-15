@@ -165,4 +165,4 @@ Diese Werte helfen, Veränderungen der Qualität des Chatbots festzustellen. Es 
 
 Wie man aus diesen Ausführungen sehen kann, erfordert das Testen von KI-Systemen andere Testansätze als dass es bei regelbasierten Systemen der Fall ist. Es ist nicht damit getan einen Test zu implementieren der von diesem Zeitpunkt an immer erfolgreich durchlaufen muss (“grün sein”).
 
-Da ein Chatbot System ständig mit neuen Testsätzen gefüttert wird, ist es notwendig, die Veränderung der Qualität über die Zeit zu beobachten. Hier können System wie z.B. [Bubble CMS](https://bubblecms.io/) helfen, diese Veränderung zu visualisieren und mögliche Optimierungen vorzuschlagen.
+Da ein Chatbot System ständig mit neuen Testsätzen gefüttert wird, ist es notwendig, die Veränderung der Qualität über die Zeit zu beobachten. Hier können System wie z.B. [Bubble Chat](https://bubble-chat.ch/) helfen, diese Veränderung zu visualisieren und mögliche Optimierungen vorzuschlagen.
