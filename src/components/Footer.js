@@ -262,11 +262,11 @@ const Footer = () => (
             </li>
             <li>
               <a
-                href="https://bubblecms.io"
+                href="https://bubble-chat.ch"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Bubble CMS - Manage Chatbot Content
+                Bubble Chat - KI-basierte Chatbot Lösung
               </a>
             </li>
           </ul>
