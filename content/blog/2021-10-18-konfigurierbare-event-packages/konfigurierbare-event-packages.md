@@ -6,12 +6,12 @@ image: hero.png
 date: 2021-10-22
 author: Philip Schönholzer
 description: >-
-  Das Grandcasino Bern nutzt seit über einem Jahr unseren Konfigurator, um Event-Packages online anzubieten und per QR-Code einzulösen. Da dies eine spannende Lösung ist, wollen wir diese her etwas genauer vorstellen.
+  Das Grand Casino Bern nutzt seit über einem Jahr unseren Konfigurator, um Event-Packages online anzubieten und per QR-Code einzulösen. Da dies eine spannende Lösung ist, wollen wir diese her etwas genauer vorstellen.
 categories:
   - Allgemein
 ---
 
-Schon seit mehreren Jahren bietet das Grandcasino Bern unterschiedliche Event-Packages (z.B. "Fondue Chinoise & Casino") online zum Verkauf an. Diese konnten aber nur telefonisch bestellt werden und die Zahlung fand vor Ort statt. Die Administration musste zudem für jede Bestellung bei den involvierten Leistungserbringern (meistens Restaurants) nachfragen, ob sie noch genügend Platz haben, und eine Reservation platzieren.
+Schon seit mehreren Jahren bietet das Grand Casino Bern unterschiedliche Event-Packages (z.B. "Daisy’s Dinner & Play") online zum Verkauf an. Diese konnten aber nur telefonisch bestellt werden und die Zahlung fand vor Ort statt. Die Administration musste zudem für jede Bestellung bei den involvierten Leistungserbringern (meistens Restaurants) nachfragen, ob sie noch genügend Platz haben, und eine Reservation platzieren.
 
 Als das Casino uns vor über zwei Jahren kontaktierte, war ihre Hoffnung mit weniger Aufwand mehr Umsatz über den Online-Shop zu machen. Dies wollten sie wie folgt erreichen:
 
@@ -84,4 +84,4 @@ Wer bereits einmal ein solches System umgesetzt hat, weiss, dass dies mit teils 
 
 ## Fazit
 
-Mit dem neuen Konfigurator wurde der Verkauf vereinfacht und der administrative Aufwand deutlich reduziert. Zudem ist das Grandcasino Bern nun viel dynamischer in der Angebotserstellung. Gibt es ein temporäres, cooles Event in der Stadt, welches das Casino mit einem Besuch im Casino verknüpfen möchte, so können sie ein solches Angebot innerhalb von wenigen Minuten online schalten. Ob das Casino seine Umsatzziele erreicht hat, kann ich hingegen nicht beantworten.
+Mit dem neuen Konfigurator wurde der Verkauf vereinfacht und der administrative Aufwand deutlich reduziert. Zudem ist das Grand Casino Bern nun viel dynamischer in der Angebotserstellung. Gibt es ein temporäres, cooles Event in der Stadt, welches das Casino mit einem Besuch im Casino verknüpfen möchte, so können sie ein solches Angebot innerhalb von wenigen Minuten online schalten. Ob das Casino seine Umsatzziele erreicht hat, kann ich hingegen nicht beantworten.
