@@ -3,7 +3,7 @@ title: Konfigurierbare Event-Angebote verkaufen und per QR-Code einlösen
 slug: konfigurierbare-event-angebote-verkaufen-und-per-qr-code-einloesen
 templateKey: blog-post
 image: hero.png
-date: 2021-10-22
+date: 2021-11-22
 author: Philip Schönholzer
 description: >-
   Das Grand Casino Bern nutzt seit über einem Jahr unseren Konfigurator, um Event-Packages online anzubieten und per QR-Code einzulösen. Da dies eine spannende Lösung ist, wollen wir diese her etwas genauer vorstellen.
