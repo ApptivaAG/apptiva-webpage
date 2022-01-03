@@ -18,7 +18,7 @@ Die hervorragende Auftragslage des Jahres 2018 geht für die Apptiva in diesem J
 
 ## Renato
 
-[Renato](/renato-wasescha/) ist Software-Entwickler und nun bereits ein paar Wochen bei uns.
+Renato ist Software-Entwickler und nun bereits ein paar Wochen bei uns.
 
 Renato unterstützt uns mit Node.js im Backend und HTML, CSS und JS im Frontend. Im Moment hilft er uns bei einer React-Native-App, zu welcher wir zu einem späteren Zeitpunkt mehr erzählen dürfen. Renato kommt ursprünglich aus dem Bündnerland. Entsprechend macht er uns regelmässig mit seinen Wochenend-Erlebnissen in Graubünden eifersüchtig. Wir haben ihn als offenen Kollegen kennengelernt, der positive Stimmung verbreitet.
 
