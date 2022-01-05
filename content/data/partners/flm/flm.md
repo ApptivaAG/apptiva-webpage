@@ -7,7 +7,7 @@ logo: flm.jpg
 url: https://www.flm.ch
 ---
 
-Wir arbeiten mit der **FLM Kassensysteme AG** im Rahmen unserer digitalen Speisekarte zusammen. Gemeinsam mit der FLM sind wir in der Lage den Gastro-Betrieben eine nahtlose Integration der Speisekarte in die bestehende Kasseninfrastruktur zu ermöglichen. Wir haben die FLM als äusserst zuverlässigen und agilen Partner kennengelernt und hoffen gemeinsam den Restaurant-Besuch für die Gäste zu einem magischen Erlebnis zu machen.
+Wir arbeiten mit der **FLM Kassensysteme AG** im Rahmen unserer digitalen Speisekarte zusammen. Gemeinsam mit der FLM sind wir in der Lage den Gastro-Betrieben eine nahtlose Integration der Speisekarte in die bestehende Kasseninfrastruktur zu ermöglichen. Wir haben die FLM als äusserst zuverlässigen und agilen Partner kennengelernt und wollen gemeinsam den Restaurantbesuch für Gäste zu einem magischen Erlebnis machen.
 
 ## Über die FLM Kassensysteme AG
 
