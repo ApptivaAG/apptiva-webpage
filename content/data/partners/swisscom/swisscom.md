@@ -1,7 +1,7 @@
 ---
 templateKey: partner-page
 slug: swisscom
-prio: 2
+prio: 4
 name: Swisscom
 logo: swisscom.png
 url: https://www.swisscom.ch/
