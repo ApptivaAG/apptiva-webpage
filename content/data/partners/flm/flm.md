@@ -11,4 +11,4 @@ Wir arbeiten mit der **FLM Kassensysteme AG** im Rahmen unserer digitalen Speise
 
 ## Über die FLM Kassensysteme AG
 
-Die FLM Kassensysteme AG bieten hochwertige Kassenlösungen im Bereich Hotellerie, Gastronomie und Detailhandel und will mit seinen Lösungen zum Erfolg der Kunden beitragen. Ihre Produkte und Dienstleistungen werden höchsten Ansprüchen an Qualität und Nutzen gerecht. Ihre erstklassigen Kassenlösungen zeichnen sich durch Verlässlichkeit und Einfachheit aus.
+Die FLM Kassensysteme AG bietet hochwertige Kassenlösungen im Bereich Hotellerie, Gastronomie und Detailhandel und will mit ihren Lösungen zum Erfolg der Kunden beitragen. Ihre Produkte und Dienstleistungen werden höchsten Ansprüchen an Qualität und Nutzen gerecht. Ihre erstklassigen Kassenlösungen zeichnen sich durch Verlässlichkeit und Einfachheit aus.
