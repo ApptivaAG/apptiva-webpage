@@ -1,12 +1,12 @@
 ---
-title: Bubble CMS - Managing Chatbot Content
-slug: bubblecms
+title: Bubble Chat - Managing Chatbot Content
+slug: bubblechat
 templateKey: blog-post
-image: bubble-cms.png
+image: bubble-chat.png
 date: 2018-11-20
 author: Markus Tanner
 description: >-
-  Die Botfabrik fabriziert ein Chatbot Content-Management-System. Das CMS ist die Antwort auf Fragen, welche bei jedem grösseren Chatbot-Projekt entstehen.
+  Die Botfabrik fabriziert ein Chatbot Content-Management-System. Bubble Chat ist die Antwort auf Fragen, welche bei jedem grösseren Chatbot-Projekt entstehen.
 categories:
   - Allgemein
 ---
@@ -17,21 +17,21 @@ Man könnte meinen, dass diese Fragen schon längst in der Form eines Tools bean
 
 ## Was nun?
 
-Botfabrik to the rescue! Bei den Chatbot-Projekten der vergangenen Jahre haben wir sehr viel über die Bedürfnisse von Kunden gelernt. Wir kennen die fehlenden Puzzleteile für ein erfolgreiches Chatbot-Projekt. Daher fabrizieren wir in der Botfabrik Bubble CMS, welches die Antworten auf die obigen Fragen aus einem Guss liefert.
+Botfabrik to the rescue! Bei den Chatbot-Projekten der vergangenen Jahre haben wir sehr viel über die Bedürfnisse von Kunden gelernt. Wir kennen die fehlenden Puzzleteile für ein erfolgreiches Chatbot-Projekt. Daher fabrizieren wir in der Botfabrik Bubble Chat, welches die Antworten auf die obigen Fragen aus einem Guss liefert.
 
 Wir adressieren mitunter folgende Bedürfnisse:
 
-* Im Bubble CMS können Fachpersonen den Chatbot mit Äusserungen und den entsprechenden Antworten trainieren. Dazu ist kein technisches Knowhow notwendig.
-* Das Training von verschiedenen Fachbereichen passiert unabhängig voneinander.
-* Es gibt eine Übersicht für Äusserungen, die der Chatbot nicht verstanden hat. Diese können direkt fürs Training des Chatbots verwendet werden.
-* Im Bubble CMS kann ein Set an Testfragen erfasst werden, damit die richtige Funktionsweise des Chatbots jederzeit sichergestellt werden kann.
-* Es kann nachvollzogen werden, wer was zu welchem Zeitpunkt geändert hat.
+- Im Bubble Chat können Fachpersonen den Chatbot mit Äusserungen und den entsprechenden Antworten trainieren. Dazu ist kein technisches Knowhow notwendig.
+- Das Training von verschiedenen Fachbereichen passiert unabhängig voneinander.
+- Es gibt eine Übersicht für Äusserungen, die der Chatbot nicht verstanden hat. Diese können direkt fürs Training des Chatbots verwendet werden.
+- Im Bubble Chat kann ein Set an Testfragen erfasst werden, damit die richtige Funktionsweise des Chatbots jederzeit sichergestellt werden kann.
+- Es kann nachvollzogen werden, wer was zu welchem Zeitpunkt geändert hat.
 
 ## Interessiert?
 
 Sie haben sich über die genannten Fragen auch schon den Kopf zerbrochen und sind an der neusten Errungenschaft aus der Botfabrik interessiert? Oder Sie möchten mit uns zusammenarbeiten?
 
-Dann schauen Sie bei Bubble CMS vorbei: [www.bubblecms.io](https://bubblecms.io/)
+Dann schauen Sie bei Bubble Chat vorbei: [www.bubble-chat.ch](https://bubble-chat.ch/)
 
 Rufen Sie uns an
 
