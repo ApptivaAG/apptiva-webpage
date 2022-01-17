@@ -1,7 +1,6 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
-
 import { DeemphasizedTitle } from '../style'
 
 const CustomersTitle = styled(DeemphasizedTitle)`
@@ -16,7 +15,7 @@ const ImageList = styled.div`
   margin: 0 1em 1em 1em;
   > div {
     flex: 0 1 5em;
-    margin: 1em 1.5em;
+    margin: 0.7em 1.5em;
   }
 `
 
