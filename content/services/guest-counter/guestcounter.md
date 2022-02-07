@@ -19,6 +19,10 @@ introduction: |
 
   Die Corona-Krise stellt uns alle vor Herausforderungen der unterschiedlichsten Arten. Dazu gehören das Social Distancing und die eingeschränkten Kapazitäten in Läden oder öffentlichen Einrichtungen. Der Gästezähler ist eine simple App, welche Sie dabei unterstützt, diese Herausforderungen zu meistern.
 
+  ## Kostenlos
+
+  Die Grundfunktionen des Gästezählers sind kostenlos nutzbar. Für weitere Anforderungen nehmen Sie bitte Kontakt mit uns auf. Wir gehen gerne auf Ihre Wünsche ein.
+
 bulletGroups:
   - title: Weitere Features
     description: 'Sie möchten mehr als nur rauf- und runterzählen?<br/>Der Apptiva Gästezähler hat natürlich noch mehr auf dem Kasten.'
