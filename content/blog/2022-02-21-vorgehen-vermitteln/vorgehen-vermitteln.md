@@ -6,12 +6,12 @@ image: hero-vorgehen.jpg
 date: 2022-02-21
 author: Philip Schönholzer
 description: >-
-  Wir haben unser Vorgehen im Bereich Softwareentwicklung jahrelang verbessert und weiterentwickelt. Dabei blieben die Kunden häufig auf der Strecke. Für uns war sonnenklar, wie ein Projekt entwickelt werden sollte. Die Kunden aber waren unsicher, was sie erwartet und was wann passiert.
+  Wir haben unser Vorgehen im Bereich Softwareentwicklung über die letzten Jahre laufend verbessert und weiterentwickelt. Dinge, die für uns sonnenklar waren, blieben jedoch bei der Kommunikation mit den Kunden teilweise auf der Strecke. Das wollten wir unbedingt verbessern.
 categories:
   - Allgemein
 ---
 
-Unser Vorgehen für die Softwareentwicklung wurde im Jahre 2008 von der agilen Welle stark beeinflusst. Ebenso das Vorgehen "Lean Startup". Immer mehr Techniken und Tools setzten wir ein, um die Projekte optimal zum Abschluss zu bringen. Unsere Kunden verstanden aber häufig bloss Bahnhof. Wir haben vergessen, dass unsere Kunden nicht dieselbe Lernkurve wie wir genommen haben, und liessen sie entsprechend im Dunkeln tappen. Dies war für sie natürlich unangenehm. Wenn wir ihnen Resultate an einem Review-Meeting zeigten, war ihnen unklar, was sie sahen und auch was als nächstes passiert. Entsprechend haben wir von Kunden immer mal wieder gehört, dass unser Vorgehen undurchsichtig ist. Wir mussten etwas unternehmen.
+Unser Vorgehen für die Softwareentwicklung wurde von der agilen Welle[^1] und der Methode "Lean Startup"[^2] stark beeinflusst. Immer mehr Techniken und Tools setzten wir ein, um Projekte optimal zum Abschluss bringen zu können. Dabei ging hin und wieder ein wenig vergessen, dass unsere Kunden nicht dieselbe Lernkurve wie wir hinter sich hatten. Und wenn man nicht dieselbe Sprache spricht, kann das zu Missverständnissen führen. Für unsere Kunden war es daher manchmal schwierig nachzuvollziehen, was der aktuelle Stand ist und was als nächstes passiert. Entsprechend haben wir von Kunden immer mal wieder gehört, dass unser Vorgehen undurchsichtig ist. Wir mussten etwas unternehmen.
 
 ## Vorgehen für die Softwareentwicklung unklar
 
@@ -28,7 +28,7 @@ Als wir nach einiger Zeit das Feedback in einem Workshop verarbeitet haben, ist 
 
 Einerseits war unser Vorgehen nirgendwo klar für unsere Kunden beschrieben. Andererseits haben wir das Vorgehen nie explizit angesprochen. Beide diese Dinge wollten wir verbessern. Zudem sahen wir noch Potential, das Vorgehen auf unser Webseite zu publizieren, um potentiellen Kunden einen Einblick zu gewähren.
 
-So gingen wir an die Arbeit und versuchten unser Vorgehen auf einer Webseite darzustellen. Die ersten Skizzen dazu hatten wir recht schnell angefertigt und konnten so auch gleich Feedback von Kunden und Mitarbeitern einholen. Nach und nach entwickelte sich die Webseite und mit einem ersten MVP[^1] gingen wir online.
+So gingen wir an die Arbeit und versuchten unser Vorgehen auf einer Webseite darzustellen. Die ersten Skizzen dazu hatten wir recht schnell angefertigt und konnten so auch gleich Feedback von Kunden und Mitarbeitern einholen. Nach und nach entwickelte sich die Webseite und mit einem ersten MVP[^3] gingen wir online.
 
 ## Vorgehen gemeinsam erarbeiten
 
@@ -46,4 +46,6 @@ Hier der Link zu unserer [Vorgehenseite](/vorgehen).
 
 &nbsp;
 
-[^1]: Minimum Viable Product [Wikipedia](https://de.wikipedia.org/wiki/Minimum_Viable_Product)
+[^1]: Agile Softwareentwicklung [Wikipedia](https://de.wikipedia.org/wiki/Agile_Softwareentwicklung)
+[^2]: Lean Startup [Wikipedia](https://de.wikipedia.org/wiki/Lean_Startup)
+[^3]: Minimum Viable Product [Wikipedia](https://de.wikipedia.org/wiki/Minimum_Viable_Product)
