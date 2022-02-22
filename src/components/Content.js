@@ -175,6 +175,10 @@ const Markdown = styled.div`
   .gatsby-highlight {
     font-size: 0.8em;
   }
+
+  .footnotes p {
+    display: inline;
+  }
 `
 
 const Content = ({ content, className }) => (
