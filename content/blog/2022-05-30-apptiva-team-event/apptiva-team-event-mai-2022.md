@@ -2,8 +2,8 @@
 title: Apptiva am Abgrund
 slug: apptiva-team-event-mai-22
 templateKey: blog-post
-image: team-event.jpg
-date: 202
+image: the-edge.jpg
+date: 2022-05-30
 author: Markus Tanner
 description: >-
   Viel zu lange lag unser letzter richtiger Team-Event schon zurück. Deshalb wollten wir uns nicht lumpen lassen. Ein Erlebnis am Limit musste her.
