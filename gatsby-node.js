@@ -11,32 +11,25 @@ const timestampsData = require('./content/timestamps.json')
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const posts = graphql(`{
-  allMarkdownRemark(
-    limit: 1000
-    sort: {order: DESC, fields: [frontmatter___date]}
-    filter: {frontmatter: {templateKey: {regex: "/post/"}}}
-  ) {
-    edges {
-      node {
-        id
-        frontmatter {
-          title
-          slug
-          templateKey
-          date(formatString: "DD.MM.YYYY")
-          description
-          image {
-            childImageSharp {
-              gatsbyImageData(width: 240, placeholder: BLURRED, layout: FIXED)
+  const posts = graphql(`
+    {
+      allMarkdownRemark(
+        limit: 1000
+        sort: { order: DESC, fields: [frontmatter___date] }
+        filter: { frontmatter: { templateKey: { regex: "/post/" } } }
+      ) {
+        edges {
+          node {
+            id
+            frontmatter {
+              slug
+              templateKey
             }
           }
         }
       }
     }
-  }
-}
-`).then((result) => {
+  `).then((result) => {
     if (result.errors) {
       throw result.errors
     }
@@ -44,8 +37,9 @@ exports.createPages = ({ actions, graphql }) => {
     const { edges } = result.data.allMarkdownRemark
 
     edges.forEach(({ node }, index) => {
-      const prev = index === 0 ? null : edges[index - 1].node
-      const next = index === edges.length - 1 ? null : edges[index + 1].node
+      const prevId = index === 0 ? null : edges[index - 1].node.id
+      const nextId =
+        index === edges.length - 1 ? null : edges[index + 1].node.id
 
       createPage({
         path: path.join('/', node.frontmatter.slug, '/'),
@@ -54,9 +48,9 @@ exports.createPages = ({ actions, graphql }) => {
         ),
         // additional data can be passed via context
         context: {
-          slug: node.frontmatter.slug,
-          prev,
-          next,
+          id: node.id,
+          prevId,
+          nextId,
         },
       })
     })

@@ -25,7 +25,6 @@ module.exports = {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaults: {
-          formats: ['auto', 'avif'],
           placeholder: 'blurred',
         },
         stripMetadata: true,

@@ -61,7 +61,8 @@ const BlogPostTemplate = ({
   content,
   contentComponent,
   metaData,
-  navigation,
+  next,
+  prev,
 }) => {
   const PostContent = contentComponent || Content
   const {
@@ -98,7 +99,7 @@ const BlogPostTemplate = ({
       </Container>
       <footer css="background: #eee; padding: 3em 0">
         <Container>
-          <Navigation next={navigation.next} prev={navigation.prev} />
+          <Navigation next={next} prev={prev} />
         </Container>
       </footer>
     </main>
@@ -118,7 +119,8 @@ const BlogPost = ({ data, pageContext }) => {
         content={post.html}
         contentComponent={HTMLContent}
         metaData={post.frontmatter}
-        navigation={pageContext}
+        next={data.next}
+        prev={data.prev}
       />
     </Layout>
   )
@@ -127,8 +129,8 @@ const BlogPost = ({ data, pageContext }) => {
 export default BlogPost
 
 export const pageQuery = graphql`
-  query BlogPostByID($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+  query BlogPostByID($id: String!, $prevId: String, $nextId: String) {
+    markdownRemark(id: { eq: $id }) {
       id
       html
       excerpt(pruneLength: 300)
@@ -146,6 +148,36 @@ export const pageQuery = graphql`
           }
         }
         imageCaption
+      }
+    }
+    next: markdownRemark(id: { eq: $nextId }) {
+      id
+      frontmatter {
+        title
+        slug
+        templateKey
+        date(formatString: "DD.MM.YYYY")
+        description
+        image {
+          childImageSharp {
+            gatsbyImageData(width: 240, placeholder: BLURRED, layout: FIXED)
+          }
+        }
+      }
+    }
+    prev: markdownRemark(id: { eq: $prevId }) {
+      id
+      frontmatter {
+        title
+        slug
+        templateKey
+        date(formatString: "DD.MM.YYYY")
+        description
+        image {
+          childImageSharp {
+            gatsbyImageData(width: 240, placeholder: BLURRED, layout: FIXED)
+          }
+        }
       }
     }
   }
