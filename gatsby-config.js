@@ -139,5 +139,6 @@ module.exports = {
         ignoreErrors: ['ChunkLoadError'],
       },
     },
+    'gatsby-plugin-netlify',
   ],
 }
