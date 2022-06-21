@@ -19,9 +19,13 @@ Promise.all(
       (match, ext) => `-optimized${ext}`
     )
 
-    // Improve file size additionally with ImageOptim after resizing by pulling the root folder in to the app (https://imageoptim.com/mac)
     await stream.resize(MAX_WIDTH).toFile(optimizedName)
 
     return fs.rename(optimizedName, match)
   })
+)
+
+console.log('Resized large PNGs and JPGs.\n')
+console.log(
+  'Tipp: Improve file size additionally with ImageOptim after resizing by pulling the root folder in to the app (https://imageoptim.com/mac)'
 )
