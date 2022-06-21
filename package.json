@@ -70,7 +70,8 @@
     "update-content-timestamps": "git-date-extractor --out --outFile=content/timestamps.json content/**/*.md content/**/**/*.md content/**/**/**/*.md",
     "update-dependencies": "npx npm-check-updates -u",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
-    "test": "ava"
+    "test": "ava",
+    "optimize-image-dimensions": "node scripts/optimize-image-dimensions.mjs"
   },
   "devDependencies": {
     "@ava/babel": "^1.0.1",

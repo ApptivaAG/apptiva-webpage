@@ -10,7 +10,7 @@ Promise.all(
     const stream = sharp(match)
     const info = await stream.metadata()
 
-    if (info.width < MAX_WIDTH) {
+    if (info.width <= MAX_WIDTH) {
       return
     }
 
