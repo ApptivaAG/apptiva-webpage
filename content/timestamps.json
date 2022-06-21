@@ -13,19 +13,19 @@
   },
   "content/blog/bubble-chat-release/bubble-chat-release.md": {
     "created": 1566473425,
-    "modified": 1566473425
+    "modified": 1641820158
   },
   "content/blog/bubble-chat/bubble-chat.md": {
     "created": 1542729581,
-    "modified": 1558973414
+    "modified": 1641820158
   },
   "content/blog/datenmodell-eines-chatbots-testen/datenmodell-eines-chatbots-testen.md": {
     "created": 1570453079,
-    "modified": 1570453079
+    "modified": 1636984963
   },
   "content/blog/die-apptiva-waechst/die-apptiva-waechst.md": {
     "created": 1559916009,
-    "modified": 1620660251
+    "modified": 1641212060
   },
   "content/blog/drei-jahre-apptiva/drei-jahre-apptiva.md": {
     "created": 1532697036,
@@ -149,7 +149,7 @@
   },
   "content/services/guest-counter/guestcounter.md": {
     "created": 1589369061,
-    "modified": 1619507818
+    "modified": 1644242680
   },
   "content/services/impressum/impressum.md": {
     "created": 1521817718,
@@ -293,7 +293,7 @@
   },
   "content/data/employees/david-decker/david-decker.md": {
     "created": 1572863475,
-    "modified": 1606387418
+    "modified": 1625493751
   },
   "content/data/employees/linus-huesler/linus-huesler.md": {
     "created": 1524669899,
@@ -329,7 +329,7 @@
   },
   "content/data/partners/swisscom/swisscom.md": {
     "created": 1578928504,
-    "modified": 1619449569
+    "modified": 1641390628
   },
   "content/blog/2020-11-erste-schritte-in-der-informatik/erste-schritte-in-der-informatik.md": {
     "created": 1606387418,
@@ -366,5 +366,29 @@
   "content/blog/2021-05-native-vs-web-app/vor-und-nachteile-apple-ios-google-android-app-webapp-pwa.md": {
     "created": 1621267966,
     "modified": 1621414734
+  },
+  "content/blog/2021-08-23-solarify/solarify.md": {
+    "created": 1629669122,
+    "modified": 1629872426
+  },
+  "content/blog/2021-09-22-wissensaustausch/wissensaustausch.md": {
+    "created": 1632407915,
+    "modified": 1632407915
+  },
+  "content/blog/2021-11-18-konfigurierbare-event-packages/konfigurierbare-event-packages.md": {
+    "created": 1634895160,
+    "modified": 1637598460
+  },
+  "content/blog/2021-12-01-slope-track-update-2022/slope-track-update-2022.md": {
+    "created": 1639996906,
+    "modified": 1639996906
+  },
+  "content/blog/2022-02-21-vorgehen-vermitteln/vorgehen-vermitteln.md": {
+    "created": 1645550223,
+    "modified": 1645550223
+  },
+  "content/data/partners/flm/flm.md": {
+    "created": 1641390628,
+    "modified": 1641390628
   }
 }
