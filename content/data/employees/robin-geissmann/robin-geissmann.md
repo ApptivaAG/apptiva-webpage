@@ -11,7 +11,7 @@ slogan: In praktisch jedem Problem, egal wie gross, ist eine winzige, einleuchte
 contact:
   tel: +41 77 422 56 28
   mail: robin.geissmann@apptiva.ch
-  linkedin: https://ch.linkedin.com/in/philip-schoenholzer](https://www.linkedin.com/in/robin-geissmann-15472b143/
+  linkedin: https://www.linkedin.com/in/robin-geissmann-15472b143/
 skills:
   - title: Methodiken
     items:
@@ -65,7 +65,6 @@ skills:
       - name: MSSQL Server
         value: 50
 
-
   - title: Sonstiges
     items:
       - name: MS Server
@@ -83,4 +82,3 @@ skills:
 Man musste noch nie lange suchen, um einen Computer in meiner Nähe zu finden, der entweder zerlegt war oder mit einem ‘nicht abschalten’-Kleber versehen war.
 
 Da war es auch unvermeidlich, dass ich 2014 meine Lehre als Applikationsentwickler abschloss. Seither habe ich mich durch praktisch alle Bereiche der Informatik gehangelt, welche sich mir angeboten haben; von Testautomation zum Support und Client Engineering, wo ich viel über Enterprise Virtualisierung und Windows lernen konnte. Dann über Automatisierung von Embedded Systemen wieder zur Softwareentwicklung und damit schliesslich zu Webapplikationen, deren faszinierenden Möglichkeiten mich nicht mehr losgelassen habe.
-
