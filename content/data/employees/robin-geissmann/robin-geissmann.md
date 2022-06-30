@@ -79,6 +79,6 @@ skills:
 
 # Meine Erfahrungen
 
-Man musste noch nie lange suchen, um einen Computer in meiner Nähe zu finden, der entweder zerlegt war oder mit einem ‘nicht abschalten’-Kleber versehen war.
+Man musste noch nie lange suchen, um einen Computer in meiner Nähe zu finden, der entweder zerlegt oder mit einem ‘nicht abschalten’-Kleber versehen war.
 
-Da war es auch unvermeidlich, dass ich 2014 meine Lehre als Applikationsentwickler abschloss. Seither habe ich mich durch praktisch alle Bereiche der Informatik gehangelt, welche sich mir angeboten haben; von Testautomation zum Support und Client Engineering, wo ich viel über Enterprise Virtualisierung und Windows lernen konnte. Dann über Automatisierung von Embedded Systemen wieder zur Softwareentwicklung und damit schliesslich zu Webapplikationen, deren faszinierenden Möglichkeiten mich nicht mehr losgelassen habe.
+Da war es auch unvermeidlich, dass ich 2014 meine Lehre als Applikationsentwickler abschloss. Seither habe ich mich durch praktisch alle Bereiche der Informatik gehangelt, welche sich mir angeboten haben; von Testautomation zum Support und Client Engineering, wo ich viel über Enterprise Virtualisierung und Windows lernen konnte. Dann über die Automatisierung von Embedded Systemen wieder zur Softwareentwicklung und damit schliesslich zu Webapplikationen, deren faszinierenden Möglichkeiten mich nicht mehr losgelassen haben.
