@@ -11,7 +11,7 @@ categories:
   - Allgemein
 ---
 
-Aus den bekannten Gründen war es in den vergangenen Monaten eher schwierig, einen vernünftigen Team-Event durchzuführen. Wir treffen uns zwar regelmässig zum Mittagessen und trinken wöchentlich unsere virtuellen Biere. Doch die Zeit war reif für einen gemeinsamen Ausflug - und zwar nicht irgendwo hin, sondern auf den schönsten Berg der Welt!
+Aus den bekannten Gründen war es in den vergangenen Monaten eher schwierig, einen vernünftigen Team-Event durchzuführen. Wir treffen uns zwar regelmässig zum Mittagessen und trinken wöchentlich unser Feierabendbier virtuell. Doch die Zeit war reif für einen gemeinsamen Ausflug - und zwar nicht irgendwo hin, sondern auf den schönsten Berg der Welt!
 
 ## Ab aufs Matterhorn 🏔
 
