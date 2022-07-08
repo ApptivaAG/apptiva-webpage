@@ -59,7 +59,7 @@ const Kontakt = () => {
               </ContactInfo>
               <p>Adresse</p>
               <ContactInfo as="address">
-                Apptiva AG <br /> Neuenkirchstrasse 19 <br />
+                Apptiva AG <br /> Eichweid 1 <br />
                 6203 Sempach Station
               </ContactInfo>
               <Button css="font-size: 0.7em; margin-top: 1em;" href="#anfahrt">
@@ -87,7 +87,7 @@ const Kontakt = () => {
           </p>
           <ContactInfo as="address">
             Apptiva AG <br />
-            Neuenkirchstrasse 19 <br />
+            Eichweid 1 <br />
             6203 Sempach Station
           </ContactInfo>
 
@@ -99,7 +99,7 @@ const Kontakt = () => {
             marginHeight="0"
             marginWidth="0"
             scrolling="no"
-            src="https://maps.google.com/maps?q=Apptiva%20AG,%20Neuenkirchstrasse%2019,%20Sempach%20Station&hl=de&geocode=+&hnear=Apptiva%20AG+Neuenkirchstrasse%2019,+Sempach%20Station&t=m&z=10&iwloc=A&output=embed"
+            src="https://maps.google.com/maps?q=Apptiva%20AG,%20Eichweid%201,%20Sempach%20Station&hl=de&geocode=+&hnear=Apptiva%20AG+Eichweid%201,+Sempach%20Station&t=m&z=10&iwloc=A&output=embed"
             width="100%"
           />
         </Container>

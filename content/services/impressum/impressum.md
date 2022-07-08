@@ -3,13 +3,13 @@ templateKey: 'service-page'
 slug: /impressum
 title: Impressum
 author: philip-schoenholzer
-description: 'Impressum der Webseite der Apptiva AG. Kontakt: Apptiva AG, Neuenkirchstrasse 19, 6203 Sempach Station, Schweiz, 041 322 26 26, info@apptiva.ch'
+description: 'Impressum der Webseite der Apptiva AG. Kontakt: Apptiva AG, Eichweid 1, 6203 Sempach Station, Schweiz, 041 322 26 26, info@apptiva.ch'
 ---
 
 # Kontaktadresse
 
 Apptiva AG <br />
-Neuenkirchstrasse 19 <br />
+Eichweid 1 <br />
 6203 Sempach Station <br />
 Schweiz
 
