@@ -5,16 +5,16 @@ templateKey: blog-post
 image: gebaeude.jpg
 date: 2022-07-25
 author: Markus Tanner
-description: Apptiva hat gezügelt. Die Anforderungen an unser Büro haben sich geändert. Sempach Station haben wir aber nicht verlassen.
+description: Apptiva hat ein neues Zuhause. Die Anforderungen an unser Büro haben sich in den letzten Monaten geändert. Sempach Station sind wir aber treu geblieben.
 categories:
   - Allgemein
 ---
 
-Zum zweiten Mal in der Geschichte der Apptiva haben wir unsere Sachen gepackt und sind in ein anderes Büro umgezogen. Allzu weit haben wir es jedoch nicht geschafft. Unser Standort bleibt in Sempach Station und ist rund 200m näher am Bahnhof, an der [Eichweid 1](https://www.google.com/maps?ll=47.115316,8.194063&z=10&t=m&hl=de&gl=US&mapclient=embed&cid=11748342181009380277).
+Zum zweiten Mal in der Geschichte der Apptiva haben wir unsere Sachen gepackt und sind in ein anderes Büro umgezogen. Allzu weit haben wir es jedoch nicht geschafft. Unser Standort bleibt in Sempach Station und ist rund 200 Meter näher am Bahnhof, an der [Eichweid 1](https://www.google.com/maps?ll=47.115316,8.194063&z=10&t=m&hl=de&gl=US&mapclient=embed&cid=11748342181009380277).
 
 ## Weniger ist mehr
 
-Unsere Arbeitsplätze haben sich in den vergangenen Monaten aus bekannten Gründen stark nach Hause verlagert. Die Hälfte von uns arbeitet fast ausschliesslich im Homeoffice. Und das wird sich in absehbarer Zeit auch nicht mehr ändern. Auf acht oder mehr Arbeitsplätze waren wir definitiv nicht mehr angewiesen.
+Unsere Arbeitsplätze haben sich in den vergangenen Monaten aus bekannten Gründen stark nach Hause verlagert. Die Hälfte von uns arbeitet fast ausschliesslich im Homeoffice. Und das wird sich in absehbarer Zeit auch nicht mehr ändern. Auf acht oder mehr Arbeitsplätze sind wir definitiv nicht mehr angewiesen.
 
 Die sehr grosszügigen Büroräumlichkeiten in der Startup Station an der Neuenkirchstrasse waren für uns zunehmend überdimensioniert. Wir haben daher ein Büro gesucht, in welchem wir zu viert arbeiten können. Bei dieser Suche sind wir überraschend schnell fündig geworden an der Eichweid 1. Sempach Station ist für uns sehr praktisch gelegen. Deswegen sind wir froh, dass wir die Gemeinde nicht verlassen mussten. Und nun sind wir sogar noch etwas besser an den ÖV angeschlossen.
 
