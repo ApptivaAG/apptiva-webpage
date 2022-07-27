@@ -82,8 +82,8 @@ const Kontakt = () => {
           <h2>Standort</h2>
 
           <p>
-            Apptiva befindet sich in Sempach an der Autobahn A2 und an der
-            Bahnlinie zwischen Luzern und Sursee.
+            Apptiva befindet sich in Sempach Station an der Autobahn A2 und an
+            der Bahnlinie zwischen Luzern und Sursee.
           </p>
           <ContactInfo as="address">
             Apptiva AG <br />
