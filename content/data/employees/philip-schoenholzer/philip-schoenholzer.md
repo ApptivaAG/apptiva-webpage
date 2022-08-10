@@ -2,7 +2,7 @@
 templateKey: employee-page
 slug: /philip-schoenholzer
 name: Philip Schönholzer
-claim: Vorauszeichnender Querdenker
+claim: Vorauszeichnender Denker
 preview: philip-schoenholzer-prev.jpg
 avatar: philip-schoenholzer.jpg
 role: Produktentwickler, UX-Experte, Unternehmer
@@ -40,7 +40,7 @@ skills:
       - name: Wireframing
         value: 100
       - name: Accessibility
-        value: 75
+        value: 90
   - title: Design
     items:
       - name: UI-/UX-Design
@@ -82,7 +82,7 @@ skills:
       - name: HTML5 / CSS3
         value: 100
       - name: JavaScript / Typescript
-        value: 75
+        value: 85
       - name: Node.js
         value: 75
       - name: React / Next.js
