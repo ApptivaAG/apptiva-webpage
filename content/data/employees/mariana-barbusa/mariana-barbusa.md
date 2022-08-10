@@ -1,7 +1,7 @@
 ---
 templateKey: employee-page
 slug: /mariana-barbusa
-name: David Decker
+name: Mariana Barbusa
 claim: Furchtlose Macherin
 preview: mariana-prev.jpg
 avatar: mariana.jpg
