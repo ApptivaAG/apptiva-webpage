@@ -6,7 +6,7 @@ claim: Furchtlose Macherin
 preview: mariana-prev.jpg
 avatar: mariana.jpg
 role: Content Creator und Marketing Team
-education: in Ausbildung
+education: Studiert im Master Gesellschafts- und Kommunikationswissenschaften
 slogan: Zu meinen Stärken zählt, dass Unbekanntes bei mir keine Abwehrhaltung, sondern Neugierde auslöst. So funktioniert es, wenn man mit Marketingstrategien und Kommunikation arbeitet.
 contact:
   tel: +41 41 562 0108
