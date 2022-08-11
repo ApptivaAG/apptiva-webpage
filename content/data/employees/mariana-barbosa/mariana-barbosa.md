@@ -1,7 +1,7 @@
 ---
 templateKey: employee-page
-slug: /mariana-barbusa
-name: Mariana Barbusa
+slug: /mariana-barbosa
+name: Mariana Barbosa
 claim: Furchtlose Macherin
 preview: mariana-prev.jpg
 avatar: mariana.jpg
