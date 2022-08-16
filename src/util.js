@@ -8,3 +8,5 @@ export const truncate = (text, length) =>
 
 export const compose = (...fns) =>
   fns.reduce((f, g) => (...args) => f(g(...args)))
+
+export const isBrowser = typeof window !== 'undefined'

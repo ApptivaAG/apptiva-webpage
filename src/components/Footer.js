@@ -6,6 +6,7 @@ import { description } from '../config'
 import { Container, Button } from '../style'
 import chevron from '../img/chevron.svg'
 import coronavirus from '../img/coronavirus.svg'
+import TrackingPreview from './TrackingPreview'
 
 const year = new Date().getFullYear()
 
@@ -277,7 +278,8 @@ const Footer = () => (
             ©
           </span>{' '}
           2015 - {year} Apptiva AG. Passgenaue Softwarelösungen.{' '}
-          <Link to="/impressum/">Impressum</Link>
+          <Link to="/impressum/">Impressum</Link>&ensp;|&ensp;
+          <TrackingPreview />
         </Company>
       </Grid>
     </LinkStyle>
