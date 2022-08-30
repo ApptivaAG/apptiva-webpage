@@ -34,7 +34,13 @@ const metadata = {
   Bei uns erhalten Sie passende, benutzerfreundliche Lösungen mit attraktivem Design in der Schweiz entwickelt.`,
 }
 
-const HomePageTemplate = ({ partners, appsImage, chatbot, partyplaner }) => (
+const HomePageTemplate = ({
+  partners,
+  appsImage,
+  chatbot,
+  partyplaner,
+  gaston,
+}) => (
   <Layout showHero>
     <main>
       <SEO metaData={metadata} />
@@ -110,12 +116,16 @@ const HomePageTemplate = ({ partners, appsImage, chatbot, partyplaner }) => (
           <Title>Produkte</Title>
           <Row>
             <Col>
-              <a href="https://gastonsolution.com/">
+              <Link to="/gaston/">
                 <Card>
                   <h3>Gaston</h3>
                   <p>Digitale Speisekarte</p>
+                  <ImgStyled
+                    image={gaston.childImageSharp.gatsbyImageData}
+                    alt="Angebots- und Produktkonfiguratoren"
+                  />
                 </Card>
-              </a>
+              </Link>
             </Col>
             <Col>
               <a href="https://bubble-chat.ch/">
@@ -187,10 +197,13 @@ const HomePageTemplate = ({ partners, appsImage, chatbot, partyplaner }) => (
   </Layout>
 )
 
-const HomePage = ({ data: { chatbot, partyplaner, appsImage, partners } }) => (
+const HomePage = ({
+  data: { chatbot, partyplaner, appsImage, partners, gaston },
+}) => (
   <HomePageTemplate
     chatbot={chatbot}
     partyplaner={partyplaner}
+    gaston={gaston}
     appsImage={appsImage}
     partners={partners}
   />
@@ -237,6 +250,11 @@ export const indexPageQuery = graphql`
     chatbot: file(
       absolutePath: { regex: "/services/chatbots/chatbot-screen2.png/" }
     ) {
+      childImageSharp {
+        gatsbyImageData(height: 140, layout: CONSTRAINED)
+      }
+    }
+    gaston: file(absolutePath: { regex: "/services/gaston/gaston.png/" }) {
       childImageSharp {
         gatsbyImageData(height: 140, layout: CONSTRAINED)
       }

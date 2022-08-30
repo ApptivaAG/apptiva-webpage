@@ -253,13 +253,7 @@ const Footer = () => (
               <Link to="/guestcounter/">Gästezähler</Link>
             </li>
             <li>
-              <a
-                href="https://gastonsolution.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Gaston - Digitale Speisekarte
-              </a>
+              <Link to="/gaston/">Gaston - Digitale Speisekarte</Link>
             </li>
             <li>
               <a
