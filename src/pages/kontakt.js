@@ -8,6 +8,7 @@ import { Container, Section, Button, MainTitle } from '../style'
 import ContactForm from '../components/ContactForm'
 import Seo from '../components/SEO'
 import config from '../config'
+import GoogleTag from '../components/GoogleTag'
 
 const Grid = styled.div`
   display: grid;
@@ -45,6 +46,8 @@ const Kontakt = () => {
     <Layout callToAction={false}>
       <Helmet title={`${metadata.title} - ${config.company}`} />
       <Seo metaData={metadata} />
+      <GoogleTag />
+
       <Section>
         <Container>
           <MainTitle>Kontakt</MainTitle>

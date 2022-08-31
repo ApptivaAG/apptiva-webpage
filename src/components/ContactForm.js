@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { navigate } from 'gatsby-link'
 import styled, { css } from 'styled-components'
 import fetch from 'unfetch'
 
@@ -70,11 +71,7 @@ const ContactForm = () => {
       body,
     })
       .then(() => {
-        /* eslint-disable-next-line no-alert */
-        alert(
-          'Danke! Wir haben Ihre Nachricht erhalten und melden uns so bald wie möglich bei Ihnen.'
-        )
-        setForm({ name: '', email: '', message: '' })
+        navigate('/formular-gesendet/')
       })
       .catch((error) => {
         /* eslint-disable-next-line no-console */
