@@ -53,7 +53,7 @@ Unsere digitale Speisekarte präsentiert Ihr Angebot im besten Licht. Zudem ist 
 
 Über unser CMS pflegen Sie den Inhalt Ihres Angebots und das Design der Speisekarte selber. Schliesslich soll die Speisekarte Ihren Betrieb repräsentieren.
 
-Auf der Webseite von Gaston erfahren Sie mehr über unsere [digitale Speisekarte](https://gastonsolution.com/digitale-speisekarte/). 
+Auf der Webseite von Gaston erfahren Sie mehr über unsere [digitale Speisekarte](https://gastonsolution.com/de/digitale-speisekarte/).
 
 ## Bestell App Gastronomie
 
@@ -63,11 +63,11 @@ Je nach Wunsch können Sie Gaston nur als Speisekarte oder auch zum Bestellen un
 
 Unsere Bestell App Gastronomie ist äusserst flexible. Für jeden Artikel lassen Sie mehrere Variation und Optionen definieren. Zudem ist es möglich, das Angebot abhängig vom Ort und Zeit der Bestellung unterschiedliche zu gestalten. So sind spezielle Preise zur Happy-Hour oder für Take-Away kein Problem.
 
-Auf der Webseite von Gaston erfahren Sie mehr über unsere [Bestell App für Gastronomie](https://gastonsolution.com/restaurant-bestell-app/).
+Auf der Webseite von Gaston erfahren Sie mehr über unsere [Bestell App für Gastronomie](https://gastonsolution.com/de/restaurant-bestell-app/).
 
 ## Gaston
 
-Mehr Informationen zu Gaston finden Sie auf [gastonsolution.com](https://gastonsolution.com)
+Mehr Informationen zu Gaston finden Sie auf [gastonsolution.com](https://gastonsolution.com/de/)
 
 ## Ihr Kontakt
 
