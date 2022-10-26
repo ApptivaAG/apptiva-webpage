@@ -11,7 +11,7 @@ callToAction: Auf uns können Sie zählen.
 introduction: |
   ## Installieren und loszählen
 
-  Der [Gästezähler von Apptiva](https://guestcounter.ch) ist eine einfache Handzähler-App. Er kann Werte hoch- und runterzählen und selbstverständlich wieder zurücksetzen. Der Gästezähler verfügt über eine hervorragende Usability und beinhaltet keine lästige Werbung.
+  Der Gästezähler von Apptiva ist eine einfache Handzähler-App. Er kann Werte hoch- und runterzählen und selbstverständlich wieder zurücksetzen. Der Gästezähler verfügt über eine hervorragende Usability und beinhaltet keine lästige Werbung.
 
   ## Anwendungsbereiche
 
@@ -52,9 +52,3 @@ bulletGroups:
 Wenn der Event oder die Lokalität etwas grösser ist, gibt es normalerweise mehrere Ein- und Ausgänge. Dank der Mehrbenutzer-Synchronisation kann die Anzahl Gäste von mehreren Anwendern gleichzeitig aktualisiert werden. Die Daten werden via Cloud untereinander synchronisiert.
 
 ![Mehrbenutzer-Synchronisation](shared-counter.svg)
-
-## Legen Sie los
-
-Jetzt unkompliziert und kostenlos Ihre Gäste zählen.
-[[button]]
-| [Zum Gästezähler](https://guestcounter.ch)
