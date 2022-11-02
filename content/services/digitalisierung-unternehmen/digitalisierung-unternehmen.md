@@ -1,27 +1,22 @@
 ---
 templateKey: 'service-page'
-slug: /digitalisierung-unternehmen-corona
-title: Mit Digitalisierung Corona meistern
-image: digitalisieren-corona.png
-description: Die Coronakrise zeigt deutlich auf, wo der Schuh bezüglich Digitalisierung drückt. Wir helfen Ihnen, diese Herausforderungen zielgerichtet und effektiv zu lösen.
+slug: /digitalisierung-unternehmen
+title: Jetzt Ihr Unternehmen digitalisieren
+image: digitalisieren.png
+description: Die Coronakrise hat deutlich aufgezeigt, wo der Schuh bezüglich Digitalisierung drückt. Wir helfen Ihnen, diese Herausforderungen zielgerichtet und effektiv zu lösen.
 subtitle:
-  text: Jetzt den Schritt in eine nachhaltige Zukunft machen
+  text: Gemeinsam digitalisieren wir Ihr Unternehmen - schnell und nachhaltig.
 
 callToAction: Machen Sie jetzt den Schritt in eine nachhaltige Zukunft
 introduction: |
-  ## In Zeiten von Corona schnell und nachhaltig digitalisieren
-
-  Die Coronakrise zeigt Ihnen deutlich auf, wo der Schuh bezüglich Digitalisierung drückt. Ihre Kunden erreichen Sie nicht und Ihre Lieferanten können Sie nicht treffen. Ihre Mitarbeiter arbeiten von Zuhause. Ihre Tools und Prozesse sind unzureichend auf die neue Situation ausgelegt und müssen dringend ein Update erhalten. Digitalisierungprojekte haben Sie bis anhin eher auf die lange Bank geschoben. Aber nun möchten Sie Ihr Unternehmen fit für [Covid-19](/coronavirus/) und somit fit für die Zukunft machen.
-
-  **Gemeinsam digitalisieren wir Ihr Unternehmen; schnell und nachhaltig.**
 
   ## Unsere Lösungen, um Ihr Unternehmen zu digitalisieren
 
-  Wir analysieren Ihr Unternehmen und entwickeln passende Apps, Applikationen und Bots, um ihr Unternehmen fit für die Zukunft zu machen. Die vielen Herausforderungen der Digitalisierung meistern wir mit den nachfolgenden Lösungen. Diese bieten sich auch in Zeiten des Coronavirus sehr gut an.
+  Wir analysieren Ihr Unternehmen und entwickeln passende Apps, Applikationen und Bots, um ihr Unternehmen fit für die Zukunft zu machen. Die vielen Herausforderungen der Digitalisierung meistern wir mit den nachfolgenden Lösungen.
 
   ### Web-Applikationen
 
-  Mit einer Web-Applikation erreichen Sie Ihre Kunden und Lieferanten schnell und zuverlässig auch in der Coronakrise. Ihre Kunden brauchen nichts ausser dem Internet, um ihre Dienste in Anspruch zu nehmen. Dies ist niederschwellig und und komfortabel für Ihre Stakeholder. 
+  Mit einer Web-Applikation erreichen Sie Ihre Kunden und Lieferanten schnell und zuverlässig. Ihre Kunden brauchen nichts ausser dem Internet, um ihre Dienste in Anspruch zu nehmen. Dies ist niederschwellig und und komfortabel für Ihre Stakeholder. 
 
   Mögliche Beispiele:
 
@@ -98,7 +93,7 @@ references:
 
 ## Schnell Resultate dank unserem Vorgehen
 
-Wir befinden uns mitten in der Coronakrise und Sie brauchen jetzt Resultate. Gerne unterstützen wir Sie zeitnah bei der Bewältigung der aktuellen Herausforderungen.
+Gerne unterstützen wir Sie zeitnah bei der Bewältigung der aktuellen Herausforderungen.
 Unser Vorgehen sieht dabei folgendermassen aus:
 
 1. ### Ausgangslage und Ziele (2h)

@@ -230,7 +230,7 @@ const Footer = () => (
               <Link to="/chatbots/">Chatbots</Link>
             </li>
             <li>
-              <Link to="/digitalisierung-unternehmen-corona/">
+              <Link to="/digitalisierung-unternehmen/">
                 Digitale Transformation
               </Link>
             </li>

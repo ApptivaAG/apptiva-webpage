@@ -102,7 +102,7 @@ const HomePageTemplate = ({
               <Link to="/weiterentwicklung-apps-produkte/">
                 <h3>Weiterentwicklung von Apps und Produkten</h3>
               </Link>
-              <Link to="/digitalisierung-unternehmen-corona/">
+              <Link to="/digitalisierung-unternehmen/">
                 <h3>Unternehmen digitalisieren</h3>
               </Link>
               <Link to="/future-hack-digitalisierung-gemeinsam-anpacken/">
