@@ -62,9 +62,9 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "start": "npm run develop",
+    "start": "npm run dev",
     "build": "npm run update-content-timestamps && gatsby build",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "preload-fonts": "gatsby-preload-fonts",
     "serve": "serve ./public",
     "clean": "gatsby clean",
