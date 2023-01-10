@@ -39,7 +39,7 @@ const HomePageTemplate = ({
   appsImage,
   chatbot,
   partyplaner,
-  gaston,
+  payflink,
 }) => (
   <Layout showHero>
     <main>
@@ -116,13 +116,13 @@ const HomePageTemplate = ({
           <Title>Produkte</Title>
           <Row>
             <Col>
-              <Link to="/gaston/">
+              <Link to="/payflink/">
                 <Card>
-                  <h3>Gaston</h3>
-                  <p>Digitale Speisekarte</p>
+                  <h3>Payflink</h3>
+                  <p>Restaurant Bestell App & Digitale Speisekarte</p>
                   <ImgStyled
-                    image={gaston.childImageSharp.gatsbyImageData}
-                    alt="Angebots- und Produktkonfiguratoren"
+                    image={payflink.childImageSharp.gatsbyImageData}
+                    alt="Payflink"
                   />
                 </Card>
               </Link>
@@ -198,12 +198,12 @@ const HomePageTemplate = ({
 )
 
 const HomePage = ({
-  data: { chatbot, partyplaner, appsImage, partners, gaston },
+  data: { chatbot, partyplaner, appsImage, partners, payflink },
 }) => (
   <HomePageTemplate
     chatbot={chatbot}
     partyplaner={partyplaner}
-    gaston={gaston}
+    payflink={payflink}
     appsImage={appsImage}
     partners={partners}
   />
@@ -254,7 +254,9 @@ export const indexPageQuery = graphql`
         gatsbyImageData(height: 140, layout: CONSTRAINED)
       }
     }
-    gaston: file(absolutePath: { regex: "/services/gaston/gaston.png/" }) {
+    payflink: file(
+      absolutePath: { regex: "/services/payflink/payflink.png/" }
+    ) {
       childImageSharp {
         gatsbyImageData(height: 140, layout: CONSTRAINED)
       }

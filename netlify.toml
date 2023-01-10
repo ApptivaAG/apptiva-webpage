@@ -26,5 +26,9 @@
   from = "/#kontakt"
   to = "/kontakt/"
 
+[[redirects]]
+  from = "/gaston"
+  to = "/payflink/"
+
 [[plugins]]
 package = "@netlify/plugin-gatsby"
