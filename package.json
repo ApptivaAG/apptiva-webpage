@@ -21,6 +21,7 @@
     "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-plugin-manifest": "^3.1.0",
     "gatsby-plugin-plausible": "0.0.7",
+    "gatsby-plugin-pnpm": "^1.2.10",
     "gatsby-plugin-react-helmet": "^4.1.0",
     "gatsby-plugin-sharp": "^3.1.1",
     "gatsby-plugin-sitemap": "^3.1.0",
@@ -68,7 +69,7 @@
     "serve": "serve ./public",
     "clean": "gatsby clean",
     "update-content-timestamps": "git-date-extractor --out --outFile=content/timestamps.json content/**/*.md content/**/**/*.md content/**/**/**/*.md",
-    "update-dependencies": "npx npm-check-updates -u",
+    "update-dependencies": "pnpm up -L",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "ava",
     "optimize-image-dimensions": "node scripts/optimize-image-dimensions.mjs"

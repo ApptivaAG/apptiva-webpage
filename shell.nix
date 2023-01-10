@@ -9,5 +9,6 @@ mkShell {
       file
       pkg-config
       nasm
+      nodePackages.pnpm
     ];
 }

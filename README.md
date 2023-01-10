@@ -8,7 +8,7 @@ This repo contains the website of [Apptiva AG](https://apptiva.ch/)
 
 ## Getting Started (Recommended)
 
-`npm i`
+`pnpm i`
 
 ### Local development
 
