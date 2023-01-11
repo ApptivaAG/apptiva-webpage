@@ -1,0 +1,19 @@
+---
+import { getCollection } from 'astro:content'
+
+// Get all published blog posts
+const blogPosts = await getCollection('blog')
+---
+
+<ul>
+  {
+    blogPosts.map((post) => (
+      <li>
+        <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+        <time datetime={post.data.date.toISOString()}>
+          {post.data.date.toDateString()}
+        </time>
+      </li>
+    ))
+  }
+</ul>

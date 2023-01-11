@@ -1,75 +1,50 @@
-# Apptiva Webpage
+# Welcome to [Astro](https://astro.build)
 
-This repo contains the website of [Apptiva AG](https://apptiva.ch/)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/s/github/withastro/astro/tree/latest/examples/basics)
 
-## Prerequisites
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-- Node (I recommend using v8.2.0 or higher)
+![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
 
-## Getting Started (Recommended)
 
-`pnpm i`
+## 🚀 Project Structure
 
-### Local development
+Inside of your Astro project, you'll see the following folders and files:
 
-```bash
-npm start     #run the page locally with "hot reloading"
-npm run clean #clean caches
-npm run build #build a static version locally
-npm run serve #serve the local build
+```
+/
+├── public/
+│   └── favicon.svg
+├── src/
+│   ├── components/
+│   │   └── Card.astro
+│   ├── layouts/
+│   │   └── Layout.astro
+│   └── pages/
+│       └── index.astro
+└── package.json
 ```
 
-### Push update
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-To test and review an update make a Pull Request on Github. A preview will be built on netlify, which you can share.
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-After changes of routes or usage of fonts run `npm run preload-fonts` to have the correct fonts be preloaded via http2.
+Any static assets, like images, can be placed in the `public/` directory.
 
-To make a change to the live page apptiva.ch just git commit/push to the master branch. A new version will be built automatically on Gatsby Cloud and deployed to netlify.
+## 🧞 Commands
 
-## Author blog post
+All commands are run from the root of the project, from a terminal:
 
-Blog post are written in Markdown and in the folder `content/blog`. New blog post should be in a new folder.
+| Command                | Action                                             |
+| :--------------------- | :------------------------------------------------- |
+| `npm install`          | Installs dependencies                              |
+| `npm run dev`          | Starts local dev server at `localhost:3000`        |
+| `npm run build`        | Build your production site to `./dist/`            |
+| `npm run preview`      | Preview your build locally, before deploying       |
+| `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
+| `npm run astro --help` | Get help using the Astro CLI                       |
 
-### Markdown
+## 👀 Want to learn more?
 
-The post are written in [Markdown](https://daringfireball.net/projects/markdown/syntax).
-
-Special are the custom-blocks which are configures [here](gatsby-config.js).
-
-Custom blocks are written as following:
-
-```markdown
-[[left]]
-| content
-```
-
-The following custom-blocks are configures:
-
-- left (float left)
-- right (float right)
-- row (grid row)
-- col (grid column)
-- button (button link)
-- avatar (round image)
-- 'no-margin' (no margin between content)
-
-Read more about custom-blocks [here](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-remark-custom-blocks)
-
-### Frontmatter
-
-The data of the blog post is written in Frontmatter/YAML. The structure is the following:
-
-`title`: Title of the post  
-`slug`: URL of the post. Only lowercase letters and "-"  
-`templateKey`: blog-post (which template should be used; for post it needs to be "blog-post")  
-`image`: URI to the hero image of the post. Also used for SEO.  
-`date`: Date of the post. Format like 2019-01-07  
-`author`: Roman Schaller  
-`description`: Lead text and used for SEO. Should be around 180 characters.  
-`categories`:
-
-- Allgemein
-- Multiple categories
-
-How to format a multiline sting in YAML Frontmatter: [Docs](https://yaml-multiline.info)
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
