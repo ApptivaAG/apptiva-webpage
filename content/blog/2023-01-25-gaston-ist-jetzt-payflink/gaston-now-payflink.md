@@ -13,7 +13,7 @@ categories:
 
 Dieses Jahr erfährt unsere Bestell-App Gaston den nächsten Schub. Mit der Gründung der Payflink.com GmbH wird das Ziel verfolgt, die Bestell-App noch erfolgreicher zu vertreiben und mehr Restaurants anzusprechen. Aus diesem Grund ändert sich der Name von Gaston zu Payflink.
 
-Inzwischen haben wir unsere Bestell-App bei über 30 Restaurants installiert. Mit der Unterstützung der Payflink.com GmbH werden die Kunden nun noch aktiver bei der Nutzung der Bestell-App unterstützt.
+Inzwischen haben wir unsere Bestell-App bei über 30 Restaurants installiert. Dank der Payflink.com GmbH werden die Kunden nun noch aktiver bei der Nutzung der Bestell-App unterstützt.
 
 Um den Vertrieb und Support zu verbessern, wird das Team von Payflink grösser. Verkauf und Support werden von entsprechenden Experten übernommen, was uns in die Lage versetzt, noch schneller zu wachsen und für die Zukunft gerüstet zu sein.
 
