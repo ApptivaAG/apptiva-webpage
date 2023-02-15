@@ -58,8 +58,7 @@ const KnowledgeTemplate = ({
   prev,
 }) => {
   const PostContent = contentComponent || Content
-  const { title, image, description, author, date, updatedAt, imageCaption } =
-    metaData
+  const { title, description, author, date } = metaData
 
   return (
     <main>
@@ -98,7 +97,8 @@ const KnowledgePage = ({ data }) => {
         contentComponent={HTMLContent}
         metaData={{
           ...notion.md.frontmatter,
-          excerpt: notion.md.excerpt,
+          description: notion.md.frontmatter.summary,
+          slug: `${knowledgeRoute}/${notion.md.frontmatter.slug}`,
           date,
         }}
         next={data.next}
@@ -121,6 +121,7 @@ export const pageQuery = graphql`
           author
           title
           slug
+          summary
           publishedAt {
             start(formatString: "DD.MM.YYYY")
           }
@@ -134,6 +135,7 @@ export const pageQuery = graphql`
         frontmatter {
           title
           slug
+          summary
           publishedAt {
             start(formatString: "DD.MM.YYYY")
           }
@@ -147,6 +149,7 @@ export const pageQuery = graphql`
         frontmatter {
           title
           slug
+          summary
           publishedAt {
             start(formatString: "DD.MM.YYYY")
           }

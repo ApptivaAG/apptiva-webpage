@@ -41,7 +41,7 @@ const KnowledgeCollection = ({ data }) => {
                   ...post.frontmatter,
                   date: post.frontmatter.publishedAt.start,
                 }}
-                excerpt={post.excerpt}
+                excerpt={post.frontmatter.summary || post.excerpt}
                 route={knowledgeRoute}
               />
             ))}
@@ -69,6 +69,7 @@ export const knowledgeCollectionPageQuery = graphql`
             author
             title
             slug
+            summary
             publishedAt {
               start(formatString: "DD.MM.YYYY")
             }
