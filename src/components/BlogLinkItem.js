@@ -20,9 +20,9 @@ const LinkItem = styled(LinkItemDefault)`
   }
 `
 
-const BlogLinkItem = ({ frontmatter, excerpt, className }) => (
+const BlogLinkItem = ({ frontmatter, excerpt, className, route }) => (
   <LinkItem
-    to={`/${frontmatter.slug}/`}
+    to={`/${route ? route + '/' : ''}${frontmatter.slug}/`}
     key={frontmatter.slug}
     align="left"
     className={className}

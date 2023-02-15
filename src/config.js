@@ -7,4 +7,5 @@ module.exports = {
   logo: 'https://apptiva.ch/img/logo-1200x630.png',
   twitter: '@ApptivaTeam',
   fbAppID: '',
+  knowledgeRoute: 'apptiva-lernt',
 }

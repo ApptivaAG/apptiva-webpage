@@ -6,3 +6,4 @@ static/admin/*.bundle.*
 .DS_Store
 yarn-error.log
 .direnv/
+.env
