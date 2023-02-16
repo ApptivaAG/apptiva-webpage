@@ -43,6 +43,7 @@ specifiers:
   gatsby-remark-responsive-iframe: ^3.1.0
   gatsby-remark-smartypants: ^3.1.0
   gatsby-source-filesystem: ^3.1.0
+  gatsby-source-notion-api: ^0.12.0
   gatsby-transformer-remark: ^3.1.0
   gatsby-transformer-sharp: ^3.1.0
   get-video-id: ^3.2.0
@@ -95,6 +96,7 @@ dependencies:
   gatsby-remark-responsive-iframe: 3.2.0_gatsby@3.15.0
   gatsby-remark-smartypants: 3.2.0_gatsby@3.15.0
   gatsby-source-filesystem: 3.15.0_gatsby@3.15.0
+  gatsby-source-notion-api: 0.12.0
   gatsby-transformer-remark: 3.2.0_gatsby@3.15.0
   gatsby-transformer-sharp: 3.15.0_jwfv56mga6t4i24pklfzzn3nlm
   get-video-id: 3.6.5
@@ -7129,6 +7131,16 @@ packages:
       xstate: 4.35.2
     dev: false
 
+  /gatsby-source-notion-api/0.12.0:
+    resolution: {integrity: sha512-PdiKrsod9ZwMhbqLT/hcWnqtAjEaAntTBKuUX1U0dQiDvFj9wbW8vzZnH7Ua0VZ+Qrh0Mn2f+yeuMB0J9greuw==}
+    dependencies:
+      node-fetch: 2.6.7
+      or-pipets: 1.0.1
+      yaml: 1.10.2
+    transitivePeerDependencies:
+      - encoding
+    dev: false
+
   /gatsby-telemetry/2.15.0:
     resolution: {integrity: sha512-WyiV3LIn/LBuNuDxhInQo/QQlFHSz0Km/T+BGvnQ+3iZrBWTq/e87KN0NKtlQ6PxN7LmGumid4OTr5eLil1A0A==}
     engines: {node: '>=12.13.0'}
@@ -10227,6 +10239,11 @@ packages:
       prelude-ls: 1.2.1
       type-check: 0.4.0
       word-wrap: 1.2.3
+
+  /or-pipets/1.0.1:
+    resolution: {integrity: sha512-xgIIdB4w00pbhtNPYLF/caifwbc4KrE7jy4WqiDRzRrC2g3YVR4ypRwbKRA/bXzftQEA2SK8c+wKI2R7kqKiLQ==}
+    engines: {node: '>=10.0.0'}
+    dev: false
 
   /ora/5.4.1:
     resolution: {integrity: sha512-5b6Y85tPxZZ7QytO+BQzysW31HJku27cRIlkbAXaNx+BdcVi+LlRFmVXzeF6a7JCwJpyw5c4b+YSVImQIrBpuQ==}

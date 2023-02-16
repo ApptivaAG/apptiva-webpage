@@ -124,5 +124,12 @@ module.exports = {
       },
     },
     'gatsby-plugin-netlify',
+    {
+      resolve: `gatsby-source-notion-api`,
+      options: {
+        token: process.env.NOTION_API_TOKEN,
+        databaseId: process.env.NOTION_DB_ID,
+      },
+    },
   ],
 }

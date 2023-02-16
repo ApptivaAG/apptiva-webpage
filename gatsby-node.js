@@ -7,6 +7,7 @@ const remark = require('remark')
 const remarkHTML = require('remark-html')
 
 const timestampsData = require('./content/timestamps.json')
+const { knowledgeRoute } = require('./src/config')
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
@@ -96,7 +97,51 @@ exports.createPages = ({ actions, graphql }) => {
     return null
   })
 
-  return Promise.all([posts, pages])
+  const knowledge = graphql(`
+    query NotionQuery {
+      allNotion(
+        filter: { properties: { slug: { value: { ne: "" } } } }
+        sort: {
+          order: DESC
+          fields: [properties___publishedAt___value___start]
+        }
+      ) {
+        nodes {
+          id
+          properties {
+            slug {
+              value
+            }
+          }
+        }
+      }
+    }
+  `).then((result) => {
+    if (result.errors) {
+      throw result.errors
+    }
+
+    const { nodes } = result.data.allNotion
+
+    nodes.forEach((node, index) => {
+      const prevId = index === 0 ? null : nodes[index - 1].id
+      const nextId = index === nodes.length - 1 ? null : nodes[index + 1].id
+
+      createPage({
+        path: path.join(`/${knowledgeRoute}/`, node.properties.slug.value, '/'),
+        component: path.resolve(`src/templates/knowledge-page.js`),
+        context: {
+          id: node.id,
+          prevId,
+          nextId,
+          slug: node.properties.slug.value,
+        },
+      })
+    })
+    return null
+  })
+
+  return Promise.all([posts, pages, knowledge])
 }
 
 exports.onCreateNode = ({ node, actions: { createNodeField } }) => {

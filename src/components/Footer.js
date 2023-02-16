@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { description } from '../config'
+import { description, knowledgeRoute } from '../config'
 
 import { Container, Button } from '../style'
 import chevron from '../img/chevron.svg'
@@ -148,13 +148,16 @@ const Footer = () => (
               <Link to="/kontakt/">Kontakt</Link>
             </li>
             <li>
-              <a href="/ueber-uns/">Über uns</a>
+              <Link to="/ueber-uns/">Über uns</Link>
             </li>
             <li>
-              <a href="/ueber-uns/#team">Team</a>
+              <Link to="/ueber-uns/#team">Team</Link>
             </li>
             <li>
-              <a href="/jobs/">Jobs</a>
+              <Link to="/jobs/">Jobs</Link>
+            </li>
+            <li>
+              <Link to={`/${knowledgeRoute}/`}>Apptiva lernt</Link>
             </li>
           </ul>
         </Contact>
