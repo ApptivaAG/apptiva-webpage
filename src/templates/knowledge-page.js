@@ -1,10 +1,10 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
 
 import Content, { HTMLContent } from '../components/Content'
-import { Container, MainTitle } from '../style'
+import { Container, MainTitle as DefaultMainTitle } from '../style'
 import { company, knowledgeRoute } from '../config'
 import SEO from '../components/SEO'
 import { stripHTML } from '../util'
@@ -13,6 +13,10 @@ import BlogLinkItem from '../components/BlogLinkItem'
 
 const Header = ({ title }) => (
   <HeadArea>
+    <nav>
+      <Link to={`/${knowledgeRoute}/`}>Apptiva lernt</Link> &gt;{' '}
+      <span dangerouslySetInnerHTML={{ __html: title }}></span>
+    </nav>
     <MainTitle dangerouslySetInnerHTML={{ __html: title }} />
   </HeadArea>
 )
@@ -161,6 +165,7 @@ export const pageQuery = graphql`
 
 const HeadArea = styled.div`
   margin-bottom: 0.6em;
+  margin-top: 4em;
 `
 const Wrapper = styled.div`
   margin-top: 0;
@@ -181,4 +186,7 @@ const Description = styled.p`
   font-weight: 600;
   margin-bottom: 0.4em;
   margin-top: 2em;
+`
+const MainTitle = styled(DefaultMainTitle)`
+  margin-top: 0.5em;
 `
