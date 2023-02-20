@@ -4,7 +4,7 @@ slug: produktkonfiguratoren
 title: Angebots- & <br/>Produkt-Konfiguratoren
 image: partyplaner.png
 author: philip-schoenholzer
-description: Mit einem individuellen eCommerce Produkt- & Angebotskonfigurator verkaufen Sie komplexe Angebote einfach auf Ihrer Webseite oder in Ihrem Webshop.
+description: Verkaufen Sie komplexe Angebote und Produkte einfach auf Ihrer Website oder in Ihrem Webshop mit einem individuellen E-Commerce Produkt- & Angebotskonfigurator.
 subtitle:
   text: Komplexe Angebote einfach auf Ihrer Webseite verkaufen
 
@@ -20,13 +20,13 @@ solutions:
   - title: Grafisch
     image: anhaenger-zubehoer.png
     text: Ein grafischer Produktkonfigurator erlaubt eine äusserst intuitive und attraktive Lösung. Diese eignen sich besonders um visuelle Eigenheiten der Produkte zu vermitteln.
-  - title: Chatbot
-    image: chatbot.png
-    text: Immer öfter kommen auch Chatbots oder Konversations-Dialoge bei der Produktkonfiguration zum Einsatz. Dies ist eine modern und von Anwendern gern genutzte Möglichkeit ein Produkt zu konfigurieren.
+  - title: Web-App
+    image: shop-mit-app.png
+    text: Teilweise sind Produkte komplexer, so dass eine (Web-)App erforderlich wird. Hier sind den Möglichkeiten keine Grenzen gesetzt. Falls sinnvoll, publizieren wir die App auch im App-Store von Apple oder Google.
 
 bulletGroups:
   - title: Vorteile eines Produkt-Konfigurators von Apptiva
-    description: Mit einem individuellen E-Commerce Produkt- & Angebotskonfigurator verkaufen Sie komplexe Angebote einfach auf Ihrer Webseite oder in Ihrem Webshop.
+    description: Mit unserer Erfahrung und unseren Lösungen sind wir in der Lage die technischen Möglichkeiten des Webs und von Apps voll auszuschöpfen. Jeder unserer Produkt-Konfiguratoren ist speziell auf die Bedürfnisse Ihres Unternehmens und Ihrer Kunden zugeschnitten.
 
     bulletList:
       - icon: star
@@ -47,6 +47,9 @@ bulletGroups:
       - icon: lightbulb
         title: Komplexität reduzieren
         text: Wir machen das Leben Ihrer Kunden ein bisschen einfacher und erhöhen gleichzeitig Ihren Umsatz.
+      - icon: credit-card
+        title: Integrierte Zahlung
+        text: Mit unserer Erfahrung im Bereich Online-Zahlungen können wir bei Bedarf verschiedene Zahlungssysteme integrieren.
 
 specs:
   title: Integration und Schnittstellen
