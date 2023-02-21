@@ -26,7 +26,7 @@ solutions:
 
 bulletGroups:
   - title: Vorteile eines Produkt-Konfigurators von Apptiva
-    description: Mit unserer Erfahrung und unseren Lösungen sind wir in der Lage die technischen Möglichkeiten des Webs und von Apps voll auszuschöpfen. Jeder unserer Produkt-Konfiguratoren ist speziell auf die Bedürfnisse Ihres Unternehmens und Ihrer Kunden zugeschnitten.
+    description: Mit unserer Erfahrung und unseren Lösungen sind wir in der Lage, die technischen Möglichkeiten des Webs und von Apps voll auszuschöpfen. Jeder unserer Produkt-Konfiguratoren ist speziell auf die Bedürfnisse der Unternehmen und die ihrer Kunden zugeschnitten.
 
     bulletList:
       - icon: star
@@ -49,7 +49,7 @@ bulletGroups:
         text: Wir machen das Leben Ihrer Kunden ein bisschen einfacher und erhöhen gleichzeitig Ihren Umsatz.
       - icon: credit-card
         title: Integrierte Zahlung
-        text: Mit unserer Erfahrung im Bereich Online-Zahlungen können wir bei Bedarf verschiedene Zahlungssysteme integrieren.
+        text: Dank unserer Erfahrung im Bereich Online-Zahlungen können wir bei Bedarf verschiedene Zahlungssysteme integrieren.
 
 specs:
   title: Integration und Schnittstellen
