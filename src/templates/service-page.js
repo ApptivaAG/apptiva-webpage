@@ -134,7 +134,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
       <Section>
         <Container>
           <Header title={title} image={image} subtitle={subtitle} />
-          {!subtitle && description && <p>{description}</p>}
+          {description && <p>{description}</p>}
         </Container>
       </Section>
       {introduction && (
