@@ -22,7 +22,7 @@ customers:
 
 solutions:
   - title: In Webseiten
-    image: webseiten.png
+    image: chatbot-window.png
     text: Unsere Chatbots können in jegliche Webseiten integriert werden.
   - title: In Messaging-Apps
     image: apps.png

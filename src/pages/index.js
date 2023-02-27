@@ -248,7 +248,7 @@ export const indexPageQuery = graphql`
       }
     }
     chatbot: file(
-      absolutePath: { regex: "/services/chatbots/chatbot-screen2.png/" }
+      absolutePath: { regex: "/services/chatbots/chatbot-window.png/" }
     ) {
       childImageSharp {
         gatsbyImageData(height: 140, layout: CONSTRAINED)

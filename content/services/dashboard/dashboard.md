@@ -32,7 +32,7 @@ solutions:
 
 bulletGroups:
   - title: Vorteile eines Apptiva-Dashboards
-    description: Bei der individuellen Softwareentwicklung halten wir uns an das <a href="http://www.lean-enterprise-app.com/">Manifest der Lean Enterprise App</a>.
+    description: In fast jedem Berufsfeld gehört der Einsatz von Softwareprodukten zum Alltag. Umso wichtiger ist es, dass die Verwendung dieser Hilfsmittel problemlos funktioniert. Bestenfalls machen die Apps und Applikationen sogar Spass. Bei der individuellen Softwareentwicklung halten wir uns an das <a target="_blank" rel="noopener noreferrer" href="http://www.lean-enterprise-app.com/">Manifest der Lean Enterprise App</a>.
 
     bulletList:
       - icon: user
