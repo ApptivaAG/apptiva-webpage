@@ -5,7 +5,6 @@ import { description, knowledgeRoute } from '../config'
 
 import { Container, Button } from '../style'
 import chevron from '../img/chevron.svg'
-import coronavirus from '../img/coronavirus.svg'
 import TrackingPreview from './TrackingPreview'
 
 const year = new Date().getFullYear()
@@ -104,6 +103,13 @@ const Company = styled.div`
   text-align: center;
 `
 
+const Newsletter = styled.div`
+  margin-top: 3em;
+  a {
+    text-decoration: none;
+  }
+`
+
 const Footer = () => (
   <Background>
     <LinkStyle>
@@ -111,35 +117,10 @@ const Footer = () => (
         <About>
           <h2>Über Apptiva</h2>
           <p>{description}</p>
-          <div css="margin-top: 3em;">
+          <Newsletter>
             <h3>Jedes Quartal aktuelle News erhalten</h3>
             <Button to="/newsletter/">Newsletter abonnieren</Button>
-          </div>
-          <div
-            css={`
-              margin-top: 5em;
-              flex: 1 1 auto;
-              font-size: 0.7em;
-              background: #e4e4e4;
-              color: #333;
-            `}
-          >
-            <img
-              css="display:block; padding-top: 1em; height: 30px;"
-              src={coronavirus}
-              alt=""
-              loading="lazy"
-              height="30"
-              width="124"
-            />
-            <p css="margin-bottom: 0; margin-top: 0; padding: 0.8em 1em; font-weight: 600;">
-              Trotz Coronavirus arbeiten wir an allen Projekten in
-              Vollbesetzung.
-            </p>
-            <div css="font-size: 0.9em; padding: 0 1em 1em; text-align: right; color: white;">
-              <Button to="/coronavirus/">Coronavirus bei Apptiva</Button>
-            </div>
-          </div>
+          </Newsletter>
         </About>
         <Contact className="arrow-links">
           <h2>Apptiva</h2>

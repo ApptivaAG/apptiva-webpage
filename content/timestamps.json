@@ -169,7 +169,7 @@
   },
   "content/services/produktkonfiguratoren/produktkonfiguratoren.md": {
     "created": 1527865119,
-    "modified": 1610436413
+    "modified": 1676982195
   },
   "content/services/support/support.md": {
     "created": 1525709929,
@@ -418,5 +418,17 @@
   "content/data/employees/mariana-barbosa/mariana-barbosa.md": {
     "created": 1660209855,
     "modified": 1660209855
+  },
+  "content/blog/2023-01-25-gaston-ist-jetzt-payflink/gaston-now-payflink.md": {
+    "created": 1675153439,
+    "modified": 1675153439
+  },
+  "content/blog/2023-02-01-produktkonfiguratoren/entwicklung-produkt-konfiguratoren.md": {
+    "created": 1675248805,
+    "modified": 1675248805
+  },
+  "content/services/payflink/payflink.md": {
+    "created": 1661846120,
+    "modified": 1673353416
   }
 }
