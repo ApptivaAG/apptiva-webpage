@@ -7,6 +7,9 @@ description: Wir führen die Entwicklung von Apps und Software-Produkten nahtlos
 subtitle:
   text: Wir führen die Entwicklung von Apps und Software-Produkten nahtlos weiter.
 callToAction: Sie möchten die Weiterentwicklung Ihrer Software-Produkte mit Apptiva besprechen?
+breadcrumbs:
+  - route: individuelle-entwicklung
+    name: Individuelle Softwareentwicklung
 ---
 
 ## Wenn es nicht so läuft, wie es sollte

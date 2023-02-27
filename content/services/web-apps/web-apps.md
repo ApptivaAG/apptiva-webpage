@@ -11,6 +11,9 @@ subtitle:
     - unterstützen.
     - vereinfachen.
     - digitalisieren.
+breadcrumbs:
+  - route: individuelle-entwicklung
+    name: Individuelle Softwareentwicklung
 
 customers:
   - suva-300.png

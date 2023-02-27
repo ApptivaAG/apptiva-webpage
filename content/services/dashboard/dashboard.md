@@ -13,6 +13,9 @@ subtitle:
     - beschleunigen.
     - vereinfachen.
     - digitalisieren.
+breadcrumbs:
+  - route: individuelle-entwicklung
+    name: Individuelle Softwareentwicklung
 
 customers:
   - sd.png

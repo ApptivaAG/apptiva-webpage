@@ -4,7 +4,7 @@ slug: /chatbots
 title: Chatbots
 image: chatbot.png
 author: Philip Schönholzer
-description: Individuell entwickelte Chatbots auf Ihre Bedürfnisse zugeschnitten
+description: Wir entwickeln Chatbots, welche exakt auf Ihre Bedürfnisse zugeschnitten sind.
 subtitle:
   text: Erreichen Sie Ihre Kunden und Partner
   swaps:
@@ -19,6 +19,7 @@ customers:
   - luzerner-kantonsspital-500x113.png
   - roche.png
   - kanton-bern-200.png
+  - akso.png
 
 solutions:
   - title: In Webseiten

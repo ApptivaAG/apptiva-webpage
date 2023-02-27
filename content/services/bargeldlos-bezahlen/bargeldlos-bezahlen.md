@@ -7,6 +7,9 @@ author: philip-schoenholzer
 description: Wir entwickeln Apps und Webseiten, damit ihre Kunden bargeldlos bezahlen können.
 subtitle:
   text: Ermöglichen Sie Ihren Kunden das bargeldlose Bezahlen.
+breadcrumbs:
+  - route: individuelle-entwicklung
+    name: Individuelle Softwareentwicklung
 
 callToAction: Nehmen Sie jetzt Kontakt auf, um Ihren Kunden bargeldloses Bezahlen anzubieten.
 introduction: |

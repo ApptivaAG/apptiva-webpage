@@ -77,8 +77,18 @@ const ItemContent = styled.div`
   }
 `
 
-const Header = ({ title, image, subtitle }) => (
+const Header = ({ title, image, subtitle, breadcrumbs }) => (
   <HeadArea>
+    {breadcrumbs && (
+      <nav>
+        {breadcrumbs.map((breadcrumb) => (
+          <>
+            <Link to={`/${breadcrumb.route}/`}>{breadcrumb.name}</Link> &gt;{' '}
+            <span dangerouslySetInnerHTML={{ __html: title }}></span>
+          </>
+        ))}
+      </nav>
+    )}
     <MainTitle dangerouslySetInnerHTML={{ __html: title }} />
     {subtitle && (
       <Subtitle>
@@ -111,6 +121,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
     specs,
     bulletGroups,
     callToAction,
+    breadcrumbs,
   } = metaData
   const seoImage = getSrc(image?.childImageSharp.gatsbyImageData)
 
@@ -133,7 +144,12 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
       <SEO metaData={metaData} postImage={seoImage} />
       <Section>
         <Container>
-          <Header title={title} image={image} subtitle={subtitle} />
+          <Header
+            title={title}
+            image={image}
+            subtitle={subtitle}
+            breadcrumbs={breadcrumbs}
+          />
           {description && <p>{description}</p>}
         </Container>
       </Section>
@@ -292,7 +308,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
   )
 }
 
-const ServicPage = (props) => {
+const ServicePage = (props) => {
   const {
     data: { markdownRemark: post },
   } = props
@@ -310,7 +326,7 @@ const ServicPage = (props) => {
   )
 }
 
-export default ServicPage
+export default ServicePage
 
 export const pageQuery = graphql`
   query ServicePageByID($slug: String!) {
@@ -382,6 +398,10 @@ export const pageQuery = graphql`
             title
             text
           }
+        }
+        breadcrumbs {
+          route
+          name
         }
       }
     }

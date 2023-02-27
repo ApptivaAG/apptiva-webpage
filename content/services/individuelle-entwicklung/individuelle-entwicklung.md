@@ -51,7 +51,7 @@ Wir entwickeln Softwarelösungen passend für Ihre Herausforderungen. So haben s
 
 - ### [Bargeldlose Zahlungslösungen](/bargeldlos-bezahlen/)
 
-- ### [Chatbots](/chatbots/)
+- ### [Weiterentwicklung von Produkten](/weiterentwicklung-apps-produkte/)
 
 <div class="full-width dark-section" style="overflow: auto; margin-top: 4em;">
 <div class="container">
