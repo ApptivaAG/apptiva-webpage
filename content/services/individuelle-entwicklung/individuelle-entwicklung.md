@@ -39,7 +39,11 @@ bulletGroups:
 
 ## Für Ihre Herausforderung die passende Lösung
 
-Wir entwickeln Softwarelösungen passend für Ihre Herausforderungen. So haben sie die Sicherheit, dass sie eine gute Lösung erhalten. Wir entwickeln unter anderem:
+In einem ersten Schritt eines Projekts wollen wir verstehen, welche Herausforderungen angepackt werden sollen. Es gibt sehr viele Faktoren, welche die Wahl von Tools und Technologien beeinflussen.
+
+Oft kommt es vor, dass man von der ursprünglichen Idee etwas abweicht, da es eine kostengünstigere und effizientere Lösung gibt. Gerne unterstützen wir Sie bei diesen Entscheidungen und greifen dabei auf unsere jahrelange Erfahrung zurück.
+
+Wir entwickeln unter anderem:
 
 - ### [Mobile Apps für iOS und Android](/mobile-apps-ios-android/)
 

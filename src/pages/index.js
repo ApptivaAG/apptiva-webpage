@@ -43,6 +43,7 @@ const HomePageTemplate = ({
   payflink,
   digitalisieren,
   support,
+  bubbleChat,
 }) => (
   <Layout showHero>
     <main>
@@ -54,8 +55,8 @@ const HomePageTemplate = ({
             <Col>
               <Link to="/individuelle-entwicklung/">
                 <Card>
-                  <h3>App Entwicklung</h3>
-                  <p>Mobile und Desktop</p>
+                  <h3>Individuelle Entwicklung</h3>
+                  <p>Apps für Mobile und Desktop</p>
                   <ImgStyled
                     image={appsImage.childImageSharp.gatsbyImageData}
                     alt="Apps"
@@ -147,6 +148,10 @@ const HomePageTemplate = ({
                 <Card>
                   <h3>Bubble Chat</h3>
                   <p>KI-basierte Chatbot Lösung</p>
+                  <ImgStyled
+                    image={bubbleChat.childImageSharp.gatsbyImageData}
+                    alt="Bubble Chat"
+                  />
                 </Card>
               </a>
             </Col>
@@ -221,6 +226,7 @@ const HomePage = ({
     payflink,
     digitalisieren,
     support,
+    bubbleChat,
   },
 }) => (
   <HomePageTemplate
@@ -231,6 +237,7 @@ const HomePage = ({
     partners={partners}
     digitalisieren={digitalisieren}
     support={support}
+    bubbleChat={bubbleChat}
   />
 )
 
@@ -296,6 +303,11 @@ export const indexPageQuery = graphql`
       }
     }
     support: file(absolutePath: { regex: "/services/support/life-ring.png/" }) {
+      childImageSharp {
+        gatsbyImageData(height: 140, layout: CONSTRAINED)
+      }
+    }
+    bubbleChat: file(absolutePath: { regex: "/src/img/bubble-chat.png/" }) {
       childImageSharp {
         gatsbyImageData(height: 140, layout: CONSTRAINED)
       }
