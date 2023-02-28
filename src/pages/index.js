@@ -55,7 +55,7 @@ const HomePageTemplate = ({
             <Col>
               <Link to="/individuelle-entwicklung/">
                 <Card>
-                  <h3>Individuelle Entwicklung</h3>
+                  <h3>Individuelle Softwareentwicklung</h3>
                   <p>Apps für Mobile und Desktop</p>
                   <ImgStyled
                     image={appsImage.childImageSharp.gatsbyImageData}
