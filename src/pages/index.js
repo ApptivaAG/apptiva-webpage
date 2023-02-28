@@ -113,7 +113,7 @@ const HomePageTemplate = ({
                   <p>Gemeinsam packen wir die Herausforderungen an.</p>
                   <ImgStyled
                     image={digitalisieren.childImageSharp.gatsbyImageData}
-                    alt="Angebots- und Produktkonfiguratoren"
+                    alt="Unternehmen digitalisieren"
                   />
                 </Card>
               </Link>
@@ -123,7 +123,7 @@ const HomePageTemplate = ({
                   <p>Wir unterstützen Sie mit unserer Brainpower.</p>
                   <ImgStyled
                     image={support.childImageSharp.gatsbyImageData}
-                    alt="Angebots- und Produktkonfiguratoren"
+                    alt="Unterstützung"
                   />
                 </Card>
               </Link>
