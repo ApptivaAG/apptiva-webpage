@@ -302,7 +302,9 @@ export const indexPageQuery = graphql`
         gatsbyImageData(height: 140, layout: CONSTRAINED)
       }
     }
-    support: file(absolutePath: { regex: "/services/support/life-ring.png/" }) {
+    support: file(
+      absolutePath: { regex: "/services/support/unterstuetzung.png/" }
+    ) {
       childImageSharp {
         gatsbyImageData(height: 140, layout: CONSTRAINED)
       }
