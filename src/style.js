@@ -181,6 +181,8 @@ export const Card = styled.div`
     transition: transform 0.3s;
   }
 
+  transition: color 200ms, background-color 200ms;
+
   &:hover {
     color: ${(props) => props.theme.color.bg};
     background-color: ${(props) => props.theme.color.primary};
@@ -193,30 +195,24 @@ export const Card = styled.div`
 `
 
 export const CardLinks = styled.div`
-  background-color: white;
-  padding: 1em;
-  margin-top: 1.5em;
-  cursor: auto;
+  margin-top: 2em;
   p {
-    font-weight: 300;
-    &:hover,
-    &:active {
-      color: ${(props) => props.theme.color.primary};
-      font-weight: 500;
-    }
+    font-weight: 500;
   }
   a {
     display: flex;
     text-decoration: none;
+    color: inherit;
     &:hover,
     &:active {
-      color: ${(props) => props.theme.color.primary};
+      opacity: 0.7;
     }
 
     &:before {
       content: url(${chevron});
       flex: 0 1 auto;
       font-size: 1em;
+      filter: grayscale(100%);
       width: 10px;
       padding-top: 0.15em;
       margin-right: 0.5em;
@@ -224,6 +220,7 @@ export const CardLinks = styled.div`
     }
     &:hover :before {
       transform: translate(4px);
+      filter: grayscale(0%);
     }
     @media (max-width: 1020px) {
       padding: 0.4em 0;
