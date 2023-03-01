@@ -11,6 +11,9 @@ subtitle:
     - unterstützen.
     - vereinfachen.
     - digitalisieren.
+breadcrumbs:
+  - route: individuelle-entwicklung
+    name: Individuelle Softwareentwicklung
 
 callToAction: Nehmen Sie jetzt Kontakt auf, um Ihren Webshop zu besprechen.
 introduction: |

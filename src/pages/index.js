@@ -13,6 +13,7 @@ import {
   ImgStyled,
   Buttonlist,
   Card,
+  CardLinks,
 } from '../style'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
@@ -40,6 +41,9 @@ const HomePageTemplate = ({
   chatbot,
   partyplaner,
   payflink,
+  digitalisieren,
+  support,
+  bubbleChat,
 }) => (
   <Layout showHero>
     <main>
@@ -51,28 +55,33 @@ const HomePageTemplate = ({
             <Col>
               <Link to="/individuelle-entwicklung/">
                 <Card>
-                  <h3>App-Lösungen</h3>
-                  <p>Mobile und Desktop</p>
+                  <h3>Individuelle Softwareentwicklung</h3>
+                  <p>Apps für Mobile und Desktop</p>
                   <ImgStyled
                     image={appsImage.childImageSharp.gatsbyImageData}
                     alt="Apps"
                   />
+                  <CardLinks>
+                    <Link to="/mobile-apps-ios-android/">
+                      <p>Mobile Apps für iOS und Android</p>
+                    </Link>
+                    <Link to="/web-apps/">
+                      <p>Web Apps und Applikationen</p>
+                    </Link>
+                    <Link to="/custom-dashboard/">
+                      <p>Individuelle Dashboards</p>
+                    </Link>
+                    <Link to="/einzigartiger-webshop/">
+                      <p>Einzigartige Webshops</p>
+                    </Link>
+                    <Link to="/bargeldlos-bezahlen/">
+                      <p>Bargeldlose Zahlungslösungen</p>
+                    </Link>
+                    <Link to="/weiterentwicklung-apps-produkte/">
+                      <p>Weiterentwicklung von Produkten</p>
+                    </Link>
+                  </CardLinks>
                 </Card>
-              </Link>
-              <Link to="/mobile-apps-ios-android/">
-                <h3>Mobile Apps für iOS und Android</h3>
-              </Link>
-              <Link to="/web-apps/">
-                <h3>Web Apps und Applikationen</h3>
-              </Link>
-              <Link to="/custom-dashboard/">
-                <h3>Individuelle Dashboards</h3>
-              </Link>
-              <Link to="/einzigartiger-webshop/">
-                <h3>Einzigartige Webshops</h3>
-              </Link>
-              <Link to="/bargeldlos-bezahlen/">
-                <h3>Bargeldlose Zahlungslösungen</h3>
               </Link>
             </Col>
             <Col>
@@ -97,19 +106,26 @@ const HomePageTemplate = ({
                 </Card>
               </Link>
             </Col>
-
             <Col>
-              <Link to="/weiterentwicklung-apps-produkte/">
-                <h3>Weiterentwicklung von Apps und Produkten</h3>
-              </Link>
               <Link to="/digitalisierung-unternehmen/">
-                <h3>Unternehmen digitalisieren</h3>
-              </Link>
-              <Link to="/future-hack-digitalisierung-gemeinsam-anpacken/">
-                <h3>Future Hack - Digitalisierung gemeinsam anpacken</h3>
+                <Card>
+                  <h3>Unternehmen digitalisieren</h3>
+                  <p>Gemeinsam packen wir die Herausforderungen an.</p>
+                  <ImgStyled
+                    image={digitalisieren.childImageSharp.gatsbyImageData}
+                    alt="Unternehmen digitalisieren"
+                  />
+                </Card>
               </Link>
               <Link to="/unterstuetzung/">
-                <h3>Erstklassige Unterstützung</h3>
+                <Card>
+                  <h3>Unterstützung</h3>
+                  <p>Wir unterstützen Sie mit unserer Brainpower.</p>
+                  <ImgStyled
+                    image={support.childImageSharp.gatsbyImageData}
+                    alt="Unterstützung"
+                  />
+                </Card>
               </Link>
             </Col>
           </Row>
@@ -132,6 +148,10 @@ const HomePageTemplate = ({
                 <Card>
                   <h3>Bubble Chat</h3>
                   <p>KI-basierte Chatbot Lösung</p>
+                  <ImgStyled
+                    image={bubbleChat.childImageSharp.gatsbyImageData}
+                    alt="Bubble Chat"
+                  />
                 </Card>
               </a>
             </Col>
@@ -198,7 +218,16 @@ const HomePageTemplate = ({
 )
 
 const HomePage = ({
-  data: { chatbot, partyplaner, appsImage, partners, payflink },
+  data: {
+    chatbot,
+    partyplaner,
+    appsImage,
+    partners,
+    payflink,
+    digitalisieren,
+    support,
+    bubbleChat,
+  },
 }) => (
   <HomePageTemplate
     chatbot={chatbot}
@@ -206,6 +235,9 @@ const HomePage = ({
     payflink={payflink}
     appsImage={appsImage}
     partners={partners}
+    digitalisieren={digitalisieren}
+    support={support}
+    bubbleChat={bubbleChat}
   />
 )
 
@@ -248,7 +280,7 @@ export const indexPageQuery = graphql`
       }
     }
     chatbot: file(
-      absolutePath: { regex: "/services/chatbots/chatbot-screen2.png/" }
+      absolutePath: { regex: "/services/chatbots/chatbot-window.png/" }
     ) {
       childImageSharp {
         gatsbyImageData(height: 140, layout: CONSTRAINED)
@@ -257,6 +289,27 @@ export const indexPageQuery = graphql`
     payflink: file(
       absolutePath: { regex: "/services/payflink/payflink.png/" }
     ) {
+      childImageSharp {
+        gatsbyImageData(height: 140, layout: CONSTRAINED)
+      }
+    }
+    digitalisieren: file(
+      absolutePath: {
+        regex: "/services/digitalisierung-unternehmen/digitalisieren.png/"
+      }
+    ) {
+      childImageSharp {
+        gatsbyImageData(height: 140, layout: CONSTRAINED)
+      }
+    }
+    support: file(
+      absolutePath: { regex: "/services/support/unterstuetzung.png/" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(height: 140, layout: CONSTRAINED)
+      }
+    }
+    bubbleChat: file(absolutePath: { regex: "/src/img/bubble-chat.png/" }) {
       childImageSharp {
         gatsbyImageData(height: 140, layout: CONSTRAINED)
       }

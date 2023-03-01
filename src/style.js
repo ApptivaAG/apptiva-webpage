@@ -3,6 +3,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import styled, { css, createGlobalStyle } from 'styled-components'
+import chevron from './img/chevron.svg'
 
 import newTab from './img/new-tab.svg'
 
@@ -180,6 +181,8 @@ export const Card = styled.div`
     transition: transform 0.3s;
   }
 
+  transition: color 200ms, background-color 200ms;
+
   &:hover {
     color: ${(props) => props.theme.color.bg};
     background-color: ${(props) => props.theme.color.primary};
@@ -187,6 +190,40 @@ export const Card = styled.div`
     ${ImgStyled}, svg {
       transform: scale(1.06);
       color: black;
+    }
+  }
+`
+
+export const CardLinks = styled.div`
+  margin-top: 2em;
+  p {
+    font-weight: 500;
+  }
+  a {
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    &:hover,
+    &:active {
+      opacity: 0.7;
+    }
+
+    &:before {
+      content: url(${chevron});
+      flex: 0 1 auto;
+      font-size: 1em;
+      filter: grayscale(100%);
+      width: 10px;
+      padding-top: 0.15em;
+      margin-right: 0.5em;
+      transition: transform 0.2s;
+    }
+    &:hover :before {
+      transform: translate(4px);
+      filter: grayscale(0%);
+    }
+    @media (max-width: 1020px) {
+      padding: 0.4em 0;
     }
   }
 `

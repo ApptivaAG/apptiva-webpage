@@ -4,9 +4,9 @@ slug: /individuelle-entwicklung
 title: Individuelle Softwareentwicklung
 image: apps.png
 author: philip-schoenholzer
-description: Wir entwickeln individuelle, fokussierte und ausser­gewöhnlich benutzer­freundlich Anwendungen um Ihre einzigartigen Geschäftsprozesse zu beschleunigen.
+description: Wir entwickeln individuelle, fokussierte und benutzer­freundliche Anwendungen, um Ihre einzigartigen Geschäftsprozesse zu beschleunigen. Es gibt heute eine Vielzahl von Tools und Technologien. Wir helfen Ihnen, die richtige Wahl für eine reibungslose Umsetzung und einen optimalen Betrieb zu treffen.
 subtitle:
-  text: Wir entwickeln iOS, Android und Web-Anwendungen um Ihre einzigartigen Geschäftsprozesse zu
+  text: Wir entwickeln iOS-, Android- und Web-Anwendungen, um Ihre einzigartigen Geschäftsprozesse zu
   swaps:
     - beschleunigen.
     - vereinfachen.
@@ -14,7 +14,7 @@ subtitle:
 
 bulletGroups:
   - title: Vorteile der Apptiva-Software­entwicklung
-    description: Bei der individuellen Softwareentwicklung halten wir uns an das <a href="http://www.lean-enterprise-app.com/">Manifest der Lean Enterprise App</a>.
+    description: In fast jedem Berufsfeld gehört der Einsatz von Softwareprodukten zum Alltag. Umso wichtiger ist es, dass die Verwendung dieser Hilfsmittel problemlos funktioniert. Bestenfalls machen die Apps und Applikationen sogar Spass. Bei der individuellen Softwareentwicklung halten wir uns an das <a target="_blank" rel="noopener noreferrer" href="http://www.lean-enterprise-app.com/">Manifest der Lean Enterprise App</a>.
 
     bulletList:
       - icon: clock
@@ -39,7 +39,11 @@ bulletGroups:
 
 ## Für Ihre Herausforderung die passende Lösung
 
-Wir entwickeln Softwarelösungen passend für Ihre Herausforderungen. So haben sie die Sicherheit, dass sie eine gute Lösung erhalten. Wir entwickeln unter anderem:
+In einem ersten Schritt eines Projekts wollen wir verstehen, welche Herausforderungen angepackt werden sollen. Es gibt sehr viele Faktoren, welche die Wahl von Tools und Technologien beeinflussen.
+
+Oft kommt es vor, dass man von der ursprünglichen Idee etwas abweicht, da es eine kostengünstigere und effizientere Lösung gibt. Gerne unterstützen wir Sie bei diesen Entscheidungen und greifen dabei auf unsere jahrelange Erfahrung zurück.
+
+Wir entwickeln unter anderem:
 
 - ### [Mobile Apps für iOS und Android](/mobile-apps-ios-android/)
 
@@ -51,7 +55,7 @@ Wir entwickeln Softwarelösungen passend für Ihre Herausforderungen. So haben s
 
 - ### [Bargeldlose Zahlungslösungen](/bargeldlos-bezahlen/)
 
-- ### [Chatbots](/chatbots/)
+- ### [Weiterentwicklung von Produkten](/weiterentwicklung-apps-produkte/)
 
 <div class="full-width dark-section" style="overflow: auto; margin-top: 4em;">
 <div class="container">
