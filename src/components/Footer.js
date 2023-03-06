@@ -196,26 +196,32 @@ const Footer = () => (
           <h2>Entwicklung</h2>
           <ul>
             <li>
-              <Link to="/individuelle-entwicklung/">Applikationen</Link>
+              <Link to="/individuelle-entwicklung/">
+                Individuelle Softwareentwicklung
+              </Link>
             </li>
             <li>
-              <Link to="/mobile-apps-ios-android/">iOS- und Android-Apps</Link>
+              <Link to="/mobile-apps-ios-android/">
+                Mobile Apps für iOS und Android
+              </Link>
             </li>
             <li>
-              <Link to="/web-apps/">Web-Apps</Link>
-            </li>
-            <li>
-              <Link to="/einzigartiger-webshop/">Webshops</Link>
-            </li>
-            <li>
-              <Link to="/produktkonfiguratoren/">Produktkonfiguratoren</Link>
+              <Link to="/web-apps/">Web-Apps und Applikationen</Link>
             </li>
             <li>
               <Link to="/chatbots/">Chatbots</Link>
             </li>
             <li>
+              <Link to="/produktkonfiguratoren/">Produktkonfiguratoren</Link>
+            </li>
+            <li>
               <Link to="/digitalisierung-unternehmen/">
                 Digitale Transformation
+              </Link>
+            </li>
+            <li>
+              <Link to="/unterstuetzung/">
+                Unterstützung in Softwareprojekten
               </Link>
             </li>
           </ul>
