@@ -29,7 +29,7 @@ Ein Produktkonfigurator ist somit ein nützliches Werkzeug, um variantenreiche P
 Für einen guten Produktkonfigurator sollten einige Aspekte beachtet werden. Zum Beispiel sollte der Produktkonfigurator:
 
 - Einfach und intuitiv zu bedienen sein, ohne zu viele Schritte oder Klicks zu erfordern.
-- Die Produkteigenschaften und Optionen klar und verständlich darstellen, z. B. mit Bildern, Videos oder 3D-Modellen.
+- Die Produkteigenschaften und Optionen klar und verständlich darstellen, z.B. mit Bildern, Videos oder 3D-Modellen.
 - Die logischen und technischen Abhängigkeiten zwischen Produktmerkmalen und Optionen berücksichtigen, um Fehler oder Unmöglichkeiten zu vermeiden.
 - Dem Kunden Feedback und Hilfestellung geben, z.B. durch Hinweise, Empfehlungen oder Warnungen.
 - Dem Kunden die Möglichkeit geben, seine Konfiguration zu speichern, weiterzugeben oder zu bestellen.
