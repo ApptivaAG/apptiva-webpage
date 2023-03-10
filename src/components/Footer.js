@@ -246,13 +246,9 @@ const Footer = () => (
               <Link to="/payflink/">Payflink - Restaurant Bestell App</Link>
             </li>
             <li>
-              <a
-                href="https://bubble-chat.ch"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link to="/bubble-chat/">
                 Bubble Chat - KI-basierte Chatbot Lösung
-              </a>
+              </Link>
             </li>
           </ul>
         </Products>

@@ -144,7 +144,7 @@ const HomePageTemplate = ({
               </Link>
             </Col>
             <Col>
-              <a href="https://bubble-chat.ch/">
+              <a href="bubble-chat/">
                 <Card>
                   <h3>Bubble Chat</h3>
                   <p>KI-basierte Chatbot Lösung</p>
