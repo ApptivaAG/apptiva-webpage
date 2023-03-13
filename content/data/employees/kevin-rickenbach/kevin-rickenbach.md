@@ -33,6 +33,8 @@ skills:
         value: 80
       - name: PHP
         value: 50
+      - name: JavaScript
+        value: 40
       - name: Python
         value: 65
       - name: Java
@@ -45,12 +47,6 @@ skills:
         value: 40
       - name: React
         value: 20
-  - title: Sonstiges
-    items:
-      - name: Englisch
-        value: 95
-      - name: Tableau
-        value: 75
 ---
 
 # Meine Erfahrungen
@@ -59,4 +55,4 @@ Im Sommer 2018 schloss ich mein Bachelor of Science erfolgreich an der an Fachho
 
 Egal ob bei der Umsetzung einer Webseite, dem Ausbau meines VW-T4 Camper oder Engagement in meinem Sportverein, meine initiative Natur lässt mich neue Ideen mit viel Herzblut anpacken.
 
-Ich bin seit über 10 Jahren aktiv Trainer & Coach einer U21, einer Herren-, sowie einer Damen-Korbballmannschaft. Neben meiner Funktion als Trainer, liebe ich es auch selber als Korbballer auf dem Spielfeld zu stehen.
+Ausserdem bin ich seit über 10 Jahren aktiv Trainer & Coach einer U21, einer Herren-, sowie einer Damen-Korbballmannschaft. Neben meiner Funktion als Trainer, liebe ich es auch selber als Korbballer auf dem Spielfeld zu stehen.
