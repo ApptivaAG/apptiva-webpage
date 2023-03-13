@@ -37,6 +37,4 @@ Informationen, die an einen fixen Standort gebunden sind oder Handlungen die nic
 
 ## VR Factory
 
-Mehr Informationen rund um die Themen Virtual- und Augmented Reality finden Sie bei der [VR Factory](https://vr-factory.ch)
-
 Die VR Factory erstellt passgenaue Virtual Reality und Augmented Reality Lösungen für Unternehmen. Dabei setzt sie die Anwender ins Zentrum und schafft mit modernster Technologie Arbeitserleichterung, Qualitätssteigerung und neue Kundenerlebnisse.
