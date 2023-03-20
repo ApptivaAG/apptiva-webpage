@@ -22,7 +22,7 @@ skills:
       - name: Lean
         value: 50
       - name: User Centered Design
-        value: 75
+        value: 80
       - name: User Story Mapping
         value: 90
   - title: Architektur
@@ -35,6 +35,8 @@ skills:
         value: 100
   - title: Backend
     items:
+      - name: node.js
+        value: 100
       - name: Java
         value: 100
       - name: Java EE
@@ -43,19 +45,15 @@ skills:
         value: 90
       - name: RESTful
         value: 100
-      - name: node.js
-        value: 80
       - name: PHP
         value: 75
   - title: Frontend
     items:
-      - name: React / Redux
-        value: 85
+      - name: React
+        value: 100
       - name: AngularJS
-        value: 75
+        value: 70
       - name: JavaScript / TypeScript
-        value: 75
-      - name: Twitter Bootstrap
         value: 90
       - name: HTML5 / CSS3
         value: 90
@@ -67,7 +65,7 @@ skills:
         value: 60
       - name: Netflix OSS
         value: 60
-      - name: 'Mobile: React Native / Ionic'
+      - name: 'Mobile: React Native'
         value: 85
       - name: AsciiDoc / Markdown
         value: 90
