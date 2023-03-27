@@ -46,17 +46,23 @@ const ColTeaser = styled.div`
   padding: 1vw 2rem 1rem;
 `
 
-const Teaser = styled.h2`
-  color: #aaa;
-  margin: 0 0 2rem;
+const TeaserTitle = styled.h2`
+  font-size: 1.8em;
+  margin: 1rem 0;
   max-width: 24rem;
+  color: black;
+  hyphens: none;
 
   @media (max-width: 380px) {
     font-size: 1.4rem;
   }
 `
-const Fat = styled.span`
-  color: black;
+const TeaserText = styled.div`
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #aaaaaa;
+  margin: 0 0 2rem;
+  hyphens: auto;
 `
 
 const Info = styled.div`
@@ -118,10 +124,18 @@ const Hero = () => {
           />
         </ColHero>
         <ColTeaser>
-          <Teaser>
-            Erfolgreiche Entwicklung von <Fat>iOS-, Android-, Desktop-</Fat> und{' '}
-            <Fat>Web-Apps.</Fat>
-          </Teaser>
+          <TeaserTitle>
+            Erfolgreiche Entwicklung von digitalen Produkten
+          </TeaserTitle>
+          <TeaserText>
+            Zusammen mit Ihnen realisieren wir{' '}
+            <a href="individuelle-entwicklung">
+              individuelle Softwarelösungen.
+            </a>
+            <br />
+            Wir entwickeln Mobile Apps sowie Web- und Desktopapplikationen und
+            unterstützen Sie bei der Digi&shy;talisierung.
+          </TeaserText>
           <Button href="/#dienstleistungen">Unser Angebot</Button>
         </ColTeaser>
       </Columns>
