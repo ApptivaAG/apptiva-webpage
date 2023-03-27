@@ -172,7 +172,7 @@ const HomePageTemplate = ({
 
       <Section dark>
         <Container>
-          <h2>Unsere Spezialität</h2>
+          <h2>Mit Apptiva zusammenarbeiten</h2>
           <p css="margin-bottom: 0">
             Das Entwickeln von individuellen Apps und Applikationen ist unsere
             Spezialität. Damit beschleunigen wir Ihre Geschäftsprozesse und
@@ -180,6 +180,18 @@ const HomePageTemplate = ({
             Unternehmens. Wir pflegen eine enge und direkte Zusammenarbeit mit
             unseren Kunden, um schnell und in hoher Qualität passgenaue Lösungen
             bereitstellen zu können.
+          </p>
+          <p css="margin-bottom: 0">
+            Für uns ist es wichtig, ganzheitliche Lösungen zu finden. Wir sind
+            bemüht, bei unseren Produkten und Projekten immer wieder einen Blick
+            über den Tellerrand hinaus zu werfen. Beim Abschluss eines Projektes
+            sollen unsere Kunden und auch wir zufrieden sein mit dem Resultat.
+          </p>
+          <p>
+            Unsere Projekte werden allesamt von uns selbst in der Zentralschweiz
+            🇨🇭 umgesetzt. In der Regel arbeiten wir von zu Hause aus. Bei Bedarf
+            tauschen wir uns jedoch gerne mit unseren Kunden in unserem Büro am
+            schönen Sempachersee aus.
           </p>
           <Buttonlist>
             <Button to="/ueber-uns/">Mehr über uns erfahren</Button>
