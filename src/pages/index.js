@@ -162,9 +162,6 @@ const HomePageTemplate = ({
               <Link to="/dashboard-notaufnahme/">
                 <h3>Dashboard für die Notaufnahme</h3>
               </Link>
-              <Link to="/guestcounter/">
-                <h3>Gästezähler</h3>
-              </Link>
             </Col>
           </Row>
         </Container>
