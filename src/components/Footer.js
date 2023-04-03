@@ -240,9 +240,6 @@ const Footer = () => (
               </Link>
             </li>
             <li>
-              <Link to="/guestcounter/">Gästezähler</Link>
-            </li>
-            <li>
               <Link to="/payflink/">Payflink - Restaurant Bestell App</Link>
             </li>
             <li>
