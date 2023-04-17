@@ -2,11 +2,6 @@ import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 import Marquee from 'react-fast-marquee'
-import { DeemphasizedTitle } from '../style'
-
-const CustomersTitle = styled(DeemphasizedTitle)`
-  font-size: 1em !important;
-`
 
 const Customer = styled.div`
   flex: 0 1 5em;
@@ -16,7 +11,6 @@ const Customer = styled.div`
 
 const Customers = () => (
   <>
-    <CustomersTitle>Auswahl unserer Kunden</CustomersTitle>
     <Marquee speed={40}>
       <Customer>
         <StaticImage

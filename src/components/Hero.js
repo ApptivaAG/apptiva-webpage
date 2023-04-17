@@ -2,8 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import logoSlogan from '../img/logo-slogan.svg'
-import { Button, Container as CntnrDefault, ImgStyled } from '../style'
+import { Button, Container } from '../style'
 import Customers from './Customers'
 import lamp from '../img/hero/lamp.svg'
 import arrow from '../img/hero/arrow.svg'
@@ -11,33 +10,14 @@ import cloud from '../img/hero/cloud.svg'
 import desktop from '../img/hero/desktop.svg'
 import mobile from '../img/hero/mobile.svg'
 
-const Container = styled(CntnrDefault)`
-  box-sizing: border-box;
-  width: 100%;
-
-  @media (min-width: 600px) {
-    max-width: 1080px;
-    padding-left: 3em;
-    padding-right: 3em;
-  }
-`
-
-const Logo = styled.img`
-  height: 4em;
-  width: 10em;
-`
 const Section = styled.section`
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   overflow-x: hidden;
 `
-const Columns = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-`
+
 const ColHero = styled.div`
-  padding-block-end: 2rem;
+  padding-block: 3rem;
 
   display: flex;
   flex-direction: column;
@@ -67,6 +47,8 @@ const ColHero = styled.div`
   }
 
   @media (min-width: 501px) {
+    padding-block: 3rem 1rem;
+
     padding-inline: 4rem;
     display: flex;
     flex-direction: row;
@@ -76,7 +58,7 @@ const Arrow = styled.img`
   margin-left: 10%;
 
   @media (max-width: 500px) {
-    height: 7em !important;
+    height: 6em !important;
     width: 200px;
     transform: rotate(90deg) scale(0.6) translateY(30px);
   }
@@ -88,9 +70,7 @@ const Apps = styled.div`
   align-items: center;
   gap: clamp(1em, 5vw, 2em);
 `
-const ColTeaser = styled.div`
-  padding: 1vw 2rem 1rem;
-`
+const ColTeaser = styled.div``
 
 const TeaserTitle = styled.h2`
   font-size: 1.8em;
@@ -107,7 +87,6 @@ const TeaserText = styled.div`
   font-size: 1.2em;
   font-weight: 400;
   color: #aaaaaa;
-  margin: 0 0 2rem;
   hyphens: auto;
 `
 
@@ -124,40 +103,36 @@ const Info = styled.div`
 `
 
 const Hero = () => {
-  const images = useStaticQuery(graphql`
-    {
-      hero: file(
-        absolutePath: { regex: "/collage.png/" }
-        sourceInstanceName: { eq: "images" }
-      ) {
-        childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
-        }
-      }
-    }
-  `)
-
   return (
     <Section id="start">
-      <Container>
-        <Columns css="justify-content: space-between; align-items: center; margin: 2em 0;">
-          <h1
+      <Info>
+        <Container>
+          <div
             css={`
-              flex: 1 0 10em;
-              font-size: 1em;
-              @media (max-width: 599px) {
-                text-align: center;
-              }
+              display: flex;
+              align-items: center;
+              flex-wrap: wrap;
+              font-size: 0.8em;
+              gap: 0.5rem 1rem;
             `}
           >
-            <Logo
-              height="200"
-              width="80"
-              src={logoSlogan}
-              alt="Apptiva - Passgenaue Softwarelösungen"
-            />
-          </h1>
-        </Columns>
+            <div>
+              <h3>
+                Wir suchen: <a href="/jobs">Fullstack-Entwickler:in</a>
+              </h3>
+              <p css="margin:0;">
+                Gleich bewerben und einen der besten
+                Software&shy;entwicklung-Jobs schnappen.
+              </p>
+            </div>
+            <div css="font-size: 0.9em; margin-left: auto;">
+              <Button to="/jobs/">Jetzt bewerben</Button>
+            </div>
+          </div>
+        </Container>
+      </Info>
+
+      <Container>
         <ColHero>
           <div css="flex: 1.4 !important;">
             <img src={lamp} alt="" />
@@ -193,6 +168,7 @@ const Hero = () => {
           <TeaserTitle>
             Erfolgreiche Entwicklung von digitalen Produkten
           </TeaserTitle>
+
           <TeaserText>
             Zusammen mit Ihnen realisieren wir{' '}
             <a href="individuelle-entwicklung">
@@ -202,39 +178,11 @@ const Hero = () => {
             Wir entwickeln Mobile Apps sowie Web- und Desktopapplikationen und
             unterstützen Sie bei der Digi&shy;talisierung.
           </TeaserText>
-          <Button href="/#dienstleistungen">Unser Angebot</Button>
         </ColTeaser>
       </Container>
 
-      <div css="flex: 1; margin-top: 3em;" />
+      <div css="flex: 1; margin-top: 1em;" />
       <Customers />
-
-      <Info>
-        <Container>
-          <div
-            css={`
-              display: flex;
-              align-items: center;
-              flex-wrap: wrap;
-              font-size: 0.8em;
-              gap: 0.5rem 1rem;
-            `}
-          >
-            <div>
-              <h3>
-                Wir suchen: <a href="/jobs">Fullstack-Entwickler:in</a>
-              </h3>
-              <p css="margin:0;">
-                Gleich bewerben und einen der besten
-                Software&shy;entwicklung-Jobs schnappen.
-              </p>
-            </div>
-            <div css="font-size: 0.9em; margin-left: auto;">
-              <Button to="/jobs/">Jetzt bewerben</Button>
-            </div>
-          </div>
-        </Container>
-      </Info>
     </Section>
   )
 }
