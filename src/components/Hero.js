@@ -1,12 +1,15 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { GatsbyImage, StaticImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 
 import logoSlogan from '../img/logo-slogan.svg'
-import svgData from '../img/collage.svg'
-import { Button, Container as CntnrDefault } from '../style'
+import { Button, Container as CntnrDefault, ImgStyled } from '../style'
 import Customers from './Customers'
+import lamp from '../img/hero/lamp.svg'
+import arrow from '../img/hero/arrow.svg'
+import cloud from '../img/hero/cloud.svg'
+import desktop from '../img/hero/desktop.svg'
+import mobile from '../img/hero/mobile.svg'
 
 const Container = styled(CntnrDefault)`
   box-sizing: border-box;
@@ -34,15 +37,58 @@ const Columns = styled.div`
   flex-wrap: wrap;
 `
 const ColHero = styled.div`
-  flex: 1 1 24rem;
+  padding-block-end: 2rem;
 
-  @media (min-width: 381px) {
-    margin-right: 3rem;
-    margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em 10%;
+
+  div {
+    flex: 4;
+    text-align: center;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  p {
+    font-weight: bold;
+    margin: 0;
+    line-height: 0.9em;
+    text-align: center;
+    color: #aaa;
+
+    span {
+      color: #3e3e3e;
+    }
+  }
+
+  @media (min-width: 501px) {
+    padding-inline: 4rem;
+    display: flex;
+    flex-direction: row;
   }
 `
+const Arrow = styled.img`
+  margin-left: 10%;
+
+  @media (max-width: 500px) {
+    height: 7em !important;
+    width: 200px;
+    transform: rotate(90deg) scale(0.6) translateY(30px);
+  }
+`
+const Apps = styled.div`
+  flex: 2 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1em, 5vw, 2em);
+`
 const ColTeaser = styled.div`
-  flex: 1 1 18rem;
   padding: 1vw 2rem 1rem;
 `
 
@@ -112,16 +158,36 @@ const Hero = () => {
             />
           </h1>
         </Columns>
-      </Container>
-
-      <Columns css="@media (min-width: 640px) {margin-right: 10%;}">
         <ColHero>
-          <GatsbyImage
-            style={{ background: `url("${svgData}")` }}
-            imgStyle={{ backgroundColor: 'white' }}
-            image={images.hero.childImageSharp.gatsbyImageData}
-            alt="Erfolgreich umgesetzte Desktop, Mobile und Weblösungen"
-          />
+          <div css="flex: 1.4 !important;">
+            <img src={lamp} alt="" />
+            <p>
+              Ihre <span>Idee</span>
+            </p>
+          </div>
+          <div css="flex: 2 !important;">
+            <Arrow src={arrow} alt="" />
+          </div>
+          <Apps>
+            <div>
+              <img src={cloud} css="margin-inline: 0%;" alt="" />
+              <p>
+                Ihre <span>Web</span> App
+              </p>
+            </div>
+            <div>
+              <img src={desktop} css="margin-inline: 20%;" alt="" />
+              <p>
+                Ihre <span>Desktop</span> App
+              </p>
+            </div>
+            <div>
+              <img src={mobile} css="margin-inline: 30%;" alt="" />
+              <p>
+                Ihre <span>Mobile</span> App
+              </p>
+            </div>
+          </Apps>
         </ColHero>
         <ColTeaser>
           <TeaserTitle>
@@ -138,7 +204,7 @@ const Hero = () => {
           </TeaserText>
           <Button href="/#dienstleistungen">Unser Angebot</Button>
         </ColTeaser>
-      </Columns>
+      </Container>
 
       <div css="flex: 1; margin-top: 3em;" />
       <Customers />
