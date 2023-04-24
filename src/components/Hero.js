@@ -22,7 +22,7 @@ const ColHero = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2em 10%;
+  gap: 2em 5%;
 
   div {
     flex: 4;
@@ -47,9 +47,12 @@ const ColHero = styled.div`
   }
 
   @media (min-width: 501px) {
-    padding-block: 3rem 1rem;
+    font-size: 0.9rem;
+    padding-block: 3rem 2rem;
 
-    padding-inline: 4rem;
+    padding-inline: 2rem;
+    max-width: 640px;
+    margin-inline: auto;
     display: flex;
     flex-direction: row;
   }
@@ -68,7 +71,7 @@ const Apps = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(1em, 5vw, 2em);
+  gap: clamp(1em, 5vw, 1.2em);
 `
 const ColTeaser = styled.div``
 
@@ -105,36 +108,9 @@ const Info = styled.div`
 const Hero = () => {
   return (
     <Section id="start">
-      <Info>
-        <Container>
-          <div
-            css={`
-              display: flex;
-              align-items: center;
-              flex-wrap: wrap;
-              font-size: 0.8em;
-              gap: 0.5rem 1rem;
-            `}
-          >
-            <div>
-              <h3>
-                Wir suchen: <a href="/jobs">Fullstack-Entwickler:in</a>
-              </h3>
-              <p css="margin:0;">
-                Gleich bewerben und einen der besten
-                Software&shy;entwicklung-Jobs schnappen.
-              </p>
-            </div>
-            <div css="font-size: 0.9em; margin-left: auto;">
-              <Button to="/jobs/">Jetzt bewerben</Button>
-            </div>
-          </div>
-        </Container>
-      </Info>
-
       <Container>
         <ColHero>
-          <div css="flex: 1.4 !important;">
+          <div css="flex: 1.2 !important;">
             <img src={lamp} alt="" />
             <p>
               Ihre <span>Idee</span>
@@ -145,19 +121,19 @@ const Hero = () => {
           </div>
           <Apps>
             <div>
-              <img src={cloud} css="margin-inline: 0%;" alt="" />
+              <img src={cloud} css="margin-inline: 10%;" alt="" />
               <p>
                 Ihre <span>Web</span> App
               </p>
             </div>
             <div>
-              <img src={desktop} css="margin-inline: 20%;" alt="" />
+              <img src={desktop} css="margin-inline: 27%;" alt="" />
               <p>
                 Ihre <span>Desktop</span> App
               </p>
             </div>
             <div>
-              <img src={mobile} css="margin-inline: 30%;" alt="" />
+              <img src={mobile} css="margin-inline: 35%;" alt="" />
               <p>
                 Ihre <span>Mobile</span> App
               </p>
