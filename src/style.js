@@ -198,6 +198,7 @@ export const CardLinks = styled.div`
   margin-top: 2em;
   p {
     font-weight: 500;
+    margin-block: 0.2em 0.4em;
   }
   a {
     display: flex;
@@ -222,9 +223,9 @@ export const CardLinks = styled.div`
       transform: translate(4px);
       filter: grayscale(0%);
     }
-    @media (max-width: 1020px) {
-      padding: 0.4em 0;
-    }
+  }
+  @media (max-width: 1020px) {
+    font-size: 1.2em;
   }
 `
 
