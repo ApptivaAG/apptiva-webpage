@@ -50,7 +50,7 @@ const BlogPreview = () => {
     blogs: { edges: posts },
   } = useStaticQuery(query)
   return (
-    <Section id="blog">
+    <Section id="blog" divider>
       <Container>
         <h2>Blog</h2>
 

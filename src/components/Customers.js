@@ -146,7 +146,7 @@ const MarqueeStyle = styled.div`
 
   .marquee {
     width: clamp(220rem, 400%, 300rem);
-    margin-block: 1rem 4rem;
+    margin-block: 1rem;
     position: relative;
   }
   ul {

@@ -7,6 +7,9 @@ import chevron from './img/chevron.svg'
 
 import newTab from './img/new-tab.svg'
 
+import waves from './img/layered-waves-haikei.svg'
+import wavesBottom from './img/waves-bottom.svg'
+
 export const Section = styled.section`
   position: relative;
   padding-top: 2em;
@@ -17,6 +20,37 @@ export const Section = styled.section`
     css`
       background-color: ${props.theme.color.lightBg};
     `};
+
+  ${(props) =>
+    props.divider &&
+    css`
+      color: white;
+      background-color: ${props.theme.color.primary};
+      padding-top: 0;
+      padding-bottom: 0;
+
+      ::before {
+        display: block;
+        content: ' ';
+        width: 100%;
+        height: 8rem;
+        background-image: url(${waves});
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      ::after {
+        display: block;
+        content: ' ';
+        width: 100%;
+        height: 8rem;
+        background-image: url(${wavesBottom});
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-color: white;
+      }
+    `}
 `
 
 export const Container = styled.div`

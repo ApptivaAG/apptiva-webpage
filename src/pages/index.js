@@ -20,6 +20,7 @@ import SEO from '../components/SEO'
 import Testimonials from '../components/Testimonials'
 import BlogPreview from '../components/BlogPreview'
 import CallToAction from '../components/CallToAction'
+import Hero from '../components/Hero'
 
 const PartnerImage = styled.div`
   display: flex;
@@ -48,7 +49,9 @@ const HomePageTemplate = ({
   <Layout showHero>
     <main>
       <SEO metaData={metadata} />
-      <Section id="dienstleistungen">
+      <Hero />
+
+      <Section id="dienstleistungen" divider>
         <Container>
           <Title>Dienst&shy;leistungen</Title>
           <Row>
@@ -170,7 +173,7 @@ const HomePageTemplate = ({
         </Container>
       </Section>
 
-      <Section dark>
+      <Section>
         <Container>
           <h2>Mit Apptiva zusammenarbeiten</h2>
           <p css="margin-bottom: 0">
@@ -201,13 +204,13 @@ const HomePageTemplate = ({
         </Container>
       </Section>
 
-      <Section>
+      <Section dark>
         <Container>
           <Testimonials />
         </Container>
       </Section>
 
-      <Section dark>
+      <Section>
         <Container>
           <h2>Partner</h2>
           <PartnerImage>
@@ -224,7 +227,7 @@ const HomePageTemplate = ({
       </Section>
 
       <BlogPreview />
-      <CallToAction dark />
+      <CallToAction />
     </main>
   </Layout>
 )

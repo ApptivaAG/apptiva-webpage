@@ -1,8 +1,7 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import { Button, Container } from '../style'
+import { Container } from '../style'
 import Customers from './Customers'
 import lamp from '../img/hero/lamp.svg'
 import arrow from '../img/hero/arrow.svg'
@@ -14,6 +13,7 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  padding-bottom: 0;
 `
 
 const ColHero = styled.div`
@@ -48,7 +48,7 @@ const ColHero = styled.div`
 
   @media (min-width: 501px) {
     font-size: 0.9rem;
-    padding-block: 3rem 2rem;
+    padding-block: 6rem 2rem;
 
     padding-inline: 2rem;
     max-width: 640px;
@@ -93,74 +93,58 @@ const TeaserText = styled.div`
   hyphens: auto;
 `
 
-const Info = styled.div`
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  color: ${(p) => p.theme.color.darkGray};
-  background-color: ${(p) => p.theme.color.lightBg};
-
-  h3 {
-    margin: 0;
-    color: ${(p) => p.theme.color.text};
-  }
-`
-
-const Hero = () => {
-  return (
-    <Section id="start">
-      <Container>
-        <ColHero>
-          <div css="flex: 1.2 !important;">
-            <img src={lamp} alt="" />
+const Hero = () => (
+  <Section id="start">
+    <Container>
+      <ColHero>
+        <div css="flex: 1.2 !important;">
+          <img src={lamp} alt="" />
+          <p>
+            Ihre <span>Idee</span>
+          </p>
+        </div>
+        <div css="flex: 2 !important;">
+          <Arrow src={arrow} alt="" />
+        </div>
+        <Apps>
+          <div>
+            <img src={cloud} css="margin-inline: 10%;" alt="" />
             <p>
-              Ihre <span>Idee</span>
+              Ihre <span>Web</span> App
             </p>
           </div>
-          <div css="flex: 2 !important;">
-            <Arrow src={arrow} alt="" />
+          <div>
+            <img src={desktop} css="margin-inline: 27%;" alt="" />
+            <p>
+              Ihre <span>Desktop</span> App
+            </p>
           </div>
-          <Apps>
-            <div>
-              <img src={cloud} css="margin-inline: 10%;" alt="" />
-              <p>
-                Ihre <span>Web</span> App
-              </p>
-            </div>
-            <div>
-              <img src={desktop} css="margin-inline: 27%;" alt="" />
-              <p>
-                Ihre <span>Desktop</span> App
-              </p>
-            </div>
-            <div>
-              <img src={mobile} css="margin-inline: 35%;" alt="" />
-              <p>
-                Ihre <span>Mobile</span> App
-              </p>
-            </div>
-          </Apps>
-        </ColHero>
-        <ColTeaser>
-          <TeaserTitle>
-            Erfolgreiche Entwicklung von digitalen Produkten
-          </TeaserTitle>
+          <div>
+            <img src={mobile} css="margin-inline: 35%;" alt="" />
+            <p>
+              Ihre <span>Mobile</span> App
+            </p>
+          </div>
+        </Apps>
+      </ColHero>
+      <ColTeaser>
+        <TeaserTitle>
+          Erfolgreiche Entwicklung von digitalen Produkten
+        </TeaserTitle>
 
-          <TeaserText>
-            Zusammen mit Ihnen realisieren wir{' '}
-            <a href="individuelle-entwicklung">
-              individuelle Softwarelösungen.
-            </a>
-            <br />
-            Wir entwickeln Mobile Apps sowie Web- und Desktopapplikationen und
-            unterstützen Sie bei der Digi&shy;talisierung.
-          </TeaserText>
-        </ColTeaser>
-      </Container>
+        <TeaserText>
+          Zusammen mit Ihnen realisieren wir{' '}
+          <a href="individuelle-entwicklung">individuelle Softwarelösungen.</a>
+          <br />
+          Wir entwickeln Mobile Apps sowie Web- und Desktopapplikationen und
+          unterstützen Sie bei der Digi&shy;talisierung.
+        </TeaserText>
+      </ColTeaser>
+    </Container>
 
-      <div css="flex: 1; margin-top: 1em;" />
-      <Customers />
-    </Section>
-  )
-}
+    <div css="flex: 1; margin-top: 1em;" />
+    <Customers />
+  </Section>
+)
 
 export default Hero
