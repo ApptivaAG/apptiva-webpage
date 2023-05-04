@@ -112,11 +112,11 @@ export const Subtitle = styled.h4`
 export const sharedButtonStyle = css`
   display: inline-block;
   padding: 0.6em 1.4em 0.7em;
-  border: 0 none;
+  border: 1px solid ${(props) => props.theme.color.primaryOpac20};
   border-radius: 0.1em;
   font-weight: 500;
-  color: white;
-  background-color: ${(props) => props.theme.color.primary};
+  color: ${(props) => props.theme.color.primaryText};
+  background-color: ${(props) => props.theme.color.primaryOpac10};
   transition: transform 30ms ease-out;
   transform: translate3d(0, 0, 0);
   box-sizing: border-box;
@@ -124,6 +124,9 @@ export const sharedButtonStyle = css`
 
   &:hover {
     transform: translate3d(0, -1px, 0);
+    color: ${(props) => props.theme.color.primaryTextDark};
+    border: 1px solid ${(props) => props.theme.color.primaryOpac40};
+    background-color: ${(props) => props.theme.color.primaryOpac30};
   }
 
   &:active {
@@ -282,6 +285,12 @@ export const theme = {
     bg: 'white',
     lightBg: '#f6f6f6',
     darkGray: '#3d525c',
+    primaryText: 'hsla(200, 100%, 34%, 1)',
+    primaryTextDark: 'hsla(200, 100%, 34%, 1)',
+    primaryOpac10: '#008fd714',
+    primaryOpac20: '#008fd722',
+    primaryOpac30: '#008fd734',
+    primaryOpac40: '#008fd742',
   },
 }
 

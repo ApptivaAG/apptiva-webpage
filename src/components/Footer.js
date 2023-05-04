@@ -119,7 +119,9 @@ const Footer = () => (
           <p>{description}</p>
           <Newsletter>
             <h3>Jedes Quartal aktuelle News erhalten</h3>
-            <Button to="/newsletter/">Newsletter abonnieren</Button>
+            <Button css=":hover {color: white !important;}" to="/newsletter/">
+              Newsletter abonnieren
+            </Button>
           </Newsletter>
         </About>
         <Contact className="arrow-links">

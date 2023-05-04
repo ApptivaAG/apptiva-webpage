@@ -91,6 +91,12 @@ const BlogPreview = () => {
             css={`
               border: 1px solid #fff2;
               background: #fff1;
+
+              :hover {
+                color: white !important;
+                background: #fff3;
+                border-color: #fff4;
+              }
             `}
             to="/blog/"
           >
