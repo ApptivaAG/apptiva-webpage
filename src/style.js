@@ -29,6 +29,14 @@ export const Section = styled.section`
       padding-top: 0;
       padding-bottom: 0;
 
+      a {
+        color: white;
+
+        &:hover {
+          color: #fffb;
+        }
+      }
+
       ::before {
         display: block;
         content: ' ';
@@ -178,6 +186,7 @@ export const Icon = styled.div`
 export const ImgStyled = styled(GatsbyImage)`
   max-width: 340px;
   transition: transform 0.3s;
+  border-radius: 0.5em;
 `
 
 export const Row = styled.div`
@@ -198,8 +207,10 @@ export const Col = styled.div`
 
 export const Card = styled.div`
   padding: 1em;
-  background-color: ${(props) => props.theme.color.lightBg};
+  background-color: #fff1;
   border-radius: 0.2em;
+  border: 1px solid #fff2;
+  color: white;
 
   h3,
   p {
@@ -218,12 +229,11 @@ export const Card = styled.div`
   transition: color 200ms, background-color 200ms;
 
   &:hover {
-    color: ${(props) => props.theme.color.bg};
-    background-color: ${(props) => props.theme.color.primary};
+    background-color: #fff2;
+    border-color: #fff3;
 
     ${ImgStyled}, svg {
       transform: scale(1.06);
-      color: black;
     }
   }
 `
@@ -240,7 +250,7 @@ export const CardLinks = styled.div`
     color: inherit;
     &:hover,
     &:active {
-      opacity: 0.7;
+      opacity: 0.9;
     }
 
     &:before {

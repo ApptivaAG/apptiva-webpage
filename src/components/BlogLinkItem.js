@@ -35,7 +35,7 @@ const BlogLinkItem = ({ frontmatter, excerpt, className, route }) => (
     {frontmatter.image && (
       <GatsbyImage
         image={frontmatter.image.childImageSharp.gatsbyImageData}
-        css="grid-area: image; justify-self: center;"
+        css="grid-area: image; justify-self: center; border-radius: 0.5em;"
         alt={frontmatter.title}
       />
     )}

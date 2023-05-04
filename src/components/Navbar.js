@@ -10,6 +10,7 @@ const NavBar = styled.header`
   top: 0;
   background-color: ${(props) => props.theme.color.primary};
   z-index: 90;
+  border-bottom: 1px solid #fff2;
 `
 
 const Container = styled(DefaultContainer)`
