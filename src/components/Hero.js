@@ -8,6 +8,7 @@ import arrow from '../img/hero/arrow.svg'
 import cloud from '../img/hero/cloud.svg'
 import desktop from '../img/hero/desktop.svg'
 import mobile from '../img/hero/mobile.svg'
+import luzern from '../img/hero/luzern-schweiz.svg'
 
 const Section = styled.section`
   display: flex;
@@ -137,7 +138,8 @@ const Hero = () => (
           <a href="individuelle-entwicklung">individuelle Softwarelösungen.</a>
           <br />
           Wir entwickeln Mobile Apps sowie Web- und Desktopapplikationen und
-          unterstützen Sie bei der Digi&shy;talisierung.
+          unterstützen Sie bei der Digi&shy;talisierung. Entwicklung in Luzern.{' '}
+          <img src={luzern} alt="" height="22" css="margin-block: -3px;" />
         </TeaserText>
       </ColTeaser>
     </Container>
