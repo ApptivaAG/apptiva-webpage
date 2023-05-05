@@ -112,8 +112,8 @@ export const Subtitle = styled.h4`
 export const sharedButtonStyle = css`
   display: inline-block;
   padding: 0.6em 1.4em 0.7em;
-  border: 1px solid ${(props) => props.theme.color.primaryOpac20};
-  border-radius: 0.1em;
+  border: 1px solid ${(props) => props.theme.color.primaryOpac10};
+  border-radius: 0.3em;
   font-weight: 500;
   color: ${(props) => props.theme.color.primaryText};
   background-color: ${(props) => props.theme.color.primaryOpac10};
@@ -125,7 +125,6 @@ export const sharedButtonStyle = css`
   &:hover {
     transform: translate3d(0, -1px, 0);
     color: ${(props) => props.theme.color.primaryTextDark};
-    border: 1px solid ${(props) => props.theme.color.primaryOpac40};
     background-color: ${(props) => props.theme.color.primaryOpac30};
   }
 
