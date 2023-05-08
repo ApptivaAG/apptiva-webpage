@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
+import luzern from '../img/hero/luzern-schweiz.svg'
 
 import {
   Title,
@@ -191,8 +192,9 @@ const HomePageTemplate = ({
             sollen unsere Kunden und auch wir zufrieden sein mit dem Resultat.
           </p>
           <p>
-            Unsere Projekte werden allesamt von uns selbst in der Zentralschweiz
-            🇨🇭 umgesetzt. In der Regel arbeiten wir von zu Hause aus. Bei Bedarf
+            Unsere Projekte werden allesamt von uns selbst in der Zentralschweiz{' '}
+            <img src={luzern} alt="" height="18" css="margin-block: -3px;" />{' '}
+            umgesetzt. In der Regel arbeiten wir von zu Hause aus. Bei Bedarf
             tauschen wir uns jedoch gerne mit unseren Kunden in unserem Büro am
             schönen Sempachersee aus.
           </p>
