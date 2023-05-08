@@ -1,9 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { graphql, Link } from 'gatsby'
 import { GatsbyImage, getSrc } from 'gatsby-plugin-image'
 import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
-import useCollapse from 'react-collapsed'
 
 import Content, { HTMLContent } from '../components/Content'
 import {
@@ -77,6 +76,33 @@ const ItemContent = styled.div`
   }
 `
 
+const CallToAction = styled.div`
+  display: grid;
+
+  .collapsed {
+    grid-area: 1/1/1/1;
+
+    transition: opacity 500ms;
+    &[aria-hidden='true'] {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+  .expanded {
+    grid-area: 1/1/1/1;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms;
+
+    &[aria-hidden='false'] {
+      grid-template-rows: 1fr;
+    }
+    & > div {
+      overflow: hidden;
+    }
+  }
+`
+
 const Header = ({ title, image, subtitle, breadcrumbs }) => (
   <HeadArea>
     {breadcrumbs && (
@@ -108,6 +134,7 @@ const Header = ({ title, image, subtitle, breadcrumbs }) => (
 )
 
 const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
+  const [isExpanded, setIsExpanded] = useState(false)
   const PostContent = contentComponent || Content
   const {
     title,
@@ -124,10 +151,6 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
     breadcrumbs,
   } = metaData
   const seoImage = getSrc(image?.childImageSharp.gatsbyImageData)
-
-  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse({
-    duration: 200,
-  })
 
   return (
     <main>
@@ -279,29 +302,33 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
             {callToAction ||
               'Wir unterstützen Sie gerne bei der Beschleunigung ihrer Geschäftsprozesse'}
           </h2>
-          {!isExpanded && (
-            <p>
-              Rufen Sie uns an unter{' '}
-              <a href="tel:+41413222626">041 322 26 26</a> oder schreiben Sie
-              uns.
-            </p>
-          )}
-          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-          <div {...getCollapseProps()}>
-            <p>
-              Füllen Sie unser Formular aus oder schreiben Sie ein Mail an{' '}
-              <a href="mailto:info@apptiva.ch">info@­apptiva.ch</a> und wir
-              melden uns sobald wie möglich bei ihnen. Sie erreichen uns auch
-              per Telefon unter <a href="tel:+41413222626">041 322 26 26</a>.
-            </p>
-            <ContactForm />
-          </div>
-          {!isExpanded && (
-            // eslint-disable-next-line react/jsx-props-no-spreading
-            <Button type="button" {...getToggleProps()}>
-              Jetzt Nachricht schreiben
-            </Button>
-          )}
+          <p>
+            Rufen Sie uns an unter <a href="tel:+41413222626">041 322 26 26</a>{' '}
+            oder schreiben Sie uns.
+          </p>
+          <CallToAction>
+            <div className="collapsed" aria-hidden={isExpanded}>
+              <Button
+                type="button"
+                onClick={() => {
+                  window.scrollBy({ behavior: 'smooth', top: 200 })
+                  setIsExpanded(true)
+                }}
+              >
+                Jetzt Nachricht schreiben
+              </Button>
+            </div>
+            <div className="expanded" aria-hidden={!isExpanded}>
+              <div>
+                <p>
+                  Füllen Sie unser Formular aus oder schreiben Sie ein Mail an{' '}
+                  <a href="mailto:info@apptiva.ch">info@­apptiva.ch</a> und wir
+                  melden uns sobald wie möglich bei ihnen.
+                </p>
+                <ContactForm />
+              </div>
+            </div>
+          </CallToAction>
         </Container>
       </Section>
     </main>
