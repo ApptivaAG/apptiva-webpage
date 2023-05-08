@@ -50,7 +50,7 @@ const BlogPreview = () => {
     blogs: { edges: posts },
   } = useStaticQuery(query)
   return (
-    <Section id="blog">
+    <Section id="blog" divider>
       <Container>
         <h2>Blog</h2>
 
@@ -87,7 +87,21 @@ const BlogPreview = () => {
           ))}
         </Row>
         <Centered>
-          <Button to="/blog/">Zum Apptiva Blog</Button>
+          <Button
+            css={`
+              border: 1px solid #fff2;
+              background: #fff1;
+
+              :hover {
+                color: white !important;
+                background: #fff3;
+                border-color: #fff4;
+              }
+            `}
+            to="/blog/"
+          >
+            Zum Apptiva Blog
+          </Button>
         </Centered>
       </Container>
     </Section>

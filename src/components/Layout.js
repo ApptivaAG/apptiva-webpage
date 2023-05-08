@@ -16,7 +16,7 @@ if (typeof window !== 'undefined') {
   // eslint-disable-next-line global-require, no-undef
   require('smooth-scroll')('a[href*="#"]', {
     // integer or function returning an integer. How far to offset the scrolling anchor location in pixels
-    offset: 40,
+    offset: 85,
   })
 }
 
@@ -24,7 +24,6 @@ const Layout = ({ children, showHero = false }) => (
   <ThemeProvider theme={theme}>
     <Lightbox>
       <Helmet title={config.title} />
-      {showHero && <Hero />}
       <Navbar location={showHero && 'root'} />
       {children}
       <Footer />

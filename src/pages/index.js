@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
+import luzern from '../img/hero/luzern-schweiz.svg'
 
 import {
   Title,
@@ -20,6 +21,7 @@ import SEO from '../components/SEO'
 import Testimonials from '../components/Testimonials'
 import BlogPreview from '../components/BlogPreview'
 import CallToAction from '../components/CallToAction'
+import Hero from '../components/Hero'
 
 const PartnerImage = styled.div`
   display: flex;
@@ -48,7 +50,9 @@ const HomePageTemplate = ({
   <Layout showHero>
     <main>
       <SEO metaData={metadata} />
-      <Section id="dienstleistungen">
+      <Hero />
+
+      <Section id="dienstleistungen" divider>
         <Container>
           <Title>Dienst&shy;leistungen</Title>
           <Row>
@@ -167,9 +171,9 @@ const HomePageTemplate = ({
         </Container>
       </Section>
 
-      <Section dark>
+      <Section>
         <Container>
-          <h2>Unsere Spezialität</h2>
+          <h2>Mit Apptiva zusammenarbeiten</h2>
           <p css="margin-bottom: 0">
             Das Entwickeln von individuellen Apps und Applikationen ist unsere
             Spezialität. Damit beschleunigen wir Ihre Geschäftsprozesse und
@@ -177,6 +181,19 @@ const HomePageTemplate = ({
             Unternehmens. Wir pflegen eine enge und direkte Zusammenarbeit mit
             unseren Kunden, um schnell und in hoher Qualität passgenaue Lösungen
             bereitstellen zu können.
+          </p>
+          <p css="margin-bottom: 0">
+            Für uns ist es wichtig, ganzheitliche Lösungen zu finden. Wir sind
+            bemüht, bei unseren Produkten und Projekten immer wieder einen Blick
+            über den Tellerrand hinaus zu werfen. Beim Abschluss eines Projektes
+            sollen unsere Kunden und auch wir zufrieden sein mit dem Resultat.
+          </p>
+          <p>
+            Unsere Projekte werden allesamt von uns selbst in der Zentralschweiz{' '}
+            <img src={luzern} alt="" height="18" css="margin-block: -3px;" />{' '}
+            umgesetzt. In der Regel arbeiten wir von zu Hause aus. Bei Bedarf
+            tauschen wir uns jedoch gerne mit unseren Kunden in unserem Büro am
+            schönen Sempachersee aus.
           </p>
           <Buttonlist>
             <Button to="/ueber-uns/">Mehr über uns erfahren</Button>
@@ -186,13 +203,13 @@ const HomePageTemplate = ({
         </Container>
       </Section>
 
-      <Section>
+      <Section dark>
         <Container>
           <Testimonials />
         </Container>
       </Section>
 
-      <Section dark>
+      <Section>
         <Container>
           <h2>Partner</h2>
           <PartnerImage>
@@ -209,7 +226,7 @@ const HomePageTemplate = ({
       </Section>
 
       <BlogPreview />
-      <CallToAction dark />
+      <CallToAction />
     </main>
   </Layout>
 )

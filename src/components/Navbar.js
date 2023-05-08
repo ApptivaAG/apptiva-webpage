@@ -10,6 +10,7 @@ const NavBar = styled.header`
   top: 0;
   background-color: ${(props) => props.theme.color.primary};
   z-index: 90;
+  border-bottom: 1px solid #fff2;
 `
 
 const Container = styled(DefaultContainer)`
@@ -20,8 +21,8 @@ const Container = styled(DefaultContainer)`
 
 const Logo = styled.img`
   display: block;
-  height: 42px;
-  padding: 1rem 0;
+  height: 30px;
+  padding: 0.8rem 0;
 `
 const Navigation = styled.nav`
   margin-right: -1em;
@@ -97,7 +98,7 @@ const Navbar = ({ location }) => (
   <NavBar>
     <Container>
       <DynLink type={location} nav="/#start" data-element="logo">
-        <Logo src={logo} alt="Apptiva" width="206" height="42" />
+        <Logo src={logo} alt="Apptiva" width="147" height="30" />
       </DynLink>
 
       <MenuButton tabIndex="0">Menu</MenuButton>

@@ -7,6 +7,9 @@ import chevron from './img/chevron.svg'
 
 import newTab from './img/new-tab.svg'
 
+import waves from './img/layered-waves-haikei.svg'
+import wavesBottom from './img/waves-bottom.svg'
+
 export const Section = styled.section`
   position: relative;
   padding-top: 2em;
@@ -17,6 +20,45 @@ export const Section = styled.section`
     css`
       background-color: ${props.theme.color.lightBg};
     `};
+
+  ${(props) =>
+    props.divider &&
+    css`
+      color: white;
+      background-color: ${props.theme.color.primary};
+      padding-top: 0;
+      padding-bottom: 0;
+
+      a {
+        color: white;
+
+        &:hover {
+          color: #fffb;
+        }
+      }
+
+      ::before {
+        display: block;
+        content: ' ';
+        width: 100%;
+        height: 8rem;
+        background-image: url(${waves});
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      ::after {
+        display: block;
+        content: ' ';
+        width: 100%;
+        height: 8rem;
+        background-image: url(${wavesBottom});
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-color: white;
+      }
+    `}
 `
 
 export const Container = styled.div`
@@ -70,11 +112,11 @@ export const Subtitle = styled.h4`
 export const sharedButtonStyle = css`
   display: inline-block;
   padding: 0.6em 1.4em 0.7em;
-  border: 0 none;
-  border-radius: 0.1em;
+  border: 1px solid ${(props) => props.theme.color.primaryOpac10};
+  border-radius: 0.3em;
   font-weight: 500;
-  color: white;
-  background-color: ${(props) => props.theme.color.primary};
+  color: ${(props) => props.theme.color.primaryText};
+  background-color: ${(props) => props.theme.color.primaryOpac10};
   transition: transform 30ms ease-out;
   transform: translate3d(0, 0, 0);
   box-sizing: border-box;
@@ -82,6 +124,8 @@ export const sharedButtonStyle = css`
 
   &:hover {
     transform: translate3d(0, -1px, 0);
+    color: ${(props) => props.theme.color.primaryTextDark};
+    background-color: ${(props) => props.theme.color.primaryOpac30};
   }
 
   &:active {
@@ -144,6 +188,7 @@ export const Icon = styled.div`
 export const ImgStyled = styled(GatsbyImage)`
   max-width: 340px;
   transition: transform 0.3s;
+  border-radius: 0.5em;
 `
 
 export const Row = styled.div`
@@ -164,8 +209,10 @@ export const Col = styled.div`
 
 export const Card = styled.div`
   padding: 1em;
-  background-color: ${(props) => props.theme.color.lightBg};
+  background-color: #fff1;
   border-radius: 0.2em;
+  border: 1px solid #fff2;
+  color: white;
 
   h3,
   p {
@@ -184,12 +231,11 @@ export const Card = styled.div`
   transition: color 200ms, background-color 200ms;
 
   &:hover {
-    color: ${(props) => props.theme.color.bg};
-    background-color: ${(props) => props.theme.color.primary};
+    background-color: #fff2;
+    border-color: #fff3;
 
     ${ImgStyled}, svg {
       transform: scale(1.06);
-      color: black;
     }
   }
 `
@@ -198,6 +244,7 @@ export const CardLinks = styled.div`
   margin-top: 2em;
   p {
     font-weight: 500;
+    margin-block: 0.2em 0.4em;
   }
   a {
     display: flex;
@@ -205,7 +252,7 @@ export const CardLinks = styled.div`
     color: inherit;
     &:hover,
     &:active {
-      opacity: 0.7;
+      opacity: 0.9;
     }
 
     &:before {
@@ -222,9 +269,9 @@ export const CardLinks = styled.div`
       transform: translate(4px);
       filter: grayscale(0%);
     }
-    @media (max-width: 1020px) {
-      padding: 0.4em 0;
-    }
+  }
+  @media (max-width: 1020px) {
+    font-size: 1.2em;
   }
 `
 
@@ -237,6 +284,12 @@ export const theme = {
     bg: 'white',
     lightBg: '#f6f6f6',
     darkGray: '#3d525c',
+    primaryText: 'hsla(200, 100%, 34%, 1)',
+    primaryTextDark: 'hsla(200, 100%, 34%, 1)',
+    primaryOpac10: '#008fd714',
+    primaryOpac20: '#008fd722',
+    primaryOpac30: '#008fd734',
+    primaryOpac40: '#008fd742',
   },
 }
 
