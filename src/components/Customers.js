@@ -24,9 +24,9 @@ const CustomerList = () => (
     </li>
     <li>
       <StaticImage
-        src="../img/die-post-logo.png"
+        src="../img/post-logo-2023.png"
         alt="Die Schweizerische Post AG"
-        height={45}
+        height={55}
         loading="eager"
         placeholder="none"
       />
