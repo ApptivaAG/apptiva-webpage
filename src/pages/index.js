@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import { GatsbyImage } from 'gatsby-plugin-image'
+import { GatsbyImage, StaticImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 import luzern from '../img/hero/luzern-schweiz.svg'
 
@@ -171,7 +171,7 @@ const HomePageTemplate = ({
         </Container>
       </Section>
 
-      <Section>
+      <Section css="padding-bottom: 0;">
         <Container>
           <h2>Mit Apptiva zusammenarbeiten</h2>
           <p css="margin-bottom: 0">
@@ -200,6 +200,7 @@ const HomePageTemplate = ({
             <Button to="/vorgehen/">Unser Vorgehen</Button>
             <Button to="/unsere-kompetenzen/">Unsere Kompetenzen</Button>
           </Buttonlist>
+          <StaticImage style={{ marginTop: 40 }} src="../img/team.webp" />
         </Container>
       </Section>
 

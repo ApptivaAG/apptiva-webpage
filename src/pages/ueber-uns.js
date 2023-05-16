@@ -22,7 +22,7 @@ const AboutUs = () => {
       <main>
         <Helmet title={`Über uns - ${company}`} />
         <SEO metaData={metadata} />
-        <Section>
+        <Section css="padding-bottom: 0;">
           <Container>
             <MainTitle>Über uns</MainTitle>
             <p>{description}</p>
@@ -45,6 +45,7 @@ const AboutUs = () => {
               <Button to="/vorgehen/">Unser Vorgehen</Button>
               <Button to="/unsere-kompetenzen/">Unsere Kompetenzen</Button>
             </Buttonlist>
+            <StaticImage style={{ marginTop: 40 }} src="../img/team.webp" />
           </Container>
         </Section>
         <Section dark>
