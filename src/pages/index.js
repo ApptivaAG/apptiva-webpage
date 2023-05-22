@@ -22,6 +22,7 @@ import Testimonials from '../components/Testimonials'
 import BlogPreview from '../components/BlogPreview'
 import CallToAction from '../components/CallToAction'
 import Hero from '../components/Hero'
+import ReferenzenPreview from '../components/ReferenzenPreview'
 
 const PartnerImage = styled.div`
   display: flex;
@@ -209,6 +210,8 @@ const HomePageTemplate = ({
           <Testimonials />
         </Container>
       </Section>
+
+      <ReferenzenPreview />
 
       <Section>
         <Container>

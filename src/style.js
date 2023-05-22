@@ -209,7 +209,8 @@ export const Col = styled.div`
 
 export const Card = styled.div`
   padding: 1em;
-  background-color: #fff1;
+  background-color: ${(props) =>
+    props.$primary ? props.theme.color.primary : '#fff1'};
   border-radius: 0.2em;
   border: 1px solid #fff2;
   color: white;
@@ -231,7 +232,8 @@ export const Card = styled.div`
   transition: color 200ms, background-color 200ms;
 
   &:hover {
-    background-color: #fff2;
+    background-color: ${(props) =>
+      props.$primary ? props.theme.color.primaryOpaccc : '#fff2'};
     border-color: #fff3;
 
     ${ImgStyled}, svg {
@@ -290,6 +292,7 @@ export const theme = {
     primaryOpac20: '#008fd722',
     primaryOpac30: '#008fd734',
     primaryOpac40: '#008fd742',
+    primaryOpaccc: '#008fd7cc',
   },
 }
 
