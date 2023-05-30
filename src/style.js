@@ -234,7 +234,8 @@ export const Card = styled.div`
   &:hover {
     background-color: ${(props) =>
       props.$primary ? props.theme.color.primaryOpaccc : '#fff2'};
-    border-color: #fff3;
+    border-color: ${(props) =>
+      props.$primary ? props.theme.color.primary : '#fff3'};
 
     ${ImgStyled}, svg {
       transform: scale(1.06);

@@ -7,7 +7,7 @@ const remark = require('remark')
 const remarkHTML = require('remark-html')
 
 const timestampsData = require('./content/timestamps.json')
-const { knowledgeRoute } = require('./src/config')
+const { knowledgeRoute, referenzenRoute } = require('./src/config')
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
@@ -141,7 +141,53 @@ exports.createPages = ({ actions, graphql }) => {
     return null
   })
 
-  return Promise.all([posts, pages, knowledge])
+  const referenzen = graphql(`
+    {
+      allMarkdownRemark(
+        limit: 1000
+        sort: { fields: frontmatter___order, order: ASC }
+        filter: { frontmatter: { templateKey: { regex: "/referenz/" } } }
+      ) {
+        edges {
+          node {
+            id
+            frontmatter {
+              slug
+              templateKey
+            }
+          }
+        }
+      }
+    }
+  `).then((result) => {
+    if (result.errors) {
+      throw result.errors
+    }
+
+    const { edges } = result.data.allMarkdownRemark
+
+    edges.forEach(({ node }, index) => {
+      const prevId = index === 0 ? null : edges[index - 1].node.id
+      const nextId =
+        index === edges.length - 1 ? null : edges[index + 1].node.id
+
+      createPage({
+        path: path.join(`/${referenzenRoute}/`, node.frontmatter.slug, '/'),
+        component: path.resolve(
+          `src/templates/${String(node.frontmatter.templateKey)}.js`
+        ),
+        // additional data can be passed via context
+        context: {
+          id: node.id,
+          prevId,
+          nextId,
+        },
+      })
+    })
+    return null
+  })
+
+  return Promise.all([posts, pages, knowledge, referenzen])
 }
 
 exports.onCreateNode = ({ node, actions: { createNodeField } }) => {

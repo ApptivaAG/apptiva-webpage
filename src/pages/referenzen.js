@@ -2,16 +2,16 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
-import { company } from '../config'
+import { company, referenzenRoute } from '../config'
 import { Section, MainTitle, Container } from '../style'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import BlogLinkItem from '../components/BlogLinkItem'
+import ReferenzLinkItem from '../components/ReferenzLinkItem'
 
 const metadata = {
   title: 'Referenzen',
   description: 'Projekte und Produkte der Apptiva.',
-  slug: 'referenzen',
+  slug: referenzenRoute,
 }
 
 const Referenzen = ({ data }) => {
@@ -28,14 +28,17 @@ const Referenzen = ({ data }) => {
             <MainTitle>Referenzen</MainTitle>
 
             {posts.map(({ node: post }) => (
-              <BlogLinkItem
-                key={post.id}
-                css={`
-                  background: ${(p) => p.theme.color.lightBg};
-                `}
-                frontmatter={post.frontmatter}
-                excerpt={post.frontmatter.description}
-              />
+              <>
+                <ReferenzLinkItem
+                  key={post.id}
+                  css={`
+                    background: ${(p) => p.theme.color.lightBg};
+                  `}
+                  frontmatter={post.frontmatter}
+                  excerpt={post.frontmatter.description}
+                  route={referenzenRoute}
+                />
+              </>
             ))}
           </Container>
         </Section>
@@ -49,7 +52,7 @@ export default Referenzen
 export const blogListPage = graphql`
   query ReferenzQuery {
     allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { order: ASC, fields: [frontmatter___order] }
       filter: { frontmatter: { templateKey: { eq: "referenz" } } }
     ) {
       edges {

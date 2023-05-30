@@ -1,10 +1,10 @@
 ---
-title: DiLuna
-slug: diluna
+title: lorem
+slug: lorem
 templateKey: referenz
 image: diluna.png
 imageCaption: DiLuna
-order: 1
+order: 20
 contactaa: Markus Tanner
 description: >-
   DiLuna ist eine Lernumgebung mit digitalen Aufgaben für den naturwissenschaftlich-technischen Unterricht in der Oberstufe. Schüler:innen werden beim Lernen und Lösen von Aufgaben durch Feedback unterstützt.
