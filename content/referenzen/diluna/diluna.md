@@ -1,5 +1,5 @@
 ---
-title: DiLuna
+title: DiLuna - Digitale Lernumgebung
 slug: diluna
 templateKey: referenz
 image: diluna.png

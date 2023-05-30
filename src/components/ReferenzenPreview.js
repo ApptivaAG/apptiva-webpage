@@ -12,12 +12,13 @@ import {
   Card,
 } from '../style'
 import { truncate } from '../util'
+import { referenzenRoute } from '../config'
 
 const query = graphql`
   {
     blogs: allMarkdownRemark(
       limit: 3
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { order: ASC, fields: [frontmatter___order] }
       filter: { frontmatter: { templateKey: { eq: "referenz" } } }
     ) {
       edges {
@@ -58,7 +59,7 @@ const ReferenzenPreview = () => {
           {posts.map(({ node: post }) => (
             <Col key={post.id} full align="left">
               <Link
-                to={`/${post.frontmatter.slug}/`}
+                to={`${referenzenRoute}/${post.frontmatter.slug}/`}
                 css="display: block; height: 100%;"
               >
                 <Card
@@ -71,7 +72,7 @@ const ReferenzenPreview = () => {
                   />
                   <p>
                     {post.frontmatter.description
-                      ? truncate(post.frontmatter.description, 140)
+                      ? truncate(post.frontmatter.description, 300)
                       : post.excerpt}
                   </p>
                   <div css="flex: 1;" />
