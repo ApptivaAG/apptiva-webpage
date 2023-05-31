@@ -81,6 +81,7 @@ const ReferenzenPreview = () => {
                       post.frontmatter.image.childImageSharp.gatsbyImageData
                     }
                     alt="Post image"
+                    css="box-shadow: 0px 2px 5px -1px #00000055; border-radius: 0.5em;"
                   />
                   <p css="margin-top: 0.5em !important;">
                     {post.frontmatter.date}

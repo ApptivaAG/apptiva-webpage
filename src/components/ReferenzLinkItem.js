@@ -35,7 +35,7 @@ const ReferenzLinkItem = ({ frontmatter, excerpt, className, route }) => (
     {frontmatter.image && (
       <GatsbyImage
         image={frontmatter.image.childImageSharp.gatsbyImageData}
-        css="grid-area: image; justify-self: center; border-radius: 0.5em;"
+        css="grid-area: image; justify-self: center; box-shadow: 0px 2px 5px -1px #00000055; border-radius: 0.3em;"
         alt={frontmatter.title}
       />
     )}

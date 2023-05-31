@@ -20,7 +20,7 @@ const Header = ({ title, image, imageCaption }) => (
     <figure>
       <GatsbyImage
         image={image.childImageSharp.gatsbyImageData}
-        style={{ width: '100%' }}
+        css="width: 100%; box-shadow: 0px 2px 6px -1px #00000033; border-radius: 0.5em;"
         alt={title}
       />
       {imageCaption && <figcaption>{imageCaption}</figcaption>}
