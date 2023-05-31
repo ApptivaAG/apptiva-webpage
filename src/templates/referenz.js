@@ -5,10 +5,9 @@ import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
 
 import Content, { HTMLContent } from '../components/Content'
-import { Container, Section, Icon, MainTitle, ImgStyled } from '../style'
-import config, { referenzenRoute } from '../config'
+import { Container, Section, Icon, MainTitle } from '../style'
+import { referenzenRoute } from '../config'
 import SEO from '../components/SEO'
-import { stripHTML } from '../util'
 import Layout from '../components/Layout'
 import ReferenzLinkItem from '../components/ReferenzLinkItem'
 import Contact from '../components/Contact'
@@ -22,8 +21,8 @@ const Header = ({ title, image, imageCaption }) => (
       <GatsbyImage
         image={image.childImageSharp.gatsbyImageData}
         style={{ width: '100%' }}
+        alt={title}
       />
-
       {imageCaption && <figcaption>{imageCaption}</figcaption>}
     </figure>
   </HeadArea>
@@ -78,7 +77,10 @@ const ReferenzTemplate = ({
         />
       </Helmet>
       <SEO
-        metaData={metaData}
+        metaData={{
+          ...metaData,
+          image: getSrc(metaData.image.childImageSharp.gatsbyImageData),
+        }}
         postImage={getSrc(metaData.image.childImageSharp.gatsbyImageData)}
       />
       <Container>

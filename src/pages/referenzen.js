@@ -26,19 +26,16 @@ const Referenzen = ({ data }) => {
         <Section>
           <Container>
             <MainTitle>Referenzen</MainTitle>
-
             {posts.map(({ node: post }) => (
-              <>
-                <ReferenzLinkItem
-                  key={post.id}
-                  css={`
-                    background: ${(p) => p.theme.color.lightBg};
-                  `}
-                  frontmatter={post.frontmatter}
-                  excerpt={post.frontmatter.description}
-                  route={referenzenRoute}
-                />
-              </>
+              <ReferenzLinkItem
+                key={post.id}
+                css={`
+                  background: ${(p) => p.theme.color.lightBg};
+                `}
+                frontmatter={post.frontmatter}
+                excerpt={post.frontmatter.description}
+                route={referenzenRoute}
+              />
             ))}
           </Container>
         </Section>
