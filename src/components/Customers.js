@@ -185,6 +185,15 @@ const CustomerList = () => (
         placeholder="none"
       />
     </li>
+    <li>
+      <StaticImage
+        src="../img/screenimage-logo.png"
+        alt="Screenimage Systems AG"
+        height={40}
+        loading="eager"
+        placeholder="none"
+      />
+    </li>
   </>
 )
 

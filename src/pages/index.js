@@ -272,7 +272,7 @@ export const indexPageQuery = graphql`
             slug
             logo {
               childImageSharp {
-                gatsbyImageData(width: 120, layout: FIXED)
+                gatsbyImageData(width: 160, layout: FIXED)
               }
             }
           }
