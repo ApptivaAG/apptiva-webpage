@@ -8,11 +8,14 @@ order: 20
 contactaa: Markus Tanner
 description: >-
   DiLuna ist eine Lernumgebung mit digitalen Aufgaben für den naturwissenschaftlich-technischen Unterricht in der Oberstufe. Schüler:innen werden beim Lernen und Lösen von Aufgaben durch Feedback unterstützt.
-link: https://diluna-prod.apps.apptiva.ch/
-technologies:
-  - Sanity
-  - Next.js
-  - ...
+contactPerson:
+  name: Markus Tanner
+  role: Projektleiter
+  image: ../../data/employees/markus-tanner/markus-tanner-prev.jpg
+  phone: 041 322 26 26
+  email: markus.tanner@apptiva.ch
+  text1: Haben wir Ihr Interesse geweckt?
+  text2: Kontaktieren Sie uns!
 ---
 
 ## Ausgangslage
