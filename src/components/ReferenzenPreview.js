@@ -64,7 +64,7 @@ const ReferenzenPreview = () => {
               >
                 <Card
                   css="display: flex; flex-direction: column; height: 100%;"
-                  $primary
+                  $light
                 >
                   <h3
                     // eslint-disable-next-line react/no-danger

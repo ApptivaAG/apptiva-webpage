@@ -210,10 +210,11 @@ export const Col = styled.div`
 export const Card = styled.div`
   padding: 1em;
   background-color: ${(props) =>
-    props.$primary ? props.theme.color.primary : '#fff1'};
+    props.$light ? props.theme.color.primaryOpac10 : '#fff1'};
+  color: ${(props) => (props.$light ? props.theme.color.primaryText : 'white')};
+  border: 1px solid
+    ${(props) => (props.$light ? props.theme.color.primaryOpac10 : '#fff2')};
   border-radius: 0.2em;
-  border: 1px solid #fff2;
-  color: white;
 
   h3,
   p {
@@ -233,9 +234,9 @@ export const Card = styled.div`
 
   &:hover {
     background-color: ${(props) =>
-      props.$primary ? props.theme.color.primaryOpaccc : '#fff2'};
+      props.$light ? props.theme.color.primaryOpac30 : '#fff2'};
     border-color: ${(props) =>
-      props.$primary ? props.theme.color.primary : '#fff3'};
+      props.$light ? props.theme.color.light : '#fff3'};
 
     ${ImgStyled}, svg {
       transform: scale(1.06);
