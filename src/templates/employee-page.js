@@ -185,63 +185,73 @@ const EmployeePageTemplate = ({ content, contentComponent, frontmatter }) => {
               <h3>{role}</h3>
               <h4>{education}</h4>
               <p>{slogan}</p>
-              <ContactList>
-                <li>
-                  <a href={`tel:${contact.tel}`}>
-                    <i className="fas fa-phone" />
-                    {contact.tel}
-                  </a>
-                </li>
-                <li>
-                  <a href={`mailto:${contact.mail}`}>
-                    <i className="fas fa-envelope" />
-                    {contact.mail}
-                  </a>
-                </li>
-                {contact.twitter && (
+              {contact && (
+                <ContactList>
                   <li>
-                    <a href={`https://twitter.com/${contact.twitter}`}>
-                      <i className="fab fa-twitter" />@ {contact.twitter}
+                    <a href={`tel:${contact.tel}`}>
+                      <i className="fas fa-phone" />
+                      {contact.tel}
                     </a>
                   </li>
-                )}
-                {contact.xing && (
                   <li>
-                    <a href={contact.xing}>
-                      <i className="fab fa-xing" />
-                      Xing
+                    <a href={`mailto:${contact.mail}`}>
+                      <i className="fas fa-envelope" />
+                      {contact.mail}
                     </a>
                   </li>
-                )}
-                {contact.linkedin && (
-                  <li>
-                    <a href={contact.linkedin}>
-                      <i className="fab fa-linkedin" />
-                      Linkedin
-                    </a>
-                  </li>
-                )}
-              </ContactList>
+                  {contact.twitter && (
+                    <li>
+                      <a href={`https://twitter.com/${contact.twitter}`}>
+                        <i className="fab fa-twitter" />@ {contact.twitter}
+                      </a>
+                    </li>
+                  )}
+                  {contact.xing && (
+                    <li>
+                      <a href={contact.xing}>
+                        <i className="fab fa-xing" />
+                        Xing
+                      </a>
+                    </li>
+                  )}
+                  {contact.linkedin && (
+                    <li>
+                      <a href={contact.linkedin}>
+                        <i className="fab fa-linkedin" />
+                        Linkedin
+                      </a>
+                    </li>
+                  )}
+                </ContactList>
+              )}
             </EmployeeData>
           </EmployeeBanner>
         </Container>
       </Section>
-      <Section>
-        <Container>
-          <h1>Meine Skills</h1>
-          <SkillList>
-            {skills.map((skill, index) => (
-              // eslint-disable-next-line react/jsx-props-no-spreading
-              <Skill key={skill.title} color={colorPalett[index]} {...skill} />
-            ))}
-          </SkillList>
-        </Container>
-      </Section>
-      <Section>
-        <Container>
-          <PostContent content={content} />
-        </Container>
-      </Section>
+      {skills && (
+        <Section>
+          <Container>
+            <h1>Meine Skills</h1>
+            <SkillList>
+              {skills.map((skill, index) => (
+                // eslint-disable-next-line react/jsx-props-no-spreading
+                <Skill
+                  key={skill.title}
+                  color={colorPalett[index]}
+                  {...skill}
+                />
+              ))}
+            </SkillList>
+          </Container>
+        </Section>
+      )}
+      {content && (
+        <Section>
+          <Container>
+            <PostContent content={content} />
+          </Container>
+        </Section>
+      )}
     </main>
   )
 }
