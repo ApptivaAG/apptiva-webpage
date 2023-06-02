@@ -53,3 +53,7 @@ Seit mehreren Jahren dürfen wir bei der Entwicklung des Chatbots aktiv mitwirke
 - Entwicklung der Chatbot-Logik
 - Integration in Umsysteme (Live-Chat, Sendungsverfolgung, WhatsApp, etc.)
 - Betrieb und Wartung innerhalb der Post-Infrastruktur
+
+## Sie suchen Ihr Paket?
+
+Hier finden Sie es: [Post Chat](https://www.post.ch/de/hilfe-und-kontakt-v2)
