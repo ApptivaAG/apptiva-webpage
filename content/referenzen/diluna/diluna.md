@@ -24,6 +24,8 @@ bulletGroups:
       - icon: calendar
         title: Zeitraum
         text: Januar bis Mai 2022, fortlaufende Weiterentwicklung
+apptivaServices:
+  - web-apps
 contactPerson:
   name: Markus Tanner
   role: Projektleiter

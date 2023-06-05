@@ -21,6 +21,9 @@ bulletGroups:
       - icon: calendar
         title: Zeitraum
         text: Herbst 2017, fortlaufende Weiterentwicklung
+apptivaServices:
+  - produktkonfiguratoren
+  - web-apps
 contactPerson:
   name: Linus Hüsler
   role: Projektleiter

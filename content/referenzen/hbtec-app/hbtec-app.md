@@ -23,6 +23,8 @@ bulletGroups:
       - icon: calendar
         title: Zeitraum
         text: seit Dezember 2016, fortlaufende Weiterentwicklungen
+apptivaServices:
+  - mobile-apps-ios-android
 contactPerson:
   name: Linus Hüsler
   role: Projektleiter

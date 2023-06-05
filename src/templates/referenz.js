@@ -1,6 +1,6 @@
 import React from 'react'
-import { graphql } from 'gatsby'
-import { GatsbyImage, getSrc } from 'gatsby-plugin-image'
+import { graphql, Link } from 'gatsby'
+import { GatsbyImage, getSrc, StaticImage } from 'gatsby-plugin-image'
 import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
 
@@ -13,6 +13,36 @@ import ReferenzLinkItem from '../components/ReferenzLinkItem'
 import Contact from '../components/Contact'
 
 const icons = (icon) => `fas fa-${icon}`
+
+const apptivaServiceList = {
+  'mobile-apps-ios-android': {
+    title: 'Mobile Apps für iOS und Android',
+  },
+  'web-apps': {
+    title: 'Web Apps und Applikationen',
+  },
+  chatbots: {
+    title: 'Chatbots',
+  },
+  'custom-dashboard': {
+    title: 'Dashboards',
+  },
+  'einzigartiger-webshop': {
+    title: 'Einzigartige Webshops',
+  },
+  'bargeldlos-bezahlen': {
+    title: 'Bargeldlose Zahlungslösungen',
+  },
+  'weiterentwicklung-apps-produkte': {
+    title: 'Weiterentwicklung von Produkten',
+  },
+  'digitalisierung-unternehmen': {
+    title: 'Unternehmen digitalisieren',
+  },
+  produktkonfiguratoren: {
+    title: 'Produktkonfiguratoren',
+  },
+}
 
 const Header = ({ title, image, imageCaption }) => (
   <HeadArea>
@@ -62,7 +92,22 @@ const ReferenzTemplate = ({
     imageCaption,
     bulletGroups,
     contactPerson,
+    apptivaServices,
   } = metaData
+
+  const apptivaServiceIcon = (
+    <StaticImage
+      src="../img/icon-256x256.png"
+      alt="Apptiva Dienstleistung"
+      placeholder="none"
+      style={{
+        borderRadius: '50%',
+        marginRight: '1em',
+        height: '3em',
+        width: '3em',
+      }}
+    />
+  )
 
   return (
     <main>
@@ -108,6 +153,35 @@ const ReferenzTemplate = ({
                       </ItemContent>
                     </Item>
                   ))}
+                  <Item key="apptiva-service">
+                    {apptivaServiceIcon}
+                    <ItemContent>
+                      {apptivaServices?.length > 1 ? (
+                        <h3>Apptiva Dienstleistungen</h3>
+                      ) : (
+                        <h3>Apptiva Dienstleistung</h3>
+                      )}
+                      {apptivaServices ? (
+                        <>
+                          {apptivaServices.map((s) => (
+                            <>
+                              <p />
+                              <Link to={`/${s}/`}>
+                                {apptivaServiceList[s].title}
+                              </Link>
+                            </>
+                          ))}
+                        </>
+                      ) : (
+                        <>
+                          <p />
+                          <Link to="/individuelle-entwicklung">
+                            Individuelle Softwareentwicklung
+                          </Link>
+                        </>
+                      )}
+                    </ItemContent>
+                  </Item>
                 </ItemList>
               </Section>
             ))}
@@ -173,6 +247,7 @@ export const pageQuery = graphql`
         }
         imageCaption
         order
+        apptivaServices
         bulletGroups {
           title
           description

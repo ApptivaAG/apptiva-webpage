@@ -23,6 +23,8 @@ bulletGroups:
       - icon: calendar
         title: Zeitraum
         text: 2019 bis heute, fortlaufende Weiterentwicklung
+apptivaServices:
+  - mobile-apps-ios-android
 contactPerson:
   name: Philip Schönhholzer
   role: Projektleiter

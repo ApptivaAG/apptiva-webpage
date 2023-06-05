@@ -22,7 +22,10 @@ bulletGroups:
         text: Gatsby.js, Rollup, HTML, Javascript
       - icon: calendar
         title: Zeitraum
-        text: "2018"
+        text: '2018'
+apptivaServices:
+  - web-apps
+  - einzigartiger-webshop
 contactPerson:
   name: Philip Schönhholzer
   role: Projektleiter

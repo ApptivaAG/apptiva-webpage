@@ -21,6 +21,8 @@ bulletGroups:
       - icon: calendar
         title: Zeitraum
         text: seit 2018, fortlaufende Unterstützung
+apptivaServices:
+  - chatbots
 contactPerson:
   name: Linus Hüsler
   role: Projektleiter
