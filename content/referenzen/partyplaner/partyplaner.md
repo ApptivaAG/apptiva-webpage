@@ -36,7 +36,7 @@ contactPerson:
 
 ## Für jeden Anlass das richtige Sortiment
 
-Wer schon einmal eine Party für mehrere Leute organisiert hat, kennt die Herausforderung: Von welchen Getränken soll wie viel besorgt werden? Die Schürch Getränke AG hilft hier gerne weiter - dank dem Partyplaner auch rund um die Uhr. Auf der Webseite durften wir einen Konfigurator integrieren, welcher dabei hilft, das richtige Sortiment in der passenden Menge zusammenzustellen.
+Wer schon einmal eine Party für mehrere Leute organisiert hat, kennt die Herausforderung: Von welchen Getränken soll wie viel besorgt werden? Die Schürch Getränke AG hilft hier gerne weiter - dank dem Partyplaner auch rund um die Uhr. Auf ihrer Webseite durften wir einen Konfigurator integrieren, welcher dabei hilft, das richtige Sortiment in der passenden Menge zusammenzustellen.
 
 ## Anbindung an Warenwirtschaft
 
@@ -44,4 +44,4 @@ Die Lösung beinhaltet eine Anbindung an das Warenwirtschaftssystem [VinX](https
 
 ## Sie möchten eine Party organisieren?
 
-Der Partyplaner hilft weiter: [Schürch Partyplaner](https://www.schurch.ch/partyplaner.html)
+Der Partyplaner weiss Bescheid: [Schürch Partyplaner](https://www.schurch.ch/partyplaner.html)

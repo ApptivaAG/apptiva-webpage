@@ -50,7 +50,7 @@ Wie üblich haben wir das Projekt agil umgesetzt. Das hatte in diesem Fall folge
 - Ideen zum Interaktionskonzept frühzeitig testen.
 - Neue Erkenntnisse und Ideen während der Entwicklung in das Projekt einfliessen lassen.
 
-Zu Beginn haben wir wie üblich eine [Story Map](/mehr-ueberblick-mit-storymap/) erstellt, um den Umfang und den Ablauf der Entwicklung zu visualisieren.
+Zu Beginn haben wir eine [Story Map](/mehr-ueberblick-mit-storymap/) erstellt, um den Umfang und den Ablauf der Entwicklung zu visualisieren.
 
 ## Die Technik
 

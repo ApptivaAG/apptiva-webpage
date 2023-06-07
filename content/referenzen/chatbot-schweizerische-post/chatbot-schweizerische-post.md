@@ -70,4 +70,4 @@ Seit mehreren Jahren dürfen wir bei der Entwicklung des Chatbots aktiv mitwirke
 
 ## Sie suchen Ihr Paket?
 
-Hier finden Sie es: [Post Chat](https://www.post.ch/de/hilfe-und-kontakt-v2)
+Der Chatbot hilft gerne weiter: [Post Chat](https://www.post.ch/de/hilfe-und-kontakt-v2)
