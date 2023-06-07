@@ -1,7 +1,7 @@
 {
   "content/blog/2020-10-vr-anwendungsbeispiele/vr-anwendungsbeispiele.md": {
     "created": 1601626544,
-    "modified": 1601640052
+    "modified": 1678709094
   },
   "content/blog/app-store-eintrag-inhalte/app-store-eintrag-inhalte.md": {
     "created": 1562229127,
@@ -121,11 +121,11 @@
   },
   "content/services/bargeldlos-bezahlen/bargeldlos-bezahlen.md": {
     "created": 1589967141,
-    "modified": 1589967141
+    "modified": 1677530893
   },
   "content/services/chatbots/chatbots.md": {
     "created": 1539584636,
-    "modified": 1677509586
+    "modified": 1677530893
   },
   "content/services/dashboard-notaufnahme/dashboard-notaufnahme.md": {
     "created": 1525107867,
@@ -133,7 +133,7 @@
   },
   "content/services/dashboard/dashboard.md": {
     "created": 1599806781,
-    "modified": 1677509586
+    "modified": 1677530893
   },
   "content/services/digitalisierung-unternehmen/digitalisierung-unternehmen.md": {
     "created": 1587123486,
@@ -153,11 +153,11 @@
   },
   "content/services/individuelle-entwicklung/individuelle-entwicklung.md": {
     "created": 1525015293,
-    "modified": 1677509586
+    "modified": 1677573545
   },
   "content/services/mobile-apps/mobile-apps.md": {
     "created": 1584719542,
-    "modified": 1677509586
+    "modified": 1677530893
   },
   "content/services/persona-workshop/persona-workshop.md": {
     "created": 1526482190,
@@ -169,7 +169,7 @@
   },
   "content/services/support/support.md": {
     "created": 1525709929,
-    "modified": 1620057682
+    "modified": 1677598899
   },
   "content/services/telefonverkauf-showcase/telefonverkauf-showcase.md": {
     "created": 1526117197,
@@ -185,11 +185,11 @@
   },
   "content/services/web-apps/web-apps.md": {
     "created": 1584719542,
-    "modified": 1677509586
+    "modified": 1677530893
   },
   "content/services/webshops/webshops.md": {
     "created": 1588350893,
-    "modified": 1588350893
+    "modified": 1677530893
   },
   "content/services/zusammenarbeit/zusammenarbeit.md": {
     "created": 1525724147,
@@ -293,7 +293,7 @@
   },
   "content/data/employees/linus-huesler/linus-huesler.md": {
     "created": 1524669899,
-    "modified": 1560268511
+    "modified": 1679305746
   },
   "content/data/employees/markus-tanner/markus-tanner.md": {
     "created": 1524669899,
@@ -345,7 +345,7 @@
   },
   "content/services/weiterentwicklung-apps-produkte/weiterentwicklung-apps-produkte.md": {
     "created": 1616503118,
-    "modified": 1616568254
+    "modified": 1677530893
   },
   "content/blog/fleet-assistant/fleet-assistant.md": {
     "created": 1617914546,
@@ -421,10 +421,42 @@
   },
   "content/blog/2023-02-01-produktkonfiguratoren/entwicklung-produkt-konfiguratoren.md": {
     "created": 1675248805,
-    "modified": 1675248805
+    "modified": 1683556133
   },
   "content/services/payflink/payflink.md": {
     "created": 1661846120,
     "modified": 1673353416
+  },
+  "content/blog/2023-03-06-dies-macht-einen-erfolgreichen-produkt-konfigurator/dies-macht-einen-erfolgreichen-produkt-konfigurator-aus.md": {
+    "created": 1678176689,
+    "modified": 1683556133
+  },
+  "content/blog/2023-03-29-apptiva-teamevent/apptiva-team-event-mai-2022.md": {
+    "created": 1680695053,
+    "modified": 1680695053
+  },
+  "content/blog/2023-05-09-wo-produkt-konfiguratoren-einsetzen/wo-produkt-konfiguratoren-einsetzen.md": {
+    "created": 1683555589,
+    "modified": 1683556133
+  },
+  "content/referenzen/diluna/diluna.md": {
+    "created": 1684770397,
+    "modified": 1684770397
+  },
+  "content/referenzen/hbtec-app/diluna.md": {
+    "created": 1684770397,
+    "modified": 1684770397
+  },
+  "content/referenzen/hbtec-viewer/diluna.md": {
+    "created": 1684770397,
+    "modified": 1684770397
+  },
+  "content/services/bubble-chat/bubble-chat.md": {
+    "created": 1678204573,
+    "modified": 1678204573
+  },
+  "content/data/employees/kevin-rickenbach/kevin-rickenbach.md": {
+    "created": 1677755786,
+    "modified": 1678692135
   }
 }

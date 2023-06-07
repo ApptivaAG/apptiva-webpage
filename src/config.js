@@ -8,4 +8,5 @@ module.exports = {
   twitter: '@ApptivaTeam',
   fbAppID: '',
   knowledgeRoute: 'apptiva-lernt',
+  referenzenRoute: 'referenzen',
 }

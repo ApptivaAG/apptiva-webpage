@@ -26,7 +26,7 @@ const Logo = styled.img`
 `
 const Navigation = styled.nav`
   margin-right: -1em;
-  @media (max-width: 759px) {
+  @media (max-width: 900px) {
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -48,7 +48,7 @@ const MenuButton = styled.div`
   font-weight: 600;
   cursor: pointer;
 
-  @media (min-width: 740px) {
+  @media (min-width: 901px) {
     display: none;
   }
 
@@ -105,6 +105,9 @@ const Navbar = ({ location }) => (
       <Navigation>
         <DynLink type={location} nav="/#dienstleistungen">
           Dienstleistungen
+        </DynLink>
+        <DynLink type={location} nav="/referenzen/">
+          Referenzen
         </DynLink>
         <DynLink type={location} nav="/blog/">
           Blog

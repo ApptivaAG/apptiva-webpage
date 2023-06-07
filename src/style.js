@@ -209,10 +209,12 @@ export const Col = styled.div`
 
 export const Card = styled.div`
   padding: 1em;
-  background-color: #fff1;
+  background-color: ${(props) =>
+    props.$light ? props.theme.color.primaryOpac10 : '#fff1'};
+  color: ${(props) => (props.$light ? props.theme.color.primaryText : 'white')};
+  border: 1px solid
+    ${(props) => (props.$light ? props.theme.color.primaryOpac10 : '#fff2')};
   border-radius: 0.2em;
-  border: 1px solid #fff2;
-  color: white;
 
   h3,
   p {
@@ -231,8 +233,10 @@ export const Card = styled.div`
   transition: color 200ms, background-color 200ms;
 
   &:hover {
-    background-color: #fff2;
-    border-color: #fff3;
+    background-color: ${(props) =>
+      props.$light ? props.theme.color.primaryOpac30 : '#fff2'};
+    border-color: ${(props) =>
+      props.$light ? props.theme.color.light : '#fff3'};
 
     ${ImgStyled}, svg {
       transform: scale(1.06);
@@ -290,6 +294,7 @@ export const theme = {
     primaryOpac20: '#008fd722',
     primaryOpac30: '#008fd734',
     primaryOpac40: '#008fd742',
+    primaryOpaccc: '#008fd7cc',
   },
 }
 
