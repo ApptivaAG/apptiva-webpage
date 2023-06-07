@@ -4,7 +4,7 @@ slug: partyplaner
 templateKey: referenz
 image: partyplaner.png
 imageCaption: Partyplaner
-order: 40
+order: 30
 description: >-
   Für Schürch Getränke haben wir einen Partyplaner entwickelt. Dieser hilft bei der Auswahl des richtigen Sortiments in der optimalen Menge.
 bulletGroups:

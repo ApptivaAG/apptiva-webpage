@@ -4,7 +4,7 @@ slug: chatbot-schweizerische-post
 templateKey: referenz
 image: chatbot-schweizerische-post.png
 imageCaption: Chatbot Schweizerische Post
-order: 15
+order: 10
 description: >-
   Seit 2018 unterstützen wir die Schweizerische Post bei der Implementierung ihres Digitalen Assistenten. Inzwischen ist der Chatbot eine wichtige Stütze des Kontaktcenters, die nicht mehr wegzudenken ist.
 bulletGroups:
@@ -36,6 +36,18 @@ contactPerson:
 ## Kundendienst
 
 Die Schweizerische Post erhält täglich eine immense Anzahl von Anfragen zum Versand von Briefen und Paketen. Aus diesem Grund hat sich die Post dazu entschieden, einen Chatbot zu entwickeln, welcher die rund 250 Mitarbeiter unterstützt. Der Chatbot ist rund um die Uhr verfügbar und spricht Deutsch, Französisch und Italienisch.
+
+&nbsp;
+
+> ### Eckdaten
+>
+> - Der Chatbot verarbeitet jeden Monat rund 20'000 Chats.
+> - 70% aller Anfragen löst der Chatbot selbstständig.
+> - 30% aller Anfragen leitet er als Live-Chat zum Kundendienst weiter.
+>
+> <p style="font-size:small">Stand Juni 2023</p>
+
+&nbsp;
 
 ### Live-Chat
 

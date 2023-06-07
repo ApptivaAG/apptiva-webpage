@@ -4,7 +4,7 @@ slug: hbtec-app
 templateKey: referenz
 image: hbtec-app.png
 imageCaption: hbTec App
-order: 50
+order: 60
 description: >-
   Die hbTec App ist eine Mobile App, mit welcher auf die hbTec-Gebäudesteuerung zugegriffen werden kann. Die App ist für Android und iOS verfügbar.
 bulletGroups:

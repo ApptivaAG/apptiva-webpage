@@ -4,7 +4,7 @@ slug: hbtec-viewer
 templateKey: referenz
 image: hbtec-viewer.png
 imageCaption: hbTec Viewer
-order: 30
+order: 70
 description: >-
   Der hbTec Viewer ist eine Electron Applikation, mit welcher der Zugriff auf die Gebäudeautomationssysteme der Firma hbTec vereinfacht wird.
 bulletGroups:

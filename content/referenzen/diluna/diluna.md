@@ -4,7 +4,7 @@ slug: diluna
 templateKey: referenz
 image: diluna.png
 imageCaption: DiLuna - Digitale Lernumgebung
-order: 10
+order: 40
 description: >-
   DiLuna ist eine Lernumgebung mit digitalen Aufgaben für den naturwissenschaftlich-technischen Unterricht in der Oberstufe. Schüler:innen werden beim Lernen und Lösen von Aufgaben durch Feedback unterstützt.
 link: https://diluna-prod.apps.apptiva.ch/

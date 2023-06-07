@@ -3,7 +3,7 @@ title: Trial Store App & Webshop - Globus
 slug: trial-store-app-webshop-globus
 templateKey: referenz
 image: trial-store.png
-order: 25
+order: 50
 description: >-
   Für Globus durften wir eine App für den Abverkauf und einen Webshop für den Online-Verleih entwickeln.
 link: https://suva.ch/slopetrack
