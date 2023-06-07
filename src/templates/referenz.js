@@ -96,17 +96,9 @@ const ReferenzTemplate = ({
   } = metaData
 
   const apptivaServiceIcon = (
-    <StaticImage
-      src="../img/icon-256x256.png"
-      alt="Apptiva Dienstleistung"
-      placeholder="none"
-      style={{
-        borderRadius: '50%',
-        marginRight: '1em',
-        height: '3em',
-        width: '3em',
-      }}
-    />
+    <Icon>
+      <i className={icons('briefcase')} />
+    </Icon>
   )
 
   return (
