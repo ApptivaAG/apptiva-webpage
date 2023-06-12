@@ -3,7 +3,7 @@ title: Package Konfigurator, Verwaltung & Webshop - Grand Casino Bern
 slug: package-configurator-grand-casino-bern
 templateKey: referenz
 image: package-configurator.png
-order: 80
+order: 25
 description: >-
   Für das Grand Casino Bern durften wir eine Software für das Konfigurieren, Verwalten, Verkaufen und Einlösen von Package-Angeboten entwickeln.
 link: https://www.grandcasino-bern.ch/de/online-shop
@@ -42,7 +42,7 @@ Die Lösung für das Grand Casino Bern besteht aus einem Konfigurator, einem Web
 
 ### Konfigurator
 
-Im Konfigurator können alle angebotenen Leistungen und die dazugehörigen Leistungserbringer erfasst und verwaltet und zu Packages kombiniert werden.
+Im Konfigurator können alle angebotenen Leistungen und die dazugehörigen Leistungserbringer erfasst, verwaltet und zu Packages kombiniert werden.
 
 ### Webshop
 
@@ -50,7 +50,7 @@ Im Webshop können die erfassten Packages bestellt und bezahlt werden. Kunden k�
 
 ### Verwaltung
 
-In der Buchungsverwaltung können die Mitarbeiter des Grand Casino Bern alle Aspekte der Buchungen verwalten, einschliesslich Zahlungen und Kommunikation mit den Kunden. Leistungserbringer können hier auch Leistungen einfach und unkompliziert per QR-Code einlösen. Sämtliche Bewegungen in Buchungen, Zahlungen und Einlösungen werden für die Buchhaltung aufbereitet.
+In der Buchungsverwaltung können die Mitarbeiter des Grand Casino Bern alle Aspekte der Buchungen verwalten, einschliesslich Zahlungen und die Kommunikation mit den Kunden. Leistungserbringer können hier auch Leistungen einfach und unkompliziert per QR-Code einlösen. Sämtliche Bewegungen in Buchungen, Zahlungen und Einlösungen werden für die Buchhaltung aufbereitet.
 
 ## Mehr erfahren
 

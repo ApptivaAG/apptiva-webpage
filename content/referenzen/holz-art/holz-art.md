@@ -24,7 +24,7 @@ bulletGroups:
         title: Zeitraum
         text: '2020'
 apptivaServices:
-  - mobile-apps-ios-android
+  - produktkonfiguratoren
 contactPerson:
   name: David Decker
   role: Projektleiter
