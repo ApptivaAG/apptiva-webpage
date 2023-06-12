@@ -40,7 +40,7 @@ Wer schon einmal eine Party für mehrere Leute organisiert hat, kennt die Heraus
 
 ## Anbindung an Warenwirtschaft
 
-Die Lösung beinhaltet eine Anbindung an das Warenwirtschaftssystem [VinX](https://vinx.ch/). So hat der Partyplanner immer Zugriff auf die aktuell verfügbaren Artikel, wobei auch Gebindegrössen für die Kalkulation berücksichtigt werden. Der Partyplaner fördert auch Zusatzverkäufe wie Kühlschränke oder Gläser.
+Die Lösung beinhaltet eine Anbindung an das Warenwirtschaftssystem [VinX](https://vinx.ch/). So hat der Partyplaner immer Zugriff auf die aktuell verfügbaren Artikel, wobei auch Gebindegrössen für die Kalkulation berücksichtigt werden. Der Partyplaner fördert auch Zusatzverkäufe wie die Miete von Kühlschränken oder Gläsern.
 
 ## Sie möchten eine Party organisieren?
 
