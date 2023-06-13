@@ -1,6 +1,9 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { MenuContent, DynLink } from './NavigationMenuDesktop'
+import logo from '../img/logo.svg'
+
+import { Centered } from '../style'
 
 const NavigationMenuMobile = ({ data, location }) => (
   <Navigation>
@@ -21,8 +24,17 @@ const NavigationMenuMobile = ({ data, location }) => (
         </DynLink>
       )
     })}
+    <div css="flex: 1; display: flex; flex-direction: column; justify-content: flex-end; padding: 12px; margin-block: 1em;">
+      <DynLink type={location} nav="/#start" data-element="logo">
+        <Logo src={logo} alt="Apptiva" width="147" height="30" />
+      </DynLink>
+    </div>
   </Navigation>
 )
+
+const Logo = styled.img`
+  height: 30px;
+`
 export const Navigation = styled.nav`
   display: none;
   @media (max-width: 900px) {
@@ -36,6 +48,9 @@ export const Navigation = styled.nav`
     padding-inline: 0.5em;
     background-color: ${(p) => p.theme.color.primary};
     transition: all 200ms ease 200ms;
+    overflow-y: auto;
+    max-height: 100vh;
+    max-height: 100dvh;
   }
 
   /* reset */
