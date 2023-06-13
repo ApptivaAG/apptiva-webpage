@@ -48,7 +48,7 @@ const ColHero = styled.div`
 
   @media (min-width: 501px) {
     font-size: 0.9rem;
-    padding-block: 6rem 2rem;
+    padding-block: 4rem 2rem;
 
     padding-inline: 2rem;
     max-width: 640px;
