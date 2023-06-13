@@ -33,7 +33,7 @@ export const Navigation = styled.nav`
     top: 0;
     bottom: 0;
     right: -26rem;
-    padding: 0.5em;
+    padding-inline: 0.5em;
     background-color: ${(p) => p.theme.color.primary};
     transition: all 200ms ease 200ms;
   }
@@ -76,7 +76,7 @@ export const Navigation = styled.nav`
 
   .NavigationMenuTrigger,
   .NavigationMenuLink {
-    margin-top: 0.5em;
+    margin-top: 0.2em;
     padding: 8px 12px;
     outline: none;
     user-select: none;
@@ -248,7 +248,7 @@ export const Navigation = styled.nav`
 
   .CalloutHeading {
     font-weight: bold;
-    font-size: 1em;
+    font-size: 0.9rem;
     line-height: 1.1;
     margin-bottom: 0.2em;
     margin-top: -0.1em;
