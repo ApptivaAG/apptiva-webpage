@@ -42,6 +42,9 @@ const apptivaServiceList = {
   produktkonfiguratoren: {
     title: 'Produktkonfiguratoren',
   },
+  unterstuetzung: {
+    title: 'Unterstützung',
+  },
 }
 
 const Header = ({ title, image, imageCaption }) => (
