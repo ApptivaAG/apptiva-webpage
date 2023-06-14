@@ -12,11 +12,11 @@ const jobs = [
     subtitle: '40-60%, ab sofort',
     description: [
       'Wir sind ein junges Software-Unternehmen und suchen Unterstützung.',
-      'Bei uns findest du spannende und abwechslungsreiche Arbeit vor. Hilf uns dabei, unsere Bekanntheit zu steigern und neue Kunden zu gewinnen. Es würde uns freuen, dich schon bald kennen zu lernen!',
+      'Bei uns findest Du spannende und abwechslungsreiche Arbeit vor. Hilf uns dabei, unsere Bekanntheit zu steigern und neue Kunden zu gewinnen. Es würde uns freuen, Dich schon bald kennen zu lernen!',
     ],
     strengthsTitle: 'Deine Aufgaben',
     strengths: [
-      'Erstellen und Umsetzen von Marketingstrategien und -kampagnen für unsere Produkte und Dienstleistungen',
+      'Erstellen und Umsetzen von Marketingstrategien und -kampagnen für unsere Dienstleistungen und Produkte, insbesondere <a href="https://www.bubble-chat.ch" target="_blank" rel="noopener noreferrer">Bubble Chat</a>',
       'Pflegen und Erweitern unserer Online-Präsenz auf verschiedenen Kanälen (Website, Social Media, Newsletter, etc.)',
       'Generieren und Qualifizieren von Leads durch gezielte Ansprache potenzieller Kunden',
       'Planen und Durchführen von Verkaufsgesprächen und Präsentationen',
@@ -24,31 +24,31 @@ const jobs = [
     ],
     skillsTitle: 'Dein Profil',
     skills: [
-      'Ausbildung oder Studium im Bereich Marketing, Kommunikation oder verwandten Fachgebieten.',
-      'Berufserfahrung im Bereich Marketing & Akquise.',
-      'Kenntnisse der schweizerischen Marktbedingungen und Branchentrends.',
+      'Ausbildung oder Studium im Bereich Marketing, Kommunikation oder verwandten Fachgebieten',
+      'Berufserfahrung im Bereich Marketing & Akquise',
+      'Kenntnisse der schweizerischen Marktbedingungen und Branchentrends',
       'Ausgeprägte Kommunikations- und Verhandlungsfähigkeiten',
-      'Hohe Eigeninitiative, Kreativität und Ergebnisorientierung.',
-      'Sehr gute Deutschkenntnisse in Wort und Schrift, gute Englischkenntnisse.',
+      'Hohe Eigeninitiative, Kreativität und Ergebnisorientierung',
+      'Sehr gute Deutschkenntnisse in Wort und Schrift, gute Englischkenntnisse',
     ],
     benefitsTitle: 'Wir bieten Dir',
     benefits: [
       '&quot;Work From Home&quot;. Wir arbeiten normalerweise von zu Hause aus.',
-      'Du entscheidest über deine Tätigkeiten, deine Arbeitszeiten, deine Ferienzeit und deinen Lohn.',
+      'Du entscheidest über Deine Tätigkeiten, Deine Arbeitszeiten, Deine Ferienzeit und Deinen Lohn.',
       'Du arbeitest an spannenden Produkten wie z.B. Chatbots.',
-      'Du hast die Chance, dich bei uns zu entfalten.',
+      'Du hast die Chance, Dich bei uns zu entfalten.',
       'Du erlebst ein selbstorganisierendes Unternehmen am eigenen Leibe.',
     ],
     callToAction:
-      'Haben wir Dein Interesse geweckt? Dann freuen wir uns auf Deine Bewerbung mit Lebenslauf, Zeugnissen und Gehaltsvorstellung per E-Mail an info@apptiva.ch. Willst du mehr erfahren? Dann ruf uns an! Wir freuen uns, von dir zu hören.',
+      'Haben wir Dein Interesse geweckt? Dann freuen wir uns auf Deine Bewerbung mit Lebenslauf, Zeugnissen und Gehaltsvorstellung per E-Mail an <a href="mailto:info@apptiva.ch?subject=Bewerbung für Marketing- und Akquise-Manager:in">info@apptiva.ch</a>.<br/><br/>Willst Du mehr erfahren? Ruf uns an! <a href="tel:+41413222626">041 322 26 26</a><br/>Wir freuen uns, von Dir zu hören.',
   },
   {
     title: 'Fullstack Software-Entwickler:in und Unternehmer:in*',
     subtitle: '60% - 100%, ab sofort',
     description: [
       'Wir sind ein junges Software-Unternehmen und suchen Verstärkung.',
-      'Du findest bei uns spannende und abwechslungsreiche Arbeit vor. Wir möchten mit dir gemeinsam Herausforderungen meistern und Spass an der Arbeit haben. Es würde uns freuen, dich schon bald kennen zu lernen!',
-      '* Was hat es mit &quot;Unternehmer:in&quot; auf sich? <br /> Bei uns haben alle die Möglichkeit — im kleinen und grossen Still — auf das Unternehmen Einfluss zu nehmen. Egal ob Projektumsetzung, Produktidee, Vorgehen, neue Mitarbeiter:innen oder Organisation, bei uns setzt du deine Visionen um! Entsprechend sind wir an Personen interessiert, die diese Chance nutzen und auf das Unternehmen Einfluss nehmen.',
+      'Du findest bei uns spannende und abwechslungsreiche Arbeit vor. Wir möchten mit Dir gemeinsam Herausforderungen meistern und Spass an der Arbeit haben. Es würde uns freuen, Dich schon bald kennen zu lernen!',
+      '* Was hat es mit &quot;Unternehmer:in&quot; auf sich? <br /> Bei uns haben alle die Möglichkeit — im kleinen und grossen Still — auf das Unternehmen Einfluss zu nehmen. Egal ob Projektumsetzung, Produktidee, Vorgehen, neue Mitarbeiter:innen oder Organisation, bei uns setzt du Deine Visionen um! Entsprechend sind wir an Personen interessiert, die diese Chance nutzen und auf das Unternehmen Einfluss nehmen.',
     ],
     strengthsTitle: 'Deine Stärken',
     strengths: [
@@ -56,8 +56,8 @@ const jobs = [
       'Du bist entscheidungsfreudig.',
       'Du verfügst über eine schnelle Auffassungsgabe.',
       'Du hast Freude, in unterschiedlichen Tätigkeitsgebieten zu wirken.',
-      'Du willst dich als Mensch und Entwickler:in weiterentwickeln.',
-      'Dein Team mag es mit dir zusammenzuarbeiten.',
+      'Du willst Dich als Mensch und Entwickler:in weiterentwickeln.',
+      'Dein Team mag es, mit Dir zusammenzuarbeiten.',
     ],
     skillsTitle: 'Deine fachlichen Fähigkeiten',
     skills: [
@@ -70,14 +70,14 @@ const jobs = [
     benefitsTitle: 'Deine Vorteile',
     benefits: [
       '&quot;Work From Home&quot;. Wir arbeiten normalerweise von zu Hause aus.',
-      'Du entscheidest über deine Tätigkeiten, deine Arbeitszeiten, deine Ferienzeit und deinen Lohn.',
+      'Du entscheidest über Deine Tätigkeiten, Deine Arbeitszeiten, Deine Ferienzeit und Deinen Lohn.',
       'Du arbeitest an spannenden Projekten wie Chatbots oder einer digitalen Speisekarte.',
       'Du verwendest moderne Tools und Libraries.',
-      'Du hast die Chance, dich bei uns zu entfalten.',
+      'Du hast die Chance, Dich bei uns zu entfalten.',
       'Du erlebst ein selbstorganisierendes Unternehmen am eigenen Leibe.',
     ],
     callToAction:
-      'Blut geleckt? Dann überzeug uns mit deiner Bewerbung! Willst du mehr erfahren? Dann ruf uns an! Wir freuen uns, von dir zu hören.',
+      'Blut geleckt? Dann überzeug uns mit Deiner Bewerbung!<br/><br/>Willst Du mehr erfahren? Ruf uns an! <a href="tel:+41413222626">041 322 26 26</a><br/>Wir freuen uns, von Dir zu hören.',
   },
 ]
 
@@ -120,7 +120,7 @@ const JobPosting = ({ data }) => {
         <h3>{data.strengthsTitle}</h3>
         <ul>
           {data.strengths.map((strength) => (
-            <li key={strength}>{strength}</li>
+            <li key={strength} dangerouslySetInnerHTML={{ __html: strength }} />
           ))}
         </ul>
         <h3>{data.skillsTitle}</h3>
@@ -135,12 +135,12 @@ const JobPosting = ({ data }) => {
             <li key={benefit} dangerouslySetInnerHTML={{ __html: benefit }} />
           ))}
         </ul>
-        <p>{data.callToAction}</p>
+        <p dangerouslySetInnerHTML={{ __html: data.callToAction }} />
         <Center>
           <Button
             href={`mailto:info@apptiva.ch?subject=Bewerbung für ${data.title}`}
           >
-            Bewirb dich
+            Bewirb Dich
           </Button>
         </Center>
       </Container>
