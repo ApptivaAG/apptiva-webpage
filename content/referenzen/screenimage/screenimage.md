@@ -6,7 +6,7 @@ image: screenimage-pro.png
 imageCaption: Unterstützung für Screenimage Pro
 order: 15
 description: >-
-  Seit 2017 unterstützen wir die Screenimage Systems AG aus Root bei der Implementierung ihrer Digital Signage Software. Neben technischen Aspekten unterstützen wir auch im Coaching und in der Ausbildung der Screenimage Mitarbeiter.
+  Seit 2017 unterstützen wir die Screenimage Systems AG aus Root bei der Implementierung ihrer Digital Signage Software. Neben technischen Aspekten beinhaltet die Unterstützung auch Coaching und Ausbildung der Screenimage Mitarbeiter.
 bulletGroups:
   - bulletList:
       - icon: users
