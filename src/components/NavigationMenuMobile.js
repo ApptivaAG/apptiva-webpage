@@ -3,8 +3,6 @@ import styled from 'styled-components'
 import { MenuContent, DynLink } from './NavigationMenuDesktop'
 import logo from '../img/logo.svg'
 
-import { Centered } from '../style'
-
 const NavigationMenuMobile = ({ data, location }) => (
   <Navigation>
     {data.map((item) => {
@@ -45,6 +43,7 @@ export const Navigation = styled.nav`
     top: 0;
     bottom: 0;
     right: -26rem;
+    border-left: 1px solid #fff2;
     padding-inline: 0.5em;
     background-color: ${(p) => p.theme.color.primary};
     transition: all 200ms ease 200ms;
