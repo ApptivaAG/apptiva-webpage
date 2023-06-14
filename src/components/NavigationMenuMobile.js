@@ -63,6 +63,7 @@ export const Navigation = styled.nav`
 
   a {
     color: white;
+    width: 100%;
   }
   .NavigationImage {
     display: none;
@@ -90,8 +91,8 @@ export const Navigation = styled.nav`
 
   .NavigationMenuTrigger,
   .NavigationMenuLink {
-    margin-top: 0.2em;
-    padding: 8px 12px;
+    margin-top: 0.5em;
+    padding: 12px 8px;
     outline: none;
     user-select: none;
     font-weight: 500;
@@ -99,10 +100,13 @@ export const Navigation = styled.nav`
     border-radius: 4px;
     font-size: 1em;
     color: white;
+    border-radius: 0.2em;
+    background-color: #eff6fc14;
 
     &.Title {
       color: #ffffff88;
       padding-bottom: 0;
+      background-color: transparent;
     }
   }
   .NavigationMenuTrigger:focus,
@@ -188,26 +192,29 @@ export const Navigation = styled.nav`
 
   .List {
     display: grid;
-    padding: 0.2em;
-    margin: 0;
+    padding: 0;
+    margin: 0.5em 0 0 0;
     column-gap: 0.2em;
     list-style: none;
     max-width: 17rem;
   }
   .List.one {
-    grid-template: 'item item item';
+    grid-template-columns: 1fr;
+    margin-top: 0;
+    gap: 0.2em;
   }
   .List.two {
-    grid-auto-flow: column;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    gap: 0.2em;
   }
   .callout {
     grid-template:
       'callout callout'
       'item item' / 1fr 1fr !important;
-    margin-block: 0.5em 0.2em;
     border-radius: 0.3em;
-    background-color: #eff6fc22;
+    margin-block: 0.5em 0.2em !important;
+    background-color: #eff6fc14;
+    padding: 0.2em;
   }
 
   .ListItemLink {
@@ -219,6 +226,8 @@ export const Navigation = styled.nav`
     border-radius: 6px;
     font-size: 15px;
     line-height: 1;
+    border-radius: 0.3em;
+    background-color: #eff6fc14;
   }
   .ListItemLink:focus {
     box-shadow: 0 0 0 2px #008fd7;
@@ -248,7 +257,7 @@ export const Navigation = styled.nav`
     height: 100%;
     border-radius: 6px;
 
-    padding: 12px;
+    padding: 8px;
     text-decoration: none;
     outline: none;
     user-select: none;
