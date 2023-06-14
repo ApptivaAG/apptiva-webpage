@@ -11,7 +11,7 @@ bulletGroups:
   - bulletList:
       - icon: users
         title: Kunde
-        text: Screenimage Systems AG
+        text: <a href="https://www.screenimage.ch" target="_blank" rel="noopener noreferrer">Screenimage Systems AG</a>
       - icon: tasks
         title: Aufgaben
         text: Beratung, Konzeption, UX Design, Architektur, Entwicklung, Schulung und Ausbildung
