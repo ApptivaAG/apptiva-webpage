@@ -11,7 +11,7 @@ bulletGroups:
   - bulletList:
       - icon: users
         title: Kunde
-        text: Screenimage
+        text: Screenimage Systems AG
       - icon: tasks
         title: Aufgaben
         text: Beratung, Konzeption, UX Design, Architektur, Entwicklung, Schulung und Ausbildung
