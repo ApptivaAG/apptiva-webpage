@@ -1,9 +1,130 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
+import { StaticImage } from 'gatsby-plugin-image'
 
 import { Container as DefaultContainer } from '../style'
 import logo from '../img/logo.svg'
+import NavigationMenuDesktop, { DynLink } from './NavigationMenuDesktop'
+import NavigationMenuMobile from './NavigationMenuMobile'
+
+const navbarData = [
+  {
+    title: 'Dienstleistungen',
+    href: '/dienstleistungen/',
+    type: 'one',
+    callout: {
+      image: (
+        <StaticImage src="../../content/services/individuelle-entwicklung/apps.png" />
+      ),
+      title: 'Individuelle Softwareentwicklung',
+      text: 'Apps für Mobile und Desktop',
+      href: '/individuelle-entwicklung/',
+      items: [
+        {
+          title: 'Mobile Apps',
+          text: 'Apps für iOS und Android',
+          href: '/mobile-apps-ios-android/',
+        },
+        {
+          title: 'Web Apps',
+          text: 'Apps und Applikationen im Browser',
+          href: '/web-apps/',
+        },
+        {
+          title: 'Dashboards',
+          text: 'Individuelle für Ihre Bedürfnisse',
+          href: '/custom-dashboard/',
+        },
+        {
+          title: 'Webshops',
+          text: 'Einzigartige und spezialisierte Webshops',
+          href: '/einzigartiger-webshop/',
+        },
+        {
+          title: 'Zahlungslösungen',
+          text: 'Bargeldlose in Apps bezahlen',
+          href: '/bargeldlos-bezahlen/',
+        },
+        {
+          title: 'Weiterentwicklung',
+          text: 'Bestehenden Apps und Produkte weiterentwickeln',
+          href: '/weiterentwicklung-apps-produkte/',
+        },
+      ],
+    },
+    items: [
+      {
+        image: (
+          <StaticImage src="../../content/services/chatbots/chatbot-window.png" />
+        ),
+        title: 'Chatbots',
+        text: 'Apps für Mobile und Desktop',
+        href: '/chatbots/',
+      },
+      {
+        image: (
+          <StaticImage src="../../content/services/produktkonfiguratoren/partyplaner.png" />
+        ),
+        title: 'Konfiguratoren',
+        text: 'Angebots- & Produkt-Konfiguratoren',
+        href: '/produktkonfiguratoren/',
+      },
+      {
+        image: (
+          <StaticImage src="../../content/services/support/unterstuetzung.png" />
+        ),
+        title: 'Unterstützung',
+        text: 'Apps für Mobile und Desktop',
+        href: '/unterstuetzung/',
+      },
+    ],
+  },
+  {
+    title: 'Über uns',
+    href: '/ueber-uns/',
+    type: 'two',
+    items: [
+      {
+        title: 'Unternehmen',
+        text: 'Mehr über uns erfahren',
+        href: '/ueber-uns/',
+      },
+      {
+        title: 'Team',
+        text: 'Unser erfahrenes Entwicklungsteam',
+        href: '/ueber-uns/#team',
+      },
+      {
+        title: 'Kompetenzen',
+        text: 'Dies sind unsere Kompetenzen',
+        href: '/unsere-kompetenzen/',
+      },
+      {
+        title: 'Vorgehen',
+        text: 'Unser Vorgehen macht uns aus',
+        href: '/vorgehen/',
+      },
+      {
+        title: 'Blog',
+        text: 'Blogbeiträge',
+        href: '/blog/',
+      },
+      {
+        title: 'Jobs',
+        text: 'Jetzt bewerben',
+        href: '/jobs/',
+      },
+    ],
+  },
+  {
+    title: 'Referenzen',
+    href: '/referenzen/',
+  },
+  {
+    title: 'Kontakt',
+    href: '/kontakt/',
+  },
+]
 
 const NavBar = styled.header`
   position: sticky;
@@ -24,21 +145,7 @@ const Logo = styled.img`
   height: 30px;
   padding: 0.8rem 0;
 `
-const Navigation = styled.nav`
-  margin-right: -1em;
-  @media (max-width: 900px) {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    font-size: 1.1em;
-    top: 0;
-    bottom: 0;
-    right: -20rem;
-    padding: 1em 1em 1em 0;
-    background-color: ${(p) => p.theme.color.primary};
-    transition: all 200ms ease 200ms;
-  }
-`
+
 const MenuButton = styled.div`
   padding: 0.5em;
   margin-right: -0.5em;
@@ -52,47 +159,11 @@ const MenuButton = styled.div`
     display: none;
   }
 
-  &:active ~ ${Navigation}, &:focus ~ ${Navigation} {
-    transform: translate3d(-20rem, 0px, 0px);
+  &:active ~ nav,
+  &:focus ~ nav {
+    transform: translate3d(-26rem, 0px, 0px);
   }
 `
-
-const shared = (props) =>
-  props['data-element'] !== 'logo' &&
-  css`
-    display: inline-block;
-    font-size: 1.1em;
-    font-weight: 500;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-    padding: 0.3em 0.5em;
-    color: white;
-
-    transition: transform 30ms ease-out;
-
-    &:hover {
-      transform: translateY(-1px);
-    }
-
-    &:active {
-      color: ${props.theme.color.secondary};
-    }
-  `
-const NavItemsLink = styled(Link)`
-  ${shared};
-`
-const NavItemsA = styled.a`
-  ${shared};
-`
-
-const DynLink = ({ type, nav, ...props }) =>
-  type === 'root' ? (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <NavItemsA href={nav} {...props} />
-  ) : (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <NavItemsLink to={nav} {...props} />
-  )
 
 const Navbar = ({ location }) => (
   <NavBar>
@@ -102,23 +173,8 @@ const Navbar = ({ location }) => (
       </DynLink>
 
       <MenuButton tabIndex="0">Menu</MenuButton>
-      <Navigation>
-        <DynLink type={location} nav="/#dienstleistungen">
-          Dienstleistungen
-        </DynLink>
-        <DynLink type={location} nav="/referenzen/">
-          Referenzen
-        </DynLink>
-        <DynLink type={location} nav="/blog/">
-          Blog
-        </DynLink>
-        <DynLink type={location} nav="/ueber-uns/">
-          Über uns
-        </DynLink>
-        <DynLink type={location} nav="/kontakt/">
-          Kontakt
-        </DynLink>
-      </Navigation>
+      <NavigationMenuDesktop data={navbarData} />
+      <NavigationMenuMobile data={navbarData} location={location} />
     </Container>
   </NavBar>
 )
