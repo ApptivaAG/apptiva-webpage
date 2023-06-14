@@ -39,8 +39,6 @@ const jobs = [
       'Du hast die Chance, Dich bei uns zu entfalten.',
       'Du erlebst ein selbstorganisierendes Unternehmen am eigenen Leibe.',
     ],
-    callToAction:
-      'Haben wir Dein Interesse geweckt? Dann freuen wir uns auf Deine Bewerbung mit Lebenslauf, Zeugnissen und Gehaltsvorstellung per E-Mail an <a href="mailto:info@apptiva.ch?subject=Bewerbung für Marketing- und Akquise-Manager:in">info@apptiva.ch</a>.<br/><br/>Willst Du mehr erfahren? Ruf uns an! <a href="tel:+41413222626">041 322 26 26</a><br/>Wir freuen uns, von Dir zu hören.',
   },
   {
     title: 'Fullstack Software-Entwickler:in und Unternehmer:in*',
@@ -76,10 +74,11 @@ const jobs = [
       'Du hast die Chance, Dich bei uns zu entfalten.',
       'Du erlebst ein selbstorganisierendes Unternehmen am eigenen Leibe.',
     ],
-    callToAction:
-      'Blut geleckt? Dann überzeug uns mit Deiner Bewerbung!<br/><br/>Willst Du mehr erfahren? Ruf uns an! <a href="tel:+41413222626">041 322 26 26</a><br/>Wir freuen uns, von Dir zu hören.',
   },
 ]
+
+const callToAction =
+  'Haben wir Dein Interesse geweckt? Dann freuen wir uns auf Deine Bewerbung mit Lebenslauf, Zeugnissen und Gehaltsvorstellung per E-Mail an <a href="mailto:info@apptiva.ch?subject=Bewerbung für $jobTitle">info@apptiva.ch</a>.<br/><br/>Willst Du mehr erfahren? Ruf uns an! <a href="tel:+41413222626">041 322 26 26</a><br/>Wir freuen uns, von Dir zu hören.'
 
 const metadata = {
   title: 'Jobs',
@@ -135,7 +134,11 @@ const JobPosting = ({ data }) => {
             <li key={benefit} dangerouslySetInnerHTML={{ __html: benefit }} />
           ))}
         </ul>
-        <p dangerouslySetInnerHTML={{ __html: data.callToAction }} />
+        <p
+          dangerouslySetInnerHTML={{
+            __html: callToAction.replace('$jobTitle', data.title),
+          }}
+        />
         <Center>
           <Button
             href={`mailto:info@apptiva.ch?subject=Bewerbung für ${data.title}`}
