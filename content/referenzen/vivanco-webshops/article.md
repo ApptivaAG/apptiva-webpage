@@ -36,7 +36,7 @@ contactPerson:
 
 ## B2B Shop
 
-Als Ersatz für die drei etwas in die Jahre gekommenen bestehenden B2B-Shops für Deutschland, Österreich und die Schweiz beauftragte uns Vivanco im Jahr 2019 mit der Neuentwicklung, die gleich alle drei Länder abdecken kann. Diese ging schliesslich 2020 online und löste die bestehenden Shops nahtlos ab.
+Als Ersatz für die drei etwas in die Jahre gekommenen, bestehenden B2B-Shops für Deutschland, Österreich und die Schweiz beauftragte uns Vivanco im Jahr 2019 mit der Neuentwicklung, die gleich alle drei Länder abdecken kann. Diese ging schliesslich 2020 online und löste die bestehenden Shops nahtlos ab.
 
 ## Anbindung an Navision
 
