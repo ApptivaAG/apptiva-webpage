@@ -52,7 +52,7 @@ Die Mitarbeiter-App “Screenimage Mobile” ermöglicht es Angestellten, von ü
 
 ## Unser Vorgehen
 
-Im Frühling 2017 wurden wir von Screenimage angefragt, ob wir sie bei der Weiterentwicklung und Wartung ihrer bestehenden Lösung screenPLAN unterstützen könnten. Nach einer <span style="white-space: nowrap;">[Architekturbewertung](https://apptiva.ch/architektur-review/)</span> der bestehenden Lösung und Überprüfung der Vision von Screenimage haben wir gemeinsam unterschiedliche Varianten erarbeitet. Schlussendlich zeigte sich die Variante “Greenfield”, bei der die Softwarelösung komplett neu implementiert werden soll, als die beste Variante.
+2017 wurden wir von Screenimage angefragt, ob wir sie bei der Weiterentwicklung und Wartung ihrer bestehenden Lösung screenPLAN unterstützen könnten. Nach einer <span style="white-space: nowrap;">[Architekturbewertung](https://apptiva.ch/architektur-review/)</span> der bestehenden Lösung und Überprüfung der Vision von Screenimage haben wir gemeinsam unterschiedliche Varianten erarbeitet. Schlussendlich zeigte sich die Variante “Greenfield”, bei der die Softwarelösung komplett neu implementiert werden soll, als die beste Variante.
 
 In mehreren Workshops wurden mit allen Stakeholders zusammen die Rahmenbedingungen, die <span style="white-space: nowrap;">[Qualitätsziele](https://apptiva.ch/qualitaetsziele/)</span> sowie der Funktionsumfang der künftigen Lösung definiert. Dazu nutzten wir das Format der <span style="white-space: nowrap;">[Storymap](https://apptiva.ch/mehr-ueberblick-mit-storymap/)</span>, um ein gemeinsames Verständnis der neuen Lösung aufzubauen.
 
