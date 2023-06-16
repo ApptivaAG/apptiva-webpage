@@ -2,7 +2,7 @@
 title: EMIL
 slug: emil
 templateKey: referenz
-image: screenshot.png
+image: emil-website.png
 imageCaption: EMIL - Das vollumfängliche Monitoring-System für Ihren Event
 order: 40
 description: >-
@@ -11,7 +11,7 @@ bulletGroups:
   - bulletList:
       - icon: users
         title: Kunde
-        text: Konzept5 AG
+        text: <a href="https://konzept5.ch/" target="_blank" rel="noopener noreferrer">Konzept5 AG<a/>
       - icon: tasks
         title: Aufgaben
         text: Beratung, Konzeption, Entwicklung, Betrieb
@@ -36,7 +36,7 @@ contactPerson:
 
 ## Das Projekt
 
-Die Konzept5 AG ist der Ansprechpartner für die Durchführung von Grossevents und führt jährlich bekannte Events wie das WEF oder das Openair Frauenfeld durch. Wir durften für Konzept5 im Jahr 2020 ein System für die Überwachung, Notbeleuchtung, Durchsagen an Besucher, sowie die Abhandlung von Notfällen bei solchen Events entwickeln, mit dem auch das Personal des Anlasses interagieren kann.
+Die Konzept5 AG ist der Ansprechpartner für die Durchführung von Grossevents und führt jährlich bekannte Events wie das WEF oder das Openair Frauenfeld durch. Wir durften für Konzept5 im Jahr 2020 [EMIL](https://emil-ag.ch/) entwickeln. EMIL ist ein System für die Überwachung, Notbeleuchtung, Durchsagen an Besucher, sowie die Abhandlung von Notfällen bei solchen Events entwickeln, mit dem auch das Personal des Anlasses interagieren kann.
 
 ## Zusammenspiel mit Hardware Komponenten
 
@@ -44,8 +44,8 @@ In einem solchen System werden natürlich eine vielzahl an Hardware Komponenten 
 
 ## Einfacher Aufbau und Abbau
 
-Das System und alle Komponenten müssen schnell und einfach durch die Techniker von Konzept5 auf dem Gelände installiert, konfiguriert, getestet und später wieder abgebaut werden können. Deshalb lab besonderer Fokus darauf, den Konfigurationsaufwand auf einem Minimum zu halten und die User-Experience zu maximieren.
+Das System und alle Komponenten müssen schnell und einfach durch die Techniker von Konzept5 auf dem Gelände installiert, konfiguriert, getestet und später wieder abgebaut werden können. Deshalb lag ein besonderer Fokus darauf, den Konfigurationsaufwand auf einem Minimum zu halten und die User-Experience zu maximieren.
 
 ## Erweiterung "EMILIA"
 
-Im Jahr 2023 durften wir EMIL um die "EMILIA"-Funktion erweitern. Diese ermöglicht es, dem Anlass-Personal schnell und unkompliziert Not-Dienste wie die Sanität, Feuerwehr oder Security zu rufen und sich danach schnell wieder dem eigentlichen Notfall zu widmen.
+Im Jahr 2023 durften wir EMIL um die "EMILIA"-Funktion erweitern. Diese ermöglicht es dem Anlass-Personal, schnell und unkompliziert Not-Dienste wie die Sanität, Feuerwehr oder Security zu rufen und sich danach schnell wieder dem eigentlichen Notfall zu widmen.

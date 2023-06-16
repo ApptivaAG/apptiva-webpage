@@ -2,8 +2,8 @@
 title: Vivanco Webshops
 slug: vivanco-webshops
 templateKey: referenz
-image: screenshot.png
-imageCaption: Screenshot Vivanco B2C-Webshop
+image: vivanco-webshop.png
+imageCaption: Vivanco B2C-Webshop
 order: 30
 description: >-
   Seit 2019 entwickeln und betreiben wir den B2B-Webshop für Vivanco. 2021 kam dann noch der neue B2C-Webshop hinzu.
@@ -11,7 +11,7 @@ bulletGroups:
   - bulletList:
       - icon: users
         title: Kunde
-        text: Vivanco GmbH
+        text: <a href="https://vivanco.com/" target="_blank" rel="noopener noreferrer">Vivanco GmbH</a>
       - icon: tasks
         title: Aufgaben
         text: Beratung, Konzeption, Entwicklung, Betrieb
@@ -48,4 +48,4 @@ Da Vivanco noch über keine PIM (Product Information Management) Software verfü
 
 ## B2C Shop
 
-Auf den Wunsch hin ihre Produkte auch selbst direkt an Endkunden zu vertreiben entwickelten wir in 2021 zusammen mit Vivanco den B2C-Shop. Für das Frontend wurde der B2B-Shop als Basis genommen und dann entsprechend an die B2C-Anforderungen angepasst. Die Hintergrundkomponenten wie Backend oder PIM wurden um B2C-Funktionen ertweitert und werden nun von beiden Shops verwendet.
+Auf den Wunsch hin ihre Produkte auch selbst direkt an Endkunden zu vertreiben, entwickelten wir 2021 zusammen mit Vivanco den B2C-Shop. Für das Frontend wurde der B2B-Shop als Basis genommen und dann entsprechend an die B2C-Anforderungen angepasst. Die Hintergrundkomponenten wie Backend oder PIM wurden um B2C-Funktionen ertweitert und werden nun von beiden Shops verwendet.
