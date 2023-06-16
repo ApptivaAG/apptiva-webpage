@@ -42,6 +42,9 @@ const apptivaServiceList = {
   produktkonfiguratoren: {
     title: 'Produktkonfiguratoren',
   },
+  unterstuetzung: {
+    title: 'Unterstützung',
+  },
 }
 
 const Header = ({ title, image, imageCaption }) => (
@@ -155,12 +158,15 @@ const ReferenzTemplate = ({
                       )}
                       {apptivaServices ? (
                         <>
-                          {apptivaServices.map((s) => (
+                          <p />
+                          {apptivaServices.map((s, i) => (
                             <>
-                              <p />
-                              <Link to={`/${s}/`}>
+                              <Link key={s} to={`/${s}/`}>
                                 {apptivaServiceList[s].title}
                               </Link>
+                              {i !== apptivaServices.length - 1 && (
+                                <span>, </span>
+                              )}
                             </>
                           ))}
                         </>
