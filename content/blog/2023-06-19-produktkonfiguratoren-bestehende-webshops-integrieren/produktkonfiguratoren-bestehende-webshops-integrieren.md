@@ -30,7 +30,7 @@ Die Integration eines Produktkonfigurators in eine bestehende Webseite oder eine
 
 - **Design und Benutzererfahrung**: Ein Produktkonfigurator sollte nahtlos in das Design Ihrer Webseite oder Ihres Webshops integriert werden. Wir stellen sicher, dass das Erscheinungsbild des Konfigurators zu Ihrer Markenidentität passt und dass die Benutzeroberfläche intuitiv und benutzerfreundlich ist. Wir erstellen ein Customer-Journey, welche sicherstellt, dass die Lösung ein positives Einkaufserlebnis bietet.
 
-- **Datenverwaltung und Bestellprozess**: Bei der Integration eines Produktkonfigurators ist es wichtig, die gewählten Optionen des Bestellprozess zu berücksichtigen. Wir unterstützen Sie bei der Integration der Optionen in den Bestellvorgang. Die Daten sollten auch in Ihrem System oder ERP (Enterprise Resource Planning) korrekt erfasst werden, um eine reibungslose Auftragsabwicklung zu gewährleisten.
+- **Datenverwaltung und Bestellprozess**: Bei der Integration eines Produktkonfigurators ist es wichtig, die gewählten Optionen des Bestellprozesses zu berücksichtigen. Wir unterstützen Sie bei der Integration der Optionen in den Bestellvorgang. Die Daten sollten auch in Ihrem System oder ERP (Enterprise Resource Planning) korrekt erfasst werden, um eine reibungslose Auftragsabwicklung zu gewährleisten.
 
 - **Testen und Optimieren**: Nach der Integration des Produktkonfigurators ist es wichtig, ihn gründlich zu testen und kontinuierlich zu optimieren. Wir überwachen die Nutzung, analysieren Sie das Kundenverhalten und sammeln Sie Feedback, um den Konfigurator zu verbessern und das Einkaufserlebnis weiter zu optimieren.
 
