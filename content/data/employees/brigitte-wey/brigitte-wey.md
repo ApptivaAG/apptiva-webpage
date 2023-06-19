@@ -2,10 +2,9 @@
 templateKey: employee-page
 slug: /brigitte-wey
 name: Brigitte Wey
-claim: Präzise Pfennigfuchserin 
+claim: Präzise Zahlenjongleuse
 preview: brigitte-wey.jpg
 avatar: brigitte-wey.jpg
 role: Buchhaltung
 slogan: Kümmert sich um die Zahlen.
-
 ---
