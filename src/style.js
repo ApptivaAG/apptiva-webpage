@@ -347,9 +347,12 @@ export const GlobalStyle = createGlobalStyle`
 
     &[target="_blank"]:not(.gatsby-resp-image-link):after {
       content: url(${newTab});
-      vertical-align: middle;
-      padding: 0.1em 0.2em;
-      transform: scale(0.8)
+      display: inline-block;
+      vertical-align: bottom;
+      align-self: flex-end;
+      padding: 0 0.2em;
+      margin-bottom: -0.1em;
+      transform: scale(0.9)
     }
   }
   
