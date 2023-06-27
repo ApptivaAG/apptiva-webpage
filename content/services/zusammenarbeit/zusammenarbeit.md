@@ -10,9 +10,6 @@ bulletGroups:
     description: In fast jedem Berufsfeld gehört der Einsatz von Softwareprodukten zum Alltag. Umso wichtiger ist es, dass die Verwendung dieser Hilfsmittel problemlos funktioniert. Bestenfalls machen die Apps und Applikationen sogar Spass. Bei der individuellen Softwareentwicklung halten wir uns an das <a target="_blank" rel="noopener noreferrer" href="http://www.lean-enterprise-app.com/">Manifest der Lean Enterprise App</a>.
 
     bulletList:
-      - icon: reg-clock
-        title: Erfinder der Lean Enterprise App
-        text: Wir haben die Lean Enterprise App damals erfunden, weil sie einfach logisch ist. Dadurch, dass wir bereits mehrere Apps entwickelt haben, wissen wir was funktioniert und was nicht. Wir haben unser Vorgehen über die Zeit genau darauf abgestimmt um optimale Resultate zu erhalten. Profitieren Sie davon!
       - icon: database
         title: Aussergewöhnlich benutzerfreundlich dank User Centered Design
         text: Im Enterprise-Umfeld steht der Benutzer auch heute noch hinten an. Der moderne Benutzer lässt sich aber nicht mehr nur mit Funktionen abspecken, sondern erwartet auch eine entsprechend verständliche, einfache und schnelle Bedienung. Mit User Centered Design steht der Benutzer im Zentrum. Dieses aussergewöhliche Vorgehen für Enterprise-Software führt zu aussergewöhnlich benutzerfreundlichen Lösungen.
