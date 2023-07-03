@@ -19,6 +19,7 @@ const Header = ({ title, image, imageCaption }) => (
       <GatsbyImage
         image={image.childImageSharp.gatsbyImageData}
         style={{ width: '100%' }}
+        alt={imageCaption}
       />
 
       {imageCaption && <figcaption>{imageCaption}</figcaption>}
@@ -65,15 +66,8 @@ const BlogPostTemplate = ({
   prev,
 }) => {
   const PostContent = contentComponent || Content
-  const {
-    title,
-    image,
-    description,
-    author,
-    date,
-    updatedAt,
-    imageCaption,
-  } = metaData
+  const { title, image, description, author, date, updatedAt, imageCaption } =
+    metaData
 
   return (
     <main>
