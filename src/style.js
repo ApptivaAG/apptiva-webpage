@@ -419,4 +419,8 @@ export const GlobalStyle = createGlobalStyle`
     filter: blur(26px);
     transform: scale(1.04);
   }
+
+  .button {
+    ${sharedButtonStyle}
+  } 
 `

@@ -57,21 +57,6 @@ Wir entwickeln unter anderem:
 
 - ### [Weiterentwicklung von Produkten](/weiterentwicklung-apps-produkte/)
 
-<div class="full-width dark-section" style="overflow: auto; margin-top: 4em;">
-<div class="container">
-
-[[left]]
-|![Jenny Hello](hello-jenny.png)
-
-# Warum liebt Jenny ihre Lean Enterprise App
-
-Sehen Sie wie eine Lean Enterprise App beispielsweise den Telefonverkauf für Jenny vereinfacht und beschleunigt.
-
-[Ansehen](/telefonverkauf-showcase/)
-
-</div>
-</div>
-
 [[right]]
 |![Tiefe Kosten](sparschwein.svg)
 
@@ -82,3 +67,19 @@ Dank unserem effektiven Vorgehen sind erste nutzbare Resultate bereits nach zwe
 Mit der Apptiva haben Sie einen Partner, welcher unkompliziert und erfolgreich mit Ihnen zusammenarbeitet. Wir konnten bis jetzt jedes Projekt gemeinsam mit unseren Kunden erfolgreich lancieren und betreiben. Unsere Projekte sind aber nicht bloss zeitgerecht und im Budget, sondern kommen auch bei den Anwendern sehr gut an. Wir achten von Beginn an auf eine gute Usability.
 
 Für Sie heisst dies mehr Freude, weniger Stress und die Zuversicht die gesteckten Ziele erreichen zu können.
+
+&nbsp;
+
+<blockquote>
+
+[[left]]
+|![Jenny Hello](hello-jenny.png)
+
+## Deshalb liebt Jenny ihre Lean Enterprise App
+
+Sehen Sie wie eine Lean Enterprise App beispielsweise den Telefonverkauf für Jenny vereinfacht und beschleunigt.
+
+<p style="text-align: right;">
+<a class="button" href="/telefonverkauf-showcase/">Ansehen</a>
+</p>
+</blockquote>
