@@ -38,9 +38,9 @@ Sie haben das Recht, jederzeit Auskunft über die von uns gespeicherten personen
 
 Wenn Sie Ihre Rechte ausüben möchten oder Fragen zu dieser Datenschutzerklärung haben, können Sie uns jederzeit kontaktieren:
 
-Apptiva AG
-Eichweid 1
-6204 Sempach Station
+Apptiva AG<br>
+Eichweid 1<br>
+6204 Sempach Station<br>
 <info@apptiva.ch>
 
 Wir werden Ihre Anfragen schnellstmöglich bearbeiten und beantworten.
@@ -51,4 +51,4 @@ Wir behalten uns das Recht vor, diese Datenschutzerklärung jederzeit anzupassen
 
 ## Über die Apptiva AG
 
-Die Apptiva AG ist ein Softwareunternehmen mit Sitz in der Schweiz, das individuelle Softwarelösungen für verschiedene Branchen und Anwendungsbereiche entwickelt. Die Apptiva AG bietet [Mobile Apps](/mobile-apps-ios-android/), [Web Apps](/web-apps/) und [Chatbots](/chatbots/) sowie [Produktkonfiguratoren](/produktkonfiguratoren/) an, die die Geschäftsprozesse und die digitale Transformation ihrer Kunden beschleunigen und optimieren. Die Apptiva AG arbeitet eng und direkt mit ihren Kunden zusammen, um passgenaue und qualitativ hochwertige Lösungen zu liefern. Die Projekte der Apptiva AG zeichnen sich durch hohe Usability aus konnten bisher alle erfolgreich abgeschlossen werden. Die Apptiva AG hat unter anderem die Schweizerische Post, die Screenimage Systems AG und die Suva als Referenzkunden.
+Die Apptiva AG ist ein Softwareunternehmen mit Sitz in der Schweiz, das individuelle Softwarelösungen für verschiedene Branchen und Anwendungsbereiche entwickelt. Die Apptiva AG bietet [Mobile Apps](/mobile-apps-ios-android/), [Web Apps](/web-apps/) und [Chatbots](/chatbots/) sowie [Produktkonfiguratoren](/produktkonfiguratoren/) an, welche die Geschäftsprozesse und die digitale Transformation ihrer Kunden beschleunigen und optimieren. Die Apptiva AG arbeitet eng und direkt mit ihren Kunden zusammen, um passgenaue und qualitativ hochwertige Lösungen zu liefern. Die Projekte der Apptiva AG zeichnen sich durch hohe Usability aus und konnten bisher alle erfolgreich abgeschlossen werden. Die Apptiva AG hat unter anderem die Schweizerische Post, die Screenimage Systems AG und die Suva als Referenzkunden.
