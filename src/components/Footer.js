@@ -261,6 +261,8 @@ const Footer = () => (
           </span>{' '}
           2015 - {year} Apptiva AG. Passgenaue Softwarelösungen.{' '}
           <Link to="/impressum/">Impressum</Link>&ensp;|&ensp;
+          <Link to="/datenschutzerklaerung/">Datenschutzerklärung</Link>
+          &ensp;|&ensp;
           <TrackingPreview />
         </Company>
       </Grid>
