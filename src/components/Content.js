@@ -27,10 +27,6 @@ const Markdown = styled.div`
     max-width: 100%;
   }
 
-  a {
-    word-break: break-all;
-  }
-
   table {
     display: block;
     font-size: 0.8em;
