@@ -33,8 +33,9 @@ const PartnerImage = styled.div`
 `
 
 const metadata = {
-  title: 'Apptiva AG - iOS, Android, Desktop und Web-Applikationen',
-  description: `Agile Entwicklung von iOS, Android, Desktop und Web-Applikationen. 
+  title:
+    'Apptiva AG - Software-Entwicklung in der Schweiz - iOS, Android, Desktop und Web-Applikationen',
+  description: `Agile Software-Entwicklung in der Schweiz von iOS-, Android-, Desktop- und Web-Applikationen. 
   Bei uns erhalten Sie passende, benutzerfreundliche Lösungen mit attraktivem Design in der Schweiz entwickelt.`,
 }
 
