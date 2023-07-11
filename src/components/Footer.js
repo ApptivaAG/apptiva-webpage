@@ -260,7 +260,7 @@ const Footer = () => (
             ©
           </span>{' '}
           2015 - {year} Apptiva AG.{' '}
-          <Link to="/">Software-Entwicklung in der Schweiz</Link>
+          <Link to="/">Softwareentwicklung in der Schweiz</Link>
           &ensp;|&ensp;
           <Link to="/impressum/">Impressum</Link>&ensp;|&ensp;
           <Link to="/datenschutzerklaerung/">Datenschutzerklärung</Link>

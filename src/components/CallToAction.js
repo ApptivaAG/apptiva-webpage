@@ -7,8 +7,8 @@ const CallToAction = ({ dark = false }) => (
     <Container>
       <h2>
         <Balancer>
-          Beschleunigen Sie jetzt Ihre Geschäftsprozesse mit
-          Software-Entwicklung in der Schweiz
+          Beschleunigen Sie jetzt Ihre Geschäftsprozesse mit Softwareentwicklung
+          aus der Schweiz
         </Balancer>
       </h2>
       <p>Rufen Sie uns an oder schreiben Sie uns eine Nachricht.</p>

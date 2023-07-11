@@ -129,7 +129,7 @@ const Hero = () => (
       </ColHero>
       <ColTeaser>
         <TeaserTitle>
-          <Balancer>Software-Entwicklung in der Schweiz</Balancer>
+          <Balancer>Softwareentwicklung in der Schweiz</Balancer>
         </TeaserTitle>
 
         <TeaserText>

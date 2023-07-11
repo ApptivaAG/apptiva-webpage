@@ -76,8 +76,8 @@ const implementationTools = [
 ]
 
 const metadata = {
-  title: 'Unser agiles Vorgehen für Software-Entwicklung',
-  description: `Unser agiles Vorgehen für optimale Software-Entwicklung ist
+  title: 'Unser agiles Vorgehen für Softwareentwicklung',
+  description: `Unser agiles Vorgehen für optimale Softwareentwicklung ist
   Teil des Erfolgsrezepts von Apptiva. Profitieren Sie davon!`,
   slug: 'vorgehen',
 }
@@ -89,11 +89,11 @@ const Vorgehen = () => (
       <article>
         <Section>
           <Container>
-            <MainTitle>Vorgehen Software-Entwicklung</MainTitle>
+            <MainTitle>Vorgehen Softwareentwicklung</MainTitle>
             <Centered>
               <p>
                 <b>
-                  Unser agiles Vorgehen für optimale Software-Entwicklung ist
+                  Unser agiles Vorgehen für optimale Softwareentwicklung ist
                   Teil des Erfolgsrezepts von Apptiva. Profitieren Sie davon!
                 </b>
               </p>
