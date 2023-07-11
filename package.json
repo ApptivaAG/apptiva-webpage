@@ -51,6 +51,7 @@
     "react-helmet": "^6.1.0",
     "react-hook-form": "^6.15.5",
     "react-text-loop": "^2.3.0",
+    "react-wrap-balancer": "^1.0.0",
     "remark": "^13.0.0",
     "remark-html": "^13.0.1",
     "smooth-scroll": "^16.1.3",

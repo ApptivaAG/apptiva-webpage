@@ -1,15 +1,15 @@
+import 'normalize.css/normalize.css'
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { ThemeProvider } from 'styled-components'
-import 'normalize.css/normalize.css'
 
-import Navbar from './Navbar'
+import { Provider as BalancerProvider } from 'react-wrap-balancer'
+import config from '../config'
+import '../fonts.css'
+import { GlobalStyle, theme } from '../style'
 import Footer from './Footer'
 import Lightbox, { LightboxImageStyle } from './Lightbox'
-import config from '../config'
-import Hero from './Hero'
-import { GlobalStyle, theme } from '../style'
-import '../fonts.css'
+import Navbar from './Navbar'
 
 if (typeof window !== 'undefined') {
   // make scroll behavior of internal links smooth
@@ -21,16 +21,18 @@ if (typeof window !== 'undefined') {
 }
 
 const Layout = ({ children, showHero = false }) => (
-  <ThemeProvider theme={theme}>
-    <Lightbox>
-      <Helmet title={config.title} />
-      <Navbar location={showHero && 'root'} />
-      {children}
-      <Footer />
-      <GlobalStyle />
-      <LightboxImageStyle />
-    </Lightbox>
-  </ThemeProvider>
+  <BalancerProvider>
+    <ThemeProvider theme={theme}>
+      <Lightbox>
+        <Helmet title={config.title} />
+        <Navbar location={showHero && 'root'} />
+        {children}
+        <Footer />
+        <GlobalStyle />
+        <LightboxImageStyle />
+      </Lightbox>
+    </ThemeProvider>
+  </BalancerProvider>
 )
 
 export default Layout

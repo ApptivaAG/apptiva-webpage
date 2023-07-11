@@ -33,8 +33,9 @@ const PartnerImage = styled.div`
 `
 
 const metadata = {
-  title: 'Apptiva AG - iOS, Android, Desktop und Web-Applikationen',
-  description: `Agile Entwicklung von iOS, Android, Desktop und Web-Applikationen. 
+  title:
+    'Apptiva AG - Softwareentwicklung in der Schweiz - iOS, Android, Desktop und Web-Applikationen',
+  description: `Agile Softwareentwicklung in der Schweiz von iOS-, Android-, Desktop- und Web-Applikationen. 
   Bei uns erhalten Sie passende, benutzerfreundliche Lösungen mit attraktivem Design in der Schweiz entwickelt.`,
 }
 
@@ -174,14 +175,14 @@ const HomePageTemplate = ({
 
       <Section css="padding-bottom: 0;">
         <Container>
-          <h2>Mit Apptiva zusammenarbeiten</h2>
+          <h2>Softwareentwicklung mit Apptiva angehen</h2>
           <p css="margin-bottom: 0">
             Das Entwickeln von individuellen Apps und Applikationen ist unsere
             Spezialität. Damit beschleunigen wir Ihre Geschäftsprozesse und
             unterstützen Sie bei der digitalen Transformation Ihres
             Unternehmens. Wir pflegen eine enge und direkte Zusammenarbeit mit
-            unseren Kunden, um schnell und in hoher Qualität passgenaue Lösungen
-            bereitstellen zu können.
+            unseren Kunden, um schnell und in hoher Qualität passgenaue Software
+            entwickeln zu können.
           </p>
           <p css="margin-bottom: 0">
             Für uns ist es wichtig, ganzheitliche Lösungen zu finden. Wir sind
@@ -190,9 +191,9 @@ const HomePageTemplate = ({
             sollen unsere Kunden und auch wir zufrieden sein mit dem Resultat.
           </p>
           <p>
-            Unsere Projekte werden allesamt von uns selbst in der Zentralschweiz{' '}
+            Die Entwicklung findet bei uns in der Zentralschweiz{' '}
             <img src={luzern} alt="" height="18" css="margin-block: -3px;" />{' '}
-            umgesetzt. In der Regel arbeiten wir von zu Hause aus. Bei Bedarf
+            statt. In der Regel arbeiten wir von zu Hause aus. Bei Bedarf
             tauschen wir uns jedoch gerne mit unseren Kunden in unserem Büro am
             schönen Sempachersee aus.
           </p>

@@ -12,7 +12,7 @@ bulletGroups:
     bulletList:
       - icon: history
         title: Scrum
-        text: Scrum ist eine Arbeitsmethodik in der agilen Software-Entwicklung und beruht auf der Erfahrung, dass viele Entwicklungsprojekte zu komplex sind, um in einen vollumfänglichen Plan gefasst zu werden. So werden in einem regelmässigen Zyklus (z.B. alle zwei Wochen) kleine Zwischenergebnisse geschaffen, anhand derer sich die fehlenden Anforderungen und Lösungstechniken konkretisieren lassen.
+        text: Scrum ist eine Arbeitsmethodik in der agilen Softwareentwicklung und beruht auf der Erfahrung, dass viele Entwicklungsprojekte zu komplex sind, um in einen vollumfänglichen Plan gefasst zu werden. So werden in einem regelmässigen Zyklus (z.B. alle zwei Wochen) kleine Zwischenergebnisse geschaffen, anhand derer sich die fehlenden Anforderungen und Lösungstechniken konkretisieren lassen.
       - icon: inbox
         title: Kanban
         text: Das Ziel von Kanban ist, schnellere Durchlaufzeiten zu erreichen und Probleme schneller sichtbar zu machen. Dies wird unter Anderem durch Begrenzung von parallelen Arbeiten erreicht. Die ganze Wertschöpfungskette mit ihren verschiedenen Prozessschritten wird in einem sogenannten Kanban-Board für alle Beteiligten visualisiert.
