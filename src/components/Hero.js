@@ -80,7 +80,7 @@ const TeaserTitle = styled.h1`
   font-size: 2.5em;
   margin: 1rem 0;
   color: black;
-  hyphens: none;
+  line-height: 1em;
 
   @media (max-width: 380px) {
     font-size: 1.6rem;
@@ -129,7 +129,7 @@ const Hero = () => (
       </ColHero>
       <ColTeaser>
         <TeaserTitle>
-          <Balancer>Softwareentwicklung in der Schweiz</Balancer>
+          <Balancer>Software&shy;entwicklung in der Schweiz</Balancer>
         </TeaserTitle>
 
         <TeaserText>
