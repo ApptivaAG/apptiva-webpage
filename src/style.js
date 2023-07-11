@@ -323,9 +323,6 @@ export const GlobalStyle = createGlobalStyle`
   h1 {
     font-weight: 800;
   }
-  h1, h2 {
-    hyphens: auto;
-  }
 
   p {
     line-height: 1.3;

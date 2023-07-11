@@ -259,7 +259,9 @@ const Footer = () => (
           <span role="img" aria-label="All rights reserved.">
             ©
           </span>{' '}
-          2015 - {year} Apptiva AG. Passgenaue Softwarelösungen.{' '}
+          2015 - {year} Apptiva AG.{' '}
+          <Link to="/">Software-Entwicklung in der Schweiz</Link>
+          &ensp;|&ensp;
           <Link to="/impressum/">Impressum</Link>&ensp;|&ensp;
           <Link to="/datenschutzerklaerung/">Datenschutzerklärung</Link>
           &ensp;|&ensp;

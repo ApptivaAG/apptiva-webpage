@@ -1,13 +1,14 @@
 import React from 'react'
+import Balancer from 'react-wrap-balancer'
 import styled from 'styled-components'
 
-import { Container } from '../style'
-import Customers from './Customers'
-import lamp from '../img/hero/lamp.svg'
 import arrow from '../img/hero/arrow.svg'
 import cloud from '../img/hero/cloud.svg'
 import desktop from '../img/hero/desktop.svg'
+import lamp from '../img/hero/lamp.svg'
 import mobile from '../img/hero/mobile.svg'
+import { Container } from '../style'
+import Customers from './Customers'
 
 const Section = styled.section`
   display: flex;
@@ -75,15 +76,14 @@ const Apps = styled.div`
 `
 const ColTeaser = styled.div``
 
-const TeaserTitle = styled.h2`
-  font-size: 1.8em;
+const TeaserTitle = styled.h1`
+  font-size: 2.5em;
   margin: 1rem 0;
-  max-width: 24rem;
   color: black;
   hyphens: none;
 
   @media (max-width: 380px) {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 `
 const TeaserText = styled.div`
@@ -129,7 +129,7 @@ const Hero = () => (
       </ColHero>
       <ColTeaser>
         <TeaserTitle>
-          Erfolgreiche Entwicklung von digitalen Produkten
+          <Balancer>Software-Entwicklung in der Schweiz</Balancer>
         </TeaserTitle>
 
         <TeaserText>
@@ -137,7 +137,8 @@ const Hero = () => (
           <a href="individuelle-entwicklung">individuelle Softwarelösungen.</a>
           <br />
           Wir entwickeln Mobile Apps sowie Web- und Desktopapplikationen und
-          unterstützen Sie bei der Digi&shy;talisierung.
+          unterstützen Sie bei der Digi&shy;talisierung. Entwicklung zu 100% in
+          der Zentralschweiz.
         </TeaserText>
       </ColTeaser>
     </Container>
