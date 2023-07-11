@@ -191,7 +191,7 @@ const HomePageTemplate = ({
             sollen unsere Kunden und auch wir zufrieden sein mit dem Resultat.
           </p>
           <p>
-            Die Entwicklung findet allesamt bei uns in der Zentralschweiz{' '}
+            Die Entwicklung findet bei uns in der Zentralschweiz{' '}
             <img src={luzern} alt="" height="18" css="margin-block: -3px;" />{' '}
             statt. In der Regel arbeiten wir von zu Hause aus. Bei Bedarf
             tauschen wir uns jedoch gerne mit unseren Kunden in unserem Büro am
