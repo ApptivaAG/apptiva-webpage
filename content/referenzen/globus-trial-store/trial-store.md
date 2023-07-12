@@ -1,5 +1,5 @@
 ---
-title: Trial Store App & Webshop - Globus
+title: Globus - Trial Store App & Webshop
 slug: trial-store-app-webshop-globus
 templateKey: referenz
 image: trial-store.png
