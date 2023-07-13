@@ -8,39 +8,6 @@ import Layout from '../components/Layout'
 
 const jobs = [
   {
-    title: 'Marketing- und Akquise-Manager:in',
-    subtitle: '40-60%, ab sofort',
-    description: [
-      'Wir sind ein junges Software-Unternehmen und suchen Unterstützung.',
-      'Bei uns findest Du spannende und abwechslungsreiche Arbeit vor. Hilf uns dabei, unsere Bekanntheit zu steigern und neue Kunden zu gewinnen. Es würde uns freuen, Dich schon bald kennen zu lernen!',
-    ],
-    strengthsTitle: 'Deine Aufgaben',
-    strengths: [
-      'Erstellen und Umsetzen von Marketingstrategien und -kampagnen für unsere Dienstleistungen und Produkte, insbesondere <a href="https://www.bubble-chat.ch" target="_blank" rel="noopener noreferrer">Bubble Chat</a>',
-      'Pflegen und Erweitern unserer Online-Präsenz auf verschiedenen Kanälen (Website, Social Media, Newsletter, etc.)',
-      'Generieren und Qualifizieren von Leads durch gezielte Ansprache potenzieller Kunden',
-      'Planen und Durchführen von Verkaufsgesprächen und Präsentationen',
-      'Aufbauen und Pflegen von langfristigen Kundenbeziehungen',
-    ],
-    skillsTitle: 'Dein Profil',
-    skills: [
-      'Ausbildung oder Studium im Bereich Marketing, Kommunikation oder verwandten Fachgebieten',
-      'Berufserfahrung im Bereich Marketing & Akquise',
-      'Kenntnisse der schweizerischen Marktbedingungen und Branchentrends',
-      'Ausgeprägte Kommunikations- und Verhandlungsfähigkeiten',
-      'Hohe Eigeninitiative, Kreativität und Ergebnisorientierung',
-      'Sehr gute Deutschkenntnisse in Wort und Schrift, gute Englischkenntnisse',
-    ],
-    benefitsTitle: 'Wir bieten Dir',
-    benefits: [
-      '&quot;Work From Home&quot;. Wir arbeiten normalerweise von zu Hause aus.',
-      'Du entscheidest über Deine Tätigkeiten, Deine Arbeitszeiten, Deine Ferienzeit und Deinen Lohn.',
-      'Du arbeitest an spannenden Produkten wie z.B. Chatbots.',
-      'Du hast die Chance, Dich bei uns zu entfalten.',
-      'Du erlebst ein selbstorganisierendes Unternehmen am eigenen Leibe.',
-    ],
-  },
-  {
     title: 'Fullstack Software-Entwickler:in und Unternehmer:in*',
     subtitle: '60% - 100%, ab sofort',
     description: [
