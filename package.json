@@ -103,5 +103,6 @@
     "require": [
       "@babel/register"
     ]
-  }
+  },
+  "packageManager": "pnpm@7.28.0"
 }
