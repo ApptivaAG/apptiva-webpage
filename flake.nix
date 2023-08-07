@@ -2,7 +2,7 @@
   outputs = { self, nixpkgs,flake-utils }: flake-utils.lib.eachDefaultSystem (system: with nixpkgs.legacyPackages.${system}; {
     devShells.default = mkShell {
       buildInputs = [
-        nodejs-14_x
+        nodejs-16_x
         autoconf
         automake
         libtool
