@@ -131,5 +131,13 @@ module.exports = {
         databaseId: process.env.NOTION_DB_ID,
       },
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.apptiva.ch',
+        sitemap: 'https://www.apptiva.ch/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
   ],
 }
