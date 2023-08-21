@@ -69,7 +69,7 @@ const HomePageTemplate = ({
                   />
                   <CardLinks>
                     <Link to="/mobile-apps-ios-android/">
-                      <p>Mobile Apps für iOS und Android</p>
+                      <p>App Entwicklung für iOS und Android</p>
                     </Link>
                     <Link to="/web-apps/">
                       <p>Web Apps und Applikationen</p>
@@ -181,21 +181,29 @@ const HomePageTemplate = ({
             Spezialität. Damit beschleunigen wir Ihre Geschäftsprozesse und
             unterstützen Sie bei der digitalen Transformation Ihres
             Unternehmens. Wir pflegen eine enge und direkte Zusammenarbeit mit
-            unseren Kunden, um schnell und in hoher Qualität passgenaue Software
-            entwickeln zu können.
+            unseren Kunden, um auf dieser Grundlage schnell und in hoher
+            Qualität passgenaue Software entwickeln zu können.
           </p>
           <p css="margin-bottom: 0">
-            Für uns ist es wichtig, ganzheitliche Lösungen zu finden. Wir sind
-            bemüht, bei unseren Produkten und Projekten immer wieder einen Blick
-            über den Tellerrand hinaus zu werfen. Beim Abschluss eines Projektes
-            sollen unsere Kunden und auch wir zufrieden sein mit dem Resultat.
+            Für uns ist es wichtig, ganzheitliche Softwarelösungen zu finden.
+            Unabhängig davon, ob es um eine Plattform Entwicklung, Business
+            Applikation, Automatisierung, Webentwicklung, Programmierung oder
+            andere Softwarelösungen geht, bei uns steht immer eine Vision im
+            Mittelpunkt.
+          </p>
+          <p>
+            Wir sind bemüht, bei unseren Produkten und Projekten immer wieder
+            einen Blick über den Tellerrand hinaus zu werfen. Beim Abschluss
+            eines Projektes sollen unsere Kunden und auch wir zufrieden sein mit
+            dem Resultat.
           </p>
           <p>
             Die Entwicklung findet bei uns in der Zentralschweiz{' '}
             <img src={luzern} alt="" height="18" css="margin-block: -3px;" />{' '}
             statt. In der Regel arbeiten wir von zu Hause aus. Bei Bedarf
             tauschen wir uns jedoch gerne mit unseren Kunden in unserem Büro am
-            schönen Sempachersee aus.
+            schönen Sempachersee aus. Wir sind sehr gut erreichbar aus Bern,
+            Luzern, Zürich und aus der ganzen Schweiz.
           </p>
           <Buttonlist>
             <Button to="/ueber-uns/">Mehr über uns erfahren</Button>

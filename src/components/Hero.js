@@ -135,10 +135,23 @@ const Hero = () => (
         <TeaserText>
           Zusammen mit Ihnen realisieren wir{' '}
           <a href="individuelle-entwicklung">individuelle Softwarelösungen.</a>
-          <br />
-          Wir entwickeln Mobile Apps sowie Web- und Desktopapplikationen und
-          unterstützen Sie bei der Digi&shy;talisierung. Entwicklung zu 100% in
-          der Zentralschweiz.
+          <p>
+            Wir entwickeln Mobile Apps sowie Web- und Desktopapplikationen und
+            unterstützen Sie mit unserem Know How und unserer Erfahrung bei der
+            Digitalisierung.
+          </p>
+          <p>
+            Da wir auch für uns selbst Produkte und Softwarelösungen entwickeln,
+            wissen wir, wie wichtig die Einhaltung von Vorgaben wie Kosten und
+            Zielen für das Business ist.
+          </p>
+          <p>
+            Unsere Software Entwicklung findet zu 100% in unserem Unternehmen in
+            der Zentralschweiz statt. Unsere Softwareentwicklerinnen und
+            Softwareentwickler arbeiten mit modernen Methoden, Technologien
+            (z.B. künstliche Intelligenz) und Softwareentwicklungsprozessen und
+            kennen sich bestens aus mit Daten und Projektmanagement.
+          </p>
         </TeaserText>
       </ColTeaser>
     </Container>
