@@ -87,7 +87,7 @@ const TeaserTitle = styled.h1`
   }
 `
 const TeaserText = styled.div`
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 400;
   color: #aaaaaa;
   hyphens: auto;
