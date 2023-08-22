@@ -11,7 +11,7 @@ categories:
   - Allgemein
 ---
 
-Unser Vorgehen für die Softwareentwicklung wurde von der agilen Welle[^1] und der Methode "Lean Startup"[^2] stark beeinflusst. Immer mehr Techniken und Tools setzten wir ein, um Projekte optimal zum Abschluss bringen zu können. Dabei ging hin und wieder ein wenig vergessen, dass unsere Kunden nicht dieselbe Lernkurve wie wir hinter sich hatten. Und wenn man nicht dieselbe Sprache spricht, kann das zu Missverständnissen führen. Für unsere Kunden war es daher manchmal schwierig nachzuvollziehen, was der aktuelle Stand ist und was als nächstes passiert. Entsprechend haben wir von Kunden immer mal wieder gehört, dass unser Vorgehen undurchsichtig ist. Wir mussten etwas unternehmen.
+Unser Vorgehen für die <a href="/">Softwareentwicklung</a> wurde von der agilen Welle[^1] und der Methode "Lean Startup"[^2] stark beeinflusst. Immer mehr Techniken und Tools setzten wir ein, um Projekte optimal zum Abschluss bringen zu können. Dabei ging hin und wieder ein wenig vergessen, dass unsere Kunden nicht dieselbe Lernkurve wie wir hinter sich hatten. Und wenn man nicht dieselbe Sprache spricht, kann das zu Missverständnissen führen. Für unsere Kunden war es daher manchmal schwierig nachzuvollziehen, was der aktuelle Stand ist und was als nächstes passiert. Entsprechend haben wir von Kunden immer mal wieder gehört, dass unser Vorgehen undurchsichtig ist. Wir mussten etwas unternehmen.
 
 ## Vorgehen für die Softwareentwicklung unklar
 

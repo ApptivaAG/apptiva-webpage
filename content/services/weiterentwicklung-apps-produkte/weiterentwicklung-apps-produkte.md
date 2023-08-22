@@ -28,7 +28,7 @@ Es gibt verschiedenste Varianten, diese Probleme anzupacken. Eine davon ist: man
 
 ## Weiterentwicklung durch Apptiva
 
-Dank unserer langjährigen Erfahrung in der Softwareentwicklung, sind wir in der Lage, Apps und Produkte zu übernehmen und die Weiterentwicklung in einer guten Qualität sicherzustellen.
+Dank unserer langjährigen <a href="/">Erfahrung in der Softwareentwicklung</a>, sind wir in der Lage, Apps und Produkte zu übernehmen und die Weiterentwicklung in einer guten Qualität sicherzustellen.
 
 Unser Vorgehen beinhaltet die folgenden Schritte:
 

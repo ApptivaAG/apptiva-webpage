@@ -25,7 +25,7 @@ const AboutUs = () => {
         <Section css="padding-bottom: 0;">
           <Container>
             <MainTitle>Über uns</MainTitle>
-            <p>{description}</p>
+            <p dangerouslySetInnerHTML={{ __html: description }}></p>
             <p>
               Seit 2015 entwickeln wir Apps, Applikationen und Chatbots. Uns ist
               es wichtig, die Herausforderungen unserer Kunden zu verstehen, um

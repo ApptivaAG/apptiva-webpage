@@ -15,7 +15,7 @@ categories:
 
 # Motivation
 
-Üblicherweise werden Anforderungen an ein System in Form von User Stories oder Anwendungsfällen beschrieben. Diese definieren, was das System fachlich können soll. Es gibt aber auch Anforderungen die über eine reine Funktionalität hinausgehen. Sie werden als nicht-funktionale Anforderungen oder immer öfter auch als Qualitätsmerkmale bezeichnet. In diesem “Apptiva kompakt” zeigen wir, wie Qualitätsziele helfen, die wichtigsten Qualitätsmerkmale bei Architekturentscheidungen zu berücksichtigen.
+Üblicherweise werden Anforderungen an ein System in Form von User Stories oder Anwendungsfällen beschrieben. Diese definieren, was das System fachlich können soll. Es gibt aber auch Anforderungen die über eine reine Funktionalität hinausgehen. Sie werden als nicht-funktionale Anforderungen oder immer öfter auch als Qualitätsmerkmale bezeichnet. In diesem “Apptiva kompakt” zeigen wir, wie Qualitätsziele helfen, die wichtigsten Qualitätsmerkmale bei Architekturentscheidungen in der <a href="/">Softwareentwicklung</a> zu berücksichtigen.
 
 # Qualitätsmerkmale
 

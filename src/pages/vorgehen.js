@@ -113,8 +113,9 @@ const Vorgehen = () => (
               />
             </Centered>
             <p>
-              Mit den folgenden organisatorischen Tätigkeiten möchten wir
-              Transparenz und Steuerungsmöglichkeiten für alle Partien des
+              Projekte in der <a href="/">Softwareentwicklung</a> sind oft
+              komplex. Mit den folgenden organisatorischen Tätigkeiten möchten
+              wir Transparenz und Steuerungsmöglichkeiten für alle Partien des
               Projekts gewährleisten.
             </p>
             <Grid>
