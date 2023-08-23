@@ -116,7 +116,7 @@ const Footer = () => (
       <Grid>
         <About>
           <h2>Über Apptiva</h2>
-          <p>{description}</p>
+          <p dangerouslySetInnerHTML={{ __html: description }} />
           <Newsletter>
             <h3>Jedes Quartal aktuelle News erhalten</h3>
             <Button css=":hover {color: white !important;}" to="/newsletter/">
