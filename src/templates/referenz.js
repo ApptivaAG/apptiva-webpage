@@ -213,7 +213,7 @@ const Referenz = ({ data, pageContext }) => {
         contentComponent={HTMLContent}
         metaData={{
           ...post.frontmatter,
-          slug: `${referenzenRoute}/${post.slug}`,
+          slug: `${referenzenRoute}/${post.frontmatter.slug}`,
         }}
         next={data.next}
         prev={data.prev}
