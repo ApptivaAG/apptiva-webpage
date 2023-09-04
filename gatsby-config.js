@@ -85,7 +85,12 @@ module.exports = {
       },
     },
     'gatsby-plugin-react-helmet',
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        excludes: ['/tracking'],
+      },
+    },
     'gatsby-plugin-styled-components',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-svgr',
