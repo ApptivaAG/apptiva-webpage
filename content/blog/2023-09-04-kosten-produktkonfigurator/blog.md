@@ -17,7 +17,7 @@ categories:
 
 In der heutigen Welt des E-Commerce und der massgeschneiderten Produkte sind [Produktkonfiguratoren](/produktkonfiguratoren/) zu einem entscheidenden Werkzeug geworden. Sie ermöglichen es Kunden, individuelle Produkte nach ihren eigenen Vorstellungen zu gestalten und sind somit ein wichtiger Faktor für den Geschäftserfolg und die Kundenzufriedenheit. Doch wie teuer ist es eigentlich, einen Produktkonfigurator zu entwickeln und zu implementieren? In diesem Blogpost werden wir uns eingehend mit den Kosten eines Produktkonfigurators auseinandersetzen.
 
-## 1. Entwicklungskosten
+## Entwicklungskosten
 
 Die Entwicklung eines Produktkonfigurators ist ein komplexer Prozess, der von verschiedenen Faktoren abhängt. Die Kosten können stark variieren, je nachdem, wie umfangreich und anpassbar der Konfigurator sein soll. Hier sind einige Faktoren, die die Entwicklungskosten beeinflussen:
 
@@ -35,7 +35,7 @@ Die Entwicklung eines Produktkonfigurators ist ein komplexer Prozess, der von ve
 
 Die Entwicklung eines Produktkonfigurators kann daher je nach den oben genannten Faktoren zwischen einigen Tausend und mehreren Hunderttausend Schweizer Franken kosten. Im Durchschnitt belaufen sich die Kosten auf ca. CHF 50'000. Eine Schätzung der Entwicklungskosten für Ihre Anforderungen nehmen wir gerne direkt mit Ihnen vor.
 
-## 2. Betriebskosten
+## Betriebskosten
 
 Nach der Entwicklung fallen Betriebskosten an, um den Produktkonfigurator am Laufen zu halten und zu verbessern. Diese Kosten können ebenfalls variieren und beinhalten:
 
@@ -45,7 +45,7 @@ Nach der Entwicklung fallen Betriebskosten an, um den Produktkonfigurator am Lau
 
 - **Kundensupport**: Es kann notwendig sein, Kundensupport für Benutzer bereitzustellen, die Fragen oder Probleme beim Konfigurieren ihrer Produkte haben.
 
-## 3. Anpassungen und Erweiterungen
+## Anpassungen und Erweiterungen
 
 Im Laufe der Zeit können sich die Anforderungen an den Produktkonfigurator ändern. Möglicherweise müssen neue Funktionen hinzugefügt oder bestehende Funktionen angepasst werden. Diese Anpassungen und Erweiterungen können zusätzliche Kosten verursachen, da sie Entwicklungsaufwand erfordern.
 
