@@ -33,7 +33,7 @@ Die Entwicklung eines Produktkonfigurators ist ein komplexer Prozess, der von ve
 
 - **Mobile Anpassung**: Die Entwicklung eines Konfigurators, der auch auf mobilen Geräten reibungslos funktioniert, kann zusätzliche Kosten verursachen.
 
-Die Entwicklung eines Produktkonfigurators kann daher je nach den oben genannten Faktoren zwischen einigen Tausend und mehreren Hunderttausend Schweizer Franken kosten. Im Durchschnitt belaufen sich die Kosten auf ca. CHF 50'000. Eine Schätzung der Entwicklungskosten für Ihre Anforderungen nehmen wir gerne direkt mit Ihnen vor.
+Die Entwicklung eines Produktkonfigurators kann daher je nach den oben genannten Faktoren zwischen einigen Tausend und mehreren Hunderttausend Schweizer Franken kosten. Im Durchschnitt belaufen sich die Kosten auf ca. CHF 30'000. Eine Schätzung der Entwicklungskosten für Ihre Anforderungen nehmen wir gerne direkt mit Ihnen vor.
 
 ## Betriebskosten
 
