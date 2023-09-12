@@ -25,7 +25,7 @@
   },
   "content/blog/die-apptiva-waechst/die-apptiva-waechst.md": {
     "created": 1559916009,
-    "modified": 1641212060
+    "modified": 1689085135
   },
   "content/blog/drei-jahre-apptiva/drei-jahre-apptiva.md": {
     "created": 1532697036,
@@ -85,35 +85,35 @@
   },
   "content/data/testimonials/andres-quandt.md": {
     "created": 1587986854,
-    "modified": 1616577584
+    "modified": 1692624544
   },
   "content/data/testimonials/brigit-fischer.md": {
     "created": 1525003220,
-    "modified": 1587986832
+    "modified": 1689085135
   },
   "content/data/testimonials/carl-ehrhardt.md": {
     "created": 1523478708,
-    "modified": 1587986832
+    "modified": 1692624544
   },
   "content/data/testimonials/daniel-portmann.md": {
     "created": 1523478708,
-    "modified": 1587986832
+    "modified": 1689085135
   },
   "content/data/testimonials/francesco-marinelli.md": {
     "created": 1525003220,
-    "modified": 1587990014
+    "modified": 1689076713
   },
   "content/data/testimonials/marc-menz.md": {
     "created": 1593077579,
-    "modified": 1593077579
+    "modified": 1689085135
   },
   "content/data/testimonials/samuli-aegerter.md": {
     "created": 1522405321,
-    "modified": 1587986832
+    "modified": 1689076713
   },
   "content/data/testimonials/tobias-stahel.md": {
     "created": 1522405321,
-    "modified": 1587986832
+    "modified": 1689076713
   },
   "content/services/architektur-review/architektur-review.md": {
     "created": 1535470242,
@@ -149,15 +149,15 @@
   },
   "content/services/impressum/impressum.md": {
     "created": 1521817718,
-    "modified": 1657282769
+    "modified": 1688396780
   },
   "content/services/individuelle-entwicklung/individuelle-entwicklung.md": {
     "created": 1525015293,
-    "modified": 1677573545
+    "modified": 1692707201
   },
   "content/services/mobile-apps/mobile-apps.md": {
     "created": 1584719542,
-    "modified": 1677530893
+    "modified": 1692707201
   },
   "content/services/persona-workshop/persona-workshop.md": {
     "created": 1526482190,
@@ -177,7 +177,7 @@
   },
   "content/services/unsere-kompetenzen/unsere-kompetenzen.md": {
     "created": 1525875060,
-    "modified": 1619441906
+    "modified": 1692707201
   },
   "content/services/vorgehensweise/vorgehensweise.md": {
     "created": 1525884383,
@@ -185,7 +185,7 @@
   },
   "content/services/web-apps/web-apps.md": {
     "created": 1584719542,
-    "modified": 1677530893
+    "modified": 1692707201
   },
   "content/services/webshops/webshops.md": {
     "created": 1588350893,
@@ -193,7 +193,7 @@
   },
   "content/services/zusammenarbeit/zusammenarbeit.md": {
     "created": 1525724147,
-    "modified": 1677509586
+    "modified": 1692707201
   },
   "content/blog/2015-07-08-der-digitale-wandel.md": {
     "created": 1521817699,
@@ -213,7 +213,7 @@
   },
   "content/blog/2015-11-06-qualitaetsziele.md": {
     "created": 1521817699,
-    "modified": 1588617481
+    "modified": 1692707201
   },
   "content/blog/2015-12-03-geschaeftsprozesse-beschleunigen.md": {
     "created": 1521817699,
@@ -317,7 +317,7 @@
   },
   "content/data/partners/digital-enterprise/digital-enterprise.md": {
     "created": 1587392472,
-    "modified": 1587392472
+    "modified": 1692707201
   },
   "content/data/partners/dox42/dox42.md": {
     "created": 1578928504,
@@ -345,7 +345,7 @@
   },
   "content/services/weiterentwicklung-apps-produkte/weiterentwicklung-apps-produkte.md": {
     "created": 1616503118,
-    "modified": 1677530893
+    "modified": 1692707201
   },
   "content/blog/fleet-assistant/fleet-assistant.md": {
     "created": 1617914546,
@@ -353,7 +353,7 @@
   },
   "content/data/testimonials/simon-infanger.md": {
     "created": 1618231184,
-    "modified": 1618231184
+    "modified": 1692624544
   },
   "content/services/user-centered-design/user-centered-design.md": {
     "created": 1525884383,
@@ -381,7 +381,7 @@
   },
   "content/blog/2022-02-21-vorgehen-vermitteln/vorgehen-vermitteln.md": {
     "created": 1645550223,
-    "modified": 1645550223
+    "modified": 1692707201
   },
   "content/data/partners/flm/flm.md": {
     "created": 1641390628,
@@ -441,7 +441,7 @@
   },
   "content/referenzen/diluna/diluna.md": {
     "created": 1684770397,
-    "modified": 1684770397
+    "modified": 1686123121
   },
   "content/referenzen/hbtec-app/diluna.md": {
     "created": 1684770397,
@@ -458,5 +458,77 @@
   "content/data/employees/kevin-rickenbach/kevin-rickenbach.md": {
     "created": 1677755786,
     "modified": 1678692135
+  },
+  "content/blog/2023-06-19-produktkonfiguratoren-bestehende-webshops-integrieren/produktkonfiguratoren-bestehende-webshops-integrieren.md": {
+    "created": 1687178597,
+    "modified": 1687183759
+  },
+  "content/blog/2023-07-04-erfolgreiche-app-entwickeln-schweiz/blog.md": {
+    "created": 1688399504,
+    "modified": 1693835246
+  },
+  "content/blog/2023-09-04-kosten-produktkonfigurator/blog.md": {
+    "created": 1693838051,
+    "modified": 1694011320
+  },
+  "content/blog/2023-09-11-entwicklung-schweiz-vs-near-off-shoring/blog.md": {
+    "created": 1694444983,
+    "modified": 1694502544
+  },
+  "content/referenzen/chatbot-schweizerische-post/chatbot-schweizerische-post.md": {
+    "created": 1685716327,
+    "modified": 1686559575
+  },
+  "content/referenzen/emil/emil.md": {
+    "created": 1686830649,
+    "modified": 1686900305
+  },
+  "content/referenzen/gcb-package-configurator/package-configurator.md": {
+    "created": 1686296912,
+    "modified": 1686574135
+  },
+  "content/referenzen/globus-trial-store/trial-store.md": {
+    "created": 1685619196,
+    "modified": 1689162140
+  },
+  "content/referenzen/hbtec-app/hbtec-app.md": {
+    "created": 1685713553,
+    "modified": 1686123121
+  },
+  "content/referenzen/hbtec-viewer/hbtec-viewer.md": {
+    "created": 1685520263,
+    "modified": 1686123121
+  },
+  "content/referenzen/holz-art/holz-art.md": {
+    "created": 1686299464,
+    "modified": 1686574135
+  },
+  "content/referenzen/partyplaner/partyplaner.md": {
+    "created": 1685718152,
+    "modified": 1686563965
+  },
+  "content/referenzen/screenimage/screenimage.md": {
+    "created": 1685716327,
+    "modified": 1687183199
+  },
+  "content/referenzen/slope-track/slope-track.md": {
+    "created": 1685618342,
+    "modified": 1686123616
+  },
+  "content/referenzen/vivanco-webshops/vivanco-webshops.md": {
+    "created": 1686830649,
+    "modified": 1686900305
+  },
+  "content/services/datenschutzerklaerung/datenschutzerklaerung.md": {
+    "created": 1688396780,
+    "modified": 1693464874
+  },
+  "content/data/employees/brigitte-wey/brigitte-wey.md": {
+    "created": 1685521681,
+    "modified": 1687184773
+  },
+  "content/data/employees/carla-iten/carla-iten.md": {
+    "created": 1684836579,
+    "modified": 1685428854
   }
 }

@@ -105,7 +105,7 @@ const BlogPost = ({ data, pageContext }) => {
 
   post.frontmatter.excerpt = post.excerpt
   post.frontmatter.updatedAt = post.updatedAt
-  post.frontmatter.dateModified = post.updatedAt
+  post.frontmatter.dateModified = post.dateModified
 
   return (
     <Layout>
@@ -129,6 +129,7 @@ export const pageQuery = graphql`
       html
       excerpt(pruneLength: 300)
       updatedAt(formatString: "DD.MM.YYYY")
+      dateModified: updatedAt(formatString: "DD-MM-YYYY")
       frontmatter {
         title
         description
