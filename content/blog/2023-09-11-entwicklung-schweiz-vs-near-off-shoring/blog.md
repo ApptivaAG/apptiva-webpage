@@ -1,6 +1,6 @@
 ---
-title: "App Entwicklung in der Schweiz: Vorteile gegenüber Nearshoring und Offshoring"
-slug: app-entwicklung-in-der-schweiz-vorteile-gegenueber-nearshoring-und-offshoring
+title: "App Entwicklung in der Schweiz: Vorteile gegenüber Offshore"
+slug: app-entwicklung-in-der-schweiz-vorteile-gegenueber-offshore
 templateKey: blog-post
 image: luzern.jpg
 imageCaption: >- 
@@ -10,7 +10,7 @@ imageCaption: >-
 date: 2023-09-12
 author: Philip Schönholzer
 description: >-
-  Die Wahl des richtigen Standorts für die App-Entwicklung kann den Erfolg eines Projekts massgeblich beeinflussen. In diesem Artikel vergleichen wir die Vorzüge der App-Entwicklung in der Schweiz mit Nearshoring und Offshoring. Von höchster Qualität bis zu Datenschutz - entdecken Sie die Vorteile der Schweiz für Ihre App-Entwicklung.
+  Was sind die Vorzüge der App-Entwicklung in der Schweiz gegenüber Offshoring? Von Qualität bis zu Datenschutz - entdecken Sie die Vorteile der Schweiz für Ihre App-Entwicklung.
 categories:
   - Mobile App
   - Web App
