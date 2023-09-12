@@ -20,7 +20,7 @@ Wenn Unternehmen sich dazu entscheiden, eine App zu entwickeln, stehen sie vor d
 
 ## App Entwicklung in der Schweiz: Eine solide Wahl
 
-Die App-Entwicklung in der Schweiz bietet eine Fülle von Vorteilen, die sie zu einer soliden Wahl für Unternehmen macht, die hochwertige Anwendungen erstellen möchten. Im Folgenden werden wir einige dieser Vorteile hervorheben:
+Die App-Entwicklung in der Schweiz bietet eine Fülle von Vorteilen, die sie zu einer soliden Wahl für Unternehmen macht, welche hochwertige Anwendungen erstellen möchten. Im Folgenden werden wir einige dieser Vorteile hervorheben:
 
 ### Hohe Qualitätsstandards
 
@@ -73,7 +73,7 @@ Nearshoring und Offshoring eröffnen Unternehmen die Möglichkeit, auf ein breit
 >
 > Zudem muss das Entwicklungspersonal an einem Offshoring-Standort während der Entwicklung viel intensiver von Schweizer Spezialisten begleitet werden. Und fast alle Arbeiten eines Offshoring-Standortes müssen von Schweizer Fachkräften nochmals überarbeitet werden. Neben diesen Mehrkosten verlangsamt dies den gesamten Entwicklungsprozess, was wiederum Kosten verursacht.
 >
->Wenn man nicht gezwungen ist, innerhalb weniger Wochen ein Projekt mit 100 Personen aus dem Boden zu stampfen, würde ich nur aus Kostengründen auf Near- und Offshoring verzichten.
+> Wenn man nicht gezwungen ist, innerhalb weniger Wochen ein Projekt mit 100 Personen aus dem Boden zu stampfen, würde ich nur aus Kostengründen auf Near- und Offshoring verzichten.
 
 ## Fazit: Die richtige Wahl für Ihr App-Entwicklungsprojekt
 
