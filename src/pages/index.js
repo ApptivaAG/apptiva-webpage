@@ -33,7 +33,7 @@ const PartnerImage = styled.div`
 `
 
 const metadata = {
-  title: 'Softwareentwicklung (Schweiz): Individuelle Entwicklung',
+  title: 'Softwareentwicklung (Schweiz): Entwicklung von Software',
   description: `Entwicklung von Software: in Bern, Luzern, Zürich & ganze Schweiz ✅ Pünktlich ✅ CH Entwickler ✅ kostenlose Beratung`,
 }
 

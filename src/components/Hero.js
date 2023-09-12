@@ -133,8 +133,7 @@ const Hero = () => (
         </TeaserTitle>
 
         <TeaserText>
-          Zusammen mit Ihnen realisieren wir{' '}
-          <a href="individuelle-entwicklung">individuelle Softwarelösungen.</a>
+          Zusammen mit Ihnen realisieren wir individuelle Softwarelösungen.
           <p>
             Wir entwickeln Mobile Apps sowie Web- und Desktopapplikationen und
             unterstützen Sie mit unserem Know How und unserer Erfahrung bei der
