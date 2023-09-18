@@ -19,7 +19,7 @@ const apptivaServiceList = {
     title: 'Mobile Apps für iOS und Android',
   },
   'web-apps': {
-    title: 'Web Apps und Applikationen',
+    title: 'Web App Entwicklung',
   },
   chatbots: {
     title: 'Chatbots',

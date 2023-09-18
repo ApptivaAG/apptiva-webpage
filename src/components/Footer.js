@@ -211,7 +211,7 @@ const Footer = () => (
               </Link>
             </li>
             <li>
-              <Link to="/web-apps/">Web-Apps und Applikationen</Link>
+              <Link to="/web-apps/">Web App Entwicklung</Link>
             </li>
             <li>
               <Link to="/chatbots/">Chatbots</Link>

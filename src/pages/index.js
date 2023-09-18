@@ -70,7 +70,7 @@ const HomePageTemplate = ({
                       <p>App Entwicklung für iOS und Android</p>
                     </Link>
                     <Link to="/web-apps/">
-                      <p>Web Apps und Applikationen</p>
+                      <p>Web App Entwicklung</p>
                     </Link>
                     <Link to="/custom-dashboard/">
                       <p>Individuelle Dashboards</p>

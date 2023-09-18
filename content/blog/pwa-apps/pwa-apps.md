@@ -13,7 +13,7 @@ categories:
 
 Es muss nicht immer eine native iPhone- oder Android-Anwendung sein. Progressive Web Apps sind eine pragmatische Alternative, mit der Sie einiges schneller ans Ziel kommen.
 
-Weblösungen haben den Vorteil, dass sie in allen Browsern und auf allen Betriebssystemen funktionieren. Seit dem Zeitalter der Smartphones haben wir allerdings ein altes Problem
+Weblösungen (siehe auch [Web App erstellen](/web-apps/)) haben den Vorteil, dass sie in allen Browsern und auf allen Betriebssystemen funktionieren. Seit dem Zeitalter der Smartphones haben wir allerdings ein altes Problem
 zurück: Die Anwendungen mussten wieder für alle Plattformen einzeln entwickelt werden. Inzwischen gibt es jedoch verschiedene Lösungen, die es erlauben, grosse Teile einer Anwendung
 für iOS und Android gleichzeitig zu entwickeln. Eine PWA geht noch einen Schritt weiter: Damit wird die Webseite zur Smartphone-App und lässt sich auf dem Gerät auch als
 solche installieren und verwenden.
