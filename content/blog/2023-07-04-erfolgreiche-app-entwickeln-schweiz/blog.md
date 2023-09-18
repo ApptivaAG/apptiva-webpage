@@ -1,11 +1,13 @@
 ---
 title: Wie Sie eine erfolgreiche App entwickeln
-slug: app-entwickeln-schweiz
+titleTag: 'App erstellen: Leitfaden & Tipps'
+slug: app-erstellen-schweiz
 templateKey: blog-post
 image: iphone-apps.jpg
 imageCaption: iPhone mit Apps von William Hook auf Unsplash
 date: 2023-07-04
 author: Philip Schönholzer
+metaDescription: Sie möchten eine eigene App erstellen? Mit unserem Guide finden Sie heraus, wie Sie Ihre App am besten erstellen.
 description: >-
   Apps sind aus unserem Alltag nicht mehr wegzudenken. Sie erleichtern uns die Kommunikation, die Organisation, die Unterhaltung und vieles mehr. Aber wie entsteht eine gute App? Und was müssen Sie beachten, wenn Sie eine eigene App entwickeln wollen?
 categories:

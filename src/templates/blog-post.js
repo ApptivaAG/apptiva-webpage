@@ -132,7 +132,9 @@ export const pageQuery = graphql`
       dateModified: updatedAt(formatString: "DD-MM-YYYY")
       frontmatter {
         title
+        titleTag
         description
+        metaDescription
         author
         date(formatString: "DD.MM.YYYY")
         datePublished: date(formatString: "DD-MM-YYYY")
