@@ -207,7 +207,7 @@ const Footer = () => (
             </li>
             <li>
               <Link to="/mobile-apps-ios-android/">
-                Mobile Apps für iOS und Android
+                Mobile App Entwicklung für iOS und Android
               </Link>
             </li>
             <li>

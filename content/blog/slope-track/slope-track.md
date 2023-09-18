@@ -21,7 +21,7 @@ Eine konkrete Metrik für die App ist, dass jede(r) AnwenderIn die vorhandenen T
 
 ## Vorgehen
 
-Wie üblich haben wir das Projekt agil umgesetzt. Dies hatte in diesem Fall folgende Vorteile:
+Wie üblich sind wir bei der [App Entwicklung](/mobile-apps-ios-android/) agil vorgegangen. Dies hatte in diesem Fall folgende Vorteile:
 
 - Wir konnten bereits mit einem frühen Prototyp herausfinden, ob Beschleunigungsaufzeichnung und Abfahrtserkennung möglich sind und funktionieren.
 - Bereits zu Beginn mit vielen unterschiedlichen Mobile-Geräten und Sensoren die Beschleunigungsaufzeichnung testen.
@@ -66,7 +66,7 @@ Das interaktive Diagramm unter der Karte visualisiert die Belastung und die Gesc
 
 ## Technologie
 
-Bei der App haben wir so viel wie möglich mit [React Native](https://facebook.github.io/react-native/) umgesetzt. Dies ermöglicht uns, die Benutzeroberfläche für Android und iOS nur einmal implementieren zu müssen. Gleichzeitig bietet React Native die Möglichkeit, hardwarenahe Teile Plattformspezifisch zu entwickeln.
+Bei der App haben wir so viel wie möglich mit [React Native](https://facebook.github.io/react-native/) umgesetzt. Dies ermöglicht uns, die Benutzeroberfläche für Android und iOS nur einmal implementieren zu müssen. Gleichzeitig bietet React Native die Möglichkeit, hardwarenahe Teile plattformspezifisch zu entwickeln.
 
 Beim Verarbeiten der Sensordaten kommt es auf jede Millisekunde an. Deshalb programmierten wir diese Komponenten so nahe wie möglich an den Hardware-Plattformen. Mit [Kotlin Native](https://kotlinlang.org/docs/reference/native-overview.html) waren wir in der Lage auch dort den Code nur einmal zu schreiben und für Android sowie iOS hardwarespezifisch zu kompilieren.
 

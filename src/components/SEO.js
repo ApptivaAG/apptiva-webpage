@@ -85,8 +85,12 @@ const composeUrl = compose(addSlash, baseOrSlugUrl)
 
 const SEO = ({ metaData, postImage, isBlogPost }) => {
   const title = stripHTML(metaData.title) || config.title
+  const titleTag = metaData.titleTag || stripHTML(metaData.title)
   const description =
-    metaData.description || metaData.excerpt || config.description
+    metaData.metaDescription ||
+    metaData.description ||
+    metaData.excerpt ||
+    config.description
   const image = postImage ? `${config.url}${postImage}` : config.logo
   const url = composeUrl(config.url, metaData.slug)
   const datePublished = isBlogPost && metaData.datePublished
@@ -106,7 +110,7 @@ const SEO = ({ metaData, postImage, isBlogPost }) => {
 
   return (
     <Helmet htmlAttributes={{ lang: 'de-CH' }}>
-      <title>{title}</title>
+      <title>{titleTag || title}</title>
 
       {/* General tags */}
       <meta name="description" content={description} />

@@ -47,3 +47,5 @@ Detailliertere Informationen sind über die jeweiligen Links in der Tabelle oben
 - [Google Play Store](https://developer.android.com/distribute/best-practices/launch/store-listing.html)
 
 Fehler oder Lücken in der Liste bitte auf [info@apptiva.ch](mailto:info@apptiva.ch?subject=Blogpost%20App%20Store%20Eintragbeschreibung) melden.
+
+Weiterführende Informationen zum Thema sind hier zu finden: [App entwickeln](/mobile-apps-ios-android/)

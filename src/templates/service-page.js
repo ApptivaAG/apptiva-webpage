@@ -117,9 +117,18 @@ const Header = ({ title, image, subtitle, breadcrumbs }) => (
     )}
     <MainTitle dangerouslySetInnerHTML={{ __html: title }} />
     {subtitle && (
-      <Subtitle>
-        {subtitle.text} {subtitle.swaps && subtitle.swaps[0]}
-      </Subtitle>
+      <div>
+        <Subtitle>
+          {subtitle.text} {subtitle.swaps && subtitle.swaps[0]}
+        </Subtitle>
+        {subtitle.bullets && (
+          <ul>
+            {subtitle.bullets.map((b) => (
+              <li key={b} dangerouslySetInnerHTML={{ __html: b }}></li>
+            ))}
+          </ul>
+        )}
+      </div>
     )}
     {image && (
       <GatsbyImage
@@ -365,6 +374,8 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        titleTag
+        metaDescription
         slug
         image {
           childImageSharp {
@@ -374,6 +385,7 @@ export const pageQuery = graphql`
         subtitle {
           text
           swaps
+          bullets
         }
         callToAction
         description
