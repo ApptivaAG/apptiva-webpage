@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { MenuContent, DynLink } from './NavigationMenuDesktop'
-import logo from '../img/logo.svg'
+import logo from '../img/logo-narrow.svg'
 
 const NavigationMenuMobile = ({ data, location }) => (
   <Navigation>
@@ -45,11 +45,12 @@ export const Navigation = styled.nav`
     right: -26rem;
     border-left: 1px solid #fff2;
     padding-inline: 0.5em;
-    background-color: ${(p) => p.theme.color.primary};
+    background-color: white;
     transition: all 200ms ease 200ms;
     overflow-y: auto;
     max-height: 100vh;
     max-height: 100dvh;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
   }
 
   /* reset */
@@ -99,14 +100,12 @@ export const Navigation = styled.nav`
     line-height: 1;
     border-radius: 4px;
     font-size: 1em;
-    color: white;
+    color: ${(p) => p.theme.color.primary};
     border-radius: 0.2em;
-    background-color: #eff6fc14;
 
     &.Title {
-      color: #ffffff88;
+      color: #000;
       padding-bottom: 0;
-      background-color: transparent;
     }
   }
   .NavigationMenuTrigger:focus,
@@ -213,7 +212,7 @@ export const Navigation = styled.nav`
       'item item' / 1fr 1fr !important;
     border-radius: 0.3em;
     margin-block: 0.5em 0.2em !important;
-    background-color: #eff6fc14;
+    background-color: ${(p) => p.theme.color.primary};
     padding: 0.2em;
   }
 
@@ -227,17 +226,20 @@ export const Navigation = styled.nav`
     font-size: 15px;
     line-height: 1;
     border-radius: 0.3em;
-    background-color: #eff6fc14;
+    background-color: ${(p) => p.theme.color.primary};
   }
+
+  .callout .ListItemLink {
+    color: ${(p) => p.theme.color.primary};
+    background-color: white;
+  }
+
   .ListItemLink:focus {
     box-shadow: 0 0 0 2px #008fd7;
   }
-  .ListItemLink:hover {
-    background-color: #ffffff11;
-  }
 
   .ListItemHeading {
-    font-weight: bold;
+    font-weight: 400;
     line-height: 1.2;
     margin-bottom: 1px;
     color: var(--violet12);
@@ -265,12 +267,9 @@ export const Navigation = styled.nav`
   .Callout:focus {
     box-shadow: 0 0 0 2px #008fd7;
   }
-  .Callout:hover {
-    background-color: #ffffff11;
-  }
 
   .CalloutHeading {
-    font-weight: bold;
+    font-weight: 500;
     font-size: 0.9rem;
     line-height: 1.1;
     margin-bottom: 0.2em;

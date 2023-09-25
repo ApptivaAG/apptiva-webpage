@@ -114,21 +114,20 @@ const HomePageTemplate = ({
               <Link to="/digitalisierung-unternehmen/">
                 <Card>
                   <h3>Unternehmen digitalisieren</h3>
-                  <p>Gemeinsam packen wir die Herausforderungen an.</p>
-                  <ImgStyled
-                    image={digitalisieren.childImageSharp.gatsbyImageData}
-                    alt="Unternehmen digitalisieren"
-                  />
+                  <p>
+                    Gemeinsam packen wir die Herausforderungen an, welche die
+                    Digitalisierung von Unternehmen mit sich bringt.
+                  </p>
                 </Card>
               </Link>
               <Link to="/unterstuetzung/">
                 <Card>
                   <h3>Unterstützung</h3>
-                  <p>Wir unterstützen Sie mit unserer Brainpower.</p>
-                  <ImgStyled
-                    image={support.childImageSharp.gatsbyImageData}
-                    alt="Unterstützung"
-                  />
+                  <p>
+                    Profitieren Sie von unserer Erfahrung rund um die
+                    Softwareentwicklung. Wir unterstützen Sie mit unserer
+                    Brainpower.
+                  </p>
                 </Card>
               </Link>
             </Col>
