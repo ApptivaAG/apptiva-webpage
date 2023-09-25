@@ -1,7 +1,7 @@
 ---
 templateKey: 'service-page'
 slug: /individuelle-entwicklung
-title: Individuelle Softwareentwicklung
+title: Individuelle Software&shy;entwicklung
 image: apps.png
 author: philip-schoenholzer
 description: Wir entwickeln individuelle, fokussierte und benutzer­freundliche Anwendungen, um Ihre einzigartigen Geschäftsprozesse zu beschleunigen. Es gibt heute eine Vielzahl von Tools und Technologien. Wir helfen Ihnen, die richtige Wahl für eine reibungslose Umsetzung und einen optimalen Betrieb zu treffen.
