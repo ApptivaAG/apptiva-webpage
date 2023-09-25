@@ -8,11 +8,11 @@ author: philip-schoenholzer
 metaDescription: 'Web App erstellen lassen: in Bern, Luzern, Zürich & ganze Schweiz ✅ Pünktlich ✅ CH Entwickler ✅ kostenlose Beratung'
 description: Wir entwickeln benutzerfreundliche, optisch ansprechende und technisch anspruchsvolle Web Apps, um Ihre einzigartigen Geschäftsprozesse abzubilden.
 subtitle:
-  text: Wir entwickeln Web-Anwendungen, um Ihre einzigartigen Geschäftsprozesse zu
-  swaps:
-    - unterstützen.
-    - vereinfachen.
-    - digitalisieren.
+  text: 'Sie möchten eine Web-Anwendung entwickeln oder erweitern lassen? Gerne entwickeln wir zusammen mit Ihnen Lösungen, um Ihre einzigartigen Geschäftsprozesse zu unterstützen.'
+  bullets:
+    - Wir entwickeln Web Apps zu <b>100% in der Schweiz</b>. Somit sprechen wir die gleiche Sprache und kennen uns bestens aus im Schweizer Markt der Web-Anwendungen.
+    - Für uns ist <b>Transparenz</b> sehr wichtig. Daher setzen wir von Beginn weg auf agile Methodiken und Technologien.
+    - Dank unserer grossen <b>Erfahrung</b> bei der Entwicklung von Web-Anwendungen haben wir ein tiefes Verständnis für bewährte Praktiken und bewiesene Erfolge in der Umsetzung komplexer Projekte. Unsere Expertise ermöglicht es uns, effiziente und zuverlässige Web-Apps zu liefern, die den höchsten Qualitätsstandards entsprechen.
 breadcrumbs:
   - route: individuelle-entwicklung
     name: Individuelle Softwareentwicklung
