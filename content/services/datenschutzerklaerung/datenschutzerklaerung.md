@@ -9,12 +9,16 @@ description: >-
 
 Sie finden einleitend unsere Übersicht «Datenschutz: Kurzfassung», die Ihnen einen kurzen Überblick über die wichtigsten Eckpunkte unserer Datenbearbeitungen verschaffen soll. Anschliessend stellen wir Ihnen noch ausführlichere Informationen zur Verfügung.
 
-Verantwortlicher<br>
+<div style="font-size: 1.2rem">
+
+<span style="font-size: 1.6rem">Verantwortlicher</span><br>
 **Apptiva AG**<br>
 Eichweid 1<br>
-6203 Sempach Station<br>
+6203 Sempach Station
 
 E-Mail-Adresse: [datenschutz@apptiva.ch](mailto:datenschutz@apptiva.ch)
+
+</div>
 
 ## 1 Datenschutz: Kurzfassung
 
@@ -126,15 +130,20 @@ Wir bearbeiten Personendaten, solange es für die Erfüllung unserer vertraglich
 
 ### 3.1 Netlify
 
-Sämtliche von unserer Webseite ausgelieferten & gesammelten Daten laufen durch die Server von Netlify und können durch Netlify eingesehen werden. Dies betrifft somit auch sämtliche auf Formularen der Webseiten eingegebenen Daten, wie z.B. dem Kontaktformular.
-
-Zum Schutz Ihrer Persönlichkeit haben wir mit Netlify ein «[Data Processing Agreement](https://www.netlify.com/pdf/netlify-dpa.pdf)» geschlossen. Darin verpflichtet sich Netlify bei der Bekanntgabe von Daten in Länder, die über kein angemessenes Datenschutzniveau verfügen, einen geeigneten Datenschutz sicherzustellen, durch den Abschluss von Standardvertragsklauseln.
+Für das Hosting unserer Webseite setzen wir die Dienstleistungen der Netlify Inc., mit Sitz in den USA, ein.  
+Sämtliche von unserer Webseite ausgelieferten & gesammelten Daten laufen durch die Server von Netlify und können durch Netlify eingesehen werden. Dies betrifft somit auch sämtliche auf Formularen der Webseiten eingegebenen Daten, wie z.B. dem Kontaktformular (siehe auch Google Mail, Ziffer 3.6.1).
 
 Wenn Sie unsere Webseite besuchen, speichert Netlify vorübergehend jeden Zugriff in einer Protokolldatei, den sogenannten Server-Logfiles.
 
 Erfasst werden dabei beispielsweise Ihre IP-Adresse, das Datum und die Uhrzeit Ihres Besuchs, Name der aufgerufenen Datei, verwendeter Webbrowser und Betriebssystem sowie sonstige ähnliche Informationen, die der Gefahrenabwehr im Falle von Angriffen auf unsere informationstechnologischen Systeme dienen.
 
 Die Bearbeitung dieser Informationen hat den Zweck, Ihnen unsere Webseite sowie deren Inhalte und Angebote korrekt anzuzeigen und den Datenverkehr sicherzustellen, unsere Webseite, Inhalte und Angebote zu optimieren, die Stabilität und Sicherheit unserer Webseite und Systeme dauerhaft zu gewährleisten sowie die Aufklärung, Abwehr und Verfolgung von Cyberangriffen, Spam und anderen widerrechtlichen Handlungen in Bezug auf unsere Webseite und Systeme zu ermöglichen und diesbezügliche Ansprüche durchzusetzen.
+
+Zum Schutz Ihrer Persönlichkeit haben wir mit Netlify ein «[Data Processing Agreement](https://www.netlify.com/pdf/netlify-dpa.pdf)» geschlossen. Darin verpflichtet sich Netlify bei der Bekanntgabe von Daten in Länder, die über kein angemessenes Datenschutzniveau verfügen, einen geeigneten Datenschutz sicherzustellen, durch den Abschluss von Standardvertragsklauseln.
+
+Ausserdem ist Netlify unter dem [E.U.-U.S.-Data Privacy Framework](https://www.dataprivacyframework.gov/s/participant-search/participant-detail?id=a2zt00000008RhTAAU&status=Active) zertifiziert, welches ein angemessenes Datenschutzniveau gewährleistet.
+
+Weiterführende Informationen zur Datenschutz und zur Datensicherheit bei Netlify, können Sie deren «[Trust-Center](https://www.netlify.com/trust-center/)» entnehmen.
 
 ### 3.2 Mailchimp
 
@@ -160,21 +169,31 @@ Sie können die Speicherung der Cookies durch eine entsprechende Einstellung ihr
 
 ### 3.4 Bubble-Chat
 
-Für die Chat-Funktion auf unserer Webseite nutzen wir [Bubble-Chat](https://www.bubble-chat.ch/). Unabhängig davon, ob Sie unseren Chat-Bot nutzen oder nicht, werden gewisse Daten, wie IP-Adresse, Datum und Zeit des Webseitenaufrufs, in einem Cookie gespeichert. Wenn Sie unseren Chat-Bot nutzen, wird die ganze Konversation gespeichert.
+Für die Chat-Funktion auf unserer Webseite nutzen wir [Bubble-Chat](https://www.bubble-chat.ch/), eine Eigenentwicklung der Apptiva AG. Unabhängig davon, ob Sie unseren Chat-Bot nutzen oder nicht, werden gewisse Daten, wie IP-Adresse, Datum und Zeit des Webseitenaufrufs, in einem Cookie gespeichert. Wenn Sie unseren Chat-Bot nutzen, wird die ganze Konversation gespeichert.
 
 Grundsätzlich besteht die Möglichkeit, die ganze Konversation herunterzuladen oder per E-Mail zu erhalten. Wenn Sie sich den Chatverlauf senden möchten, geben Sie bitte Ihre E-Mail-Adresse in das entsprechende Feld ein.
+
+Zur Absichtserkennung verschickt Bubble-Chat Daten an Google und um Ihnen passende Antworten zur Verfügung zu stellen, werden Ihre Daten ebenfalls an die OpenAI OpCo, LLC, mit  Sitz in den USA, bzw. wenn Sie ihren gewöhnlichen Aufenthalt in der Schweiz oder dem Europäischen Wirtschaftsraum (EWR) haben, OpenAI Ireland Limited, mit Sitz in Irland, übermittelt («OpenAI»).
+
+Zum Schutz Ihrer Persönlichkeit haben wir mit Open-AI ein «Data Processing Addendum» geschlossen. Darin verpflichtet sich OpenAI bei der Bekanntgabe von Daten in Länder, die über kein angemessenes Datenschutz-niveau verfügen, einen geeigneten Datenschutz sicherzustellen, durch den Abschluss von Standardvertrags-klauseln.
+
+Zum Schutz Ihrer Personendaten bei der Bekanntgabe an Goolge, verweisen wir Sie auf die folgende Ziffer 3.6.
+
+Wenn Sie nicht möchten, dass Personendaten, die bei der Nutzung unseres Chat-Bots ins Ausland übermittelt werden, bitten wir Sie auf andere Art und Weise mit uns in Kontakt zu treten.
+
+Zur Löschung Ihrer bei uns gespeicherten Daten, können Sie sich an die unter Ziffer 1 genannte E-Mail-Adresse wenden.
+
 Weitere Informationen zum Datenschutz von Bubble-Chat finden sie auf der [Produktwebseite](https://www.bubble-chat.ch/datenschutz/).
 
 ### 3.5 Plausible
 
-Um die Nutzung unserer Website zu verstehen und sie zu verbessern, nutzen wir das Webanalyse Werkzeug Plausible Analytics. Plausible setzt keine Cookies, speichert keine Informationen im Browser, und erhebt auch generell keinerlei personenbezogenen Daten. Hier finden Sie [mehr Informationen zu Plausible](https://plausible.io/) und dem [Datenschutz](https://plausible.io/data-policy) dieses Tools.
+Um die Nutzung unserer Website zu verstehen und sie zu verbessern, nutzen wir das Webanalyse Werkzeug Plausible Analytics, der Plausible Insights OÜ, mit Sitz in Estland. Plausible setzt keine Cookies, speichert keine Informationen im Browser, und erhebt auch generell keinerlei personenbezogenen Daten. Hier finden Sie [mehr Informationen zu Plausible](https://plausible.io/) und dem [Datenschutz](https://plausible.io/data-policy) dieses Tools.
 
 ### 3.6 Google Dienste
 
 Wir nutzen auf unserer Webseite verschiedene Dienste der Google LLC mit Sitz in den USA, bzw. wenn Sie ihren gewöhnlichen Aufenthalt im Europäischen Wirtschaftsraum (EWR) oder der Schweiz haben, Google Ireland Ltd., mit Sitz in Irland («Google»). Für die Bearbeitung von Personendaten bei der Nutzung von «YouTube» und «Google Maps» ist immer Google LLC verantwortlich. Wir setzen die folgenden Google Dienste auf unserer Webseite ein:
 
-- Google Mail
-- Google Voice
+- Google Workspace
 - Google Maps
 - YouTube
 - Google Ads
@@ -184,23 +203,45 @@ Nähere Informationen zu den einzelnen Diensten finden Sie weiter unten.
 
 Google verwendet Technologien wie Cookies, Webspeicher im Browser und Zählpixel, die eine Analyse der Benutzung unserer Website durch Sie ermöglichen. Die dadurch erzeugten Informationen über Ihre Benutzung unserer Webseite können an einen Server von Google in den USA oder in weitere Länder übermittelt und dort gespeichert werden. Informationen über die Standorte der Rechenzentren von Google finden Sie [hier](https://www.google.com/about/datacenters/locations/).
 
-Wir verwenden von Google zur Verfügung gestellte Tools, die nach Aussage von Google Personendaten in Ländern bearbeiten können, in denen Google oder dessen [Unterauftragnehmer](https://business.safety.google/adssubprocessors/) Einrichtungen unterhalten. Google verspricht in seinem «[Data Processing Addendum for Products where Google is a Data Processor](https://business.safety.google/processorterms/)», ein angemessenes Datenschutzniveau zu gewährleisten, indem es sich auf die EU-Standardvertragsklauseln stützt.
+Wir verwenden von Google zur Verfügung gestellte Tools, die nach Aussage von Google Personendaten in Ländern bearbeiten können, in denen Google oder dessen [Unterauftragnehmer](https://business.safety.google/adssubprocessors/) Einrichtungen unterhalten. Google verspricht in seinem «[Data Processing Addendum for Products where Google is a Data Processor](https://business.safety.google/processorterms/)», bzw. im Zusammenhang mit Google Workspace, in seinem «Cloud Data Processing Addendum», ein angemessenes Datenschutzniveau zu gewährleisten, indem es sich auf die EU-Standardvertragsklauseln stützt.
+
+Ausserdem ist Google unter dem EU-U.S.- sowie Swiss-U.S. Data Privacy Framework zertifiziert.
 
 Nähere Informationen zur Bearbeitung durch Google und zu den Privatsphäreneinstellungen können Sie der [Datenschutzerklärung](https://policies.google.com/privacy?hl=de) bzw. den [Datenschutzeinstellungen](https://safety.google/privacy/privacy-controls/) von Google entnehmen.
 
-#### 3.6.1 Google Mail
+#### Google Workspace
 
-Das Senden und Empfangen der meisten E-Mails, die an uns gerichtet sind, oder von uns gesendet werden, wird über Google Mail abgewickelt. Alle Daten wie Text, Absender, Empfänger und Anhänge werden dort gespeichert.
+Wir nutzen verschiedene [Google Workspace](https://workspace.google.com/intl/de/) Produkte, insbesondere Google Mail und das Add-on Google Voice.
+
+##### Google Mail
+
+Für die E-Mail-Kommunikation mit Ihnen nutzen wir Google Mail. Wenn Sie mit uns per E-Mail in Kontakt treten, werden alle Daten wie Text, Absender, Empfänger sowie Anhänge, die Sie uns oder wir Ihnen zukommen lassen, werden auf einem Server von Google gespeichert. Diese Daten können grundsätzlich in Ländern auf der ganzen Welt, in welchen Google [Rechenzentren](https://www.google.com/about/datacenters/locations/) betreibt, gespeichert werden.
 
 Zusätzlich zu direkt gesendeten E-Mails kann es auch sein, dass in gewisse Formulare wie z.B. unser Kontaktformular eingegebene Daten nach dem Absenden als E-Mail an uns versendet werden.
 
-Eine Ausnahme sind durch Mailchimp versendete E-Mails.
+Eine Ausnahme sind durch Mailchimp (vgl. Ziffer 3.2) versendete E-Mails.
 
-#### 3.6.2 Google Voice
+Die Bearbeitung dieser Daten, inklusive der von Ihnen dort angegebenen Kontaktdaten erfolgt zweck der Bearbeitung Ihres Anliegens und zur Kontaktaufnahme durch uns, für den Fall von Anschlussfragen.
 
-Anrufe über unsere Haupt-Telefonnummer und Support-Telefonnummern werden über Google Voice abgewickelt. Hinterlassene Nachrichten werden dort bis sie abgerufen werden gespeichert.
+Sie können dieser Datenbearbeitung jederzeit widersprechen. Senden Sie Ihren Widerspruch bitte an <daten-schutz@apptiva.ch> und wir werden Ihr Anliegen prüfen. In einem solchen Fall wird Ihre Kontaktaufnahme nicht weiterbearbeitet.
 
-Direktanrufe an und von unseren Mitarbeitern laufen über den Telefonanbieter des jeweiligen Mitarbeiters.
+Ihre Personendaten werden gelöscht, sobald das von Ihnen gestellte Anliegen erledigt ist. Dies ist dann der Fall, wenn sich aus den Umständen entnehmen lässt, dass der betroffene Sachverhalt abschliessend geklärt ist und der Löschung keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
+
+##### Google Voice
+
+Anrufe über unsere Haupt-Telefonnummer und Support-Telefonnummern werden über Google Voice abgewickelt. Dabei speichert, bearbeitet und verwaltet Google Voice verschiedene Daten, insbesondere Ihre Telefonnummer, Datum, Uhrzeit und Dauer des Anrufs, sowie Nachrichten, die Sie auf unserer Mailbox hinterlassen.  
+
+Diese Bearbeitung dieser Daten ist einerseits erforderlich, damit Google diesen Dienst uns gegenüber erbringen kann und andererseits um Ihnen die telefonische Kontaktaufnahme mit uns zu ermöglichen. Die dabei bearbeiteten Daten werden zwecks Bearbeitung Ihres Anliegens und zur Kontaktaufnahme durch uns, für den Fall von Anschlussfragen.
+
+Sie können dieser Datenbearbeitung jederzeit widersprechen. Senden Sie Ihren Widerspruch bitte an <daten-schutz@apptiva.ch> und wir werden Ihr Anliegen prüfen. In einem solchen Fall wird Ihre Kontaktaufnahme nicht weiterbearbeitet.
+
+Ihre Personendaten, insbesondere Mailbox-Nachrichten, SMS-Nachrichten oder allfällig aufgezeichnete Ge-spräche, werden gelöscht, sobald das von Ihnen gestellte Anliegen erledigt ist. Dies ist dann der Fall, wenn sich aus den Umständen entnehmen lässt, dass der betroffene Sachverhalt abschliessend geklärt ist und der Löschung keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
+
+Wir können jedoch nicht ausschliessen, dass einige Informationen ggf. vorübergehend auf Servern von Google, bspw. zu Abrechnungszwecken, vorübergehend weiterhin gespeichert werden oder Restkopien in deren Sicherungssystemen verbleiben.
+
+Weitere Informationen zur Funktionsweise und zum Datenschutz in Google Voice finden Sie in der «[Google Voice-Hilfe](https://support.google.com/voice/answer/10464820?hl=de)», bzw. in der entsprechenden [Technologien-Übersicht von Google](https://policies.google.com/technologies/voice?hl=de).
+
+Wir möchten Sie darauf hinweisen, dass Direktanrufe an und von unseren Mitarbeitern über den Telefonanbieter des jeweiligen Mitarbeiters laufen.
 
 #### 3.6.3 Google Maps
 
@@ -256,17 +297,33 @@ Weitere Informationen zu Google Fonts finden Sie in den [Google Fonts FAQ](https
 
 ### 3.7 Trello
 
-Wir benutzen Trello von Atlassian als unser internes Ticketing-System. Wenn sie mit uns über das Kontaktformular, per E-Mail oder auch den Chatbot in Kontakt treten, legen wir in den meisten Fällen dazu ein Trello-Ticket an, das die entsprechenden Daten enthält und uns hilft den Fortschritt zu Anfrage zu dokumentieren und überblicken.
+Wir benutzen Trello, ein Ticketing-System der Atlassian Pty Ltd., mit Sitz in Australien.  Wenn sie mit uns über das Kontaktformular, per E-Mail oder auch den Chatbot in Kontakt treten, legen wir in den meisten Fällen dazu ein Trello-Ticket an, das die entsprechenden Daten enthält und uns hilft den Fortschritt zu Anfrage zu dokumentieren und überblicken.
+
+Dabei werden alle Benutzerinhalte auf Amazon Web Services (AWS) Servern in den USA gehostet.
 
 Zum Schutz Ihrer Persönlichkeit haben wir mit Atlassian ein «[Data Processing Addendum](https://www.atlassian.com/legal/data-processing-addendum)» geschlossen. Darin verpflichtet sich Atlassian bei der Bekanntgabe von Daten in Länder, die über kein angemessenes Datenschutzniveau verfügen, einen geeigneten Datenschutz sicherzustellen, durch den Abschluss von Standardvertragsklauseln.
 
+Die in einem Trello-Ticket erfassten Daten werden gelöscht, sobald das Anliegen Ihre Anfrage erledigt ist. Dies ist dann der Fall, wenn sich aus den Umständen entnehmen lässt, dass der betroffene Sachverhalt abschliessend geklärt ist und der Löschung keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
+
+Weitere Informationen zum Betrieb und der Sicherheit von Trello sowie zu den Nutzungsbedingungen und zum Datenschutz bei Atlassian, verweisen wir Sie auf die «[Trello Operations and Security](https://trello.com/legal/security#atlassian-account)»-Dokumentation, die «[Atlassian Cloud Terms of Service](https://www.atlassian.com/legal/cloud-terms-of-service)», bzw. die «[Privacy Policy](https://www.atlassian.com/legal/privacy-policy#what-this-policy-covers)» von Atlassian.
+
 ### 3.8 Social Media
 
-Die von Ihnen auf unseren Social Media-Profilen (Facebook, Twitter, YouTube, LinkedIn, Xing, etc.) eingegebenen Daten werden durch die Social Media-Plattform veröffentlicht und von uns zu keiner Zeit für andere Zwecke verwendet oder bearbeitet. Wir behalten uns aber vor, Inhalte zu löschen, sofern dies erforderlich sein sollte. Allenfalls kommunizieren wir über die Social Media-Plattform mit Ihnen.
+Die von Ihnen auf unseren Social Media-Profilen (Facebook, X, YouTube, LinkedIn, Xing, etc.) eingegebenen Daten werden durch die Social Media-Plattform veröffentlicht und von uns zu keiner Zeit für andere Zwecke verwendet oder bearbeitet. Wir behalten uns aber vor, Inhalte zu löschen, sofern dies erforderlich sein sollte. Allenfalls kommunizieren wir über die Social Media-Plattform mit Ihnen.
 
 Grundlage ist Ihr und unser berechtigtes Interesse, uns miteinander auf diesem Weg auszutauschen.
 
 Seien Sie sich bewusst, dass der Betreiber der Social Media-Plattform Webtrackingmethoden einsetzt. Das Webtracking, worauf wir keinen Einfluss haben, kann dabei auch unabhängig davon erfolgen, ob Sie bei der Social Media-Plattform angemeldet oder registriert sind.
+
+Genauere Angaben zur Datenbearbeitung durch den Anbieter der Social Media-Plattform finden Sie in der Datenschutzerklärung des jeweiligen Anbieters:
+
+| Soziales Netzwerk | Anbieter | Datenschutzerklärung
+| --- | --- | ---|
+| Facebook |  Meta Platforms Inc. (USA) <br> Meta Platforms Ireland Ltd. (Irland) | [Datenschutzerklärung](https://www.facebook.com/policy)
+X | X Corp. (USA)<br>Twitter International Company (Irland) |  [Datenschutzerklärung](https://twitter.com/de/privacy)
+YouTube | YouTube LLC (USA) | [Datenschutzerklärung](https://policies.google.com/privacy?hl=de)
+LinkedIn | LinkedIn Corporation (USA) <br> LinkedIn Ireland Unlimited Company (Irland) | [Datenschutzrichtlinie](https://de.linkedin.com/legal/privacy-policy)
+Xing | New Work SE (Deutschland) | [Datenschutzerklärung](https://privacy.xing.com/de/datenschutzerklaerung)
 
 <br/><br/><br/>
 
