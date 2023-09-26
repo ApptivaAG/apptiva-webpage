@@ -19,27 +19,25 @@ const Referenzen = ({ data }) => {
 
   return (
     <Layout>
-      <main>
-        <Helmet title={`Referenzen - ${company}`} />
-        <SEO metaData={metadata} />
+      <Helmet title={`Referenzen - ${company}`} />
+      <SEO metaData={metadata} />
 
-        <Section>
-          <Container>
-            <MainTitle>Referenzen</MainTitle>
-            {posts.map(({ node: post }) => (
-              <ReferenzLinkItem
-                key={post.id}
-                css={`
-                  background: ${(p) => p.theme.color.lightBg};
-                `}
-                frontmatter={post.frontmatter}
-                excerpt={post.frontmatter.description}
-                route={referenzenRoute}
-              />
-            ))}
-          </Container>
-        </Section>
-      </main>
+      <Section>
+        <Container>
+          <MainTitle>Referenzen</MainTitle>
+          {posts.map(({ node: post }) => (
+            <ReferenzLinkItem
+              key={post.id}
+              css={`
+                background: ${(p) => p.theme.color.lightBg};
+              `}
+              frontmatter={post.frontmatter}
+              excerpt={post.frontmatter.description}
+              route={referenzenRoute}
+            />
+          ))}
+        </Container>
+      </Section>
     </Layout>
   )
 }

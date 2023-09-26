@@ -33,7 +33,7 @@ const Grid = styled.div`
 const PartnerTemplate = ({ content, excerpt, name, logo, url, slug }) => {
   const metaData = { excerpt, title: name, slug }
   return (
-    <main>
+    <>
       <Helmet title={`${stripHTML(name)} - Partner - ${config.company}`} />
       <SEO
         metaData={metaData}
@@ -58,7 +58,7 @@ const PartnerTemplate = ({ content, excerpt, name, logo, url, slug }) => {
           </Grid>
         </Section>
       </Container>
-    </main>
+    </>
   )
 }
 

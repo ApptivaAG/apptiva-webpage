@@ -84,158 +84,155 @@ const metadata = {
 
 const Vorgehen = () => (
   <Layout>
-    <main>
-      <SEO metaData={metadata} />
-      <article>
-        <Section>
-          <Container>
-            <MainTitle>Vorgehen Softwareentwicklung</MainTitle>
-            <Centered>
-              <p>
-                <b>
-                  Unser agiles Vorgehen für optimale Softwareentwicklung ist
-                  Teil des Erfolgsrezepts von Apptiva. Profitieren Sie davon!
-                </b>
-              </p>
-            </Centered>
-          </Container>
-        </Section>
-        <Section>
-          <Container>
-            <Centered>
-              <h2>Ablauf</h2>
-              <StaticImage
-                src="../img/vorgehen.png"
-                alt="Vorgehen"
-                width={800}
-                layout="constrained"
-                className="lightbox"
-              />
-            </Centered>
+    <SEO metaData={metadata} />
+    <article>
+      <Section>
+        <Container>
+          <MainTitle>Vorgehen Softwareentwicklung</MainTitle>
+          <Centered>
             <p>
-              Projekte in der <a href="/">Softwareentwicklung</a> sind oft
-              komplex. Mit den folgenden organisatorischen Tätigkeiten möchten
-              wir Transparenz und Steuerungsmöglichkeiten für alle Partien des
-              Projekts gewährleisten.
+              <b>
+                Unser agiles Vorgehen für optimale Softwareentwicklung ist Teil
+                des Erfolgsrezepts von Apptiva. Profitieren Sie davon!
+              </b>
             </p>
-            <Grid>
-              {orgTools.map((tool) => (
-                <React.Fragment key={tool.name}>
-                  <div />
-                  <div
-                    css={
-                      tool.name === 'Bezahlung' &&
-                      `@media (min-width: 768px) {grid-column: 5;}`
-                    }
-                  >
-                    <Tool size={tool.size} description={tool.description}>
-                      {tool.name}
-                    </Tool>
-                  </div>
-                </React.Fragment>
-              ))}
-            </Grid>
-          </Container>
-        </Section>
-        <Section>
-          <Container>
-            <Centered>
-              <h2>Initialisierung</h2>
-              <StaticImage
-                src="../img/gemeinsames-verstaendnis.png"
-                alt="Gemeinsames Verständnis"
-                width={600}
-                layout="constrained"
-                className="lightbox"
-              />
-            </Centered>
-
-            <p>
-              Bei der Initialisierung geht es darum, ein grobes, gemeinsames
-              Verständnis über das Projekt und die Lösung zu erhalten. Die
-              folgenden Aufgaben gehen wir zwar zu Beginn des Projekts an,
-              passen diese aber während dem ganzen Projekt stets den gewünschten
-              Ergebnissen an.
-            </p>
-            <Grid>
-              {initialTools.map((tool) => (
-                <React.Fragment key={tool.name}>
-                  <div />
-                  <div>
-                    <Tool size={tool.size} description={tool.description}>
-                      {tool.name}
-                    </Tool>
-                  </div>
-                </React.Fragment>
-              ))}
-            </Grid>
-            <Description />
-          </Container>
-        </Section>
-        <Section>
-          <Container>
-            <Centered>
-              <h2>Umsetzung & Betrieb</h2>
-              <StaticImage
-                src="../img/iterativ.png"
-                alt="Iteratives Vorgehen"
-                width={600}
-                layout="constrained"
-                className="lightbox"
-              />
-            </Centered>
-
-            <p>
-              Wir streben stets einen frühen produktiven Einsatz der Lösung an,
-              stellen dabei aber die kontinuierliche Weiterentwicklung sicher.
-              Neue Features werden fortlaufend zur Verfügung gestellt.
-            </p>
-            <Grid>
-              {implementationTools.map((tool) => (
-                <React.Fragment key={tool.name}>
-                  <div key={`${tool.name}1`} />
-                  <div key={`${tool.name}2`}>
-                    <Tool size={tool.size} description={tool.description}>
-                      {tool.name}
-                    </Tool>
-                  </div>
-                </React.Fragment>
-              ))}
-            </Grid>
-            <Description />
-          </Container>
-        </Section>
-        <Section>
-          <Container>
-            <iframe
-              width="100%"
-              height="500"
-              src="https://www.youtube.com/embed/62l0zM_Xqxc"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              loading="lazy"
+          </Centered>
+        </Container>
+      </Section>
+      <Section>
+        <Container>
+          <Centered>
+            <h2>Ablauf</h2>
+            <StaticImage
+              src="../img/vorgehen.png"
+              alt="Vorgehen"
+              width={800}
+              layout="constrained"
+              className="lightbox"
             />
-          </Container>
-        </Section>
-        <Section>
-          <Container>
-            <Centered>
-              <h2>User Centered Design</h2>
-            </Centered>
-            <p>
-              Viele der oben genannten Tätigkeiten stammen aus der
-              Disziplin&nbsp;
-              <i>User Centered Design</i>. Diese helfen bei der Entwicklung
-              einer Lösung, welche passgenau das volle Potenzial ausschöpfen.
-            </p>
-            <Button to="/user-centered-design/">Mehr über UCD erfahren</Button>
-          </Container>
-        </Section>
-      </article>
-      <CallToAction dark />
-    </main>
+          </Centered>
+          <p>
+            Projekte in der <a href="/">Softwareentwicklung</a> sind oft
+            komplex. Mit den folgenden organisatorischen Tätigkeiten möchten wir
+            Transparenz und Steuerungsmöglichkeiten für alle Partien des
+            Projekts gewährleisten.
+          </p>
+          <Grid>
+            {orgTools.map((tool) => (
+              <React.Fragment key={tool.name}>
+                <div />
+                <div
+                  css={
+                    tool.name === 'Bezahlung' &&
+                    `@media (min-width: 768px) {grid-column: 5;}`
+                  }
+                >
+                  <Tool size={tool.size} description={tool.description}>
+                    {tool.name}
+                  </Tool>
+                </div>
+              </React.Fragment>
+            ))}
+          </Grid>
+        </Container>
+      </Section>
+      <Section>
+        <Container>
+          <Centered>
+            <h2>Initialisierung</h2>
+            <StaticImage
+              src="../img/gemeinsames-verstaendnis.png"
+              alt="Gemeinsames Verständnis"
+              width={600}
+              layout="constrained"
+              className="lightbox"
+            />
+          </Centered>
+
+          <p>
+            Bei der Initialisierung geht es darum, ein grobes, gemeinsames
+            Verständnis über das Projekt und die Lösung zu erhalten. Die
+            folgenden Aufgaben gehen wir zwar zu Beginn des Projekts an, passen
+            diese aber während dem ganzen Projekt stets den gewünschten
+            Ergebnissen an.
+          </p>
+          <Grid>
+            {initialTools.map((tool) => (
+              <React.Fragment key={tool.name}>
+                <div />
+                <div>
+                  <Tool size={tool.size} description={tool.description}>
+                    {tool.name}
+                  </Tool>
+                </div>
+              </React.Fragment>
+            ))}
+          </Grid>
+          <Description />
+        </Container>
+      </Section>
+      <Section>
+        <Container>
+          <Centered>
+            <h2>Umsetzung & Betrieb</h2>
+            <StaticImage
+              src="../img/iterativ.png"
+              alt="Iteratives Vorgehen"
+              width={600}
+              layout="constrained"
+              className="lightbox"
+            />
+          </Centered>
+
+          <p>
+            Wir streben stets einen frühen produktiven Einsatz der Lösung an,
+            stellen dabei aber die kontinuierliche Weiterentwicklung sicher.
+            Neue Features werden fortlaufend zur Verfügung gestellt.
+          </p>
+          <Grid>
+            {implementationTools.map((tool) => (
+              <React.Fragment key={tool.name}>
+                <div key={`${tool.name}1`} />
+                <div key={`${tool.name}2`}>
+                  <Tool size={tool.size} description={tool.description}>
+                    {tool.name}
+                  </Tool>
+                </div>
+              </React.Fragment>
+            ))}
+          </Grid>
+          <Description />
+        </Container>
+      </Section>
+      <Section>
+        <Container>
+          <iframe
+            width="100%"
+            height="500"
+            src="https://www.youtube.com/embed/62l0zM_Xqxc"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            loading="lazy"
+          />
+        </Container>
+      </Section>
+      <Section>
+        <Container>
+          <Centered>
+            <h2>User Centered Design</h2>
+          </Centered>
+          <p>
+            Viele der oben genannten Tätigkeiten stammen aus der Disziplin&nbsp;
+            <i>User Centered Design</i>. Diese helfen bei der Entwicklung einer
+            Lösung, welche passgenau das volle Potenzial ausschöpfen.
+          </p>
+          <Button to="/user-centered-design/">Mehr über UCD erfahren</Button>
+        </Container>
+      </Section>
+    </article>
+    <CallToAction dark />
   </Layout>
 )
 

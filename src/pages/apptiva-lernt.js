@@ -19,35 +19,33 @@ const KnowledgeCollection = ({ data }) => {
 
   return (
     <Layout>
-      <main>
-        <Helmet title={`Apptiva lernt - ${company}`} />
-        <SEO metaData={metadata} />
+      <Helmet title={`Apptiva lernt - ${company}`} />
+      <SEO metaData={metadata} />
 
-        <Section>
-          <Container>
-            <MainTitle>Apptiva lernt</MainTitle>
+      <Section>
+        <Container>
+          <MainTitle>Apptiva lernt</MainTitle>
 
-            <p css="margin-bottom: 4em;">
-              Kleine Wissenshappen, die wir jede Woche neu dazu lernen.
-            </p>
+          <p css="margin-bottom: 4em;">
+            Kleine Wissenshappen, die wir jede Woche neu dazu lernen.
+          </p>
 
-            {posts.map(({ md: post }) => (
-              <BlogLinkItem
-                key={post.id}
-                css={`
-                  background: ${(p) => p.theme.color.lightBg};
-                `}
-                frontmatter={{
-                  ...post.frontmatter,
-                  date: post.frontmatter.publishedAt.start,
-                }}
-                excerpt={post.frontmatter.summary || post.excerpt}
-                route={knowledgeRoute}
-              />
-            ))}
-          </Container>
-        </Section>
-      </main>
+          {posts.map(({ md: post }) => (
+            <BlogLinkItem
+              key={post.id}
+              css={`
+                background: ${(p) => p.theme.color.lightBg};
+              `}
+              frontmatter={{
+                ...post.frontmatter,
+                date: post.frontmatter.publishedAt.start,
+              }}
+              excerpt={post.frontmatter.summary || post.excerpt}
+              route={knowledgeRoute}
+            />
+          ))}
+        </Container>
+      </Section>
     </Layout>
   )
 }

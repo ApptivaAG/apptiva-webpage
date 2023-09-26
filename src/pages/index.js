@@ -48,196 +48,194 @@ const HomePageTemplate = ({
   bubbleChat,
 }) => (
   <Layout showHero>
-    <main>
-      <SEO metaData={metadata} />
-      <Hero />
+    <SEO metaData={metadata} />
+    <Hero />
 
-      <Section id="dienstleistungen" divider>
-        <Container>
-          <Title>Dienst&shy;leistungen</Title>
-          <Row>
-            <Col>
-              <Link to="/individuelle-entwicklung/">
-                <Card>
-                  <h3>Individuelle Softwareentwicklung</h3>
-                  <p>Apps für Mobile und Desktop</p>
-                  <ImgStyled
-                    image={appsImage.childImageSharp.gatsbyImageData}
-                    alt="Apps"
-                  />
-                  <CardLinks>
-                    <Link to="/mobile-apps-ios-android/">
-                      <p>App Entwicklung für iOS und Android</p>
-                    </Link>
-                    <Link to="/web-apps/">
-                      <p>Web App Entwicklung</p>
-                    </Link>
-                    <Link to="/custom-dashboard/">
-                      <p>Individuelle Dashboards</p>
-                    </Link>
-                    <Link to="/einzigartiger-webshop/">
-                      <p>Einzigartige Webshops</p>
-                    </Link>
-                    <Link to="/bargeldlos-bezahlen/">
-                      <p>Bargeldlose Zahlungslösungen</p>
-                    </Link>
-                    <Link to="/weiterentwicklung-apps-produkte/">
-                      <p>Weiterentwicklung von Produkten</p>
-                    </Link>
-                  </CardLinks>
-                </Card>
-              </Link>
-            </Col>
-            <Col>
-              <Link to="/chatbots/">
-                <Card>
-                  <h3>Individuelle Chatbots</h3>
-                  <p>Botfabrik by Apptiva</p>
-                  <ImgStyled
-                    image={chatbot.childImageSharp.gatsbyImageData}
-                    alt="Chatbots"
-                  />
-                </Card>
-              </Link>
-              <Link to="/produktkonfiguratoren/">
-                <Card>
-                  <h3>Produkt-Konfiguratoren</h3>
-                  <p>Komplexe Angebote einfach verkaufen</p>
-                  <ImgStyled
-                    image={partyplaner.childImageSharp.gatsbyImageData}
-                    alt="Angebots- und Produktkonfiguratoren"
-                  />
-                </Card>
-              </Link>
-            </Col>
-            <Col>
-              <Link to="/digitalisierung-unternehmen/">
-                <Card>
-                  <h3>Unternehmen digitalisieren</h3>
-                  <p>
-                    Gemeinsam packen wir die Herausforderungen an, welche die
-                    Digitalisierung von Unternehmen mit sich bringt.
-                  </p>
-                </Card>
-              </Link>
-              <Link to="/unterstuetzung/">
-                <Card>
-                  <h3>Unterstützung</h3>
-                  <p>
-                    Profitieren Sie von unserer Erfahrung rund um die
-                    Softwareentwicklung. Wir unterstützen Sie mit unserer
-                    Brainpower.
-                  </p>
-                </Card>
-              </Link>
-            </Col>
-          </Row>
-          <Title>Produkte</Title>
-          <Row>
-            <Col>
-              <Link to="/payflink/">
-                <Card>
-                  <h3>Payflink</h3>
-                  <p>Restaurant Bestell App & Digitale Speisekarte</p>
-                  <ImgStyled
-                    image={payflink.childImageSharp.gatsbyImageData}
-                    alt="Payflink"
-                  />
-                </Card>
-              </Link>
-            </Col>
-            <Col>
-              <a href="bubble-chat/">
-                <Card>
-                  <h3>Bubble Chat</h3>
-                  <p>KI-basierte Chatbot Lösung</p>
-                  <ImgStyled
-                    image={bubbleChat.childImageSharp.gatsbyImageData}
-                    alt="Bubble Chat"
-                  />
-                </Card>
-              </a>
-            </Col>
-            <Col>
-              <Link to="/einsatzplanung/">
-                <h3>Einsatzplanung für den Gebäudeunterhalt</h3>
-              </Link>
-              <Link to="/dashboard-notaufnahme/">
-                <h3>Dashboard für die Notaufnahme</h3>
-              </Link>
-            </Col>
-          </Row>
-        </Container>
-      </Section>
-
-      <Section css="padding-bottom: 0;">
-        <Container>
-          <h2>Softwareentwicklung mit Apptiva angehen</h2>
-          <p css="margin-bottom: 0">
-            Das Entwickeln von individuellen Apps und Applikationen ist unsere
-            Spezialität. Damit beschleunigen wir Ihre Geschäftsprozesse und
-            unterstützen Sie bei der digitalen Transformation Ihres
-            Unternehmens. Wir pflegen eine enge und direkte Zusammenarbeit mit
-            unseren Kunden, um auf dieser Grundlage schnell und in hoher
-            Qualität passgenaue Software entwickeln zu können.
-          </p>
-          <p css="margin-bottom: 0">
-            Für uns ist es wichtig, ganzheitliche Softwarelösungen zu finden.
-            Unabhängig davon, ob es um eine Plattform Entwicklung, Business
-            Applikation, Automatisierung, Webentwicklung, Programmierung oder
-            andere Softwarelösungen geht, bei uns steht immer eine Vision im
-            Mittelpunkt.
-          </p>
-          <p>
-            Wir sind bemüht, bei unseren Produkten und Projekten immer wieder
-            einen Blick über den Tellerrand hinaus zu werfen. Beim Abschluss
-            eines Projektes sollen unsere Kunden und auch wir zufrieden sein mit
-            dem Resultat.
-          </p>
-          <p>
-            Die Entwicklung findet bei uns in der Zentralschweiz{' '}
-            <img src={luzern} alt="" height="18" css="margin-block: -3px;" />{' '}
-            statt. In der Regel arbeiten wir von zu Hause aus. Bei Bedarf
-            tauschen wir uns jedoch gerne mit unseren Kunden in unserem Büro am
-            schönen Sempachersee aus. Wir sind sehr gut erreichbar aus Bern,
-            Luzern, Zürich und aus der ganzen Schweiz.
-          </p>
-          <Buttonlist>
-            <Button to="/ueber-uns/">Mehr über uns erfahren</Button>
-            <Button to="/vorgehen/">Unser Vorgehen</Button>
-            <Button to="/unsere-kompetenzen/">Unsere Kompetenzen</Button>
-          </Buttonlist>
-          <StaticImage style={{ marginTop: 40 }} src="../img/team.webp" />
-        </Container>
-      </Section>
-
-      <Section dark>
-        <Container>
-          <Testimonials />
-        </Container>
-      </Section>
-
-      <ReferenzenPreview />
-
-      <Section>
-        <Container>
-          <h2>Partner</h2>
-          <PartnerImage>
-            {partners.edges.map(({ node }) => (
-              <Link key={node.id} to={`/${node.frontmatter.slug}/`}>
-                <GatsbyImage
-                  image={node.frontmatter.logo.childImageSharp.gatsbyImageData}
-                  alt={node.frontmatter.name}
+    <Section id="dienstleistungen" divider>
+      <Container>
+        <Title>Dienst&shy;leistungen</Title>
+        <Row>
+          <Col>
+            <Link to="/individuelle-entwicklung/">
+              <Card>
+                <h3>Individuelle Softwareentwicklung</h3>
+                <p>Apps für Mobile und Desktop</p>
+                <ImgStyled
+                  image={appsImage.childImageSharp.gatsbyImageData}
+                  alt="Apps"
                 />
-              </Link>
-            ))}
-          </PartnerImage>
-        </Container>
-      </Section>
+                <CardLinks>
+                  <Link to="/mobile-apps-ios-android/">
+                    <p>App Entwicklung für iOS und Android</p>
+                  </Link>
+                  <Link to="/web-apps/">
+                    <p>Web App Entwicklung</p>
+                  </Link>
+                  <Link to="/custom-dashboard/">
+                    <p>Individuelle Dashboards</p>
+                  </Link>
+                  <Link to="/einzigartiger-webshop/">
+                    <p>Einzigartige Webshops</p>
+                  </Link>
+                  <Link to="/bargeldlos-bezahlen/">
+                    <p>Bargeldlose Zahlungslösungen</p>
+                  </Link>
+                  <Link to="/weiterentwicklung-apps-produkte/">
+                    <p>Weiterentwicklung von Produkten</p>
+                  </Link>
+                </CardLinks>
+              </Card>
+            </Link>
+          </Col>
+          <Col>
+            <Link to="/chatbots/">
+              <Card>
+                <h3>Individuelle Chatbots</h3>
+                <p>Botfabrik by Apptiva</p>
+                <ImgStyled
+                  image={chatbot.childImageSharp.gatsbyImageData}
+                  alt="Chatbots"
+                />
+              </Card>
+            </Link>
+            <Link to="/produktkonfiguratoren/">
+              <Card>
+                <h3>Produkt-Konfiguratoren</h3>
+                <p>Komplexe Angebote einfach verkaufen</p>
+                <ImgStyled
+                  image={partyplaner.childImageSharp.gatsbyImageData}
+                  alt="Angebots- und Produktkonfiguratoren"
+                />
+              </Card>
+            </Link>
+          </Col>
+          <Col>
+            <Link to="/digitalisierung-unternehmen/">
+              <Card>
+                <h3>Unternehmen digitalisieren</h3>
+                <p>
+                  Gemeinsam packen wir die Herausforderungen an, welche die
+                  Digitalisierung von Unternehmen mit sich bringt.
+                </p>
+              </Card>
+            </Link>
+            <Link to="/unterstuetzung/">
+              <Card>
+                <h3>Unterstützung</h3>
+                <p>
+                  Profitieren Sie von unserer Erfahrung rund um die
+                  Softwareentwicklung. Wir unterstützen Sie mit unserer
+                  Brainpower.
+                </p>
+              </Card>
+            </Link>
+          </Col>
+        </Row>
+        <Title>Produkte</Title>
+        <Row>
+          <Col>
+            <Link to="/payflink/">
+              <Card>
+                <h3>Payflink</h3>
+                <p>Restaurant Bestell App & Digitale Speisekarte</p>
+                <ImgStyled
+                  image={payflink.childImageSharp.gatsbyImageData}
+                  alt="Payflink"
+                />
+              </Card>
+            </Link>
+          </Col>
+          <Col>
+            <a href="bubble-chat/">
+              <Card>
+                <h3>Bubble Chat</h3>
+                <p>KI-basierte Chatbot Lösung</p>
+                <ImgStyled
+                  image={bubbleChat.childImageSharp.gatsbyImageData}
+                  alt="Bubble Chat"
+                />
+              </Card>
+            </a>
+          </Col>
+          <Col>
+            <Link to="/einsatzplanung/">
+              <h3>Einsatzplanung für den Gebäudeunterhalt</h3>
+            </Link>
+            <Link to="/dashboard-notaufnahme/">
+              <h3>Dashboard für die Notaufnahme</h3>
+            </Link>
+          </Col>
+        </Row>
+      </Container>
+    </Section>
 
-      <BlogPreview />
-      <CallToAction />
-    </main>
+    <Section css="padding-bottom: 0;">
+      <Container>
+        <h2>Softwareentwicklung mit Apptiva angehen</h2>
+        <p css="margin-bottom: 0">
+          Das Entwickeln von individuellen Apps und Applikationen ist unsere
+          Spezialität. Damit beschleunigen wir Ihre Geschäftsprozesse und
+          unterstützen Sie bei der digitalen Transformation Ihres Unternehmens.
+          Wir pflegen eine enge und direkte Zusammenarbeit mit unseren Kunden,
+          um auf dieser Grundlage schnell und in hoher Qualität passgenaue
+          Software entwickeln zu können.
+        </p>
+        <p css="margin-bottom: 0">
+          Für uns ist es wichtig, ganzheitliche Softwarelösungen zu finden.
+          Unabhängig davon, ob es um eine Plattform Entwicklung, Business
+          Applikation, Automatisierung, Webentwicklung, Programmierung oder
+          andere Softwarelösungen geht, bei uns steht immer eine Vision im
+          Mittelpunkt.
+        </p>
+        <p>
+          Wir sind bemüht, bei unseren Produkten und Projekten immer wieder
+          einen Blick über den Tellerrand hinaus zu werfen. Beim Abschluss eines
+          Projektes sollen unsere Kunden und auch wir zufrieden sein mit dem
+          Resultat.
+        </p>
+        <p>
+          Die Entwicklung findet bei uns in der Zentralschweiz{' '}
+          <img src={luzern} alt="" height="18" css="margin-block: -3px;" />{' '}
+          statt. In der Regel arbeiten wir von zu Hause aus. Bei Bedarf tauschen
+          wir uns jedoch gerne mit unseren Kunden in unserem Büro am schönen
+          Sempachersee aus. Wir sind sehr gut erreichbar aus Bern, Luzern,
+          Zürich und aus der ganzen Schweiz.
+        </p>
+        <Buttonlist>
+          <Button to="/ueber-uns/">Mehr über uns erfahren</Button>
+          <Button to="/vorgehen/">Unser Vorgehen</Button>
+          <Button to="/unsere-kompetenzen/">Unsere Kompetenzen</Button>
+        </Buttonlist>
+        <StaticImage style={{ marginTop: 40 }} src="../img/team.webp" />
+      </Container>
+    </Section>
+
+    <Section dark>
+      <Container>
+        <Testimonials />
+      </Container>
+    </Section>
+
+    <ReferenzenPreview />
+
+    <Section>
+      <Container>
+        <h2>Partner</h2>
+        <PartnerImage>
+          {partners.edges.map(({ node }) => (
+            <Link key={node.id} to={`/${node.frontmatter.slug}/`}>
+              <GatsbyImage
+                image={node.frontmatter.logo.childImageSharp.gatsbyImageData}
+                alt={node.frontmatter.name}
+              />
+            </Link>
+          ))}
+        </PartnerImage>
+      </Container>
+    </Section>
+
+    <BlogPreview />
+    <CallToAction />
   </Layout>
 )
 

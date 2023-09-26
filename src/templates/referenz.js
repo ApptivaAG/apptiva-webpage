@@ -105,7 +105,7 @@ const ReferenzTemplate = ({
   )
 
   return (
-    <main>
+    <>
       <Helmet>
         <link
           rel="stylesheet"
@@ -195,7 +195,7 @@ const ReferenzTemplate = ({
           <Navigation next={next} prev={prev} />
         </Container>
       </footer>
-    </main>
+    </>
   )
 }
 

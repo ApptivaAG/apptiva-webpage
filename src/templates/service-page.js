@@ -110,7 +110,7 @@ const Header = ({ title, image, subtitle, breadcrumbs }) => (
         {breadcrumbs.map((breadcrumb) => (
           <>
             <Link to={`/${breadcrumb.route}/`}>{breadcrumb.name}</Link> &gt;{' '}
-            <span dangerouslySetInnerHTML={{ __html: title }}></span>
+            <span dangerouslySetInnerHTML={{ __html: title }} />
           </>
         ))}
       </nav>
@@ -124,7 +124,7 @@ const Header = ({ title, image, subtitle, breadcrumbs }) => (
         {subtitle.bullets && (
           <ul>
             {subtitle.bullets.map((b) => (
-              <li key={b} dangerouslySetInnerHTML={{ __html: b }}></li>
+              <li key={b} dangerouslySetInnerHTML={{ __html: b }} />
             ))}
           </ul>
         )}
@@ -162,7 +162,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
   const seoImage = getSrc(image?.childImageSharp.gatsbyImageData)
 
   return (
-    <main>
+    <>
       <Helmet>
         <link
           rel="stylesheet"
@@ -340,7 +340,7 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
           </CallToAction>
         </Container>
       </Section>
-    </main>
+    </>
   )
 }
 

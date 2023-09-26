@@ -149,7 +149,7 @@ const EmployeePageTemplate = ({ content, contentComponent, frontmatter }) => {
   const seoImage = getSrc(frontmatter.avatar.childImageSharp.gatsbyImageData)
 
   return (
-    <main>
+    <>
       <Helmet>
         <link
           rel="stylesheet"
@@ -252,7 +252,7 @@ const EmployeePageTemplate = ({ content, contentComponent, frontmatter }) => {
           </Container>
         </Section>
       )}
-    </main>
+    </>
   )
 }
 

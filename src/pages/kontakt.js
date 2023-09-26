@@ -44,68 +44,66 @@ const Kontakt = () => {
   }
   return (
     <Layout callToAction={false}>
-      <main>
-        <Helmet title={`${metadata.title} - ${config.company}`} />
-        <Seo metaData={metadata} />
-        <GoogleTag />
-        <Section>
-          <Container>
-            <MainTitle>Kontakt</MainTitle>
-            <p>{metadata.description}</p>
-            <Grid>
-              <div>
-                <p>Telefon</p>
-                <ContactInfo href="tel:+41413222626">041 322 26 26</ContactInfo>
-                <p>Mail</p>
-                <ContactInfo href="mailto:info@apptiva.ch">
-                  info@apptiva.ch
-                </ContactInfo>
-                <p>Adresse</p>
-                <ContactInfo as="address">
-                  Apptiva AG <br /> Eichweid 1 <br />
-                  6203 Sempach Station
-                </ContactInfo>
-                <Button css="font-size: 0.7em; margin-top: 1em;" href="#anfahrt">
-                  Anfahrt
-                </Button>
-              </div>
-              <div>
-                <h2>Kontaktformular</h2>
-                <ContactForm />
-              </div>
-            </Grid>
-          </Container>
-        </Section>
-        <StaticImage
-          src="../img/gebaeude.jpg"
-          alt="Gebäude wo sich unser Büro befindet."
-        />
-        <Section dark id="anfahrt">
-          <Container>
-            <h2>Standort</h2>
-            <p>
-              Apptiva befindet sich in Sempach Station an der Autobahn A2 und an
-              der Bahnlinie zwischen Luzern und Sursee.
-            </p>
-            <ContactInfo as="address">
-              Apptiva AG <br />
-              Eichweid 1 <br />
-              6203 Sempach Station
-            </ContactInfo>
-            <iframe
-              css="margin-top: 3em;"
-              title="Google Maps"
-              frameBorder="0"
-              height="550px"
-              marginHeight="0"
-              marginWidth="0"
-              scrolling="no"
-              src="https://maps.google.com/maps?q=Apptiva%20AG,%20Eichweid%201,%20Sempach%20Station&hl=de&geocode=+&hnear=Apptiva%20AG+Eichweid%201,+Sempach%20Station&t=m&z=10&iwloc=A&output=embed"
-              width="100%"
-            />
-          </Container>
-        </Section>
-      </main>
+      <Helmet title={`${metadata.title} - ${config.company}`} />
+      <Seo metaData={metadata} />
+      <GoogleTag />
+      <Section>
+        <Container>
+          <MainTitle>Kontakt</MainTitle>
+          <p>{metadata.description}</p>
+          <Grid>
+            <div>
+              <p>Telefon</p>
+              <ContactInfo href="tel:+41413222626">041 322 26 26</ContactInfo>
+              <p>Mail</p>
+              <ContactInfo href="mailto:info@apptiva.ch">
+                info@apptiva.ch
+              </ContactInfo>
+              <p>Adresse</p>
+              <ContactInfo as="address">
+                Apptiva AG <br /> Eichweid 1 <br />
+                6203 Sempach Station
+              </ContactInfo>
+              <Button css="font-size: 0.7em; margin-top: 1em;" href="#anfahrt">
+                Anfahrt
+              </Button>
+            </div>
+            <div>
+              <h2>Kontaktformular</h2>
+              <ContactForm />
+            </div>
+          </Grid>
+        </Container>
+      </Section>
+      <StaticImage
+        src="../img/gebaeude.jpg"
+        alt="Gebäude wo sich unser Büro befindet."
+      />
+      <Section dark id="anfahrt">
+        <Container>
+          <h2>Standort</h2>
+          <p>
+            Apptiva befindet sich in Sempach Station an der Autobahn A2 und an
+            der Bahnlinie zwischen Luzern und Sursee.
+          </p>
+          <ContactInfo as="address">
+            Apptiva AG <br />
+            Eichweid 1 <br />
+            6203 Sempach Station
+          </ContactInfo>
+          <iframe
+            css="margin-top: 3em;"
+            title="Google Maps"
+            frameBorder="0"
+            height="550px"
+            marginHeight="0"
+            marginWidth="0"
+            scrolling="no"
+            src="https://maps.google.com/maps?q=Apptiva%20AG,%20Eichweid%201,%20Sempach%20Station&hl=de&geocode=+&hnear=Apptiva%20AG+Eichweid%201,+Sempach%20Station&t=m&z=10&iwloc=A&output=embed"
+            width="100%"
+          />
+        </Container>
+      </Section>
     </Layout>
   )
 }

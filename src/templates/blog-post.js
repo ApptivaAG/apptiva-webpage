@@ -70,7 +70,7 @@ const BlogPostTemplate = ({
     metaData
 
   return (
-    <main>
+    <>
       <Helmet title={`${stripHTML(title)} - Blog - ${config.company}`} />
       <SEO
         isBlogPost
@@ -96,7 +96,7 @@ const BlogPostTemplate = ({
           <Navigation next={next} prev={prev} />
         </Container>
       </footer>
-    </main>
+    </>
   )
 }
 

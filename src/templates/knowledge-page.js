@@ -15,7 +15,7 @@ const Header = ({ title }) => (
   <HeadArea>
     <nav>
       <Link to={`/${knowledgeRoute}/`}>Apptiva lernt</Link> &gt;{' '}
-      <span dangerouslySetInnerHTML={{ __html: title }}></span>
+      <span dangerouslySetInnerHTML={{ __html: title }} />
     </nav>
     <MainTitle dangerouslySetInnerHTML={{ __html: title }} />
   </HeadArea>
@@ -65,7 +65,7 @@ const KnowledgeTemplate = ({
   const { title, description, author, date } = metaData
 
   return (
-    <main>
+    <>
       <Helmet title={`${stripHTML(title)} - Blog - ${company}`} />
       <SEO isBlogPost metaData={metaData} />
       <Container>
@@ -85,7 +85,7 @@ const KnowledgeTemplate = ({
           <Navigation next={next} prev={prev} />
         </Container>
       </footer>
-    </main>
+    </>
   )
 }
 

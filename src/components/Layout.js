@@ -26,7 +26,7 @@ const Layout = ({ children, showHero = false }) => (
       <Lightbox>
         <Helmet title={config.title} />
         <Navbar location={showHero && 'root'} />
-        {children}
+        <main>{children}</main>
         <Footer />
         <GlobalStyle />
         <LightboxImageStyle />

@@ -19,27 +19,25 @@ const Blog = ({ data }) => {
 
   return (
     <Layout>
-      <main>
-        <Helmet title={`Blog - ${company}`} />
-        <SEO metaData={metadata} />
+      <Helmet title={`Blog - ${company}`} />
+      <SEO metaData={metadata} />
 
-        <Section>
-          <Container>
-            <MainTitle>Blogbeiträge</MainTitle>
+      <Section>
+        <Container>
+          <MainTitle>Blogbeiträge</MainTitle>
 
-            {posts.map(({ node: post }) => (
-              <BlogLinkItem
-                key={post.id}
-                css={`
-                  background: ${(p) => p.theme.color.lightBg};
-                `}
-                frontmatter={post.frontmatter}
-                excerpt={post.frontmatter.description}
-              />
-            ))}
-          </Container>
-        </Section>
-      </main>
+          {posts.map(({ node: post }) => (
+            <BlogLinkItem
+              key={post.id}
+              css={`
+                background: ${(p) => p.theme.color.lightBg};
+              `}
+              frontmatter={post.frontmatter}
+              excerpt={post.frontmatter.description}
+            />
+          ))}
+        </Container>
+      </Section>
     </Layout>
   )
 }
