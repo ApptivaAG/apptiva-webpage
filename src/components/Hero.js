@@ -87,8 +87,7 @@ const TeaserTitle = styled.h1`
   }
 `
 const TeaserText = styled.div`
-  font-size: 1.1em;
-  font-weight: 400;
+  font-size: 1em;
   color: ${(p) => p.theme.color.darkGray};
   hyphens: auto;
 `
@@ -133,7 +132,9 @@ const Hero = () => (
         </TeaserTitle>
 
         <TeaserText>
-          Zusammen mit Ihnen realisieren wir individuelle Softwarelösungen.
+          <b>
+            Zusammen mit Ihnen realisieren wir individuelle Softwarelösungen.
+          </b>
           <p>
             Wir entwickeln Mobile Apps sowie Web- und Desktopapplikationen und
             unterstützen Sie mit unserem Know How und unserer Erfahrung bei der
