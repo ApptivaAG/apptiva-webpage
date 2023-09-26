@@ -120,7 +120,7 @@ Dabei geht es insbesondere um:
 - Bankinstitute und Zahlungsdienstleister;
 - Amtsstellen und Gerichte.
 
-Die Empfänger sind teilweise im Inland, teilweise aber auch im Ausland. Sie müssen insbesondere mit der Übermittlung Ihrer Daten in andere Länder Europas und den USA rechnen, wo sich einige der von uns in Anspruch genommenen IT-Dienstleister befinden. Wenn wir Daten in ein Land übermitteln, in dem kein angemessenes gesetzliches Datenschutzniveau besteht), verlangen wir, dass der Empfänger angemessene Massnahmen zum Schutz von Personendaten trifft (z.B. mittels der Vereinbarung von sog. EU-Standardklauseln, aktuelle Version [hier](https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32021D0914) abrufbar, anderer Vorkehrungen oder gestützt auf Rechtfertigungsgründe).
+Die Empfänger sind teilweise im Inland, teilweise aber auch im Ausland. Sie müssen insbesondere mit der Übermittlung Ihrer Daten in andere Länder Europas und den USA rechnen, wo sich einige der von uns in Anspruch genommenen IT-Dienstleister befinden. Wenn wir Daten in ein Land übermitteln, in dem kein angemessenes gesetzliches Datenschutzniveau besteht, verlangen wir, dass der Empfänger angemessene Massnahmen zum Schutz von Personendaten trifft (z.B. mittels der Vereinbarung von sog. EU-Standardklauseln, aktuelle Version [hier](https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32021D0914) abrufbar, anderer Vorkehrungen oder gestützt auf Rechtfertigungsgründe).
 
 ### 2.4 Dauer der Datenbearbeitung
 
