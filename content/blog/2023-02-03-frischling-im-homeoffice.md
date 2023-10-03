@@ -30,18 +30,18 @@ Einer der bemerkenswertesten Vorteile des Homeoffice ist die Flexibilität bei d
 
 In meinem persönlichen Arbeitsraum kann ich eine ruhige und konzentrierte Umgebung schaffen, in der ich mich voll und ganz auf meine Aufgaben konzentrieren kann. Es gibt keine Störfaktoren, wie sie in Grossraumbüros üblich anzutreffen sind, die mich aus meinem Arbeitsfluss reissen könnten. Diese Stille ermöglicht es mir, in meine Arbeit einzutauchen und komplexe Aufgaben effizient zu bewältigen.
 
-Ein Aspekt, den ich im Homeoffice als herausfordernd empfinde, ist der begrenzte Raum für informelle, kollegiale Gespräche mit meinen Teammitgliedern. In dieser Umgebung neigen unsere Gespräche häufig dazu, auf arbeitsbezogene Themen beschränkt zu sein.
-
-Trotz dieser Herausforderung versuchen wir in unserem Team, regelmäßig virtuelle Meetings oder informelle Gesprächsrunden zu organisieren, bei denen es nicht nur um Arbeit geht.
+Ein Aspekt, den ich im Homeoffice als herausfordernd empfinde, sind die informellen, kollegiale Gespräche mit meinen Teammitgliedern. Es gibt weniger spontane Gespräche, da immer ein Anruf nötig ist, um eine Konversation zu starten. Trotz dieser Herausforderung versuchen wir in unserem Team, regelmäßig virtuelle Meetings oder informelle Gesprächsrunden zu organisieren, bei denen es nicht nur um Arbeit geht.
 
 ## Holacracy
 
 Die spannendste Herausforderung war für mich die neue Unternehmensstruktur. Holacracy hat die Art und Weise, wie ich Arbeit und Hierarchie in Unternehmen bisher wahrgenommen habe, grundlegend verändert. Statt traditioneller Hierarchien und festgelegter Organigramme gab es hier ein System, wo Verantwortung und Entscheidungen auf alle Mitarbeiter verteilt werden.
 
-In meiner neuen Rolle wurde ich ermutigt, eigenständig Verantwortung zu übernehmen und Entscheidungen zu treffen, die meinen Aufgabenbereich betreffen. In meiner Anfangsphase war es nicht immer leicht, dass man bereits als "Neuling" mitbestimmen durfte bei wichtigen Entscheidungen. Diese Verantwortung motiviert, sich mit dem Unternehmen, unseren Projekten und Produkten auseinanderzusetzen.
+In meiner neuen Rolle wurde ich ermutigt, eigenständig Verantwortung zu übernehmen und Entscheidungen zu treffen, die meinen Aufgabenbereich betreffen. In meiner Anfangsphase war es nicht immer leicht, dass man bereits als "Frischling" mitbestimmen durfte bei wichtigen Entscheidungen. Diese Verantwortung motiviert, sich mit dem Unternehmen, unseren Projekten und Produkten auseinanderzusetzen.
 
 Die Erfahrung, in einer Holacracy basierten Organisation zu arbeiten, war herausfordernd, aber äusserst lehrreich. Es erforderte eine Umstellung meiner Denkweise und meiner Arbeitsgewohnheiten, aber ich entdeckte auch die Freiheit und die Möglichkeiten, die diese Struktur bietet.
 
 [[right]]
 |[[avatar]]
 ||![](img/kevin-rickenbach.jpg)
+
+Alles in allem war das erste halbe Jahr grossartig, und ich bin gespannt, wie die Reise bei der Apptiva weiter geht.
