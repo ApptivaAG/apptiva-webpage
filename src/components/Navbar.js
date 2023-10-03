@@ -43,7 +43,7 @@ const navbarData = [
         {
           title: 'Schnittstellen',
           text: 'Schnittstellen zwischen Anwendungen',
-          href: '/bargeldlos-bezahlen/',
+          href: '/schnittstellen/',
         },
         {
           title: 'Weiterentwicklung',
