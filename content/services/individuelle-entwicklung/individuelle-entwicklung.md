@@ -49,6 +49,8 @@ Wir entwickeln unter anderem:
 
 - ### [Web Apps und Applikationen](/web-apps/)
 
+- ### [Schnittstellen zwischen Anwendungen](/schnittstellen/)
+
 - ### [Individuelle Dashboards](/custom-dashboard/)
 
 - ### [Einzigartige Webshops](/einzigartiger-webshop/)
