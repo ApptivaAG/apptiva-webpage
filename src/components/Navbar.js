@@ -41,9 +41,9 @@ const navbarData = [
           href: '/einzigartiger-webshop/',
         },
         {
-          title: 'Zahlungslösungen',
-          text: 'Bargeldlose in Apps bezahlen',
-          href: '/bargeldlos-bezahlen/',
+          title: 'Schnittstellen',
+          text: 'Schnittstellen zwischen Anwendungen',
+          href: '/schnittstellen-entwickeln/',
         },
         {
           title: 'Weiterentwicklung',

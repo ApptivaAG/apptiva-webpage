@@ -236,6 +236,11 @@ const Footer = () => (
               <Link to="/produktkonfiguratoren/">Produktkonfiguratoren</Link>
             </li>
             <li>
+              <Link to="/schnittstellen-entwickeln/">
+                Schnittstellen zwischen Anwendungen
+              </Link>
+            </li>
+            <li>
               <Link to="/digitalisierung-unternehmen/">
                 Digitale Transformation
               </Link>

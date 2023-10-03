@@ -40,7 +40,7 @@ Die Konzept5 AG ist der Ansprechpartner für die Durchführung von Grossevents u
 
 ## Zusammenspiel mit Hardware Komponenten
 
-In einem solchen System werden natürlich eine vielzahl an Hardware Komponenten auf dem Gelände des Anlasses installiert, die entsprechend gesteuert und überwacht werden müssen. Dazu gehören Notlicht-Lampen, Kameras, Lautsprecher, Bewegungsmelder, Notstromversorgungen und vieles mehr. Die Schnittstellen zu diesen Komponenten mussten alle implementiert und in das System integriert werden. Dazu haben wir uns natürlich auch mit den Herstellern der Hardware ausgetauscht und die Möglichkeiten aufgezeigt und Lösungen erarbeitet.
+In einem solchen System werden natürlich eine vielzahl an Hardware Komponenten auf dem Gelände des Anlasses installiert, die entsprechend gesteuert und überwacht werden müssen. Dazu gehören Notlicht-Lampen, Kameras, Lautsprecher, Bewegungsmelder, Notstromversorgungen und vieles mehr. Die [Schnittstellen](/schnittstellen-entwickeln/) zu diesen Komponenten mussten alle implementiert und in das System integriert werden. Dazu haben wir uns natürlich auch mit den Herstellern der Hardware ausgetauscht und die Möglichkeiten aufgezeigt und Lösungen erarbeitet.
 
 ## Einfacher Aufbau und Abbau
 
