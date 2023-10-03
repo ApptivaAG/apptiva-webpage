@@ -14,7 +14,7 @@ Das neuste Projekt der Apptiva ist live: Der Partyplaner von Schürch Getränke.
 
 # Für jeden Anlass das richtige Sortiment
 
-Diese Erfahrungswerte der Mitarbeiter haben wir im Partyplaner zusammengefasst: Der Nutzer definiert Anzahl Personen, Aufteilung Männer/Frauen/Kinder, Art und Dauer – und schon rechnet der Partyplaner die benötigten Mengen an Mineral, Wein, Bier, etc. Über eine Schnittstelle zum Warenwirtschafts-System VinX bezieht der Partyplaner die Informationen zu den aktuell verfügbaren Artikeln, wobei auch Gebindegrössen für die Kalkulation berücksichtigt werden.
+Diese Erfahrungswerte der Mitarbeiter haben wir im Partyplaner zusammengefasst: Der Nutzer definiert Anzahl Personen, Aufteilung Männer/Frauen/Kinder, Art und Dauer – und schon rechnet der Partyplaner die benötigten Mengen an Mineral, Wein, Bier, etc. Über eine [Schnittstelle](/schnittstellen-entwickeln/) zum Warenwirtschafts-System VinX bezieht der Partyplaner die Informationen zu den aktuell verfügbaren Artikeln, wobei auch Gebindegrössen für die Kalkulation berücksichtigt werden.
 
 ![Anlassdaten definieren](img/partyplaner.png)
 

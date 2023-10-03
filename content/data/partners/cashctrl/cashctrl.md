@@ -7,7 +7,7 @@ logo: cashctrl.png
 url: https://cashctrl.com/
 ---
 
-Wir freuen uns, CashCtrl als Partner zu haben. Wir von Apptiva nutzen CashCtrl seit 2015 für unsere Buchhaltung und sind sehr zufrieden damit. Im Rahmen unserer Partnerschaft entwickeln wir Anwendungen und Schnittstellen, die mit dem CashCtrl-System zusammenarbeiten.
+Wir freuen uns, CashCtrl als Partner zu haben. Wir von Apptiva nutzen CashCtrl seit 2015 für unsere Buchhaltung und sind sehr zufrieden damit. Im Rahmen unserer Partnerschaft entwickeln wir Anwendungen und [Schnittstellen](/schnittstellen-entwickeln/), die mit dem CashCtrl-System zusammenarbeiten.
 
 ## Über die CashCtrl AG
 

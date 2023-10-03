@@ -32,7 +32,7 @@ Die Mitarbeiter:innen des Casinos können hier neue Leistungserbringer und deren
 
 ## Schnittstelle zu den Leistungserbringern
 
-Die Leistungserbringer werden z.Z. entweder per Email oder über die Restaurant-Reservations-Schnittstelle von Aleno über eine neue Reservation informiert. Die Kapazität der Leistungserbringer speichern wir entsprechend der vereinbarten Quota bei uns in der Software oder prüfen die Kapazität ebenfalls über Aleno. Mit Email haben wir eine sehr einfache "Anbindung" der Leistungserbringer, welche in jedem Fall funktioniert. Bei in Aleno erfassten Restaurants können wir die Kapazitätsprüfung und Reservation sehr genau vornehmen und entsprechend den administrativen Aufwand nochmals reduzieren.
+Die Leistungserbringer werden z.Z. entweder per Email oder über die [Restaurant-Reservations-Schnittstelle](/schnittstellen-entwickeln/) von Aleno über eine neue Reservation informiert. Die Kapazität der Leistungserbringer speichern wir entsprechend der vereinbarten Quota bei uns in der Software oder prüfen die Kapazität ebenfalls über Aleno. Mit Email haben wir eine sehr einfache "Anbindung" der Leistungserbringer, welche in jedem Fall funktioniert. Bei in Aleno erfassten Restaurants können wir die Kapazitätsprüfung und Reservation sehr genau vornehmen und entsprechend den administrativen Aufwand nochmals reduzieren.
 
 ## Kapazität prüfen
 

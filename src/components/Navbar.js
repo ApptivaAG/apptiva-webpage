@@ -43,7 +43,7 @@ const navbarData = [
         {
           title: 'Schnittstellen',
           text: 'Schnittstellen zwischen Anwendungen',
-          href: '/schnittstellen/',
+          href: '/schnittstellen-entwickeln/',
         },
         {
           title: 'Weiterentwicklung',
