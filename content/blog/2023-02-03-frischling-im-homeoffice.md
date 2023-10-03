@@ -38,7 +38,7 @@ Die spannendste Herausforderung war für mich die neue Unternehmensstruktur. Hol
 
 In meiner neuen Rolle wurde ich ermutigt, eigenständig Verantwortung zu übernehmen und Entscheidungen zu treffen, die meinen Aufgabenbereich betreffen. In meiner Anfangsphase war es nicht immer leicht, dass man bereits als "Frischling" mitbestimmen durfte bei wichtigen Entscheidungen. Diese Verantwortung motiviert, sich mit dem Unternehmen, unseren Projekten und Produkten auseinanderzusetzen.
 
-Die Erfahrung, in einer Holacracy basierten Organisation zu arbeiten, war herausfordernd, aber äusserst lehrreich. Es erforderte eine Umstellung meiner Denkweise und meiner Arbeitsgewohnheiten, aber ich entdeckte auch die Freiheit und die Möglichkeiten, die diese Struktur bietet.
+Die Erfahrung, in einer Holacracy basierten Organisation zu arbeiten, ist herausfordernd, aber äusserst lehrreich. Es erforderte eine Umstellung meiner Denkweise und meiner Arbeitsgewohnheiten, aber ich entdeckte auch die Freiheit und die Möglichkeiten, die diese Struktur bietet.
 
 [[right]]
 |[[avatar]]
