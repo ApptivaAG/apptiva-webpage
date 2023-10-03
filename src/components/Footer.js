@@ -1,4 +1,5 @@
 import React from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { description, knowledgeRoute, referenzenRoute } from '../config'
@@ -123,6 +124,21 @@ const Footer = () => (
               Newsletter abonnieren
             </Button>
           </Newsletter>
+          <a
+            href="https://www.swissmadesoftware.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="gatsby-resp-image-link"
+          >
+            <StaticImage
+              style={{ marginTop: 60, marginBottom: 60 }}
+              height={120}
+              src="../img/swiss-made-software.svg"
+              alt="Swiss Made Software"
+              loading="eager"
+              placeholder="none"
+            />
+          </a>
         </About>
         <Contact className="arrow-links">
           <h2>Apptiva</h2>
