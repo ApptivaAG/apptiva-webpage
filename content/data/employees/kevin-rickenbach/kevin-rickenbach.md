@@ -16,9 +16,9 @@ skills:
   - title: Methodiken
     items:
       - name: Agile
-        value: 70
+        value: 85
       - name: Scrum
-        value: 65
+        value: 80
   - title: Architektur
     items:
       - name: Zusammenarbeit
@@ -30,23 +30,35 @@ skills:
   - title: Sprachen
     items:
       - name: HTML5 / CSS3
-        value: 80
-      - name: PHP
-        value: 50
+        value: 90
       - name: JavaScript
-        value: 40
+        value: 60
+      - name: Typescript
+        value: 80
       - name: Python
         value: 65
+      - name: PHP
+        value: 50
       - name: Java
         value: 40
   - title: Frameworks & Libraries
     items:
+      - name: React
+        value: 80
+      - name: React-Native
+        value: 60
+      - name: Node.js
+        value: 80
       - name: Bootstrap
         value: 70
       - name: Symfony
         value: 40
-      - name: React
-        value: 20
+  - title: Datenbanken
+    items:
+      - name: MySQL
+        value: 80
+      - name: MongoDB
+        value: 75
 ---
 
 # Meine Erfahrungen
