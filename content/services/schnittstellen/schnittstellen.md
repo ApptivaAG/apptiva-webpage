@@ -10,7 +10,7 @@ description: Mit unserer langjährigen Erfahrung in der Entwicklung von Schnitts
 subtitle:
   text: 'Sie möchten eine Anwendung mit einer anderen verbinden? Als erfahrene Schnittstellenentwickler können wir Ihnen helfen.'
   bullets:
-    - Unsere Schnittstellenprogrammierung findet zu <b>100% in der Schweiz</b> statt. Somit sprechen wir die gleiche Sprache und kennen uns bestens in den Anwendungen und Systemen von Schweizer Unternehmen aus.
+    - Unsere Schnittstellen&shy;programmierung findet zu <b>100% in der Schweiz</b> statt. Somit sprechen wir die gleiche Sprache und kennen uns bestens in den Anwendungen und Systemen von Schweizer Unternehmen aus.
     - Wir setzen <b>agile, effektive und moderne</b> Methodiken und Technologien ein, welche Ihr Unternehmen ab dem ersten Tag unserer Zusammenarbeit bereichern.
     - Während der gesamten Projektdauer begleitet Sie <b>dieselbe Ansprechperson</b>.
 breadcrumbs:
@@ -34,26 +34,26 @@ bulletGroups:
         title: Buchhaltungssystem
         text: Schnittstellen zu Applikationen wie Cashctrl, Abacus, Sage 50, Bexio, Lexware.
       - icon: mobile-alt
-        title: Warenwirtschaftssystem (ERP)
+        title: Warenwirtschafts&shy;system (ERP)
         text: Schnittstellen zu Anwendungen wie SAP S/4HANA, Microsoft Dynamics 365, Sage X3, Abacus Business Software, ProAlpha
       - icon: clock
-        title: Krankenhausinformationssystem (KIS)
+        title: Krankenhaus&shy;informationssystem (KIS)
         text: Schnittstellen zu Anwendungen wie iMedOne, ORBIS, Epic, Nexus / KIS
       - icon: database
         title: Content Management System (CMS)
         text: Schnittstellen zu Anwendungen wie TYPO3, WordPress, Drupal, Joomla, Contao
       - icon: expand
-        title: Kundenbeziehungsmanagement-System (CRM)
+        title: Kundenbeziehungs&shy;management&shy;system (CRM)
         text: Schnittstellen zu Anwendungen wie Salesforce, Microsoft Dynamics 365, SAP CRM, Zoho CRM, SugarCRM
       - icon: tachometer-alt
-        title: Dokumenten-Management-System (DMS)
+        title: Dokumenten&shy;management&shy;system (DMS)
         text: Schnittstellen zu Anwendungen wie DocuWare, M-Files, EASY DMS, Microsoft SharePoint, d.velop d3
       - icon: tachometer-alt
         title: Branchensystem
         text: Schnittstellen zu Ihrer Branchenlösung. Wir haben bereits Schnittstellen für Systeme wie Kassensysteme, Systeme für den Getränkehandel, verschiedene Ticketsysteme, interne Datenbanken wie MS SQL und viele mehr entwickelt.
 ---
 
-## Was bedeutet Schnittstellenprogrammierung?
+## Was bedeutet Schnittstellen&shy;programmierung?
 
 Die Schnittstellenprogrammierung bezieht sich auf die Entwicklung von Software, bei der der Schwerpunkt auf der Erstellung und Nutzung von Schnittstellen oder APIs (Application Programming Interfaces) liegt, um die <b>Kommunikation und Interaktion zwischen verschiedenen Softwarekomponenten</b> oder Systemen zu ermöglichen. Diese Schnittstellen definieren, wie verschiedene Programme miteinander kommunizieren können, indem sie Regeln, Methoden und Datenstrukturen festlegen.
 

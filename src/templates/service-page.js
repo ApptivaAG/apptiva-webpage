@@ -250,7 +250,8 @@ const ServicePageTemplate = ({ content, contentComponent, metaData }) => {
                       <i className={icons(item.icon)} />
                     </Icon>
                     <ItemContent>
-                      <h3>{item.title}</h3>
+                      {/* eslint-disable-next-line react/no-danger */}
+                      <h3 dangerouslySetInnerHTML={{ __html: item.title }} />
                       {/* eslint-disable-next-line react/no-danger */}
                       <p dangerouslySetInnerHTML={{ __html: item.text }} />
                     </ItemContent>
