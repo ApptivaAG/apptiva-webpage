@@ -131,7 +131,7 @@ const Footer = () => (
             className="gatsby-resp-image-link"
           >
             <StaticImage
-              style={{ marginTop: 60, marginBottom: 60 }}
+              style={{ marginTop: 60, marginBottom: 60, marginLeft: -9 }}
               height={120}
               src="../img/swiss-made-software.svg"
               alt="Swiss Made Software"
