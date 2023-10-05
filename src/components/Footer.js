@@ -125,7 +125,7 @@ const Footer = () => (
             </Button>
           </Newsletter>
           <a
-            href="https://www.swissmadesoftware.org/"
+            href="https://www.swissmadesoftware.org/companies/apptiva-ag/home.html"
             target="_blank"
             rel="noopener noreferrer"
             className="gatsby-resp-image-link"
