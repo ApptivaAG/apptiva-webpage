@@ -2,10 +2,11 @@
 title: Leoba
 slug: leoba
 templateKey: referenz
-image: slope-track.png
-order: 20
+image: leoba.png
+order: 11
 description: >-
-  Slope Track ist eine native Tracking-App für iOS und Android, die Belastungen und Geschwindigkeiten beim Skifahren und Snowboarden aufzeichnet.
+  Leoba ist eine webbasierte Anwendung und mobile App, die Betreuungseinrichtungen im Alltag bei Buchungen und Abrechnungen
+  unterstützt.
 link: https://leoba.ch/
 bulletGroups:
   - title: Vorteile einer Apptiva-Lösung
@@ -53,6 +54,4 @@ Gemeinsam mit dem Team von Leoba haben wir in Workshops die Funktionalitäten de
 
 Das Projekt wurde agil umgesetzt, um unseren Auftraggebern regelmäßig Prototypen vorzustellen. Diese Vorgehensweise ermöglicht es, Missverständnisse und Probleme frühzeitig zu identifizieren und zu beheben. Die Anwendung wird kontinuierlich von Betreuungseinrichtungen getestet, um sicherzustellen, dass die implementierten Funktionen vor der Veröffentlichung überprüft werden.
 
-Bis zum Sommer 2023 unterstützt die Leoba-Anwendung bereits mehr als <ins>20</ins> Betreuungseinrichtungen erfolgreich.
-
-## Die Technik
+Im Sommer 2023 unterstützt die Leoba-Anwendung **bereits mehr als 20 Betreuungseinrichtungen**.
