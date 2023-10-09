@@ -5,13 +5,10 @@ templateKey: referenz
 image: leoba.png
 order: 11
 description: >-
-  Leoba ist eine webbasierte Anwendung und mobile App, die Betreuungseinrichtungen im Alltag bei Buchungen und Abrechnungen
+  Leoba ist eine Webapplikation und mobile App, die Betreuungseinrichtungen im Alltag bei Buchungen und Abrechnungen
   unterstützt.
-link: https://leoba.ch/
 bulletGroups:
-  - title: Vorteile einer Apptiva-Lösung
-    description: Wir unterstützen Sie bei der Erreichung Ihrer Ziele und arbeiten eng und direkt mit Ihnen zusammen.
-    bulletList:
+  - bulletList:
       - icon: users
         title: Kunde
         text: <a href="https://leoba.ch/" target="_blank" rel="noopener noreferrer">Leoba GmbH<a/>
