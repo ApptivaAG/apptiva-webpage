@@ -5,8 +5,7 @@ templateKey: referenz
 image: leoba.png
 order: 11
 description: >-
-  Leoba ist eine Webapplikation und mobile App, die Betreuungseinrichtungen im Alltag bei Buchungen und Abrechnungen
-  unterstützt.
+  Seit 2022 unterstützen wir die Leoba GmbH bei der Entwicklung ihrer Webapplikation & mobilen App. Leoba ist eine Software um Prozesse, von Betreuungseinrichtungen, wie Buchungen und Abrechnungen zu erleichtern.
 bulletGroups:
   - bulletList:
       - icon: users
@@ -33,7 +32,7 @@ contactPerson:
 
 ## Über die Software
 
-Im Auftrag des Startups Leoba hat die Apptiva AG eine umfassende Softwarelösung für Betreuungseinrichtungen entwickelt, die darauf abzielt, den administrativen Aufwand zu minimieren und den Arbeitsalltag zu optimieren.
+Im Auftrag des Start-ups Leoba hat die Apptiva AG eine umfassende Softwarelösung für Betreuungseinrichtungen entwickelt, die darauf abzielt, den administrativen Aufwand zu minimieren und den Arbeitsalltag zu optimieren.
 
 ### Funktionen:
 
