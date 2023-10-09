@@ -17,7 +17,7 @@ contact:
 
 ## Meine Erfahrungen
 
-Nach meinem Abschluss an der Kantonsschule im Jahr 2014 habe ich den Sprung ins kalte Wasser gewagt und bin direkt ins Berufsleben eingetaucht. Meine berufliche Reise startete mit einem Praktikum in einer angesehenen Werbeagentur in Zürich. Während dieser Zeit sammelte ich wertvolle Erfahrungen und absolvierte erfolgreich den eidgenössischen Fachausweis in Marketing.
+Nach meinem Abschluss an der Kantonsschule im Jahr 2014 habe ich den Sprung ins kalte Wasser gewagt und bin direkt ins Berufsleben eingetaucht. Meine berufliche Reise startete mit einem Praktikum in einer angesehenen Werbeagentur in Zürich. Während der Zeit in der Agentur sammelte ich wertvolle Erfahrungen und absolvierte erfolgreich den eidgenössischen Fachausweis in Marketing.
 
 Diese Erfahrungen haben mich geprägt und meinen weiteren beruflichen Werdegang bestimmt. Auf der Unternehmerseite konnte ich mein Wissen während meiner Tätigkeit bei einem grossen Schweizer Fensterbauer weiter ausbauen. Meine stetige Motivation, mich fachlich weiterzuentwickeln, führte während dieser Zeit zum berufsbegleitenden Studium an der Höheren Fachschule Luzern zur dipl. Marketingmanagerin HF.
 
