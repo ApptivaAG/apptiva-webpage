@@ -139,7 +139,7 @@ const EmployeePageTemplate = ({ content, contentComponent, frontmatter }) => {
   } = frontmatter
 
   const metaData = {
-    title: `Mitarbeiter | ${name}`,
+    title: `Mitarbeiter:in | ${name} | Apptiva`,
     description: [name, claim, role, education, slogan]
       .filter((i) => i)
       .join(' - '),
