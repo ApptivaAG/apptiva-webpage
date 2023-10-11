@@ -5,7 +5,7 @@ templateKey: referenz
 image: leoba.png
 order: 11
 description: >-
-  Seit 2022 unterstützen wir die Leoba GmbH bei der Entwicklung ihrer Webapplikation & mobilen App. Leoba ist eine Software um Prozesse, von Betreuungseinrichtungen, wie Buchungen und Abrechnungen zu erleichtern.
+  Seit 2022 unterstützen wir die Leoba GmbH bei der Entwicklung ihrer Webapplikation & mobilen App. Leoba ist eine Software um Prozesse, von Betreuungseinrichtungen (Kitas, Tagesstrukturen, Spielgruppen und Vereine), wie Buchungen und Abrechnungen zu erleichtern.
 bulletGroups:
   - bulletList:
       - icon: users
