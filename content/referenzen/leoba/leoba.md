@@ -50,4 +50,4 @@ Gemeinsam mit dem Team von Leoba haben wir in Workshops die Funktionalitäten de
 
 Das Projekt wurde agil umgesetzt, um unseren Auftraggebern regelmäßig Prototypen vorzustellen. Diese Vorgehensweise ermöglicht es, Missverständnisse und Probleme frühzeitig zu identifizieren und zu beheben. Die Anwendung wird kontinuierlich von Betreuungseinrichtungen getestet, um sicherzustellen, dass die implementierten Funktionen vor der Veröffentlichung überprüft werden.
 
-Im Sommer 2023 unterstützt die Leoba-Anwendung **bereits mehr als 20 Betreuungseinrichtungen**.
+Im Sommer 2023 unterstützt die Leoba-Anwendung **bereits mehrere 100 Benutzer:innen**.
