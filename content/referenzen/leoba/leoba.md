@@ -5,7 +5,7 @@ templateKey: referenz
 image: leoba.png
 order: 11
 description: >-
-  Seit 2022 unterstützen wir die Leoba GmbH bei der Entwicklung ihrer Webapplikation & mobilen App. Leoba ist eine Software um Prozesse, von Betreuungseinrichtungen (Kitas, Tagesstrukturen, Spielgruppen und Vereine), wie Buchungen und Abrechnungen zu erleichtern.
+  Seit 2022 unterstützen wir die Leoba GmbH bei der Entwicklung ihrer Webapplikation & mobilen App. Leoba ist eine Software, um Prozesse wie Buchungen und Abrechnungen von Betreuungseinrichtungen (Kitas, Tagesstrukturen, Spielgruppen und Vereine) zu erleichtern.
 bulletGroups:
   - bulletList:
       - icon: users
@@ -48,6 +48,6 @@ Im Auftrag des Start-ups Leoba hat die Apptiva AG eine umfassende Softwarelösun
 
 Gemeinsam mit dem Team von Leoba haben wir in Workshops die Funktionalitäten der Leoba-Anwendung erarbeitet. Dabei haben wir das Konzept des [User Centered Design](/user-centered-design/) angewendet, um die Arbeitsprozesse und Bedürfnisse der Benutzer besser zu verstehen und die Anforderungen optimal zu definieren.
 
-Das Projekt wurde agil umgesetzt, um unseren Auftraggebern regelmäßig Prototypen vorzustellen. Diese Vorgehensweise ermöglicht es, Missverständnisse und Probleme frühzeitig zu identifizieren und zu beheben. Die Anwendung wird kontinuierlich von Betreuungseinrichtungen getestet, um sicherzustellen, dass die implementierten Funktionen vor der Veröffentlichung überprüft werden.
+Das Projekt wurde agil umgesetzt, um unseren Auftraggebern regelmässig Prototypen vorzustellen. Diese Vorgehensweise ermöglicht es, Missverständnisse und Probleme frühzeitig zu identifizieren und zu beheben. Die Anwendung wird kontinuierlich von Betreuungseinrichtungen getestet, um sicherzustellen, dass die implementierten Funktionen vor der Veröffentlichung überprüft werden.
 
 Im Sommer 2023 verzeichnet Leoba **gut 1000 Nutzer an diversen Institutionen**.
