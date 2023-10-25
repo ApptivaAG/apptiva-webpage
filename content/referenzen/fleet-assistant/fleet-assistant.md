@@ -42,22 +42,24 @@ Hinter FleetPoint steht die hostettler autotechnik ag. Sie ist eine der führend
 Fleet Assistant bietet ditigale Unterstützung in der eiffizienten und standardisierten Abwicklung des Fahrzeugunterhalts. Von der Terminbuchung bis zu Auswertungen für Flottenmanager soll das Tool die Arbeit von Flottenmanagern vereinfachen.
 
 - **Administration von Flotten:** Erstellen und bearbeiten von Flotten, sowie deren Fahrzeuge und Fahrer:innen.
+
 - **Garagen:** Übersicht über Garagennetzwerk. Details zu Aufträgen, Konditionen, sowie gelagerte Radsätze können hier angeschaut und bearbeitet werden.
+
 - **Aufträge und Arbeitsrapporte:** Rechnungen und Arbeitsrapporte aus der Garage können einem Fahrzeug zugewiesen werden.
+
 - **Lagerung Reifern/Räder:** Der Verlauf der Radwechsel, sowie Infos über neue Räder / Reifen werden direkt beim Fahrzeug gespeichert.
-- **Transport Reifen/Räder:** Das Auto wurde intern einer anderen Fahrerin zugeteilt und Ostern ist schon vorbei? Wo sind denn nur diese Sommerpneus eingelagert? Flottenbesitzer, die sich auf Fleet Assistant verlassen müssen sich diese Gedanken nicht machen.
 
 ###
 
 > ### Eckdaten
 >
-> - XY Flotten
-> - YZ Fahrzeuge
-> - ZZ Fahrer:innen
-> - 1000 Garagen
+> - 16 Flotten
+> - 1244 Fahrzeuge
+> - 911 Fahrer:innen
+> - 203 Garagen
 >
-> <p style="font-size:small">Stand Oktober 2023</p>
+>  <p  style="font-size:small">Stand Oktober 2023</p>
 
 ## Vorgehen
 
-Seit 2021 darf die Apptiva AG FleetPoint, bzw. hostettler autotechnik AG mit der Entwicklung des Tools unterstützen. Bei der Entwicklung von Fleet Assistant gehen wir wie gewohnt agil vor. Die Anforderungen werden zusammen erarbeitet, zum Beispiel mit der [Storymap Methode](https://apptiva.ch/mehr-ueberblick-mit-storymap/) Danach erstellen wir als Team Wireframes mit Balsamiq und besprechen diese, bevor wir uns an die Umsetzung machen. Dabei ist uns besonders wichtig, dass wir Feedback schnell einfliessen lassen können.
+Seit 2021 darf die Apptiva AG FleetPoint, bzw. hostettler autotechnik AG mit der Entwicklung des Tools unterstützen. Bei der Entwicklung von Fleet Assistant gehen wir wie gewohnt agil vor. Die Anforderungen werden zusammen erarbeitet, zum Beispiel mit der [Storymap Methode](https://apptiva.ch/mehr-ueberblick-mit-storymap/). Danach erstellen wir als Team Wireframes mit Balsamiq und besprechen diese, bevor wir uns an die Umsetzung machen. Dabei ist uns besonders wichtig, dass wir Feedback schnell einfliessen lassen können.
