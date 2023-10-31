@@ -1,9 +1,9 @@
 ---
-title: Ein Tag voller Teamgeist und ein Hauch von Curling-Wahnsinn - Unser Langenthal-Abenteuer
+title: Ein Tag voller Teamgeist und ein Hauch von Curling-Wahnsinn
 slug: apptiva-team-event-langenthal
 templateKey: blog-post
-image: curling.jpg
-imageCaption: Das Curling-Team der Apptiva 🥌
+image: curling_halle.jpg
+imageCaption: Apptiva beim Curling
 date: 2023-10-31
 author: Sarah Schneider
 description: >-
@@ -16,9 +16,11 @@ categories:
 
 Unser Abenteuer begann in Sempach, wo wir uns alle am Bahnhof trafen. Natürlich war es unmöglich, das gesamte Team in ein Auto zu quetschen, also teilten wir uns auf und machten uns auf den Weg zum Haus unseres geschätzten Kollegen Roman. Dort erwarteten uns Kaffee und verlockender Kuchen, um unsere Energiereserven aufzutanken. Die Haustour und die Besichtigung der Wärmepumpe sowie des ergonomisch eingerichteten Arbeitsplatzes von Roman luden zum Erzählen und Verweilen ein.
 
-## Vom Anfänger zum Curling-Champion
+## Vom Anfänger zum Curling-Champion 🥌
 
 Nach diesen spannenden Einblicken machten wir uns auf den Weg zur Curlinghalle. Hier erwartete uns eine unterhaltsame Einführung in die Welt des Curlings, bei dem Teamwork und Präzision gefragt waren. Das Beste daran: Im Curling gibt es keine Verlierer, da die Gewinner die erste Runde beim Apéro spendieren.
+
+![Apptiva Curling Team](./curling.jpg 'Apptiva Curling Team')
 
 ## Eine Stadtführung in Langenthal - Romans Insider-Wissen
 
