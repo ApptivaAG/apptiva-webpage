@@ -5,7 +5,7 @@ templateKey: referenz
 image: energierechner.png
 order: 70
 description: >-
-  Der Energierechner von NNZ hilft, den Energieverbrauch zu analysieren, zu optimieren und zu vergleichen. 
+  Der Energierechner von NNZ (Nachhaltigkeitsnetzwerk Zentralschweiz) hilft, den Energieverbrauch zu analysieren, optimieren und vergleichen.
 link: https://www.mein-verbrauch.ch
 bulletGroups:
   - title: Vorteile einer Apptiva-Lösung
@@ -13,7 +13,7 @@ bulletGroups:
     bulletList:
       - icon: users
         title: Kunde
-        text: NNZ Nachhaltigkeitsnetzwerk Zentralschweiz.
+        text: NNZ Nachhaltigkeitsnetzwerk Zentralschweiz
       - icon: tasks
         title: Aufgaben
         text: Beratung, Konzeption, UX Design, Entwicklung, Betrieb
@@ -37,7 +37,7 @@ contactPerson:
 
 ## Der Rechner
 
-Der Energierechner von mein-verbrauch.ch ist ein Tool, das hilft, den persönlichen Energieverbrauch zu analysieren und zu optimieren. Mit dem Energierechner kann man:
+Der Energierechner von <a href="https://www.mein-verbrauch.ch/" target="_blank" rel="noopener noreferrer">mein-verbrauch.ch</a> ist ein Tool, das hilft, den persönlichen Energieverbrauch zu analysieren und zu optimieren. Mit dem Energierechner kann man:
 
 - Den gefühlten Energieverbrauch in fünf Kategorien (Wohnen, Mobilität, Ernährung, Konsum und Freizeit) selbst einschätzen.
 - Den echten Energieverbrauch anhand von detaillierten Fragen ermitteln und mit dem Durchschnitt der Schweizer Bevölkerung vergleichen.
