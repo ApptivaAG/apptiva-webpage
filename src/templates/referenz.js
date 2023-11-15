@@ -21,6 +21,9 @@ const apptivaServiceList = {
   'web-apps': {
     title: 'Web App Entwicklung',
   },
+  'pwa-apps': {
+    title: 'PWA Entwicklung',
+  },
   chatbots: {
     title: 'Chatbots',
   },
