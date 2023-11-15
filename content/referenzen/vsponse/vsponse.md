@@ -5,7 +5,7 @@ templateKey: referenz
 image: video-answer.png
 order: 65
 description: >-
-  Für unseren Kunden R-Squared durften wir eine Plattform für Bewerbungsvideos entwickeln. Mit dieser möchte R-Squared noch persönlichere Bewerbungsunterlagen zur Verfügung stellen. 
+  Für unseren Kunden R-Squared durften wir eine Plattform für Bewerbungsvideos entwickeln. Mit dieser möchte R-Squared noch persönlichere Bewerbungsunterlagen zur Verfügung stellen.
 link: https://vsponse.ch/
 bulletGroups:
   - title: Vorteile einer Apptiva-Lösung
@@ -35,7 +35,6 @@ contactPerson:
   text2: Kontaktieren Sie uns!
 ---
 
-
 ## Über die Plattform
 
 R-Squared bietet mit V-Sponse eine Plattform an, die es potentiellen Bewerbern ermöglicht, Video-Antworten an Auftraggeber zu senden. Im Rahmen des Projekts konnten wir unsere Kenntnisse im Bereich der Videoaufzeichnung vertiefen. Das Projekt stellte zudem hohe Anforderungen an den Datenschutz.
@@ -44,7 +43,7 @@ R-Squared bietet mit V-Sponse eine Plattform an, die es potentiellen Bewerbern e
 
 Die beiden Hauptkomponenten waren die Videoaufnahme und die Videobearbeitung. Hierfür haben wir den Service von [Cloudinary](https://cloudinary.com) genutzt.
 
-Um den Anforderungen an die Sicherheit im Umgang mit personenbezogenen Daten gerecht zu werden haben wir folgende Massnahmen getroffen:
+Um den Anforderungen an die Sicherheit im Umgang mit personenbezogenen Daten gerecht zu werden, haben wir folgende Massnahmen getroffen:
 
 1. Die HRM-Mitarbeitenden müssen sich per Zwei-Faktor-Authentifizierung (2FA) anmelden.
 2. Videos können nicht einfach heruntergeladen und gespeichert werden.
