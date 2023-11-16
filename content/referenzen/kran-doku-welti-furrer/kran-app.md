@@ -16,7 +16,7 @@ bulletGroups:
         text: Welti-Furrer
       - icon: tasks
         title: Aufgaben
-        text: Beratung, Konzeption, UX Design, Entwicklung, Betrieb
+        text: Beratung, Konzeption, UX Design, Entwicklung
       - icon: tools
         title: Technologien
         text: PWA, React
@@ -36,5 +36,12 @@ contactPerson:
   text2: Kontaktieren Sie uns!
 ---
 
+## Kran-Dokumentation immer zur Hand
 
-Mit der PWA App von [Welti-Furrer](https://www.welti-furrer.ch/) kann die Dokumentation der Geräte schnell und einfach gefunden werden. Die PWA finden Sie unter <https://kranapp.welti-furrer.ch/>.
+Mit der PWA (Progressive Web App) von [Welti-Furrer](https://www.welti-furrer.ch/) kann die Dokumentation aller Einsatzmittel der Schwergutlogistik schnell und einfach gefunden werden.
+
+## Offline-Fähigkeit
+
+Nicht alle Tablets haben eine SIM-Karte integriert und nicht alle Keller haben ein gutes WLAN. Darum ist die App dank der PWA-Technologie auch offline nutzbar.
+
+Die App finden Sie unter <https://kranapp.welti-furrer.ch/>.
