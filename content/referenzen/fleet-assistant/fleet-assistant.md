@@ -6,7 +6,7 @@ image: fleet-assistant.png
 imageCaption: Fleet Assistant
 order: 10
 description: >-
-  Fleet Assistant bietet ditigale Unterstützung in der eiffizienten und standardisierten Abwicklung des Fahrzeugunterhalts.
+  Seit 2021 unterstützen wir FleetPoint, bzw. hostettler autotechnik AG bei der Entwicklung ihrer Webapplikation. Fleet Assistant bietet ditigale Unterstützung in der eiffizienten und standardisierten Abwicklung des Fahrzeugunterhalts.
 bulletGroups:
   - title: Vorteile einer Apptiva-Lösung
     description: Wir unterstützen Sie bei der Erreichung Ihrer Ziele und arbeiten eng und direkt mit Ihnen zusammen.
@@ -62,4 +62,4 @@ Fleet Assistant bietet ditigale Unterstützung in der eiffizienten und standardi
 
 ## Vorgehen
 
-Seit 2021 darf die Apptiva AG FleetPoint, bzw. hostettler autotechnik AG mit der Entwicklung des Tools unterstützen. Bei der Entwicklung von Fleet Assistant gehen wir wie gewohnt agil vor. Die Anforderungen werden zusammen erarbeitet, zum Beispiel mit der [Storymap Methode](https://apptiva.ch/mehr-ueberblick-mit-storymap/). Danach erstellen wir als Team Wireframes mit Balsamiq und besprechen diese, bevor wir uns an die Umsetzung machen. Dabei ist uns besonders wichtig, dass wir Feedback schnell einfliessen lassen können.
+Bei der Entwicklung von Fleet Assistant gehen wir wie gewohnt agil vor. Die Anforderungen werden zusammen erarbeitet, zum Beispiel mit der [Storymap Methode](https://apptiva.ch/mehr-ueberblick-mit-storymap/). Danach erstellen wir als Team Wireframes mit Balsamiq und besprechen diese, bevor wir uns an die Umsetzung machen. Dabei ist uns besonders wichtig, dass wir Feedback schnell einfliessen lassen können.
