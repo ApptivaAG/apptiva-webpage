@@ -4,8 +4,7 @@ slug: apps-erp-api-schnittstellen-verbinden
 templateKey: blog-post
 image: apps-erp-api-schnittstellen.jpg
 imageCaption: Markus Winkler auf Unsplash
-  
-date: 2023-11-27
+date: 2023-11-30
 author: Philip Schönholzer
 description: >-
   Im digitalen Zeitalter ist die Integration von Apps mit ERP-Systemen über APIs für Unternehmen von entscheidender Bedeutung. Dieser Beitrag erläutert die Bedeutung dieser Integration für effiziente Geschäftsprozesse.
