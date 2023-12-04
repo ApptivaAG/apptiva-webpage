@@ -49,16 +49,14 @@ Fleet Assistant bietet ditigale Unterstützung in der eiffizienten und standardi
 
 - **Lagerung Reifern/Räder:** Der Verlauf der Radwechsel, sowie Infos über neue Räder / Reifen werden direkt beim Fahrzeug gespeichert.
 
-###
+## Eckdaten
 
-> ### Eckdaten
->
-> - 16 Flotten
-> - 1244 Fahrzeuge
-> - 911 Fahrer:innen
-> - 203 Garagen
->
->  <p  style="font-size:small">Stand Oktober 2023</p>
+- 16 Flotten
+- 1244 Fahrzeuge
+- 911 Fahrer:innen
+- 203 Garagen
+
+ <p  style="font-size:small">Stand Oktober 2023</p>
 
 ## Vorgehen
 
