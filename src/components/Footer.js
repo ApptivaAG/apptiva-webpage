@@ -156,6 +156,9 @@ const Footer = () => (
               <Link to="/jobs/">Jobs</Link>
             </li>
             <li>
+              <Link to="/blog/">Blog</Link>
+            </li>
+            <li>
               <Link to={`/${knowledgeRoute}/`}>Apptiva lernt</Link>
             </li>
             <li>
