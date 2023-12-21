@@ -15,7 +15,7 @@ categories:
 Die Suva-App Slope Track wurde in Zusammenarbeit mit Apptiva für die Skisaison 2023/2024 aktualisiert. Dieses Update bringt einige neue Funktionen und Verbesserungen mit sich, die das Schneesporterlebnis für die Nutzer:innen optimieren. Nachfolgend ein Überblick über die wichtigsten Neuerungen.
 
 1. **Fit-Programm mit Loïc Meillard:**
-Ein neues Fitnessprogramm mit dem Schweizer Skirennläufer Loïc Meillard bietet den Nutzern Tipps und Übungen. Unabhängig von der Erfahrungsebene erhalten Schneesportler:innen praktische Anleitungen, um ihre körperliche Verfassung für die Pisten zu verbessern.
+Ein neues Fitnessprogramm mit dem Schweizer Skirennfahrer Loïc Meillard bietet den Nutzern Tipps und Übungen. Unabhängig von der Erfahrungsebene erhalten Schneesportler:innen praktische Anleitungen, um ihre körperliche Verfassung für die Pisten zu verbessern.
 
 2. **Selfie mit Loïc:**
 Die Möglichkeit, ein Selfie mit Loïc Meillard zu machen, ist eine unterhaltsame Ergänzung. Schneesportler:innen können ihre Erlebnisse festhalten und sie mit anderen teilen. Es handelt sich dabei um eine coole soziale Funktion, die dem Nutzer:innen die Gelegenheit gibt, sich mit einem bekannten Skirennfahrer zu präsentieren.
