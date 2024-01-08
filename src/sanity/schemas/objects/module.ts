@@ -23,7 +23,7 @@ export default defineType({
     defineField({
       name: 'content',
       title: 'Inhalt',
-      type: 'markdown',
+      type: 'text', // TODO: markdown
     }),
   ],
 })

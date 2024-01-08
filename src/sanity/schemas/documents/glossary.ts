@@ -1,23 +1,28 @@
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
-  name: 'service-page',
-  title: 'Service Pages',
+  name: 'glossary',
+  title: 'Glossar',
   type: 'document',
   fields: [
     defineField({
-      name: 'header',
-      title: 'Header',
-      type: 'header',
+      name: 'title',
+      title: 'Titel',
+      type: 'string',
     }),
     defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'header.title',
+        source: 'question',
         maxLength: 96,
       },
+    }),
+    defineField({
+      name: 'summary',
+      title: 'Zusammenfassung',
+      type: 'text',
     }),
     defineField({
       name: 'modules',
@@ -25,17 +30,11 @@ export default defineType({
       type: 'array',
       of: [{ type: 'module' }],
     }),
-  ],
-  orderings: [
-    {
-      title: 'Alphabet',
-      name: 'alphabet',
-      by: [
-        {
-          field: 'header',
-          direction: 'asc',
-        },
-      ],
-    },
+    defineField({
+      name: 'tags',
+      title: 'Tags',
+      type: 'array',
+      of: [{ type: 'string' }],
+    }),
   ],
 })
