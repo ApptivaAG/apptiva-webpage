@@ -1,38 +1,29 @@
-[build]
-  publish = "public"
-  command = "pnpm run build"
-[build.environment]
-  YARN_VERSION = "1.3.2"
-  YARN_FLAGS = "--no-ignore-optional"
 
 # Redirect for Google Ads in case that someone enters the URL written in the ad
 [[redirects]]
-  from = "/entwicklung"
-  to = "/individuelle-entwicklung/"
+from = "/entwicklung"
+to = "/individuelle-entwicklung/"
 
 [[redirects]]
-  from = "/#team"
-  to = "/ueber-uns#team"
+from = "/#team"
+to = "/ueber-uns#team"
 
 [[redirects]]
-  from = "/#blog"
-  to = "/blog/"
+from = "/#blog"
+to = "/blog/"
 
 [[redirects]]
-  from = "/vorgehensweise/"
-  to = "/vorgehen/"
+from = "/vorgehensweise/"
+to = "/vorgehen/"
 
 [[redirects]]
-  from = "/#kontakt"
-  to = "/kontakt/"
+from = "/#kontakt"
+to = "/kontakt/"
 
 [[redirects]]
-  from = "/gaston"
-  to = "/payflink/"
+from = "/gaston"
+to = "/payflink/"
 
 [[redirects]]
-  from = "/app-entwickeln-schweiz"
-  to = "/app-erstellen-schweiz/"
-
-[[plugins]]
-package = "@netlify/plugin-gatsby"
+from = "/app-entwickeln-schweiz"
+to = "/app-erstellen-schweiz/"
