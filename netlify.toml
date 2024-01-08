@@ -1,9 +1,3 @@
-[build]
-publish = ".next"
-
-[[plugins]]
-package = "@netlify/plugin-nextjs"
-
 # Redirect for Google Ads in case that someone enters the URL written in the ad
 [[redirects]]
 from = "/entwicklung"
