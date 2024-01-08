@@ -11,12 +11,14 @@
   "dependencies": {
     "@sanity/image-url": "1",
     "@sanity/vision": "3",
+    "easymde": "2",
     "next": "14.0.4",
     "next-sanity": "7",
     "react": "^18",
     "react-dom": "^18",
     "sanity": "^3.23.4",
-    "styled-components": "6"
+    "sanity-plugin-markdown": "^4.1.0",
+    "styled-components": "^5.2"
   },
   "devDependencies": {
     "@types/node": "^20",
