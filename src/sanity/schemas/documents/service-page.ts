@@ -32,10 +32,18 @@ export default defineType({
       name: 'alphabet',
       by: [
         {
-          field: 'header',
+          field: 'header.title',
           direction: 'asc',
         },
       ],
     },
   ],
+  preview: {
+    select: {
+      title: 'header.title',
+    },
+    prepare(selection) {
+      return { title: selection.title }
+    },
+  },
 })
