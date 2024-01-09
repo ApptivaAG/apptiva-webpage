@@ -9,7 +9,7 @@ export default async function Home() {
   const faqs = await sanityFetch<SanityDocument[]>({ query: faqsQuery })
 
   return (
-    <div>
+    <div className="container mx-auto px-4">
       <h1>Apptiva</h1>
       <ul>
         {faqs.map((faq) => (
