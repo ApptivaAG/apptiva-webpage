@@ -22,7 +22,12 @@ export default defineType({
     defineField({
       name: 'summary',
       title: 'Zusammenfassung',
-      type: 'text',
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+        },
+      ],
     }),
     defineField({
       name: 'modules',

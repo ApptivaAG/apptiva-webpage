@@ -31,7 +31,12 @@ export default defineType({
     defineField({
       name: 'content',
       title: 'Inhalt',
-      type: 'text', // TODO: markdown
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+        },
+      ],
     }),
   ],
 })
