@@ -33,7 +33,7 @@ Dabei ist eine der grössten Herausforderungen wohl die Navigation zwischen mehr
 > ### Warnung
 >
 > Der Webview-Tag von Electron basiert auf dem Webview von Chromium, dessen Architektur dramatischen Veränderungen unterworfen ist. Dies wirkt sich auf die Stabilität der Webansichten aus, einschliesslich Rendering, Navigation und Ereignis-Routing. Wir empfehlen derzeit, das Webview-Tag nicht zu verwenden und Alternativen wie iframe, Electron's BrowserView oder eine Architektur in Betracht zu ziehen, die ganz auf eingebettete Inhalte verzichtet.
-> <br></br>
+> <br />
 > Quelle: [electronjs.org/Docs/API/Webview-Tag](https://www.electronjs.org/docs/api/webview-tag)
 
 Aufgrund dieser aktuellen Entwicklungen müsste man eigentlich auf Webview in Electron Apps verzichten. Allerdings haben iframe oder BrowserView ebenfalls ihre Nachteile, die dann wieder eher für den Einsatz von Webview sprechen. Auf diese Vor- und Nachteile möchte ich nun kurz eingehen.
