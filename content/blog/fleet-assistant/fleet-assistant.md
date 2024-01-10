@@ -1,5 +1,6 @@
 ---
 title: Fleet Assistant für hostettler autotechnik ag
+source: apptiva
 slug: fleet-assistant-hostettler-autotechnik-ag
 templateKey: blog-post
 image: fleet-assistant-header.png

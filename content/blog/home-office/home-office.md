@@ -1,5 +1,6 @@
 ---
 title: 1 Jahr nicht im Büro
+source: apptiva
 slug: 1-jahr-home-office--traum-oder-albtraum
 templateKey: blog-post
 image: team-video-call.jpg

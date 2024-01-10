@@ -1,5 +1,6 @@
 ---
 title: "Suva Slope Track App Update 23/24: Neue Funktionen und Verbesserungen"
+source: apptiva
 slug: suva-slope-track-app-update-23-24
 templateKey: blog-post
 image: slope-track-app-update-23-24.png

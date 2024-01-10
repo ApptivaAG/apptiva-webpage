@@ -1,5 +1,6 @@
 ---
 title: 'Unsere Erfahrungen mit PostFinance E-Payment'
+source: apptiva
 slug: unsere-erfahrungen-mit-postfinance-e-payment-service
 templateKey: blog-post
 image: postfinance-e-payment.png

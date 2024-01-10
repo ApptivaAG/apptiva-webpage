@@ -1,5 +1,6 @@
 ---
 title: Unsere kleine Werkausstellung
+source: apptiva
 slug: werkausstellung
 templateKey: blog-post
 image: werkausstellung.jpg

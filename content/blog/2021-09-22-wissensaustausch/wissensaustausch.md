@@ -1,5 +1,6 @@
 ---
 title: So werden wir jede Woche etwas bessere Entwickler:innen
+source: apptiva
 slug: so-werden-wir-bessere-entwicklerinnen
 templateKey: blog-post
 image: light-bulbs.jpg

@@ -1,5 +1,6 @@
 ---
 title: 'Chatbot entwickeln mit React, Redux, Wit.ai und Slack'
+source: apptiva
 slug: chatbot-entwickeln-mit-react-redux-wit-ai-und-slack-teil-1
 templateKey: blog-post
 image: img/roboter.jpg

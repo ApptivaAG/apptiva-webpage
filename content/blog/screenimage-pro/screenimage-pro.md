@@ -1,5 +1,6 @@
 ---
 title: 'Screenimage lanciert neue Digital Signage Software'
+source: apptiva
 slug: screenimage-pro
 templateKey: blog-post
 image: screenimage-board.png

@@ -1,5 +1,6 @@
 ---
 title: Suva Schneesport-Check
+source: apptiva
 slug: suva-schneesport-check
 templateKey: blog-post
 image: img/schneesport-check.jpg

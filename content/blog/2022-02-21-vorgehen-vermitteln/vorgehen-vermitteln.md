@@ -1,5 +1,6 @@
 ---
 title: So lernen Kunden unser Vorgehen kennen und schätzen
+source: apptiva
 slug: so-lernen-kunden-unser-vorgehen-software-entwicklung-kennen-und-schaetzen
 templateKey: blog-post
 image: hero-vorgehen.jpg

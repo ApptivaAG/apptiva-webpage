@@ -1,5 +1,6 @@
 ---
 title: Der Digitale Wandel
+source: apptiva
 slug: der-digitale-wandel
 templateKey: blog-post
 image: img/stonehenge-357227_1280.jpg

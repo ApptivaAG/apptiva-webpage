@@ -1,5 +1,6 @@
 ---
 title: Apptiva hat gezügelt
+source: apptiva
 slug: apptiva-neuer-standort
 templateKey: blog-post
 image: gebaeude.jpg

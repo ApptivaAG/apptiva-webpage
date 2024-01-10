@@ -1,5 +1,6 @@
 ---
 title: 'App, Web App oder gar PWA?'
+source: apptiva
 slug: vor-und-nachteile-apple-ios-google-android-app-webapp-pwa
 templateKey: blog-post
 image: native-app-vs-web-app.png

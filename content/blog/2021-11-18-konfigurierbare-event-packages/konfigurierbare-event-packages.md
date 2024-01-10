@@ -1,5 +1,6 @@
 ---
 title: Konfigurierbare Event-Angebote verkaufen und per QR-Code einlösen
+source: apptiva
 slug: konfigurierbare-event-angebote-verkaufen-und-per-qr-code-einloesen
 templateKey: blog-post
 image: hero.png

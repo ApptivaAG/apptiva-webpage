@@ -1,5 +1,6 @@
 ---
 title: 5 Tipps für erfolgreiche Workation
+source: apptiva
 slug: 5-tipps-für-erfolgreiche-workation
 templateKey: blog-post
 image: workation.jpg

@@ -1,5 +1,6 @@
 ---
 title: Entwicklung von Produkt Konfiguratoren
+source: apptiva
 slug: entwicklung-produkt-konfiguratoren
 templateKey: blog-post
 image: entwicklung-produkt-konfiguratoren.png

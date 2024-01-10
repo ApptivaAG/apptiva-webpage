@@ -1,5 +1,6 @@
 ---
 title: Ein Tag voller Teamgeist und ein Hauch von Curling-Wahnsinn
+source: apptiva
 slug: apptiva-team-event-langenthal
 templateKey: blog-post
 image: curling_halle.jpg

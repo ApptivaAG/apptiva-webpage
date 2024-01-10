@@ -1,5 +1,6 @@
 ---
 title: Eine moderne UI-Architektur
+source: apptiva
 slug: eine-moderne-ui-architektur
 templateKey: blog-post
 image: img/netz.jpg

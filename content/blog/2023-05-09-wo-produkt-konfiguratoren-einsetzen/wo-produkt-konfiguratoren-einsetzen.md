@@ -1,5 +1,6 @@
 ---
 title: Wo und wofür Produkt-Konfiguratoren einsetzen
+source: apptiva
 slug: wo-produkt-konfiguratoren-einsetzen
 templateKey: blog-post
 image: konfiguriertes-produkt.jpg

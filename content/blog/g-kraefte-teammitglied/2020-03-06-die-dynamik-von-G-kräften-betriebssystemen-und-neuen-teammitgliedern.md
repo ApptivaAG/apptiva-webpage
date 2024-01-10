@@ -1,5 +1,6 @@
 ---
 title: Die Dynamik von G-Kräften, Betriebssystemen und neuen Teammitgliedern
+source: apptiva
 slug: die-dynamik-von-g-kraeften-betriebssystemen-und-neuen-teammitgliedern
 templateKey: blog-post
 image: ./renato-snowboarding.jpg

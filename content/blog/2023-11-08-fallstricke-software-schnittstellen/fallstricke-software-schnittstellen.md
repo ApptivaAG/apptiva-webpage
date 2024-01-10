@@ -1,5 +1,6 @@
 ---
 title: Die typischen Fallstricke bei der Implementierung von Software-Schnittstellen
+source: apptiva
 slug: fallstricke-software-schnittstellen
 templateKey: blog-post
 image: schnittstellen.jpg

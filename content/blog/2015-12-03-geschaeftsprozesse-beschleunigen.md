@@ -1,5 +1,6 @@
 ---
 title: Geschäftsprozesse beschleunigen
+source: apptiva
 slug: geschaeftsprozesse-beschleunigen
 templateKey: blog-post
 image: img/beschleunigen.jpg

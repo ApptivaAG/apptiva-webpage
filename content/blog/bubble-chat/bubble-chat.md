@@ -1,5 +1,6 @@
 ---
 title: Bubble Chat - Managing Chatbot Content
+source: apptiva
 slug: bubblechat
 templateKey: blog-post
 image: bubble-chat.png

@@ -1,5 +1,6 @@
 ---
 title: Produktkonfiguratoren in bestehende Webseiten und Webshops integrieren
+source: apptiva
 slug: produktkonfiguratoren-bestehende-webshops-integrieren
 templateKey: blog-post
 image: zipper.jpg

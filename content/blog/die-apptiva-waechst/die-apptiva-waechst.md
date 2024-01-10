@@ -1,5 +1,6 @@
 ---
 title: Die Apptiva wächst
+source: apptiva
 slug: die-apptiva-waechst
 templateKey: blog-post
 image: renato-patrik.jpg

@@ -1,5 +1,6 @@
 ---
 title: Qualitätsziele
+source: apptiva
 slug: qualitaetsziele
 templateKey: blog-post
 image: img/qualitaetsziele-a4.png

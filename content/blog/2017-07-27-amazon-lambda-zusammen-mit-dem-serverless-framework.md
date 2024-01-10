@@ -1,5 +1,6 @@
 ---
 title: Amazon Lambda zusammen mit dem Serverless Framework
+source: apptiva
 slug: amazon-lambda-zusammen-mit-dem-serverless-framework
 templateKey: blog-post
 image: img/serverless-application-development.jpg

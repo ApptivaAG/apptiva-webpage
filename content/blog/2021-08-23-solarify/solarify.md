@@ -1,5 +1,6 @@
 ---
 title: 'Unsere eigenen Solarpanels'
+source: apptiva
 slug: solarify
 templateKey: blog-post
 image: solar-panels-wikipedia.jpg

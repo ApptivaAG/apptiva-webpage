@@ -1,5 +1,6 @@
 ---
 title: 'Der neue Vivanco B2B Webshop'
+source: apptiva
 slug: neuer-vivanco-webshop
 templateKey: blog-post
 image: screenshot.png

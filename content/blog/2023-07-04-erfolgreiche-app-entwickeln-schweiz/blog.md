@@ -1,5 +1,6 @@
 ---
 title: Wie Sie eine erfolgreiche App entwickeln
+source: apptiva
 titleTag: 'App erstellen: Leitfaden & Tipps'
 slug: app-erstellen-schweiz
 templateKey: blog-post

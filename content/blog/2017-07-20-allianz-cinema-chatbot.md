@@ -1,5 +1,6 @@
 ---
 title: Allianz Cinema Chatbot
+source: apptiva
 slug: allianz-cinema-chatbot
 templateKey: blog-post
 image: img/allianz-cinema-bot.png

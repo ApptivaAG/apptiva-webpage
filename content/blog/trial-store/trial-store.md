@@ -1,5 +1,6 @@
 ---
 title: Trial Store - Globus Innovationsprojekt
+source: apptiva
 slug: trial-store
 templateKey: blog-post
 image: trial-store-titel.png

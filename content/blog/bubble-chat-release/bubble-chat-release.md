@@ -1,5 +1,6 @@
 ---
 title: Bubble Chat ist da!
+source: apptiva
 slug: bubblechat-ist-da
 templateKey: blog-post
 image: bubble-chat-manage.png

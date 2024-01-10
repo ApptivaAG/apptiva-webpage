@@ -1,5 +1,6 @@
 ---
 title: Gaston ist jetzt Payflink
+source: apptiva
 slug: gaston-ist-jetzt-payflink
 templateKey: blog-post
 image: gaston-now-payflink.png

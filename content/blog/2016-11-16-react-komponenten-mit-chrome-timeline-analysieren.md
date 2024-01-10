@@ -1,5 +1,6 @@
 ---
 title: React Komponenten mit Chrome Timeline analysieren
+source: apptiva
 slug: react-komponenten-mit-chrome-timeline-analysieren
 templateKey: blog-post
 image: ./img/profiling.png

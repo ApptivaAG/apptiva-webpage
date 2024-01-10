@@ -1,5 +1,6 @@
 ---
 title: Datenmodell eines Chatbots testen
+source: apptiva
 slug: datenmodell-eines-chatbots-testen
 templateKey: blog-post
 image: similarity_chart.png

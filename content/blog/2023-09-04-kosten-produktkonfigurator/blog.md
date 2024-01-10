@@ -1,5 +1,6 @@
 ---
 title: Wie teuer ist ein Produktkonfigurator?
+source: apptiva
 slug: wie-teuer-ist-ein-produktkonfigurator
 templateKey: blog-post
 image: money-tree.jpg

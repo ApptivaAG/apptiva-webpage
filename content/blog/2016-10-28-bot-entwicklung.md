@@ -1,5 +1,6 @@
 ---
 title: Bot Entwicklung in der Schweiz
+source: apptiva
 slug: bot-entwicklung
 templateKey: blog-post
 image: img/bot-entwicklung.png

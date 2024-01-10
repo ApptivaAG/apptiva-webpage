@@ -1,5 +1,6 @@
 ---
 title: "Die Kunst der Integration: Apps mit ERPs via API-Schnittstellen verbinden"
+source: apptiva
 slug: apps-erp-api-schnittstellen-verbinden
 templateKey: blog-post
 image: apps-erp-api-schnittstellen.jpg

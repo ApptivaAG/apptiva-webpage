@@ -1,5 +1,6 @@
 ---
 title: Apptiva am Abgrund
+source: apptiva
 slug: apptiva-team-event-mai-22
 templateKey: blog-post
 image: the-edge.jpg

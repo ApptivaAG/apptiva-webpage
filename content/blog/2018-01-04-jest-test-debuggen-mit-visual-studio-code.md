@@ -1,5 +1,6 @@
 ---
 title: Jest Test debuggen mit Visual Studio Code
+source: apptiva
 slug: jest-test-debuggen-mit-visual-studio-code
 templateKey: blog-post
 image: img/Jest-Test-debuggen-mit-Visual-Studio-Code.png

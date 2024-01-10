@@ -1,5 +1,6 @@
 ---
 title: Dies macht einen erfolgreichen Produkt-Konfigurator aus
+source: apptiva
 slug: dies-macht-einen-erfolgreichen-produkt-konfigurator-aus
 templateKey: blog-post
 image: screws.jpg

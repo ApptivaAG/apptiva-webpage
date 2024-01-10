@@ -1,5 +1,6 @@
 ---
 title: Mit einem Chatbot rapportieren
+source: apptiva
 slug: mit-einem-chatbot-rapportieren
 templateKey: blog-post
 image: chefbot.png

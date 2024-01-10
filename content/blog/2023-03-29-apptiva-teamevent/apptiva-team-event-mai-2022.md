@@ -1,5 +1,6 @@
 ---
 title: Kampf um den "Throne of Games"
+source: apptiva
 slug: apptiva-team-event-maerz-23
 templateKey: blog-post
 image: gameorama.jpg

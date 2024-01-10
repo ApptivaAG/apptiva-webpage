@@ -1,5 +1,6 @@
 ---
 title: "App Entwicklung in der Schweiz: Vorteile gegenüber Offshore"
+source: apptiva
 slug: app-entwicklung-in-der-schweiz-vorteile-gegenueber-offshore
 templateKey: blog-post
 image: luzern.jpg

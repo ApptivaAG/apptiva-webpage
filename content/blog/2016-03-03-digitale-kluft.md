@@ -1,5 +1,6 @@
 ---
 title: Die Digitale Kluft
+source: apptiva
 slug: digitale-kluft
 templateKey: blog-post
 image: img/digitale-kluft.png

@@ -1,5 +1,6 @@
 ---
 title: Softwareentwicklung unter NixOS - Mein Erfahrungsbericht
+source: apptiva
 slug: softwareentwicklung-unter-nixos
 templateKey: blog-post
 image: ./image.jpg

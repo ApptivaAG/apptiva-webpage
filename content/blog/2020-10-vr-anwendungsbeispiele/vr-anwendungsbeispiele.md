@@ -1,5 +1,6 @@
 ---
 title: 'Anwendungs­beispiele für VR und AR'
+source: apptiva
 slug: vr-anwendungsbeispiele
 templateKey: blog-post
 image: vr-in-action.jpg

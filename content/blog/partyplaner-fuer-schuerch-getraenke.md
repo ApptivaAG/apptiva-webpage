@@ -1,5 +1,6 @@
 ---
 title: Partyplaner für Schürch Getränke
+source: apptiva
 slug: partyplaner-fuer-schuerch-getraenke
 templateKey: blog-post
 image: ./img/partyplaner-hero.png

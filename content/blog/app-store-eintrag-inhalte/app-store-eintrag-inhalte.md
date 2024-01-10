@@ -1,5 +1,6 @@
 ---
 title: 'App Store Einträge: Alle Details auf einen Blick'
+source: apptiva
 slug: app-store-eintrag-details-ueberblick
 templateKey: blog-post
 image: store-logos.png

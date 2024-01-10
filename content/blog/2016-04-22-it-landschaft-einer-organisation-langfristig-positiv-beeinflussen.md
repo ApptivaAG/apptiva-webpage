@@ -1,5 +1,6 @@
 ---
 title: IT Landschaft einer Organisation langfristig positiv beeinflussen
+source: apptiva
 slug: it-landschaft-einer-organisation-langfristig-positiv-beeinflussen
 templateKey: blog-post
 image: img/landschaft.jpg
