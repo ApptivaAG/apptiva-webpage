@@ -1,6 +1,7 @@
 import { cache } from 'react'
 import path from 'path'
 import { promises as fs } from 'fs'
+import { Code } from 'bright'
 import remarkGfm from 'remark-gfm'
 import remarkUnwrapImages from 'remark-unwrap-images'
 import remarkEmbedder from '@remark-embedder/core'
@@ -44,6 +45,7 @@ export const getPosts = cache(async () => {
       source: data,
       components: {
         img: MdxImage(blogPostAssetsDirectory),
+        pre: Code,
       },
       options: {
         mdxOptions: {

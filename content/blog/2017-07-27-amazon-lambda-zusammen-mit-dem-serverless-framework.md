@@ -15,25 +15,33 @@ categories:
 
 In unserer [Botfabrik](https://www.botfabrik.ch) haben wir diverse Bots entwickelt, die nur bei bestimmten Ereignissen ihre Arbeit verrichten. Solche Ereignisse können z.B. das Aufrufen eines Webhooks aus einer Instant-Messaging-Anwendung heraus sein (z.B. Facebook Messenger oder Slack), oder aber auch fix hinterlegte Intervalle (z.B. täglich um 18 Uhr, alle 5 Minuten, etc.). Für Funktionen die nur bei bestimmten Ereignissen ausgeführt werden müssen, eignet sich eine sogenannte "Serverless Applikation" bestens. In diesem Blogpost zeige anhand eines einfachen Beispiels wie eine solche Applikation implementiert werden kann.
 
-<h2>Einführung</h2>
+## Einführung
+
 AWS Lambda ist ein Managed Service für Serverless Applikation von Amazon. Als Anwender bezieht man diesen Dienst ohne sich um die Hardware oder das Betriebssystem kümmern zu müssen und man bezahlt nur die Zeitdauer in der eine Funktion ausgeführt wird. AWS Lambda lässt sich beliebig skalieren, sodass es sich für einfache Übungsbeispiele aber auch für echte Geschäftslösungen eignet.
 
 Das [Serverless Framework](https://serverless.com/) hilft einem beim Erstellen und Verwalten von Serverless Applikationen. Alle AWS- und Applikationseinstellungen werden in einer serverless.yml Datei vorgenommen und können daher in einem Source Code Verwaltungssystem versioniert abgelegt werden. Mithilfe des Kommandozeilenprogramms können Applikationen einfach packetiert und auf AWS deployed werden.
 
-<h2>Beispiel Applikation</h2>
+## Beispiel Applikation
+
 In diesem Beispiel erstellen wir eine einfache Lambda Funktion die jede Minute ausgeführt wird und eine Meldung ins Log schreibt. Diese Funktion deployen wir mit Hilfe des Serverless Frameworks auf AWS Lambda.
-<h3>Voraussetzungen</h3>
+
+### Voraussetzungen
+
 Damit dieses Beispiel funktioniert, musst du Node installiert haben (z.B. mit <code>brew install node</code>) und du musst einen Account bei Amazon Web Services haben.
-<h3>1. Serverless installieren</h3>
+
+### 1. Serverless installieren
+
 Das Serverless Framework ist ein NPM Modul. Du kannst es wie folgt installieren:
 
 ```bash
 npm install -g serverless
 ```
 
-<h3>2. Beispielprojekt</h3>
+### 2. Beispielprojekt
+
 Für unser Beispiel brauchst du zwei Dateien:
-<div><strong>handler.js: </strong>Diese Datei enhält den Lambda Code</div>
+
+<strong>handler.js: </strong>Diese Datei enhält den Lambda Code
 
 ```javascript
 'use strict';
@@ -89,7 +97,8 @@ In deiner Konsole musst du nun dem Serverless Framework den AWS API Key und das 
 serverless config credentials --provider aws --key DEIN_API_KEY --secret DEIN_SECRET
 ```
 
-<h3>4. Applikation deployen</h3>
+### 4. Applikation deployen
+
 Du kannst nun die Applikation mit folgendem Befehl deployen:
 
 ```bash
@@ -108,9 +117,10 @@ Falls du nur eine Änderung an der Funktion gemacht hast, kannst du diese Änder
 serverless deploy function -f cron
 ```
 
-<h2>Fazit</h2>
+## Fazit
+
 Meiner Meinung nach vereinfachen Serverless Applikationen die Entwicklung von kostgünstigen und skalierbaren Applikationen enorm. Als Softwareentwickler muss ich mich nicht um die Skalierbarkeit und Verfügbarkeit der Applikation kümmern. So glaube ich, dass wir in Zukunft immer mehr solche Applikationen antreffen werden.
 
 Folgende Präsentation von AWS gibt dir weitere Informationen zum Thema:
 
-<iframe src="https://www.slideshare.net/slideshow/embed_code/key/IXHTxRxxUtD61G" marginwidth="0" marginheight="0" scrolling="no" className="max-w-full" allowfullscreen="" height="356" frameborder="0" width="427"> </iframe>
+<iframe src="https://www.slideshare.net/slideshow/embed_code/key/IXHTxRxxUtD61G" scrolling="no" className="max-w-full" allowFullScreen height="356" frameBorder="0" width="427"> </iframe>

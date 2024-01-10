@@ -98,9 +98,7 @@ app.on(
 
 ## Fazit
 
-[[right]]
-|[[avatar]]
-||![Renato Wasescha](./renato-wasescha.jpg)
+![Renato Wasescha](./renato-wasescha.jpg)
 
 Electron ist ein sehr mächtiges Framework, das eine Plattform-unabhängige Programmierung zulässt. Ausserdem ist die Dokumentation einfach und übersichtlich, und lässt schnelle Ergebnisse zu. In Verbindung mit React und Typescript macht es richtig Spass, damit zu arbeiten.
 

@@ -14,11 +14,11 @@ categories:
 
 In unserem letzten Blogpost hat Philip über die [Lancierung der Botfabrik](/bot-entwicklung/) berichtet. Ich möchte in diesem Post etwas technischer werden und dir zeigen, wie wir unseren Chatbot Pit entwickelt haben. Pits Fähigkeiten kannst du übrigens hier ausprobieren: [www.botfabrik.ch](http://www.botfabrik.ch)
 
-<h2>Über Pit</h2>
+## Über Pit
 
 Pit ist ein Chatbot. Von Chatbots spricht man, wenn ein Bot, also ein Computerprogramm dass eine Aufgabe automatisiert und selbständig erledigt, mit einem Menschen eine Konversation führt. Chatbots laufen oft innerhalb von Webseiten oder Messaging-Anwendungen wie z.B. Facebook Chat oder Slack und vermitteln einem das Gefühl, mit einem richtigen Menschen zu chatten. Pit läuft innerhalb einer Webseite und hat die Aufgabe, Webseitenbesucher das Thema Bot näher zu bringen und sie bei Interesse ans Botfabrik Team weiterzuleiten; also ein Mischung von [FAQ](http://www.botfabrik.ch/bots/faq)- und [Akquise](http://www.botfabrik.ch/bots/akquise)-Bot.
 
-<h2>Der Client</h2>
+## Der Client
 
 Wenn immer möglich versuchen wir, unsere Lösungen als Webapplikationen zu implementieren. Im Falle eines Chatbots setzen wir auf Single-page Applikationen (SPA), da wir damit dem Anwender das Gefühl einer nativen Chatapplikation vermitteln können.
 Wenn wir freie Wahl haben, bevorzugen wir [React](https://facebook.github.io/react/) als JavaScript Framework zur Erstellung von SPAs.
@@ -27,7 +27,7 @@ Damit dir das Lesen dieses Beitrags einfacher fällt, hilft es, wenn du React un
 
 Um eine übersichtliche und wartbare Applikation zu erstellen, hilft eine einheitliche Architektur. Im React Umfeld kommt dafür vermehrt Redux zum Einsatz. Redux übernimmt den Zustand der Applikation sowie die Funktionalität die z.B. bei Benutzerinteraktionen ausgelöst wird.
 
-<h3>Redux: Action-Creators, Actions und Reducers</h3>
+### Redux: Action-Creators, Actions und Reducers
 
 Sehen wir uns dies am Beispiel an, wenn ein Benutzer eine neue Chat-Meldung sendet:
 
@@ -40,8 +40,10 @@ Sehen wir uns dies am Beispiel an, wenn ein Benutzer eine neue Chat-Meldung send
 Der Reducer verarbeitet nun die Action und gibt einen neuen Teilzustand als Ergebnis der Verarbeitung zurück. Konkret fügt er die vom Benutzer erstellte Meldung in die Liste aller Chat-Nachrichten ein. Redux legt diesen im State ab (#4).</li>
   <li>Der neue Gesamtzustand wird nun an die Komponente übergeben, wodurch sich diese neu rendert und die neu Nachricht zuunterst in der Nachrichtenliste anzeigt (#5).</li>
 </ul>
+
 Übersetzt in JavaScript Code sieht das dann in etwa so aus:
-<h4>Chat Komponente</h4>
+
+#### Chat Komponente
 
 ```javascript
 import React from 'react/react'
@@ -92,7 +94,7 @@ const wrappedComponent = connect(mapStateToProps, mapDispatchToProps)(Chat)
 export default wrappedComponent
 ```
 
-<h4>UserInput Komponente</h4>
+#### UserInput Komponente
 
 ```javascript
 import React from 'react/react';
@@ -126,7 +128,7 @@ onInputEntered: React.PropTypes.func.isRequired,
 };
 ```
 
-<h4>Action Creator / Action</h4>
+#### Action Creator / Action
 
 ```javascript
 export const MESSAGE_FROM_GUEST = 'MESSAGE_FROM_GUEST'
@@ -155,7 +157,7 @@ export function sendMessageFromPit(msg) {
 }
 ```
 
-<h4>ChatReducer</h4>
+#### ChatReducer
 
 ```javascript
 import * as Actions from '../actions'
@@ -218,7 +220,7 @@ Zusätzlich zur Anbindung an Wit möchten wir auch eine Slack Integration haben,
 
 Wir haben nun zwei Action-Creators welche mit unserem Backend kommunizieren und darüber die Anfrage entweder an Wit oder Slack weiterleiten. Wäre es nicht besser, die beiden Action-Creators müssten sich nicht ums Backend kümmern und könnten nur die Action ‘MESSAGE_FROM_GUEST’ (ausgehende Meldung) bzw. ‘MESSAGE_FROM_PIT’ (eintreffende Meldung) auslösen? Damit könnten wir den Chat für einfache Sachen auch ohne Backend laufen lassen und das Testen wird nochmals vereinfacht. Um dies zu bewerkstelligen erstellen wir eine eigene Redux Middleware.
 
-<h3>Redux: Middleware</h3>
+### Redux: Middleware
 
 Eine Middleware ermöglicht, in den Ablauf zwischen dem Dispatchen einer Action und dem Verteilen der Action an die Reducers einzugreifen. Dies wird oft verwendet, um z.B. asynchrone Actions auszuführen oder um Änderungen am Zustand der Applikation zu loggen. Eine gute Einführung in die Redux Middleware findest du hier: [http://redux.js.org/docs/advanced/Middleware.html](http://redux.js.org/docs/advanced/Middleware.html)
 
@@ -228,7 +230,7 @@ Wir schreiben eine eigene WebSocket Middleware fürs Senden und Empfangen von Ch
 
 SocketMiddleware erstellt eine WebSocket Verbindung mit dem Backend und fängt alle Actions vom Typ ‘MESSAGE_FROM_GUEST’ ab und sendet diese zum Server. Der Server Verarbeitet die Action und sendet bei Bedarf als Antwort Actions vom Typ ‘MESSAGE_FROM_PIT’ zurück zur Middleware. Die Middleware leitet alle vom Server eingegangenen Actions weiter an Redux wodurch sich der Kreislauf schliesst.
 
-<h4>SocketMiddleware</h4>
+#### SocketMiddleware
 
 ```javascript
 import * as Actions from '../actions'
@@ -272,7 +274,8 @@ export default socketMiddleware
 
 Wir haben hier eine weitere Action vom Typ ‘CONNECT’ eingeführt. Diese wird innerhalb der componentDidMount() Methode der Chat Component aufgerufen, um die Verbindung mit dem Server herzustellen.
 
-<h2>Ausblick</h2>
+## Ausblick
+
 Wir haben jetzt den Client soweit, dass dieser mittels WebSocket mit dem Backend kommunizieren kann. Meldungen die der Benutzer eingibt, werden via Redux in den State gestellt und via Middleware an den Server übermittelt. Der Server kann beliebige Actions an den Client senden und diese werden via Redux vom Client verarbeitet. Im zweiten Teil dieses Blogposts kannst du dann lesen, wie wir das Backend implementiert haben. Folge uns auf Twitter [@ApptivaTeam](http://twitter.com/ApptivaTeam) damit du nichts verpasst.
 
 > Du möchtest auch einen Chatbot der für dich wichtige Arbeiten erledigt? Brauchst du Unterstützung bei der Implementation eines Bots bzw. Chatbots? Nimm mit uns Kontakt auf, wir helfen gerne.
