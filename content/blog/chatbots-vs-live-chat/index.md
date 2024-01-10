@@ -8,7 +8,7 @@ title: Chatbot vs. Live Chat - was ist besser für den Kundendienst?
 excerpt: Im Kundendienst sind Chatbots und Live-Chats zu unverzichtbaren Werkzeugen geworden, um Kundenanfragen zu beantworten. Doch welcher Ansatz ist effizienter? 
 image: menschen-im-kundendienst.jpg
 imageCopy: Bild von Yan Krukau auf <a target="_blank" href="https://www.pexels.com/de-de/foto/menschen-buro-arbeiten-frauen-8867432/">Pexels</a>
-autor: Markus Tanner
+author: Markus Tanner
 ---
 
 Im modernen [Kundendienst](/anwendungsfaelle/kundendienst/) sind Chatbots und Live-Chats zu unverzichtbaren Werkzeugen geworden, um Kundenanfragen zu bearbeiten und eine effiziente Betreuung zu gewährleisten. Oft stellt sich die Frage, welcher Ansatz dabei effizienter ist. In diesem Blogpost gehen wir auf die beiden Tools ein und erörtern die optimale Lösung für den Kundenservice.

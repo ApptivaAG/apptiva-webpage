@@ -8,7 +8,7 @@ title: ChatGPT Alternativen
 excerpt: ChatGPT erfreut sich sehr grosser Beliebtheit. Doch die Konkurrenz schläft nicht. In diesem Blogpost stellen wir einige gute Alternativen zum populären KI-Chatbot vor. 
 image: chatgpt-website.jpg
 imageCopy: Foto von <a href="https://unsplash.com/de/@jupp?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jonathan Kemper</a> auf <a href="https://unsplash.com/de/fotos/5yuRImxKOcU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-autor: Markus Tanner
+author: Markus Tanner
 ---
 
 Seit dem öffentlichen Start im November 2022 hat [ChatGPT](/glossar/chatgpt/), der faszinierende KI-Chatbot von OpenAI, eine beeindruckende Popularität erreicht. Die Feeds in den sozialen Medien sind voll von unglaublichen Dingen, die Menschen mit dem Chatbot tun. Arbeitssuchende, Programmierer, Inhaltsersteller und Fachleute in fast allen Bereichen finden gute Verwendungsmöglichkeiten für den Chatbot.

@@ -8,7 +8,7 @@ title: ChatGPT sagt nicht immer die Wahrheit
 excerpt: Chatbots wie ChatGPT und Bard können Fragen auf sehr eindrückliche Art und Weise beantworten. Jedoch ist dabei Vorsicht geboten, denn die Künstliche Intelligenz verfälscht mitunter Fakten und erfindet Quellen.
 image: alter-weiser-mann.jpg
 imageCopy: Foto von <a href="https://unsplash.com/de/@jorgkarg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Jorg Karg</a> auf <a href="https://unsplash.com/de/fotos/R8k4A8z7_lA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a>
-autor: Linus Hüsler
+author: Linus Hüsler
 ---
 
 Viele unter uns haben bestimmt schon mal mit [ChatGPT](https://chat.openai.com/){target="_blank"} von OpenAI oder [Bard](https://bard.google.com/){target="_blank"} von Google herumgespielt. Dabei gab es sicherlich Situationen, bei denen der Chatbot in voller Überzeugung falsche Antworten geliefert hat.

@@ -8,7 +8,7 @@ title: Wieso man einen Schweizer Chatbot-Anbieter auswählen sollte
 excerpt: In diesem Blogpost nennen wir drei wesentliche Aspekte, wieso die Wahl eines Schweizer Chatbot-Anbieters sinnvoll ist.
 image: chatbots-aus-der-schweiz.jpg
 imageCopy: Foto von <a href="https://unsplash.com/@goran_ivos?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Goran Ivos</a> auf <a href="https://unsplash.com/de/fotos/ly-RWaR0GXI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-autor: Markus Tanner
+author: Markus Tanner
 ---
 
 In der heutigen digitalen Ära gewinnen KI-Chatbots und Conversational AI-Plattformen immer mehr an Bedeutung. Unternehmen suchen nach innovativen Lösungen, um ihren [Kundenservice](/anwendungsfaelle/kundendienst/) zu verbessern und gleichzeitig Kosten zu optimieren. Bei der Auswahl eines Chatbot-Anbieters stehen Unternehmen vor einer Vielzahl von Optionen, aber die Entscheidung für einen lokalen Anbieter aus der Schweiz kann einige entscheidende Vorteile bieten. In diesem Blogpost werden drei wesentliche Punkte hervorgehoben, die die Wahl eines Schweizer Chatbot-Anbieters sinnvoll machen.

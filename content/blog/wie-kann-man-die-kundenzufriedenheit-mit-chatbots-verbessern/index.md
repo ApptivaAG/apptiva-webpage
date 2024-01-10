@@ -9,7 +9,7 @@ displayTitle: Wie kann man die Kunden&shy;zufrieden&shy;heit mit Chatbots verbes
 excerpt: Chatbots liefern wichtige Erkenntnisse über Konversationen. Sie optimieren Prozesse in Unternehmen und sorgen für grössere Zufriedenheit Ihrer Kunden.
 image: happy.jpg
 imageCopy: Foto von <a href="https://unsplash.com/@jacquiemunguia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jacqueline Munguía</a> auf <a href="https://unsplash.com/de/fotos/1pAwJiCD60c?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-autor: Markus Tanner
+author: Markus Tanner
 ---
 
 “Wie können Informationen am schnellsten und einfachsten an den Kunden übermittelt werden?” In Bereichen wie Sales, Marketing oder Support, die sich mit Kunden befassen, ist dies eine alltägliche Frage, da fehlende Informationen die Kundenzufriedenheit beeinflussen können. Daher ist es nicht verwunderlich, dass künstliche Intelligenz ein wachsender Trend in verschiedenen Bereichen des Kundenkontakts ist.

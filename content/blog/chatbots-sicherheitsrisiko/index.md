@@ -8,7 +8,7 @@ title: Sind Chatbots ein Sicherheitsrisiko?
 excerpt: Chatbots sind heute allgegenwärtig. Doch kann man ihnen auch vertrauen? Dies ist eine kritische Betrachtung der Potenziale und Risiken von Chatbots.
 image: person-working-computer-dark.jpg
 imageCopy: Foto von <a href="https://unsplash.com/@cbpsc1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Clint Patterson</a> auf <a href="https://unsplash.com/de/fotos/dYEuFB8KQJk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-autor: Markus Tanner
+author: Markus Tanner
 ---
 
 In der heutigen digitalen Welt sind Chatbots allgegenwärtig. Sie finden sich auf Websites, in Messaging-Apps und sogar in sozialen Medien. Chatbots sind automatisierte Systeme, die mit Nutzern in natürlicher Sprache kommunizieren können. Sie werden oft als effiziente und zeitsparende Lösung für Unternehmen angepriesen, da sie rund um die Uhr verfügbar sind und auf häufig gestellte Fragen antworten können. Doch inmitten ihrer Bequemlichkeit und Effizienz stellen sich Fragen hinsichtlich ihrer Sicherheit. Sind Chatbots ein Sicherheitsrisiko? In diesem Blogpost werden wir dieses Thema genauer betrachten.

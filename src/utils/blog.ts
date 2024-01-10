@@ -6,14 +6,37 @@ import remarkGfm from 'remark-gfm'
 import remarkUnwrapImages from 'remark-unwrap-images'
 import remarkEmbedder from '@remark-embedder/core'
 import oembedTransformer from '@remark-embedder/transformer-oembed'
-import { compileMDX } from 'next-mdx-remote/rsc'
+import { CompileMDXResult, compileMDX } from 'next-mdx-remote/rsc'
 import { imageSize } from 'image-size'
 import MdxImage from '@/components/image'
 
 const blogPostsPath = 'content/blog'
 const assetsPath = '/assets/blog'
 
-const posts = new Map<string, any>()
+const posts = new Map<
+  string,
+  CompileMDXResult<BlogFrontmatter> & {
+    image: Image | NoImage
+  }
+>()
+
+type Image = {
+  width?: number | undefined
+  height?: number | undefined
+  orientation?: number | undefined
+  type?: string | undefined
+  src: string
+}
+type NoImage = {
+  src: undefined
+}
+type BlogFrontmatter = {
+  title: string
+  slug: string
+  author: string
+  date: string
+  image?: string
+}
 
 export const getPosts = cache(async () => {
   if (posts.size > 0) {
@@ -37,11 +60,7 @@ export const getPosts = cache(async () => {
 
     const data = await fs.readFile(markdownFilePath, 'utf8')
 
-    const markdown = await compileMDX<{
-      title: string
-      slug: string
-      image?: string
-    }>({
+    const markdown = await compileMDX<BlogFrontmatter>({
       source: data,
       components: {
         img: MdxImage(blogPostAssetsDirectory),

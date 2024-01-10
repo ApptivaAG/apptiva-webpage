@@ -9,7 +9,7 @@ displayTitle: 5 Dinge, die bei der Entwicklung von Chatbots vermieden werden sol
 excerpt: So einfach die Entwicklung von Chatbots auch scheinen mag, gibt es einige Dinge die man verhindern sollte, wenn man ein gutes Resultat erzielen will. 
 image: interdiction.jpg
 imageCopy: Foto von <a href="https://unsplash.com/es/@bel2000a?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Belinda Fewings</a> auf <a href="https://unsplash.com/de/fotos/73XDjmZQo6Y?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-autor: Markus Tanner
+author: Markus Tanner
 ---
 
 Chatbots werden immer beliebter und finden sich in verschiedenen Anwendungsbereichen wie Kundensupport, E-Commerce und Marketing. Doch bei der Entwicklung von Chatbots gibt es einige Fehler, die vermieden werden sollten, um ein erfolgreiches Ergebnis zu erzielen. In diesem Blogpost werden fünf Dinge erwähnt, die bei der Entwicklung von Chatbots vermieden werden sollten.

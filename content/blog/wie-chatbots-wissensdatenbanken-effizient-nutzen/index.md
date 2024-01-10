@@ -9,7 +9,7 @@ displayTitle: Wie Chatbots Wissens&shy;daten&shy;banken effizient nutzen
 excerpt: Eine Wissensdatenbank ist eine strukturierte Sammlung von Informationen aus verschiedenen Quellen. Chatbots nutzen diese, um passende Antworten zu finden.
 image: books.jpg
 imageCopy: Foto von <a href="https://unsplash.com/@impatrickt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Patrick Tomasso</a> auf <a href="https://unsplash.com/de/fotos/Oaqk7qqNh_c?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-autor: Linus Hüsler
+author: Linus Hüsler
 ---
 
 In der heutigen Zeit, in der die digitale Kommunikation immer wichtiger wird, sind Chatbots zu einem integralen Bestandteil vieler Geschäfts- und Kundendienstmodelle geworden. Chatbots sind KI-gestützte Programme, die menschenähnliche Gespräche führen können und dabei die Interaktion zwischen Nutzern und Unternehmen erleichtern. Eine der treibenden Kräfte hinter diesen Chatbots sind Wissensdatenbanken, die als Grundlage für ihr Verständnis der menschlichen Sprache und ihr Problemlösungspotenzial dienen. In diesem Artikel werfen wir einen Blick darauf, wie Wissensdatenbanken für einen Chatbot genutzt werden können und welche Vorteile sie bieten.

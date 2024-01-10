@@ -8,7 +8,7 @@ title: GPT-Chatbots aus der Schweiz
 excerpt: Microsoft bietet den Azure-OpenAI-Dienst nun auch in der Schweiz an. Dadurch bleiben die Daten bei der Kommunikation mit GPT-Chatbots nun in der Schweiz.
 image: microsoft-openai-schweiz.jpg
 imageCopy: Bild erstellt von <a target="_blank" href="https://www.bing.com/images/create/microsoft-bietet-openai-dienst-in-der-schweiz-an/6548d143e2a34648ad97d4b22cd86e14?id=5alz6QyuCWoHCBA7E70t4Q%3d%3d&view=detailv2&idpp=genimg&FORM=GCRIDP&mode=overlay">Microsoft Bing Image Creator</a>
-autor: Markus Tanner
+author: Markus Tanner
 ---
 
 Microsoft bietet den [Azure-OpenAI-Dienst nun auch in der Schweiz](https://news.microsoft.com/de-ch/2023/09/18/microsoft-gibt-verfugbarkeit-des-azure-openai-dienstes-im-schweizer-rechenzentrum-bekannt-und-beschleunigt-damit-ki-innovation-in-der-schweiz/){target="_blank"} an. Da haben wir selbstverständlich nicht lange zugewartet und den Dienst sofort bei Bubble Chat integriert. Dadurch bleiben die Daten bei der Kommunikation mit unseren Chatbots nun in der Schweiz.

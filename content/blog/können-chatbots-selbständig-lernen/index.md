@@ -8,7 +8,7 @@ title: Können Chatbots selbständig lernen?
 excerpt: Diese Frage wird oft gestellt. Der Blogpost erläutert die Möglichkeiten der Lernfähigkeit eines Chatbots und erklärt, wie Bubble Chat mit der Thematik umgeht.
 image: learn.jpg
 imageCopy: Foto von <a href="https://unsplash.com/@aaronburden?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Aaron Burden</a> auf <a href="https://unsplash.com/de/fotos/QJDzYT_K8Xg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-autor: Markus Tanner
+author: Markus Tanner
 ---
 
 Dieses Jahr wurde auf verschiedenen Technologie-Kanälen über den Chatbot [Blenderbot 3](https://www.golem.de/news/blenderbot-3-metas-chatbot-aeussert-antisemitische-verschwoerungen-2208-167479.html){target="_blank"} von Meta und die antisemitischen Verschwörungen berichtet, auf die der Chatbot geantwortet hat. Im Jahr 2016 hat ein Projekt von Microsoft ein ähnliches Schicksal ereilt, als der Chatbot [Tay](https://www.golem.de/news/tay-microsofts-chat-bot-wird-zum-rassisten-1603-119976.html){target="_blank"} frauenfeindliche Äusserungen und eine Vorliebe für Adolf Hitler gezeigt hat.

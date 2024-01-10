@@ -7,7 +7,7 @@ date: 2022-12-17
 title: Die wichtigsten Fragen und Antworten zu ChatGPT
 excerpt: ChatGPT ist ein Chatbot, der auf GPT-3 basiert und menschenähnliche Konversationen führen kann. Er kann in verschiedenen Bereichen eingesetzt werden.
 image: OpenAI.jpg
-autor: Linus Hüsler
+author: Linus Hüsler
 ---
 
 ChatGPT ist ein Chatbot, der auf der Grundlage von [GPT&#8209;3](https://en.wikipedia.org/wiki/GPT-3){target="_blank"} (Generative Pre-trained Transformer), einem der leistungsfähigsten maschinellen Lernmodelle für natürliche Sprachverarbeitung, entwickelt wurde. ChatGPT wurde entwickelt, um menschenähnliche Konversationen zu führen und kann daher in vielen Bereichen eingesetzt werden, in denen eine menschenähnliche Kommunikation erforderlich ist.

@@ -8,7 +8,7 @@ title: Tipps zur Entwicklung von Chatbots
 excerpt: In diesem Artikel finden Sie sieben wichtige Tipps, die Ihnen bei der Entwicklung Ihres Chatbots helfen werden.
 image: tools.jpg
 imageCopy: Foto von <a href="https://unsplash.com/@yer_a_wizard?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Fleur</a> auf <a href="https://unsplash.com/de/fotos/dQf7RZhMOJU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-autor: Markus Tanner
+author: Markus Tanner
 ---
 
 Da Chatbots mehrere Aufgaben gleichzeitig erledigen können und dabei die Stimmung und das Markenimage beibehalten, eignen sich Chatbots hervorragend für den Kundenservice. Chatbots existieren allerdings auch in vielen anderen Branchen. Tourismus und Behörden sind Beispiele für Branchen, in denen KI-Technologie ebenfalls zum Einsatz kommt. Dabei hat jede Branche ihre eigene Individualität.
