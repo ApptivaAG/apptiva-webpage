@@ -38,7 +38,6 @@ Wenn ja, so muss spätestens ab diesem Zeitpunkt bezahlt werden. Punkt. Wer nic
 |![Beispiel zum Beginn der Steuerpflicht](img/mwst-beispiel.png)
 
 <h3>Quelle</h3>
-<a href="https://www.gate.estv.admin.ch/mwst-webpublikationen/public/pages/taxInfos/cipherDisplay.xhtml?publicationId=1010164&amp;componentId=1010314&amp;winid=701377">https://www.gate.estv.admin.ch/mwst-webpublikationen/public/pages/taxInfos/cipherDisplay.xhtml?publicationId=1010164&amp;componentId=1010314&amp;winid=701377
-</a>
+<a href="https://www.gate.estv.admin.ch/mwst-webpublikationen/public/pages/taxInfos/cipherDisplay.xhtml?publicationId=1010164&amp;componentId=1010314&amp;winid=701377">https://www.gate.estv.admin.ch/mwst-webpublikationen/public/pages/taxInfos/cipherDisplay.xhtml?publicationId=1010164&amp;componentId=1010314&amp;winid=701377</a>
 
 [https://www.gate.estv.admin.ch/mwst-webpublikationen/public/pages/taxInfos/cipherDisplay.xhtml?publicationId=1010164&amp;componentId=1010319&amp;winid=701377](https://www.gate.estv.admin.ch/mwst-webpublikationen/public/pages/taxInfos/cipherDisplay.xhtml?publicationId=1010164&componentId=1010319&winid=701377)

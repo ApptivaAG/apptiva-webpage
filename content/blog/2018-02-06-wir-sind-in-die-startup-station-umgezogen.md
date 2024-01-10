@@ -10,7 +10,7 @@ categories:
   - Allgemein
 ---
 
-## Wir haben neue Büroräumlichkeiten bezogen!
+## Wir haben neue Büroräumlichkeiten bezogen
 
 Neu findet man die Apptiva AG in Sempach Station in der Startup Station.
 
@@ -22,23 +22,13 @@ Inzwischen sind wir bereits einige Wochen hier und haben uns sehr gut eingelebt.
 
 &nbsp;
 
-<style>
-.small-image {
-  display: inline-block; width:350px; height:120px; max-width: 100%; overflow: hidden;
-}
-</style>
+<div className="flex [&>figure]:basis-60 flex-wrap gap-2">
 
-<div class="small-image">
-  <img src="img/buero_innen_04.jpg" alt="Blick durchs Büro" />
-</div>
-<div class="small-image">
-  <img src="./img/buero_innen_05.jpg" alt="Unsere Wohlfühlecke" />
-</div> 
-<div class="small-image">
-  <img src="./img/gebaeude.jpg" alt="Gebäude" />
-</div>
-<div class="small-image">
-  <img src="./img/buero_innen_03.jpg" alt="Unsere Arbeitsplätze"/>
+![Blick durchs Büro](img/buero_innen_04.jpg)
+![Unsere Wohlfühlecke](img/buero_innen_05.jpg)
+![Gebäude](img/gebaeude.jpg)
+![Unsere Arbeitsplätze](img/buero_innen_03.jpg)
+
 </div>
 
 ### Unsere neue Adresse lautet

@@ -27,15 +27,15 @@ Ich will prüfen, ob ich mithilfe dieser neuen Visualisierung in unserem Botfabr
 Um nun die Timeline in Chrome anschauen zu können, muss ich folgendes machen:
 
 <ol>
- 	<li>Applikation im Chrome Browser mit Query-String <strong>?react_perf</strong> aufrufen (bei mir http://localhost:3000/?react_perf)</li>
- 	<li>Chrome DevTools Öffnen und im Tab <strong>Timeline</strong> die Aufzeichnung starten</li>
- 	<li>Nun kann ich die aufzuzeichnenden Aktionen ausführen. Ich frage Pit nach seinem Alter ("wie alt bist du?") und erhalte von ihm die Antwort "Ich bin noch jung".</li>
- 	<li>Aufzeichnung stoppen</li>
- 	<li>React Aktionen werden innerhalb der Gruppe <strong>User Timing</strong> gruppiert und können nun analysiert werden:</li>
+  <li>Applikation im Chrome Browser mit Query-String <strong>?react_perf</strong> aufrufen (bei mir http://localhost:3000/?react_perf)</li>
+  <li>Chrome DevTools Öffnen und im Tab <strong>Timeline</strong> die Aufzeichnung starten</li>
+  <li>Nun kann ich die aufzuzeichnenden Aktionen ausführen. Ich frage Pit nach seinem Alter ("wie alt bist du?") und erhalte von ihm die Antwort "Ich bin noch jung".</li>
+  <li>Aufzeichnung stoppen</li>
+  <li>React Aktionen werden innerhalb der Gruppe <strong>User Timing</strong> gruppiert und können nun analysiert werden:</li>
 </ol>
 &nbsp;
 
-<img src="img/react-profiling.png" alt="react-profiling"  />
+![react-profiling](img/react-profiling.png)
 
 &nbsp;
 

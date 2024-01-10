@@ -60,7 +60,7 @@ Neben der Online-Zahlung und der Zahlung vor Ort gibt es für grössere Gruppen 
 
 Beim Checkout wählen die Kundinnen und Kunden aus, ob sie direkt ein Ticket für das Event oder lieber einen Gutschein zum Verschenken erhalten wollen. Nach der Bezahlung erhalten die Gäste per Email einen Link zum Einlösen des Gutscheins, oder direkt einen QR-Code mit welchem die Leistungen bezogen werden können.
 
-<div style="max-width: 400px; margin-left: auto; margin-right: auto">
+<div className="max-w-96 mx-auto">
 
 ![Email](email.png)
 
@@ -70,7 +70,7 @@ Beim Checkout wählen die Kundinnen und Kunden aus, ob sie direkt ein Ticket fü
 
 Um die Leistungen beziehen zu können, müssen die Besucher:innen bloss ihr Handy mit dem QR-Code im Email zücken. Die Leistungserbringer sind in der Lage über unsere Lösung den QR-Code zu scannen, um zu prüfen ob der QR-Code gültig ist und um Leistungen auch gleich einzulösen. Die QR-Codes können pro Person oder pro Gruppe erstellt und eingelöst werden, damit bei grösseren Gruppen nicht jeder einzelne Gast das Handy hervornehmen muss.
 
-<div style="max-width: 400px; margin-left: auto; margin-right: auto">
+<div className="max-w-96 mx-auto">
 
 ![QR-Code scannen](scanner.png)
 

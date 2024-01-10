@@ -76,6 +76,6 @@ Zur Kommunikation innerhalb der Firma verwenden wir glücklicherweise Slack, wel
 
 [[right]]
 |[[avatar]]
-||![Patrik Stutz](../../data/employees/patrik-stutz/patrik-stutz-prev.jpg)
+||![Patrik Stutz](patrik-stutz-prev.jpg)
 
 NixOS macht sehr vieles richtig, aber auch anders. Dies will zuerst gelernt werden. Ist diese Hürde aber erstmal genommen, wird es schwierig, sich wieder von den Vorteilen loszureissen. Deshalb beabsichtige ich auch weiterhin NixOS zu benutzen und irgendwann vielleicht auch den einen oder anderen Team-Kollegen zu überzeugen. Vielleicht werde ich aber auch plötzlich durch fehlende Software zurück zu Windows oder einem Mac verbannt.

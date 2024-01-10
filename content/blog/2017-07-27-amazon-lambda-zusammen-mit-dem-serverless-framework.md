@@ -73,13 +73,13 @@ Your cron function "apptiva-demo-service" ran at Thu Jul 27 2017 11:42:03 GMT+02
 Damit das Serverless Framework Zugriff auf deinen AWS Account hat, erstellen wir bei AWS einen IAM Benutzer mit Admin Berechtigung. Dieser Benutzer kann den Lamdba Service innerhalb deines AWS Accounts konfigurieren.
 
 <ul>
- 	<li>Melde dich bei Amazon Web Services an: [https://console.aws.amazon.com](https://console.aws.amazon.com)</li>
- 	<li>Gehe zur "Identity &amp; Access Management (IAM)" Seite</li>
- 	<li>Klicke rechts auf "User" und dann auf "Add user"</li>
- 	<li>Gib einen Benutzername an, z.B. serverless-admin, aktiviere die Checkbox "Programmatic access" und klicke auf "Next: Permissions"</li>
- 	<li>Klicke auf "Attach existing policies directly", suche und selektiere "AdministratorAccess" und klicke auf "Next: Review"</li>
- 	<li>Prüfe ob alle Angaben stimmen und klicke "Create user"</li>
- 	<li>Kopiere den erstellten API Key und das Secret</li>
+  <li>Melde dich bei Amazon Web Services an: [https://console.aws.amazon.com](https://console.aws.amazon.com)</li>
+  <li>Gehe zur "Identity &amp; Access Management (IAM)" Seite</li>
+  <li>Klicke rechts auf "User" und dann auf "Add user"</li>
+  <li>Gib einen Benutzername an, z.B. serverless-admin, aktiviere die Checkbox "Programmatic access" und klicke auf "Next: Permissions"</li>
+  <li>Klicke auf "Attach existing policies directly", suche und selektiere "AdministratorAccess" und klicke auf "Next: Review"</li>
+  <li>Prüfe ob alle Angaben stimmen und klicke "Create user"</li>
+  <li>Kopiere den erstellten API Key und das Secret</li>
 </ul>
 
 In deiner Konsole musst du nun dem Serverless Framework den AWS API Key und das Secret mitteilen:
@@ -112,4 +112,4 @@ Meiner Meinung nach vereinfachen Serverless Applikationen die Entwicklung von ko
 
 Folgende Präsentation von AWS gibt dir weitere Informationen zum Thema:
 
-<iframe src="https://www.slideshare.net/slideshow/embed_code/key/IXHTxRxxUtD61G" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen="" height="356" frameborder="0" width="427"> </iframe>
+<iframe src="https://www.slideshare.net/slideshow/embed_code/key/IXHTxRxxUtD61G" marginwidth="0" marginheight="0" scrolling="no" className="max-w-full" allowfullscreen="" height="356" frameborder="0" width="427"> </iframe>

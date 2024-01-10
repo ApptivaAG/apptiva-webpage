@@ -30,14 +30,14 @@ Um eine übersichtliche und wartbare Applikation zu erstellen, hilft eine einhei
 
 Sehen wir uns dies am Beispiel an, wenn ein Benutzer eine neue Chat-Meldung sendet:
 
-<img src="img/redux-ohne-middleware.png" alt="Redux ohne Middleware"  />
+![Redux ohne Middleware](img/redux-ohne-middleware.png)
 
 <ul>
- 	<li>Die Chat Komponente erzeugt mittels Action-Creator <i>sendMessageFromGuest(msg)</i> (#1) eine neue Action ‘MESSAGE_FROM_GUEST’ (#2).</li>
- 	<li>Die Action wird via Redux an alle Reducer weitergegeben (#3). In unserem Beispiel interessiert sich nur der ChatReducer für die Action vom Typ ‘MESSAGE_FROM_GUEST’.</li>
- 	<li>Jeder Reducer verwaltete einen bestimmten Teil des gesamten State. Unser ChatReducer ist für den Teilzustand <i>/chat</i> verantwortlich. Unter diesem Teilzustand sind z.B. alle Chat-Nachrichten abgelegt.
+  <li>Die Chat Komponente erzeugt mittels Action-Creator <i>sendMessageFromGuest(msg)</i> (#1) eine neue Action ‘MESSAGE_FROM_GUEST’ (#2).</li>
+  <li>Die Action wird via Redux an alle Reducer weitergegeben (#3). In unserem Beispiel interessiert sich nur der ChatReducer für die Action vom Typ ‘MESSAGE_FROM_GUEST’.</li>
+  <li>Jeder Reducer verwaltete einen bestimmten Teil des gesamten State. Unser ChatReducer ist für den Teilzustand <i>/chat</i> verantwortlich. Unter diesem Teilzustand sind z.B. alle Chat-Nachrichten abgelegt.
 Der Reducer verarbeitet nun die Action und gibt einen neuen Teilzustand als Ergebnis der Verarbeitung zurück. Konkret fügt er die vom Benutzer erstellte Meldung in die Liste aller Chat-Nachrichten ein. Redux legt diesen im State ab (#4).</li>
- 	<li>Der neue Gesamtzustand wird nun an die Komponente übergeben, wodurch sich diese neu rendert und die neu Nachricht zuunterst in der Nachrichtenliste anzeigt (#5).</li>
+  <li>Der neue Gesamtzustand wird nun an die Komponente übergeben, wodurch sich diese neu rendert und die neu Nachricht zuunterst in der Nachrichtenliste anzeigt (#5).</li>
 </ul>
 Übersetzt in JavaScript Code sieht das dann in etwa so aus:
 <h4>Chat Komponente</h4>
@@ -223,7 +223,7 @@ Eine Middleware ermöglicht, in den Ablauf zwischen dem Dispatchen einer Action 
 
 Wir schreiben eine eigene WebSocket Middleware fürs Senden und Empfangen von Chat-Nachrichten. Der Ablauf sieht danach wie folgt aus:
 
-<img src="img/redux-mit-middleware.png" alt="Redux mit Middleware"  />
+![Redux mit Middleware](img/redux-mit-middleware.png)
 
 SocketMiddleware erstellt eine WebSocket Verbindung mit dem Backend und fängt alle Actions vom Typ ‘MESSAGE_FROM_GUEST’ ab und sendet diese zum Server. Der Server Verarbeitet die Action und sendet bei Bedarf als Antwort Actions vom Typ ‘MESSAGE_FROM_PIT’ zurück zur Middleware. Die Middleware leitet alle vom Server eingegangenen Actions weiter an Redux wodurch sich der Kreislauf schliesst.
 
