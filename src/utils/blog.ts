@@ -3,9 +3,12 @@ import path from 'path'
 import { promises as fs } from 'fs'
 import remarkGfm from 'remark-gfm'
 import remarkUnwrapImages from 'remark-unwrap-images'
+import remarkEmbedder from '@remark-embedder/core'
+import oembedTransformer from '@remark-embedder/transformer-oembed'
 import { compileMDX } from 'next-mdx-remote/rsc'
 import { imageSize } from 'image-size'
 import MdxImage from '@/components/image'
+
 const blogPostsPath = 'content/blog'
 const assetsPath = '/assets/blog'
 
@@ -36,23 +39,36 @@ export const getPosts = cache(async () => {
     const markdown = await compileMDX<{
       title: string
       slug: string
-      image: string
+      image?: string
     }>({
       source: data,
       components: {
         img: MdxImage(blogPostAssetsDirectory),
       },
       options: {
-        mdxOptions: { remarkPlugins: [remarkGfm, remarkUnwrapImages] },
+        mdxOptions: {
+          remarkPlugins: [
+            remarkGfm,
+            remarkUnwrapImages,
+            [
+              remarkEmbedder,
+              {
+                transformers: [oembedTransformer],
+              },
+            ],
+          ],
+        },
         parseFrontmatter: true,
       },
     })
 
-    const imageSrc = path
-      .join(path.dirname(markdownFilePath), markdown.frontmatter.image)
-      .replace(blogPostsPath, assetsPath)
+    const imageSrc = markdown.frontmatter.image
+      ? path
+          .join(path.dirname(markdownFilePath), markdown.frontmatter.image)
+          .replace(blogPostsPath, assetsPath)
+      : undefined
 
-    const imageInfo = getImageInfo(imageSrc)
+    const imageInfo = imageSrc ? getImageInfo(imageSrc) : undefined
 
     posts.set(markdown.frontmatter.slug, {
       ...markdown,
