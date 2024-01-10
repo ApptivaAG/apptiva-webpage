@@ -24,6 +24,7 @@ export default async function Home(props: { params: { slug: string } }) {
       <h1>{frontmatter.title}</h1>
 
       <Image
+        className="full"
         src={image.src}
         width={image.width}
         height={image.height}

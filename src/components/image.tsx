@@ -15,7 +15,7 @@ function MdxImage(contentPath: string) {
     const src = path.join(contentPath, props.src)
     const { height, width } = getImageInfo(src)
     return (
-      <figure>
+      <figure className="feature">
         <Image
           src={src}
           alt={props.alt ?? ''}
