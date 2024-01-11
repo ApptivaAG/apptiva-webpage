@@ -32,7 +32,7 @@ export async function generateMetadata(props: {
       type: 'article',
       images: [
         {
-          url: `https://apptiva-uber-website.netlify.app/_ipx/w_1200,q_75/%2Fassets%2Fblog%2F${props.params.slug}%2F${frontmatter.image}&w=1200&q=75`,
+          url: `https://apptiva-uber-website.netlify.app/_ipx/w_1200,q_75/%2Fassets%2Fblog%2F${props.params.slug}%2F${frontmatter.image}`,
         },
       ],
       publishedTime: frontmatter.date,
