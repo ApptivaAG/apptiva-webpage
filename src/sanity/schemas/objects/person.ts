@@ -37,6 +37,16 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'content',
+      title: 'Text',
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+        },
+      ],
+    }),
+    defineField({
       title: 'Kontakt',
       name: 'contact',
       type: 'contact',
