@@ -1,5 +1,6 @@
 import { getPosts } from '@/utils/blog'
 import { kebabCaseToTitleCase } from '@/utils/format'
+import { Metadata } from 'next'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 
@@ -9,6 +10,29 @@ export async function generateStaticParams() {
   return Array.from(posts.keys()).map((slug) => ({
     slug,
   }))
+}
+
+export async function generateMetadata(props: {
+  params: { slug: string }
+}): Promise<Metadata> {
+  const posts = await getPosts()
+
+  const post = posts.get(props.params.slug)
+  if (!post) {
+    notFound()
+  }
+
+  const { frontmatter, image } = post
+  return {
+    title: frontmatter.title,
+    description: frontmatter.description,
+    authors: { name: frontmatter.author },
+    alternates: { canonical: `/blog/${frontmatter.slug}` },
+    openGraph: {
+      type: 'article',
+      publishedTime: frontmatter.date,
+    },
+  }
 }
 
 export default async function Home(props: { params: { slug: string } }) {
