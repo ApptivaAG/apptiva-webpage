@@ -62,8 +62,9 @@ body {
 }
 
 .navigation {
+  width: 1200px;
   display: flex;
-  background-color: white;
+  margin: auto;
 }
 
 .navigation-section {
