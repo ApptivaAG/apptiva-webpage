@@ -46,10 +46,10 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      title: 'Contact',
+      title: 'Kontakt',
       name: 'contact',
-      type: 'array',
-      of: [{type: 'contact'}]      
+      type: 'contact',
+      
     }),
   ],
 })
