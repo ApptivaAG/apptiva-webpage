@@ -27,9 +27,9 @@ export default defineType({
     }),
     defineField({
       name: 'author',
-      title: 'Autor',
+      title: 'Autor:in',
       type: 'array',
-      of: [{ type: 'author' }],
+      of: [{ type: 'person' }],
     }),
     defineField({
       name: 'tags',
