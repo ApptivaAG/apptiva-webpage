@@ -30,6 +30,11 @@ export async function generateMetadata(props: {
     alternates: { canonical: `/blog/${frontmatter.slug}` },
     openGraph: {
       type: 'article',
+      images: [
+        {
+          url: 'https://apptiva-uber-website.netlify.app/_next/image?url=%2Fassets%2Fblog%2Fwas-macht-bubble-chat-so-simpel%2Finhalte-verwalten.png&w=1200&q=75',
+        },
+      ],
       publishedTime: frontmatter.date,
     },
   }
