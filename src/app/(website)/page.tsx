@@ -19,7 +19,7 @@ export default async function Home() {
         </li>
         <li>
           <Link href="studio">CMS</Link>
-        </li>
+        </li>        
       </ul>
     </div>
   )
