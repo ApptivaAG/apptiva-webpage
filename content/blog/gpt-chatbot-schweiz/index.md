@@ -5,7 +5,7 @@ slug: gpt-chatbot-schweiz
 tags: blog
 date: 2023-11-06
 title: GPT-Chatbots aus der Schweiz
-excerpt: Microsoft bietet den Azure-OpenAI-Dienst nun auch in der Schweiz an. Dadurch bleiben die Daten bei der Kommunikation mit GPT-Chatbots nun in der Schweiz.
+description: Microsoft bietet den Azure-OpenAI-Dienst nun auch in der Schweiz an. Dadurch bleiben die Daten bei der Kommunikation mit GPT-Chatbots nun in der Schweiz.
 image: microsoft-openai-schweiz.jpg
 imageCopy: Bild erstellt von <a target="_blank" href="https://www.bing.com/images/create/microsoft-bietet-openai-dienst-in-der-schweiz-an/6548d143e2a34648ad97d4b22cd86e14?id=5alz6QyuCWoHCBA7E70t4Q%3d%3d&view=detailv2&idpp=genimg&FORM=GCRIDP&mode=overlay">Microsoft Bing Image Creator</a>
 author: Markus Tanner

@@ -5,7 +5,7 @@ slug: chatgpt-sagt-nicht-immer-die-wahrheit
 tags: blog
 date: 2023-08-21
 title: ChatGPT sagt nicht immer die Wahrheit
-excerpt: Chatbots wie ChatGPT und Bard können Fragen auf sehr eindrückliche Art und Weise beantworten. Jedoch ist dabei Vorsicht geboten, denn die Künstliche Intelligenz verfälscht mitunter Fakten und erfindet Quellen.
+description: Chatbots wie ChatGPT und Bard können Fragen auf sehr eindrückliche Art und Weise beantworten. Jedoch ist dabei Vorsicht geboten, denn die Künstliche Intelligenz verfälscht mitunter Fakten und erfindet Quellen.
 image: alter-weiser-mann.jpg
 imageCopy: Foto von <a href="https://unsplash.com/de/@jorgkarg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Jorg Karg</a> auf <a href="https://unsplash.com/de/fotos/R8k4A8z7_lA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a>
 author: Linus Hüsler

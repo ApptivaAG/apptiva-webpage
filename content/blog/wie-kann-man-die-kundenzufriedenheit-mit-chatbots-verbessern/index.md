@@ -6,7 +6,7 @@ tags: blog
 date: 2022-10-10
 title: Wie kann man die Kundenzufriedenheit mit Chatbots verbessern?
 displayTitle: Wie kann man die Kunden&shy;zufrieden&shy;heit mit Chatbots verbessern?
-excerpt: Chatbots liefern wichtige Erkenntnisse über Konversationen. Sie optimieren Prozesse in Unternehmen und sorgen für grössere Zufriedenheit Ihrer Kunden.
+description: Chatbots liefern wichtige Erkenntnisse über Konversationen. Sie optimieren Prozesse in Unternehmen und sorgen für grössere Zufriedenheit Ihrer Kunden.
 image: happy.jpg
 imageCopy: Foto von <a href="https://unsplash.com/@jacquiemunguia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jacqueline Munguía</a> auf <a href="https://unsplash.com/de/fotos/1pAwJiCD60c?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 author: Markus Tanner

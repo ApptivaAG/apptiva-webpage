@@ -5,7 +5,7 @@ slug: chatbots-damals-heute-und-morgen
 tags: blog
 date: 2022-10-03
 title: Chatbots damals, heute und morgen
-excerpt: Dies ist eine kurze Zusammenfassung über die Entstehung von Chatbots, ihre aktuelle Verwendung in verschiedenen Branchen und die zukünftigen Marktmöglichkeiten.
+description: Dies ist eine kurze Zusammenfassung über die Entstehung von Chatbots, ihre aktuelle Verwendung in verschiedenen Branchen und die zukünftigen Marktmöglichkeiten.
 image: zukunft.jpg
 imageCopy: Foto von <a href="https://unsplash.com/@dbeamer_jpg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Drew Beamer</a> auf <a href="https://unsplash.com/de/fotos/xU5Mqq0Chck?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 author: Markus Tanner

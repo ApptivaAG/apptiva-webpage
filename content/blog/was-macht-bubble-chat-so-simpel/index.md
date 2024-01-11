@@ -5,7 +5,7 @@ slug: was-macht-bubble-chat-so-simpel
 tags: blog
 date: 2022-11-21
 title: Was macht Bubble Chat so simpel?
-excerpt: Nur weil es sich um Chatbots handelt, bedeutet es nicht, dass es kompliziert sein muss. Wir erklären, warum Bubble Chat so simpel und benutzerfreundlich ist.
+description: Nur weil es sich um Chatbots handelt, bedeutet es nicht, dass es kompliziert sein muss. Wir erklären, warum Bubble Chat so simpel und benutzerfreundlich ist.
 image: easy.jpg
 imageCopy: Foto von <a href="https://unsplash.com/@micheile?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">micheile dot com</a> auf <a href="https://unsplash.com/de/fotos/diEDq3HPpBc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 author: Markus Tanner

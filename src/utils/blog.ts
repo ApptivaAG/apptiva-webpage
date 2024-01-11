@@ -36,6 +36,7 @@ type BlogFrontmatter = {
   author: string
   date: string
   image?: string
+  description: string
 }
 
 export const getPosts = cache(async () => {

@@ -5,7 +5,7 @@ slug: chatbots-sicherheitsrisiko
 tags: blog
 date: 2023-06-18
 title: Sind Chatbots ein Sicherheitsrisiko? 
-excerpt: Chatbots sind heute allgegenwärtig. Doch kann man ihnen auch vertrauen? Dies ist eine kritische Betrachtung der Potenziale und Risiken von Chatbots.
+description: Chatbots sind heute allgegenwärtig. Doch kann man ihnen auch vertrauen? Dies ist eine kritische Betrachtung der Potenziale und Risiken von Chatbots.
 image: person-working-computer-dark.jpg
 imageCopy: Foto von <a href="https://unsplash.com/@cbpsc1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Clint Patterson</a> auf <a href="https://unsplash.com/de/fotos/dYEuFB8KQJk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 author: Markus Tanner

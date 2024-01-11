@@ -5,7 +5,7 @@ slug: chatbots-schweiz
 tags: blog
 date: 2023-07-10
 title: Wieso man einen Schweizer Chatbot-Anbieter auswählen sollte 
-excerpt: In diesem Blogpost nennen wir drei wesentliche Aspekte, wieso die Wahl eines Schweizer Chatbot-Anbieters sinnvoll ist.
+description: In diesem Blogpost nennen wir drei wesentliche Aspekte, wieso die Wahl eines Schweizer Chatbot-Anbieters sinnvoll ist.
 image: chatbots-aus-der-schweiz.jpg
 imageCopy: Foto von <a href="https://unsplash.com/@goran_ivos?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Goran Ivos</a> auf <a href="https://unsplash.com/de/fotos/ly-RWaR0GXI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 author: Markus Tanner

@@ -42,6 +42,7 @@ export default async function Home(props: { params: { slug: string } }) {
           sizes="(max-width: 600px) 100vw, 1200px"
         />
       )}
+      <p className="font-semibold">{frontmatter.description}</p>
       {content}
     </>
   )

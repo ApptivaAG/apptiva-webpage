@@ -6,7 +6,7 @@ tags: blog
 date: 2023-05-10
 title: 5 Dinge, die bei der Entwicklung von Chatbots vermieden werden sollten
 displayTitle: 5 Dinge, die bei der Entwicklung von Chatbots vermieden werden sollten
-excerpt: So einfach die Entwicklung von Chatbots auch scheinen mag, gibt es einige Dinge die man verhindern sollte, wenn man ein gutes Resultat erzielen will. 
+description: So einfach die Entwicklung von Chatbots auch scheinen mag, gibt es einige Dinge die man verhindern sollte, wenn man ein gutes Resultat erzielen will. 
 image: interdiction.jpg
 imageCopy: Foto von <a href="https://unsplash.com/es/@bel2000a?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Belinda Fewings</a> auf <a href="https://unsplash.com/de/fotos/73XDjmZQo6Y?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 author: Markus Tanner

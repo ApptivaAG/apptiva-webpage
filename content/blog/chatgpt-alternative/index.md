@@ -5,7 +5,7 @@ slug: chatgpt-alternative
 tags: blog
 date: 2023-09-04
 title: ChatGPT Alternativen
-excerpt: ChatGPT erfreut sich sehr grosser Beliebtheit. Doch die Konkurrenz schläft nicht. In diesem Blogpost stellen wir einige gute Alternativen zum populären KI-Chatbot vor. 
+description: ChatGPT erfreut sich sehr grosser Beliebtheit. Doch die Konkurrenz schläft nicht. In diesem Blogpost stellen wir einige gute Alternativen zum populären KI-Chatbot vor. 
 image: chatgpt-website.jpg
 imageCopy: Foto von <a href="https://unsplash.com/de/@jupp?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jonathan Kemper</a> auf <a href="https://unsplash.com/de/fotos/5yuRImxKOcU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 author: Markus Tanner
