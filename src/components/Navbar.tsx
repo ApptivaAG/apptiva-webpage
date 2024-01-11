@@ -1,9 +1,7 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import Navbar from './../../components/Navbar'
-import './globals.css'
+import Link from 'next/link'
 
 const navbarData = [
+  { title: 'Home', href: '/' },
   {
     title: 'Angebot',
     href: '/angebot/',
@@ -64,30 +62,40 @@ const navbarData = [
         title: 'FAQ',
         href: '/faq/',
       },
+      {
+        title: 'Glossar',
+        href: '/glossar/',
+      },
     ],
   },
   { title: 'CMS', href: '/studio/' },
 ]
 
-const inter = Inter({ subsets: ['latin'] })
+const Navbar = () => (
+  <div className="navigation">
+    {navbarData.map((item) => (
+      <div className="navigation-section" key={item.href}>
+        <ul key={item.href}>
+          <li key={item.href}>
+            <Link key={item.href} href={item.href}>
+              {item.title}
+            </Link>
+            {item.items && (
+              <div className="subnav">
+                <ul>
+                  {item.items.map((subitem) => (
+                    <li key={subitem.href}>
+                      <Link href={subitem.href}>{subitem.title}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </li>
+        </ul>
+      </div>
+    ))}
+  </div>
+)
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://apptiva.ch'),
-  title: 'Apptiva AG',
-  description: 'Webseite der Apptiva AG',
-}
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html lang="de">
-      <body className={`${inter.className}`}>
-        <Navbar></Navbar>
-        <div className="content">{children}</div>
-      </body>
-    </html>
-  )
-}
+export default Navbar

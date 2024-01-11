@@ -56,3 +56,16 @@ body {
 .full {
   grid-column: full;
 }
+
+.subnav {
+  margin-left: 20px;
+}
+
+.navigation {
+  display: flex;
+  background-color: white;
+}
+
+.navigation-section {
+  min-width: 150px;
+}
