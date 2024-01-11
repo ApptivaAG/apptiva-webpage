@@ -10,7 +10,9 @@ import module from './schemas/objects/module'
 import person from './schemas/objects/person'
 import social from './schemas/objects/social'
 import contact from './schemas/objects/contact'
+import skill from './schemas/objects/skill'
+import skillItem from './schemas/objects/skill-item'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [servicePage, faq, glossary, header, module, tag, blog, person, social, contact],
+  types: [servicePage, faq, glossary, header, module, tag, blog, person, social, contact, skill, skillItem],
 }

@@ -7,19 +7,10 @@ export default defineType({
   
   fields: [    
     defineField({
-      name: 'name',
+      name: 'personName',
       title: 'Name',
       type: 'string',
-    }),
-    defineField({
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      options: {
-        source: 'name',
-        maxLength: 96,
-      },
-    }),
+    }),    
     defineField({
       name: 'image',
       title: 'Bild',
@@ -50,6 +41,12 @@ export default defineType({
       name: 'contact',
       type: 'contact',
       
+    }),
+    defineField({
+      title: 'Skills',
+      name: 'skills',
+      type: 'array',
+      of: [{type: 'skill'}]      
     }),
   ],
 })
