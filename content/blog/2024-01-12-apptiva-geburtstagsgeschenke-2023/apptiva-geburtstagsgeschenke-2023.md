@@ -7,12 +7,12 @@ imageCaption: Foto von Annie Spratt auf Unsplash
 date: 2024-01-12
 author: Markus Tanner
 description: >-
-  Bei der Apptiva erhalten Mitarbeiter:innen jedes Jahr ein Geburtstagsgeschenk. Fürs Jahr 2023 haben wir uns mal was anderes einfallen lassen.
+  Bei der Apptiva erhalten die Mitarbeiter:innen jedes Jahr ein Geburtstagsgeschenk. Fürs Jahr 2023 haben wir uns mal was anderes einfallen lassen.
 categories:
   - Allgemein
 ---
 
-Bei der Apptiva erhalten Mitarbeiter:innen jedes Jahr ein Geburtstagsgeschenk. Bis anhin waren das individuelle Geschenke, welche möglichst den Interessen oder Bedürfnissen der Geburtstagskinder gerecht wurden. Aber wie das halt so ist, wird das mit den Geschenkideen immer schwieriger über die Jahre hinweg und bei einem stetig wachsenden Team.
+Bei der Apptiva dürfen sich die Mitarbeiter:innen jedes Jahr auf ein Geburtstagsgeschenk freuen. Bis anhin waren das individuelle Geschenke, welche möglichst den Interessen oder Bedürfnissen der Geburtstagskinder gerecht wurden. Aber wie das halt so ist, wird das mit den Geschenkideen immer schwieriger über die Jahre hinweg. Und das stetig wachsende Team macht die Aufgabe auch nicht einfacher.
 
 ## Die Idee: "Sharing is Caring"
 
@@ -30,4 +30,4 @@ Folgende Unterstützungen wurden auserkoren:
 
 ## Und im 2024?
 
-Das steht noch in den Sternen. Und da der erste Apptiva-Geburtstag des Jahres erst im April sein wird, haben wir auch noch bisschen Bedenkzeit. Die Idee aus dem 2023 fand aber guten Anklang. Es ist gut möglich, dass wir das auch in diesem Jahr wieder so handhaben werden.
+Das steht noch in den Sternen. Und da der erste Apptiva-Geburtstag des Jahres erst im April sein wird, haben wir auch noch bisschen Bedenkzeit. Die Idee aus dem 2023 fand aber guten Anklang. Es ist durchaus möglich, dass wir es auch im neuen Jahr wieder so handhaben werden.
