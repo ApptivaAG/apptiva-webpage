@@ -23,7 +23,7 @@ export const blogBySlugQuery = (
 ) => groq`*[_type == "blog" && slug.current == "${slug}"]
 {
   _createdAt,_updatedAt,  
-  header{title, description, image, content },
+  header{title, description, image, imageAlt, content },
   modules,
   author
 }`

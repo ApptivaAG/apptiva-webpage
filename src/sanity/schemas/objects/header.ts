@@ -27,6 +27,14 @@ export default defineType({
       name: 'image',
       title: 'Bild',
       type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
+      name: 'imageAlt',
+      title: 'Bildbeschreibung',
+      type: 'string',
     }),
     defineField({
       name: 'content',

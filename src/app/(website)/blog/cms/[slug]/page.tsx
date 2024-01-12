@@ -1,7 +1,8 @@
 // ./nextjs-app/app/page.tsx
 
 import { blogBySlugQuery } from '@/sanity/lib/queries'
-import { sanityFetch } from '@/sanity/lib/sanityFetch'
+import { sanityFetch, urlForImage } from '@/sanity/lib/sanityFetch'
+import { getImageDimensions } from '@sanity/asset-utils'
 import { SanityDocument } from 'next-sanity'
 import Image from 'next/image'
 
@@ -33,8 +34,29 @@ export default async function Home(props: { params: { slug: string } }) {
           <br />
           <div>{b.header.title}</div>
           <div>{b.header.description}</div>
-
-          {/*{b.image.asset._ref}<Image src={b.image.ref} alt={'tschese'}></Image>*/}
+          {b.header.image?.asset && (
+            <>
+              <p>todo: alt text image?</p>
+              <p>alt: {b.header.imageAlt}</p>
+              <Image
+                key={b.header.image}
+                src={urlForImage(b.header.image).url()}
+                alt={b.header.imageAlt}
+                width={getImageDimensions(b.header.image).width}
+                height={getImageDimensions(b.header.image).height}
+                placeholder="blur"
+                blurDataURL={urlForImage(b.header.image)
+                  .width(24)
+                  .height(24)
+                  .blur(10)
+                  .url()}
+                sizes="
+            (max-width: 768px) 100vw,
+            (max-width: 1200px) 50vw,
+            40vw"
+              />
+            </>
+          )}
         </>
       ))}
     </div>
