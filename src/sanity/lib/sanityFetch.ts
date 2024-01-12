@@ -46,6 +46,5 @@ export async function sanityFetch<QueryResponse>({
 const builder = imageUrlBuilder(client)
 
 export function urlForImage(source: SanityImageSource) {
-  console.log('at urlForImage')
   return builder.image(source)
 }

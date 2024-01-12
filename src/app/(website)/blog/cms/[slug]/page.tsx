@@ -25,19 +25,18 @@ export default async function Home(props: { params: { slug: string } }) {
 
   return (
     <div className="container mx-auto px-4">
-      <h1>Hoi {props.params.slug}</h1>
       {blog.map((b) => (
         <>
           <div>
-            erstellt: {b._createdAt}, letzte änderung: {b._updatedAt}
+            erstellt: {b._createdAt}
+            <br />
+            letzte änderung: {b._updatedAt}
           </div>
           <br />
-          <div>{b.header.title}</div>
+          <h1>{b.header.title}</h1>
           <div>{b.header.description}</div>
           {b.header.image?.asset && (
             <>
-              <p>todo: alt text image?</p>
-              <p>alt: {b.header.imageAlt}</p>
               <Image
                 key={b.header.image}
                 src={urlForImage(b.header.image).url()}
@@ -55,6 +54,10 @@ export default async function Home(props: { params: { slug: string } }) {
             (max-width: 1200px) 50vw,
             40vw"
               />
+              <p>alt: {b.header.imageAlt}</p>
+              <br />
+              <p>todo: alt text image?</p>
+              <p>todo: sanity image component</p>
             </>
           )}
         </>
