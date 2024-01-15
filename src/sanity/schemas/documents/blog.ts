@@ -28,8 +28,8 @@ export default defineType({
     defineField({
       name: 'author',
       title: 'Autor:in',
-      type: 'array',
-      of: [{ type: 'person' }],
+      type: 'reference',
+      to: [{ type: 'person' }],
     }),
     defineField({
       name: 'tags',
