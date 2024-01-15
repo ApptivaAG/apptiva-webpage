@@ -24,7 +24,7 @@ Die Schweiz verfügt über eine hochqualifizierte Bevölkerung und eine floriere
 
 ## 3. Datenschutz und Sicherheit
 
-Die Schweiz hat einen ausgezeichneten Ruf in Bezug auf Datenschutz und Sicherheit. Dies ist ein entscheidender Faktor, insbesondere bei der Entwicklung von Apps, die mit sensiblen Daten arbeiten. Die strengen Datenschutzgesetze und hohen Sicherheitsstandards bieten Unternehmen und Benutzern gleichermaßen ein hohes Maß an Vertrauen und Sicherheit.
+Die Schweiz hat einen ausgezeichneten Ruf in Bezug auf Datenschutz und Sicherheit. Dies ist ein entscheidender Faktor, insbesondere bei der Entwicklung von Apps, die mit sensiblen Daten arbeiten. Die strengen Datenschutzgesetze und hohen Sicherheitsstandards bieten Unternehmen und Benutzern gleichermassen ein hohes Mass an Vertrauen und Sicherheit.
 
 ## 4. Innovationsfreundliches Umfeld
 
