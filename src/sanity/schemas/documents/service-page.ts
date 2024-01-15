@@ -28,8 +28,8 @@ export default defineType({
   ],
   orderings: [
     {
-      title: 'Alphabet',
-      name: 'alphabet',
+      title: 'Title',
+      name: 'title',
       by: [
         {
           field: 'header.title',

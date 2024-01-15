@@ -43,18 +43,6 @@ export default defineType({
       ],
     }),
   ],
-  orderings: [
-    {
-      title: 'Alphabet',
-      name: 'alphabet',
-      by: [
-        {
-          field: 'header.title',
-          direction: 'asc',
-        },
-      ],
-    },
-  ],
   preview: {
     select: {
       title: 'header.title',

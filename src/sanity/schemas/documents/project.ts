@@ -84,4 +84,16 @@ export default defineType({
       to: [{ type: 'person' }],
     }),
   ],
+  orderings: [
+    {
+      title: 'Project Name',
+      name: 'projectName',
+      by: [
+        {
+          field: 'projectName',
+          direction: 'asc',
+        },
+      ],
+    },
+  ],
 })
