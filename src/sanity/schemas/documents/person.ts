@@ -15,7 +15,7 @@ export default defineType({
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'name',
+        source: 'personName',
         maxLength: 96,
       },
     }),
