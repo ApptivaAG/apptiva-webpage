@@ -1,5 +1,5 @@
 ---
-title: Wie teuer ist ein Produktkonfigurator?
+title: Wie teuer ist ein Produkt&shy;konfigurator?
 slug: wie-teuer-ist-ein-produktkonfigurator
 templateKey: blog-post
 image: money-tree.jpg
