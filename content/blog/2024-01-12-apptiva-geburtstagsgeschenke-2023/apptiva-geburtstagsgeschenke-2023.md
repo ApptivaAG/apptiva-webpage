@@ -1,5 +1,5 @@
 ---
-title: 'Apptiva Geburtstagsgeschenke im 2023'
+title: 'Apptiva Geburtstags&shy;geschenke im 2023'
 slug: apptiva-geburtstagsgeschenke-2023
 templateKey: blog-post
 image: apptiva-geburtstagsgeschenke.jpg
