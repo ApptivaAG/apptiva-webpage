@@ -1,24 +1,43 @@
-import { cache } from 'react'
-import path from 'path'
-import { promises as fs } from 'fs'
-import { Code } from 'bright'
-import remarkGfm from 'remark-gfm'
-import remarkUnwrapImages from 'remark-unwrap-images'
+import MdxImage from '@/components/image'
+import { queryPostFromCms } from '@/sanity/lib/queries'
+import { runQuery } from '@/sanity/lib/sanityFetch'
 import remarkEmbedder from '@remark-embedder/core'
 import oembedTransformer from '@remark-embedder/transformer-oembed'
-import { CompileMDXResult, compileMDX } from 'next-mdx-remote/rsc'
+import { Code } from 'bright'
+import { promises as fs } from 'fs'
+import { InferType } from 'groqd'
 import { imageSize } from 'image-size'
-import MdxImage from '@/components/image'
+import { CompileMDXResult, compileMDX } from 'next-mdx-remote/rsc'
+import path from 'path'
+import { cache } from 'react'
+import remarkGfm from 'remark-gfm'
+import remarkUnwrapImages from 'remark-unwrap-images'
+import { PortableTextBlock } from 'sanity'
 
 const blogPostsPath = 'content/blog'
 const assetsPath = '/assets/blog'
 
-const posts = new Map<
-  string,
-  CompileMDXResult<BlogFrontmatter> & {
-    image: Image | NoImage
-  }
->()
+const posts = new Map<string, MarkdownBlog | CmsBlog>()
+
+interface Blog {
+  title: string
+  description: string
+  slug: string
+  authors: string[]
+  publishDate: string
+}
+interface MarkdownBlog extends Blog {
+  kind: 'markdown'
+  content: CompileMDXResult['content']
+  image: Image | NoImage
+}
+type CmsImage = InferType<typeof queryPostFromCms>[number]['header']
+
+interface CmsBlog extends Blog {
+  kind: 'cms'
+  content: PortableTextBlock[] | undefined
+  image: any
+}
 
 type Image = {
   width?: number | undefined
@@ -40,6 +59,32 @@ type BlogFrontmatter = {
 }
 
 export const getPosts = cache(async () => {
+  getCmsPosts()
+  getMarkdownPosts()
+  return posts
+})
+
+const getCmsPosts = cache(async () => {
+  const postsFromCMS = await runQuery(queryPostFromCms)
+
+  postsFromCMS.forEach((post) => {
+    posts.set(post.slug, {
+      kind: 'cms',
+      //@ts-ignore
+      content: post.content,
+      image: post.image,
+      title: post.header.title ?? '',
+      description: post.header.description ?? '',
+      slug: post.slug,
+      authors: post.authors?.map(
+        (author) => author?.name ?? 'heiri hugentobler'
+      ) ?? ['some name'],
+      publishDate: post._createdAt,
+    })
+  })
+})
+
+const getMarkdownPosts = cache(async () => {
   if (posts.size > 0) {
     return posts
   }
@@ -93,11 +138,17 @@ export const getPosts = cache(async () => {
     const imageInfo = imageSrc ? getImageInfo(imageSrc) : undefined
 
     posts.set(markdown.frontmatter.slug, {
-      ...markdown,
+      kind: 'markdown',
+      content: markdown.content,
       image: {
         src: imageSrc,
         ...imageInfo,
       },
+      title: markdown.frontmatter.title,
+      description: markdown.frontmatter.description,
+      slug: markdown.frontmatter.slug,
+      authors: [markdown.frontmatter.author],
+      publishDate: markdown.frontmatter.date,
     })
   }
 

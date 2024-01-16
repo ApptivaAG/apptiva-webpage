@@ -21,7 +21,7 @@ export async function sanityFetch<QueryResponse>({
   params?: QueryParams
   tags?: string[]
 }): Promise<QueryResponse> {
-  const isDraftMode = draftMode().isEnabled
+  const isDraftMode = false
   if (isDraftMode && !token) {
     throw new Error(
       'The `SANITY_API_READ_TOKEN` environment variable is required.'
@@ -33,19 +33,22 @@ export async function sanityFetch<QueryResponse>({
     .withConfig({ useCdn: !isDraftMode })
     .fetch<QueryResponse>(query, params, {
       cache: isDevelopment || isDraftMode ? undefined : 'force-cache',
+      /*
       ...(isDraftMode && {
         token: token,
         perspective: 'previewDrafts',
       }),
+      */
       next: {
-        ...(isDraftMode && { revalidate: 30 }),
+        // ...(isDraftMode && { revalidate: 30 }),
         tags,
       },
     })
 }
 
 export const runQuery = makeSafeQueryRunner((query) => {
-  const isDraftMode = draftMode().isEnabled
+  const isDraftMode = false
+
   if (isDraftMode && !token) {
     throw new Error(
       'The `SANITY_API_READ_TOKEN` environment variable is required.'

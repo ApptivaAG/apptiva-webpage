@@ -1,5 +1,6 @@
 // ./nextjs-app/sanity/lib/queries.ts
 
+import { q, sanityImage } from 'groqd'
 import { groq } from 'next-sanity'
 
 // Get all posts
@@ -27,3 +28,32 @@ export const blogBySlugQuery = (
   modules,
   author
 }`
+
+export const queryPostFromCms = q('*')
+  .filterByType('blog')
+  .grab$({
+    _createdAt: q.string(),
+    _id: q.string().optional(),
+    slug: q.slug('slug'),
+    name: q.string().optional(),
+    content: q.contentBlocks().optional(),
+    authors: q
+      .array(
+        q
+          .object({
+            name: q.string(),
+          })
+          .optional()
+      )
+      .optional(),
+    image: sanityImage('header.image'),
+    header: q
+      .object({
+        title: q.string().optional().default('In Arbeit'),
+
+        description: q.string().optional().default(''),
+      })
+      .optional()
+      .default({ title: 'In Arbeit', description: '' }),
+    tags: q.array(q.object({ name: q.string().optional() })).optional(),
+  })
