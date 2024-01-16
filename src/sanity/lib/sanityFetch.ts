@@ -5,6 +5,7 @@ import { draftMode } from 'next/headers'
 import { client } from '@/sanity/lib/client'
 import { SanityImageSource } from '@sanity/asset-utils'
 import imageUrlBuilder from '@sanity/image-url'
+import { makeSafeQueryRunner } from 'groqd'
 
 const DEFAULT_PARAMS = {} as QueryParams
 const DEFAULT_TAGS = [] as string[]
@@ -42,6 +43,17 @@ export async function sanityFetch<QueryResponse>({
       },
     })
 }
+
+export const runQuery = makeSafeQueryRunner((query) => {
+  const isDraftMode = draftMode().isEnabled
+  if (isDraftMode && !token) {
+    throw new Error(
+      'The `SANITY_API_READ_TOKEN` environment variable is required.'
+    )
+  }
+
+  return client.withConfig({ useCdn: !isDraftMode }).fetch(query)
+})
 
 const builder = imageUrlBuilder(client)
 
