@@ -20,10 +20,14 @@ export default defineType({
       },
     }),
     defineField({
-      name: 'modules',
-      title: 'Module',
+      name: 'content',
+      title: 'Inhalt',
       type: 'array',
-      of: [{ type: 'module' }],
+      of: [
+        {
+          type: 'block',
+        },
+      ],
     }),
     defineField({
       name: 'author',
