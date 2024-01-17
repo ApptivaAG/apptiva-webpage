@@ -60,7 +60,7 @@ export default async function Home(props: { params: { slug: string } }) {
         </time>{' '}
         von{' '}
         {post.authors.map((a) => (
-          <span>{kebabCaseToTitleCase(a)}</span>
+          <span key={a}>{kebabCaseToTitleCase(a)}</span>
         ))}
         .
       </p>
@@ -75,11 +75,13 @@ export default async function Home(props: { params: { slug: string } }) {
           sizes="(max-width: 600px) 100vw, 1200px"
         />
       )}
-      {post.kind === 'cms' && post.image && <p>theres an image</p>}
+      {post.kind === 'cms' && post.image && <pre>{post.image.asset._ref}</pre>}
       <p className="font-semibold">{post.description}</p>
       {post.kind === 'markdown' && post.content}
       {post.kind === 'cms' &&
-        post.content?.map((content) => <PortableText value={content} />)}
+        post.content?.map((content) => (
+          <PortableText key={content._key} value={content} />
+        ))}
     </>
   )
 }
