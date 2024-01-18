@@ -32,11 +32,12 @@ interface MarkdownBlog extends Blog {
   content: CompileMDXResult['content']
   image: Image | NoImage
 }
-type CmsImage = InferType<typeof queryPostFromCms>[number]['header']
+
+type CmsContent = Array<PortableTextBlock> | undefined
 
 interface CmsBlog extends Blog {
   kind: 'cms'
-  content: PortableTextBlock[] | undefined
+  content: CmsContent
   image: SanityImageSource
 }
 
@@ -71,15 +72,14 @@ const getCmsPosts = cache(async () => {
   postsFromCMS.forEach((post) => {
     posts.set(post.slug, {
       kind: 'cms',
-      //@ts-ignore
-      content: post.content,
+      content: post.content as CmsContent,
       image: post.image,
-      title: post.header.title ?? '',
-      description: post.header.description ?? '',
+      title: post.header.title ?? 'Ohne Title',
+      description: post.header.description ?? 'Ohne Beschreibung',
       slug: post.slug,
-      authors: post.authors?.map(
-        (author) => author?.name ?? 'heiri hugentobler'
-      ) ?? ['some name'],
+      authors: post.authors?.map((author) => author?.name ?? 'Anonymus') ?? [
+        'Anonymus',
+      ],
       publishDate: post._createdAt,
     })
   })

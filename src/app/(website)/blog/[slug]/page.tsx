@@ -25,8 +25,6 @@ export async function generateMetadata(props: {
     notFound()
   }
 
-  console.log('****', post.image.valueOf())
-
   return {
     title: post.title,
     description: post.description,
