@@ -1,6 +1,8 @@
+import { urlForImage } from '@/sanity/lib/image'
 import { getPosts } from '@/utils/blog'
 import { kebabCaseToTitleCase } from '@/utils/format'
 import { PortableText } from '@portabletext/react'
+import { getImageDimensions } from '@sanity/asset-utils'
 import { Metadata } from 'next'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
@@ -22,6 +24,8 @@ export async function generateMetadata(props: {
   if (!post) {
     notFound()
   }
+
+  console.log('****', post.image.valueOf())
 
   return {
     title: post.title,
@@ -75,7 +79,25 @@ export default async function Home(props: { params: { slug: string } }) {
           sizes="(max-width: 600px) 100vw, 1200px"
         />
       )}
-      {post.kind === 'cms' && post.image && <pre>{post.image.asset._ref}</pre>}
+      {post.kind === 'cms' && post.image && (
+        <Image
+          key={post.image.toString()}
+          src={urlForImage(post.image).url()}
+          alt="hoi"
+          width={getImageDimensions(post.image).width}
+          height={getImageDimensions(post.image).height}
+          placeholder="blur"
+          blurDataURL={urlForImage(post.image)
+            .width(24)
+            .height(24)
+            .blur(10)
+            .url()}
+          sizes="
+            (max-width: 768px) 100vw,
+            (max-width: 1200px) 50vw,
+            40vw"
+        />
+      )}
       <p className="font-semibold">{post.description}</p>
       {post.kind === 'markdown' && post.content}
       {post.kind === 'cms' &&

@@ -57,9 +57,3 @@ export const runQuery = makeSafeQueryRunner((query) => {
 
   return client.withConfig({ useCdn: !isDraftMode }).fetch(query)
 })
-
-const builder = imageUrlBuilder(client)
-
-export function urlForImage(source: SanityImageSource) {
-  return builder.image(source)
-}

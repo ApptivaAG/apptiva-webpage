@@ -3,6 +3,7 @@ import { queryPostFromCms } from '@/sanity/lib/queries'
 import { runQuery } from '@/sanity/lib/sanityFetch'
 import remarkEmbedder from '@remark-embedder/core'
 import oembedTransformer from '@remark-embedder/transformer-oembed'
+import { SanityImageAsset, SanityImageSource } from '@sanity/asset-utils'
 import { Code } from 'bright'
 import { promises as fs } from 'fs'
 import { InferType } from 'groqd'
@@ -36,7 +37,7 @@ type CmsImage = InferType<typeof queryPostFromCms>[number]['header']
 interface CmsBlog extends Blog {
   kind: 'cms'
   content: PortableTextBlock[] | undefined
-  image: any
+  image: SanityImageSource
 }
 
 type Image = {
@@ -59,8 +60,8 @@ type BlogFrontmatter = {
 }
 
 export const getPosts = cache(async () => {
-  getCmsPosts()
-  getMarkdownPosts()
+  await getCmsPosts()
+  await getMarkdownPosts()
   return posts
 })
 
@@ -85,10 +86,6 @@ const getCmsPosts = cache(async () => {
 })
 
 const getMarkdownPosts = cache(async () => {
-  if (posts.size > 0) {
-    return posts
-  }
-
   console.log('getting posts...')
 
   const files = await fs.readdir(blogPostsPath, { recursive: true })
