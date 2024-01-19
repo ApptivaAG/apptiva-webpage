@@ -13,11 +13,6 @@ export default async function Home() {
         Blogposts
       </h1>
 
-      <h2
-        style={{ fontSize: '20px', fontWeight: 'bold', paddingBlock: '0.5em' }}
-      >
-        Files
-      </h2>
       <ul>
         {Array.from(posts.entries()).map(([slug, post]) => (
           <li key={slug}>
