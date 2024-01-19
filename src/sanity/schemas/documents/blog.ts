@@ -33,7 +33,7 @@ export default defineType({
       name: 'author',
       title: 'Autor:in',
       type: 'reference',
-      to: [{ type: 'person' }],
+      to: { type: 'person' },
     }),
     defineField({
       name: 'tags',

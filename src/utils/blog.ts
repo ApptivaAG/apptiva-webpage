@@ -3,62 +3,20 @@ import { queryPostFromCms } from '@/sanity/lib/queries'
 import { runQuery } from '@/sanity/lib/sanityFetch'
 import remarkEmbedder from '@remark-embedder/core'
 import oembedTransformer from '@remark-embedder/transformer-oembed'
-import { SanityImageAsset, SanityImageSource } from '@sanity/asset-utils'
 import { Code } from 'bright'
 import { promises as fs } from 'fs'
-import { InferType } from 'groqd'
 import { imageSize } from 'image-size'
-import { CompileMDXResult, compileMDX } from 'next-mdx-remote/rsc'
+import { compileMDX } from 'next-mdx-remote/rsc'
 import path from 'path'
 import { cache } from 'react'
 import remarkGfm from 'remark-gfm'
 import remarkUnwrapImages from 'remark-unwrap-images'
-import { PortableTextBlock } from 'sanity'
+import { BlogFrontmatter, CmsBlog, CmsContent, MarkdownBlog } from './types'
 
 const blogPostsPath = 'content/blog'
 const assetsPath = '/assets/blog'
 
 const posts = new Map<string, MarkdownBlog | CmsBlog>()
-
-interface Blog {
-  title: string
-  description: string
-  slug: string
-  authors: string[]
-  publishDate: string
-}
-interface MarkdownBlog extends Blog {
-  kind: 'markdown'
-  content: CompileMDXResult['content']
-  image: Image | NoImage
-}
-
-type CmsContent = Array<PortableTextBlock> | undefined
-
-interface CmsBlog extends Blog {
-  kind: 'cms'
-  content: CmsContent
-  image: SanityImageSource
-}
-
-type Image = {
-  width?: number | undefined
-  height?: number | undefined
-  orientation?: number | undefined
-  type?: string | undefined
-  src: string
-}
-type NoImage = {
-  src: undefined
-}
-type BlogFrontmatter = {
-  title: string
-  slug: string
-  author: string
-  date: string
-  image?: string
-  description: string
-}
 
 export const getPosts = cache(async () => {
   await getCmsPosts()
@@ -69,6 +27,12 @@ export const getPosts = cache(async () => {
 const getCmsPosts = cache(async () => {
   const postsFromCMS = await runQuery(queryPostFromCms)
 
+  console.log(
+    postsFromCMS.forEach((p) => {
+      console.log('authors', p.authors)
+    })
+  )
+
   postsFromCMS.forEach((post) => {
     posts.set(post.slug, {
       kind: 'cms',
@@ -77,9 +41,9 @@ const getCmsPosts = cache(async () => {
       title: post.header.title ?? 'Ohne Title',
       description: post.header.description ?? 'Ohne Beschreibung',
       slug: post.slug,
-      authors: post.authors?.map((author) => author?.name ?? 'Anonymus') ?? [
-        'Anonymus',
-      ],
+      imageAlt: post.header.imageAlt,
+      author: post.author ?? 'Anonymous',
+      //authors: post.authors ?? ['Anonymus 123'],
       publishDate: post._createdAt,
     })
   })
@@ -144,7 +108,7 @@ const getMarkdownPosts = cache(async () => {
       title: markdown.frontmatter.title,
       description: markdown.frontmatter.description,
       slug: markdown.frontmatter.slug,
-      authors: [markdown.frontmatter.author],
+      author: markdown.frontmatter.author,
       publishDate: markdown.frontmatter.date,
     })
   }

@@ -28,9 +28,9 @@ export async function generateMetadata(props: {
   return {
     title: post.title,
     description: post.description,
-    authors: post.authors.map((a) => ({
-      name: a,
-    })),
+    // authors: post.authors.map((a) => ({
+    //   name: a,
+    // })),
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
       type: 'article',
@@ -60,11 +60,12 @@ export default async function Home(props: { params: { slug: string } }) {
         <time dateTime={post.publishDate}>
           {new Date(post.publishDate).toLocaleDateString('de-CH')}
         </time>{' '}
-        von{' '}
-        {post.authors.map((a) => (
-          <span key={a}>{kebabCaseToTitleCase(a)}</span>
-        ))}
-        .
+        von
+        <p>{post.author.toString()}.</p>
+        {/* {post.authors.map((a) => (
+          <p>{a.toString()}</p>
+          // <span key={a}>{kebabCaseToTitleCase(a)}</span>
+        ))} */}
       </p>
 
       {post.kind === 'markdown' && post.image.src && (
@@ -81,7 +82,7 @@ export default async function Home(props: { params: { slug: string } }) {
         <Image
           key={post.image.toString()}
           src={urlForImage(post.image).url()}
-          alt="hoi"
+          alt={post.imageAlt}
           width={getImageDimensions(post.image).width}
           height={getImageDimensions(post.image).height}
           placeholder="blur"
@@ -98,10 +99,12 @@ export default async function Home(props: { params: { slug: string } }) {
       )}
       <p className="font-semibold">{post.description}</p>
       {post.kind === 'markdown' && post.content}
+      <hr />
       {post.kind === 'cms' &&
         post.content?.map((content) => (
           <PortableText key={content._key} value={content} />
         ))}
+      <hr />
     </>
   )
 }

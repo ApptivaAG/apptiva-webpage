@@ -37,21 +37,21 @@ export const queryPostFromCms = q('*')
     slug: q.slug('slug'),
     name: q.string().optional(),
     content: q.contentBlocks().optional(),
-    authors: q
-      .array(
-        q
-          .object({
-            name: q.string(),
-          })
-          .optional()
-      )
-      .optional(),
+    author: q('author').deref().grabOne('personName', q.string()).nullable(),
+    authors: q('*')
+      .filterByType('person')
+      .filter('references(^._id)')
+      .grab({ _id: q.string(), personName: q.string() }),
+    // .object({
+    //   personName: q.string().optional().default('no name found'),
+    // })
+    // .optional(),
     image: sanityImage('header.image'),
     header: q
       .object({
         title: q.string().optional().default('In Arbeit'),
-
         description: q.string().optional().default(''),
+        imageAlt: q.string().optional().default('Fehlende Bildbeschreibung'),
       })
       .optional()
       .default({ title: 'In Arbeit', description: '' }),
