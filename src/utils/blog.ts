@@ -27,12 +27,6 @@ export const getPosts = cache(async () => {
 const getCmsPosts = cache(async () => {
   const postsFromCMS = await runQuery(queryPostFromCms)
 
-  console.log(
-    postsFromCMS.forEach((p) => {
-      console.log('authors', p.authors)
-    })
-  )
-
   postsFromCMS.forEach((post) => {
     posts.set(post.slug, {
       kind: 'cms',
