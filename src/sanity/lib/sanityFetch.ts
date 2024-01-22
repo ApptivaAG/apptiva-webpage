@@ -46,14 +46,16 @@ export async function sanityFetch<QueryResponse>({
     })
 }
 
-export const runQuery = makeSafeQueryRunner((query) => {
-  const isDraftMode = false
+export const runQuery = makeSafeQueryRunner(
+  (query, params: Record<string, number | string> = {}) => {
+    const isDraftMode = false
 
-  if (isDraftMode && !token) {
-    throw new Error(
-      'The `SANITY_API_READ_TOKEN` environment variable is required.'
-    )
+    if (isDraftMode && !token) {
+      throw new Error(
+        'The `SANITY_API_READ_TOKEN` environment variable is required.'
+      )
+    }
+
+    return client.withConfig({ useCdn: !isDraftMode }).fetch(query, params)
   }
-
-  return client.withConfig({ useCdn: !isDraftMode }).fetch(query)
-})
+)
