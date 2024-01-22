@@ -18,6 +18,11 @@ export const blogsQuery = groq`*[_type == "blog"] {
   _id, slug, header{title}, tags
 }`
 
+// Get all service pages
+export const servicePagesQuery = groq`*[_type == "service-page"] {
+  _id, slug, header{title}, tags
+}`
+
 // Get blog Entry by Slug
 export const blogBySlugQuery = (
   slug: string
@@ -27,6 +32,15 @@ export const blogBySlugQuery = (
   header{title, description, image, imageAlt, content },
   modules,
   author
+}`
+
+export const servicePageBySlugQuery = (
+  slug: string
+) => groq`*[_type == "service-page" && slug.current == "${slug}"]
+{
+  _createdAt,_updatedAt,  
+  header{title, description, image, imageAlt, content},
+  modules{title, layout, image, content},
 }`
 
 export const queryPostFromCms = q('*')
@@ -86,4 +100,30 @@ export const projectBySlugQuery = q('*')
     customer: q.string(),
     contactPerson: q('contactPerson').deref().grabOne('personName', q.string()),
     content: q.array(q.contentBlock()),
+  })
+
+export const queryServicePagesFromCms = q('*')
+  .filterByType('service-page')
+  .grab({
+    _createdAt: q.string(),
+    _id: q.string().optional(),
+    slug: q.slug('slug'),
+    image: sanityImage('header.image').nullable(),
+    header: q
+      .object({
+        title: q.string().optional().default('In Arbeit'),
+        description: q.string().optional().default(''),
+      })
+      .optional()
+      .default({ title: 'In Arbeit', description: '' }),
+    modules: q('modules')
+      .filter()
+      .grab({
+        title: q.string().nullable().default('Ohne Titel'),
+        layout: q.string().nullable().default(''),
+        image: sanityImage('image').nullable(),
+        imageAlt: q.string().nullable(),
+        content: q.contentBlocks().nullable().optional(),
+      })
+      .nullable(),
   })
