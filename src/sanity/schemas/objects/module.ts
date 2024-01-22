@@ -21,6 +21,11 @@ export default defineType({
       type: 'image',
     }),
     defineField({
+      name: 'imageAlt',
+      title: 'Bildbeschreibung',
+      type: 'string',
+    }),
+    defineField({
       name: 'content',
       title: 'Inhalt',
       type: 'array',
