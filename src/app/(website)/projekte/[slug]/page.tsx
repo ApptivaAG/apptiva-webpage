@@ -1,16 +1,15 @@
 import { projectBySlugQuery } from '@/sanity/lib/queries'
-import { sanityFetch } from '@/sanity/lib/sanityFetch'
 import { notFound } from 'next/navigation'
-import { SanityDocument } from 'sanity'
 import Image from 'next/image'
 import { urlForImage } from '@/sanity/lib/image'
 import { getImageDimensions } from '@sanity/asset-utils'
 import { PortableText } from '@portabletext/react'
+import { runQuery } from '@/sanity/lib/sanityFetch'
 
 export default async function Home(props: { params: { slug: string } }) {
-  const project = (await sanityFetch<SanityDocument>({
-    query: projectBySlugQuery(props.params.slug),
-  })) as any // TODO: type
+  const project = await runQuery(projectBySlugQuery, {
+    slug: props.params.slug,
+  })
 
   if (!project) {
     notFound()
@@ -46,9 +45,11 @@ export default async function Home(props: { params: { slug: string } }) {
       <div>{project.technologies}</div>
       <div>{project.customer}</div>
 
-      <PortableText key={project.content._key} value={project.content} />
+      {project.content?.map((content) => (
+        <PortableText key={content._key} value={content} />
+      ))}
 
-      <div>{project.contactPerson.personName}</div>
+      <div>{project.contactPerson}</div>
     </>
   )
 }

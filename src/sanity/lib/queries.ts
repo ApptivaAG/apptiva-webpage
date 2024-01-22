@@ -58,11 +58,32 @@ export const queryPostFromCms = q('*')
     tags: q.array(q.object({ name: q.string().optional() })).optional(),
   })
 
-export const projectsQuery = groq`*[_type == "project"]{
-    _id, projectName, slug, order, description} | order(order asc)`
+export const projectsQuery = q('*')
+  .filterByType('project')
+  .grab({
+    _id: q.string().optional(),
+    projectName: q.string(),
+    slug: q.slug('slug'),
+    order: q.number().optional(),
+    description: q.string(),
+  })
+  .order('order asc')
 
-export const projectBySlugQuery = (slug: string) =>
-  groq`*[_type == "project" && slug.current == "${slug}"][0]{
-    projectName,image,imageAlt,description,tasks,time,technologies,customer,content,
-    contactPerson ->{personName}
-  }`
+export const projectBySlugQuery = q('*')
+  .filterByType('project')
+  .filter('slug.current == $slug')
+  .slice(0)
+  .grab({
+    _id: q.string().optional(),
+    projectName: q.string(),
+    slug: q.slug('slug'),
+    image: sanityImage('image'),
+    imageAlt: q.string(),
+    description: q.string(),
+    tasks: q.string(),
+    time: q.string(),
+    technologies: q.string(),
+    customer: q.string(),
+    contactPerson: q('contactPerson').deref().grabOne('personName', q.string()),
+    content: q.array(q.contentBlock()),
+  })

@@ -1,11 +1,10 @@
 // ./nextjs-app/app/page.tsx
 
-import { SanityDocument } from 'next-sanity'
 import { projectsQuery } from '@/sanity/lib/queries'
-import { sanityFetch } from '@/sanity/lib/sanityFetch'
+import { runQuery } from '@/sanity/lib/sanityFetch'
 
 export default async function Home() {
-  const projects = await sanityFetch<SanityDocument[]>({ query: projectsQuery })
+  const projects = await runQuery(projectsQuery)
 
   return (
     <div className="container mx-auto px-4">
@@ -16,7 +15,7 @@ export default async function Home() {
       </h1>
       {projects.map((project) => (
         <div key={project._id}>
-          <a href={'/projekte/' + project.slug.current}>
+          <a href={'/projekte/' + project.slug}>
             <h2
               style={{
                 fontSize: '20px',
