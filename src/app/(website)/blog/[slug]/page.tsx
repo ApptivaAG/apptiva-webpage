@@ -60,8 +60,7 @@ export default async function Home(props: { params: { slug: string } }) {
         <time dateTime={post.publishDate}>
           {new Date(post.publishDate).toLocaleDateString('de-CH')}
         </time>{' '}
-        von
-        <p>{post.author.toString()}.</p>
+        von {post.author.toString()}.
         {/* {post.authors.map((a) => (
           <p>{a.toString()}</p>
           // <span key={a}>{kebabCaseToTitleCase(a)}</span>
