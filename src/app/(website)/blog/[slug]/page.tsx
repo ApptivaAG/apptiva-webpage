@@ -104,6 +104,8 @@ export default async function Home(props: { params: { slug: string } }) {
           <PortableText key={content._key} value={content} />
         ))}
       <hr />
+      <h2>Tags:</h2>
+      <ul>{post.tags && post.tags.map((tag) => <p>{tag}</p>)}</ul>
     </>
   )
 }

@@ -56,10 +56,6 @@ export const queryPostFromCms = q('*')
       .filterByType('person')
       .filter('references(^._id)')
       .grab({ _id: q.string(), personName: q.string() }),
-    // .object({
-    //   personName: q.string().optional().default('no name found'),
-    // })
-    // .optional(),
     image: sanityImage('header.image'),
     header: q
       .object({
@@ -69,7 +65,7 @@ export const queryPostFromCms = q('*')
       })
       .optional()
       .default({ title: 'In Arbeit', description: '' }),
-    tags: q.array(q.object({ name: q.string().optional() })).optional(),
+    tags: q('tags').filter().deref().grabOne('name', q.string()),
   })
 
 export const projectsQuery = q('*')

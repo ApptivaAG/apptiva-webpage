@@ -39,6 +39,7 @@ const getCmsPosts = cache(async () => {
       author: post.author ?? 'Anonymous',
       //authors: post.authors ?? ['Anonymus 123'],
       publishDate: post._createdAt,
+      tags: post.tags,
     })
   })
 })

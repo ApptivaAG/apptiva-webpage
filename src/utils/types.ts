@@ -8,6 +8,7 @@ export interface Blog {
   slug: string
   author: string | Author
   publishDate: string
+  tags?: string[]
 }
 export interface MarkdownBlog extends Blog {
   kind: 'markdown'
