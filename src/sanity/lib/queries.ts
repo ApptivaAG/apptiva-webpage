@@ -57,3 +57,12 @@ export const queryPostFromCms = q('*')
       .default({ title: 'In Arbeit', description: '' }),
     tags: q.array(q.object({ name: q.string().optional() })).optional(),
   })
+
+export const projectsQuery = groq`*[_type == "project"]{
+    _id, projectName, slug, order, description} | order(order asc)`
+
+export const projectBySlugQuery = (slug: string) =>
+  groq`*[_type == "project" && slug.current == "${slug}"][0]{
+    projectName,image,imageAlt,description,tasks,time,technologies,customer,content,
+    contactPerson ->{personName}
+  }`
