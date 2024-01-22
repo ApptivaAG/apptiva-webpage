@@ -4,7 +4,7 @@ slug: vorteile-der-app-entwicklung-in-der-schweiz
 templateKey: blog-post
 image: entwicklung-schweiz.jpg
 imageCaption: Photo von Johannes Hofmann auf Unsplash
-date: 2024-01-15
+date: 2024-01-22
 author: Philip Schönholzer
 description: >-
   Die Schweiz - das ideale Terrain für App-Entwicklung. Erfahre, warum die Schweiz für zuverlässige, sichere und kreative App-Entwicklung steht.
