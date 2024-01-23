@@ -35,7 +35,6 @@ const getCmsPosts = cache(async () => {
       title: post.header.title ?? 'Ohne Titel',
       description: post.header.description ?? 'Ohne Beschreibung',
       slug: post.slug,
-      imageAlt: post.header.imageAlt,
       author: post.author ?? 'Anonymous',
       //authors: post.authors ?? ['Anonymus 123'],
       publishDate: post._createdAt,

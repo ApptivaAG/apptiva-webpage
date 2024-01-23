@@ -26,8 +26,7 @@ const getCmsServicePages = cache(async () => {
     )
     .forEach((servicePage) => {
       servicePages.set(servicePage.slug, {
-        image: servicePage.header?.image,
-        imageAlt: servicePage.header?.imageAlt,
+        image: servicePage.header?.image ?? null,
         title: servicePage.header?.title ?? 'Ohne Titel',
         description: servicePage.header?.description ?? 'Ohne Beschreibung',
         content: servicePage.header?.content as CmsContent,

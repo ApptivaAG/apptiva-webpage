@@ -26,7 +26,7 @@ export default async function Home(props: { params: { slug: string } }) {
         <Image
           key={project.image.toString()}
           src={urlForImage(project.image).url()}
-          alt={project.imageAlt ?? ''}
+          alt={project.image.alt}
           width={getImageDimensions(project.image).width}
           height={getImageDimensions(project.image).height}
           placeholder="blur"

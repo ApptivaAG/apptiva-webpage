@@ -27,7 +27,7 @@ export default async function Home() {
                   <Image
                     key={module.image.toString()}
                     src={urlForImage(module.image).url()}
-                    alt={module.imageAlt ?? ''}
+                    alt={module.image.alt}
                     width={getImageDimensions(module.image).width}
                     height={getImageDimensions(module.image).height}
                     placeholder="blur"

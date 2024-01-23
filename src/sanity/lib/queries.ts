@@ -29,7 +29,7 @@ export const blogBySlugQuery = (
 ) => groq`*[_type == "blog" && slug.current == "${slug}"]
 {
   _createdAt,_updatedAt,  
-  header{title, description, image, imageAlt, content },
+  header{title, description, image, content },
   modules,
   author
 }`
@@ -39,7 +39,7 @@ export const servicePageBySlugQuery = (
 ) => groq`*[_type == "service-page" && slug.current == "${slug}"]
 {
   _createdAt,_updatedAt,  
-  header{title, description, image, imageAlt, content},
+  header{title, description, image, content},
   modules{title, layout, image, content},
 }`
 
@@ -60,13 +60,14 @@ export const queryPostFromCms = q('*')
       .filter('references(^._id)')
       .grab$({ _id: q.string(), personName: q.string().optional() }),
     image: sanityImage('header.image', {
-      additionalFields: { alt: q.string().nullable() },
-    }),
+      additionalFields: {
+        alt: q.string().optional().default('Fehlende Bildbeschreibung'),
+      },
+    }).nullable(),
     header: q
       .object({
         title: q.string().optional().default('In Arbeit'),
         description: q.string().optional().default(''),
-        imageAlt: q.string().optional().default('Fehlende Bildbeschreibung'),
       })
       .optional()
       .default({ title: 'In Arbeit', description: '' }),
@@ -96,8 +97,11 @@ export const projectBySlugQuery = q('*')
     _id: q.string(),
     projectName: q.string().optional(),
     slug: ['slug.current', q.string().optional()],
-    image: sanityImage('image').nullable(),
-    imageAlt: q.string().optional(),
+    image: sanityImage('image', {
+      additionalFields: {
+        alt: q.string().optional().default('Fehlende Bildbeschreibung'),
+      },
+    }).nullable(),
     description: q.string().optional(),
     tasks: q.string().optional(),
     time: q.string().optional(),
@@ -123,8 +127,11 @@ export const queryServicePagesFromCms = q('*')
       .grab$({
         title: q.string().optional().default('In Arbeit'),
         description: q.string().optional(),
-        image: sanityImage('image').nullable(),
-        imageAlt: q.string().optional(),
+        image: sanityImage('image', {
+          additionalFields: {
+            alt: q.string().optional().default('Fehlende Bildbeschreibung'),
+          },
+        }).nullable(),
         content: q.contentBlocks().optional(),
       })
       .nullable(),
@@ -133,8 +140,11 @@ export const queryServicePagesFromCms = q('*')
       .grab$({
         title: q.string().optional().default('Ohne Titel'),
         layout: q.string().optional(),
-        image: sanityImage('image').nullable(),
-        imageAlt: q.string().optional(),
+        image: sanityImage('image', {
+          additionalFields: {
+            alt: q.string().optional().default('Fehlende Bildbeschreibung'),
+          },
+        }).nullable(),
         content: q.contentBlocks().optional(),
       })
       .nullable(),
@@ -152,8 +162,11 @@ export const glossaryQuery = q('*')
       .grab$({
         title: q.string().optional().default('Ohne Titel'),
         layout: q.string().optional(),
-        image: sanityImage('image').nullable(),
-        imageAlt: q.string().optional(),
+        image: sanityImage('image', {
+          additionalFields: {
+            alt: q.string().optional().default('Fehlende Bildbeschreibung'),
+          },
+        }).nullable(),
         content: q.contentBlocks().optional(),
       })
       .nullable(),
