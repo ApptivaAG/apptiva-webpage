@@ -66,3 +66,10 @@ export type Module = {
   content?: CmsContent
 }
 
+export interface Glossary {
+  title: string
+  slug: string
+  summary?: CmsContent
+  modules?: Module[] | null
+  tags?: string[]
+}

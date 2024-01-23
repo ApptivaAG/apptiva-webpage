@@ -58,10 +58,7 @@ export default async function Home(props: { params: { slug: string } }) {
                 .height(24)
                 .blur(10)
                 .url()}
-              sizes="
-            (max-width: 768px) 100vw,
-            (max-width: 1200px) 50vw,
-            40vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
             />
           )}
           {module.content?.map((content) => (

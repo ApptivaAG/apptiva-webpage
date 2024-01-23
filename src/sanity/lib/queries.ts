@@ -135,3 +135,27 @@ export const queryServicePagesFromCms = q('*')
       })
       .nullable(),
   })
+
+export const glossaryQuery = q('*')
+  .filterByType('glossary')
+  .grab$({
+    _id: q.string(),
+    title: q.string().optional().default('Ohne Titel'),
+    slug: ['slug.current', q.string().optional()],
+    summary: q.contentBlocks().optional(),
+    modules: q('modules')
+      .filter()
+      .grab$({
+        title: q.string().optional().default('Ohne Titel'),
+        layout: q.string().optional(),
+        image: sanityImage('image').nullable(),
+        imageAlt: q.string().optional(),
+        content: q.contentBlocks().optional(),
+      })
+      .nullable(),
+    tags: q('tags')
+      .filter()
+      .deref()
+      .grabOne$('name', q.string().optional())
+      .nullable(),
+  })

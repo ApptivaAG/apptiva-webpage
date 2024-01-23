@@ -30,6 +30,13 @@ export default defineType({
       options: {
         hotspot: true,
       },
+      fields: [
+        {
+          name: 'alt',
+          title: 'Bildbeschreibung',
+          type: 'string',
+        },
+      ],
     }),
     defineField({
       name: 'imageAlt',
