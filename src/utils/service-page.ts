@@ -1,32 +1,10 @@
 import { queryServicePagesFromCms } from '@/sanity/lib/queries'
 import { runQuery } from '@/sanity/lib/sanityFetch'
-import { SanityImageSource } from '@sanity/asset-utils'
-import { imageSize } from 'image-size'
-import path from 'path'
+import { InferType } from 'groqd'
 import { cache } from 'react'
-import { PortableTextBlock } from 'sanity'
+import { CmsContent, Module, ServicePage } from './types'
 
 const servicePages = new Map<string, ServicePage>()
-
-interface ServicePage {
-  title: string
-  image?: SanityImageSource | null
-  imageAlt?: string | null
-  description: string
-  content?: CmsContent | null
-  slug: string
-  modules?: Module[] | null
-}
-
-type CmsContent = Array<PortableTextBlock> | undefined
-
-type Module = {
-  title?: string | null
-  layout?: string | null
-  image?: SanityImageSource | null
-  imageAlt?: string | null
-  content: CmsContent | null
-}
 
 export const getServicePages = cache(async () => {
   await getCmsServicePages()
@@ -36,19 +14,25 @@ export const getServicePages = cache(async () => {
 const getCmsServicePages = cache(async () => {
   const servicePagesFromCMS = await runQuery(queryServicePagesFromCms)
 
-  servicePagesFromCMS.forEach((servicePage) => {
-    servicePages.set(servicePage.slug, {
-      image: servicePage.header?.image,
-      imageAlt: servicePage.header?.imageAlt,
-      title: servicePage.header?.title ?? 'Ohne Title',
-      description: servicePage.header?.description ?? 'Ohne Beschreibung',
-      content: servicePage.header?.content as CmsContent,
-      slug: servicePage.slug,
-      modules: servicePage.modules as Module[],
-    })
-  })
-})
+  type CmsServicePageWithSlug = InferType<
+    typeof queryServicePagesFromCms
+  >[number] & {
+    slug: string
+  }
 
-export function getImageInfo(imageSrc: string) {
-  return imageSize(path.join('./public', imageSrc))
-}
+  servicePagesFromCMS
+    .filter(
+      (servicePage): servicePage is CmsServicePageWithSlug => !!servicePage.slug
+    )
+    .forEach((servicePage) => {
+      servicePages.set(servicePage.slug, {
+        image: servicePage.header?.image,
+        imageAlt: servicePage.header?.imageAlt,
+        title: servicePage.header?.title ?? 'Ohne Titel',
+        description: servicePage.header?.description ?? 'Ohne Beschreibung',
+        content: servicePage.header?.content as CmsContent,
+        slug: servicePage.slug,
+        modules: servicePage.modules as Module[],
+      })
+    })
+})

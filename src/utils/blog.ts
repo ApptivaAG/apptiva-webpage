@@ -32,7 +32,7 @@ const getCmsPosts = cache(async () => {
       kind: 'cms',
       content: post.content as CmsContent,
       image: post.image,
-      title: post.header.title ?? 'Ohne Title',
+      title: post.header.title ?? 'Ohne Titel',
       description: post.header.description ?? 'Ohne Beschreibung',
       slug: post.slug,
       imageAlt: post.header.imageAlt,

@@ -48,7 +48,7 @@ export const queryPostFromCms = q('*')
   .grab$({
     _createdAt: q.string(),
     _id: q.string(),
-    slug: q.slug('slug'),
+    slug: ['slug.current', q.string().optional()],
     name: q.string().optional(),
     content: q.contentBlocks().optional(),
     author: q('author')
@@ -59,7 +59,9 @@ export const queryPostFromCms = q('*')
       .filterByType('person')
       .filter('references(^._id)')
       .grab$({ _id: q.string(), personName: q.string().optional() }),
-    image: sanityImage('header.image'),
+    image: sanityImage('header.image', {
+      additionalFields: { alt: q.string().nullable() },
+    }),
     header: q
       .object({
         title: q.string().optional().default('In Arbeit'),
@@ -80,7 +82,7 @@ export const projectsQuery = q('*')
   .grab$({
     _id: q.string(),
     projectName: q.string().optional(),
-    slug: q.slug('slug'),
+    slug: ['slug.current', q.string().optional()],
     order: q.number().optional(),
     description: q.string().optional(),
   })
@@ -93,7 +95,7 @@ export const projectBySlugQuery = q('*')
   .grab$({
     _id: q.string(),
     projectName: q.string().optional(),
-    slug: q.slug('slug'),
+    slug: ['slug.current', q.string().optional()],
     image: sanityImage('image').nullable(),
     imageAlt: q.string().optional(),
     description: q.string().optional(),
@@ -112,7 +114,7 @@ export const queryServicePagesFromCms = q('*')
   .filterByType('service-page')
   .grab$({
     _id: q.string(),
-    slug: q.slug('slug'),
+    slug: ['slug.current', q.string().optional()],
     header: q('header')
       .grab$({
         title: q.string().optional().default('In Arbeit'),

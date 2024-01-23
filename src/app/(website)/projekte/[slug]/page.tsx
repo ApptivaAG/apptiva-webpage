@@ -22,23 +22,25 @@ export default async function Home(props: { params: { slug: string } }) {
       >
         {project.projectName}
       </h1>
-      <Image
-        key={project.image.toString()}
-        src={urlForImage(project.image).url()}
-        alt={project.imageAlt}
-        width={getImageDimensions(project.image).width}
-        height={getImageDimensions(project.image).height}
-        placeholder="blur"
-        blurDataURL={urlForImage(project.image)
-          .width(24)
-          .height(24)
-          .blur(10)
-          .url()}
-        sizes="
+      {project.image && (
+        <Image
+          key={project.image.toString()}
+          src={urlForImage(project.image).url()}
+          alt={project.imageAlt ?? ''}
+          width={getImageDimensions(project.image).width}
+          height={getImageDimensions(project.image).height}
+          placeholder="blur"
+          blurDataURL={urlForImage(project.image)
+            .width(24)
+            .height(24)
+            .blur(10)
+            .url()}
+          sizes="
             (max-width: 768px) 100vw,
             (max-width: 1200px) 50vw,
             40vw"
-      />
+        />
+      )}
       <div>{project.description}</div>
       <div>{project.tasks}</div>
       <div>{project.time}</div>

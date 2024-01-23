@@ -47,3 +47,22 @@ export type BlogFrontmatter = {
 export type Author = {
   personName: string
 }
+
+export interface ServicePage {
+  title: string
+  image?: SanityImageSource | null
+  imageAlt?: string
+  description: string
+  content?: CmsContent
+  slug: string
+  modules?: Module[] | null
+}
+
+export type Module = {
+  title?: string
+  layout?: string
+  image?: SanityImageSource | null
+  imageAlt?: string
+  content?: CmsContent
+}
+
