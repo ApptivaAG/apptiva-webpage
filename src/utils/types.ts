@@ -47,3 +47,7 @@ export type BlogFrontmatter = {
 export type Author = {
   personName: string
 }
+
+export type Tag = {
+  name: string
+}
