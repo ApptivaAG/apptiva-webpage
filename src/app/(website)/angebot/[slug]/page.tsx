@@ -18,6 +18,30 @@ export default async function Home(props: { params: { slug: string } }) {
         {servicePage?.title}
       </h1>
 
+      <p>{servicePage?.description}</p>
+      {servicePage?.image && (
+        <Image
+          key={servicePage.image.toString()}
+          src={urlForImage(servicePage.image).url()}
+          alt={servicePage.imageAlt ?? ''}
+          width={getImageDimensions(servicePage.image).width}
+          height={getImageDimensions(servicePage.image).height}
+          placeholder="blur"
+          blurDataURL={urlForImage(servicePage.image)
+            .width(24)
+            .height(24)
+            .blur(10)
+            .url()}
+          sizes="
+              (max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              40vw"
+        />
+      )}
+      {servicePage?.content?.map((content) => (
+        <PortableText key={content._key} value={content} />
+      ))}
+
       {servicePage?.modules?.map((module) => (
         <>
           <h2>{module.title}</h2>

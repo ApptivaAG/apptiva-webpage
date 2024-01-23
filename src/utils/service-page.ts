@@ -6,11 +6,14 @@ import path from 'path'
 import { cache } from 'react'
 import { PortableTextBlock } from 'sanity'
 
-const servicePages = new Map<string, CmsServicePage>()
+const servicePages = new Map<string, ServicePage>()
 
 interface ServicePage {
   title: string
+  image?: SanityImageSource | null
+  imageAlt?: string | null
   description: string
+  content?: CmsContent | null
   slug: string
   modules?: Module[] | null
 }
@@ -25,12 +28,6 @@ type Module = {
   content: CmsContent | null
 }
 
-interface CmsServicePage extends ServicePage {
-  kind: 'cms'
-  image?: SanityImageSource | null
-  modules?: Module[] | null
-}
-
 export const getServicePages = cache(async () => {
   await getCmsServicePages()
   return servicePages
@@ -39,19 +36,13 @@ export const getServicePages = cache(async () => {
 const getCmsServicePages = cache(async () => {
   const servicePagesFromCMS = await runQuery(queryServicePagesFromCms)
 
-  console.log(
-    'servicePagesFromCMS modules content',
-    servicePagesFromCMS
-      .map((page) => page.modules?.map((module) => module.content))
-      .flat()
-  )
-
   servicePagesFromCMS.forEach((servicePage) => {
     servicePages.set(servicePage.slug, {
-      kind: 'cms',
-      image: servicePage.image,
-      title: servicePage.header.title ?? 'Ohne Title',
-      description: servicePage.header.description ?? 'Ohne Beschreibung',
+      image: servicePage.header?.image,
+      imageAlt: servicePage.header?.imageAlt,
+      title: servicePage.header?.title ?? 'Ohne Title',
+      description: servicePage.header?.description ?? 'Ohne Beschreibung',
+      content: servicePage.header?.content as CmsContent,
       slug: servicePage.slug,
       modules: servicePage.modules as Module[],
     })

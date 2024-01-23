@@ -104,22 +104,23 @@ export const queryServicePagesFromCms = q('*')
     _createdAt: q.string(),
     _id: q.string().optional(),
     slug: q.slug('slug'),
-    image: sanityImage('header.image').nullable(),
-    header: q
-      .object({
-        title: q.string().optional().default('In Arbeit'),
-        description: q.string().optional().default(''),
+    header: q('header')
+      .grab({
+        title: q.string().nullable().default('In Arbeit'),
+        description: q.string().nullable(),
+        image: sanityImage('image').nullable(),
+        imageAlt: q.string().nullable(),
+        content: q.contentBlocks().nullable(),
       })
-      .optional()
-      .default({ title: 'In Arbeit', description: '' }),
+      .nullable(),
     modules: q('modules')
       .filter()
       .grab({
         title: q.string().nullable().default('Ohne Titel'),
-        layout: q.string().nullable().default(''),
+        layout: q.string().nullable(),
         image: sanityImage('image').nullable(),
         imageAlt: q.string().nullable(),
-        content: q.contentBlocks().nullable().optional(),
+        content: q.contentBlocks().nullable(),
       })
       .nullable(),
   })
