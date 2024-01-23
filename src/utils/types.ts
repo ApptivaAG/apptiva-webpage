@@ -48,6 +48,10 @@ export type Author = {
   personName: string
 }
 
+export type Tag = {
+  name: string
+}
+
 export interface ServicePage {
   title: string
   image?: SanityImageSource | null

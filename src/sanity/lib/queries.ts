@@ -110,6 +110,10 @@ export const projectBySlugQuery = q('*')
     content: q.contentBlocks().optional(),
   })
 
+export const queryTags = q('*').filterByType('tag').grab$({
+  name: q.string(),
+})
+
 export const queryServicePagesFromCms = q('*')
   .filterByType('service-page')
   .grab$({
