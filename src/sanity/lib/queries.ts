@@ -47,15 +47,18 @@ export const queryPostFromCms = q('*')
   .filterByType('blog')
   .grab$({
     _createdAt: q.string(),
-    _id: q.string().optional(),
+    _id: q.string(),
     slug: q.slug('slug'),
     name: q.string().optional(),
     content: q.contentBlocks().optional(),
-    author: q('author').deref().grabOne('personName', q.string()).nullable(),
+    author: q('author')
+      .deref()
+      .grabOne$('personName', q.string().optional())
+      .nullable(),
     authors: q('*')
       .filterByType('person')
       .filter('references(^._id)')
-      .grab({ _id: q.string(), personName: q.string() }),
+      .grab$({ _id: q.string(), personName: q.string().optional() }),
     image: sanityImage('header.image'),
     header: q
       .object({
@@ -65,17 +68,21 @@ export const queryPostFromCms = q('*')
       })
       .optional()
       .default({ title: 'In Arbeit', description: '' }),
-    tags: q('tags').filter().deref().grabOne('name', q.string()),
+    tags: q('tags')
+      .filter()
+      .deref()
+      .grabOne$('name', q.string().optional())
+      .nullable(),
   })
 
 export const projectsQuery = q('*')
   .filterByType('project')
-  .grab({
-    _id: q.string().optional(),
-    projectName: q.string(),
+  .grab$({
+    _id: q.string(),
+    projectName: q.string().optional(),
     slug: q.slug('slug'),
     order: q.number().optional(),
-    description: q.string(),
+    description: q.string().optional(),
   })
   .order('order asc')
 
@@ -83,44 +90,46 @@ export const projectBySlugQuery = q('*')
   .filterByType('project')
   .filter('slug.current == $slug')
   .slice(0)
-  .grab({
-    _id: q.string().optional(),
-    projectName: q.string(),
+  .grab$({
+    _id: q.string(),
+    projectName: q.string().optional(),
     slug: q.slug('slug'),
-    image: sanityImage('image'),
-    imageAlt: q.string(),
-    description: q.string(),
-    tasks: q.string(),
-    time: q.string(),
-    technologies: q.string(),
-    customer: q.string(),
-    contactPerson: q('contactPerson').deref().grabOne('personName', q.string()),
-    content: q.array(q.contentBlock()),
+    image: sanityImage('image').nullable(),
+    imageAlt: q.string().optional(),
+    description: q.string().optional(),
+    tasks: q.string().optional(),
+    time: q.string().optional(),
+    technologies: q.string().optional(),
+    customer: q.string().optional(),
+    contactPerson: q('contactPerson')
+      .deref()
+      .grabOne$('personName', q.string().optional())
+      .nullable(),
+    content: q.contentBlocks().optional(),
   })
 
 export const queryServicePagesFromCms = q('*')
   .filterByType('service-page')
-  .grab({
-    _createdAt: q.string(),
-    _id: q.string().optional(),
+  .grab$({
+    _id: q.string(),
     slug: q.slug('slug'),
     header: q('header')
-      .grab({
-        title: q.string().nullable().default('In Arbeit'),
-        description: q.string().nullable(),
+      .grab$({
+        title: q.string().optional().default('In Arbeit'),
+        description: q.string().optional(),
         image: sanityImage('image').nullable(),
-        imageAlt: q.string().nullable(),
-        content: q.contentBlocks().nullable(),
+        imageAlt: q.string().optional(),
+        content: q.contentBlocks().optional(),
       })
       .nullable(),
     modules: q('modules')
       .filter()
-      .grab({
-        title: q.string().nullable().default('Ohne Titel'),
-        layout: q.string().nullable(),
+      .grab$({
+        title: q.string().optional().default('Ohne Titel'),
+        layout: q.string().optional(),
         image: sanityImage('image').nullable(),
-        imageAlt: q.string().nullable(),
-        content: q.contentBlocks().nullable(),
+        imageAlt: q.string().optional(),
+        content: q.contentBlocks().optional(),
       })
       .nullable(),
   })
