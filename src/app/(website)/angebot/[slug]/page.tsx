@@ -1,25 +1,21 @@
 import { urlForImage } from '@/sanity/lib/image'
-import { getServicePages } from '@/utils/service-page'
+import { getServiceBySlug } from '@/utils/service-page'
 import { PortableText } from '@portabletext/react'
 import { getImageDimensions } from '@sanity/asset-utils'
 import Image from 'next/image'
+import { notFound } from 'next/navigation'
 
 export default async function Home(props: { params: { slug: string } }) {
-  const servicePages = await getServicePages()
-  const servicePage = servicePages.get(props.params.slug)
+  const servicePage = (await getServiceBySlug(props.params.slug)) ?? notFound()
 
   // Use the schema and the query as you see fit, for example:
 
   return (
     <>
-      <h1
-        style={{ fontSize: '30px', fontWeight: 'bold', paddingBottom: '1em' }}
-      >
-        {servicePage?.title}
-      </h1>
+      <h1 className="text-3xl font-bold">{servicePage.title}</h1>
 
-      <p>{servicePage?.description}</p>
-      {servicePage?.image && (
+      <p>{servicePage.description}</p>
+      {servicePage.image && (
         <Image
           key={servicePage.image.toString()}
           src={urlForImage(servicePage.image).url()}
@@ -38,11 +34,11 @@ export default async function Home(props: { params: { slug: string } }) {
               40vw"
         />
       )}
-      {servicePage?.content?.map((content) => (
+      {servicePage.content?.map((content) => (
         <PortableText key={content._key} value={content} />
       ))}
 
-      {servicePage?.modules?.map((module) => (
+      {servicePage.modules?.map((module) => (
         <>
           <h2>{module.title}</h2>
           {module.image && (

@@ -1,6 +1,6 @@
 import { SanityImageSource } from '@sanity/asset-utils'
 import { CompileMDXResult } from 'next-mdx-remote/rsc'
-import { PortableTextBlock } from 'sanity'
+import { PortableTextBlock, PortableTextTextBlock } from 'sanity'
 
 export type SanityImageWithAlt = (SanityImageSource & { alt: string }) | null
 
@@ -24,7 +24,13 @@ export interface CmsBlog extends Blog {
   image: SanityImageWithAlt
 }
 
-export type CmsContent = Array<PortableTextBlock> | undefined
+type PortableText = Array<
+  Omit<PortableTextTextBlock, '_key'> & {
+    _key?: string | undefined
+  }
+>
+
+export type CmsContent = PortableText | undefined
 
 export type Image = {
   width?: number | undefined
@@ -53,7 +59,7 @@ export type Tag = {
   name: string
 }
 
-export interface ServicePage {
+export interface Service {
   title: string
   image: SanityImageWithAlt
   description: string
