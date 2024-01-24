@@ -57,7 +57,7 @@ export default defineType({
     defineField({
       name: 'image',
       title: 'Bild',
-      type: 'image',
+      type: 'imageWithAlt',
     }),
     defineField({
       title: 'Skills',

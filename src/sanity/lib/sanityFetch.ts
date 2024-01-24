@@ -15,7 +15,7 @@ export const token = process.env.SANITY_API_READ_TOKEN
 export async function sanityFetch<QueryResponse>({
   query,
   params = DEFAULT_PARAMS,
-  tags = DEFAULT_TAGS,
+  tags: cachingTags = DEFAULT_TAGS,
 }: {
   query: string
   params?: QueryParams
@@ -41,7 +41,7 @@ export async function sanityFetch<QueryResponse>({
       */
       next: {
         // ...(isDraftMode && { revalidate: 30 }),
-        tags,
+        tags: cachingTags,
       },
     })
 }

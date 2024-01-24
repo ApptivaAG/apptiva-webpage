@@ -81,7 +81,7 @@ export default async function Home(props: { params: { slug: string } }) {
         <Image
           key={post.image.toString()}
           src={urlForImage(post.image).url()}
-          alt={post.imageAlt}
+          alt={post.image.alt}
           width={getImageDimensions(post.image).width}
           height={getImageDimensions(post.image).height}
           placeholder="blur"

@@ -23,7 +23,7 @@ export default async function Home(props: { params: { slug: string } }) {
         <Image
           key={servicePage.image.toString()}
           src={urlForImage(servicePage.image).url()}
-          alt={servicePage.imageAlt ?? ''}
+          alt={servicePage.image.alt ?? ''}
           width={getImageDimensions(servicePage.image).width}
           height={getImageDimensions(servicePage.image).height}
           placeholder="blur"
@@ -49,7 +49,7 @@ export default async function Home(props: { params: { slug: string } }) {
             <Image
               key={module.image.toString()}
               src={urlForImage(module.image).url()}
-              alt={module.imageAlt ?? ''}
+              alt={module.image.alt}
               width={getImageDimensions(module.image).width}
               height={getImageDimensions(module.image).height}
               placeholder="blur"
@@ -58,10 +58,7 @@ export default async function Home(props: { params: { slug: string } }) {
                 .height(24)
                 .blur(10)
                 .url()}
-              sizes="
-            (max-width: 768px) 100vw,
-            (max-width: 1200px) 50vw,
-            40vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
             />
           )}
           {module.content?.map((content) => (

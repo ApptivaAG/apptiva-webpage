@@ -15,7 +15,7 @@ export default defineType({
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'question',
+        source: 'title',
         maxLength: 96,
       },
     }),

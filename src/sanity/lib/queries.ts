@@ -29,7 +29,7 @@ export const blogBySlugQuery = (
 ) => groq`*[_type == "blog" && slug.current == "${slug}"]
 {
   _createdAt,_updatedAt,  
-  header{title, description, image, imageAlt, content },
+  header{title, description, image, content },
   modules,
   author
 }`
@@ -39,7 +39,7 @@ export const servicePageBySlugQuery = (
 ) => groq`*[_type == "service-page" && slug.current == "${slug}"]
 {
   _createdAt,_updatedAt,  
-  header{title, description, image, imageAlt, content},
+  header{title, description, image, content},
   modules{title, layout, image, content},
 }`
 
@@ -47,35 +47,45 @@ export const queryPostFromCms = q('*')
   .filterByType('blog')
   .grab$({
     _createdAt: q.string(),
-    _id: q.string().optional(),
-    slug: q.slug('slug'),
+    _id: q.string(),
+    slug: ['slug.current', q.string().optional()],
     name: q.string().optional(),
     content: q.contentBlocks().optional(),
-    author: q('author').deref().grabOne('personName', q.string()).nullable(),
+    author: q('author')
+      .deref()
+      .grabOne$('personName', q.string().optional())
+      .nullable(),
     authors: q('*')
       .filterByType('person')
       .filter('references(^._id)')
-      .grab({ _id: q.string(), personName: q.string() }),
-    image: sanityImage('header.image'),
+      .grab$({ _id: q.string(), personName: q.string().optional() }),
+    image: sanityImage('header.image', {
+      additionalFields: {
+        alt: q.string().optional().default('Fehlende Bildbeschreibung'),
+      },
+    }).nullable(),
     header: q
       .object({
         title: q.string().optional().default('In Arbeit'),
         description: q.string().optional().default(''),
-        imageAlt: q.string().optional().default('Fehlende Bildbeschreibung'),
       })
       .optional()
       .default({ title: 'In Arbeit', description: '' }),
-    tags: q('tags').filter().deref().grabOne('name', q.string()),
+    tags: q('tags')
+      .filter()
+      .deref()
+      .grabOne$('name', q.string().optional())
+      .nullable(),
   })
 
 export const projectsQuery = q('*')
   .filterByType('project')
-  .grab({
-    _id: q.string().optional(),
-    projectName: q.string(),
-    slug: q.slug('slug'),
+  .grab$({
+    _id: q.string(),
+    projectName: q.string().optional(),
+    slug: ['slug.current', q.string().optional()],
     order: q.number().optional(),
-    description: q.string(),
+    description: q.string().optional(),
   })
   .order('order asc')
 
@@ -83,19 +93,25 @@ export const projectBySlugQuery = q('*')
   .filterByType('project')
   .filter('slug.current == $slug')
   .slice(0)
-  .grab({
-    _id: q.string().optional(),
-    projectName: q.string(),
-    slug: q.slug('slug'),
-    image: sanityImage('image'),
-    imageAlt: q.string(),
-    description: q.string(),
-    tasks: q.string(),
-    time: q.string(),
-    technologies: q.string(),
-    customer: q.string(),
-    contactPerson: q('contactPerson').deref().grabOne('personName', q.string()),
-    content: q.array(q.contentBlock()),
+  .grab$({
+    _id: q.string(),
+    projectName: q.string().optional(),
+    slug: ['slug.current', q.string().optional()],
+    image: sanityImage('image', {
+      additionalFields: {
+        alt: q.string().optional().default('Fehlende Bildbeschreibung'),
+      },
+    }).nullable(),
+    description: q.string().optional(),
+    tasks: q.string().optional(),
+    time: q.string().optional(),
+    technologies: q.string().optional(),
+    customer: q.string().optional(),
+    contactPerson: q('contactPerson')
+      .deref()
+      .grabOne$('personName', q.string().optional())
+      .nullable(),
+    content: q.contentBlocks().optional(),
   })
 
 export const queryTags = q('*').filterByType('tag').grab$({
@@ -104,27 +120,59 @@ export const queryTags = q('*').filterByType('tag').grab$({
 
 export const queryServicePagesFromCms = q('*')
   .filterByType('service-page')
-  .grab({
-    _createdAt: q.string(),
-    _id: q.string().optional(),
-    slug: q.slug('slug'),
+  .grab$({
+    _id: q.string(),
+    slug: ['slug.current', q.string().optional()],
     header: q('header')
-      .grab({
-        title: q.string().nullable().default('In Arbeit'),
-        description: q.string().nullable(),
-        image: sanityImage('image').nullable(),
-        imageAlt: q.string().nullable(),
-        content: q.contentBlocks().nullable(),
+      .grab$({
+        title: q.string().optional().default('In Arbeit'),
+        description: q.string().optional(),
+        image: sanityImage('image', {
+          additionalFields: {
+            alt: q.string().optional().default('Fehlende Bildbeschreibung'),
+          },
+        }).nullable(),
+        content: q.contentBlocks().optional(),
       })
       .nullable(),
     modules: q('modules')
       .filter()
-      .grab({
-        title: q.string().nullable().default('Ohne Titel'),
-        layout: q.string().nullable(),
-        image: sanityImage('image').nullable(),
-        imageAlt: q.string().nullable(),
-        content: q.contentBlocks().nullable(),
+      .grab$({
+        title: q.string().optional().default('Ohne Titel'),
+        layout: q.string().optional(),
+        image: sanityImage('image', {
+          additionalFields: {
+            alt: q.string().optional().default('Fehlende Bildbeschreibung'),
+          },
+        }).nullable(),
+        content: q.contentBlocks().optional(),
       })
+      .nullable(),
+  })
+
+export const glossaryQuery = q('*')
+  .filterByType('glossary')
+  .grab$({
+    _id: q.string(),
+    title: q.string().optional().default('Ohne Titel'),
+    slug: ['slug.current', q.string().optional()],
+    summary: q.contentBlocks().optional(),
+    modules: q('modules')
+      .filter()
+      .grab$({
+        title: q.string().optional().default('Ohne Titel'),
+        layout: q.string().optional(),
+        image: sanityImage('image', {
+          additionalFields: {
+            alt: q.string().optional().default('Fehlende Bildbeschreibung'),
+          },
+        }).nullable(),
+        content: q.contentBlocks().optional(),
+      })
+      .nullable(),
+    tags: q('tags')
+      .filter()
+      .deref()
+      .grabOne$('name', q.string().optional())
       .nullable(),
   })

@@ -18,12 +18,7 @@ export default defineType({
     defineField({
       name: 'image',
       title: 'Bild',
-      type: 'image',
-    }),
-    defineField({
-      name: 'imageAlt',
-      title: 'Bildbeschreibung',
-      type: 'string',
+      type: 'imageWithAlt',
     }),
     defineField({
       name: 'content',
