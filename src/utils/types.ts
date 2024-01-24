@@ -14,7 +14,8 @@ export interface Blog {
 }
 export interface MarkdownBlog extends Blog {
   kind: 'markdown'
-  content: CompileMDXResult['content']
+  content: string
+  blogPostAssetsDirectory: string
   image: Image | NoImage
 }
 

@@ -4,8 +4,16 @@ import { kebabCaseToTitleCase } from '@/utils/format'
 import { PortableText } from '@portabletext/react'
 import { getImageDimensions } from '@sanity/asset-utils'
 import { Metadata } from 'next'
+import { MDXRemote } from 'next-mdx-remote/rsc'
+import remarkEmbedder from '@remark-embedder/core'
+import remarkGfm from 'remark-gfm'
+import remarkUnwrapImages from 'remark-unwrap-images'
+import oembedTransformer from '@remark-embedder/transformer-oembed'
+
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
+import MdxImage from '@/components/image'
+import { Code } from 'bright'
 
 export async function generateStaticParams() {
   const posts = await getPosts()
@@ -97,7 +105,29 @@ export default async function Home(props: { params: { slug: string } }) {
         />
       )}
       <p className="font-semibold">{post.description}</p>
-      {post.kind === 'markdown' && post.content}
+      {post.kind === 'markdown' && (
+        <MDXRemote
+          source={post.content}
+          components={{
+            img: MdxImage(post.blogPostAssetsDirectory),
+            pre: Code,
+          }}
+          options={{
+            mdxOptions: {
+              remarkPlugins: [
+                remarkGfm,
+                remarkUnwrapImages,
+                [
+                  remarkEmbedder,
+                  {
+                    transformers: [oembedTransformer],
+                  },
+                ],
+              ],
+            },
+          }}
+        />
+      )}
       <hr />
       {post.kind === 'cms' &&
         post.content?.map((content) => (
