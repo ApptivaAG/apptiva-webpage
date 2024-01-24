@@ -105,7 +105,7 @@ export default async function Home(props: { params: { slug: string } }) {
         ))}
       <hr />
       <h2>Tags:</h2>
-      <ul>{post.tags && post.tags.map((tag) => <p>{tag}</p>)}</ul>
+      <ul>{post.tags && post.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
     </>
   )
 }

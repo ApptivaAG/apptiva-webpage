@@ -28,18 +28,21 @@ const getCmsPosts = cache(async () => {
   const postsFromCMS = await runQuery(queryPostFromCms)
 
   postsFromCMS.forEach((post) => {
-    posts.set(post.slug, {
-      kind: 'cms',
-      content: post.content as CmsContent,
-      image: post.image,
-      title: post.header.title ?? 'Ohne Titel',
-      description: post.header.description ?? 'Ohne Beschreibung',
-      slug: post.slug,
-      author: post.author ?? 'Anonymous',
-      //authors: post.authors ?? ['Anonymus 123'],
-      publishDate: post._createdAt,
-      tags: post.tags,
-    })
+    if (post.slug) {
+      posts.set(post.slug, {
+        kind: 'cms',
+        content: post.content,
+        image: post.image,
+        title: post.header.title ?? 'Ohne Titel',
+        description: post.header.description ?? 'Ohne Beschreibung',
+        slug: post.slug,
+        author: post.author ?? 'Anonymous',
+        publishDate: post._createdAt,
+        tags:
+          post.tags?.filter((tag): tag is string => typeof tag === 'string') ??
+          undefined,
+      })
+    }
   })
 })
 
