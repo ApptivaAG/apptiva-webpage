@@ -12,6 +12,9 @@ export interface Blog {
   publishDate: string
   tags?: string[]
 }
+export interface MarkdownBlogPreview extends Blog {
+  kind: 'markdown'
+}
 export interface MarkdownBlog extends Blog {
   kind: 'markdown'
   content: string

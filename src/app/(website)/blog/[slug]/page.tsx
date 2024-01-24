@@ -1,5 +1,5 @@
 import { urlForImage } from '@/sanity/lib/image'
-import { getPosts } from '@/utils/blog'
+import { getPostBySlug, getPosts } from '@/utils/blog'
 import { kebabCaseToTitleCase } from '@/utils/format'
 import { PortableText } from '@portabletext/react'
 import { getImageDimensions } from '@sanity/asset-utils'
@@ -26,12 +26,8 @@ export async function generateStaticParams() {
 export async function generateMetadata(props: {
   params: { slug: string }
 }): Promise<Metadata> {
-  const posts = await getPosts()
+  const post = await getPostBySlug(props.params.slug) ??  notFound()
 
-  const post = posts.get(props.params.slug)
-  if (!post) {
-    notFound()
-  }
 
   return {
     title: post.title,
@@ -53,12 +49,8 @@ export async function generateMetadata(props: {
 }
 
 export default async function Home(props: { params: { slug: string } }) {
-  const posts = await getPosts()
+  const post = await getPostBySlug(props.params.slug) ??  notFound()
 
-  const post = posts.get(props.params.slug)
-  if (!post) {
-    notFound()
-  }
 
   return (
     <>

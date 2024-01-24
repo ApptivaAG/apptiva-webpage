@@ -6,7 +6,7 @@ module.exports = {
 	},
   experimental: {
     outputFileTracingIncludes: {
-      '/blog': ['./content/blog/**/*', './public/assets/blog/**/*'],
+      '/blog': ['./content/blog/**/*'],
     },
   },
 };

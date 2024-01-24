@@ -43,7 +43,7 @@ export const servicePageBySlugQuery = (
   modules{title, layout, image, content},
 }`
 
-export const queryPostFromCms = q('*')
+export const queryPostsFromCms = q('*')
   .filterByType('blog')
   .grab$({
     _createdAt: q.string(),
@@ -77,6 +77,43 @@ export const queryPostFromCms = q('*')
       .grabOne$('name', q.string().optional())
       .nullable(),
   })
+
+export const queryPostFromCmsBySlug = q('*')
+  .filterByType('blog')
+  .filter('slug.current == $slug')
+  .slice(0)
+  .grab$({
+    _createdAt: q.string(),
+    _id: q.string(),
+    slug: ['slug.current', q.string().optional()],
+    name: q.string().optional(),
+    content: q.contentBlocks().optional(),
+    author: q('author')
+      .deref()
+      .grabOne$('personName', q.string().optional())
+      .nullable(),
+    authors: q('*')
+      .filterByType('person')
+      .filter('references(^._id)')
+      .grab$({ _id: q.string(), personName: q.string().optional() }),
+    image: sanityImage('header.image', {
+      additionalFields: {
+        alt: q.string().optional().default('Fehlende Bildbeschreibung'),
+      },
+    }).nullable(),
+    header: q
+      .object({
+        title: q.string().optional().default('In Arbeit'),
+        description: q.string().optional().default(''),
+      })
+      .optional()
+      .default({ title: 'In Arbeit', description: '' }),
+    tags: q('tags')
+      .filter()
+      .deref()
+      .grabOne$('name', q.string().optional())
+      .nullable(),
+  }).nullable()
 
 export const projectsQuery = q('*')
   .filterByType('project')
