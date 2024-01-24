@@ -1,9 +1,18 @@
+import { TagFilter } from '@/components/tag-filter'
 import { getPosts } from '@/utils/blog'
 import { getTags } from '@/utils/tags'
 
-export default async function Home() {
+export default async function Home({
+  params,
+  searchParams,
+}: {
+  params: { slug: string }
+  searchParams: { [key: string]: string | string[] | undefined }
+}) {
   const posts = await getPosts()
   const tags = await getTags()
+
+  console.log('search param', searchParams)
 
   // Use the schema and the query as you see fit, for example:
 
@@ -14,9 +23,8 @@ export default async function Home() {
       >
         Tags
       </h2>
-      {tags.map((tag) => (
-        <p>{tag.name}</p>
-      ))}
+      <TagFilter tags={tags} searchParams={searchParams}></TagFilter>
+
       <h2 style={{ fontSize: '30px', fontWeight: 'bold', paddingBlock: '1em' }}>
         Blogposts
       </h2>
@@ -30,4 +38,7 @@ export default async function Home() {
       </ul>
     </>
   )
+}
+function useQueryState(arg0: string): [any, any] {
+  throw new Error('Function not implemented.')
 }
