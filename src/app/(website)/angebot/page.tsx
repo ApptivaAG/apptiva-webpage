@@ -1,23 +1,15 @@
-// ./nextjs-app/app/page.tsx
-
-import { servicePagesQuery } from '@/sanity/lib/queries'
-import { sanityFetch } from '@/sanity/lib/sanityFetch'
-import { SanityDocument } from 'next-sanity'
+import { getServicePages } from '@/utils/service-page'
 
 export default async function Home() {
-  const servicePages = await sanityFetch<SanityDocument[]>({
-    query: servicePagesQuery,
-  })
+  const servicePages = await getServicePages()
 
   return (
-    <div className="container mx-auto px-4">
+    <div>
       <h1>Angebot</h1>
       <ul>
-        {servicePages.map((servicePage) => (
-          <li key={servicePage._id}>
-            <a href={'angebot/' + servicePage.slug?.current}>
-              {servicePage.header.title}
-            </a>
+        {Array.from(servicePages.values()).map((servicePage) => (
+          <li key={servicePage.slug}>
+            <a href={'angebot/' + servicePage.slug}>{servicePage.title}</a>
           </li>
         ))}
       </ul>

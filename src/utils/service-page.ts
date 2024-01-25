@@ -1,37 +1,46 @@
-import { queryServicePagesFromCms } from '@/sanity/lib/queries'
+import { serviceBySlugQuery, servicesQuery } from '@/sanity/lib/queries'
 import { runQuery } from '@/sanity/lib/sanityFetch'
 import { InferType } from 'groqd'
 import { cache } from 'react'
-import { CmsContent, Module, ServicePage } from './types'
-
-const servicePages = new Map<string, ServicePage>()
+import { Service } from './types'
 
 export const getServicePages = cache(async () => {
-  await getCmsServicePages()
-  return servicePages
-})
+  const servicePagesFromCMS = await runQuery(servicesQuery)
 
-const getCmsServicePages = cache(async () => {
-  const servicePagesFromCMS = await runQuery(queryServicePagesFromCms)
-
-  type CmsServicePageWithSlug = InferType<
-    typeof queryServicePagesFromCms
-  >[number] & {
+  type CmsServicePageWithSlug = InferType<typeof servicesQuery>[number] & {
     slug: string
   }
 
-  servicePagesFromCMS
+  return servicePagesFromCMS
     .filter(
       (servicePage): servicePage is CmsServicePageWithSlug => !!servicePage.slug
     )
-    .forEach((servicePage) => {
-      servicePages.set(servicePage.slug, {
+    .map((servicePage) => {
+      return {
         image: servicePage.header?.image ?? null,
         title: servicePage.header?.title ?? 'Ohne Titel',
         description: servicePage.header?.description ?? 'Ohne Beschreibung',
-        content: servicePage.header?.content as CmsContent,
+        content: servicePage.header?.content,
         slug: servicePage.slug,
-        modules: servicePage.modules as Module[],
-      })
+      } satisfies Service
     })
+})
+
+export const getServiceBySlug = cache(async (slug: string) => {
+  const service = await runQuery(serviceBySlugQuery, {
+    slug,
+  })
+
+  if (!service.slug) {
+    return undefined
+  }
+
+  return {
+    slug: service.slug,
+    title: service.header?.title ?? 'Ohne Title',
+    description: service.header?.description ?? 'Ohne Beschreibung',
+    image: service.header?.image ?? null,
+    content: service.header?.content,
+    modules: service.modules,
+  } satisfies Service
 })

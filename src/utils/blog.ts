@@ -1,8 +1,7 @@
 import MdxImage from '@/components/image'
-import { queryPostFromCms } from '@/sanity/lib/queries'
+import { queryPostFromCmsBySlug, queryPostsFromCms } from '@/sanity/lib/queries'
 import { runQuery } from '@/sanity/lib/sanityFetch'
 import remarkEmbedder from '@remark-embedder/core'
-import oembedTransformer from '@remark-embedder/transformer-oembed'
 import { Code } from 'bright'
 import { promises as fs } from 'fs'
 import { InferType } from 'groqd'
@@ -12,45 +11,89 @@ import path from 'path'
 import { cache } from 'react'
 import remarkGfm from 'remark-gfm'
 import remarkUnwrapImages from 'remark-unwrap-images'
-import { BlogFrontmatter, CmsBlog, CmsContent, MarkdownBlog } from './types'
+import oembedTransformer from '@remark-embedder/transformer-oembed'
+import {
+  BlogFrontmatter,
+  CmsBlog,
+  CmsContent,
+  MarkdownBlog,
+  MarkdownBlogPreview,
+} from './types'
+import { unstable_cache } from 'next/cache'
 
 const blogPostsPath = 'content/blog'
 const assetsPath = '/assets/blog'
 
-const posts = new Map<string, MarkdownBlog | CmsBlog>()
+export const getPostBySlug = cache(async (slug: string) => {
+  const cmsPost = await getCmsPostBySlug(slug)
+  if (cmsPost) {
+    return cmsPost
+  }
+  const markdownPosts = await getMarkdownPosts()
+  return markdownPosts.find((_) => _.slug === slug)
+})
 
 export const getPosts = cache(async () => {
-  await getCmsPosts()
-  await getMarkdownPosts()
+  const cmsPosts = await getCmsPosts()
+  const markdownPosts = await getMarkdownPostsPreviews()
+
+  const posts = new Map<string, CmsBlog | MarkdownBlogPreview>()
+  const mergedBlogposts = [...cmsPosts, ...markdownPosts]
+  mergedBlogposts.forEach((post) => {
+    const { slug } = post
+    if (slug) {
+      posts.set(slug, { ...post, slug })
+    }
+  })
   return posts
 })
 
-const getCmsPosts = cache(async () => {
-  const postsFromCMS = await runQuery(queryPostFromCms)
+const getCmsPostBySlug = cache(async (slug: string) => {
+  const post = await runQuery(queryPostFromCmsBySlug, {
+    slug,
+  })
 
-  type CmsPostWithSlug = InferType<typeof queryPostFromCms>[number] & {
-    slug: string
+  if (!post || !post.slug) {
+    return undefined
   }
 
-  postsFromCMS
-    .filter((post): post is CmsPostWithSlug => !!post.slug)
-    .forEach((post) => {
-      posts.set(post.slug, {
-        kind: 'cms',
-        content: post.content as CmsContent,
-        image: post.image,
-        title: post.header.title ?? 'Ohne Titel',
-        description: post.header.description ?? 'Ohne Beschreibung',
-        slug: post.slug,
-        author: post.author ?? 'Anonymous',
-        //authors: post.authors ?? ['Anonymus 123'],
-        publishDate: post._createdAt,
-        tags: post.tags?.filter((tag): tag is string => !!tag),
-      })
-    })
+  return {
+    kind: 'cms',
+    content: post.content as CmsContent,
+    image: post.image,
+    title: post.header.title ?? 'Ohne Title',
+    description: post.header.description ?? 'Ohne Beschreibung',
+    slug: post.slug,
+    author: post.author ?? 'Anonymous',
+    publishDate: post._createdAt,
+    tags:
+      post.tags?.filter((tag): tag is string => typeof tag === 'string') ??
+      undefined,
+  } satisfies CmsBlog
 })
 
-const getMarkdownPosts = cache(async () => {
+const getCmsPosts = cache(async () => {
+  const postsFromCMS = await runQuery(queryPostsFromCms)
+
+  return postsFromCMS.map((post) => {
+    return {
+      kind: 'cms',
+      content: post.content as CmsContent,
+      image: post.image,
+      title: post.header.title ?? 'Ohne Title',
+      description: post.header.description ?? 'Ohne Beschreibung',
+      slug: post.slug,
+      author: post.author ?? 'Anonymous',
+      publishDate: post._createdAt,
+      tags:
+        post.tags?.filter((tag): tag is string => typeof tag === 'string') ??
+        undefined,
+    } as const
+  })
+})
+
+const getMarkdownPosts = unstable_cache(async () => {
+  const posts: Array<MarkdownBlog> = []
   console.log('getting posts...')
 
   const files = await fs.readdir(blogPostsPath, { recursive: true })
@@ -99,25 +142,80 @@ const getMarkdownPosts = cache(async () => {
 
     const imageInfo = imageSrc ? getImageInfo(imageSrc) : undefined
 
-    posts.set(markdown.frontmatter.slug, {
+    posts.push({
       kind: 'markdown',
-      content: markdown.content,
-      image: {
-        src: imageSrc,
-        ...imageInfo,
-      },
+      content: data,
+      image: { src: imageSrc, ...imageInfo },
+      blogPostAssetsDirectory,
       title: markdown.frontmatter.title,
       description: markdown.frontmatter.description,
       slug: markdown.frontmatter.slug,
       author: markdown.frontmatter.author,
       publishDate: markdown.frontmatter.date,
-    })
+    } as const)
   }
 
   console.log('got all posts')
 
   return posts
-})
+}, ['markdown-full'])
+
+const getMarkdownPostsPreviews = unstable_cache(async () => {
+  const posts: Array<MarkdownBlogPreview> = []
+  console.log('getting post previews...')
+
+  const files = await fs.readdir(blogPostsPath, { recursive: true })
+
+  const markdownFiles = files.filter(
+    (file) => path.extname(file).toLowerCase() === '.md'
+  )
+
+  for (const markdownFile of markdownFiles) {
+    const markdownFilePath = path.join(blogPostsPath, markdownFile)
+
+    const blogPostAssetsDirectory = path
+      .dirname(markdownFilePath)
+      .replace(blogPostsPath, assetsPath)
+
+    const data = await fs.readFile(markdownFilePath, 'utf8')
+
+    const markdown = await compileMDX<BlogFrontmatter>({
+      source: data,
+      components: {
+        img: MdxImage(blogPostAssetsDirectory),
+        pre: Code,
+      },
+      options: {
+        mdxOptions: {
+          remarkPlugins: [
+            remarkGfm,
+            remarkUnwrapImages,
+            [
+              remarkEmbedder,
+              {
+                transformers: [oembedTransformer],
+              },
+            ],
+          ],
+        },
+        parseFrontmatter: true,
+      },
+    })
+
+    posts.push({
+      kind: 'markdown',
+      title: markdown.frontmatter.title,
+      description: markdown.frontmatter.description,
+      slug: markdown.frontmatter.slug,
+      author: markdown.frontmatter.author,
+      publishDate: markdown.frontmatter.date,
+    } as const)
+  }
+
+  console.log('got all post previews')
+
+  return posts
+}, ['markdown-preview'])
 
 export function getImageInfo(imageSrc: string) {
   return imageSize(path.join('./public', imageSrc))

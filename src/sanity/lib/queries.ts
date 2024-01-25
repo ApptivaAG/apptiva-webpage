@@ -1,6 +1,6 @@
 // ./nextjs-app/sanity/lib/queries.ts
 
-import { q, sanityImage } from 'groqd'
+import { nullToUndefined, q, sanityImage } from 'groqd'
 import { groq } from 'next-sanity'
 
 // Get all posts
@@ -43,7 +43,7 @@ export const servicePageBySlugQuery = (
   modules{title, layout, image, content},
 }`
 
-export const queryPostFromCms = q('*')
+export const queryPostsFromCms = q('*')
   .filterByType('blog')
   .grab$({
     _createdAt: q.string(),
@@ -77,6 +77,43 @@ export const queryPostFromCms = q('*')
       .grabOne$('name', q.string().optional())
       .nullable(),
   })
+
+export const queryPostFromCmsBySlug = q('*')
+  .filterByType('blog')
+  .filter('slug.current == $slug')
+  .slice(0)
+  .grab$({
+    _createdAt: q.string(),
+    _id: q.string(),
+    slug: ['slug.current', q.string().optional()],
+    name: q.string().optional(),
+    content: q.contentBlocks().optional(),
+    author: q('author')
+      .deref()
+      .grabOne$('personName', q.string().optional())
+      .nullable(),
+    authors: q('*')
+      .filterByType('person')
+      .filter('references(^._id)')
+      .grab$({ _id: q.string(), personName: q.string().optional() }),
+    image: sanityImage('header.image', {
+      additionalFields: {
+        alt: q.string().optional().default('Fehlende Bildbeschreibung'),
+      },
+    }).nullable(),
+    header: q
+      .object({
+        title: q.string().optional().default('In Arbeit'),
+        description: q.string().optional().default(''),
+      })
+      .optional()
+      .default({ title: 'In Arbeit', description: '' }),
+    tags: q('tags')
+      .filter()
+      .deref()
+      .grabOne$('name', q.string().optional())
+      .nullable(),
+  }).nullable()
 
 export const projectsQuery = q('*')
   .filterByType('project')
@@ -118,7 +155,7 @@ export const queryTags = q('*').filterByType('tag').grab$({
   name: q.string(),
 })
 
-export const queryServicePagesFromCms = q('*')
+export const servicesQuery = q('*')
   .filterByType('service-page')
   .grab$({
     _id: q.string(),
@@ -129,8 +166,31 @@ export const queryServicePagesFromCms = q('*')
         description: q.string().optional(),
         image: sanityImage('image', {
           additionalFields: {
-            alt: q.string().optional().default('Fehlende Bildbeschreibung'),
+            alt: nullToUndefined(
+              q.string().optional().default('Fehlende Bildbeschreibung')
+            ),
           },
+        }).nullable(),
+        content: q.contentBlocks().optional(),
+      })
+      .nullable(),
+  })
+
+export const serviceBySlugQuery = q('*')
+  .filterByType('service-page')
+  .filter('slug.current == $slug')
+  .slice(0)
+  .grab$({
+    _id: q.string(),
+    slug: ['slug.current', q.string().optional()],
+    header: q('header')
+      .grab$({
+        title: q.string().optional().default('In Arbeit'),
+        description: q.string().optional(),
+        image: sanityImage('image', {
+          additionalFields: nullToUndefined({
+            alt: q.string().optional().default('Fehlende Bildbeschreibung'),
+          }),
         }).nullable(),
         content: q.contentBlocks().optional(),
       })
@@ -141,9 +201,9 @@ export const queryServicePagesFromCms = q('*')
         title: q.string().optional().default('Ohne Titel'),
         layout: q.string().optional(),
         image: sanityImage('image', {
-          additionalFields: {
+          additionalFields: nullToUndefined({
             alt: q.string().optional().default('Fehlende Bildbeschreibung'),
-          },
+          }),
         }).nullable(),
         content: q.contentBlocks().optional(),
       })
