@@ -114,6 +114,7 @@ export default async function Home(props: { params: { slug: string } }) {
                 ],
               ],
             },
+            parseFrontmatter: true
           }}
         />
       )}
