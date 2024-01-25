@@ -26,9 +26,9 @@ const getCmsGlossary = cache(async () => {
     .forEach((glossaryEntry) => {
       glossary.set(glossaryEntry.slug, {
         title: glossaryEntry.title ?? 'Ohne Titel',
-        slug: glossaryEntry.slug!,
-        summary: glossaryEntry.summary as CmsContent,
-        modules: glossaryEntry.modules as Module[],
+        slug: glossaryEntry.slug,
+        summary: glossaryEntry.summary,
+        modules: glossaryEntry.modules,
         tags: glossaryEntry.tags?.filter((tag): tag is string => !!tag),
       })
     })

@@ -17,8 +17,8 @@ export const getServicePages = cache(async () => {
     )
     .map((servicePage) => {
       return {
-        image: servicePage.header?.image ?? null,
         title: servicePage.header?.title ?? 'Ohne Titel',
+        image: servicePage.header?.image ?? null,
         description: servicePage.header?.description ?? 'Ohne Beschreibung',
         content: servicePage.header?.content,
         slug: servicePage.slug,
