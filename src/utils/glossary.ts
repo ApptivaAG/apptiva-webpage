@@ -1,8 +1,8 @@
 import { glossaryQuery } from '@/sanity/lib/queries'
 import { runQuery } from '@/sanity/lib/sanityFetch'
-import { cache } from 'react'
-import { CmsContent, Glossary, Module } from './types'
 import { InferType } from 'groqd'
+import { cache } from 'react'
+import { Glossary } from './types'
 
 const glossary = new Map<string, Glossary>()
 

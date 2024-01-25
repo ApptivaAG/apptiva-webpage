@@ -2,16 +2,16 @@ import MdxImage from '@/components/image'
 import { queryPostFromCmsBySlug, queryPostsFromCms } from '@/sanity/lib/queries'
 import { runQuery } from '@/sanity/lib/sanityFetch'
 import remarkEmbedder from '@remark-embedder/core'
+import oembedTransformer from '@remark-embedder/transformer-oembed'
 import { Code } from 'bright'
 import { promises as fs } from 'fs'
-import { InferType } from 'groqd'
 import { imageSize } from 'image-size'
 import { compileMDX } from 'next-mdx-remote/rsc'
+import { unstable_cache } from 'next/cache'
 import path from 'path'
 import { cache } from 'react'
 import remarkGfm from 'remark-gfm'
 import remarkUnwrapImages from 'remark-unwrap-images'
-import oembedTransformer from '@remark-embedder/transformer-oembed'
 import {
   BlogFrontmatter,
   CmsBlog,
@@ -19,7 +19,6 @@ import {
   MarkdownBlog,
   MarkdownBlogPreview,
 } from './types'
-import { unstable_cache } from 'next/cache'
 
 const blogPostsPath = 'content/blog'
 const assetsPath = '/assets/blog'

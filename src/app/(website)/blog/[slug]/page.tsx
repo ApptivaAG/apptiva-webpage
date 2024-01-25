@@ -1,19 +1,18 @@
 import { urlForImage } from '@/sanity/lib/image'
 import { getPostBySlug, getPosts } from '@/utils/blog'
-import { kebabCaseToTitleCase } from '@/utils/format'
 import { PortableText } from '@portabletext/react'
+import remarkEmbedder from '@remark-embedder/core'
+import oembedTransformer from '@remark-embedder/transformer-oembed'
 import { getImageDimensions } from '@sanity/asset-utils'
 import { Metadata } from 'next'
 import { MDXRemote } from 'next-mdx-remote/rsc'
-import remarkEmbedder from '@remark-embedder/core'
 import remarkGfm from 'remark-gfm'
 import remarkUnwrapImages from 'remark-unwrap-images'
-import oembedTransformer from '@remark-embedder/transformer-oembed'
 
-import Image from 'next/image'
-import { notFound } from 'next/navigation'
 import MdxImage from '@/components/image'
 import { Code } from 'bright'
+import Image from 'next/image'
+import { notFound } from 'next/navigation'
 
 export async function generateStaticParams() {
   const posts = await getPosts()
@@ -26,8 +25,7 @@ export async function generateStaticParams() {
 export async function generateMetadata(props: {
   params: { slug: string }
 }): Promise<Metadata> {
-  const post = await getPostBySlug(props.params.slug) ??  notFound()
-
+  const post = (await getPostBySlug(props.params.slug)) ?? notFound()
 
   return {
     title: post.title,
@@ -49,8 +47,7 @@ export async function generateMetadata(props: {
 }
 
 export default async function Home(props: { params: { slug: string } }) {
-  const post = await getPostBySlug(props.params.slug) ??  notFound()
-
+  const post = (await getPostBySlug(props.params.slug)) ?? notFound()
 
   return (
     <>
