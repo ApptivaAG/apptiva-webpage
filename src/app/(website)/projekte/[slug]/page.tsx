@@ -1,10 +1,8 @@
+import SanityImage from '@/components/sanity-image'
 import { projectBySlugQuery } from '@/sanity/lib/queries'
-import { notFound } from 'next/navigation'
-import Image from 'next/image'
-import { urlForImage } from '@/sanity/lib/image'
-import { getImageDimensions } from '@sanity/asset-utils'
-import { PortableText } from '@portabletext/react'
 import { runQuery } from '@/sanity/lib/sanityFetch'
+import { PortableText } from '@portabletext/react'
+import { notFound } from 'next/navigation'
 
 export default async function Home(props: { params: { slug: string } }) {
   const project = await runQuery(projectBySlugQuery, {
@@ -22,35 +20,15 @@ export default async function Home(props: { params: { slug: string } }) {
       >
         {project.projectName}
       </h1>
-      {project.image && (
-        <Image
-          key={project.image.toString()}
-          src={urlForImage(project.image).url()}
-          alt={project.image.alt}
-          width={getImageDimensions(project.image).width}
-          height={getImageDimensions(project.image).height}
-          placeholder="blur"
-          blurDataURL={urlForImage(project.image)
-            .width(24)
-            .height(24)
-            .blur(10)
-            .url()}
-          sizes="
-            (max-width: 768px) 100vw,
-            (max-width: 1200px) 50vw,
-            40vw"
-        />
-      )}
+      <SanityImage image={project.image} />
       <div>{project.description}</div>
       <div>{project.tasks}</div>
       <div>{project.time}</div>
       <div>{project.technologies}</div>
       <div>{project.customer}</div>
-
       {project.content?.map((content) => (
         <PortableText key={content._key} value={content} />
       ))}
-
       <div>{project.contactPerson}</div>
     </>
   )

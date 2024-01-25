@@ -1,4 +1,4 @@
-import MdxImage from '@/components/image'
+import MdxImage from '@/components/mdx-image'
 import { queryPostFromCmsBySlug, queryPostsFromCms } from '@/sanity/lib/queries'
 import { runQuery } from '@/sanity/lib/sanityFetch'
 import remarkEmbedder from '@remark-embedder/core'

@@ -1,18 +1,16 @@
-import { urlForImage } from '@/sanity/lib/image'
+import MdxImage from '@/components/mdx-image'
+import SanityImage from '@/components/sanity-image'
 import { getPostBySlug, getPosts } from '@/utils/blog'
 import { PortableText } from '@portabletext/react'
 import remarkEmbedder from '@remark-embedder/core'
 import oembedTransformer from '@remark-embedder/transformer-oembed'
-import { getImageDimensions } from '@sanity/asset-utils'
+import { Code } from 'bright'
 import { Metadata } from 'next'
 import { MDXRemote } from 'next-mdx-remote/rsc'
-import remarkGfm from 'remark-gfm'
-import remarkUnwrapImages from 'remark-unwrap-images'
-
-import MdxImage from '@/components/image'
-import { Code } from 'bright'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
+import remarkGfm from 'remark-gfm'
+import remarkUnwrapImages from 'remark-unwrap-images'
 
 export async function generateStaticParams() {
   const posts = await getPosts()
@@ -74,25 +72,7 @@ export default async function Home(props: { params: { slug: string } }) {
           sizes="(max-width: 600px) 100vw, 1200px"
         />
       )}
-      {post.kind === 'cms' && post.image && (
-        <Image
-          key={post.image.toString()}
-          src={urlForImage(post.image).url()}
-          alt={post.image.alt}
-          width={getImageDimensions(post.image).width}
-          height={getImageDimensions(post.image).height}
-          placeholder="blur"
-          blurDataURL={urlForImage(post.image)
-            .width(24)
-            .height(24)
-            .blur(10)
-            .url()}
-          sizes="
-            (max-width: 768px) 100vw,
-            (max-width: 1200px) 50vw,
-            40vw"
-        />
-      )}
+      {post.kind === 'cms' && <SanityImage image={post.image} />}
       <p className="font-semibold">{post.description}</p>
       {post.kind === 'markdown' && (
         <MDXRemote
