@@ -5,6 +5,7 @@ import remarkEmbedder from '@remark-embedder/core'
 import oembedTransformer from '@remark-embedder/transformer-oembed'
 import { Code } from 'bright'
 import { promises as fs } from 'fs'
+import { InferType } from 'groqd'
 import { imageSize } from 'image-size'
 import { compileMDX } from 'next-mdx-remote/rsc'
 import path from 'path'
@@ -27,20 +28,26 @@ export const getPosts = cache(async () => {
 const getCmsPosts = cache(async () => {
   const postsFromCMS = await runQuery(queryPostFromCms)
 
-  postsFromCMS.forEach((post) => {
-    posts.set(post.slug, {
-      kind: 'cms',
-      content: post.content as CmsContent,
-      image: post.image,
-      title: post.header.title ?? 'Ohne Titel',
-      description: post.header.description ?? 'Ohne Beschreibung',
-      slug: post.slug,
-      author: post.author ?? 'Anonymous',
-      //authors: post.authors ?? ['Anonymus 123'],
-      publishDate: post._createdAt,
-      tags: post.tags,
+  type CmsPostWithSlug = InferType<typeof queryPostFromCms>[number] & {
+    slug: string
+  }
+
+  postsFromCMS
+    .filter((post): post is CmsPostWithSlug => !!post.slug)
+    .forEach((post) => {
+      posts.set(post.slug, {
+        kind: 'cms',
+        content: post.content as CmsContent,
+        image: post.image,
+        title: post.header.title ?? 'Ohne Titel',
+        description: post.header.description ?? 'Ohne Beschreibung',
+        slug: post.slug,
+        author: post.author ?? 'Anonymous',
+        //authors: post.authors ?? ['Anonymus 123'],
+        publishDate: post._createdAt,
+        tags: post.tags?.filter((tag): tag is string => !!tag),
+      })
     })
-  })
 })
 
 const getMarkdownPosts = cache(async () => {
