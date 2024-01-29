@@ -86,3 +86,29 @@ export interface Glossary {
   modules?: Module[] | null
   tags?: string[]
 }
+
+export interface Person {
+  personName: string
+  slug: string
+  role?: string
+  education?: string
+  claim?: string
+  slogan?: string
+  content: CmsContent
+  contact?: {
+    mail?: string
+    phone?: string
+    socialNetworks?: {
+      title: string
+      url?: string
+    }[]
+  }
+  image: SanityImageWithAlt
+  skills?: {
+    title: string
+    items?: {
+      name?: string
+      value?: number
+    }[]
+  }[]
+}

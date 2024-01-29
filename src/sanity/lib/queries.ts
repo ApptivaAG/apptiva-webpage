@@ -33,8 +33,8 @@ export const queryPostsFromCms = q('*')
       .filter('references(^._id)')
       .grab$({ _id: q.string(), personName: q.string().optional() }),
     header: q('header').grab$({
-        title: q.string().optional().default('In Arbeit'),
-        description: q.string().optional().default(''),
+      title: q.string().optional().default('In Arbeit'),
+      description: q.string().optional().default(''),
       image: SanityImageWithAlt,
     }),
     tags: Tags,
@@ -59,8 +59,8 @@ export const queryPostFromCmsBySlug = q('*')
       .filter('references(^._id)')
       .grab$({ _id: q.string(), personName: q.string().optional() }),
     header: q('header').grab$({
-        title: q.string().optional().default('In Arbeit'),
-        description: q.string().optional().default(''),
+      title: q.string().optional().default('In Arbeit'),
+      description: q.string().optional().default(''),
       image: SanityImageWithAlt,
     }),
     tags: Tags,
@@ -200,4 +200,60 @@ export const faqsQuery = q('*')
     answer: q.string().optional(),
     slug: ['slug.current', q.string().optional()],
     tags: Tags,
+  })
+
+export const personsQuery = q('*').filterByType('person').grab$({
+  personName: q.string().optional(),
+  slug: Slug,
+  image: SanityImageWithAlt,
+})
+
+export const personBySlugQuery = q('*')
+  .filterByType('person')
+  .filter('slug.current == $slug')
+  .slice(0)
+  .grab$({
+    personName: q.string().optional(),
+    slug: Slug,
+    role: q.string().optional(),
+    education: q.string().optional(),
+    claim: q.string().optional(),
+    slogan: q.string().optional(),
+    content: q.contentBlocks().optional(),
+    contact: q
+      .object({
+        mail: q.string().optional(),
+        phone: q.string().optional(),
+        socialNetworks: q
+          .array(
+            q
+              .object({
+                title: q.string().optional(),
+                url: q.string().optional(),
+              })
+              .optional()
+          )
+          .optional(),
+      })
+      .optional(),
+    image: SanityImageWithAlt,
+    skills: q
+      .array(
+        q
+          .object({
+            title: q.string().optional(),
+            items: q
+              .array(
+                q
+                  .object({
+                    name: q.string().optional(),
+                    value: q.number().optional(),
+                  })
+                  .optional()
+              )
+              .optional(),
+          })
+          .optional()
+      )
+      .optional(),
   })
