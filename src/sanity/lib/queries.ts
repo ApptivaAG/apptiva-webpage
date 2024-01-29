@@ -47,7 +47,7 @@ export const queryPostFromCmsBySlug = q('*')
   .grab$({
     _createdAt: q.string(),
     _id: q.string(),
-    slug: ['slug.current', q.string().optional()],
+    slug: Slug,
     name: q.string().optional(),
     content: q.contentBlocks().optional(),
     author: q('author')
@@ -72,7 +72,7 @@ export const projectsQuery = q('*')
   .grab$({
     _id: q.string(),
     projectName: q.string().optional(),
-    slug: ['slug.current', q.string().optional()],
+    slug: Slug,
     order: q.number().optional(),
     description: q.string().optional(),
   })
@@ -85,7 +85,7 @@ export const projectBySlugQuery = q('*')
   .grab$({
     _id: q.string(),
     projectName: q.string().optional(),
-    slug: ['slug.current', q.string().optional()],
+    slug: Slug,
     image: SanityImageWithAlt,
     description: q.string().optional(),
     tasks: q.string().optional(),
@@ -107,7 +107,7 @@ export const servicesQuery = q('*')
   .filterByType('service-page')
   .grab$({
     _id: q.string(),
-    slug: ['slug.current', q.string().optional()],
+    slug: Slug,
     header: q('header')
       .grab$({
         title: q.string().optional().default('In Arbeit'),
@@ -124,7 +124,7 @@ export const serviceBySlugQuery = q('*')
   .slice(0)
   .grab$({
     _id: q.string(),
-    slug: ['slug.current', q.string().optional()],
+    slug: Slug,
     header: q('header')
       .grab$({
         title: q.string().optional().default('In Arbeit'),
@@ -149,7 +149,7 @@ export const glossaryQuery = q('*')
   .grab$({
     _id: q.string(),
     title: q.string().optional().default('Ohne Titel'),
-    slug: ['slug.current', q.string().optional()],
+    slug: Slug,
     summary: q.contentBlocks().optional(),
     modules: q('modules')
       .filter()
@@ -170,37 +170,27 @@ export const glossaryBySlugQuery = q('*')
   .grab$({
     _id: q.string(),
     title: q.string().optional().default('Ohne Titel'),
-    slug: ['slug.current', q.string().optional()],
+    slug: Slug,
     summary: q.contentBlocks().optional(),
     modules: q('modules')
       .filter()
       .grab$({
         title: q.string().optional().default('Ohne Titel'),
         layout: q.string().optional(),
-        image: sanityImage('image', {
-          additionalFields: {
-            alt: q.string().optional().default('Fehlende Bildbeschreibung'),
-          },
-        }).nullable(),
+        image: SanityImageWithAlt,
         content: q.contentBlocks().optional(),
       })
       .nullable(),
-    tags: q('tags')
-      .filter()
-      .deref()
-      .grabOne$('name', q.string().optional())
-      .nullable(),
-  })
-
-export const faqsQuery = q('*')
-  .filterByType('faq')
-  .grab$({
-    _id: q.string(),
-    question: q.string().optional(),
-    answer: q.string().optional(),
-    slug: ['slug.current', q.string().optional()],
     tags: Tags,
   })
+
+export const faqsQuery = q('*').filterByType('faq').grab$({
+  _id: q.string(),
+  question: q.string().optional(),
+  answer: q.string().optional(),
+  slug: Slug,
+  tags: Tags,
+})
 
 export const personsQuery = q('*').filterByType('person').grab$({
   personName: q.string().optional(),
