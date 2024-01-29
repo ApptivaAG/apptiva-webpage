@@ -1,12 +1,10 @@
 // ./nextjs-app/app/page.tsx
 
-import { SanityDocument } from 'next-sanity'
 import { faqsQuery } from '@/sanity/lib/queries'
-import { sanityFetch, token } from '@/sanity/lib/sanityFetch'
-import { draftMode } from 'next/headers'
+import { runQuery } from '@/sanity/lib/sanityFetch'
 
 export default async function Home() {
-  const faqs = await sanityFetch<SanityDocument[]>({ query: faqsQuery })
+  const faqs = await runQuery(faqsQuery)
 
   return (
     <div className="container mx-auto px-4">

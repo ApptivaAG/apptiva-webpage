@@ -113,7 +113,8 @@ export const queryPostFromCmsBySlug = q('*')
       .deref()
       .grabOne$('name', q.string().optional())
       .nullable(),
-  }).nullable()
+  })
+  .nullable()
 
 export const projectsQuery = q('*')
   .filterByType('project')
@@ -230,6 +231,20 @@ export const glossaryQuery = q('*')
         content: q.contentBlocks().optional(),
       })
       .nullable(),
+    tags: q('tags')
+      .filter()
+      .deref()
+      .grabOne$('name', q.string().optional())
+      .nullable(),
+  })
+
+export const faqsQuery = q('*')
+  .filterByType('faq')
+  .grab$({
+    _id: q.string(),
+    question: q.string().optional(),
+    answer: q.string().optional(),
+    slug: ['slug.current', q.string().optional()],
     tags: q('tags')
       .filter()
       .deref()
