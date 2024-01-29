@@ -12,6 +12,7 @@ import path from 'path'
 import { cache } from 'react'
 import remarkGfm from 'remark-gfm'
 import remarkUnwrapImages from 'remark-unwrap-images'
+import { mapTags } from './tags'
 import {
   BlogFrontmatter,
   CmsBlog,
@@ -84,9 +85,7 @@ const getCmsPosts = cache(async () => {
       slug: post.slug,
       author: post.author ?? 'Anonymous',
       publishDate: post._createdAt,
-      tags:
-        post.tags?.filter((tag): tag is string => typeof tag === 'string') ??
-        undefined,
+      tags: mapTags(post.tags),
     } as const
   })
 })

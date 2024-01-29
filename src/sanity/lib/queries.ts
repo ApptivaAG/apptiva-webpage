@@ -163,6 +163,35 @@ export const glossaryQuery = q('*')
     tags: Tags,
   })
 
+export const glossaryBySlugQuery = q('*')
+  .filterByType('glossary')
+  .filter('slug.current == $slug')
+  .slice(0)
+  .grab$({
+    _id: q.string(),
+    title: q.string().optional().default('Ohne Titel'),
+    slug: ['slug.current', q.string().optional()],
+    summary: q.contentBlocks().optional(),
+    modules: q('modules')
+      .filter()
+      .grab$({
+        title: q.string().optional().default('Ohne Titel'),
+        layout: q.string().optional(),
+        image: sanityImage('image', {
+          additionalFields: {
+            alt: q.string().optional().default('Fehlende Bildbeschreibung'),
+          },
+        }).nullable(),
+        content: q.contentBlocks().optional(),
+      })
+      .nullable(),
+    tags: q('tags')
+      .filter()
+      .deref()
+      .grabOne$('name', q.string().optional())
+      .nullable(),
+  })
+
 export const faqsQuery = q('*')
   .filterByType('faq')
   .grab$({

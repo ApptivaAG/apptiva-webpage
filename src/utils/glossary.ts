@@ -1,17 +1,30 @@
-import { glossaryQuery } from '@/sanity/lib/queries'
+import { glossaryBySlugQuery, glossaryQuery } from '@/sanity/lib/queries'
 import { runQuery } from '@/sanity/lib/sanityFetch'
 import { InferType } from 'groqd'
 import { cache } from 'react'
+import { mapTags } from './tags'
 import { Glossary } from './types'
 
-const glossary = new Map<string, Glossary>()
+export const getGlossaryItemBySlug = cache(async (slug: string) => {
+  const glossaryFromCms = await runQuery(glossaryBySlugQuery, {
+    slug,
+  })
 
-export const getGlossary = cache(async () => {
-  await getCmsGlossary()
-  return glossary
+  if (!glossaryFromCms.slug) {
+    return undefined
+  }
+
+  return {
+    slug: glossaryFromCms.slug,
+    title: glossaryFromCms.title,
+    modules: glossaryFromCms.modules,
+    summary: glossaryFromCms.summary,
+    tags: mapTags(glossaryFromCms.tags),
+  } satisfies Glossary
 })
 
-const getCmsGlossary = cache(async () => {
+export const getGlossary = cache(async () => {
+  const glossary = new Map<string, Glossary>()
   const glossaryFromCms = await runQuery(glossaryQuery)
 
   type CmsGlossaryWithSlug = InferType<typeof glossaryQuery>[number] & {
@@ -32,4 +45,6 @@ const getCmsGlossary = cache(async () => {
         tags: glossaryEntry.tags?.filter((tag): tag is string => !!tag),
       })
     })
+
+  return glossary
 })

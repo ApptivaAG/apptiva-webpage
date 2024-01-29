@@ -1,8 +1,7 @@
 // ./nextjs-app/app/page.tsx
 
-import SanityImage from '@/components/sanity-image'
 import { getGlossary } from '@/utils/glossary'
-import { PortableText } from '@portabletext/react'
+import Link from 'next/link'
 
 export default async function Home() {
   const glossary = await getGlossary()
@@ -14,19 +13,9 @@ export default async function Home() {
       <ul>
         {glossaryEntries.map((glossaryEntry) => (
           <li key={glossaryEntry.slug}>
-            <b>{glossaryEntry.title}:</b>
-            {glossaryEntry.summary?.map((summary) => (
-              <PortableText key={summary._key} value={summary} />
-            ))}
-            {glossaryEntry?.modules?.map((module) => (
-              <>
-                <h2>{module.title}</h2>
-                <SanityImage image={module.image} />
-                {module.content?.map((content) => (
-                  <PortableText key={content._key} value={content} />
-                ))}
-              </>
-            ))}
+            <Link href={`/glossar/${glossaryEntry.slug}`}>
+              {glossaryEntry.title}
+            </Link>
           </li>
         ))}
       </ul>
