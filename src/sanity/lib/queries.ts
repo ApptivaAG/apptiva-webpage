@@ -1,13 +1,13 @@
 // ./nextjs-app/sanity/lib/queries.ts
 
-import { q, sanityImage } from 'groqd'
+import { nullToUndefined, q, sanityImage } from 'groqd'
 
 const Slug = ['slug.current', q.string().optional()] satisfies [string, any]
 
-const SanityImageWithAlt = sanityImage('header.image', {
-  additionalFields: {
+const SanityImageWithAlt = sanityImage('image', {
+  additionalFields: nullToUndefined({
     alt: q.string().optional().default('Fehlende Bildbeschreibung'),
-  },
+  }),
 }).nullable()
 
 const Tags = q('tags')
@@ -32,14 +32,11 @@ export const queryPostsFromCms = q('*')
       .filterByType('person')
       .filter('references(^._id)')
       .grab$({ _id: q.string(), personName: q.string().optional() }),
-    image: SanityImageWithAlt,
-    header: q
-      .object({
+    header: q('header').grab$({
         title: q.string().optional().default('In Arbeit'),
         description: q.string().optional().default(''),
-      })
-      .optional()
-      .default({ title: 'In Arbeit', description: '' }),
+      image: SanityImageWithAlt,
+    }),
     tags: Tags,
   })
 
@@ -61,14 +58,11 @@ export const queryPostFromCmsBySlug = q('*')
       .filterByType('person')
       .filter('references(^._id)')
       .grab$({ _id: q.string(), personName: q.string().optional() }),
-    image: SanityImageWithAlt,
-    header: q
-      .object({
+    header: q('header').grab$({
         title: q.string().optional().default('In Arbeit'),
         description: q.string().optional().default(''),
-      })
-      .optional()
-      .default({ title: 'In Arbeit', description: '' }),
+      image: SanityImageWithAlt,
+    }),
     tags: Tags,
   })
   .nullable()

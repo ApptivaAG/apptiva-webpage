@@ -59,7 +59,7 @@ const getCmsPostBySlug = cache(async (slug: string) => {
   return {
     kind: 'cms',
     content: post.content as CmsContent,
-    image: post.image,
+    image: post.header.image,
     title: post.header.title ?? 'Ohne Title',
     description: post.header.description ?? 'Ohne Beschreibung',
     slug: post.slug,
@@ -78,7 +78,7 @@ const getCmsPosts = cache(async () => {
     return {
       kind: 'cms',
       content: post.content as CmsContent,
-      image: post.image,
+      image: post.header.image,
       title: post.header.title ?? 'Ohne Title',
       description: post.header.description ?? 'Ohne Beschreibung',
       slug: post.slug,
