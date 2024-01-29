@@ -9,13 +9,12 @@ export default async function Home() {
   return (
     <div className="container mx-auto px-4">
       <h1>FAQ</h1>
-      <ul>
-        {faqs.map((faq) => (
-          <li key={faq._id}>
-            <a href={faq.slug}>{faq.question}</a>
-          </li>
-        ))}
-      </ul>
+      {faqs.map((faq) => (
+        <>
+          <b>{faq.question}</b>
+          <p>{faq.answer}</p>
+        </>
+      ))}
     </div>
   )
 }
