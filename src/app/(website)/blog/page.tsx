@@ -12,33 +12,40 @@ export default async function Home({
   const posts = await getPosts()
   const tags = await getTags()
 
-  console.log('search param', searchParams)
-
-  // Use the schema and the query as you see fit, for example:
+  const allPosts = Array.from(posts.entries())
+  const tagsInSearchParams = searchParams['tag']
+  const filteredPosts =
+    tagsInSearchParams === undefined
+      ? allPosts
+      : allPosts.filter(([slug, post]) =>
+          matchingTags(tagsInSearchParams, post.tags)
+        )
 
   return (
-    <>
-      <h2
-        style={{ fontSize: '30px', fontWeight: 'bold', paddingBottom: '1em' }}
-      >
-        Tags
-      </h2>
+    <div className="space-y-4">
+      <h1>Blog</h1>
       <TagFilter tags={tags} searchParams={searchParams}></TagFilter>
 
-      <h2 style={{ fontSize: '30px', fontWeight: 'bold', paddingBlock: '1em' }}>
-        Blogposts
-      </h2>
-
       <ul>
-        {Array.from(posts.entries()).map(([slug, post]) => (
+        {filteredPosts.map(([slug, post]) => (
           <li key={slug}>
             <a href={`/blog/${slug}`}>{post.title}</a>
           </li>
         ))}
       </ul>
-    </>
+    </div>
   )
 }
 function useQueryState(arg0: string): [any, any] {
   throw new Error('Function not implemented.')
+}
+
+function matchingTags(
+  searchParamTag: Array<string> | string,
+  postTags: Array<string> | undefined
+) {
+  const tagArray =
+    typeof searchParamTag === 'string' ? [searchParamTag] : searchParamTag
+  const intersection = tagArray.filter((value) => postTags?.includes(value))
+  return intersection.length > 0
 }
