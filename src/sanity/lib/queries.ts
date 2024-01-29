@@ -1,13 +1,27 @@
 // ./nextjs-app/sanity/lib/queries.ts
 
-import { nullToUndefined, q, sanityImage } from 'groqd'
+import { q, sanityImage } from 'groqd'
+
+const Slug = ['slug.current', q.string().optional()] satisfies [string, any]
+
+const SanityImageWithAlt = sanityImage('header.image', {
+  additionalFields: {
+    alt: q.string().optional().default('Fehlende Bildbeschreibung'),
+  },
+}).nullable()
+
+const Tags = q('tags')
+  .filter()
+  .deref()
+  .grabOne$('name', q.string().optional())
+  .nullable()
 
 export const queryPostsFromCms = q('*')
   .filterByType('blog')
   .grab$({
     _createdAt: q.string(),
     _id: q.string(),
-    slug: ['slug.current', q.string().optional()],
+    slug: Slug,
     name: q.string().optional(),
     content: q.contentBlocks().optional(),
     author: q('author')
@@ -18,11 +32,7 @@ export const queryPostsFromCms = q('*')
       .filterByType('person')
       .filter('references(^._id)')
       .grab$({ _id: q.string(), personName: q.string().optional() }),
-    image: sanityImage('header.image', {
-      additionalFields: {
-        alt: q.string().optional().default('Fehlende Bildbeschreibung'),
-      },
-    }).nullable(),
+    image: SanityImageWithAlt,
     header: q
       .object({
         title: q.string().optional().default('In Arbeit'),
@@ -30,11 +40,7 @@ export const queryPostsFromCms = q('*')
       })
       .optional()
       .default({ title: 'In Arbeit', description: '' }),
-    tags: q('tags')
-      .filter()
-      .deref()
-      .grabOne$('name', q.string().optional())
-      .nullable(),
+    tags: Tags,
   })
 
 export const queryPostFromCmsBySlug = q('*')
@@ -55,11 +61,7 @@ export const queryPostFromCmsBySlug = q('*')
       .filterByType('person')
       .filter('references(^._id)')
       .grab$({ _id: q.string(), personName: q.string().optional() }),
-    image: sanityImage('header.image', {
-      additionalFields: {
-        alt: q.string().optional().default('Fehlende Bildbeschreibung'),
-      },
-    }).nullable(),
+    image: SanityImageWithAlt,
     header: q
       .object({
         title: q.string().optional().default('In Arbeit'),
@@ -67,11 +69,7 @@ export const queryPostFromCmsBySlug = q('*')
       })
       .optional()
       .default({ title: 'In Arbeit', description: '' }),
-    tags: q('tags')
-      .filter()
-      .deref()
-      .grabOne$('name', q.string().optional())
-      .nullable(),
+    tags: Tags,
   })
   .nullable()
 
@@ -94,11 +92,7 @@ export const projectBySlugQuery = q('*')
     _id: q.string(),
     projectName: q.string().optional(),
     slug: ['slug.current', q.string().optional()],
-    image: sanityImage('image', {
-      additionalFields: {
-        alt: q.string().optional().default('Fehlende Bildbeschreibung'),
-      },
-    }).nullable(),
+    image: SanityImageWithAlt,
     description: q.string().optional(),
     tasks: q.string().optional(),
     time: q.string().optional(),
@@ -124,13 +118,7 @@ export const servicesQuery = q('*')
       .grab$({
         title: q.string().optional().default('In Arbeit'),
         description: q.string().optional(),
-        image: sanityImage('image', {
-          additionalFields: {
-            alt: nullToUndefined(
-              q.string().optional().default('Fehlende Bildbeschreibung')
-            ),
-          },
-        }).nullable(),
+        image: SanityImageWithAlt,
         content: q.contentBlocks().optional(),
       })
       .nullable(),
@@ -147,11 +135,7 @@ export const serviceBySlugQuery = q('*')
       .grab$({
         title: q.string().optional().default('In Arbeit'),
         description: q.string().optional(),
-        image: sanityImage('image', {
-          additionalFields: nullToUndefined({
-            alt: q.string().optional().default('Fehlende Bildbeschreibung'),
-          }),
-        }).nullable(),
+        image: SanityImageWithAlt,
         content: q.contentBlocks().optional(),
       })
       .nullable(),
@@ -160,11 +144,7 @@ export const serviceBySlugQuery = q('*')
       .grab$({
         title: q.string().optional().default('Ohne Titel'),
         layout: q.string().optional(),
-        image: sanityImage('image', {
-          additionalFields: nullToUndefined({
-            alt: q.string().optional().default('Fehlende Bildbeschreibung'),
-          }),
-        }).nullable(),
+        image: SanityImageWithAlt,
         content: q.contentBlocks().optional(),
       })
       .nullable(),
@@ -182,19 +162,11 @@ export const glossaryQuery = q('*')
       .grab$({
         title: q.string().optional().default('Ohne Titel'),
         layout: q.string().optional(),
-        image: sanityImage('image', {
-          additionalFields: {
-            alt: q.string().optional().default('Fehlende Bildbeschreibung'),
-          },
-        }).nullable(),
+        image: SanityImageWithAlt,
         content: q.contentBlocks().optional(),
       })
       .nullable(),
-    tags: q('tags')
-      .filter()
-      .deref()
-      .grabOne$('name', q.string().optional())
-      .nullable(),
+    tags: Tags,
   })
 
 export const faqsQuery = q('*')
@@ -204,9 +176,5 @@ export const faqsQuery = q('*')
     question: q.string().optional(),
     answer: q.string().optional(),
     slug: ['slug.current', q.string().optional()],
-    tags: q('tags')
-      .filter()
-      .deref()
-      .grabOne$('name', q.string().optional())
-      .nullable(),
+    tags: Tags,
   })
