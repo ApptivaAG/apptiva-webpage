@@ -26,8 +26,6 @@ export const runQuery = makeSafeQueryRunner(
       )
     }
 
-    return client
-      .withConfig({ useCdn: !isDraftMode })
-      .fetch(query, params, { next: { tags } })
+    return client.fetch(query, params, { next: { tags } })
   }
 )
