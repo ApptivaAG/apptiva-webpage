@@ -3,7 +3,7 @@ import { personsQuery } from '@/sanity/lib/queries'
 import { runQuery } from '@/sanity/lib/sanityFetch'
 
 export default async function Home() {
-  const persons = await runQuery(personsQuery)
+  const persons = await runQuery(personsQuery, undefined, ['person'])
 
   return (
     <div className="container mx-auto px-4">

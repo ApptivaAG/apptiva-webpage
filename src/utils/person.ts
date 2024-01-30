@@ -4,9 +4,13 @@ import { cache } from 'react'
 import { Person } from './types'
 
 export const getPersonBySlug = cache(async (slug: string) => {
-  const person = await runQuery(personBySlugQuery, {
-    slug,
-  })
+  const person = await runQuery(
+    personBySlugQuery,
+    {
+      slug,
+    },
+    ['person']
+  )
 
   if (!person.slug || !person.personName) {
     return undefined

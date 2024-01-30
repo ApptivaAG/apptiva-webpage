@@ -5,7 +5,9 @@ import { cache } from 'react'
 import { Service } from './types'
 
 export const getServicePages = cache(async () => {
-  const servicePagesFromCMS = await runQuery(servicesQuery)
+  const servicePagesFromCMS = await runQuery(servicesQuery, undefined, [
+    'service-page',
+  ])
 
   type CmsServicePageWithSlug = InferType<typeof servicesQuery>[number] & {
     slug: string
@@ -27,9 +29,13 @@ export const getServicePages = cache(async () => {
 })
 
 export const getServiceBySlug = cache(async (slug: string) => {
-  const service = await runQuery(serviceBySlugQuery, {
-    slug,
-  })
+  const service = await runQuery(
+    serviceBySlugQuery,
+    {
+      slug,
+    },
+    ['service-page']
+  )
 
   if (!service.slug) {
     return undefined

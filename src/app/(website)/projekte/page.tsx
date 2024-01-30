@@ -4,7 +4,7 @@ import { projectsQuery } from '@/sanity/lib/queries'
 import { runQuery } from '@/sanity/lib/sanityFetch'
 
 export default async function Home() {
-  const projects = await runQuery(projectsQuery)
+  const projects = await runQuery(projectsQuery, undefined, ['project'])
 
   return (
     <div className="container mx-auto px-4">

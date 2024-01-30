@@ -5,9 +5,13 @@ import { PortableText } from '@portabletext/react'
 import { notFound } from 'next/navigation'
 
 export default async function Home(props: { params: { slug: string } }) {
-  const project = await runQuery(projectBySlugQuery, {
-    slug: props.params.slug,
-  })
+  const project = await runQuery(
+    projectBySlugQuery,
+    {
+      slug: props.params.slug,
+    },
+    ['project']
+  )
 
   if (!project) {
     notFound()

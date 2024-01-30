@@ -6,9 +6,13 @@ import { mapTags } from './tags'
 import { Glossary } from './types'
 
 export const getGlossaryItemBySlug = cache(async (slug: string) => {
-  const glossaryFromCms = await runQuery(glossaryBySlugQuery, {
-    slug,
-  })
+  const glossaryFromCms = await runQuery(
+    glossaryBySlugQuery,
+    {
+      slug,
+    },
+    ['glossary']
+  )
 
   if (!glossaryFromCms.slug) {
     return undefined
@@ -25,7 +29,7 @@ export const getGlossaryItemBySlug = cache(async (slug: string) => {
 
 export const getGlossary = cache(async () => {
   const glossary = new Map<string, Glossary>()
-  const glossaryFromCms = await runQuery(glossaryQuery)
+  const glossaryFromCms = await runQuery(glossaryQuery, undefined, ['glossary'])
 
   type CmsGlossaryWithSlug = InferType<typeof glossaryQuery>[number] & {
     slug: string

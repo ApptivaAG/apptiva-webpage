@@ -49,9 +49,13 @@ export const getPosts = cache(async () => {
 })
 
 const getCmsPostBySlug = cache(async (slug: string) => {
-  const post = await runQuery(queryPostFromCmsBySlug, {
-    slug,
-  })
+  const post = await runQuery(
+    queryPostFromCmsBySlug,
+    {
+      slug,
+    },
+    ['blog']
+  )
 
   if (!post || !post.slug) {
     return undefined
@@ -73,7 +77,7 @@ const getCmsPostBySlug = cache(async (slug: string) => {
 })
 
 const getCmsPosts = cache(async () => {
-  const postsFromCMS = await runQuery(queryPostsFromCms)
+  const postsFromCMS = await runQuery(queryPostsFromCms, undefined, ['blog'])
 
   return postsFromCMS.map((post) => {
     return {
