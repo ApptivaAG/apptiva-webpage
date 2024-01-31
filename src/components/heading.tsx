@@ -1,7 +1,7 @@
 import React from 'react'
 import { twMerge } from 'tailwind-merge'
 
-type Level = 1 | 2 | 3 | 4
+type Level = 1 | 2 | 3 | 4 | 5 | 6
 
 const getClassNameByLevel = (level: Level): string => {
   switch (level) {
@@ -18,12 +18,14 @@ const getClassNameByLevel = (level: Level): string => {
   }
 }
 
-export default function Heading(props: {
-  level: Level
-  size?: Level
-  className?: string
-  children: React.ReactNode
-}) {
+export default function Heading(
+  props: {
+    level: Level
+    size?: Level
+    className?: string
+    children: React.ReactNode
+  } & React.HTMLAttributes<HTMLHeadingElement>
+) {
   return React.createElement(
     `h${props.level}`,
     {

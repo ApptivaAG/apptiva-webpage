@@ -1,5 +1,6 @@
 // ./nextjs-app/app/page.tsx
 
+import Heading from '@/components/heading'
 import { getGlossary } from '@/utils/glossary'
 import Link from 'next/link'
 
@@ -9,7 +10,7 @@ export default async function Home() {
 
   return (
     <div className="container mx-auto px-4">
-      <h1>Glossar</h1>
+      <Heading level={2}>Glossar</Heading>
       <ul>
         {glossaryEntries.map((glossaryEntry) => (
           <li key={glossaryEntry.slug}>

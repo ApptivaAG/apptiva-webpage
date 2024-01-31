@@ -1,3 +1,4 @@
+import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
 import { getServiceBySlug } from '@/utils/service-page'
 import { PortableText } from '@portabletext/react'
@@ -10,7 +11,7 @@ export default async function Home(props: { params: { slug: string } }) {
 
   return (
     <>
-      <h1 className="text-3xl font-bold">{servicePage.title}</h1>
+      <Heading level={2}>{servicePage.title}</Heading>
 
       <p>{servicePage.description}</p>
       <SanityImage image={servicePage.image} />
@@ -20,7 +21,7 @@ export default async function Home(props: { params: { slug: string } }) {
 
       {servicePage.modules?.map((module) => (
         <>
-          <h2>{module.title}</h2>
+          <Heading level={3}>{module.title}</Heading>
           <SanityImage image={module.image} />
           {module.content?.map((content) => (
             <PortableText key={content._key} value={content} />

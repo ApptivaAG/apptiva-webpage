@@ -1,3 +1,4 @@
+import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
 import { getPersonBySlug } from '@/utils/person'
 import { PortableText } from '@portabletext/react'
@@ -9,13 +10,15 @@ export default async function Home(props: { params: { slug: string } }) {
   return (
     <>
       <SanityImage image={person.image} />
-      <h1>{person.personName}</h1>
+      <Heading level={2}>{person.personName}</Heading>
       <p>{person.role}</p>
       <p>{person.education}</p>
       <p>{person.claim}</p>
       <p>{person.slogan}</p>
       {person.content && <PortableText value={person.content} />}
-      <h2>Kontakt</h2>
+      <Heading level={3} size={4}>
+        Kontakt
+      </Heading>
       <p>{person.contact.mail}</p>
       <p>{person.contact.phone}</p>
       <p>
@@ -25,11 +28,15 @@ export default async function Home(props: { params: { slug: string } }) {
           </a>
         ))}
       </p>
-      <h2>Skills</h2>
+      <Heading level={3} size={4}>
+        Skills
+      </Heading>
       <p>
         {person.skills?.map((skill) => (
           <>
-            <h3>{skill.title}</h3>
+            <Heading level={4} size={5}>
+              {skill.title}
+            </Heading>
             {skill.items?.map((item) => (
               <>
                 <b>{item.name}:</b> {item.value}

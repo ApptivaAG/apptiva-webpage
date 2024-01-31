@@ -1,3 +1,4 @@
+import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
 import { getGlossaryItemBySlug } from '@/utils/glossary'
 import { PortableText } from '@portabletext/react'
@@ -8,11 +9,13 @@ export default async function Glossary(props: { params: { slug: string } }) {
     (await getGlossaryItemBySlug(props.params.slug)) ?? notFound()
   return (
     <>
-      <h1>{glossary.title}</h1>
+      <Heading level={2}>{glossary.title}</Heading>
       {glossary.summary && <PortableText value={glossary.summary} />}
       {glossary?.modules?.map((module) => (
         <>
-          <h2>{module.title}</h2>
+          <Heading level={3} size={4}>
+            {module.title}
+          </Heading>
           <SanityImage image={module.image} />
           {module.content && <PortableText value={module.content} />}
         </>

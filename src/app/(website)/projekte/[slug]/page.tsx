@@ -1,3 +1,4 @@
+import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
 import { projectBySlugQuery } from '@/sanity/lib/queries'
 import { runQuery } from '@/sanity/lib/sanityFetch'
@@ -19,11 +20,7 @@ export default async function Home(props: { params: { slug: string } }) {
 
   return (
     <>
-      <h1
-        style={{ fontSize: '30px', fontWeight: 'bold', paddingBottom: '1em' }}
-      >
-        {project.projectName}
-      </h1>
+      <Heading level={2}>{project.projectName}</Heading>
       <SanityImage image={project.image} />
       <div>{project.description}</div>
       <div>{project.tasks}</div>

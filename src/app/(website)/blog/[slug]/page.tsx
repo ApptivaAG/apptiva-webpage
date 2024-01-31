@@ -1,3 +1,4 @@
+import Heading from '@/components/heading'
 import MdxImage from '@/components/mdx-image'
 import SanityImage from '@/components/sanity-image'
 import { getPostBySlug, getPosts } from '@/utils/blog'
@@ -49,7 +50,7 @@ export default async function Home(props: { params: { slug: string } }) {
 
   return (
     <>
-      <h1>{post.title}</h1>
+      <Heading level={2}>{post.title}</Heading>
       <p>
         Publiziert am{' '}
         <time dateTime={post.publishDate}>
@@ -94,7 +95,7 @@ export default async function Home(props: { params: { slug: string } }) {
                 ],
               ],
             },
-            parseFrontmatter: true
+            parseFrontmatter: true,
           }}
         />
       )}
@@ -104,7 +105,7 @@ export default async function Home(props: { params: { slug: string } }) {
           <PortableText key={content._key} value={content} />
         ))}
       <hr />
-      <h2>Tags:</h2>
+      <Heading level={3}>Tags:</Heading>
       <ul>{post.tags && post.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
     </>
   )

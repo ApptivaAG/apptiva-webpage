@@ -1,3 +1,4 @@
+import Heading from '@/components/heading'
 import { getServicePages } from '@/utils/service-page'
 
 export default async function Home() {
@@ -5,7 +6,7 @@ export default async function Home() {
 
   return (
     <div>
-      <h1>Angebot</h1>
+      <Heading level={2}>Angebot</Heading>
       <ul>
         {Array.from(servicePages.values()).map((servicePage) => (
           <li key={servicePage.slug}>

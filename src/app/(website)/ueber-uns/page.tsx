@@ -1,3 +1,4 @@
+import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
 import { personsQuery } from '@/sanity/lib/queries'
 import { runQuery } from '@/sanity/lib/sanityFetch'
@@ -7,8 +8,10 @@ export default async function Home() {
 
   return (
     <div className="container mx-auto px-4">
-      <h2>Kultur & Firmenfacts</h2>
-      <h2 id="team">Team</h2>
+      <Heading level={3}>Kultur & Firmenfacts</Heading>
+      <Heading level={3} id="team">
+        Team
+      </Heading>
       <ul>
         {persons.map((person) => (
           <li key={person.slug}>

@@ -1,5 +1,6 @@
 // ./nextjs-app/app/page.tsx
 
+import Heading from '@/components/heading'
 import { faqsQuery } from '@/sanity/lib/queries'
 import { runQuery } from '@/sanity/lib/sanityFetch'
 
@@ -8,7 +9,7 @@ export default async function Home() {
 
   return (
     <div className="container mx-auto px-4">
-      <h1>FAQ</h1>
+      <Heading level={2}>FAQ</Heading>
       {faqs.map((faq) => (
         <>
           <b>{faq.question}</b>

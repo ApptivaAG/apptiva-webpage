@@ -1,3 +1,4 @@
+import Heading from '@/components/heading'
 import { TagFilter } from '@/components/tag-filter'
 import { getPosts } from '@/utils/blog'
 import { getTags } from '@/utils/tags'
@@ -23,7 +24,7 @@ export default async function Home({
 
   return (
     <div className="space-y-4">
-      <h1>Blog</h1>
+      <Heading level={2}>Blog</Heading>
       <TagFilter tags={tags} searchParams={searchParams}></TagFilter>
 
       <ul>

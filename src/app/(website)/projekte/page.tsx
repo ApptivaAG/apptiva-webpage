@@ -1,5 +1,6 @@
 // ./nextjs-app/app/page.tsx
 
+import Heading from '@/components/heading'
 import { projectsQuery } from '@/sanity/lib/queries'
 import { runQuery } from '@/sanity/lib/sanityFetch'
 
@@ -8,23 +9,13 @@ export default async function Home() {
 
   return (
     <div className="container mx-auto px-4">
-      <h1
-        style={{ fontSize: '30px', fontWeight: 'bold', paddingBottom: '1em' }}
-      >
-        Projekte
-      </h1>
+      <Heading level={2}>Projekte</Heading>
       {projects.map((project) => (
         <div key={project._id}>
           <a href={'/projekte/' + project.slug}>
-            <h2
-              style={{
-                fontSize: '20px',
-                fontWeight: 'bold',
-                paddingBlock: '0.5em',
-              }}
-            >
+            <Heading level={3} size={4}>
               {project.projectName}
-            </h2>
+            </Heading>
             <div>{project.description}</div>
           </a>
         </div>
