@@ -7,6 +7,11 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    fontWeight: {
+      normal: '400',
+      bold: '600',
+      heavy: '900',
+    },
     extend: {
       colors: {
         primary: 'rgb(var(--primary) / <alpha-value>)',
@@ -14,8 +19,8 @@ const config: Config = {
         secondary: 'rgb(var(--secondary) / <alpha-value>)',
         'secondary-dark': 'rgb(var(--secondary-dark) / <alpha-value>)',
         'base-black': 'rgb(var(--base-black) / <alpha-value>)',
-        'base-grey': 'rgb(var(--primary-dark) / <alpha-value>)',
-        'base-white': 'rgb(var(--secondary-dark) / <alpha-value>)',
+        'base-grey': 'rgb(var(--base-grey) / <alpha-value>)',
+        'base-white': 'rgb(var(--base-white) / <alpha-value>)',
       },
     },
   },
