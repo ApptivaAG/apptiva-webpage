@@ -20,6 +20,9 @@ dependencies:
   '@sanity/image-url':
     specifier: ^1.0.2
     version: 1.0.2
+  '@sanity/ui':
+    specifier: ^2.0.1
+    version: 2.0.1(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(styled-components@5.3.11)
   '@sanity/vision':
     specifier: ^3.26.0
     version: 3.26.0(@babel/runtime@7.23.8)(@codemirror/lint@6.4.2)(@codemirror/state@6.4.0)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.2.1)(codemirror@6.0.1)(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(styled-components@5.3.11)
@@ -34,7 +37,7 @@ dependencies:
     version: 0.15.10
   groqd-playground:
     specifier: ^0.0.18
-    version: 0.0.18(@sanity/icons@2.8.0)(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(sanity@3.26.0)(styled-components@5.3.11)
+    version: 0.0.18(@sanity/icons@2.8.0)(@sanity/ui@2.0.1)(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(sanity@3.26.0)(styled-components@5.3.11)
   image-size:
     specifier: ^1.1.1
     version: 1.1.1
@@ -46,7 +49,7 @@ dependencies:
     version: 4.4.1(react-dom@18.2.0)(react@18.2.0)
   next-sanity:
     specifier: ^7.0.12
-    version: 7.0.12(@sanity/client@6.11.2)(@sanity/icons@2.8.0)(@sanity/types@3.26.0)(next@14.1.0)(react@18.2.0)(sanity@3.26.0)(styled-components@5.3.11)
+    version: 7.0.12(@sanity/client@6.11.2)(@sanity/icons@2.8.0)(@sanity/types@3.26.0)(@sanity/ui@2.0.1)(next@14.1.0)(react@18.2.0)(sanity@3.26.0)(styled-components@5.3.11)
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -68,6 +71,9 @@ dependencies:
   styled-components:
     specifier: ^5.3.11
     version: 5.3.11(@babel/core@7.23.7)(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)
+  tailwind-merge:
+    specifier: ^2.2.1
+    version: 2.2.1
 
 devDependencies:
   '@types/node':
@@ -4230,7 +4236,7 @@ packages:
     engines: {node: '>=18'}
     dev: false
 
-  /groqd-playground@0.0.18(@sanity/icons@2.8.0)(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(sanity@3.26.0)(styled-components@5.3.11):
+  /groqd-playground@0.0.18(@sanity/icons@2.8.0)(@sanity/ui@2.0.1)(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(sanity@3.26.0)(styled-components@5.3.11):
     resolution: {integrity: sha512-+zAeJDvm8O1A9t5o5D01uSO62/KGLxG4EcGM3VVZAqy1wjJ8V/nXDo6P30A/uYbDmqxPpd0dPXX9rpbysVMsDw==}
     peerDependencies:
       '@sanity/icons': ^2.3.1
@@ -4242,6 +4248,7 @@ packages:
       styled-components: ^5.3.9
     dependencies:
       '@sanity/icons': 2.8.0(react@18.2.0)
+      '@sanity/ui': 2.0.1(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(styled-components@5.3.11)
       '@uiw/react-split': 5.9.3(react-dom@18.2.0)(react@18.2.0)
       groqd: 0.15.10
       lodash.has: 4.5.2
@@ -5944,7 +5951,7 @@ packages:
       - supports-color
     dev: false
 
-  /next-sanity@7.0.12(@sanity/client@6.11.2)(@sanity/icons@2.8.0)(@sanity/types@3.26.0)(next@14.1.0)(react@18.2.0)(sanity@3.26.0)(styled-components@5.3.11):
+  /next-sanity@7.0.12(@sanity/client@6.11.2)(@sanity/icons@2.8.0)(@sanity/types@3.26.0)(@sanity/ui@2.0.1)(next@14.1.0)(react@18.2.0)(sanity@3.26.0)(styled-components@5.3.11):
     resolution: {integrity: sha512-9Lhg1dsWXHuIfyWOqrrCRjlo2EMEUdDwbBNgqjJy5RKux5wLfJmbqj6zw8f5kkyjltHFNhHgr8wKpU2Wa55S1w==}
     engines: {node: '>=18'}
     peerDependencies:
@@ -5961,6 +5968,7 @@ packages:
       '@sanity/icons': 2.8.0(react@18.2.0)
       '@sanity/preview-kit': 5.0.12(@sanity/client@6.11.2)(react@18.2.0)
       '@sanity/types': 3.26.0
+      '@sanity/ui': 2.0.1(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(styled-components@5.3.11)
       '@sanity/webhook': 4.0.0
       groq: 3.26.0
       next: 14.1.0(@babel/core@7.23.7)(react-dom@18.2.0)(react@18.2.0)
@@ -7646,6 +7654,12 @@ packages:
 
   /symbol-tree@3.2.4:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}
+    dev: false
+
+  /tailwind-merge@2.2.1:
+    resolution: {integrity: sha512-o+2GTLkthfa5YUt4JxPfzMIpQzZ3adD1vLVkvKE1Twl9UAhGsEbIZhHHZVRttyW177S8PDJI3bTQNaebyofK3Q==}
+    dependencies:
+      '@babel/runtime': 7.23.8
     dev: false
 
   /tailwindcss@3.4.1:
