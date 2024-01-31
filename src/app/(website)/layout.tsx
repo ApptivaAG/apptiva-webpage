@@ -2,6 +2,28 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Navbar from './../../components/Navbar'
 import './globals.css'
+import Hero from '@/components/hero'
+import localFont from 'next/font/local'
+
+const gentona = localFont({
+  src: [
+    {
+      path: './font/Gentona-Book.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './font/Gentona-SemiBold.woff2',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: './font/Gentona-Heavy.woff2',
+      weight: '900',
+      style: 'normal',
+    },
+  ],
+})
 
 const navbarData = [
   {
@@ -83,8 +105,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="de">
-      <body className={`${inter.className}`}>
+    <html lang="de" className={gentona.className}>
+      <body>
+        <Hero />
         <Navbar></Navbar>
         <div className="content">{children}</div>
       </body>
