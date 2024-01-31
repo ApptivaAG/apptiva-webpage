@@ -72,16 +72,16 @@ const navbarData = [
 ]
 
 const Navbar = () => (
-  <div className="navigation">
+  <div className="full flex justify-around">
     {navbarData.map((item) => (
-      <div className="navigation-section" key={item.href}>
+      <div key={item.href}>
         <ul key={item.href}>
           <li key={item.href}>
-            <Link key={item.href} href={item.href}>
+            <Link key={item.href} href={item.href} className='font-bold'>
               {item.title}
             </Link>
             {item.items && (
-              <div className="subnav">
+              <div >
                 <ul>
                   {item.items.map((subitem) => (
                     <li key={subitem.href}>
