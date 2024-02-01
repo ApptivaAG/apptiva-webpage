@@ -5,8 +5,10 @@ const Testimonial = ({ testimonial }: { testimonial: any }) => {
   const imagePath = path.join('/img/testimonials/', testimonial.avatar)
   return (
     <div>
-      <div>
-        <p className="text-4xl text-primary-dark">{testimonial.statement}</p>
+      <div className="mb-20 mt-20">
+        <p className="text-5xl font-bold text-primary-dark">
+          {testimonial.statement}
+        </p>
       </div>
       <div className="flex items-center gap-8">
         <div className="">
