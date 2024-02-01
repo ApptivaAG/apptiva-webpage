@@ -20,8 +20,10 @@
   --content: min(50ch, 100% - var(--gap) * 2);
   --popout: minmax(0, 2rem);
   --feature: minmax(0, 5rem);
+  --gutter-top: 8rem;
 
   display: grid;
+  grid-template-rows: [full-start] var(--gutter-top) [content-start] 1fr [content-end] 0 [full-end];
   grid-template-columns:
     [full-start] var(--full)
     [feature-start] var(--feature)
@@ -34,13 +36,17 @@
 
 .content > * {
   grid-column: content;
+  grid-row: content;
 }
 .popout {
   grid-column: popout;
+  grid-row: content;
 }
 .feature {
   grid-column: feature;
+  grid-row: content;
 }
 .full {
   grid-column: full;
+  grid-row: full;
 }
