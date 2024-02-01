@@ -23,7 +23,6 @@
   --gutter-top: 8rem;
 
   display: grid;
-  grid-template-rows: [full-start] var(--gutter-top) [content-start] 1fr [content-end] 0 [full-end];
   grid-template-columns:
     [full-start] var(--full)
     [feature-start] var(--feature)
@@ -32,21 +31,23 @@
     var(--popout) [popout-end]
     var(--feature) [feature-end]
     var(--full) [full-end];
+
+  padding-top: 8rem;
+}
+
+.content:has(.full:first-child) {
+  padding-top: 0;
 }
 
 .content > * {
   grid-column: content;
-  grid-row: content;
 }
 .popout {
   grid-column: popout;
-  grid-row: content;
 }
 .feature {
   grid-column: feature;
-  grid-row: content;
 }
 .full {
   grid-column: full;
-  grid-row: full;
 }
