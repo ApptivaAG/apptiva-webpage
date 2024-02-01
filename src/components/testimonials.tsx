@@ -4,7 +4,12 @@ const Testimonials = ({ testimonials }: { testimonials: any }) => {
   return (
     <div>
       {testimonials.map((testimonial: any) => {
-        return <Testimonial testimonial={testimonial}></Testimonial>
+        return (
+          <Testimonial
+            key={testimonial.id}
+            testimonial={testimonial}
+          ></Testimonial>
+        )
       })}
     </div>
   )

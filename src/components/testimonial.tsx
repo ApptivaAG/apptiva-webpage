@@ -17,6 +17,7 @@ const Testimonial = ({ testimonial }: { testimonial: any }) => {
             src={imagePath}
             width={200}
             height={200}
+            alt={testimonial.id}
           />
         </div>
         <div className="text-lg">
