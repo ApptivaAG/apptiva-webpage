@@ -18,6 +18,7 @@
     "@sanity/vision": "^3.26.0",
     "bluebird": "^3.7.2",
     "bright": "^0.8.4",
+    "class-variance-authority": "^0.7.0",
     "groqd": "^0.15.10",
     "groqd-playground": "^0.0.18",
     "image-size": "^1.1.1",

@@ -1,5 +1,5 @@
+import { cn } from '@/utils/cn'
 import React from 'react'
-import { twMerge } from 'tailwind-merge'
 
 type Level = 1 | 2 | 3 | 4 | 5 | 6
 
@@ -29,7 +29,7 @@ export default function Heading(
   return React.createElement(
     `h${props.level}`,
     {
-      className: twMerge(
+      className: cn(
         getClassNameByLevel(props.size ?? props.level),
         props.className
       ),

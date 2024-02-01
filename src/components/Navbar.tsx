@@ -1,4 +1,7 @@
 import Link from 'next/link'
+import apptivaLogo from './logo.svg'
+import Image from 'next/image'
+import Button from './button'
 
 const navbarData = [
   {
@@ -56,8 +59,11 @@ const navbarData = [
 
 const Navbar = () => (
   <div className="fixed w-full p-4">
-    <div className="flex justify-around rounded-md bg-[#053A78dd] p-6 text-base-white">
-      <nav className="flex justify-around gap-8 rounded bg-black/40 px-6 py-3">
+    <div className="flex items-center justify-between rounded-md bg-[#053A78dd] px-8 py-6 text-base-white">
+      <Link href={'/'}>
+        <Image priority src={apptivaLogo} alt="Apptiva Logo" className="w-32" />
+      </Link>
+      <nav className="flex justify-between gap-8 rounded bg-black/40 px-8 py-3">
         {navbarData.map((item) => (
           <div key={item.href}>
             <ul key={item.href}>
@@ -81,6 +87,11 @@ const Navbar = () => (
           </div>
         ))}
       </nav>
+      <Link href={'/kontakt/'}>
+        <Button element="div" intent="secondary">
+          Kontakt
+        </Button>
+      </Link>
     </div>
   </div>
 )
