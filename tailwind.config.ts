@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+import colors from 'tailwindcss/colors'
 
 const config: Config = {
   content: [
@@ -12,17 +13,24 @@ const config: Config = {
       bold: '600',
       heavy: '900',
     },
-    extend: {
-      colors: {
-        primary: 'rgb(var(--primary) / <alpha-value>)',
-        'primary-dark': 'rgb(var(--primary-dark) / <alpha-value>)',
-        secondary: 'rgb(var(--secondary) / <alpha-value>)',
-        'secondary-dark': 'rgb(var(--secondary-dark) / <alpha-value>)',
-        'base-black': 'rgb(var(--base-black) / <alpha-value>)',
-        'base-grey': 'rgb(var(--base-grey) / <alpha-value>)',
-        'base-white': 'rgb(var(--base-white) / <alpha-value>)',
+    colors: {
+      primary: {
+        DEFAULT: 'rgb(var(--primary) / <alpha-value>)',
+        dark: 'rgb(var(--primary-dark) / <alpha-value>)',
       },
+      secondary: {
+        DEFAULT: 'rgb(var(--secondary) / <alpha-value>)',
+        dark: 'rgb(var(--secondary-dark) / <alpha-value>)',
+      },
+      base: {
+        black: 'rgb(var(--base-black) / <alpha-value>)',
+        grey: 'rgb(var(--base-grey) / <alpha-value>)',
+        white: 'rgb(var(--base-white) / <alpha-value>)',
+      },
+      black: colors.black,
     },
+    borderRadius: { none: '0', DEFAULT: '0.5rem', md: '0.75rem', lg: '1rem' },
+    extend: {},
   },
   plugins: [],
 }

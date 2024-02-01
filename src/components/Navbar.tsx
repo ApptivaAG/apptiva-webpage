@@ -1,7 +1,6 @@
 import Link from 'next/link'
 
 const navbarData = [
-  { title: 'Home', href: '/' },
   {
     title: 'Angebot',
     href: '/angebot/',
@@ -52,49 +51,37 @@ const navbarData = [
       },
     ],
   },
-  { title: 'Kontakt', href: '/kontakt/' },
   { title: 'Blog', href: '/blog/' },
-  {
-    title: 'Wissen',
-    href: '/wissen/',
-    items: [
-      {
-        title: 'FAQ',
-        href: '/faq/',
-      },
-      {
-        title: 'Glossar',
-        href: '/glossar/',
-      },
-    ],
-  },
-  { title: 'CMS', href: '/studio/' },
 ]
 
 const Navbar = () => (
-  <div className="full flex justify-around">
-    {navbarData.map((item) => (
-      <div key={item.href}>
-        <ul key={item.href}>
-          <li key={item.href}>
-            <Link key={item.href} href={item.href} className='font-bold'>
-              {item.title}
-            </Link>
-            {item.items && (
-              <div >
-                <ul>
-                  {item.items.map((subitem) => (
-                    <li key={subitem.href}>
-                      <Link href={subitem.href}>{subitem.title}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </li>
-        </ul>
-      </div>
-    ))}
+  <div className="fixed w-full p-4">
+    <div className="flex justify-around rounded-md bg-[#053A78dd] p-6 text-base-white">
+      <nav className="flex justify-around gap-8 rounded bg-black/40 px-6 py-3">
+        {navbarData.map((item) => (
+          <div key={item.href}>
+            <ul key={item.href}>
+              <li key={item.href}>
+                <Link key={item.href} href={item.href} className="">
+                  {item.title}
+                </Link>
+                {/* {item.items && (
+                <div>
+                  <ul>
+                    {item.items.map((subitem) => (
+                      <li key={subitem.href}>
+                        <Link href={subitem.href}>{subitem.title}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )} */}
+              </li>
+            </ul>
+          </div>
+        ))}
+      </nav>
+    </div>
   </div>
 )
 
