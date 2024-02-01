@@ -59,7 +59,7 @@ const navbarData = [
 
 const Navbar = () => (
   <div className="fixed w-full p-4">
-    <div className="flex items-center justify-between rounded-md bg-[#053A78dd] px-8 py-6 text-base-white">
+    <div className="flex items-center justify-between rounded-md bg-[#053A78dd] px-8 py-6 text-base-white backdrop-blur-[6px]">
       <Link href={'/'}>
         <Image priority src={apptivaLogo} alt="Apptiva Logo" className="w-32" />
       </Link>
