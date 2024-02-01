@@ -1,9 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import localFont from 'next/font/local'
 import Navbar from './../../components/Navbar'
 import './globals.css'
-import Hero from '@/components/hero'
-import localFont from 'next/font/local'
 
 const gentona = localFont({
   src: [
@@ -107,7 +106,6 @@ export default function RootLayout({
   return (
     <html lang="de" className={gentona.className}>
       <body>
-        <Hero />
         <Navbar></Navbar>
         <div className="content">{children}</div>
       </body>

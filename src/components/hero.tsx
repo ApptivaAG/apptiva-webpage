@@ -1,6 +1,6 @@
 import Heading from './heading'
 
-const Hero = () => {
+export default function Hero() {
   return (
     <div className="full flex h-[52rem] items-center justify-center bg-primary">
       <Heading level={1} className="p-8">
@@ -12,5 +12,3 @@ const Hero = () => {
     </div>
   )
 }
-
-export default Hero
