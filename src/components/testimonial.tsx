@@ -4,7 +4,7 @@ import path from 'path'
 const Testimonial = ({ testimonial }: { testimonial: any }) => {
   const imagePath = path.join('/img/testimonials/', testimonial.avatar)
   return (
-    <div>
+    <div className="m-auto w-9/12">
       <div className="mb-20 mt-20">
         <p className="text-5xl font-bold text-primary-dark">
           {testimonial.statement}
