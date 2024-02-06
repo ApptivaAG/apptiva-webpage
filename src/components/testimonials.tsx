@@ -37,13 +37,13 @@ const Testimonials = ({ testimonials }: { testimonials: any }) => {
       </div>
       <Button
         onClick={scrollPrev}
-        className="bg-transparent absolute left-0 top-0 h-full w-6/12"
+        className="testimonial-button-prev bg-transparent absolute left-0 top-0 h-full w-6/12"
       >
         {' '}
       </Button>
       <Button
         onClick={scrollNext}
-        className="bg-transparent absolute right-0 top-0 h-full w-6/12"
+        className="testimonial-button-next bg-transparent absolute right-0 top-0 h-full w-6/12"
       >
         {' '}
       </Button>

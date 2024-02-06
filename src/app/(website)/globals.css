@@ -51,3 +51,13 @@
 .full {
   grid-column: full;
 }
+
+.testimonial-button-prev:hover {
+  cursor: url(./../../../public/icons/arrow-left-circle.svg), auto !important;
+  background-color: transparent !important;
+}
+
+.testimonial-button-next:hover {
+  cursor: url(./../../../public/icons/arrow-right-circle.svg), auto !important;
+  background-color: transparent !important;
+}
