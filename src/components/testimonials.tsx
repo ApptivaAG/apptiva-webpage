@@ -24,11 +24,11 @@ const Testimonials = ({ testimonials }: { testimonials: any }) => {
           <div className="flex">
             {testimonials.map((testimonial: any) => {
               return (
-                <div className="m- mb-20 mt-20 min-w-0 flex-[0_0_100%]">
-                  <Testimonial
-                    key={testimonial.id}
-                    testimonial={testimonial}
-                  ></Testimonial>
+                <div
+                  key={testimonial.id}
+                  className="m- mb-20 mt-20 min-w-0 flex-[0_0_100%]"
+                >
+                  <Testimonial testimonial={testimonial}></Testimonial>
                 </div>
               )
             })}
@@ -38,11 +38,15 @@ const Testimonials = ({ testimonials }: { testimonials: any }) => {
       <Button
         onClick={scrollPrev}
         className="bg-transparent absolute left-0 top-0 h-full w-6/12"
-      ></Button>
+      >
+        {' '}
+      </Button>
       <Button
         onClick={scrollNext}
         className="bg-transparent absolute right-0 top-0 h-full w-6/12"
-      ></Button>
+      >
+        {' '}
+      </Button>
     </div>
   )
 }
