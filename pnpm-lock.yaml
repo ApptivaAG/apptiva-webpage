@@ -26,6 +26,9 @@ dependencies:
   '@sanity/vision':
     specifier: ^3.26.0
     version: 3.26.0(@babel/runtime@7.23.8)(@codemirror/lint@6.4.2)(@codemirror/state@6.4.0)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.2.1)(codemirror@6.0.1)(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(styled-components@5.3.11)
+  '@types/react-html-parser':
+    specifier: ^2.0.6
+    version: 2.0.6
   bluebird:
     specifier: ^3.7.2
     version: 3.7.2
@@ -1993,6 +1996,16 @@ packages:
       '@types/ms': 0.7.34
     dev: false
 
+  /@types/domhandler@2.4.5:
+    resolution: {integrity: sha512-lANhC2grmFG1gBac/8sDAKdIXx+TzAdkJIAjEOSMA+qW3297ybACEbacJnG15aNYfrzDO6fdcoouokqAKsy6aQ==}
+    dev: false
+
+  /@types/domutils@1.7.8:
+    resolution: {integrity: sha512-iZGboDV79ibrO3D625p9yD+VgmMDnyJocdIRJvu9Xz66R8SHfOY/XNgdjY5SFoFiLgILceVfSLt7IUhlk1Vhhg==}
+    dependencies:
+      '@types/domhandler': 2.4.5
+    dev: false
+
   /@types/estree-jsx@1.0.3:
     resolution: {integrity: sha512-pvQ+TKeRHeiUGRhvYwRrQ/ISnohKkSJR14fT2yqyZ4e9K5vqc7hrtY2Y1Dw0ZwAzQ6DQsxsaCUuSIIi8v0Cq6w==}
     dependencies:
@@ -2028,6 +2041,15 @@ packages:
     resolution: {integrity: sha512-2fYGlaDy/qyLlhidX42wAH0KBi2TCjKMH8CHmBXgRlJ3Y+OXTiqsPQ6IWarZKwF1JoUcAJdPogv1d4b0COTpmQ==}
     dependencies:
       '@types/unist': 3.0.2
+    dev: false
+
+  /@types/htmlparser2@3.10.7:
+    resolution: {integrity: sha512-ycBs4PNr9rY9XFFp4WkP+M1UcO49ahn0+9b24cmIY6KWy0w35rW0G8+JTTe9Rp6Wnyqn5SEHZrhCBMa0TIOxBw==}
+    dependencies:
+      '@types/domhandler': 2.4.5
+      '@types/domutils': 1.7.8
+      '@types/node': 20.11.6
+      domhandler: 2.4.2
     dev: false
 
   /@types/is-hotkey@0.1.10:
@@ -2114,6 +2136,13 @@ packages:
     dependencies:
       '@types/react': 18.2.48
     dev: true
+
+  /@types/react-html-parser@2.0.6:
+    resolution: {integrity: sha512-xqo8u7iqr5eOIulM1BFAlpoBgdhVleLcDHySy8/k7Le9wgdRgZY1UdKtEcdlc2jMS8cqEx8+U4Mz/e5Ves66Fg==}
+    dependencies:
+      '@types/htmlparser2': 3.10.7
+      '@types/react': 18.2.48
+    dev: false
 
   /@types/react-is@18.2.4:
     resolution: {integrity: sha512-wBc7HgmbCcrvw0fZjxbgz/xrrlZKzEqmABBMeSvpTvdm25u6KI6xdIi9pRE2G0C1Lw5ETFdcn4UbYZ4/rpqUYw==}

@@ -16,6 +16,7 @@
     "@sanity/image-url": "^1.0.2",
     "@sanity/ui": "^2.0.1",
     "@sanity/vision": "^3.26.0",
+    "@types/react-html-parser": "^2.0.6",
     "bluebird": "^3.7.2",
     "bright": "^0.8.4",
     "class-variance-authority": "^0.7.0",
