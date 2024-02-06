@@ -17,7 +17,7 @@ const Testimonial = ({ testimonial }: { testimonial: any }) => {
             <p className="text-5xl font-bold text-primary-dark">
               {testimonial.statement}
             </p>
-            <div className="mt-10 flex items-center gap-8">
+            <div className="mt-20 flex items-center gap-8">
               <div className="">
                 <Image
                   className="rounded-[100%]"
