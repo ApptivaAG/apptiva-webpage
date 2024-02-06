@@ -1,17 +1,15 @@
 'use client'
-import { EmblaOptionsType } from 'embla-carousel'
 import useEmblaCarousel from 'embla-carousel-react'
 import { ReactNode, useCallback } from 'react'
 import Button from '../button'
 
 type PropType = {
   slides: any
-  options?: EmblaOptionsType
   children: ReactNode
 }
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
-  const { slides, options, children } = props
+  const { slides, children } = props
   const [emblaRef, emblaApi] = useEmblaCarousel()
 
   const scrollPrev = useCallback(() => {
