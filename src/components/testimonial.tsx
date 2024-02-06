@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import path from 'path'
+import ReactHtmlParser from 'react-html-parser'
 import { FaQuoteLeft } from 'react-icons/fa'
 
 const Testimonial = ({ testimonial }: { testimonial: any }) => {
@@ -15,7 +16,7 @@ const Testimonial = ({ testimonial }: { testimonial: any }) => {
           </div>
           <div className="ml-8 mt-10">
             <p className="text-5xl font-bold text-primary-dark">
-              {testimonial.statement}
+              {ReactHtmlParser(testimonial.statement)}
             </p>
             <div className="mt-20 flex items-center gap-8">
               <div className="">

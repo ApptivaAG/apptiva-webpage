@@ -2,7 +2,7 @@
 import { EmblaOptionsType } from 'embla-carousel'
 import useEmblaCarousel from 'embla-carousel-react'
 import { ReactNode, useCallback } from 'react'
-import Button from './../button'
+import Button from '../button'
 
 type PropType = {
   slides: any
@@ -28,9 +28,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     <div className="full relative">
       <div className="overflow-hidden">
         <div ref={emblaRef}>
-          <div className="flex">
-            {children}
-          </div>
+          <div className="flex">{children}</div>
         </div>
       </div>
       <Button
