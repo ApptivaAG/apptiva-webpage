@@ -2,6 +2,7 @@ import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
 import { getPersonBySlug } from '@/utils/person'
 import { PortableText } from '@portabletext/react'
+import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
 export default async function Home(props: { params: { slug: string } }) {
@@ -23,9 +24,9 @@ export default async function Home(props: { params: { slug: string } }) {
       <p>{person.contact.phone}</p>
       <p>
         {person.contact.socialNetworks?.map((network) => (
-          <a key={network.title} href={network.url ?? ''}>
+          <Link key={network.title} href={network.url ?? ''}>
             {network.title}
-          </a>
+          </Link>
         ))}
       </p>
       <Heading level={3} size={4}>

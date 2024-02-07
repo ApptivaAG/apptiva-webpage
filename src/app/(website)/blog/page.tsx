@@ -2,6 +2,7 @@ import Heading from '@/components/heading'
 import { TagFilter } from '@/components/tag-filter'
 import { getPosts } from '@/utils/blog'
 import { getTags } from '@/utils/tags'
+import Link from 'next/link'
 
 export default async function Home({
   params,
@@ -30,7 +31,7 @@ export default async function Home({
       <ul>
         {filteredPosts.map(([slug, post]) => (
           <li key={slug}>
-            <a href={`/blog/${slug}`}>{post.title}</a>
+            <Link href={`/blog/${slug}`}>{post.title}</Link>
           </li>
         ))}
       </ul>

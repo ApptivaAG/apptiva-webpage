@@ -1,5 +1,6 @@
 import Heading from '@/components/heading'
 import { getServicePages } from '@/utils/service-page'
+import Link from 'next/link'
 
 export default async function Home() {
   const servicePages = await getServicePages()
@@ -10,7 +11,9 @@ export default async function Home() {
       <ul>
         {Array.from(servicePages.values()).map((servicePage) => (
           <li key={servicePage.slug}>
-            <a href={'angebot/' + servicePage.slug}>{servicePage.title}</a>
+            <Link href={'angebot/' + servicePage.slug}>
+              {servicePage.title}
+            </Link>
           </li>
         ))}
       </ul>
