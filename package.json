@@ -19,6 +19,7 @@
     "bluebird": "^3.7.2",
     "bright": "^0.8.4",
     "class-variance-authority": "^0.7.0",
+    "embla-carousel-auto-scroll": "8.0.0-rc22",
     "embla-carousel-react": "8.0.0-rc22",
     "gray-matter": "^4.0.3",
     "groqd": "^0.15.10",
