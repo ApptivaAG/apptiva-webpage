@@ -10,6 +10,7 @@ import { groqdPlaygroundTool } from 'groqd-playground'
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
 import { apiVersion, dataset, projectId } from './src/sanity/env'
 import { schema } from './src/sanity/schema'
+import { presentationTool } from 'sanity/presentation'
 
 export default defineConfig({
   basePath: '/studio',
@@ -23,5 +24,12 @@ export default defineConfig({
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({ defaultApiVersion: apiVersion }),
     groqdPlaygroundTool(),
+    presentationTool({
+      previewUrl: {
+        draftMode: {
+          enable: '/api/draft',
+        },
+      },
+    }),
   ],
 })

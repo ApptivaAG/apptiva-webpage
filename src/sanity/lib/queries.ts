@@ -1,8 +1,14 @@
 // ./nextjs-app/sanity/lib/queries.ts
 
 import { nullToUndefined, q, sanityImage } from 'groqd'
+import { groq } from 'next-sanity'
 
 const Slug = ['slug.current', q.string().optional()] satisfies [string, any]
+
+// todo: replace with groqd queries
+// temporary queries without groqd to follow the sanity presentation tutorial
+export const BLOGS_QUERY = groq`*[_type == "blog" && defined(slug)]`
+export const BLOG_QUERY = groq`*[_type == "blog" && slug.current == $slug][0]`
 
 const SanityImageWithAlt = sanityImage('image', {
   additionalFields: nullToUndefined({

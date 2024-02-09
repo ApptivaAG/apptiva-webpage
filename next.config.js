@@ -5,6 +5,7 @@ module.exports = {
 		domains: ['cdn.sanity.io']
 	},
   experimental: {
+    taint: true,
     outputFileTracingIncludes: {
       '/blog': ['./content/blog/**/*'],
     },
