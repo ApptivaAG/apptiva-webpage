@@ -15,9 +15,9 @@ const Testimonial = ({ testimonial }: { testimonial: any }) => {
             </div>
           </div>
           <div className="ml-8 mt-10">
-            <p className="text-5xl font-bold text-primary-dark">
+            <h3 className="text-primary-dark">
               {ReactHtmlParser(testimonial.statement)}
-            </p>
+            </h3>
             <div className="mt-20 flex items-center gap-12">
               <div className="">
                 <Image
