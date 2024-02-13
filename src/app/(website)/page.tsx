@@ -10,8 +10,6 @@ import { getTestimonialsData } from '../../utils/testimonials'
 export default async function Home() {
   // const projects = await runQuery(projectsQuery, undefined, ['project'])
   const projects = await getProjects()
-  console.log('home', projects)
-
   const testimonials = getTestimonialsData()
   const customers = getCustomerLogos()
 
