@@ -60,10 +60,12 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         <div className="bg-transparent pointer-events-none absolute bottom-8 left-0 right-0 z-10 mx-auto h-1 w-4/5 max-w-full overflow-hidden rounded">
           <div
             className="absolute bottom-0 left-[--leftScrollOffset] top-0 z-20 w-[--progressBarSize] rounded bg-secondary"
-            style={{
-              '--progressBarSize': `${progressBarSize}%`,
-              '--leftScrollOffset': `${(scrollProgress / 100) * newTotalWidth}%`,
-            }}
+            style={
+              {
+                '--progressBarSize': `${progressBarSize}%`,
+                '--leftScrollOffset': `${(scrollProgress / 100) * newTotalWidth}%`,
+              } as React.CSSProperties
+            }
           ></div>
           <div className="pointer-events-none absolute bottom-10 left-0 right-0 top-1/2 z-10 h-[1px] w-full -translate-y-1/2 overflow-hidden rounded bg-primary-dark"></div>
         </div>
