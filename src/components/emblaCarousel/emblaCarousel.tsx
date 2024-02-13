@@ -37,50 +37,6 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   const progressBarSize = 100 / slides.length
   const newTotalWidth = 100 - progressBarSize
 
-  const progressStyle: React.CSSProperties = {
-    zIndex: 1,
-    backgroundColor: 'transparent',
-    position: 'absolute',
-    height: '0.3rem',
-    borderRadius: '0.2rem',
-    left: 0,
-    right: 0,
-    bottom: '2rem',
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    pointerEvents: 'none',
-    width: '80%',
-    maxWidth: '100%',
-    overflow: 'hidden',
-  }
-
-  const progressBar: React.CSSProperties = {
-    zIndex: 2,
-    position: 'absolute',
-    width: `${progressBarSize}%`,
-    top: 0,
-    bottom: 0,
-    left: `${(scrollProgress / 100) * newTotalWidth}%`,
-    borderRadius: '0.2rem',
-  }
-
-  const progressLine: React.CSSProperties = {
-    zIndex: 1,
-    backgroundColor: 'black',
-    position: 'absolute',
-    height: '1px',
-    borderRadius: '0.2rem',
-    left: 0,
-    right: 0,
-    top: '50%',
-    transform: 'translateY(-50%)',
-    bottom: '2.6rem',
-    pointerEvents: 'none',
-    width: '100%',
-    maxWidth: '100%',
-    overflow: 'hidden',
-  }
-
   return (
     <>
       <div className="full relative">
@@ -97,13 +53,19 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         </Button>
         <Button
           onClick={scrollNext}
-          className="testimonial-button-next bg-transparent absolute right-0 top-0 h-full w-6/12"
+          className="testimonial-button-prev testimonial-button-next bg-transparent absolute right-0 top-0 h-full w-6/12"
         >
           {' '}
         </Button>
-        <div style={progressStyle}>
-          <div className="bg-secondary" style={progressBar}></div>
-          <div className="bg-primary-dark" style={progressLine}></div>
+        <div className="bg-transparent pointer-events-none absolute bottom-8 left-0 right-0 z-10 mx-auto h-1 w-4/5 max-w-full overflow-hidden rounded">
+          <div
+            className="absolute bottom-0 left-[--leftScrollOffset] top-0 z-20 w-[--progressBarSize] rounded bg-secondary"
+            style={{
+              '--progressBarSize': `${progressBarSize}%`,
+              '--leftScrollOffset': `${(scrollProgress / 100) * newTotalWidth}%`,
+            }}
+          ></div>
+          <div className="pointer-events-none absolute bottom-10 left-0 right-0 top-1/2 z-10 h-[1px] w-full -translate-y-1/2 overflow-hidden rounded bg-primary-dark"></div>
         </div>
       </div>
     </>
