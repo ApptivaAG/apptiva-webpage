@@ -39,7 +39,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 
   const progressStyle: React.CSSProperties = {
     zIndex: 1,
-    backgroundColor: 'white',
+    backgroundColor: 'transparent',
     position: 'absolute',
     height: '0.3rem',
     borderRadius: '0.2rem',
