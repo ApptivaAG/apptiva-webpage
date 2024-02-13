@@ -9,8 +9,9 @@ export default function BlogsForPreview({
   return (
     <main className="divide-blue-100 container mx-auto grid grid-cols-1 divide-y">
       {blogs?.length > 0 ? (
+        // <Link href={`/glossar/${glossaryEntry.slug}`}>
         blogs.map((post) => (
-          <Link key={post._id} href={post.slug.current}>
+          <Link key={post._id} href={`/blog/${post.slug.current}`}>
             <h2 className="hover:bg-blue-50 p-4">{post.header.title}</h2>
           </Link>
         ))

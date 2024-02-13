@@ -2,10 +2,16 @@ import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
 import { personsQuery } from '@/sanity/lib/queries'
 import { runQuery } from '@/sanity/lib/sanityFetch'
+import { draftMode } from 'next/headers'
 import Link from 'next/link'
 
 export default async function Home() {
-  const persons = await runQuery(personsQuery, undefined, ['person'])
+  const persons = await runQuery(
+    personsQuery,
+    undefined,
+    ['person'],
+    draftMode().isEnabled
+  )
 
   return (
     <div className="container mx-auto px-4">

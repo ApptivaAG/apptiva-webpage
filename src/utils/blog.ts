@@ -1,3 +1,5 @@
+'use server'
+
 import MdxImage from '@/components/mdx-image'
 import { queryPostFromCmsBySlug, queryPostsFromCms } from '@/sanity/lib/queries'
 import { runQuery } from '@/sanity/lib/sanityFetch'
@@ -20,25 +22,29 @@ import {
   MarkdownBlog,
   MarkdownBlogPreview,
 } from './types'
+import { draftMode } from 'next/headers'
 
 const blogPostsPath = 'content/blog'
 const assetsPath = '/assets/blog'
 
-export const getPostBySlug = cache(async (slug: string) => {
-  const cmsPost = await getCmsPostBySlug(slug)
-  if (cmsPost) {
-    return cmsPost
+export const getPostBySlug = cache(
+  async (slug: string, isDraftMode: boolean) => {
+    const cmsPost = await getCmsPostBySlug(slug, isDraftMode)
+    if (cmsPost) {
+      return cmsPost
+    }
+    const markdownPosts = await getMarkdownPosts()
+    return markdownPosts.find((_) => _.slug === slug)
   }
-  const markdownPosts = await getMarkdownPosts()
-  return markdownPosts.find((_) => _.slug === slug)
-})
+)
 
-export const getPosts = cache(async () => {
-  const cmsPosts = await getCmsPosts()
+export const getPosts = cache(async (isDraftMode: boolean) => {
+  const cmsPosts = await getCmsPosts(isDraftMode)
   const markdownPosts = await getMarkdownPostsPreviews()
 
   const posts = new Map<string, CmsBlog | MarkdownBlogPreview>()
   const mergedBlogposts = [...cmsPosts, ...markdownPosts]
+
   mergedBlogposts.forEach((post) => {
     const { slug } = post
     if (slug) {
@@ -48,13 +54,14 @@ export const getPosts = cache(async () => {
   return posts
 })
 
-const getCmsPostBySlug = cache(async (slug: string) => {
+const getCmsPostBySlug = cache(async (slug: string, isDraftMode: boolean) => {
   const post = await runQuery(
     queryPostFromCmsBySlug,
     {
       slug,
     },
-    ['blog']
+    ['blogbyslug'],
+    draftMode().isEnabled
   )
 
   if (!post || !post.slug) {
@@ -76,8 +83,17 @@ const getCmsPostBySlug = cache(async (slug: string) => {
   } satisfies CmsBlog
 })
 
-const getCmsPosts = cache(async () => {
-  const postsFromCMS = await runQuery(queryPostsFromCms, undefined, ['blog'])
+const getCmsPosts = cache(async (isDraftMode: boolean) => {
+  // todo: if loadQuery from sanityFetch would be used, we'd know if draftmode or not
+  //const postsFromCMS = await loadQuery(queryPostsFromCms, undefined, ['blog'])
+  //console.log('wtf! ', draftMode().isEnabled)
+  const postsFromCMS = await runQuery(
+    queryPostsFromCms,
+    undefined,
+    ['blog'],
+    isDraftMode
+    //draftMode().isEnabled
+  )
 
   return postsFromCMS.map((post) => {
     return {
@@ -219,6 +235,6 @@ const getMarkdownPostsPreviews = unstable_cache(async () => {
   return posts
 }, ['markdown-preview'])
 
-export function getImageInfo(imageSrc: string) {
+export async function getImageInfo(imageSrc: string) {
   return imageSize(path.join('./public', imageSrc))
 }

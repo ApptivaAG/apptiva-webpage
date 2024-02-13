@@ -4,6 +4,7 @@ import { InferType } from 'groqd'
 import { cache } from 'react'
 import { mapTags } from './tags'
 import { Glossary } from './types'
+import { draftMode } from 'next/headers'
 
 export const getGlossaryItemBySlug = cache(async (slug: string) => {
   const glossaryFromCms = await runQuery(
@@ -11,7 +12,8 @@ export const getGlossaryItemBySlug = cache(async (slug: string) => {
     {
       slug,
     },
-    ['glossary']
+    ['glossary'],
+    draftMode().isEnabled
   )
 
   if (!glossaryFromCms.slug) {
@@ -29,7 +31,12 @@ export const getGlossaryItemBySlug = cache(async (slug: string) => {
 
 export const getGlossary = cache(async () => {
   const glossary = new Map<string, Glossary>()
-  const glossaryFromCms = await runQuery(glossaryQuery, undefined, ['glossary'])
+  const glossaryFromCms = await runQuery(
+    glossaryQuery,
+    undefined,
+    ['glossary'],
+    draftMode().isEnabled
+  )
 
   type CmsGlossaryWithSlug = InferType<typeof glossaryQuery>[number] & {
     slug: string

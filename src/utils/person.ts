@@ -2,6 +2,7 @@ import { personBySlugQuery } from '@/sanity/lib/queries'
 import { runQuery } from '@/sanity/lib/sanityFetch'
 import { cache } from 'react'
 import { Person } from './types'
+import { draftMode } from 'next/headers'
 
 export const getPersonBySlug = cache(async (slug: string) => {
   const person = await runQuery(
@@ -9,7 +10,8 @@ export const getPersonBySlug = cache(async (slug: string) => {
     {
       slug,
     },
-    ['person']
+    ['person'],
+    draftMode().isEnabled
   )
 
   if (!person.slug || !person.personName) {

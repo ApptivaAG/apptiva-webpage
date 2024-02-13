@@ -2,16 +2,17 @@ import Heading from '@/components/heading'
 import { TagFilter } from '@/components/tag-filter'
 import { getPosts } from '@/utils/blog'
 import { getTags } from '@/utils/tags'
+import { draftMode } from 'next/headers'
 import Link from 'next/link'
 
-export default async function Home({
+export default async function Blogs({
   params,
   searchParams,
 }: {
   params: { slug: string }
   searchParams: { [key: string]: string | string[] | undefined }
 }) {
-  const posts = await getPosts()
+  const posts = await getPosts(draftMode().isEnabled)
   const tags = await getTags()
 
   const allPosts = Array.from(posts.entries())

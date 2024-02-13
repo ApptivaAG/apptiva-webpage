@@ -3,9 +3,15 @@
 import Heading from '@/components/heading'
 import { faqsQuery } from '@/sanity/lib/queries'
 import { runQuery } from '@/sanity/lib/sanityFetch'
+import { draftMode } from 'next/headers'
 
 export default async function Home() {
-  const faqs = await runQuery(faqsQuery, undefined, ['faq'])
+  const faqs = await runQuery(
+    faqsQuery,
+    undefined,
+    ['faq'],
+    draftMode().isEnabled
+  )
 
   return (
     <div className="container mx-auto px-4">

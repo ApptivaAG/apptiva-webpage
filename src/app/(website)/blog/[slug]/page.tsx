@@ -8,13 +8,14 @@ import oembedTransformer from '@remark-embedder/transformer-oembed'
 import { Code } from 'bright'
 import { Metadata } from 'next'
 import { MDXRemote } from 'next-mdx-remote/rsc'
+import { draftMode } from 'next/headers'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import remarkGfm from 'remark-gfm'
 import remarkUnwrapImages from 'remark-unwrap-images'
 
 export async function generateStaticParams() {
-  const posts = await getPosts()
+  const posts = await getPosts(draftMode().isEnabled)
 
   return Array.from(posts.keys()).map((slug) => ({
     slug,
@@ -24,7 +25,9 @@ export async function generateStaticParams() {
 export async function generateMetadata(props: {
   params: { slug: string }
 }): Promise<Metadata> {
-  const post = (await getPostBySlug(props.params.slug)) ?? notFound()
+  const post =
+    (await getPostBySlug(props.params.slug, draftMode().isEnabled)) ??
+    notFound()
 
   return {
     title: post.title,
@@ -46,7 +49,9 @@ export async function generateMetadata(props: {
 }
 
 export default async function Home(props: { params: { slug: string } }) {
-  const post = (await getPostBySlug(props.params.slug)) ?? notFound()
+  const post =
+    (await getPostBySlug(props.params.slug, draftMode().isEnabled)) ??
+    notFound()
 
   return (
     <>

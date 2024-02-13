@@ -3,6 +3,7 @@ import { runQuery } from '@/sanity/lib/sanityFetch'
 import { InferType } from 'groqd'
 import { cache } from 'react'
 import { Service } from './types'
+import { draftMode } from 'next/headers'
 
 export const getServicePages = cache(async () => {
   const servicePagesFromCMS = await runQuery(servicesQuery, undefined, [
@@ -34,7 +35,8 @@ export const getServiceBySlug = cache(async (slug: string) => {
     {
       slug,
     },
-    ['service-page']
+    ['service-page'],
+    draftMode().isEnabled
   )
 
   if (!service.slug) {

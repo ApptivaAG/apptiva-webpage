@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import Navbar from './../../components/Navbar'
 import './globals.css'
+import { draftMode } from 'next/headers'
+import VisualEditing from '@/components/VisualEditing'
 
 const gentona = localFont({
   src: [
@@ -38,7 +40,10 @@ export default function RootLayout({
     <html lang="de" className={gentona.className}>
       <body>
         <Navbar></Navbar>
-        <div className="content">{children}</div>
+        <div className="content">
+          {children}
+          {draftMode().isEnabled && <VisualEditing />}{' '}
+        </div>
       </body>
     </html>
   )
