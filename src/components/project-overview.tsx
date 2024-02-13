@@ -1,4 +1,4 @@
-const ProjectOverview = ({ project }: { project }) => {
+const ProjectOverview = ({ project }: { project: any }) => {
   return (
     <>
       <div>

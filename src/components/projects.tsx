@@ -9,7 +9,7 @@ import ProjectOverview from './project-overview'
 //   description: string
 // }
 
-const Projects = ({ projects }: { projects }) => {
+const Projects = ({ projects }: { projects: any }) => {
   return (
     <div className="full bg-primary-dark text-base-white">
       <div className="mb-10 mt-10">
@@ -19,7 +19,7 @@ const Projects = ({ projects }: { projects }) => {
         </div>
 
         <EmblaCarousel slides={projects}>
-          {projects.map((project) => {
+          {projects.map((project: any) => {
             return (
               <div
                 key={project.id}
