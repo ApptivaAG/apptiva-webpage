@@ -1,21 +1,19 @@
 'use client'
-import { EmblaCarouselType, EmblaOptionsType } from 'embla-carousel'
 import useEmblaCarousel from 'embla-carousel-react'
 import { ReactNode, useCallback, useEffect, useState } from 'react'
 import Button from '../button'
 
 type PropType = {
   slides: []
-  options?: EmblaOptionsType
   children: ReactNode
 }
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
-  const { slides, options, children } = props
+  const { slides, children } = props
   const [emblaRef, emblaApi] = useEmblaCarousel()
   const [scrollProgress, setScrollProgress] = useState(0)
 
-  const onScroll = useCallback((emblaApi: EmblaCarouselType) => {
+  const onScroll = useCallback((emblaApi: any) => {
     const progress = Math.max(0, Math.min(1, emblaApi.scrollProgress()))
     setScrollProgress(progress * 100)
   }, [])
@@ -39,7 +37,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   const progressBarSize = 100 / slides.length
   const newTotalWidth = 100 - progressBarSize
 
-  const progressStyle = {
+  const progressStyle: React.CSSProperties = {
     zIndex: 1,
     backgroundColor: 'white',
     position: 'absolute',
@@ -56,7 +54,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     overflow: 'hidden',
   }
 
-  const progressBar = {
+  const progressBar: React.CSSProperties = {
     zIndex: 2,
     position: 'absolute',
     width: `${progressBarSize}%`,
@@ -66,7 +64,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     borderRadius: '0.2rem',
   }
 
-  const progressLine = {
+  const progressLine: React.CSSProperties = {
     zIndex: 1,
     backgroundColor: 'black',
     position: 'absolute',
