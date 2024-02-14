@@ -6,6 +6,7 @@ import glossary from './schemas/documents/glossary'
 import person from './schemas/documents/person'
 import project from './schemas/documents/project'
 import servicePage from './schemas/documents/service-page'
+import settings from './schemas/documents/settings'
 import tag from './schemas/documents/tag'
 import contact from './schemas/objects/contact'
 import header from './schemas/objects/header'
@@ -31,5 +32,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     skill,
     skillItem,
     imageWithAlt,
+    settings,
   ],
 }
