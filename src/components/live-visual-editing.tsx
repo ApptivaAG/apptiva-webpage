@@ -11,7 +11,16 @@ import { useEffect } from 'react'
 const stegaClient = client.withConfig({ stega: true })
 
 export default function LiveVisualEditing() {
+  /**
+   * this hook listens to incoming changes and reports them back to any useQuery hooks
+   */
   useLiveMode({ client: stegaClient })
+
+  /**
+   * enables and disables enableOverlays:
+   * they look through the DOM for any stega encoded strings and turn them into
+   * interactive links inside Presentation
+   */
   useEffect(() => {
     // If not an iframe or a Vercel Preview deployment, turn off Draft Mode
     if (process.env.NEXT_PUBLIC_VERCEL_ENV !== 'preview' && window === parent) {
@@ -19,5 +28,9 @@ export default function LiveVisualEditing() {
     }
   }, [])
 
+  /**
+   * this component from next-sanity communicates navigation changes from next.js
+   * to the presentation tool
+   */
   return <VisualEditing />
 }
