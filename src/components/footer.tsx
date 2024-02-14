@@ -86,7 +86,7 @@ export default function Footer() {
         Du bist noch hier? Klasse! Wir haben noch ein paar{' '}
         <strong>Dinge für dich:</strong>
       </p>
-      <div className="flex flex-wrap gap-x-24 gap-y-8 bg-primary px-4 py-8 text-base-white sm:p-12 lg:px-32 lg:py-24">
+      <div className="flex flex-wrap gap-x-24 gap-y-8 bg-primary px-4 py-8 text-base-white sm:p-12 lg:px-32 lg:py-24 xl:justify-between">
         <div>
           <Heading level={2} size={4} className="pb-4">
             Fokusthemen
