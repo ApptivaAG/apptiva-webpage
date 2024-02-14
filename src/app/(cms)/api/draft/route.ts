@@ -1,21 +1,24 @@
-import { validatePreviewUrl } from '@sanity/preview-url-secret'
 import { draftMode } from 'next/headers'
 import { redirect } from 'next/navigation'
+import { validatePreviewUrl } from '@sanity/preview-url-secret'
 
 import { client } from '@/sanity/lib/client'
-import { token } from '@/sanity/lib/token'
-
-const clientWithToken = client.withConfig({ token })
+import { token } from '@/sanity/env'
 
 /**
  * This route (/api/draft) is visited by the presentation tool in sanity studio
  */
 
 export async function GET(request: Request) {
-  const { isValid, redirectTo = '/' } = await validatePreviewUrl(
-    clientWithToken,
-    request.url
-  )
+  const clientWithToken = client.withConfig({
+    token: token,
+  })
+
+  // const { isValid, redirectTo = '/' } = await validatePreviewUrl(
+  console.log('client with token', clientWithToken)
+  const validate = await validatePreviewUrl(clientWithToken, request.url)
+
+  console.log('************** validatePreviewUrl **************', validate)
 
   // todo: reenable this as its a good idea i guess?
   //   if (!isValid) {
@@ -24,5 +27,5 @@ export async function GET(request: Request) {
 
   draftMode().enable()
 
-  redirect(redirectTo)
+  redirect('/')
 }
