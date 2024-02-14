@@ -248,3 +248,7 @@ export const personBySlugQuery = q('*')
       )
       .optional(),
   })
+
+export const settingsQuery = q('*').filterByType('settings').grab$({
+  claim: q.contentBlocks().optional(),
+})

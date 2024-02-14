@@ -1,13 +1,15 @@
+import { CmsContent } from '@/utils/types'
 import Heading from './heading'
+import { PortableText } from '@portabletext/react'
+import StyledPortableText from './styled-portable-text'
 
-export default function Hero() {
+export default function Hero({ claim }: { claim: CmsContent }) {
   return (
     <div className="full animate-gradient bg-300% from-primary-light flex h-[52rem] items-center justify-center bg-gradient-to-br to-primary-dark">
-      <Heading level={1} className="p-8">
-        <span className="text-base-white">Hi, wir sind</span>{' '}
-        <span className="mt-[1.25rem] inline-block border-b-[20px] border-b-primary-dark leading-[4.75rem] text-secondary">
-          apptiva
-        </span>
+      <Heading level={1} className="p-8 text-base-white">
+        {claim?.map((content) => (
+          <StyledPortableText key={content._key} content={content} />
+        ))}
       </Heading>
     </div>
   )
