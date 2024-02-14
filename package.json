@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@portabletext/react": "^3.0.11",
+    "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-slot": "^1.0.2",
     "@remark-embedder/core": "^3.0.2",
     "@remark-embedder/transformer-oembed": "^3.0.0",
     "@sanity/asset-utils": "^1.3.0",
@@ -20,12 +22,14 @@
     "bluebird": "^3.7.2",
     "bright": "^0.8.4",
     "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
     "embla-carousel-auto-scroll": "8.0.0-rc22",
     "embla-carousel-react": "8.0.0-rc22",
     "gray-matter": "^4.0.3",
     "groqd": "^0.15.10",
     "groqd-playground": "^0.0.18",
     "image-size": "^1.1.1",
+    "lucide-react": "^0.330.0",
     "next": "14.1.0",
     "next-mdx-remote": "^4.4.1",
     "next-sanity": "^7.0.12",
@@ -38,7 +42,8 @@
     "sanity": "^3.26.0",
     "sharp": "^0.33.1",
     "styled-components": "^5.3.11",
-    "tailwind-merge": "^2.2.1"
+    "tailwind-merge": "^2.2.1",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20.11.6",

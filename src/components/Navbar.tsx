@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import apptivaLogo from './logo.svg'
 import Image from 'next/image'
-import Button from './button'
+import Button from './ui/button'
 import { useState } from 'react'
 
 const navbarData = [
