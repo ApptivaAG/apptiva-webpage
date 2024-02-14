@@ -37,18 +37,6 @@
   padding-top: 8rem;
 }
 
-h2 {
-  font-size: 4rem;
-  font-weight: 600;
-  line-height: 1;
-}
-
-h3 {
-  font-size: 3rem;
-  font-weight: 600;
-  line-height: 1;
-}
-
 .content:has(.full:first-child) {
   padding-top: 0;
 }
@@ -64,16 +52,6 @@ h3 {
 }
 .full {
   grid-column: full;
-}
-
-.testimonial-button-prev:hover {
-  cursor: url(./../../../public/icons/arrow-left-circle.svg), auto !important;
-  background-color: transparent !important;
-}
-
-.testimonial-button-next:hover {
-  cursor: url(./../../../public/icons/arrow-right-circle.svg), auto !important;
-  background-color: transparent !important;
 }
 
 .highlighted-text {

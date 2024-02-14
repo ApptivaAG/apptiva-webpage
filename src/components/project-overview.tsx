@@ -1,3 +1,4 @@
+import Heading from './heading'
 import SanityImage from './sanity-image'
 
 const ProjectOverview = ({ project }: { project: any }) => {
@@ -6,7 +7,7 @@ const ProjectOverview = ({ project }: { project: any }) => {
       <div>
         <div className="m-auto w-8/12 ">
           <SanityImage image={project.image} />
-          <h3>{project.projectName}</h3>
+          <Heading level={3}>{project.projectName}</Heading>
         </div>
       </div>
     </>

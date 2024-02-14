@@ -2,6 +2,7 @@ import Image from 'next/image'
 import path from 'path'
 import ReactHtmlParser from 'react-html-parser'
 import { FaQuoteLeft } from 'react-icons/fa'
+import Heading from './heading'
 
 const Testimonial = ({ testimonial }: { testimonial: any }) => {
   const imagePath = path.join('/img/testimonials/', testimonial.avatar)
@@ -15,9 +16,9 @@ const Testimonial = ({ testimonial }: { testimonial: any }) => {
             </div>
           </div>
           <div className="ml-8 mt-10">
-            <h3 className="text-primary-dark">
+            <Heading level={3} className="text-primary-dark">
               {ReactHtmlParser(testimonial.statement)}
-            </h3>
+            </Heading>
             <div className="mt-20 flex items-center gap-12">
               <div className="">
                 <Image
