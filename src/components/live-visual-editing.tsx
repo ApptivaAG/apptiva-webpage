@@ -7,6 +7,11 @@ import React from 'react'
 
 import { useEffect } from 'react'
 
+/**
+ * This Component calls api/disable-draft if draft mode is activated
+ * but the site is not rendered on vercel or inside the presentation tool (sanity studio)
+ */
+
 // Always enable stega in Live Mode
 const stegaClient = client.withConfig({ stega: true })
 
