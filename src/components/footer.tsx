@@ -6,9 +6,9 @@ import sms from './swiss-made-software.svg'
 
 export default function Footer() {
   return (
-    <div className="p-4">
-      <div className="rounded-md bg-primary-dark text-base-white">
-        <div className="justify-between  gap-24 rounded-md bg-black/40 p-12 lg:flex">
+    <div className="bg-300% from-primary-light bg-gradient-to-br to-primary-dark pt-4">
+      <div className="mx-4 rounded-md bg-primary text-base-white">
+        <div className="flex flex-wrap justify-between gap-24 rounded-md bg-black/40 p-4 sm:p-12">
           <div>
             <Link href={'/'}>
               <Image
@@ -29,7 +29,7 @@ export default function Footer() {
               <Link href="mail:info@apptiva.ch">info@apptiva.ch</Link>
             </p>
           </div>
-          <div>
+          <div className="max-w-sm">
             <Heading level={2} size={4} className="pb-3">
               Newsletter
             </Heading>
@@ -42,7 +42,7 @@ export default function Footer() {
             <Heading level={2} size={4} className="pb-3">
               Socials
             </Heading>
-            <ul>
+            <ul className="space-y-1">
               <li>
                 <a href="">LinkedIn</a>
               </li>
@@ -66,7 +66,7 @@ export default function Footer() {
             ></Image>
           </div>
         </div>
-        <div className="flex flex-col justify-center gap-x-12 gap-y-4 py-4 opacity-60 lg:flex-row">
+        <div className="flex flex-col justify-center gap-x-12 gap-y-4 p-4 opacity-60 sm:px-12 lg:flex-row">
           <p>© 2015 - 2024 Apptiva AG</p>
           <p>
             <Link href={'/'}>Softwareentwicklung in der Schweiz</Link>
@@ -80,6 +80,101 @@ export default function Footer() {
           <p>
             <Link href={'/tracking'}>Tracking</Link>
           </p>
+        </div>
+      </div>
+      <p className="mx-auto my-16 max-w-2xl p-4 text-6xl font-bold text-base-white">
+        Du bist noch hier? Klasse! Wir haben noch ein paar{' '}
+        <strong>Dinge für dich:</strong>
+      </p>
+      <div className="flex flex-wrap gap-x-24 gap-y-8 bg-primary px-4 py-8 text-base-white sm:p-12 lg:px-32 lg:py-24 xl:justify-between">
+        <div>
+          <Heading level={2} size={4} className="pb-4">
+            Fokusthemen
+          </Heading>
+          <ul>
+            <li>
+              <Link href="/conversational-user-interfaces">
+                Conversational User Interfaces
+              </Link>
+            </li>
+            <li>
+              <Link href={'/konfiguratoren'}>Konfiguratoren</Link>
+            </li>
+            <li>
+              <Link href={'/user-centered-design'}>User Centered Design</Link>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <Heading level={2} size={4} className="pb-4">
+            Angebot
+          </Heading>
+          <ul>
+            <li>
+              <Link href="/development">Development </Link>
+            </li>
+            <li>
+              <Link href="/chatbots">Chatbots</Link>
+            </li>
+            <li>
+              <Link href="/consulting">Consulting</Link>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <Heading level={2} size={4} className="pb-4">
+            Workshops
+          </Heading>
+          <ul>
+            <li>
+              <Link href="/personas">Personas</Link>
+            </li>
+            <li>
+              <Link href={'/user-centered-design'}>User Centered Design</Link>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <Heading level={2} size={4} className="pb-4">
+            Apptiva
+          </Heading>
+          <ul>
+            <li>
+              <Link href="/firmenkultur">Less Waste - Firmenkultur </Link>
+            </li>
+            <li>
+              <Link href="/holacracy">Holacracy</Link>
+            </li>
+            <li>
+              <Link href="/consulting">Zusammenarbeit</Link>
+            </li>
+            <li>
+              <Link href="/team">Team</Link>
+            </li>
+            <li>
+              <Link href="/jobs">Jobs</Link>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <Heading level={2} size={4} className="pb-4">
+            Rechtliches
+          </Heading>
+          <ul>
+            <li>
+              <Link href="/impressum">Impressum</Link>
+            </li>
+            <li>
+              <Link href="/datenschutz">Datenschutz</Link>
+            </li>
+            <li>
+              <Link href="/tracking">Tracking</Link>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
