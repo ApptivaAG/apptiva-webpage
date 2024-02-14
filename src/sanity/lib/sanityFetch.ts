@@ -1,20 +1,9 @@
 import 'server-only'
 
 import { makeSafeQueryRunner } from 'groqd'
-import { createClient } from 'next-sanity'
+import { client } from './client'
 
 export const token = process.env.SANITY_API_READ_TOKEN
-
-const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
-const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET
-const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION || '2024-01-08'
-
-const client = createClient({
-  projectId,
-  dataset,
-  apiVersion,
-  useCdn: false,
-})
 
 export const runQuery = makeSafeQueryRunner(
   (query, params: Record<string, number | string> = {}, tags?: string[]) => {
@@ -25,7 +14,30 @@ export const runQuery = makeSafeQueryRunner(
         'The `SANITY_API_READ_TOKEN` environment variable is required.'
       )
     }
+    console.log('at runQuery, draft mode on? ', isDraftMode)
 
-    return client.fetch(query, params, { next: { tags } })
+    // return client
+    //   .withConfig({
+    //     token: token,
+    //     perspective: isDraftMode ? 'previewDrafts' : 'published',
+    //     useCdn: isDraftMode ? false : true,
+    //     stega: {
+    //       enabled: false,
+    //       studioUrl: '/studio',
+    //     },
+    //   })
+    //   .fetch(query, params, { next: { tags } })
+
+    return client
+      .withConfig({
+        token: token,
+        perspective: isDraftMode ? 'previewDrafts' : 'published',
+        useCdn: isDraftMode ? false : true,
+        stega: {
+          enabled: false,
+          studioUrl: '/studio',
+        },
+      })
+      .fetch(query, params, { next: { tags } })
   }
 )
