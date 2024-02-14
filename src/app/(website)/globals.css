@@ -4,12 +4,14 @@
 
 @layer base {
   :root {
-    --primary: 17 126 255;
-    --primary-dark: 8 64 131;
+    --primary: 6 48 98;
+    --primary-light: 17 126 255;
+    --primary-dark: 11 28 57;
     --secondary: 133 255 0;
     --secondary-dark: 0 111 79;
     --base-black: 24 24 24;
     --base-grey: 239 239 239;
+    --base-grey-light: 249 249 249;
     --base-white: 255 255 255;
   }
 }

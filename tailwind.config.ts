@@ -16,6 +16,7 @@ const config: Config = {
     colors: {
       primary: {
         DEFAULT: 'rgb(var(--primary) / <alpha-value>)',
+        light: 'rgb(var(--primary-light) / <alpha-value>)',
         dark: 'rgb(var(--primary-dark) / <alpha-value>)',
       },
       secondary: {
@@ -24,14 +25,30 @@ const config: Config = {
       },
       base: {
         black: 'rgb(var(--base-black) / <alpha-value>)',
-        grey: 'rgb(var(--base-grey) / <alpha-value>)',
+        grey: {
+          DEFAULT: 'rgb(var(--base-grey) / <alpha-value>)',
+          light: 'rgb(var(--base-grey-light) / <alpha-value>)',
+        },
         white: 'rgb(var(--base-white) / <alpha-value>)',
       },
       black: colors.black,
-      transparent: colors.transparent,
     },
     borderRadius: { none: '0', DEFAULT: '0.5rem', md: '0.75rem', lg: '1rem' },
-    extend: {},
+    extend: {
+      keyframes: {
+        animatedgradient: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
+        },
+      },
+      backgroundSize: {
+        '300%': '300%',
+      },
+      animation: {
+        gradient: 'animatedgradient 16s ease infinite',
+      },
+    },
   },
   plugins: [],
 }
