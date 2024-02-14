@@ -1,13 +1,6 @@
-import EmblaCarousel from './emblaCarousel/emblaCarousel'
-import ProjectOverview from './project-overview'
-
 // interface Project {
-//   id: string
-//   projectName: string
-//   slug: string
-//   order: number
-//   description: string
-// }
+
+import EmblaCarouselProjectView from './emblaCarousel/emblaCarouselProjectView'
 
 const Projects = ({ projects }: { projects: any }) => {
   return (
@@ -17,19 +10,7 @@ const Projects = ({ projects }: { projects: any }) => {
           <h2>Gemeinsam wollen wir Geschichten schreiben.</h2>
           <h2 className="highlighted-text">Erfolgsgeschichten.</h2>
         </div>
-
-        <EmblaCarousel slides={projects}>
-          {projects.map((project: any) => {
-            return (
-              <div
-                key={project.id}
-                className="mb-20 mt-20 min-w-0 flex-[0_0_100%]"
-              >
-                <ProjectOverview project={project}></ProjectOverview>
-              </div>
-            )
-          })}
-        </EmblaCarousel>
+        <EmblaCarouselProjectView slides={projects}></EmblaCarouselProjectView>
       </div>
     </div>
   )
