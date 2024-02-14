@@ -1,3 +1,4 @@
+import Footer from '@/components/footer'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import Navbar from './../../components/Navbar'
@@ -39,6 +40,7 @@ export default function RootLayout({
       <body>
         <Navbar></Navbar>
         <div className="content">{children}</div>
+        <Footer />
       </body>
     </html>
   )
