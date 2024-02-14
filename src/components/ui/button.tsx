@@ -2,22 +2,25 @@ import { cn } from '@/utils/cn'
 import { VariantProps, cva } from 'class-variance-authority'
 import React from 'react'
 
-const buttonStyle = cva('rounded px-6 py-3', {
-  variants: {
-    intent: {
-      primary: ['bg-primary', 'hover:bg-primary/80'],
-      secondary: ['bg-secondary', 'text-base-black', 'hover:bg-secondary/80'],
+const buttonStyle = cva(
+  'rounded px-6 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
+  {
+    variants: {
+      intent: {
+        primary: ['bg-primary', 'hover:bg-primary/80'],
+        secondary: ['bg-secondary', 'text-base-black', 'hover:bg-secondary/80'],
+      },
+      size: {
+        small: ['text-sm', 'py-1', 'px-2'],
+        medium: ['text-base', 'py-3', 'px-6'],
+      },
     },
-    size: {
-      small: ['text-sm', 'py-1', 'px-2'],
-      medium: ['text-base', 'py-3', 'px-6'],
+    defaultVariants: {
+      intent: 'primary',
+      size: 'medium',
     },
-  },
-  defaultVariants: {
-    intent: 'primary',
-    size: 'medium',
-  },
-})
+  }
+)
 
 interface Props extends VariantProps<typeof buttonStyle> {
   children: React.ReactNode

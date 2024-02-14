@@ -2,7 +2,7 @@
 import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
 import { ReactNode, useCallback, useEffect, useState } from 'react'
-import Button from '../button'
+import Button from '../ui/button'
 import carouselNavigationLeftIcon from './../../../public/icons/arrow-left-circle.svg'
 import carouselNavigationRightIcon from './../../../public/icons/arrow-right-circle.svg'
 
