@@ -32,15 +32,12 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     emblaApi.on('scroll', onScroll)
   }, [emblaApi, onScroll])
 
-  useEffect(() => {
-    const handleMouseMove = (event) => {
+  const handleMouseMove = useCallback(
+    (event) => {
       setMousePos({ x: event.clientX, y: event.clientY })
-    }
-    window.addEventListener('mousemove', handleMouseMove)
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove)
-    }
-  }, [])
+    },
+    [setMousePos]
+  )
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev()
@@ -78,6 +75,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         </div>
         <Button
           onClick={scrollPrev}
+          onMouseMove={handleMouseMove}
           onMouseEnter={handlePrevButtonHover}
           onMouseLeave={handlePrevButtonLeave}
           className="absolute left-0 top-0 z-50 h-full w-6/12 bg-transparent hover:bg-transparent"
@@ -86,6 +84,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         </Button>
         <Button
           onClick={scrollNext}
+          onMouseMove={handleMouseMove}
           onMouseEnter={handleNextButtonHover}
           onMouseLeave={handleNextButtonLeave}
           className="absolute right-0 top-0 z-50 h-full w-6/12 bg-transparent hover:bg-transparent"
