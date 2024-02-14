@@ -6,7 +6,7 @@ type Level = 1 | 2 | 3 | 4 | 5 | 6
 const getClassNameByLevel = (level: Level): string => {
   switch (level) {
     case 1:
-      return 'text-[7.5rem] font-[900] leading-[6.25rem]'
+      return 'text-[5rem] font-[600] leading-[5.5rem]'
     case 2:
       return 'text-[4rem] font-[600] leading-[4rem]'
     case 3:
