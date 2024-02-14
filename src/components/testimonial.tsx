@@ -15,10 +15,10 @@ const Testimonial = ({ testimonial }: { testimonial: any }) => {
             </div>
           </div>
           <div className="ml-8 mt-10">
-            <p className="text-5xl font-bold text-primary-dark">
+            <h3 className="text-primary-dark">
               {ReactHtmlParser(testimonial.statement)}
-            </p>
-            <div className="mt-20 flex items-center gap-8">
+            </h3>
+            <div className="mt-20 flex items-center gap-12">
               <div className="">
                 <Image
                   className="rounded-[100%]"
@@ -28,7 +28,7 @@ const Testimonial = ({ testimonial }: { testimonial: any }) => {
                   alt={testimonial.id}
                 />
               </div>
-              <div className="text-lg">
+              <div className="text-xl text-primary-dark">
                 <p>{testimonial.name}</p>
                 <p>{testimonial.position}</p>
                 <p>{testimonial.company}</p>

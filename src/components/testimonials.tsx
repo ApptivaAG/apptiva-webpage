@@ -1,5 +1,5 @@
 'use client'
-import EmblaCarousel from './EmblaCarousel/EmblaCarousel'
+import EmblaCarousel from './emblaCarousel/emblaCarousel'
 import Testimonial from './testimonial'
 
 const Testimonials = ({ testimonials }: { testimonials: any }) => {

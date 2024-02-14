@@ -72,6 +72,7 @@ export const projectsQuery = q('*')
   .grab$({
     _id: q.string(),
     projectName: q.string().optional(),
+    image: SanityImageWithAlt,
     slug: Slug,
     order: q.number().optional(),
     description: q.string().optional(),

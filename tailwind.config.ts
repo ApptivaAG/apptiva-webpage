@@ -28,6 +28,7 @@ const config: Config = {
         white: 'rgb(var(--base-white) / <alpha-value>)',
       },
       black: colors.black,
+      transparent: colors.transparent,
     },
     borderRadius: { none: '0', DEFAULT: '0.5rem', md: '0.75rem', lg: '1rem' },
     extend: {},
