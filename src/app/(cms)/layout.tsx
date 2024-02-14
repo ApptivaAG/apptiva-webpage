@@ -1,4 +1,6 @@
+import LiveVisualEditing from '@/components/live-visual-editing'
 import type { Metadata } from 'next'
+import { draftMode } from 'next/headers'
 
 export const metadata: Metadata = {
   title: 'CMS Apptiva Website',
@@ -12,7 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        {draftMode().isEnabled && <LiveVisualEditing />}
+      </body>
     </html>
   )
 }
