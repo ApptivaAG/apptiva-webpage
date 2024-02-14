@@ -15,7 +15,7 @@ export async function GET(request: Request) {
   })
 
   // const { isValid, redirectTo = '/' } = await validatePreviewUrl(
-  console.log('client with token', clientWithToken)
+
   const validate = await validatePreviewUrl(clientWithToken, request.url)
 
   console.log('************** validatePreviewUrl **************', validate)

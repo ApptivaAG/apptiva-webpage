@@ -7,6 +7,8 @@ import { groqdPlaygroundTool } from 'groqd-playground'
 import { FaCog } from 'react-icons/fa'
 import { defineConfig } from 'sanity'
 import { structureTool } from 'sanity/structure'
+import { presentationTool } from 'sanity/presentation'
+
 import { apiVersion, dataset, projectId } from './src/sanity/env'
 import { schema } from './src/sanity/schema'
 
@@ -43,5 +45,12 @@ export default defineConfig({
     visionTool({ defaultApiVersion: apiVersion }),
     groqdPlaygroundTool(),
     debugSecrets(),
+    presentationTool({
+      previewUrl: {
+        draftMode: {
+          enable: '/api/draft',
+        },
+      },
+    }),
   ],
 })
