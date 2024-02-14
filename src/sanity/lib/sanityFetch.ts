@@ -2,8 +2,10 @@ import 'server-only'
 
 import { makeSafeQueryRunner } from 'groqd'
 import { client } from './client'
+//import { token } from './token'
+//import { token } from './token'
 
-export const token = process.env.SANITY_API_READ_TOKEN
+const token = process.env.SANITY_API_READ_TOKEN
 
 export const runQuery = makeSafeQueryRunner(
   (query, params: Record<string, number | string> = {}, tags?: string[]) => {
