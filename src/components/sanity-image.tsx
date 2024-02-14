@@ -3,9 +3,7 @@ import { SanityImageWithAlt } from '@/utils/types'
 import { getImageDimensions } from '@sanity/asset-utils'
 import Image, { ImageProps } from 'next/image'
 
-const SanityImage = ({
-  image,
-}: { image: SanityImageWithAlt } & (ImageProps | {})) =>
+const SanityImage = ({ image }: { image: SanityImageWithAlt }) =>
   image ? (
     <Image
       key={image.toString()}
