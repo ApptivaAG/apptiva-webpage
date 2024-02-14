@@ -7,6 +7,7 @@ module.exports = {
   experimental: {
     outputFileTracingIncludes: {
       '/blog': ['./content/blog/**/*'],
+      taint: true,
     },
   },
 };
