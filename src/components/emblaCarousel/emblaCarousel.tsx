@@ -14,7 +14,7 @@ type PropType = {
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, children } = props
   const [emblaRef, emblaApi] = useEmblaCarousel()
-  const [mousePos, setMousePos] = useState({})
+  const [mousePos, setMousePos] = useState({ x: String, y: String })
   const [scrollProgress, setScrollProgress] = useState(0)
   const [isPrevButtonHovered, setIsPrevButtonHovered] = useState(false)
   const [isNextButtonHovered, setIsNextButtonHovered] = useState(false)
@@ -33,7 +33,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   }, [emblaApi, onScroll])
 
   const handleMouseMove = useCallback(
-    (event) => {
+    (event: any) => {
       setMousePos({ x: event.clientX, y: event.clientY })
     },
     [setMousePos]
@@ -93,11 +93,14 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         </Button>
         <div
           className="fixed left-[--mousePosX] top-[--mousePosY] z-20 h-24 w-24 -translate-x-1/2 -translate-y-1/2 bg-transparent opacity-[--iconOpacity] transition-opacity duration-500 ease-in"
-          style={{
-            '--mousePosX': `${mousePos.x}px`,
-            '--mousePosY': `${mousePos.y}px`,
-            '--iconOpacity': isPrevButtonHovered || isNextButtonHovered ? 1 : 0,
-          }}
+          style={
+            {
+              '--mousePosX': `${mousePos.x}px`,
+              '--mousePosY': `${mousePos.y}px`,
+              '--iconOpacity':
+                isPrevButtonHovered || isNextButtonHovered ? 1 : 0,
+            } as React.CSSProperties
+          }
         >
           <Image
             src={
@@ -105,6 +108,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                 ? carouselNavigationLeftIcon
                 : carouselNavigationRightIcon
             }
+            alt="Carousel Navigations Icon"
           />
         </div>
         <div className=" absolute bottom-8 left-0 right-0 z-10 mx-auto h-1 w-4/5 max-w-full overflow-hidden rounded bg-transparent">
