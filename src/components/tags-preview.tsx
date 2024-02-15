@@ -7,6 +7,7 @@ import { SanityDocument } from 'next-sanity'
 import Posts from './tags'
 import { queryTags } from '@/sanity/lib/queries'
 
+// Generic wrapper can be build like this: https://www.sanity.io/guides/reusable-live-preview-component
 export default function TagsPreview({
   initial,
 }: {
@@ -17,6 +18,8 @@ export default function TagsPreview({
     {},
     { initial }
   )
+
+  // Generic wrapper can be build like this: https://www.sanity.io/guides/reusable-live-preview-component
 
   return data ? (
     <Posts tags={queryTags.schema.parse(data)} />
