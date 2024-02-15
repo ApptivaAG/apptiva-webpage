@@ -1,13 +1,13 @@
 /** @type {import('next').NextConfig} */
 
 module.exports = {
-	images: {
-		domains: ['cdn.sanity.io']
-	},
+  images: {
+    domains: ['cdn.sanity.io'],
+  },
   experimental: {
     outputFileTracingIncludes: {
       '/blog': ['./content/blog/**/*'],
-      taint: true,
     },
+    taint: true,
   },
-};
+}

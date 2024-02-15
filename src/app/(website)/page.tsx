@@ -1,24 +1,27 @@
 // ./nextjs-app/app/page.tsx
-import Customers from '@/components/customers'
-import Hero from '@/components/hero'
-import Projects from '@/components/projects'
-import Testimonials from '@/components/testimonials'
-import getCustomerLogos from '@/utils/customers'
-import { getProjects } from '@/utils/project'
-import { getTestimonialsData } from '../../utils/testimonials'
+import Tags from '@/components/tags'
+import TagsPreview from '@/components/tags-preview'
+import { queryTags } from '@/sanity/lib/queries'
+import { loadQuery } from '@/sanity/lib/store'
+import type { InferType } from "groqd"
+import { SanityDocument } from 'next-sanity'
+import { draftMode } from 'next/headers'
+
+export type Tags = InferType<typeof queryTags>
 
 export default async function Home() {
-  // const projects = await runQuery(projectsQuery, undefined, ['project'])
-  const projects = await getProjects()
-  const testimonials = getTestimonialsData()
-  const customers = getCustomerLogos()
+  const {query, schema} = queryTags
+  const result = await loadQuery<SanityDocument[]>(
+    query,
+    {},
+    {
+      perspective: draftMode().isEnabled ? 'previewDrafts' : 'published',
+    }
+  )
 
-  return (
-    <>
-      <Hero />
-      <Projects projects={projects}></Projects>
-      <Testimonials testimonials={testimonials} />
-      <Customers customers={customers} />
-    </>
+  return draftMode().isEnabled ? (
+    <TagsPreview initial={result} />
+  ) : (
+    <Tags tags={schema.parse(result.data)} />
   )
 }
