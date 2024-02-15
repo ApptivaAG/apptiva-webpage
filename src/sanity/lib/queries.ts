@@ -103,6 +103,7 @@ export const projectBySlugQuery = q('*')
 
 export const queryTags = q('*').filterByType('tag').grab$({
   name: q.string(),
+  _id: q.string(),
 })
 
 export const servicesQuery = q('*')
