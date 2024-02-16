@@ -25,27 +25,30 @@ const ServiceTeaser = ({
   )
 
   const image = (
-    <div className="w-1/2 rounded-md  bg-primary">
-      <div className="h-[99%] w-[99%] ">
-        {/* <SanityImage image={service.illustration} /> */}
+    <div
+      className={
+        'py-auto flex w-1/2  bg-primary' +
+        (rowNumber % 2 ? ' rounded-l-md' : ' rounded-r-md')
+      }
+    >
+      <div className={'mx-auto my-auto h-[80%] w-[80%]'}>
+        <SanityImage image={service.illustration} />
       </div>
     </div>
   )
   return (
-    <div className="full">
-      <div className="m-auto flex rounded-md p-2 pt-2">
-        {rowNumber % 2 ? (
-          <div className="flex rounded-md bg-base-grey">
-            {image}
-            {text}
-          </div>
-        ) : (
-          <div className="flex  rounded-md bg-base-grey">
-            {text}
-            {image}
-          </div>
-        )}
-      </div>
+    <div className="m-auto flex rounded-md">
+      {rowNumber % 2 ? (
+        <div className="flex rounded-md bg-base-grey ">
+          {image}
+          {text}
+        </div>
+      ) : (
+        <div className=" flex rounded-md bg-base-grey">
+          {text}
+          {image}
+        </div>
+      )}
     </div>
   )
 }
