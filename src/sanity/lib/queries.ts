@@ -145,6 +145,16 @@ export const serviceBySlugQuery = q('*')
       .nullable(),
   })
 
+export const servicesTeaserQuery = q('*')
+  .filterByType('service-page')
+  .filter('showInHome')
+  .grab$({
+    _id: q.string(),
+    slug: Slug,
+    illustration: SanityImageWithAlt,
+    teaser: q.contentBlocks().optional(),
+  })
+
 export const glossaryQuery = q('*')
   .filterByType('glossary')
   .grab$({

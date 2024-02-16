@@ -4,6 +4,12 @@ export default defineType({
   name: 'service-page',
   title: 'Service Pages',
   type: 'document',
+  groups: [
+    {
+      name: 'home',
+      title: 'Startseite',
+    },
+  ],
   fields: [
     defineField({
       name: 'header',
@@ -18,6 +24,30 @@ export default defineType({
         source: 'header.title',
         maxLength: 96,
       },
+    }),
+    defineField({
+      name: 'showInHome',
+      title: 'Auf Startseite anzeigen',
+      type: 'boolean',
+      initialValue: false,
+      group: 'home',
+    }),
+    defineField({
+      name: 'illustration',
+      title: 'Illustration',
+      type: 'imageWithAlt',
+      group: 'home',
+    }),
+    defineField({
+      name: 'teaser',
+      title: 'Teaser',
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+        },
+      ],
+      group: 'home',
     }),
     defineField({
       name: 'modules',
