@@ -1,14 +1,23 @@
+import {
+  ReactElement,
+  JSXElementConstructor,
+  ReactNode,
+  ReactPortal,
+  PromiseLikeOfReactNode,
+} from 'react'
 import Heading from './heading'
+import ServiceTeaser from './service-teaser'
 
-const ServiceTeasers = ({ services }: { services?: any }) => {
+const ServiceTeasers = ({ services }: { services: any[] }) => {
+  console.log('servcies', services)
+
   return (
-    <div className="full bg-primary-dark text-base-white">
-      <div className="mt-10">
+    <div className="full ">
+      <div className="m-4 ">
         <div className="m-auto w-8/12 font-[600]">
-          <Heading level={2}>Hallo :-)</Heading>
-          <Heading level={2} className="highlighted-text">
-            stroooong
-          </Heading>
+          {services.map((service: any) => (
+            <ServiceTeaser service={service} />
+          ))}
         </div>
       </div>
     </div>
