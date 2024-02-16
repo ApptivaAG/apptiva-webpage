@@ -4,11 +4,12 @@ import { nullToUndefined, q, sanityImage } from 'groqd'
 
 const Slug = ['slug.current', q.string().optional()] satisfies [string, any]
 
-const SanityImageWithAlt = sanityImage('image', {
-  additionalFields: nullToUndefined({
-    alt: q.string().optional().default('Fehlende Bildbeschreibung'),
-  }),
-}).nullable()
+const sanityImageWithAlt = (fieldName = 'image') =>
+  sanityImage(fieldName, {
+    additionalFields: nullToUndefined({
+      alt: q.string().optional().default('Fehlende Bildbeschreibung'),
+    }),
+  }).nullable()
 
 const Tags = q('tags')
   .filter()
@@ -35,7 +36,7 @@ export const queryPostsFromCms = q('*')
     header: q('header').grab$({
       title: q.string().optional().default('In Arbeit'),
       description: q.string().optional().default(''),
-      image: SanityImageWithAlt,
+      image: sanityImageWithAlt(),
     }),
     tags: Tags,
   })
@@ -61,7 +62,7 @@ export const queryPostFromCmsBySlug = q('*')
     header: q('header').grab$({
       title: q.string().optional().default('In Arbeit'),
       description: q.string().optional().default(''),
-      image: SanityImageWithAlt,
+      image: sanityImageWithAlt(),
     }),
     tags: Tags,
   })
@@ -72,7 +73,7 @@ export const projectsQuery = q('*')
   .grab$({
     _id: q.string(),
     projectName: q.string().optional(),
-    image: SanityImageWithAlt,
+    image: sanityImageWithAlt(),
     slug: Slug,
     order: q.number().optional(),
     description: q.string().optional(),
@@ -87,7 +88,7 @@ export const projectBySlugQuery = q('*')
     _id: q.string(),
     projectName: q.string().optional(),
     slug: Slug,
-    image: SanityImageWithAlt,
+    image: sanityImageWithAlt(),
     description: q.string().optional(),
     tasks: q.string().optional(),
     time: q.string().optional(),
@@ -113,7 +114,7 @@ export const servicesQuery = q('*')
       .grab$({
         title: q.string().optional().default('In Arbeit'),
         description: q.string().optional(),
-        image: SanityImageWithAlt,
+        image: sanityImageWithAlt(),
         content: q.contentBlocks().optional(),
       })
       .nullable(),
@@ -130,7 +131,7 @@ export const serviceBySlugQuery = q('*')
       .grab$({
         title: q.string().optional().default('In Arbeit'),
         description: q.string().optional(),
-        image: SanityImageWithAlt,
+        image: sanityImageWithAlt(),
         content: q.contentBlocks().optional(),
       })
       .nullable(),
@@ -139,7 +140,7 @@ export const serviceBySlugQuery = q('*')
       .grab$({
         title: q.string().optional().default('Ohne Titel'),
         layout: q.string().optional(),
-        image: SanityImageWithAlt,
+        image: sanityImageWithAlt(),
         content: q.contentBlocks().optional(),
       })
       .nullable(),
@@ -151,8 +152,13 @@ export const servicesTeaserQuery = q('*')
   .grab$({
     _id: q.string(),
     slug: Slug,
-    illustration: SanityImageWithAlt,
+    illustration: sanityImageWithAlt('illustration'),
     teaser: q.contentBlocks().optional(),
+    header: q('header')
+      .grab$({
+        title: q.string().optional().default('In Arbeit'),
+      })
+      .nullable(),
   })
 
 export const glossaryQuery = q('*')
@@ -167,7 +173,7 @@ export const glossaryQuery = q('*')
       .grab$({
         title: q.string().optional().default('Ohne Titel'),
         layout: q.string().optional(),
-        image: SanityImageWithAlt,
+        image: sanityImageWithAlt(),
         content: q.contentBlocks().optional(),
       })
       .nullable(),
@@ -188,7 +194,7 @@ export const glossaryBySlugQuery = q('*')
       .grab$({
         title: q.string().optional().default('Ohne Titel'),
         layout: q.string().optional(),
-        image: SanityImageWithAlt,
+        image: sanityImageWithAlt(),
         content: q.contentBlocks().optional(),
       })
       .nullable(),
@@ -206,7 +212,7 @@ export const faqsQuery = q('*').filterByType('faq').grab$({
 export const personsQuery = q('*').filterByType('person').grab$({
   personName: q.string().optional(),
   slug: Slug,
-  image: SanityImageWithAlt,
+  image: sanityImageWithAlt(),
 })
 
 export const personBySlugQuery = q('*')
@@ -237,7 +243,7 @@ export const personBySlugQuery = q('*')
           .optional(),
       })
       .optional(),
-    image: SanityImageWithAlt,
+    image: sanityImageWithAlt(),
     skills: q
       .array(
         q
