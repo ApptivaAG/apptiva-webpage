@@ -38,7 +38,7 @@ const ServiceTeaser = ({
   )
   return (
     // <div className="rounded-md">
-    <div className="flex w-full ">
+    <div className="full flex ">
       {/* <div className="w-1/2 rounded bg-base-grey">eins</div>
       <div className="w-1/2 rounded-md bg-primary ">zwei</div> */}
       <div
@@ -47,7 +47,14 @@ const ServiceTeaser = ({
           (rowNumber % 2 ? ' rounded-r-md' : ' rounded-l-md')
         }
       >
-        eins
+        <div className="m-28 text-primary">
+          <Heading level={2} size={3} className="pb-6">
+            {service.header.title}
+          </Heading>
+          {service.teaser?.map((content: any) => (
+            <PortableText key={content._key} value={content} />
+          ))}
+        </div>
       </div>
       <div
         className={
@@ -55,7 +62,9 @@ const ServiceTeaser = ({
           (rowNumber % 2 ? ' rounded-l-md' : ' rounded-r-md')
         }
       >
-        zwei
+        <div className={'mx-auto my-auto h-[80%] w-[80%]'}>
+          {/* <SanityImage image={service.illustration} /> */}
+        </div>
       </div>
     </div>
     /* <div
