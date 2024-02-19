@@ -37,19 +37,31 @@ const ServiceTeaser = ({
     </div>
   )
   return (
-    <div className="m-auto flex rounded-md">
-      {rowNumber % 2 ? (
-        <div className="flex rounded-md bg-base-grey ">
-          {image}
-          {text}
-        </div>
-      ) : (
-        <div className=" flex rounded-md bg-base-grey">
-          {text}
-          {image}
-        </div>
-      )}
+    // <div className="rounded-md">
+    <div className="flex w-full">
+      <div className="w-1/2 rounded bg-base-grey">eins</div>
+      <div className="w-1/2 rounded-md bg-primary ">zwei</div>
     </div>
+    /* <div
+        className={
+          'w-1/2 bg-base-grey' +
+          (rowNumber % 2 ? ' rounded-r-md' : ' rounded-l-md')
+        }
+      ></div> */
+
+    // <div className="m-auto flex rounded-md">
+    //   {rowNumber % 2 ? (
+    //     <div className="flex rounded-md bg-base-grey ">
+    //       {image}
+    //       {text}
+    //     </div>
+    //   ) : (
+    //     <div className=" flex rounded-md bg-base-grey">
+    //       {text}
+    //       {image}
+    //     </div>
+    //   )}
+    // </div>
   )
 }
 
