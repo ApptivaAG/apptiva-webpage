@@ -11,7 +11,7 @@ const EmblaCarouselSingleView: React.FC<PropType> = (props) => {
 
   return (
     <>
-      <EmblaCarousel slides={slides}>
+      <EmblaCarousel slides={slides} navigationButtonFullWidth={true}>
         {slides.map((slide: any) => {
           return (
             <div key={slide.id} className="mb-20 mt-20 min-w-0 flex-[0_0_100%]">
