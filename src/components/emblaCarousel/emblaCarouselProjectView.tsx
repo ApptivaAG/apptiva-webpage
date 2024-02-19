@@ -10,7 +10,11 @@ const EmblaCarouselProjectView: React.FC<PropType> = (props) => {
   const { slides } = props
 
   return (
-    <EmblaCarousel slides={slides} navigationButtonFullWidth={false}>
+    <EmblaCarousel
+      slides={slides}
+      navigationButtonFullWidth={false}
+      bgDark={true}
+    >
       {slides.map((slide: any) => {
         return (
           <div key={slide._id} className="mb-20 mt-20 min-w-0 flex-[0_0_100%]">

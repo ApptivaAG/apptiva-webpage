@@ -10,10 +10,11 @@ type PropType = {
   slides: []
   children: ReactNode
   navigationButtonFullWidth: boolean
+  bgDark: boolean
 }
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
-  const { slides, children, navigationButtonFullWidth } = props
+  const { slides, children, navigationButtonFullWidth, bgDark } = props
   const [emblaRef, emblaApi] = useEmblaCarousel()
   const [mousePos, setMousePos] = useState({ x: String, y: String })
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -70,6 +71,8 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   const carouselNavigationButton = navigationButtonFullWidth
     ? 'w-6/12'
     : 'w-3/12'
+
+  const progressBarLine = bgDark ? 'bg-base-white' : 'bg-primary-dark'
   return (
     <>
       <div className="full relative">
@@ -127,7 +130,9 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
               } as React.CSSProperties
             }
           ></div>
-          <div className="absolute bottom-10 left-0 right-0 top-1/2 z-10 h-[1px] w-full -translate-y-1/2 overflow-hidden rounded bg-primary-dark"></div>
+          <div
+            className={`absolute bottom-10 left-0 right-0 top-1/2 z-10 h-[1px] w-full -translate-y-1/2 overflow-hidden rounded ${progressBarLine}`}
+          ></div>
         </div>
       </div>
     </>
