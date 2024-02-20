@@ -5,7 +5,7 @@ import Heading from './heading'
 
 const Projects = ({ projects }: { projects: any }) => {
   return (
-    <div className="full bg-primary text-base-white">
+    <div className="bg-primary text-base-white">
       <div className="mt-10">
         <div className="content m-auto font-[600]">
           <Heading level={2}>

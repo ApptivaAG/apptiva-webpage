@@ -118,7 +118,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   const progressBarLine = bgDark ? 'bg-base-white' : 'bg-primary'
   return (
     <>
-      <div className="relative">
+      <div className="full relative">
         <div className="overflow-hidden">
           <div ref={emblaRef}>
             <div className="flex">
@@ -177,7 +177,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           onMouseMove={handleMouseMove}
           onMouseEnter={handleNextButtonHover}
           onMouseLeave={handleNextButtonLeave}
-          className={`absolute right-0 top-0 z-50 hidden h-full bg-transparent hover:bg-transparent lg:block ${carouselNavigationButton}`}
+          className={`absolute right-0 top-0 z-50 h-full bg-transparent hover:bg-transparent lg:block ${carouselNavigationButton}`}
         >
           {' '}
         </Button>
