@@ -22,7 +22,7 @@ const Testimonial = ({ testimonial }: { testimonial: any }) => {
             <div className="mt-10 flex items-center gap-6 lg:mt-20 lg:gap-12">
               <div>
                 <Image
-                  className="h-20 w-20 rounded-[100%]"
+                  className="h-20 w-20 rounded-[100%] lg:h-52 lg:w-52"
                   src={imagePath}
                   width={200}
                   height={200}
