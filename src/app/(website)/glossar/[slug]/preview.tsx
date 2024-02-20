@@ -13,8 +13,6 @@ export default function GlossaryItemPreview({
   initial: QueryResponseInitial<Data>
   params: { slug: string } 
 }) {
-
   const {data} = useQuery<Data>(glossaryBySlugQuery.query, params, {initial})
-
   return <Item glossary={data} />
 }

@@ -5,7 +5,7 @@ import { PortableText } from '@portabletext/react'
 import { InferType } from 'groqd'
 
 export default function Item(props: {
-  glossary?: InferType<typeof glossaryBySlugQuery>
+  glossary: InferType<typeof glossaryBySlugQuery>
 }) {
   if (!props.glossary) return <div>Empty</div>
 
