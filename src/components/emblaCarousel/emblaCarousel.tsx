@@ -132,7 +132,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                             opacity: tweenValues[index],
                           }),
                           '--min-size': `${MIN_SIZE}px`,
-                          '--min-size-mobile': `${MIN_SIZE / 3}px`,
+                          '--min-size-mobile': `${MIN_SIZE / 2}px`,
                         } as React.CSSProperties
                       }
                     >
@@ -141,7 +141,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                           {
                             ...(tweenValues.length && {
                               '--project-overview-height': `${sizeValue[index]}px`,
-                              '--project-overview-height-mobile': `${sizeValue[index] / 3}px`,
+                              '--project-overview-height-mobile': `${sizeValue[index] / 2}px`,
                             }),
                           } as React.CSSProperties
                         }
