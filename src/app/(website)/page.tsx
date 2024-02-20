@@ -11,8 +11,6 @@ import ServiceTeasers from '@/components/service-teasers'
 import { getServiceTeasers } from '@/utils/service-teasers'
 
 export default async function Home() {
-  // const projects = await runQuery(projectsQuery, undefined, ['project'])
-  const serviceTeasers = await getServiceTeasers()
   const projects = await getProjects()
   const testimonials = getTestimonialsData()
   const customers = getCustomerLogos()
@@ -21,10 +19,12 @@ export default async function Home() {
   return (
     <>
       <Hero claim={claim} />
-      <ServiceTeasers services={serviceTeasers} />
+      <ServiceTeasers />
       <Projects projects={projects}></Projects>
       <Testimonials testimonials={testimonials} />
       <Customers customers={customers} />
     </>
   )
 }
+
+

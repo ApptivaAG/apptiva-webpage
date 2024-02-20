@@ -1,6 +1,8 @@
+import { getServiceTeasers } from '@/utils/service-teasers'
 import ServiceTeaser from './service-teaser'
 
-const ServiceTeasers = ({ services }: { services: any[] }) => {
+const ServiceTeasers = async () => {
+  const services = await getServiceTeasers()
   console.log('servcies', services)
 
   return (

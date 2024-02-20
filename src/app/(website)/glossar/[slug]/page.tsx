@@ -1,25 +1,24 @@
 import Heading from '@/components/heading'
-import SanityImage from '@/components/sanity-image'
-import { getGlossaryItemBySlug } from '@/utils/glossary'
-import { PortableText } from '@portabletext/react'
+import { glossaryBySlugQuery } from '@/sanity/lib/queries'
+import { load } from '@/sanity/lib/sanityFetch'
+import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
+import GlossaryItemPreview from './preview'
+import Item from './item'
 
-export default async function Glossary(props: { params: { slug: string } }) {
-  const glossary =
-    (await getGlossaryItemBySlug(props.params.slug)) ?? notFound()
+export default async function GlossaryItem(props: { params: { slug: string } }) {
+  const { published, draft } =
+    (await load(glossaryBySlugQuery, draftMode().isEnabled, props.params, [
+      'glossary',
+    ])) ?? notFound()
   return (
-    <>
-      <Heading level={2}>{glossary.title}</Heading>
-      {glossary.summary && <PortableText value={glossary.summary} />}
-      {glossary?.modules?.map((module) => (
-        <>
-          <Heading level={3} size={4}>
-            {module.title}
-          </Heading>
-          <SanityImage image={module.image} />
-          {module.content && <PortableText value={module.content} />}
-        </>
-      ))}
-    </>
+    <div className="container mx-auto px-4">
+      <Heading level={2}>Glossar</Heading>
+      {draftMode().isEnabled ? (
+        <GlossaryItemPreview initial={draft} params={props.params} />
+      ) : (
+        <Item glossary={published} />
+      )}
+    </div>
   )
 }

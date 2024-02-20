@@ -7,4 +7,12 @@ export const client = createClient({
   dataset,
   projectId,
   useCdn,
+  // These settings will be overridden in
+  // ./sanity/lib/store.ts when draftMode is enabled
+  // maybe it is alswo overridden in sanityFetch.ts
+  perspective: 'published',
+  stega: {
+    enabled: true,
+    studioUrl: '/studio',
+  },
 })
