@@ -1,10 +1,11 @@
 'use client'
-import ProjectOverview from '../project-overview'
+import { EmblaOptionsType } from 'embla-carousel'
 import EmblaCarousel from './emblaCarousel'
 
 type PropType = {
   slides: []
 }
+const OPTIONS: EmblaOptionsType = { loop: true }
 
 const EmblaCarouselProjectView: React.FC<PropType> = (props) => {
   const { slides } = props
@@ -12,17 +13,10 @@ const EmblaCarouselProjectView: React.FC<PropType> = (props) => {
   return (
     <EmblaCarousel
       slides={slides}
+      options={OPTIONS}
       navigationButtonFullWidth={false}
       bgDark={true}
-    >
-      {slides.map((slide: any) => {
-        return (
-          <div key={slide._id} className="mb-20 mt-20 min-w-0 flex-[0_0_100%]">
-            <ProjectOverview project={slide}></ProjectOverview>
-          </div>
-        )
-      })}
-    </EmblaCarousel>
+    ></EmblaCarousel>
   )
 }
 

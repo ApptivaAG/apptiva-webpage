@@ -1,5 +1,4 @@
 'use client'
-import Testimonial from '../testimonial'
 import EmblaCarousel from './emblaCarousel'
 
 type PropType = {
@@ -15,15 +14,7 @@ const EmblaCarouselSingleView: React.FC<PropType> = (props) => {
         slides={slides}
         navigationButtonFullWidth={true}
         bgDark={false}
-      >
-        {slides.map((slide: any) => {
-          return (
-            <div key={slide.id} className="mb-20 mt-20 min-w-0 flex-[0_0_100%]">
-              <Testimonial testimonial={slide}></Testimonial>
-            </div>
-          )
-        })}
-      </EmblaCarousel>
+      ></EmblaCarousel>
     </>
   )
 }
