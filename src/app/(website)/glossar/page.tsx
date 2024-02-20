@@ -1,18 +1,19 @@
 // ./nextjs-app/app/page.tsx
 
 import Heading from '@/components/heading'
-import { getGlossary } from '@/utils/glossary'
+import { glossaryQuery } from '@/sanity/lib/queries'
+import { load } from '@/sanity/lib/sanityFetch'
+import { draftMode } from 'next/headers'
 import Link from 'next/link'
 
 export default async function Home() {
-  const glossary = await getGlossary()
-  const glossaryEntries = Array.from(glossary.values())
+  const glossary = await load(glossaryQuery, draftMode().isEnabled, undefined, ['glossary'])
 
   return (
     <div className="container mx-auto px-4">
       <Heading level={2}>Glossar</Heading>
       <ul>
-        {glossaryEntries.map((glossaryEntry) => (
+        {glossary.published.map((glossaryEntry) => (
           <li key={glossaryEntry.slug}>
             <Link href={`/glossar/${glossaryEntry.slug}`}>
               {glossaryEntry.title}
