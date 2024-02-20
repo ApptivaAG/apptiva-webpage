@@ -1,29 +1,70 @@
 'use client'
+import { EmblaOptionsType } from 'embla-carousel'
 import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
-import { ReactNode, useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
+import ProjectOverview from '../project-overview'
+import Testimonial from '../testimonial'
 import Button from '../ui/button'
 import carouselNavigationLeftIcon from './../../../public/icons/arrow-left-circle.svg'
 import carouselNavigationRightIcon from './../../../public/icons/arrow-right-circle.svg'
+const TWEEN_FACTOR = 2.5
+const SIZE_FACTOR = 1
+const MIN_SIZE = 600
+
+const numberWithinRange = (number: number, min: number, max: number): number =>
+  Math.min(Math.max(number, min), max)
 
 type PropType = {
   slides: []
-  children: ReactNode
+  options?: EmblaOptionsType
   navigationButtonFullWidth: boolean
   bgDark: boolean
 }
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
-  const { slides, children, navigationButtonFullWidth, bgDark } = props
-  const [emblaRef, emblaApi] = useEmblaCarousel()
+  const { slides, options, navigationButtonFullWidth, bgDark } = props
+  const [emblaRef, emblaApi] = useEmblaCarousel(options)
   const [mousePos, setMousePos] = useState({ x: String, y: String })
   const [scrollProgress, setScrollProgress] = useState(0)
   const [isPrevButtonHovered, setIsPrevButtonHovered] = useState(false)
   const [isNextButtonHovered, setIsNextButtonHovered] = useState(false)
+  const [tweenValues, setTweenValues] = useState<number[]>([])
+  const [sizeValue, setSizeValue] = useState<string[]>([])
 
   const onScroll = useCallback((emblaApi: any) => {
     const progress = Math.max(0, Math.min(1, emblaApi.scrollProgress()))
     setScrollProgress(progress * 100)
+
+    const engine = emblaApi.internalEngine()
+    const scrollProgress = emblaApi.scrollProgress()
+
+    const styles = emblaApi.scrollSnapList().map((scrollSnap, index) => {
+      let diffToTarget = scrollSnap - scrollProgress
+      console.log('loop', engine.options.loop)
+
+      if (engine.options.loop) {
+        engine.slideLooper.loopPoints.forEach((loopItem) => {
+          const target = loopItem.target()
+          if (index === loopItem.index && target !== 0) {
+            const sign = Math.sign(target)
+            if (sign === -1) diffToTarget = scrollSnap - (1 + scrollProgress)
+            if (sign === 1) diffToTarget = scrollSnap + (1 - scrollProgress)
+          }
+        })
+      }
+      const tweenValue = 1 - Math.abs(diffToTarget * TWEEN_FACTOR)
+      const sizeValue = (1 - Math.abs(diffToTarget * SIZE_FACTOR)) * MIN_SIZE
+      const styles = {
+        tweenValue: numberWithinRange(tweenValue, 0, 1),
+        sizeValue: numberWithinRange(sizeValue, 200, MIN_SIZE),
+      }
+      return styles
+    })
+    console.log('tweenValues', styles)
+
+    setTweenValues(styles.map((style) => style.tweenValue))
+    setSizeValue(styles.map((style) => style.sizeValue))
   }, [])
 
   useEffect(() => {
@@ -70,7 +111,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   // const carouselNavigationButtonFullWidth = false
   const carouselNavigationButton = navigationButtonFullWidth
     ? 'w-6/12'
-    : 'w-3/12'
+    : 'w-[20%]'
 
   const progressBarLine = bgDark ? 'bg-base-white' : 'bg-primary-dark'
   return (
@@ -78,7 +119,45 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
       <div className="full relative">
         <div className="overflow-hidden">
           <div ref={emblaRef}>
-            <div className="flex">{children}</div>
+            <div className="flex">
+              {!navigationButtonFullWidth &&
+                slides.map((slide: any, index) => {
+                  return (
+                    <div
+                      className={`relative mb-20 mt-20 flex-[0_0_60%] pl-[1rem]`}
+                      key={index}
+                      style={{
+                        ...(tweenValues.length && {
+                          opacity: tweenValues[index],
+                        }),
+                        height: MIN_SIZE,
+                      }}
+                    >
+                      <div
+                        style={{
+                          ...(tweenValues.length && {
+                            height: sizeValue[index],
+                          }),
+                        }}
+                        className="absolute top-1/2 -translate-y-1/2 rounded-lg border border-base-grey p-5"
+                      >
+                        <ProjectOverview project={slide}></ProjectOverview>
+                      </div>
+                    </div>
+                  )
+                })}
+              {navigationButtonFullWidth &&
+                slides.map((slide: any) => {
+                  return (
+                    <div
+                      key={slide.id}
+                      className="mb-20 mt-20 min-w-0 flex-[0_0_100%]"
+                    >
+                      <Testimonial testimonial={slide}></Testimonial>
+                    </div>
+                  )
+                })}
+            </div>
           </div>
         </div>
         <Button
@@ -90,7 +169,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         >
           {' '}
         </Button>
-        {!navigationButtonFullWidth && <div className="w-6/12"> </div>}
+        {!navigationButtonFullWidth && <div className="w-[60%]"> </div>}
         <Button
           onClick={scrollNext}
           onMouseMove={handleMouseMove}
