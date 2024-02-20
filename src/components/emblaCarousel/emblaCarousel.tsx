@@ -30,7 +30,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   const [isPrevButtonHovered, setIsPrevButtonHovered] = useState(false)
   const [isNextButtonHovered, setIsNextButtonHovered] = useState(false)
   const [tweenValues, setTweenValues] = useState<number[]>([])
-  const [sizeValue, setSizeValue] = useState<string[]>([])
+  const [sizeValue, setSizeValue] = useState<number[]>([])
 
   const onScroll = useCallback((emblaApi: any) => {
     const progress = Math.max(0, Math.min(1, emblaApi.scrollProgress()))
@@ -109,8 +109,6 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 
   const progressBarSize = 100 / slides.length
   const newTotalWidth = 100 - progressBarSize
-  // TODO: Parameter wie der Bereich geklickt werden soll auf dem Carousel
-  // const carouselNavigationButtonFullWidth = false
   const carouselNavigationButton = navigationButtonFullWidth
     ? 'w-6/12'
     : 'w-[20%]'
@@ -126,22 +124,24 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                 slides.map((slide: any, index) => {
                   return (
                     <div
-                      className={`relative mb-20 mt-20 flex-[0_0_60%] pl-[1rem]`}
+                      className={`relative my-20 h-[--min-size-mobile] flex-[0_0_100%] lg:h-[--min-size] lg:flex-[0_0_60%] lg:pl-[1rem]`}
                       key={index}
                       style={{
                         ...(tweenValues.length && {
                           opacity: tweenValues[index],
                         }),
-                        height: MIN_SIZE,
+                        '--min-size': `${MIN_SIZE}px`,
+                        '--min-size-mobile': `${MIN_SIZE / 3}px`,
                       }}
                     >
                       <div
                         style={{
                           ...(tweenValues.length && {
-                            height: sizeValue[index],
+                            '--project-overview-height': `${sizeValue[index]}px`,
+                            '--project-overview-height-mobile': `${sizeValue[index] / 3}px`,
                           }),
                         }}
-                        className="absolute top-1/2 -translate-y-1/2 rounded-lg border border-base-grey p-5"
+                        className="absolute top-1/2 h-[--project-overview-height-mobile] -translate-y-1/2 rounded-lg border border-base-grey p-5 lg:h-[--project-overview-height]"
                       >
                         <ProjectOverview project={slide}></ProjectOverview>
                       </div>
@@ -177,7 +177,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           onMouseMove={handleMouseMove}
           onMouseEnter={handleNextButtonHover}
           onMouseLeave={handleNextButtonLeave}
-          className={`absolute right-0 top-0 z-50 h-full bg-transparent hover:bg-transparent lg:block ${carouselNavigationButton}`}
+          className={`absolute right-0 top-0 z-50 hidden h-full bg-transparent hover:bg-transparent lg:block ${carouselNavigationButton}`}
         >
           {' '}
         </Button>
