@@ -126,21 +126,25 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                     <div
                       className={`relative my-20 h-[--min-size-mobile] flex-[0_0_100%] lg:h-[--min-size] lg:flex-[0_0_60%] lg:pl-[1rem]`}
                       key={index}
-                      style={{
-                        ...(tweenValues.length && {
-                          opacity: tweenValues[index],
-                        }),
-                        '--min-size': `${MIN_SIZE}px`,
-                        '--min-size-mobile': `${MIN_SIZE / 3}px`,
-                      }}
+                      style={
+                        {
+                          ...(tweenValues.length && {
+                            opacity: tweenValues[index],
+                          }),
+                          '--min-size': `${MIN_SIZE}px`,
+                          '--min-size-mobile': `${MIN_SIZE / 3}px`,
+                        } as React.CSSProperties
+                      }
                     >
                       <div
-                        style={{
-                          ...(tweenValues.length && {
-                            '--project-overview-height': `${sizeValue[index]}px`,
-                            '--project-overview-height-mobile': `${sizeValue[index] / 3}px`,
-                          }),
-                        }}
+                        style={
+                          {
+                            ...(tweenValues.length && {
+                              '--project-overview-height': `${sizeValue[index]}px`,
+                              '--project-overview-height-mobile': `${sizeValue[index] / 3}px`,
+                            }),
+                          } as React.CSSProperties
+                        }
                         className="absolute top-1/2 h-[--project-overview-height-mobile] -translate-y-1/2 rounded-lg border border-base-grey p-5 lg:h-[--project-overview-height]"
                       >
                         <ProjectOverview project={slide}></ProjectOverview>
