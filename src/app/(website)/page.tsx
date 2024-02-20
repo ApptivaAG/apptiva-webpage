@@ -2,26 +2,23 @@
 import Tags from '@/components/tags'
 import TagsPreview from '@/components/tags-preview'
 import { queryTags } from '@/sanity/lib/queries'
-import { loadQuery } from '@/sanity/lib/store'
-import type { InferType } from "groqd"
+import { load } from '@/sanity/lib/sanityFetch'
+import type { BaseQuery, InferType, z } from "groqd"
 import { SanityDocument } from 'next-sanity'
+import { DraftMode } from 'next/dist/client/components/draft-mode'
 import { draftMode } from 'next/headers'
 
 export type Tags = InferType<typeof queryTags>
 
 export default async function Home() {
-  const {query, schema} = queryTags
-  const result = await loadQuery<SanityDocument[]>(
-    query,
-    {},
-    {
-      perspective: draftMode().isEnabled ? 'previewDrafts' : 'published',
-    }
-  )
+
+  const {draft, published} = await load(queryTags, draftMode().isEnabled)
 
   return draftMode().isEnabled ? (
-    <TagsPreview initial={result} />
+    <TagsPreview initial={draft} />
   ) : (
-    <Tags tags={schema.parse(result.data)} />
+    <Tags tags={published} />
   )
 }
+
+

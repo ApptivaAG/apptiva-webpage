@@ -1,8 +1,10 @@
 import 'server-only'
 
-import { makeSafeQueryRunner } from 'groqd'
+import { BaseQuery, makeSafeQueryRunner, z } from 'groqd'
 import { client } from './client'
 import { token } from '../env'
+import { loadQuery } from './store'
+import { SanityDocument } from 'next-sanity'
 
 export const runQuery = makeSafeQueryRunner(
   (query, params: Record<string, number | string> = {}, tags?: string[]) => {
@@ -40,3 +42,21 @@ export const runQuery = makeSafeQueryRunner(
       .fetch(query, params, { next: { tags } })
   }
 )
+
+export type GroqdQuery = BaseQuery<z.ZodTypeAny>
+
+export async function load(query: GroqdQuery, isDraftMode = false, params: Record<string, number | string> = {}, tags?: string[]) {
+  const result = await loadQuery<SanityDocument[]>(
+    query.query,
+    params,
+    {
+      perspective: isDraftMode ? 'previewDrafts' : 'published',
+      next: { tags }
+    }
+  )
+
+  return {
+    draft: result,
+    published: query.schema.parse(result.data)
+  }
+}

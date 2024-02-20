@@ -12,7 +12,7 @@ export const client = createClient({
   // maybe it is alswo overridden in sanityFetch.ts
   perspective: 'published',
   stega: {
-    enabled: false,
+    enabled: true,
     studioUrl: '/studio',
   },
 })
