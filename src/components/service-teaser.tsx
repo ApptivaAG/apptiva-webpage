@@ -34,12 +34,10 @@ const ServiceTeaser = ({
           (rowNumber % 2 ? ' lg:rounded-l-md' : ' lg:rounded-r-md')
         }
       >
-        {/* {service.illustration && (
-          <SanityImage
-            image={service.illustration}
-            style="p-6 object-cover object-center"
-          />
-        )} */}
+        <SanityImage
+          image={service.illustration}
+          style="p-6 object-cover object-center"
+        />
       </div>
     </div>
   )

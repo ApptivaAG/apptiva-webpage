@@ -18,7 +18,7 @@ export default async function Home() {
   return (
     <>
       <Hero claim={claim} />
-      {/* <ServiceTeasers /> */}
+      <ServiceTeasers />
       <Projects projects={projects}></Projects>
       <Testimonials testimonials={testimonials} />
       <Customers customers={customers} />

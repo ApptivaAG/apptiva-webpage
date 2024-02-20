@@ -7,16 +7,16 @@ import { cache } from 'react'
 export type ServiceTeaser = InferType<typeof servicesTeaserQuery>
 
 export const getServiceTeasers = cache(async () => {
-  // const servicesTeasers = await runQuery(servicesTeaserQuery, undefined, [
-  //   'service-page-teasers',
-  // ])
+  const servicesTeasers = await runQuery(servicesTeaserQuery, undefined, [
+    'service-page-teasers',
+  ])
 
-  const servicesTeasers = await load(
-    servicesTeaserQuery,
-    draftMode().isEnabled,
-    undefined,
-    ['service-page-teasers']
-  )
+  // const servicesTeasers = await load(
+  //   servicesTeaserQuery,
+  //   draftMode().isEnabled,
+  //   undefined,
+  //   ['service-page-teasers']
+  // )
 
   // type CmsProjectWithSlug = InferType<typeof servicesQuery>[number] & {
   //   slug: string
