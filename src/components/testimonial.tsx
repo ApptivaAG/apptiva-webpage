@@ -7,29 +7,29 @@ import Heading from './heading'
 const Testimonial = ({ testimonial }: { testimonial: any }) => {
   const imagePath = path.join('/img/testimonials/', testimonial.avatar)
   return (
-    <div className="m-auto w-8/12">
-      <div className="mb-10 mt-10">
-        <div className="flex">
+    <div className="m-auto lg:w-8/12">
+      <div className="my-0 lg:my-10">
+        <div className="mx-2 flex lg:mx-0">
           <div>
             <div className="rounded-[100%] bg-secondary">
-              <FaQuoteLeft size={100} className="p-6 text-primary" />
+              <FaQuoteLeft className="p-2 text-[30px] text-primary lg:p-6 lg:text-[100px]" />
             </div>
           </div>
-          <div className="ml-8 mt-10">
+          <div className="ml-0 mr-[30px] mt-10 lg:ml-8">
             <Heading level={3} className="text-primary">
               {ReactHtmlParser(testimonial.statement)}
             </Heading>
-            <div className="mt-20 flex items-center gap-12">
-              <div className="">
+            <div className="mt-10 flex items-center gap-6 lg:mt-20 lg:gap-12">
+              <div>
                 <Image
-                  className="rounded-[100%]"
+                  className="h-20 w-20 rounded-[100%]"
                   src={imagePath}
                   width={200}
                   height={200}
                   alt={testimonial.id}
                 />
               </div>
-              <div className="text-xl text-primary">
+              <div className="text-primary">
                 <p>{testimonial.name}</p>
                 <p>{testimonial.position}</p>
                 <p>{testimonial.company}</p>
