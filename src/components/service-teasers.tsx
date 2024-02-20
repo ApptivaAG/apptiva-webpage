@@ -6,7 +6,7 @@ const ServiceTeasers = async () => {
   console.log('servcies', services)
 
   return (
-    <div className="feature space-y-4 p-4 [&>*:nth-child(even)]:flex-row-reverse ">
+    <div className="feature space-y-4 p-4 lg:[&>*:nth-child(even)]:flex-row-reverse ">
       {services.map((service: any, index: number) => (
         <ServiceTeaser key={index} service={service} rowNumber={index} />
       ))}
