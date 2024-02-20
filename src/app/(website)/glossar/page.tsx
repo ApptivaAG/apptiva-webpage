@@ -4,23 +4,22 @@ import Heading from '@/components/heading'
 import { glossaryQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
 import { draftMode } from 'next/headers'
-import Link from 'next/link'
+import { GlossaryList } from './list'
+import GlossaryPreview from './preview'
 
-export default async function Home() {
-  const glossary = await load(glossaryQuery, draftMode().isEnabled, undefined, ['glossary'])
+export default async function Glossary() {
+  const glossary = await load(glossaryQuery, draftMode().isEnabled, undefined, [
+    'glossary',
+  ])
 
   return (
     <div className="container mx-auto px-4">
       <Heading level={2}>Glossar</Heading>
-      <ul>
-        {glossary.published.map((glossaryEntry) => (
-          <li key={glossaryEntry.slug}>
-            <Link href={`/glossar/${glossaryEntry.slug}`}>
-              {glossaryEntry.title}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      {draftMode().isEnabled ? (
+        <GlossaryPreview initial={glossary.draft} />
+      ) : (
+        <GlossaryList data={glossary.published} />
+      )}
     </div>
   )
 }

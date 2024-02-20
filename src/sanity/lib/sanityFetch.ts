@@ -46,7 +46,7 @@ export const runQuery = makeSafeQueryRunner(
 export type GroqdQuery = BaseQuery<z.ZodTypeAny>
 
 export async function load<T extends GroqdQuery>(query: T, isDraftMode = false, params: Record<string, number | string> = {}, cacheTags?: string[]) {
-  const result = await loadQuery<SanityDocument[]>(
+  const result = await loadQuery<InferType<T>>(
     query.query,
     params,
     {
