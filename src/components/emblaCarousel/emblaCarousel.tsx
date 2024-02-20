@@ -39,32 +39,34 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     const engine = emblaApi.internalEngine()
     const scrollProgress = emblaApi.scrollProgress()
 
-    const styles = emblaApi.scrollSnapList().map((scrollSnap, index) => {
-      let diffToTarget = scrollSnap - scrollProgress
-      console.log('loop', engine.options.loop)
+    const styles = emblaApi
+      .scrollSnapList()
+      .map((scrollSnap: any, index: number) => {
+        let diffToTarget = scrollSnap - scrollProgress
+        console.log('loop', engine.options.loop)
 
-      if (engine.options.loop) {
-        engine.slideLooper.loopPoints.forEach((loopItem) => {
-          const target = loopItem.target()
-          if (index === loopItem.index && target !== 0) {
-            const sign = Math.sign(target)
-            if (sign === -1) diffToTarget = scrollSnap - (1 + scrollProgress)
-            if (sign === 1) diffToTarget = scrollSnap + (1 - scrollProgress)
-          }
-        })
-      }
-      const tweenValue = 1 - Math.abs(diffToTarget * TWEEN_FACTOR)
-      const sizeValue = (1 - Math.abs(diffToTarget * SIZE_FACTOR)) * MIN_SIZE
-      const styles = {
-        tweenValue: numberWithinRange(tweenValue, 0, 1),
-        sizeValue: numberWithinRange(sizeValue, 200, MIN_SIZE),
-      }
-      return styles
-    })
+        if (engine.options.loop) {
+          engine.slideLooper.loopPoints.forEach((loopItem: any) => {
+            const target = loopItem.target()
+            if (index === loopItem.index && target !== 0) {
+              const sign = Math.sign(target)
+              if (sign === -1) diffToTarget = scrollSnap - (1 + scrollProgress)
+              if (sign === 1) diffToTarget = scrollSnap + (1 - scrollProgress)
+            }
+          })
+        }
+        const tweenValue = 1 - Math.abs(diffToTarget * TWEEN_FACTOR)
+        const sizeValue = (1 - Math.abs(diffToTarget * SIZE_FACTOR)) * MIN_SIZE
+        const styles = {
+          tweenValue: numberWithinRange(tweenValue, 0, 1),
+          sizeValue: numberWithinRange(sizeValue, 200, MIN_SIZE),
+        }
+        return styles
+      })
     console.log('tweenValues', styles)
 
-    setTweenValues(styles.map((style) => style.tweenValue))
-    setSizeValue(styles.map((style) => style.sizeValue))
+    setTweenValues(styles.map((style: any) => style.tweenValue))
+    setSizeValue(styles.map((style: any) => style.sizeValue))
   }, [])
 
   useEffect(() => {

@@ -1,4 +1,5 @@
 'use client'
+import { EmblaOptionsType } from 'embla-carousel'
 import EmblaCarousel from './emblaCarousel'
 
 type PropType = {
