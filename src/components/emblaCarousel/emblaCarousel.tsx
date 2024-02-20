@@ -153,7 +153,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                   return (
                     <div
                       key={slide.id}
-                      className="mb-20 mt-20 min-w-0 flex-[0_0_100%]"
+                      className="my-20 min-w-0 flex-[0_0_100%]"
                     >
                       <Testimonial testimonial={slide}></Testimonial>
                     </div>
@@ -167,7 +167,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           onMouseMove={handleMouseMove}
           onMouseEnter={handlePrevButtonHover}
           onMouseLeave={handlePrevButtonLeave}
-          className={`absolute left-0 top-0 z-50 h-full bg-transparent hover:bg-transparent ${carouselNavigationButton}`}
+          className={`absolute left-0 top-0 z-50 hidden h-full bg-transparent hover:bg-transparent lg:block ${carouselNavigationButton}`}
         >
           {' '}
         </Button>
@@ -177,7 +177,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           onMouseMove={handleMouseMove}
           onMouseEnter={handleNextButtonHover}
           onMouseLeave={handleNextButtonLeave}
-          className={`absolute right-0 top-0 z-50 h-full bg-transparent hover:bg-transparent ${carouselNavigationButton}`}
+          className={`absolute right-0 top-0 z-50 hidden h-full bg-transparent hover:bg-transparent lg:block ${carouselNavigationButton}`}
         >
           {' '}
         </Button>
