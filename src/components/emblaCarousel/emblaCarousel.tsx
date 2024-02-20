@@ -118,7 +118,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   const progressBarLine = bgDark ? 'bg-base-white' : 'bg-primary'
   return (
     <>
-      <div className="full relative">
+      <div className="relative">
         <div className="overflow-hidden">
           <div ref={emblaRef}>
             <div className="flex">
