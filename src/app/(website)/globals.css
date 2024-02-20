@@ -37,7 +37,7 @@
   padding-top: 8rem;
 }
 
-.content:has(.full:first-child) {
+.full .content {
   padding-top: 0;
 }
 
