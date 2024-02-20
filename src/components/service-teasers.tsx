@@ -6,7 +6,7 @@ const ServiceTeasers = ({ services }: { services: any[] }) => {
   return (
     <div className="feature space-y-4 p-4 [&>*:nth-child(even)]:flex-row-reverse ">
       {services.map((service: any, index: number) => (
-        <ServiceTeaser service={service} rowNumber={index} />
+        <ServiceTeaser key={index} service={service} rowNumber={index} />
       ))}
     </div>
   )

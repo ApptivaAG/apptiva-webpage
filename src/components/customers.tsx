@@ -37,7 +37,7 @@ const Customers = ({
                 alt={customer.alt}
                 src={customer.path}
                 fill
-                className="object-contain"
+                className="object-contain [filter:grayscale()_invert(15%)_sepia(18%)_saturate(7288%)_hue-rotate(199deg)_brightness(102%)_contrast(98%)]"
               />
             </div>
           )

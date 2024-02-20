@@ -9,10 +9,12 @@ import carouselNavigationRightIcon from './../../../public/icons/arrow-right-cir
 type PropType = {
   slides: []
   children: ReactNode
+  navigationButtonFullWidth: boolean
+  bgDark: boolean
 }
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
-  const { slides, children } = props
+  const { slides, children, navigationButtonFullWidth, bgDark } = props
   const [emblaRef, emblaApi] = useEmblaCarousel()
   const [mousePos, setMousePos] = useState({ x: String, y: String })
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -64,7 +66,13 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 
   const progressBarSize = 100 / slides.length
   const newTotalWidth = 100 - progressBarSize
+  // TODO: Parameter wie der Bereich geklickt werden soll auf dem Carousel
+  // const carouselNavigationButtonFullWidth = false
+  const carouselNavigationButton = navigationButtonFullWidth
+    ? 'w-6/12'
+    : 'w-3/12'
 
+  const progressBarLine = bgDark ? 'bg-base-white' : 'bg-primary-dark'
   return (
     <>
       <div className="full relative">
@@ -78,16 +86,17 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           onMouseMove={handleMouseMove}
           onMouseEnter={handlePrevButtonHover}
           onMouseLeave={handlePrevButtonLeave}
-          className="absolute left-0 top-0 z-50 h-full w-6/12 bg-transparent hover:bg-transparent"
+          className={`absolute left-0 top-0 z-50 h-full bg-transparent hover:bg-transparent ${carouselNavigationButton}`}
         >
           {' '}
         </Button>
+        {!navigationButtonFullWidth && <div className="w-6/12"> </div>}
         <Button
           onClick={scrollNext}
           onMouseMove={handleMouseMove}
           onMouseEnter={handleNextButtonHover}
           onMouseLeave={handleNextButtonLeave}
-          className="absolute right-0 top-0 z-50 h-full w-6/12 bg-transparent hover:bg-transparent"
+          className={`absolute right-0 top-0 z-50 h-full bg-transparent hover:bg-transparent ${carouselNavigationButton}`}
         >
           {' '}
         </Button>
@@ -121,7 +130,9 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
               } as React.CSSProperties
             }
           ></div>
-          <div className="absolute bottom-10 left-0 right-0 top-1/2 z-10 h-[1px] w-full -translate-y-1/2 overflow-hidden rounded bg-primary-dark"></div>
+          <div
+            className={`absolute bottom-10 left-0 right-0 top-1/2 z-10 h-[1px] w-full -translate-y-1/2 overflow-hidden rounded ${progressBarLine}`}
+          ></div>
         </div>
       </div>
     </>
