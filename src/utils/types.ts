@@ -32,11 +32,11 @@ export interface CmsBlog extends Blog {
 
 export type CmsContent = PortableText | undefined
 
-export type PortableTextBlock = Omit<PortableTextTextBlock, '_key'> & {
-  _key?: string | undefined
-}
-
-type PortableText = Array<PortableTextBlock>
+export type PortableText = Array<
+  Omit<PortableTextTextBlock, '_key'> & {
+    _key?: string | undefined
+  }
+>
 
 export type SanityImageWithAlt = (SanityImageSource & { alt: string }) | null
 

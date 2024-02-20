@@ -1,4 +1,4 @@
-import { PortableTextBlock } from '@/utils/types'
+import { PortableText as PortableTextType } from '@/utils/types'
 import { PortableText, PortableTextComponents } from '@portabletext/react'
 import Heading from './heading'
 
@@ -6,7 +6,7 @@ const StyledPortableText = ({
   content,
   spreadParagraphs = false,
 }: {
-  content: PortableTextBlock
+  content: PortableTextType
   spreadParagraphs?: boolean
 }) => {
   const components: PortableTextComponents = {
@@ -30,9 +30,7 @@ const StyledPortableText = ({
     },
   }
 
-  return (
-    <PortableText key={content._key} value={content} components={components} />
-  )
+  return <PortableText value={content} components={components} />
 }
 
 export default StyledPortableText
