@@ -8,6 +8,7 @@ import { FaCog } from 'react-icons/fa'
 import { defineConfig } from 'sanity'
 import { structureTool } from 'sanity/structure'
 import { presentationTool } from 'sanity/presentation'
+import { media } from 'sanity-plugin-media'
 
 import { apiVersion, dataset, projectId } from './src/sanity/env'
 import { schema } from './src/sanity/schema'
@@ -44,6 +45,7 @@ export default defineConfig({
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({ defaultApiVersion: apiVersion }),
     groqdPlaygroundTool(),
+    media(),
     presentationTool({
       previewUrl: {
         draftMode: {
