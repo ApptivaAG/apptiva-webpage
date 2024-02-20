@@ -12,11 +12,11 @@ const Testimonial = ({ testimonial }: { testimonial: any }) => {
         <div className="flex">
           <div>
             <div className="rounded-[100%] bg-secondary">
-              <FaQuoteLeft size={100} className="p-6 text-primary-dark" />
+              <FaQuoteLeft size={100} className="p-6 text-primary" />
             </div>
           </div>
           <div className="ml-8 mt-10">
-            <Heading level={3} className="text-primary-dark">
+            <Heading level={3} className="text-primary">
               {ReactHtmlParser(testimonial.statement)}
             </Heading>
             <div className="mt-20 flex items-center gap-12">
@@ -29,7 +29,7 @@ const Testimonial = ({ testimonial }: { testimonial: any }) => {
                   alt={testimonial.id}
                 />
               </div>
-              <div className="text-xl text-primary-dark">
+              <div className="text-xl text-primary">
                 <p>{testimonial.name}</p>
                 <p>{testimonial.position}</p>
                 <p>{testimonial.company}</p>

@@ -115,7 +115,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     ? 'w-6/12'
     : 'w-[20%]'
 
-  const progressBarLine = bgDark ? 'bg-base-white' : 'bg-primary-dark'
+  const progressBarLine = bgDark ? 'bg-base-white' : 'bg-primary'
   return (
     <>
       <div className="full relative">
