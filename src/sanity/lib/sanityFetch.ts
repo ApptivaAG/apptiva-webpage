@@ -1,6 +1,6 @@
 import 'server-only'
 
-import { BaseQuery, makeSafeQueryRunner, z } from 'groqd'
+import { BaseQuery, InferType, makeSafeQueryRunner, z } from 'groqd'
 import { client } from './client'
 import { token } from '../env'
 import { loadQuery } from './store'
@@ -45,18 +45,18 @@ export const runQuery = makeSafeQueryRunner(
 
 export type GroqdQuery = BaseQuery<z.ZodTypeAny>
 
-export async function load(query: GroqdQuery, isDraftMode = false, params: Record<string, number | string> = {}, tags?: string[]) {
+export async function load<T extends GroqdQuery>(query: T, isDraftMode = false, params: Record<string, number | string> = {}, cacheTags?: string[]) {
   const result = await loadQuery<SanityDocument[]>(
     query.query,
     params,
     {
       perspective: isDraftMode ? 'previewDrafts' : 'published',
-      next: { tags }
+      next: { tags: cacheTags }
     }
   )
 
   return {
     draft: result,
-    published: query.schema.parse(result.data)
+    published: query.schema.parse(result.data) as InferType<T>
   }
 }

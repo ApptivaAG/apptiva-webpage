@@ -1,12 +1,14 @@
 import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
-import { getGlossaryItemBySlug } from '@/utils/glossary'
+import { glossaryBySlugQuery } from '@/sanity/lib/queries'
+import { load } from '@/sanity/lib/sanityFetch'
 import { PortableText } from '@portabletext/react'
+import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 
 export default async function Glossary(props: { params: { slug: string } }) {
-  const glossary =
-    (await getGlossaryItemBySlug(props.params.slug)) ?? notFound()
+  const {published: glossary} =
+    (await load(glossaryBySlugQuery, draftMode().isEnabled, props.params, ['glossary'])) ?? notFound()
   return (
     <>
       <Heading level={2}>{glossary.title}</Heading>
@@ -20,6 +22,10 @@ export default async function Glossary(props: { params: { slug: string } }) {
           {module.content && <PortableText value={module.content} />}
         </>
       ))}
+      <ul>
+        <Heading level={3}>Tags</Heading>
+      {glossary.tags?.map(tag => <li key={tag}>{tag}</li>)}
+      </ul>
     </>
   )
 }
