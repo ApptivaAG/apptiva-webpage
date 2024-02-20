@@ -3,7 +3,7 @@ import EmblaCarouselTestimonialView from './emblaCarousel/emblaCarouselTestimoni
 
 const Testimonials = ({ testimonials }: { testimonials: any }) => {
   return (
-    <div>
+    <div className="full ">
       <EmblaCarouselTestimonialView
         slides={testimonials}
       ></EmblaCarouselTestimonialView>
