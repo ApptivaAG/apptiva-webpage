@@ -111,12 +111,6 @@ const customerList = [
 
 export default function getCustomerLogos() {
   const allPostsData = customerList
-    .filter(
-      ({ fileName }) =>
-        fs
-          .statSync(path.join('./content/data/customers/', fileName))
-          .isFile() && fileName.endsWith('.png')
-    )
     .map((customer) => {
       const relativePath = path.join('/img/customers/', customer.fileName)
       const id = customer.fileName.replace(/\.png$/, '')
