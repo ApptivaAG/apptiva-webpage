@@ -128,13 +128,13 @@ export default function Footer() {
           </Heading>
           <ul>
             <li>
-              <Link href="/development">Development </Link>
+              <Link href="/angebot/development">Development </Link>
             </li>
             <li>
-              <Link href="/chatbots">Chatbots</Link>
+              <Link href="/angebot/chatbots">Chatbots</Link>
             </li>
             <li>
-              <Link href="/consulting">Consulting</Link>
+              <Link href="/angebot/consulting">Consulting</Link>
             </li>
           </ul>
         </div>
