@@ -2,8 +2,8 @@
 
 import { projectsQuery } from '@/sanity/lib/queries'
 import { QueryResponseInitial, useQuery } from '@sanity/react-loader'
-import ProjectsLayout from './projects-layout'
-import { ProjectQueryData } from '../../projekte/types'
+import ProjectList from './list'
+import { ProjectQueryData } from './types'
 
 export default function ProjectsPreview({
   initial,
@@ -15,5 +15,5 @@ export default function ProjectsPreview({
     undefined,
     { initial }
   )
-  return <ProjectsLayout projects={data} />
+  return <ProjectList projects={data} />
 }

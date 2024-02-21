@@ -1,6 +1,6 @@
 import ProjectsCarousel from './carousel'
 import Heading from '../../../../components/heading'
-import { ProjectQueryData } from './types'
+import { ProjectQueryData } from '../../projekte/types'
 
 export default function ProjectsLayout(props: { projects: ProjectQueryData[] }){
   return (

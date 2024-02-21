@@ -1,26 +1,20 @@
-// ./nextjs-app/app/page.tsx
-
 import Heading from '@/components/heading'
 import { projectsQuery } from '@/sanity/lib/queries'
-import { runQuery } from '@/sanity/lib/sanityFetch'
+import { load, runQuery } from '@/sanity/lib/sanityFetch'
+import { draftMode } from 'next/headers'
 import Link from 'next/link'
+import ProjectsPreview from './preview'
+import ProjectList from './list'
 
 export default async function Home() {
-  const projects = await runQuery(projectsQuery, undefined, ['project'])
+  const { isEnabled } = draftMode()
+  const { draft, published } = await load(projectsQuery, isEnabled, undefined, [
+    'project',
+  ])
 
-  return (
-    <div className="container mx-auto px-4">
-      <Heading level={2}>Projekte</Heading>
-      {projects.map((project) => (
-        <div key={project._id}>
-          <Link href={'/projekte/' + project.slug}>
-            <Heading level={3} size={4}>
-              {project.projectName}
-            </Heading>
-            <div>{project.description}</div>
-          </Link>
-        </div>
-      ))}
-    </div>
+  return isEnabled ? (
+    <ProjectsPreview initial={draft} />
+  ) : (
+    <ProjectList projects={published} />
   )
 }
