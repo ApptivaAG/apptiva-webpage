@@ -1,8 +1,8 @@
 import { serviceBySlugQuery, servicesQuery } from '@/sanity/lib/queries'
 import { runQuery } from '@/sanity/lib/sanityFetch'
+import { Service } from '@/utils/types'
 import { InferType } from 'groqd'
 import { cache } from 'react'
-import { Service } from './types'
 
 export const getServicePages = cache(async () => {
   const servicePagesFromCMS = await runQuery(servicesQuery, undefined, [

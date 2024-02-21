@@ -1,8 +1,8 @@
 import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
-import { getServiceBySlug } from '@/utils/service-page'
 import { PortableText } from '@portabletext/react'
 import { notFound } from 'next/navigation'
+import { getServiceBySlug } from '../service-page'
 
 export default async function Home(props: { params: { slug: string } }) {
   const servicePage = (await getServiceBySlug(props.params.slug)) ?? notFound()

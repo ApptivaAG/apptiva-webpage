@@ -1,6 +1,6 @@
 import Heading from '@/components/heading'
-import { getServicePages } from '@/utils/service-page'
 import Link from 'next/link'
+import { getServicePages } from './service-page'
 
 export default async function Home() {
   const servicePages = await getServicePages()

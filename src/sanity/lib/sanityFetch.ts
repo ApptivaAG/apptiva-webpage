@@ -15,19 +15,6 @@ export const runQuery = makeSafeQueryRunner(
         'The `SANITY_API_READ_TOKEN` environment variable is required.'
       )
     }
-    console.log('at runQuery, draft mode on? ', isDraftMode)
-
-    // return client
-    //   .withConfig({
-    //     token: token,
-    //     perspective: isDraftMode ? 'previewDrafts' : 'published',
-    //     useCdn: isDraftMode ? false : true,
-    //     stega: {
-    //       enabled: false,
-    //       studioUrl: '/studio',
-    //     },
-    //   })
-    //   .fetch(query, params, { next: { tags } })
 
     return client
       .withConfig({
