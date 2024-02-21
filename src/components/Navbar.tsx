@@ -6,6 +6,14 @@ import Link from 'next/link'
 import { useState } from 'react'
 import apptivaLogo from './logo.svg'
 import Button from './ui/button'
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from './ui/navigation-menu'
 
 const navbarData = [
   {
@@ -44,40 +52,42 @@ const Navbar = () => {
             className="w-32"
           />
         </Link>
-        <nav className="flex justify-between gap-8 rounded bg-primary px-8 py-3">
-          {navbarData.map((item) =>
-            item.type === 'one' ? (
-              <div key={item.href} onClick={() => setShowOffers(!showOffers)}>
-                <ul key={item.href}>
-                  <li key={item.href} className="relative flex flex-col">
-                    <div
-                      key={item.href}
-                      className={`flex cursor-pointer items-center gap-1 ${showOffers ? 'text-secondary' : ''}`}
+
+        <NavigationMenu>
+          <NavigationMenuList>
+            {navbarData.map((item) => (
+              <NavigationMenuItem key={item.href}>
+                {item.type === 'one' ? (
+                  <>
+                    <NavigationMenuTrigger
+                      onClick={() => setShowOffers(!showOffers)}
+                      className={showOffers ? 'text-secondary' : ''}
                     >
-                      {item.title}{' '}
-                      <span className="text-[1.5rem]">
-                        {showOffers ? <ChevronUpIcon /> : <ChevronDownIcon />}
-                      </span>
-                    </div>
-                    {showOffers && (
-                      <ul className="full absolute left-[-2rem] right-[-16.75rem] top-10 rounded bg-primary p-4 ">
+                      {item.title}
+                    </NavigationMenuTrigger>
+                    {item.items && (
+                      <NavigationMenuContent className="full left-0 right-0 top-0 flex flex-col bg-primary p-4">
                         {item.items.map((subitem) => (
-                          <li key={subitem.href}>
-                            <Link href={subitem.href}>{subitem.title}</Link>
-                          </li>
+                          <NavigationMenuLink
+                            href={subitem.href}
+                            key={subitem.href}
+                          >
+                            {subitem.title}
+                          </NavigationMenuLink>
                         ))}
-                      </ul>
+                      </NavigationMenuContent>
                     )}
-                  </li>
-                </ul>
-              </div>
-            ) : (
-              <Link key={item.href} href={item.href}>
-                {item.title}
-              </Link>
-            )
-          )}
-        </nav>
+                  </>
+                ) : (
+                  <NavigationMenuLink href={item.href}>
+                    {item.title}
+                  </NavigationMenuLink>
+                )}
+              </NavigationMenuItem>
+            ))}
+          </NavigationMenuList>
+        </NavigationMenu>
+
         <Link href={'/kontakt/'}>
           <Button element="div" intent="secondary">
             Kontakt
