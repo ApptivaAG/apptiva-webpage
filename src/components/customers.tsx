@@ -29,16 +29,17 @@ const Customers = ({
         {customers.map((customer: any) => {
           return (
             <div
-              key={customer.id}
-              className="relative min-w-0 flex-[0_0_16.4rem]"
-              style={{ height: customer.height + 10 }}
+            key={customer.id}
+            className="relative min-w-0 flex-[0_0_16.4rem] bg-base-white"
+            style={{ height: customer.height + 10 }}
             >
               <Image
                 alt={customer.alt}
                 src={customer.path}
                 fill
-                className="object-contain [filter:grayscale()_invert(15%)_sepia(18%)_saturate(7288%)_hue-rotate(199deg)_brightness(102%)_contrast(98%)]"
+                className="object-contain opacity-80"
               />
+              <div className='inset-0 absolute bg-primary mix-blend-color [filter:brightness(120%)] bg-blend-lighten'></div>
             </div>
           )
         })}

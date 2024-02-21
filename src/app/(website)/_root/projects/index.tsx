@@ -1,20 +1,17 @@
-import Heading from '@/components/heading'
 import { projectsQuery } from '@/sanity/lib/queries'
-import { load, runQuery } from '@/sanity/lib/sanityFetch'
+import { load } from '@/sanity/lib/sanityFetch'
 import { draftMode } from 'next/headers'
-import Link from 'next/link'
 import ProjectsPreview from './preview'
-import ProjectList from './list'
+import ProjectsLayout from './projects-layout'
 
-export default async function Home() {
+export default async function Projects() {
   const { isEnabled } = draftMode()
   const { draft, published } = await load(projectsQuery, isEnabled, undefined, [
     'project',
   ])
-
   return isEnabled ? (
     <ProjectsPreview initial={draft} />
   ) : (
-    <ProjectList projects={published} />
+    <ProjectsLayout projects={published} />
   )
 }

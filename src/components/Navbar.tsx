@@ -24,12 +24,12 @@ const navbarData = [
       {
         title: 'Development',
         text: '',
-        href: '/development',
+        href: '/angebot/development',
       },
       {
         title: 'Chatbots',
         text: '',
-        href: '/chatbots',
+        href: '/angebot/chatbots',
       },
     ],
   },

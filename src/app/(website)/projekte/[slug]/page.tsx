@@ -1,36 +1,26 @@
-import Heading from '@/components/heading'
-import SanityImage from '@/components/sanity-image'
 import { projectBySlugQuery } from '@/sanity/lib/queries'
-import { runQuery } from '@/sanity/lib/sanityFetch'
-import { PortableText } from '@portabletext/react'
+import { load } from '@/sanity/lib/sanityFetch'
+import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
+import ProjectDetail from './detail'
+import ProjectsPreview from './preview'
 
 export default async function Home(props: { params: { slug: string } }) {
-  const project = await runQuery(
+  const { isEnabled } = draftMode()
+  const { published, draft } = await load(
     projectBySlugQuery,
-    {
-      slug: props.params.slug,
-    },
-    ['project']
+    isEnabled,
+    props.params,
+    ['project', props.params.slug]
   )
 
-  if (!project) {
+  if (!draft) {
     notFound()
   }
 
-  return (
-    <>
-      <Heading level={2}>{project.projectName}</Heading>
-      <SanityImage image={project.image} />
-      <div>{project.description}</div>
-      <div>{project.tasks}</div>
-      <div>{project.time}</div>
-      <div>{project.technologies}</div>
-      <div>{project.customer}</div>
-      {project.content?.map((content) => (
-        <PortableText key={content._key} value={content} />
-      ))}
-      <div>{project.contactPerson}</div>
-    </>
+  return isEnabled ? (
+    <ProjectsPreview initial={draft} params={props.params} />
+  ) : (
+    <ProjectDetail project={published} />
   )
 }

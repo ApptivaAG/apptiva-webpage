@@ -1,22 +1,18 @@
-import Heading from '@/components/heading'
-import { getServicePages } from '@/utils/service-page'
-import Link from 'next/link'
+import { servicesQuery } from '@/sanity/lib/queries'
+import { load } from '@/sanity/lib/sanityFetch'
+import { draftMode } from 'next/headers'
+import ServiceList from './list'
+import ServicesPreview from './preview'
 
 export default async function Home() {
-  const servicePages = await getServicePages()
+  const { isEnabled } = draftMode()
+  const { published, draft } = await load(servicesQuery, isEnabled, undefined, [
+    'service-page',
+  ])
 
-  return (
-    <div>
-      <Heading level={2}>Angebot</Heading>
-      <ul>
-        {Array.from(servicePages.values()).map((servicePage) => (
-          <li key={servicePage.slug}>
-            <Link href={'angebot/' + servicePage.slug}>
-              {servicePage.title}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+  return isEnabled ? (
+    <ServicesPreview initial={draft} />
+  ) : (
+    <ServiceList services={published} />
   )
 }

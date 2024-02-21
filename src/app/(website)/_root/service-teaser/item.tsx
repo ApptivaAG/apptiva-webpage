@@ -1,13 +1,13 @@
-import { ServiceTeaser } from '@/utils/service-teasers'
 import { PortableText } from '@portabletext/react'
-import Heading from './heading'
-import SanityImage from './sanity-image'
+import Heading from '../../../../components/heading'
+import SanityImage from '../../../../components/sanity-image'
+import { ServiceTeaserData } from './types'
 
 const ServiceTeaser = ({
   service,
   rowNumber,
 }: {
-  service: ServiceTeaser[number]
+  service: ServiceTeaserData
   rowNumber: number
 }) => {
   return (
