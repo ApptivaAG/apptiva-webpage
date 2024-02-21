@@ -37,7 +37,7 @@ const Customers = ({
                 alt={customer.alt}
                 src={customer.path}
                 fill
-                className="object-contain opacity-50"
+                className="object-contain opacity-80"
               />
               <div className='inset-0 absolute bg-primary mix-blend-color [filter:brightness(120%)] bg-blend-lighten'></div>
             </div>
