@@ -123,7 +123,7 @@ export default function EmblaCarousel<T>(props: {
                 slides.map((slide: any, index) => {
                   return (
                     <div
-                      className={`relative my-20 h-[--min-size-mobile] flex-[0_0_100%] lg:h-[--min-size] lg:flex-[0_0_60%] lg:pl-[1rem]`}
+                      className={`relative my-20 h-[--min-size-mobile] flex-[0_0_100%] md:flex-[0_0_60%] lg:h-[--min-size] lg:pl-[1rem]`}
                       key={index}
                       style={
                         {
