@@ -1,9 +1,8 @@
-// interface Project {
+import ProjectsCarousel from './carousel'
+import Heading from '../../../../components/heading'
+import { ProjectQueryData } from './types'
 
-import EmblaCarouselProjectView from './emblaCarousel/emblaCarouselProjectView'
-import Heading from './heading'
-
-const Projects = ({ projects }: { projects: any }) => {
+export default function Layout(props: { projects: ProjectQueryData[] }){
   return (
     <div className="full bg-primary text-base-white">
       <div className="mt-10">
@@ -15,10 +14,8 @@ const Projects = ({ projects }: { projects: any }) => {
             Erfolgsgeschichten.
           </Heading>
         </div>
-        <EmblaCarouselProjectView slides={projects}></EmblaCarouselProjectView>
+        <ProjectsCarousel slides={props.projects}></ProjectsCarousel>
       </div>
     </div>
   )
 }
-
-export default Projects

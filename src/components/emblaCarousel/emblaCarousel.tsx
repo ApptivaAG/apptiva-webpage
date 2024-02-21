@@ -15,14 +15,13 @@ const MIN_SIZE = 600
 const numberWithinRange = (number: number, min: number, max: number): number =>
   Math.min(Math.max(number, min), max)
 
-type PropType = {
-  slides: []
+
+export default function EmblaCarousel<T>(props: {
+  slides: T[]
   options?: EmblaOptionsType
   navigationButtonFullWidth: boolean
   bgDark: boolean
-}
-
-const EmblaCarousel: React.FC<PropType> = (props) => {
+}) {
   const { slides, options, navigationButtonFullWidth, bgDark } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options)
   const [mousePos, setMousePos] = useState({ x: String, y: String })
@@ -223,5 +222,3 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     </>
   )
 }
-
-export default EmblaCarousel

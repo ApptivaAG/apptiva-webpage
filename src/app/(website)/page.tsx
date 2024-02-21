@@ -1,16 +1,13 @@
-// ./nextjs-app/app/page.tsx
+import Projects from '@/app/(website)/_root/projects'
 import Customers from '@/components/customers'
 import Hero from '@/components/hero'
-import Projects from '@/components/projects'
 import Testimonials from '@/components/testimonials'
 import getCustomerLogos from '@/utils/customers'
-import { getProjects } from '@/utils/project'
 import { getSettings } from '@/utils/settings'
 import { getTestimonialsData } from '../../utils/testimonials'
 import ServiceTeasers from './_root/service-teaser'
 
 export default async function Home() {
-  const projects = await getProjects()
   const testimonials = getTestimonialsData()
   const customers = getCustomerLogos()
   const claim = (await getSettings())?.claim
@@ -19,7 +16,7 @@ export default async function Home() {
     <>
       <Hero claim={claim} />
       <ServiceTeasers />
-      <Projects projects={projects}></Projects>
+      <Projects />
       <Testimonials testimonials={testimonials} />
       <Customers customers={customers} />
     </>

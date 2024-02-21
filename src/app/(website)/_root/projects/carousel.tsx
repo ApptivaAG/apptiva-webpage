@@ -1,23 +1,19 @@
 'use client'
 import { EmblaOptionsType } from 'embla-carousel'
-import EmblaCarousel from './emblaCarousel'
+import EmblaCarousel from '../../../../components/emblaCarousel/emblaCarousel'
+import { ProjectQueryData } from './types'
 
-type PropType = {
-  slides: []
-}
 const OPTIONS: EmblaOptionsType = { loop: true }
 
-const EmblaCarouselProjectView: React.FC<PropType> = (props) => {
-  const { slides } = props
-
+export default function ProjectsCarousel(props: {
+  slides: ProjectQueryData[]
+}) {
   return (
     <EmblaCarousel
-      slides={slides}
+      slides={props.slides}
       options={OPTIONS}
       navigationButtonFullWidth={false}
       bgDark={true}
     ></EmblaCarousel>
   )
 }
-
-export default EmblaCarouselProjectView
