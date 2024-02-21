@@ -60,18 +60,18 @@ export default function Footer() {
             </Heading>
             <ul className="space-y-1">
               <li>
-                <a href="">LinkedIn</a>
+                <a href="https://www.linkedin.com/company/apptiva-ag">LinkedIn</a>
               </li>
               <li>
-                <a href="">Xing</a>
+                <a href="https://www.xing.com/companies/apptivaag">Xing</a>
               </li>
               <li>
-                <a href="">Facebook</a>
+                <a href="https://www.facebook.com/apptivaag">Facebook</a>
               </li>
               <li>
-                <a href="">Youtube</a>
+                <a href="https://www.youtube.com/channel/UCkRetskswz9I4-ohcYuTG3Q">Youtube</a>
               </li>
-              <li>X</li>
+              <li><a href="https://x.com/ApptivaTeam">X</a></li>
             </ul>
           </div>
           <div className="flex items-end">
