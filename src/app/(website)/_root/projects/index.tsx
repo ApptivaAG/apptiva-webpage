@@ -2,7 +2,7 @@ import { projectsQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
 import { draftMode } from 'next/headers'
 import ProjectsPreview from './preview'
-import Layout from './layout'
+import ProjectsLayout from './projects-layout'
 
 export default async function Projects() {
   const { isEnabled } = draftMode()
@@ -12,6 +12,6 @@ export default async function Projects() {
   return isEnabled ? (
     <ProjectsPreview initial={draft} />
   ) : (
-    <Layout projects={published} />
+    <ProjectsLayout projects={published} />
   )
 }
