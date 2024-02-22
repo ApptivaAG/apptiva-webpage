@@ -1,6 +1,4 @@
-// ./nextjs-app/sanity/lib/queries.ts
-
-import { nullToUndefined, q, sanityImage } from 'groqd'
+import { InferType, nullToUndefined, q, sanityImage } from 'groqd'
 
 const Slug = ['slug.current', q.string().optional()] satisfies [string, any]
 
@@ -28,6 +26,7 @@ const Cards = q('cards')
   })
   .nullable()
 
+export type ModuleData = NonNullable<InferType<typeof Modules>>[number]
 const Modules = q('modules')
   .filter()
   .grab$({

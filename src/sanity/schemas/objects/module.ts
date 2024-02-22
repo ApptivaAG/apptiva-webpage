@@ -14,6 +14,12 @@ export default defineType({
       name: 'layout',
       title: 'Layout',
       type: 'string',
+      options: {
+        list: [
+          { title: 'Aufklappbare Karten', value: 'card-list-expandable' },
+          { title: 'Testimonials & Kunden', value: 'testimonials-customers' },
+        ],
+      },
     }),
     defineField({
       name: 'image',

@@ -1,7 +1,9 @@
-'use client'
+import { getTestimonialsData } from '@/utils/testimonials'
 import EmblaCarouselTestimonialView from './emblaCarousel/emblaCarouselTestimonialView'
 
-const Testimonials = ({ testimonials }: { testimonials: any }) => {
+const Testimonials = () => {
+  const testimonials = getTestimonialsData()
+
   return (
     <div className="full ">
       <EmblaCarouselTestimonialView

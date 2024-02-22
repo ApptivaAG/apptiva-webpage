@@ -1,11 +1,8 @@
-'use client'
 import EmblaCarousel from './emblaCarousel'
 
-type PropType = {
-  slides: []
-}
-
-const EmblaCarouselSingleView: React.FC<PropType> = (props) => {
+export default function EmblaCarouselSingleView<T extends any[]>(props: {
+  slides: T
+}) {
   const { slides } = props
 
   return (
@@ -18,5 +15,3 @@ const EmblaCarouselSingleView: React.FC<PropType> = (props) => {
     </>
   )
 }
-
-export default EmblaCarouselSingleView
