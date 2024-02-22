@@ -73,7 +73,7 @@ export default async function Home(props: { params: { slug: string } }) {
           sizes="(max-width: 600px) 100vw, 1200px"
         />
       )}
-      {post.kind === 'cms' && <SanityImage image={post.image} />}
+      {post.kind === 'cms' && post.image && <SanityImage image={post.image} />}
       <p className="font-semibold">{post.description}</p>
       {post.kind === 'markdown' && (
         <MDXRemote

@@ -17,6 +17,16 @@ const Tags = q('tags')
   .grabOne$('name', q.string().optional())
   .nullable()
 
+  const Header = q('header').grab$({
+      title: q.string().optional().default('In Arbeit'),
+      lead: q.string().optional().default(''),
+      image: sanityImageWithAlt(),
+      meta: q('meta').grab$({
+        title: q.string().optional(),
+        description: q.string().optional()
+      }).nullable()
+    }).nullable()
+  
 export const queryPostsFromCms = q('*')
   .filterByType('blog')
   .grab$({
@@ -33,11 +43,7 @@ export const queryPostsFromCms = q('*')
       .filterByType('person')
       .filter('references(^._id)')
       .grab$({ _id: q.string(), personName: q.string().optional() }),
-    header: q('header').grab$({
-      title: q.string().optional().default('In Arbeit'),
-      description: q.string().optional().default(''),
-      image: sanityImageWithAlt(),
-    }),
+    header: Header,
     tags: Tags,
   })
 
@@ -59,11 +65,7 @@ export const queryPostFromCmsBySlug = q('*')
       .filterByType('person')
       .filter('references(^._id)')
       .grab$({ _id: q.string(), personName: q.string().optional() }),
-    header: q('header').grab$({
-      title: q.string().optional().default('In Arbeit'),
-      description: q.string().optional().default(''),
-      image: sanityImageWithAlt(),
-    }),
+    header: Header,
     tags: Tags,
   })
   .nullable()
@@ -128,14 +130,7 @@ export const serviceBySlugQuery = q('*')
   .grab$({
     _id: q.string(),
     slug: Slug,
-    header: q('header')
-      .grab$({
-        title: q.string().optional().default('In Arbeit'),
-        description: q.string().optional(),
-        image: sanityImageWithAlt(),
-        content: q.contentBlocks().optional(),
-      })
-      .nullable(),
+    header: Header,
     modules: q('modules')
       .filter()
       .grab$({

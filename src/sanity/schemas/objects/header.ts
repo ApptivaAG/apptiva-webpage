@@ -9,19 +9,12 @@ export default defineType({
       name: 'title',
       title: 'Titel',
       type: 'string',
-      validation: (Rule) =>
-        Rule.max(60).warning(
-          `Der Titel sollte nicht länger als 60 Zeichen sein.`
-        ),
     }),
     defineField({
-      name: 'description',
-      title: 'Beschreibung',
-      type: 'string',
-      validation: (Rule) =>
-        Rule.max(160).warning(
-          `Die Beschreibung sollte nicht länger als 160 Zeichen sein.`
-        ),
+      name: 'lead',
+      title: 'Einleitung',
+      type: 'text',
+      rows: 3
     }),
     defineField({
       name: 'image',
@@ -32,14 +25,9 @@ export default defineType({
       },
     }),
     defineField({
-      name: 'content',
-      title: 'Inhalt',
-      type: 'array',
-      of: [
-        {
-          type: 'block',
-        },
-      ],
-    }),
+      name: 'meta',
+      title: 'Metadata',
+      type: 'meta',
+    })
   ],
 })

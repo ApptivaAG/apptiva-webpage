@@ -9,11 +9,9 @@ export default function ServiceDetail(props: {service: ServiceBySlugQueryData}) 
     <>
       <Heading level={2}>{props.service.header?.title}</Heading>
 
-      <p>{props.service.header?.description}</p>
+      <p>{props.service.header?.lead}</p>
       {props.service.header?.image && <SanityImage image={props.service.header?.image} />}
-      {props.service.header?.content?.map((content) => (
-        <PortableText key={content._key} value={content} />
-      ))}
+
 
       {props.service.modules?.map((module) => (
         <>

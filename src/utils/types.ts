@@ -27,7 +27,7 @@ export interface MarkdownBlog extends Blog {
 export interface CmsBlog extends Blog {
   kind: 'cms'
   content: CmsContent
-  image: SanityImageWithAlt
+  image: SanityImageWithAlt | undefined
 }
 
 export type CmsContent = PortableText | undefined

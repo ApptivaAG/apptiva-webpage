@@ -11,6 +11,7 @@ import tag from './schemas/documents/tag'
 import contact from './schemas/objects/contact'
 import header from './schemas/objects/header'
 import imageWithAlt from './schemas/objects/image-with-alt'
+import meta from './schemas/objects/meta'
 import module from './schemas/objects/module'
 import skill from './schemas/objects/skill'
 import skillItem from './schemas/objects/skill-item'
@@ -33,5 +34,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     skillItem,
     imageWithAlt,
     settings,
+    meta,
   ],
 }
