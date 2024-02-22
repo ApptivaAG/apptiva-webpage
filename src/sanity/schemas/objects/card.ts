@@ -1,8 +1,8 @@
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
-  name: 'module',
-  title: 'Modul',
+  name: 'card',
+  title: 'Card',
   type: 'object',
   fields: [
     defineField({
@@ -29,12 +29,6 @@ export default defineType({
           type: 'block',
         },
       ],
-    }),
-    defineField({
-      name: 'cards',
-      title: 'Cards',
-      type: 'array',
-      of: [{ type: 'card' }],
     }),
   ],
 })

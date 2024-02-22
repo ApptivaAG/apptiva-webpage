@@ -19,6 +19,16 @@ const StyledPortableText = ({
         <span className="highlighted-text">{children}</span>
       ),
     },
+    list: {
+      bullet: ({ children }) => (
+        <ul className="mt-xl space-y-5 pl-4">{children}</ul>
+      ),
+    },
+    listItem: {
+      bullet: ({ children }) => (
+        <li className="list-arrow pl-8 marker:text-lg">{children}</li>
+      ),
+    },
     block: {
       h1: ({ children }) => <Heading level={1}>{children}</Heading>,
       h2: ({ children }) => <Heading level={2}>{children}</Heading>,

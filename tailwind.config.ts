@@ -36,6 +36,12 @@ const config: Config = {
       transparent: colors.transparent,
     },
     borderRadius: { none: '0', DEFAULT: '0.5rem', md: '0.75rem', lg: '1rem' },
+    listStyleType: {
+      none: 'none',
+      disc: 'disc',
+      decimal: 'decimal',
+      arrow: "'→'",
+    },
     extend: {
       keyframes: {
         animatedgradient: {

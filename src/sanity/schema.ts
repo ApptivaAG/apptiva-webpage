@@ -16,6 +16,7 @@ import module from './schemas/objects/module'
 import skill from './schemas/objects/skill'
 import skillItem from './schemas/objects/skill-item'
 import social from './schemas/objects/social'
+import card from './schemas/objects/card'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -35,5 +36,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     imageWithAlt,
     settings,
     meta,
+    card,
   ],
 }
