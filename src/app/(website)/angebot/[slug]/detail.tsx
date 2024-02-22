@@ -29,7 +29,7 @@ export default function ServiceDetail(props: {
           className="full bg-primary py-8 text-base-white lg:py-28"
         >
           <div className="content">
-            <div className="flex gap-x-16 gap-y-8">
+            <div className="flex gap-x-16 gap-y-8 flex-col lg:flex-row">
               <div className="basis-5/12">
                 <Heading level={2} size={3}>
                   {module.title}
