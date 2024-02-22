@@ -53,7 +53,7 @@ const Navbar = () => {
           />
         </Link>
 
-        <NavigationMenu>
+        <NavigationMenu className="hidden md:flex">
           <NavigationMenuList>
             {navbarData.map((item) => (
               <NavigationMenuItem key={item.href}>
