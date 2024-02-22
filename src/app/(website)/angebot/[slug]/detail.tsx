@@ -1,8 +1,6 @@
 import Heading from '@/components/heading'
+import Module from '@/components/module'
 import SanityImage from '@/components/sanity-image'
-import StyledPortableText from '@/components/styled-portable-text'
-import { ModuleData } from '@/sanity/lib/queries'
-import { PortableText } from '@portabletext/react'
 import { ServiceBySlugQueryData } from '../types'
 
 export default function ServiceDetail(props: {
@@ -30,56 +28,4 @@ export default function ServiceDetail(props: {
       ))}
     </>
   )
-}
-function Module(props: { module: ModuleData; customers: React.ReactNode }) {
-  const { module } = props
-
-  switch (module.layout) {
-    case 'card-list-expandable':
-      return (
-        <section
-          key={module._key}
-          className="full bg-primary py-8 text-base-white lg:py-28"
-        >
-          <div className="content">
-            <div className="flex flex-col gap-x-16 gap-y-8 lg:flex-row">
-              <div className="basis-5/12">
-                <Heading level={2} size={3}>
-                  {module.title}
-                </Heading>
-                <SanityImage image={module.image} />
-                {module.content && (
-                  <div className="pt-6">
-                    <PortableText value={module.content} />
-                  </div>
-                )}
-              </div>
-              <div className="basis-7/12 space-y-10">
-                {module.cards?.map((card) => (
-                  <div
-                    key={card._key}
-                    className="rounded-lg bg-base-white p-9 text-primary"
-                  >
-                    <Heading level={3} size={4}>
-                      {card.title}
-                    </Heading>
-                    {card.content && (
-                      <div className="pt-6">
-                        <StyledPortableText content={card.content} />
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-      )
-
-    case 'testimonials-customers':
-      return props.customers
-
-    default:
-      return <div>Layout wählen</div>
-  }
 }

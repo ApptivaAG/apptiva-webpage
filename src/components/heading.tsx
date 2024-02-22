@@ -12,7 +12,9 @@ const getClassNameByLevel = (level: Level): string => {
     case 3:
       return 'text-[2rem] leading-[2.2rem] lg:text-[3rem] font-[600] lg:leading-[3.125rem]'
     case 4:
-      return 'text-[1.6rem] leading-[1.8rem] lg:text-[2rem] font-[600] lg:leading-[2.5rem]'
+      return 'text-[1.6rem] leading-[1.8rem] lg:text-[2rem] font-[500] lg:leading-[2.5rem]'
+    case 5:
+      return 'text-[1.25rem] leading-[1.25rem] font-[600]'
     default:
       return ''
   }

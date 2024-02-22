@@ -16,6 +16,7 @@ export default defineType({
       type: 'string',
       options: {
         list: [
+          { title: 'Karten', value: 'card-flow' },
           { title: 'Aufklappbare Karten', value: 'card-list-expandable' },
           { title: 'Testimonials & Kunden', value: 'testimonials-customers' },
         ],
