@@ -15,5 +15,17 @@ export default defineType({
         },
       ],
     },
+
+    {
+      title: 'Projekte Startseite',
+      name: 'projects',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: [{ type: 'project' }],
+        },
+      ],
+    },
   ],
 })
