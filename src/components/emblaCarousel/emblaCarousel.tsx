@@ -62,7 +62,6 @@ export default function EmblaCarousel<T>(props: {
         }
         return styles
       })
-    console.log('tweenValues', styles)
 
     setTweenValues(styles.map((style: any) => style.tweenValue))
     setSizeValue(styles.map((style: any) => style.sizeValue))
