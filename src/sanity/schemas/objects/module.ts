@@ -19,6 +19,7 @@ export default defineType({
           { title: 'Karten', value: 'card-flow' },
           { title: 'Aufklappbare Karten', value: 'card-list-expandable' },
           { title: 'Testimonials & Kunden', value: 'testimonials-customers' },
+          { title: 'Projekte', value: 'projects' },
         ],
       },
     }),
@@ -42,6 +43,17 @@ export default defineType({
       title: 'Cards',
       type: 'array',
       of: [{ type: 'card' }],
+    }),
+    defineField({
+      title: 'Projekte',
+      name: 'projects',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: { type: 'project' },
+        },
+      ],
     }),
   ],
 })

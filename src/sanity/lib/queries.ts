@@ -26,6 +26,20 @@ const Cards = q('cards')
   })
   .nullable()
 
+export const Projects = q('projects')
+  .filter()
+  .deref()
+  .grab({
+    _id: q.string(),
+    projectName: q.string().optional(),
+    image: sanityImageWithAlt(),
+    slug: Slug,
+    order: q.number().optional().nullable(),
+    description: q.string().optional().nullable(),
+  })
+  .order('order asc')
+  .nullable()
+
 export type ModuleData = NonNullable<InferType<typeof Modules>>[number]
 const Modules = q('modules')
   .filter()
@@ -36,6 +50,7 @@ const Modules = q('modules')
     image: sanityImageWithAlt(),
     content: q.contentBlocks().optional(),
     cards: Cards,
+    projects: Projects,
   })
   .nullable()
 
@@ -112,18 +127,7 @@ export const projectsFromSettingsQuery = q('*')
   .filterByType('settings')
   .slice(0)
   .grab$({
-    projects: q('projects')
-      .filter()
-      .deref()
-      .grab({
-        _id: q.string(),
-        projectName: q.string().optional(),
-        image: sanityImageWithAlt(),
-        slug: Slug,
-        order: q.number().optional().nullable(),
-        description: q.string().optional().nullable(),
-      })
-      .order('order asc'),
+    projects: Projects,
   })
 
 export const projectBySlugQuery = q('*')
