@@ -1,6 +1,7 @@
 import { ModuleData } from '@/sanity/lib/queries'
 import CardFlow from './card-flow'
 import CardListExpandable from './card-list-expandable'
+import ProjectModule from './project-module'
 
 export default function Module(props: {
   module: ModuleData
@@ -17,6 +18,10 @@ export default function Module(props: {
 
     case 'testimonials-customers':
       return props.customers
+
+    case 'projects':
+      console.log('module ', module)
+      return <ProjectModule module={module} />
 
     default:
       return <div>Layout wählen</div>
