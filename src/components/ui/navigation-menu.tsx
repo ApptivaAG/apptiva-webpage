@@ -41,7 +41,7 @@ NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName
 const NavigationMenuItem = NavigationMenuPrimitive.Item
 
 const navigationMenuTriggerStyle = cva(
-  'group inline-flex w-max items-center justify-center rounded transition-colors disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-primary data-[state=open]:bg-primary'
+  'group inline-flex w-max items-center justify-center rounded transition-colors disabled:pointer-events-none disabled:opacity-50 data-[state=open]:text-secondary'
 )
 
 const NavigationMenuTrigger = React.forwardRef<
@@ -51,8 +51,6 @@ const NavigationMenuTrigger = React.forwardRef<
   <NavigationMenuPrimitive.Trigger
     ref={ref}
     className={cn(navigationMenuTriggerStyle(), 'group', className)}
-    onPointerEnter={(event) => event.preventDefault()}
-    onPointerLeave={(event) => event.preventDefault()}
     {...props}
   >
     {children}
