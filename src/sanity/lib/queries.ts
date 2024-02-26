@@ -108,6 +108,24 @@ export const projectsQuery = q('*')
   })
   .order('order asc')
 
+export const projectsFromSettingsQuery = q('*')
+  .filterByType('settings')
+  .slice(0)
+  .grab$({
+    projects: q('projects')
+      .filter()
+      .deref()
+      .grab({
+        _id: q.string(),
+        projectName: q.string().optional(),
+        image: sanityImageWithAlt(),
+        slug: Slug,
+        order: q.number().optional().nullable(),
+        description: q.string().optional().nullable(),
+      })
+      .order('order asc'),
+  })
+
 export const projectBySlugQuery = q('*')
   .filterByType('project')
   .filter('slug.current == $slug')
@@ -279,6 +297,6 @@ export const personBySlugQuery = q('*')
       .optional(),
   })
 
-export const settingsQuery = q('*').filterByType('settings').grab$({
+export const claimQuery = q('*').filterByType('settings').grab$({
   claim: q.contentBlocks().optional(),
 })

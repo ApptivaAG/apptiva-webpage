@@ -1,4 +1,4 @@
-import { settingsQuery } from '@/sanity/lib/queries'
+import { claimQuery } from '@/sanity/lib/queries'
 import { InferType } from 'groqd'
 
-export type SettingsData = InferType<typeof settingsQuery>[number]
+export type SettingsData = InferType<typeof claimQuery>[number]
