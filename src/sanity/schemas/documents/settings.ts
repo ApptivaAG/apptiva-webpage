@@ -15,7 +15,6 @@ export default defineType({
         },
       ],
     },
-
     {
       title: 'Projekte Startseite',
       name: 'projects',
@@ -23,7 +22,7 @@ export default defineType({
       of: [
         {
           type: 'reference',
-          to: [{ type: 'project' }],
+          to: { type: 'project' },
         },
       ],
     },

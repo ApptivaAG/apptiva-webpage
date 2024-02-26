@@ -1,8 +1,13 @@
-import ProjectsCarousel from './carousel'
 import Heading from '../../../../components/heading'
-import { ProjectQueryData } from '../../projekte/types'
+import {
+  ProjectQueryData,
+  ProjectsFromSettingsQueryData,
+} from '../../projekte/types'
+import ProjectsCarousel from './carousel'
 
-export default function ProjectsLayout(props: { projects: ProjectQueryData[] }){
+export default function ProjectsLayout(props: {
+  projects: ProjectsFromSettingsQueryData
+}) {
   return (
     <div className="full bg-primary text-base-white">
       <div className="mt-10">
