@@ -20,7 +20,7 @@ const Cards = q('cards')
   .grab$({
     _key: q.string(),
     title: q.string().optional().default('Ohne Titel'),
-    layout: q.string().optional(),
+    style: q.string().optional(),
     image: sanityImageWithAlt(),
     content: q.contentBlocks().optional(),
   })
@@ -46,7 +46,9 @@ const Modules = q('modules')
   .grab$({
     _key: q.string(),
     title: q.string().optional().default('Ohne Titel'),
+    type: q.string().optional(),
     layout: q.string().optional(),
+    style: q.string().optional(),
     image: sanityImageWithAlt(),
     content: q.contentBlocks().optional(),
     cards: Cards,

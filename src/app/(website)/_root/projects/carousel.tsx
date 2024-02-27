@@ -6,10 +6,10 @@ import { ProjectsQueryData } from '../../projekte/types'
 const OPTIONS: EmblaOptionsType = { loop: true }
 
 export default function ProjectsCarousel(props: { slides: ProjectsQueryData }) {
-  // todo:  what if?
-  if (props.slides === null) {
+  if (props.slides === null || undefined) {
     return <></>
   }
+
   return (
     <EmblaCarousel
       slides={props.slides}

@@ -3,14 +3,19 @@ import SanityImage from '@/components/sanity-image'
 import StyledPortableText from '@/components/styled-portable-text'
 import { ModuleData } from '@/sanity/lib/queries'
 import { PortableText } from '@portabletext/react'
-import { Card } from '../ui/card'
+import { Card } from '../../ui/card'
+import { cn } from '@/utils/cn'
 
 export default function CardFlow(props: { module: ModuleData }) {
   const { module } = props
+  const darkBg = module.style === 'dark-bg'
   return (
     <section
       key={module._key}
-      className="full bg-primary py-8 text-base-white lg:py-28"
+      className={cn(
+        'full py-8 lg:py-28',
+        darkBg ? 'bg-primary text-base-white' : 'text-primary'
+      )}
     >
       <div className="content">
         <div className="space-y-20">
@@ -30,7 +35,9 @@ export default function CardFlow(props: { module: ModuleData }) {
               <Card
                 key={card._key}
                 className="flex flex-col gap-6"
-                intent={card.layout === 'invert' ? 'dark' : 'light'}
+                intent={
+                  xor(darkBg, card.style !== 'inverted') ? 'dark' : 'light'
+                }
               >
                 <Heading level={3} size={5}>
                   {card.title}
@@ -47,4 +54,8 @@ export default function CardFlow(props: { module: ModuleData }) {
       </div>
     </section>
   )
+}
+
+function xor(a: boolean, b: boolean) {
+  return (a || b) && !(a && b)
 }

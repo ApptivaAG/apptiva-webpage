@@ -17,6 +17,6 @@ export default async function Projects() {
   return isEnabled ? (
     <ProjectsPreview initial={draft} />
   ) : (
-    <ProjectsLayout projects={published} />
+    <ProjectsLayout projects={published.projects} />
   )
 }

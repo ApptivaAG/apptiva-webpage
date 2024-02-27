@@ -3,6 +3,7 @@ import colors from 'tailwindcss/colors'
 import animate from 'tailwindcss-animate'
 
 const config: Config = {
+  darkMode: 'selector',
   content: [
     './content/**/*.{js,ts,jsx,tsx,md}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',

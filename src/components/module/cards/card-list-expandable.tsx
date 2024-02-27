@@ -3,7 +3,7 @@ import SanityImage from '@/components/sanity-image'
 import StyledPortableText from '@/components/styled-portable-text'
 import { ModuleData } from '@/sanity/lib/queries'
 import { PortableText } from '@portabletext/react'
-import { Card } from '../ui/card'
+import { Card } from '../../ui/card'
 
 export default function CardListExpandable(props: { module: ModuleData }) {
   const { module } = props
