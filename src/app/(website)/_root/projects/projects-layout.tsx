@@ -1,7 +1,12 @@
+import ProjectOverview from '@/components/project-overview'
 import Button from '@/components/ui/button'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from '@/components/ui/carousel'
 import Heading from '../../../../components/heading'
 import { ProjectsQueryData } from '../../projekte/types'
-import ProjectsCarousel from './carousel'
 
 export default function ProjectsLayout(props: { projects: ProjectsQueryData }) {
   return (
@@ -26,7 +31,18 @@ export default function ProjectsLayout(props: { projects: ProjectsQueryData }) {
           </div>
         </div>
         {props.projects && (
-          <ProjectsCarousel slides={props.projects}></ProjectsCarousel>
+          // <ProjectsCarousel slides={props.projects.projects}></ProjectsCarousel>
+          <Carousel>
+            <CarouselContent>
+              {props.projects.map((project) => {
+                return (
+                  <CarouselItem className="basis-1/2">
+                    <ProjectOverview project={project}></ProjectOverview>
+                  </CarouselItem>
+                )
+              })}
+            </CarouselContent>
+          </Carousel>
         )}
       </div>
     </div>
