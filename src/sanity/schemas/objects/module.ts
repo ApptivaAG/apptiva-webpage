@@ -25,6 +25,18 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'level',
+      title: 'Modul Ebene',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Modul', value: 'level-1' },
+          { title: 'Submodul', value: 'level-2' },
+        ],
+      },
+      hidden: isNotType('cards', 'faqs'),
+    }),
+    defineField({
       name: 'layout',
       title: 'Layout',
       type: 'string',
@@ -34,7 +46,7 @@ export default defineType({
           { title: 'Aufklappbare Liste', value: 'card-list-expandable' },
         ],
       },
-      hidden: ({ parent }) => parent?.type !== 'cards',
+      hidden: isNotType('cards'),
     }),
     defineField({
       name: 'style',
@@ -46,13 +58,13 @@ export default defineType({
           { title: 'Heller Hintergrund', value: 'light-bg' },
         ],
       },
-      hidden: ({ parent }) => parent?.type !== 'cards',
+      hidden: isNotType('cards'),
     }),
     defineField({
       name: 'image',
       title: 'Bild',
       type: 'imageWithAlt',
-      hidden: ({ parent }) => !['cards', 'prices'].includes(parent?.type),
+      hidden: isNotType('cards', 'prices'),
     }),
     defineField({
       name: 'content',
@@ -63,14 +75,14 @@ export default defineType({
           type: 'block',
         },
       ],
-      hidden: ({ parent }) => parent?.type !== 'cards',
+      hidden: isNotType('cards', 'faqs'),
     }),
     defineField({
       name: 'cards',
       title: 'Cards',
       type: 'array',
       of: [{ type: 'card' }],
-      hidden: ({ parent }) => parent?.type !== 'cards',
+      hidden: isNotType('cards'),
     }),
     defineField({
       title: 'Projekte',
@@ -82,14 +94,7 @@ export default defineType({
           to: { type: 'project' },
         },
       ],
-      hidden: ({ parent }) => parent?.type !== 'projects',
-    }),
-    defineField({
-      name: 'priceCards',
-      title: 'Preis Karten',
-      type: 'array',
-      of: [{ type: 'priceCard' }],
-      hidden: ({ parent }) => parent?.type !== 'prices',
+      hidden: isNotType('projects'),
     }),
     defineField({
       title: 'FAQs',
@@ -101,7 +106,16 @@ export default defineType({
           to: { type: 'faq' },
         },
       ],
-      hidden: ({ parent }) => parent?.type !== 'faqs',
+      hidden: isNotType('faqs'),
     }),
   ],
 })
+
+function isType(...args: string[]) {
+  return (props: { parent: { type?: string } }) =>
+    [...args].includes(props.parent?.type ?? '')
+}
+function isNotType(...args: string[]) {
+  return (props: { parent: { type?: string } }) =>
+    ![...args].includes(props.parent?.type ?? '')
+}

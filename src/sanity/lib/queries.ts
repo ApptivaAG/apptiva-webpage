@@ -68,6 +68,7 @@ const Modules = q('modules')
   .grab$({
     _key: q.string(),
     title: q.string().optional().default('Ohne Titel'),
+    level: q.string().optional(),
     type: q.string().optional(),
     layout: q.string().optional(),
     style: q.string().optional(),

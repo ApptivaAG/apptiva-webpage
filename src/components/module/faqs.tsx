@@ -14,18 +14,22 @@ export default function FAQs(props: { module: ModuleData }) {
   const { module } = props
 
   const darkBg = module.style === 'dark-bg'
+  const level1 = module.level === 'level-1'
+  const level2 = module.level === 'level-2'
+
   return (
     <section
       key={module._key}
       className={cn(
         'full py-8 lg:py-28',
-        darkBg ? 'bg-primary text-base-white' : 'text-primary'
+        darkBg ? 'bg-primary text-base-white' : 'text-primary',
+        level2 && 'border-t'
       )}
     >
       <div className="content">
         <div className="space-y-20">
           <div className="flex flex-wrap gap-x-32 gap-y-8">
-            <Heading level={2} size={3}>
+            <Heading level={level1 ? 2 : 3} size={level1 ? 3 : 4}>
               {module.title}
             </Heading>
             <SanityImage image={module.image} />

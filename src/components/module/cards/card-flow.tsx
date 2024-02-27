@@ -2,25 +2,28 @@ import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
 import StyledPortableText from '@/components/styled-portable-text'
 import { ModuleData } from '@/sanity/lib/queries'
+import { cn } from '@/utils/cn'
 import { PortableText } from '@portabletext/react'
 import { Card } from '../../ui/card'
-import { cn } from '@/utils/cn'
 
 export default function CardFlow(props: { module: ModuleData }) {
   const { module } = props
   const darkBg = module.style === 'dark-bg'
+  const level2 = module.level === 'level-2'
+
   return (
     <section
       key={module._key}
       className={cn(
         'full py-8 lg:py-28',
-        darkBg ? 'bg-primary text-base-white' : 'text-primary'
+        darkBg ? 'bg-primary text-base-white' : 'text-primary',
+        level2 && 'border-t'
       )}
     >
       <div className="content">
         <div className="space-y-20">
           <div className="flex flex-wrap gap-x-32 gap-y-8">
-            <Heading level={2} size={3}>
+            <Heading level={level2 ? 3 : 2} size={level2 ? 4 : 3}>
               {module.title}
             </Heading>
             <SanityImage image={module.image} />
@@ -39,7 +42,7 @@ export default function CardFlow(props: { module: ModuleData }) {
                   xor(darkBg, card.style !== 'inverted') ? 'dark' : 'light'
                 }
               >
-                <Heading level={3} size={5}>
+                <Heading level={level2 ? 4 : 3} size={5}>
                   {card.title}
                 </Heading>
                 {card.content && (

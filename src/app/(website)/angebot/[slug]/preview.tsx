@@ -17,5 +17,10 @@ export default function ServicePreview(props: {
     props.params,
     { initial: props.initial }
   )
-  return <ServiceDetail service={data} customers={props.customers} />
+  return (
+    <ServiceDetail
+      service={serviceBySlugQuery.schema.parse(data)}
+      customers={props.customers}
+    />
+  )
 }
