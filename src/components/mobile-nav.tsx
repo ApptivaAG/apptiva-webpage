@@ -41,8 +41,8 @@ const MobileNav = () => {
         <div className="mb-10 mt-[3.25rem] text-base-white">
           <div className="flex flex-col space-y-2">
             {navbarData.map((item) => (
-              <>
-                <div key={item.href} className="flex flex-col space-y-3 py-4">
+              <div key={item.href}>
+                <div className="flex flex-col space-y-3 py-4">
                   <MobileLink
                     href={item.href}
                     onOpenChange={setOpen}
@@ -51,20 +51,19 @@ const MobileNav = () => {
                     {item.title}
                   </MobileLink>
                   {item?.items?.length &&
-                    item.items.map((item) => (
-                      <React.Fragment key={item.href}>
-                        <MobileLink
-                          href={item.href}
-                          onOpenChange={setOpen}
-                          className="text-muted-foreground"
-                        >
-                          {item.title}
-                        </MobileLink>
-                      </React.Fragment>
+                    item.items.map((subitem) => (
+                      <MobileLink
+                        href={subitem.href}
+                        onOpenChange={setOpen}
+                        className="text-muted-foreground"
+                        key={subitem.href}
+                      >
+                        {subitem.title}
+                      </MobileLink>
                     ))}
                 </div>
                 <hr className="text-base-white/40" />
-              </>
+              </div>
             ))}
           </div>
         </div>
