@@ -16,5 +16,5 @@ export default function ProjectsPreview({
     { initial }
   )
 
-  return <ProjectsLayout projects={data} />
+  return <ProjectsLayout projects={data.projects} />
 }

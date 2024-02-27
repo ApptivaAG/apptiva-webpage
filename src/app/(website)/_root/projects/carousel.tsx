@@ -1,19 +1,17 @@
 'use client'
-import { EmblaOptionsType } from 'embla-carousel'
 import EmblaCarousel from '@/components/emblaCarousel/emblaCarousel'
-import {
-  ProjectQueryData,
-  ProjectsFromSettingsQueryData,
-  ProjectsQueryData,
-} from '../../projekte/types'
+import { EmblaOptionsType } from 'embla-carousel'
+import { ProjectsQueryData } from '../../projekte/types'
 
 const OPTIONS: EmblaOptionsType = { loop: true }
 
 export default function ProjectsCarousel(props: { slides: ProjectsQueryData }) {
-  // todo:  what if?
-  if (props.slides === null) {
+  console.log('slides ', props.slides)
+
+  if (props.slides === null || undefined) {
     return <></>
   }
+
   return (
     <EmblaCarousel
       slides={props.slides}

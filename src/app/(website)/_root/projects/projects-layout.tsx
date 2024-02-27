@@ -1,19 +1,8 @@
 import Heading from '../../../../components/heading'
-import {
-  ProjectQueryData,
-  ProjectsFromSettingsQueryData,
-  ProjectsQueryData,
-} from '../../projekte/types'
+import { ProjectsQueryData } from '../../projekte/types'
 import ProjectsCarousel from './carousel'
 
-export default function ProjectsLayout(props: {
-  projects?: ProjectsFromSettingsQueryData
-  projectsFromModule?: ProjectsQueryData
-}) {
-  // todo: make sure projects or projectsFrom Module is not null!
-  // i guess its better to check it here than in carousel component
-  // also it's quite ugly to make this component callable without a project :-(
-
+export default function ProjectsLayout(props: { projects: ProjectsQueryData }) {
   return (
     <div className="full bg-primary text-base-white">
       <div className="mt-10">
@@ -25,16 +14,9 @@ export default function ProjectsLayout(props: {
             Erfolgsgeschichten.
           </Heading>
         </div>
-
         {props.projects && (
-          <ProjectsCarousel slides={props.projects.projects}></ProjectsCarousel>
+          <ProjectsCarousel slides={props.projects}></ProjectsCarousel>
         )}
-        {props.projectsFromModule && (
-          <ProjectsCarousel
-            slides={props.projectsFromModule}
-          ></ProjectsCarousel>
-        )}
-        {/* <ProjectsCarousel slides={slides}></ProjectsCarousel> */}
       </div>
     </div>
   )
