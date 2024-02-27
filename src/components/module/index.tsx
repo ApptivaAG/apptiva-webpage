@@ -16,7 +16,6 @@ export default function Module(props: {
       return props.customers
 
     case 'projects':
-      console.log('module ', module)
       return <ProjectModule module={module} />
 
     default:

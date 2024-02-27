@@ -6,8 +6,6 @@ import { ProjectsQueryData } from '../../projekte/types'
 const OPTIONS: EmblaOptionsType = { loop: true }
 
 export default function ProjectsCarousel(props: { slides: ProjectsQueryData }) {
-  console.log('slides ', props.slides)
-
   if (props.slides === null || undefined) {
     return <></>
   }
