@@ -1,11 +1,7 @@
 'use client'
-import { EmblaOptionsType } from 'embla-carousel'
 import EmblaCarousel from '@/components/emblaCarousel/emblaCarousel'
-import {
-  ProjectQueryData,
-  ProjectsFromSettingsQueryData,
-  ProjectsQueryData,
-} from '../../projekte/types'
+import { EmblaOptionsType } from 'embla-carousel'
+import { ProjectsQueryData } from '../../projekte/types'
 
 const OPTIONS: EmblaOptionsType = { loop: true }
 
@@ -18,7 +14,7 @@ export default function ProjectsCarousel(props: { slides: ProjectsQueryData }) {
     <EmblaCarousel
       slides={props.slides}
       options={OPTIONS}
-      navigationButtonFullWidth={false}
+      FullWidthSlider={false}
       bgDark={true}
     ></EmblaCarousel>
   )

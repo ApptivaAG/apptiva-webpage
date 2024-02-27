@@ -15,14 +15,13 @@ const MIN_SIZE = 600
 const numberWithinRange = (number: number, min: number, max: number): number =>
   Math.min(Math.max(number, min), max)
 
-
 export default function EmblaCarousel<T>(props: {
   slides: T[]
   options?: EmblaOptionsType
-  navigationButtonFullWidth: boolean
+  FullWidthSlider: boolean
   bgDark: boolean
 }) {
-  const { slides, options, navigationButtonFullWidth, bgDark } = props
+  const { slides, options, FullWidthSlider, bgDark } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options)
   const [mousePos, setMousePos] = useState({ x: String, y: String })
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -107,9 +106,7 @@ export default function EmblaCarousel<T>(props: {
 
   const progressBarSize = 100 / slides.length
   const newTotalWidth = 100 - progressBarSize
-  const carouselNavigationButton = navigationButtonFullWidth
-    ? 'w-6/12'
-    : 'w-[20%]'
+  const carouselNavigationButton = FullWidthSlider ? 'w-6/12' : 'w-[20%]'
 
   const progressBarLine = bgDark ? 'bg-base-white' : 'bg-primary'
   return (
@@ -118,7 +115,7 @@ export default function EmblaCarousel<T>(props: {
         <div className="overflow-hidden">
           <div ref={emblaRef}>
             <div className="flex">
-              {!navigationButtonFullWidth &&
+              {!FullWidthSlider &&
                 slides.map((slide: any, index) => {
                   return (
                     <div
@@ -150,7 +147,7 @@ export default function EmblaCarousel<T>(props: {
                     </div>
                   )
                 })}
-              {navigationButtonFullWidth &&
+              {FullWidthSlider &&
                 slides.map((slide: any) => {
                   return (
                     <div
@@ -173,7 +170,7 @@ export default function EmblaCarousel<T>(props: {
         >
           {' '}
         </Button>
-        {!navigationButtonFullWidth && <div className="w-[60%]"> </div>}
+        {!FullWidthSlider && <div className="w-[60%]"> </div>}
         <Button
           onClick={scrollNext}
           onMouseMove={handleMouseMove}

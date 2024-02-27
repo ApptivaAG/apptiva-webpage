@@ -9,7 +9,7 @@ export default function EmblaCarouselSingleView<T extends any[]>(props: {
     <>
       <EmblaCarousel
         slides={slides}
-        navigationButtonFullWidth={true}
+        FullWidthSlider={true}
         bgDark={false}
       ></EmblaCarousel>
     </>
