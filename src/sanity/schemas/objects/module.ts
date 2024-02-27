@@ -19,6 +19,7 @@ export default defineType({
           { title: 'Karten', value: 'cards' },
           { title: 'Testimonials & Kunden', value: 'testimonials-customers' },
           { title: 'Projekte', value: 'projects' },
+          { title: 'FAQs', value: 'faqs' },
         ],
       },
     }),
@@ -61,7 +62,7 @@ export default defineType({
           type: 'block',
         },
       ],
-      hidden: ({parent}) => parent?.type !== 'cards'
+      hidden: ({parent}) => !['cards', 'faqs'].includes(parent?.type) 
     }),
     defineField({
       name: 'cards',
@@ -81,6 +82,18 @@ export default defineType({
         },
       ],
       hidden: ({parent}) => parent?.type !== 'projects'
+    }),
+    defineField({
+      title: 'FAQs',
+      name: 'faqs',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: { type: 'faq' },
+        },
+      ],
+      hidden: ({parent}) => parent?.type !== 'faqs'
     }),
   ],
 })

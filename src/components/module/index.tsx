@@ -1,6 +1,7 @@
 import { ModuleData } from '@/sanity/lib/queries'
 import Cards from './cards'
 import ProjectModule from './project-module'
+import FAQs from './faqs'
 
 export default function Module(props: {
   module: ModuleData
@@ -17,6 +18,9 @@ export default function Module(props: {
 
     case 'projects':
       return <ProjectModule module={module} />
+
+    case 'faqs':
+      return <FAQs module={module} />
 
     default:
       return <div>Modultyp wählen</div>

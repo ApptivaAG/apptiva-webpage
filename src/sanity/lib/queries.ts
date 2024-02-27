@@ -40,6 +40,18 @@ export const Projects = q('projects')
   .order('order asc')
   .nullable()
 
+export const FAQs = q('faqs')
+  .filter()
+  .deref()
+  .grab$({
+    _id: q.string(),
+    question: q.string().optional(),
+    answer: q.string().optional(),
+    slug: Slug,
+    tags: Tags,
+  })
+  .nullable()
+
 export type ModuleData = NonNullable<InferType<typeof Modules>>[number]
 const Modules = q('modules')
   .filter()
@@ -53,6 +65,7 @@ const Modules = q('modules')
     content: q.contentBlocks().optional(),
     cards: Cards,
     projects: Projects,
+    faqs: FAQs,
   })
   .nullable()
 
