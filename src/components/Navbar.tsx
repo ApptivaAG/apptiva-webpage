@@ -27,7 +27,7 @@ export const navbarData = [
   },
   { title: 'Projekte', href: '/projekte' },
   { title: 'Apptiva', href: '/ueber-uns' },
-  { title: 'Blog', href: '/blog' },
+  { title: 'Wissen', href: '/wissen' },
 ]
 
 const Navbar = () => (
