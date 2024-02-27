@@ -41,7 +41,6 @@ export default function EmblaCarousel<T>(props: {
       .scrollSnapList()
       .map((scrollSnap: any, index: number) => {
         let diffToTarget = scrollSnap - scrollProgress
-        console.log('loop', engine.options.loop)
 
         if (engine.options.loop) {
           engine.slideLooper.loopPoints.forEach((loopItem: any) => {
