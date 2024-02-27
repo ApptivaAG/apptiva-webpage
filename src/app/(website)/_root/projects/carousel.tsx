@@ -16,7 +16,7 @@ export default function ProjectsCarousel(props: { slides: ProjectsQueryData }) {
     <EmblaCarousel
       slides={props.slides}
       options={OPTIONS}
-      navigationButtonFullWidth={false}
+      FullWidthSlider={false}
       bgDark={true}
     ></EmblaCarousel>
   )

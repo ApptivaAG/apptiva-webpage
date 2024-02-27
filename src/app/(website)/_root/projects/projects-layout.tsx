@@ -1,3 +1,4 @@
+import Button from '@/components/ui/button'
 import Heading from '../../../../components/heading'
 import { ProjectsQueryData } from '../../projekte/types'
 import ProjectsCarousel from './carousel'
@@ -13,6 +14,16 @@ export default function ProjectsLayout(props: { projects: ProjectsQueryData }) {
           <Heading level={2} className="highlighted-text">
             Erfolgsgeschichten.
           </Heading>
+          <div className="flex">
+            <Button
+              intent="secondary"
+              element="a"
+              href={'/projekte'}
+              className="mt-10"
+            >
+              Alle Referenzen
+            </Button>
+          </div>
         </div>
         {props.projects && (
           <ProjectsCarousel slides={props.projects}></ProjectsCarousel>

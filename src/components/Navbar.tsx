@@ -27,12 +27,12 @@ export const navbarData = [
   },
   { title: 'Projekte', href: '/projekte' },
   { title: 'Apptiva', href: '/ueber-uns' },
-  { title: 'Blog', href: '/blog' },
+  { title: 'Wissen', href: '/wissen' },
 ]
 
 const Navbar = () => (
   <div className="fixed z-50 w-full p-4">
-    <div className="flex items-center justify-between rounded-md bg-primary-dark/40 px-8 py-6 text-base-white backdrop-blur-[6px]">
+    <div className="flex items-center justify-between rounded-md bg-primary/80 px-8 py-6 text-base-white backdrop-blur-[6px]">
       <NextLink href={'/'}>
         <Image priority src={apptivaLogo} alt="Apptiva Logo" className="w-32" />
       </NextLink>
