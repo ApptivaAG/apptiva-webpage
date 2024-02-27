@@ -51,7 +51,7 @@ const MobileNav = () => {
                 <div className="flex flex-col pb-5 pt-4 focus:outline-none">
                   {item.items ? (
                     <Collapsible>
-                      <CollapsibleTrigger className="group flex w-full justify-between text-[1.25rem] leading-[1.25rem] data-[state=open]:text-secondary">
+                      <CollapsibleTrigger className="group flex w-full justify-between text-[1.25rem] leading-[1.25rem] focus:outline-none data-[state=open]:text-secondary">
                         {item.title}
                         <ChevronDown
                           className="relative top-[1px] ml-1 size-5 transition duration-200 group-data-[state=open]:rotate-180"
