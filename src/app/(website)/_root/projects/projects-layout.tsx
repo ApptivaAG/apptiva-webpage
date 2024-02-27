@@ -1,6 +1,6 @@
+import Button from '@/components/ui/button'
 import Heading from '../../../../components/heading'
 import {
-  ProjectQueryData,
   ProjectsFromSettingsQueryData,
   ProjectsQueryData,
 } from '../../projekte/types'
@@ -24,6 +24,16 @@ export default function ProjectsLayout(props: {
           <Heading level={2} className="highlighted-text">
             Erfolgsgeschichten.
           </Heading>
+          <div className="flex">
+            <Button
+              intent="secondary"
+              element="a"
+              href={'/projekte'}
+              className="mt-10"
+            >
+              Alle Referenzen
+            </Button>
+          </div>
         </div>
 
         {props.projects && (
