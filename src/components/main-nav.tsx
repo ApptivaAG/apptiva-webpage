@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import NextLink, { type LinkProps } from 'next/link'
 import { usePathname } from 'next/navigation'
 import { navbarData } from './Navbar'
@@ -19,10 +20,22 @@ const MainNav = () => (
             <>
               <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
               {item.items && (
-                <NavigationMenuContent className="full left-0 right-0 top-0 flex flex-col bg-primary-dark p-4">
+                <NavigationMenuContent className="full left-0 right-0 top-0 flex flex-col bg-primary-dark p-2">
                   {item.items.map((subitem) => (
-                    <Link href={subitem.href} key={subitem.href}>
-                      {subitem.title}
+                    <Link
+                      href={subitem.href}
+                      key={subitem.href}
+                      className="rounded-md p-2 align-middle hover:bg-primary-light/10"
+                    >
+                      <Image
+                        src={subitem.icon}
+                        alt={subitem.title}
+                        className="w-24"
+                      />
+                      <div className="flex flex-col justify-center">
+                        <span className="leading-6">{subitem.title}</span>
+                        <small>{subitem.text}</small>
+                      </div>
                     </Link>
                   ))}
                 </NavigationMenuContent>
@@ -37,13 +50,19 @@ const MainNav = () => (
   </NavigationMenu>
 )
 
-const Link = (props: LinkProps & { children: React.ReactNode }) => {
-  const { href, ...rest } = props
+const Link = (
+  props: LinkProps & { children: React.ReactNode; className?: string }
+) => {
+  const { href, className, ...rest } = props
   const pathname = usePathname()
   const isActive = href === pathname
 
   return (
-    <NavigationMenuLink asChild active={isActive}>
+    <NavigationMenuLink
+      asChild
+      active={isActive}
+      className={`flex gap-5 hover:text-secondary ${className ?? ''}`}
+    >
       <NextLink href={href} className="NavigationMenuLink" {...rest} />
     </NavigationMenuLink>
   )

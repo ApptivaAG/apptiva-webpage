@@ -1,6 +1,7 @@
 'use client'
 
 import { cn } from '@/utils/cn'
+import { ChevronDown } from 'lucide-react'
 import Image from 'next/image'
 import Link, { LinkProps } from 'next/link'
 import { useRouter } from 'next/navigation'
@@ -9,6 +10,11 @@ import { navbarData } from './Navbar'
 import apptivaLogo from './logo.svg'
 import navBurger from './nav-burger.svg'
 import Button from './ui/button'
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from './ui/collapsible'
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet'
 
 const MobileNav = () => {
@@ -39,28 +45,49 @@ const MobileNav = () => {
           />
         </MobileLink>
         <div className="mb-10 mt-[3.25rem] text-base-white">
-          <div className="flex flex-col space-y-2">
+          <div className="flex flex-col">
             {navbarData.map((item) => (
               <div key={item.href}>
-                <div className="flex flex-col space-y-3 py-4">
-                  <MobileLink
-                    href={item.href}
-                    onOpenChange={setOpen}
-                    className="text-[1.25rem] leading-[1.25rem]"
-                  >
-                    {item.title}
-                  </MobileLink>
-                  {item?.items?.length &&
-                    item.items.map((subitem) => (
-                      <MobileLink
-                        href={subitem.href}
-                        onOpenChange={setOpen}
-                        className="text-muted-foreground"
-                        key={subitem.href}
-                      >
-                        {subitem.title}
-                      </MobileLink>
-                    ))}
+                <div className="flex flex-col pb-5 pt-4 focus:outline-none">
+                  {item.items ? (
+                    <Collapsible>
+                      <CollapsibleTrigger className="group flex w-full justify-between text-[1.25rem] leading-[1.25rem] data-[state=open]:text-secondary">
+                        {item.title}
+                        <ChevronDown
+                          className="relative top-[1px] ml-1 size-5 transition duration-200 group-data-[state=open]:rotate-180"
+                          aria-hidden="true"
+                        />
+                      </CollapsibleTrigger>
+                      <CollapsibleContent className="flex flex-col gap-3 data-[state=open]:my-8">
+                        {item.items.map((subitem) => (
+                          <MobileLink
+                            href={subitem.href}
+                            onOpenChange={setOpen}
+                            className="flex gap-5 rounded-md py-1 align-middle"
+                            key={subitem.href}
+                          >
+                            <Image
+                              src={subitem.icon}
+                              alt={subitem.title}
+                              className="w-24"
+                            />
+                            <div className="flex flex-col justify-center">
+                              <span className="leading-6">{subitem.title}</span>
+                              <small>{subitem.text}</small>
+                            </div>
+                          </MobileLink>
+                        ))}
+                      </CollapsibleContent>
+                    </Collapsible>
+                  ) : (
+                    <MobileLink
+                      href={item.href}
+                      onOpenChange={setOpen}
+                      className="text-[1.25rem] leading-[1.25rem]"
+                    >
+                      {item.title}
+                    </MobileLink>
+                  )}
                 </div>
                 <hr className="text-base-white/40" />
               </div>

@@ -2,6 +2,8 @@
 
 import Image from 'next/image'
 import NextLink from 'next/link'
+import chatbotsIcon from './chatbots.svg'
+import developmentIcon from './development.svg'
 import apptivaLogo from './logo.svg'
 import MainNav from './main-nav'
 import MobileNav from './mobile-nav'
@@ -15,13 +17,15 @@ export const navbarData = [
     items: [
       {
         title: 'Development',
-        text: '',
+        text: 'Gemeinsam realisieren wir deine individuelle Softwarelösung.',
         href: '/angebot/development',
+        icon: developmentIcon,
       },
       {
         title: 'Chatbots',
-        text: '',
+        text: 'Kundenanfragen mit künstlicher Intelligenz beantworten.',
         href: '/angebot/chatbots',
+        icon: chatbotsIcon,
       },
     ],
   },
