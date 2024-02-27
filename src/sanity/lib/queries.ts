@@ -40,6 +40,18 @@ export const Projects = q('projects')
   .order('order asc')
   .nullable()
 
+export const FAQs = q('faqs')
+  .filter()
+  .deref()
+  .grab$({
+    _id: q.string(),
+    question: q.string().optional(),
+    answer: q.string().optional(),
+    slug: Slug,
+    tags: Tags,
+  })
+  .nullable()
+
 export const Prices = q('price-card')
   .filter()
   .grab$({
@@ -64,7 +76,6 @@ const Modules = q('modules')
     content: q.contentBlocks().optional(),
     cards: Cards,
     projects: Projects,
-    prices: Prices,
   })
   .nullable()
 

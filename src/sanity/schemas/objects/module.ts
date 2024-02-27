@@ -20,6 +20,7 @@ export default defineType({
           { title: 'Testimonials & Kunden', value: 'testimonials-customers' },
           { title: 'Projekte', value: 'projects' },
           { title: 'Preise', value: 'prices' },
+          { title: 'FAQs', value: 'faqs' },
         ],
       },
     }),
@@ -62,7 +63,7 @@ export default defineType({
           type: 'block',
         },
       ],
-      hidden: ({ parent }) => !['cards', 'prices'].includes(parent?.type),
+      hidden: ({ parent }) => parent?.type !== 'cards',
     }),
     defineField({
       name: 'cards',
@@ -89,6 +90,18 @@ export default defineType({
       type: 'array',
       of: [{ type: 'priceCard' }],
       hidden: ({ parent }) => parent?.type !== 'prices',
+    }),
+    defineField({
+      title: 'FAQs',
+      name: 'faqs',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: { type: 'faq' },
+        },
+      ],
+      hidden: ({ parent }) => parent?.type !== 'faqs',
     }),
   ],
 })
