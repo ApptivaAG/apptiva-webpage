@@ -33,9 +33,6 @@ export default function ProjectsLayout(props: { projects: ProjectsQueryData }) {
 
         {props.projects && (
           <>
-            {/* <ProjectsCarousel
-              slides={props.projects.projects}
-            ></ProjectsCarousel> */}
             <Carousel
               opts={{ loop: true }}
               layout={'threeSlidesFadeOut'}

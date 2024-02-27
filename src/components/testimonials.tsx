@@ -6,11 +6,6 @@ const Testimonials = () => {
   const testimonials = getTestimonialsData()
 
   return (
-    // <div className="full ">
-    //   <EmblaCarouselTestimonialView
-    //     slides={testimonials}
-    //   ></EmblaCarouselTestimonialView>
-    // </div>
     <div className="full">
       <Carousel
         opts={{ loop: true }}
