@@ -37,7 +37,8 @@ export default function FAQs(props: { module: ModuleData }) {
           </div>
           <div className="flex justify-end">
             <div className="w-full max-w-lg">
-              <Accordion type="single" collapsible className="w-full">
+              <p>accordeon would be here</p>
+              {/* <Accordion type="single" collapsible className="w-full">
                 {module.faqs?.map((faq) => (
                   <AccordionItem
                     key={faq._id}
@@ -47,7 +48,7 @@ export default function FAQs(props: { module: ModuleData }) {
                     <AccordionContent>{faq.answer}</AccordionContent>
                   </AccordionItem>
                 ))}
-              </Accordion>
+              </Accordion> */}
             </div>
           </div>
         </div>

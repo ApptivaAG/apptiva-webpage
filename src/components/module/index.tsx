@@ -24,7 +24,14 @@ export default function Module(props: {
 
     case 'prices':
       console.log('module with prices? ', module)
-      return <>{module.prices?.map((price) => <p>{price.title}</p>)}</>
+      // return (
+      //   <>
+      //     {module.prices?.map((price) => (
+      //       <p key={price.title}>{price.title}</p>
+      //     ))}
+      //   </>
+      // )
+      return <div>preise go here</div>
 
     default:
       return <div>Modultyp wählen</div>
