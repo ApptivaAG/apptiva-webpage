@@ -11,9 +11,14 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'layout',
-      title: 'Layout',
+      name: 'style',
+      title: 'Stil',
       type: 'string',
+      options: {
+        list: [
+          { title: 'Invertiert', value: 'inverted' },
+        ],
+      },
     }),
     defineField({
       name: 'image',
