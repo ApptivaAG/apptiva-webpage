@@ -30,19 +30,28 @@ export default function ProjectsLayout(props: { projects: ProjectsQueryData }) {
             </Button>
           </div>
         </div>
+
         {props.projects && (
-          // <ProjectsCarousel slides={props.projects.projects}></ProjectsCarousel>
-          <Carousel>
-            <CarouselContent>
-              {props.projects.map((project) => {
-                return (
-                  <CarouselItem className="basis-1/2">
-                    <ProjectOverview project={project}></ProjectOverview>
-                  </CarouselItem>
-                )
-              })}
-            </CarouselContent>
-          </Carousel>
+          <>
+            {/* <ProjectsCarousel
+              slides={props.projects.projects}
+            ></ProjectsCarousel> */}
+            <Carousel
+              opts={{ loop: true }}
+              layout={'threeSlidesFadeOut'}
+              numberOfSlides={props.projects.length}
+            >
+              <CarouselContent>
+                {props.projects.map((project, index) => {
+                  return (
+                    <CarouselItem index={index}>
+                      <ProjectOverview project={project}></ProjectOverview>
+                    </CarouselItem>
+                  )
+                })}
+              </CarouselContent>
+            </Carousel>
+          </>
         )}
       </div>
     </div>

@@ -67,7 +67,6 @@ export default function EmblaCarousel<T>(props: {
 
   useEffect(() => {
     if (!emblaApi) return
-
     onScroll(emblaApi)
     emblaApi.on('reInit', onScroll)
     emblaApi.on('scroll', onScroll)

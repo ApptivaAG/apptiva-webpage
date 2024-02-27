@@ -12,11 +12,15 @@ const Testimonials = () => {
     //   ></EmblaCarouselTestimonialView>
     // </div>
     <div className="full">
-      <Carousel>
+      <Carousel
+        opts={{ loop: true }}
+        layout={'oneSlide'}
+        numberOfSlides={testimonials.length}
+      >
         <CarouselContent>
-          {testimonials.map((testimonial) => {
+          {testimonials.map((testimonial, index) => {
             return (
-              <CarouselItem>
+              <CarouselItem index={index}>
                 <Testimonial testimonial={testimonial}></Testimonial>
               </CarouselItem>
             )
