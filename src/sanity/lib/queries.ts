@@ -52,12 +52,11 @@ export const FAQs = q('faqs')
   })
   .nullable()
 
-export const Prices = q('price-card')
+export const Prices = q('priceCards')
   .filter()
   .grab$({
     _key: q.string(),
     title: q.string().optional().default('Ohne Titel'),
-    style: q.string().optional(),
     image: sanityImageWithAlt(),
     content: q.contentBlocks().optional(),
   })
@@ -76,6 +75,7 @@ const Modules = q('modules')
     content: q.contentBlocks().optional(),
     cards: Cards,
     projects: Projects,
+    prices: Prices,
   })
   .nullable()
 
