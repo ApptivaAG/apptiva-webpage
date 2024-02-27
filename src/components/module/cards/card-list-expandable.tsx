@@ -7,7 +7,7 @@ import { Card } from '../../ui/card'
 
 export default function CardListExpandable(props: { module: ModuleData }) {
   const { module } = props
-  const level1 = module.level === 'level-1'
+  const isLevel = (level: 1 | 2) => (module.level ?? 1) == level
 
   return (
     <section
@@ -17,7 +17,7 @@ export default function CardListExpandable(props: { module: ModuleData }) {
       <div className="content">
         <div className="flex flex-col gap-x-16 gap-y-8 lg:flex-row">
           <div className="basis-5/12">
-            <Heading level={level1 ? 2 : 3} size={level1 ? 3 : 4}>
+            <Heading level={isLevel(1) ? 2 : 3} size={isLevel(1) ? 3 : 4}>
               {module.title}
             </Heading>
             <SanityImage image={module.image} />
@@ -30,7 +30,7 @@ export default function CardListExpandable(props: { module: ModuleData }) {
           <div className="basis-7/12 space-y-10">
             {module.cards?.map((card) => (
               <Card key={card._key}>
-                <Heading level={3} size={4}>
+                <Heading level={isLevel(1) ? 3 : 4} size={4}>
                   {card.title}
                 </Heading>
                 {card.content && (

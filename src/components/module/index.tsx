@@ -2,6 +2,7 @@ import { ModuleData } from '@/sanity/lib/queries'
 import Cards from './cards'
 import ProjectModule from './project-module'
 import FAQs from './faqs'
+import Text from './text'
 
 export default function Module(props: {
   module: ModuleData
@@ -21,6 +22,9 @@ export default function Module(props: {
 
     case 'faqs':
       return <FAQs module={module} />
+
+    case 'text':
+      return <Text module={module} />
 
     case 'prices':
       console.log('module with prices? ', module)
