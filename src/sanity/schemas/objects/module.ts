@@ -1,4 +1,4 @@
-import { defineField, defineType } from 'sanity'
+import { TitledListValue, defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'module',
@@ -11,22 +11,46 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'layout',
-      title: 'Layout',
+      name: 'type',
+      title: 'Typ',
       type: 'string',
       options: {
         list: [
-          { title: 'Karten', value: 'card-flow' },
-          { title: 'Aufklappbare Karten', value: 'card-list-expandable' },
+          { title: 'Karten', value: 'cards' },
           { title: 'Testimonials & Kunden', value: 'testimonials-customers' },
           { title: 'Projekte', value: 'projects' },
         ],
       },
     }),
     defineField({
+      name: 'layout',
+      title: 'Layout',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Fluss', value: 'card-flow' },
+          { title: 'Aufklappbare Liste', value: 'card-list-expandable' },
+        ],
+      },
+      hidden: ({parent}) => parent?.type !== 'cards'
+    }),
+    defineField({
+      name: 'style',
+      title: 'Stil',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Dunkler Hintergrund', value: 'dark-bg' },
+          { title: 'Heller Hintergrund', value: 'light-bg' },
+        ],
+      },
+      hidden: ({parent}) => parent?.type !== 'cards'
+    }),
+    defineField({
       name: 'image',
       title: 'Bild',
       type: 'imageWithAlt',
+      hidden: ({parent}) => parent?.type !== 'cards'
     }),
     defineField({
       name: 'content',
@@ -37,12 +61,14 @@ export default defineType({
           type: 'block',
         },
       ],
+      hidden: ({parent}) => parent?.type !== 'cards'
     }),
     defineField({
       name: 'cards',
       title: 'Cards',
       type: 'array',
       of: [{ type: 'card' }],
+      hidden: ({parent}) => parent?.type !== 'cards'
     }),
     defineField({
       title: 'Projekte',
@@ -54,6 +80,7 @@ export default defineType({
           to: { type: 'project' },
         },
       ],
+      hidden: ({parent}) => parent?.type !== 'projects'
     }),
   ],
 })

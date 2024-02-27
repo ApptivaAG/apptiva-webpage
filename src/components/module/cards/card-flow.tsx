@@ -3,7 +3,7 @@ import SanityImage from '@/components/sanity-image'
 import StyledPortableText from '@/components/styled-portable-text'
 import { ModuleData } from '@/sanity/lib/queries'
 import { PortableText } from '@portabletext/react'
-import { Card } from '../ui/card'
+import { Card } from '../../ui/card'
 
 export default function CardFlow(props: { module: ModuleData }) {
   const { module } = props
@@ -16,7 +16,7 @@ export default function CardFlow(props: { module: ModuleData }) {
         <div className="space-y-20">
           <div className="flex flex-wrap gap-x-32 gap-y-8">
             <Heading level={2} size={3}>
-              {module.title}
+              {module.title} {module.style}
             </Heading>
             <SanityImage image={module.image} />
             {module.content && (
