@@ -19,7 +19,7 @@ const MainNav = () => (
             <>
               <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
               {item.items && (
-                <NavigationMenuContent className="full left-0 right-0 top-0 flex flex-col bg-primary p-4">
+                <NavigationMenuContent className="full left-0 right-0 top-0 flex flex-col bg-primary-dark p-4">
                   {item.items.map((subitem) => (
                     <Link href={subitem.href} key={subitem.href}>
                       {subitem.title}
