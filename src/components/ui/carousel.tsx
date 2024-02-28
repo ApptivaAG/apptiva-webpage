@@ -304,7 +304,7 @@ const CarouselContent = React.forwardRef<
         onMouseMove={handleMouseMove}
         onMouseEnter={handlePrevButtonHover}
         onMouseLeave={handlePrevButtonLeave}
-        className={`absolute left-0 top-0 z-50 hidden h-full w-6/12 bg-transparent hover:bg-transparent lg:block ${carouselNavigationButton}`}
+        className={`absolute left-0 top-0 z-30 hidden h-full w-6/12 bg-transparent hover:bg-transparent lg:block ${carouselNavigationButton}`}
       >
         {' '}
       </Button>
@@ -314,7 +314,7 @@ const CarouselContent = React.forwardRef<
         onMouseMove={handleMouseMove}
         onMouseEnter={handleNextButtonHover}
         onMouseLeave={handleNextButtonLeave}
-        className={` absolute right-0 top-0 z-50 hidden h-full w-6/12 bg-transparent hover:bg-transparent lg:block ${carouselNavigationButton}`}
+        className={` absolute right-0 top-0 z-30 hidden h-full w-6/12 bg-transparent hover:bg-transparent lg:block ${carouselNavigationButton}`}
       >
         {' '}
       </Button>
