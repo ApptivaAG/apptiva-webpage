@@ -214,6 +214,17 @@ export const servicesQuery = q('*')
       .nullable(),
   })
 
+export const aboutPageQuery = q('*')
+  .filterByType('about-page')
+  .filter()
+  .slice(0)
+  .grab$({
+    _id: q.string(),
+    slug: Slug,
+    header: Header,
+    modules: Modules,
+  })
+
 export const serviceBySlugQuery = q('*')
   .filterByType('service-page')
   .filter('slug.current == $slug')
