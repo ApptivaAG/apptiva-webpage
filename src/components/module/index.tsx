@@ -3,6 +3,8 @@ import Cards from './cards'
 import ProjectModule from './project-module'
 import FAQs from './faqs'
 import Prices from './prices'
+import Text from './text'
+import Contact from './contact'
 
 export default function Module(props: {
   module: ModuleData
@@ -23,8 +25,21 @@ export default function Module(props: {
     case 'faqs':
       return <FAQs module={module} />
 
+    case 'text':
+      return <Text module={module} />
+
+    case 'contact':
+      return <Contact module={module} />
+
     case 'prices':
       console.log('module with prices? ', module)
+      // return (
+      //   <>
+      //     {module.prices?.map((price) => (
+      //       <p key={price.title}>{price.title}</p>
+      //     ))}
+      //   </>
+      // )
       return <Prices module={module} />
 
     default:

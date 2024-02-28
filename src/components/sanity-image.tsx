@@ -1,18 +1,18 @@
 import { urlForImage } from '@/sanity/lib/image'
 import { SanityImageWithAlt } from '@/utils/types'
 import { getImageDimensions } from '@sanity/asset-utils'
-import Image, { ImageProps } from 'next/image'
+import Image from 'next/image'
 
 const SanityImage = ({
   image,
-  style,
+  className,
 }: {
   image: SanityImageWithAlt
-  style?: string
+  className?: string
 }) =>
   image ? (
     <Image
-      className={style}
+      className={className}
       key={image.toString()}
       src={urlForImage(image).url()}
       alt={image.alt}

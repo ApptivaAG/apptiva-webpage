@@ -16,25 +16,27 @@ export default defineType({
       type: 'string',
       options: {
         list: [
+          { title: 'Text', value: 'text' },
           { title: 'Karten', value: 'cards' },
           { title: 'Testimonials & Kunden', value: 'testimonials-customers' },
           { title: 'Projekte', value: 'projects' },
           { title: 'Preise', value: 'prices' },
           { title: 'FAQs', value: 'faqs' },
+          { title: 'Kontakt / CTA', value: 'contact' },
         ],
       },
     }),
     defineField({
       name: 'level',
       title: 'Modul Ebene',
-      type: 'string',
+      type: 'number',
       options: {
         list: [
-          { title: 'Modul', value: 'level-1' },
-          { title: 'Submodul', value: 'level-2' },
+          { title: 'Modul', value: 1 },
+          { title: 'Submodul', value: 2 },
         ],
       },
-      hidden: isNotType('cards', 'faqs'),
+      hidden: isNotType('cards', 'faqs', 'text'),
     }),
     defineField({
       name: 'layout',
@@ -64,7 +66,7 @@ export default defineType({
       name: 'image',
       title: 'Bild',
       type: 'imageWithAlt',
-      hidden: isNotType('cards', 'prices'),
+      hidden: isNotType('cards', 'prices', 'text'),
     }),
     defineField({
       name: 'content',
@@ -75,7 +77,7 @@ export default defineType({
           type: 'block',
         },
       ],
-      hidden: isNotType('cards', 'faqs'),
+      hidden: isNotType('cards', 'faqs', 'text', 'contact'),
     }),
     defineField({
       name: 'cards',

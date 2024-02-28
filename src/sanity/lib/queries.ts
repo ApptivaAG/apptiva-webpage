@@ -73,7 +73,7 @@ const Modules = q('modules')
   .grab$({
     _key: q.string(),
     title: q.string().optional().default('Ohne Titel'),
-    level: q.string().optional(),
+    level: q.number().optional(),
     type: q.string().optional(),
     layout: q.string().optional(),
     style: q.string().optional(),
@@ -81,7 +81,19 @@ const Modules = q('modules')
     content: q.contentBlocks().optional(),
     cards: Cards,
     projects: Projects,
+    faqs: FAQs,
     prices: Prices,
+    persons: q('*')
+      .filterByType('person')
+      .grab$({
+        image: sanityImageWithAlt(),
+        mail: q('contact').grab$({
+          mail: q.string().optional().default('Keine Email-Adresse'),
+        }),
+        phone: q('contact').grab$({
+          phone: q.string().optional().default('Keine Telefonnummer'),
+        }),
+      }),
   })
   .nullable()
 
