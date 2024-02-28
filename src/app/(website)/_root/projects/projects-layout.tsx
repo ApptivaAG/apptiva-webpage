@@ -12,12 +12,12 @@ export default function ProjectsLayout(props: { projects: ProjectsQueryData }) {
   return (
     <div className="full bg-primary text-base-white">
       <div className="mt-10">
-        <div className="content m-auto font-[600]">
+        <div className="content m-auto">
           <Heading level={2}>
             Gemeinsam wollen wir Geschichten schreiben.
           </Heading>
-          <Heading level={2} className="highlighted-text">
-            Erfolgsgeschichten.
+          <Heading level={2}>
+            <strong>Erfolgsgeschichten.</strong>
           </Heading>
           <div className="flex">
             <Button
