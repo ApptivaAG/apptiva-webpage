@@ -368,53 +368,80 @@ const CarouselItem = React.forwardRef<
     layout,
   } = useCarousel()
   if (layout == 'oneSlide') {
-    return (
-      <div
-        ref={ref}
-        role="group"
-        aria-roledescription="slide"
-        className={cn('min-w-0 shrink-0 grow-0 basis-full', className)}
-        {...props}
-      />
-    )
+    return <OneSlideCarouselItem ref={ref} className={className} {...props} />
   } else if (layout == 'threeSlidesFadeOut') {
     return (
-      <div
+      <ThreeSlidesFadeOutCarouselItem
+        index={index}
         ref={ref}
-        role="group"
-        aria-roledescription="slide"
-        // className={`relative my-20 h-[--min-size-mobile] flex-[0_0_100%] md:flex-[0_0_60%] lg:h-[--min-size] lg:pl-[1rem]`}
-        key={index}
-        className={cn(
-          'relative my-20 flex h-[--min-size-mobile] min-w-0 flex-[0_0_100%] shrink-0 grow-0 basis-full md:flex-[0_0_60%] lg:h-[--min-size] lg:pl-[1rem]',
-          className
-        )}
-        style={
-          {
-            ...(transitioinValues.length && {
-              opacity: transitioinValues[index],
-            }),
-            '--min-size': `${MIN_SIZE}px`,
-            '--min-size-mobile': `${MIN_SIZE / 2}px`,
-          } as React.CSSProperties
-        }
-      >
-        <div
-          style={
-            {
-              ...(transitioinValues.length && {
-                '--project-overview-height': `${sizeValue[index]}px`,
-                '--project-overview-height-mobile': `${sizeValue[index] / 2}px`,
-              }),
-            } as React.CSSProperties
-          }
-          className="absolute top-1/2 h-[--project-overview-height-mobile] -translate-y-1/2 rounded-lg border border-base-grey p-5 lg:h-[--project-overview-height]"
-          {...props}
-        ></div>
-      </div>
+        className={className}
+        transitioinValues={transitioinValues}
+        sizeValue={sizeValue}
+        {...props}
+      ></ThreeSlidesFadeOutCarouselItem>
     )
   }
 })
 CarouselItem.displayName = 'CarouselItem'
+
+const OneSlideCarouselItem = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => {
+  return (
+    <div
+      ref={ref}
+      role="group"
+      aria-roledescription="slide"
+      className={cn('min-w-0 shrink-0 grow-0 basis-full', className)}
+      {...props}
+    />
+  )
+})
+
+const ThreeSlidesFadeOutCarouselItem = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement> & {
+    index: number
+    transitioinValues: number[]
+    sizeValue: number[]
+  }
+>(({ className, index, transitioinValues, sizeValue, ...props }, ref) => {
+  return (
+    <div
+      ref={ref}
+      role="group"
+      aria-roledescription="slide"
+      // className={`relative my-20 h-[--min-size-mobile] flex-[0_0_100%] md:flex-[0_0_60%] lg:h-[--min-size] lg:pl-[1rem]`}
+      key={index}
+      className={cn(
+        'relative my-20 flex h-[--min-size-mobile] min-w-0 flex-[0_0_100%] shrink-0 grow-0 basis-full md:flex-[0_0_60%] lg:h-[--min-size] lg:pl-[1rem]',
+        className
+      )}
+      style={
+        {
+          ...(transitioinValues.length && {
+            opacity: transitioinValues[index],
+          }),
+          '--min-size': `${MIN_SIZE}px`,
+          '--min-size-mobile': `${MIN_SIZE / 2}px`,
+        } as React.CSSProperties
+      }
+    >
+      <div
+        style={
+          {
+            ...(transitioinValues.length && {
+              '--project-overview-height': `${sizeValue[index]}px`,
+              '--project-overview-height-mobile': `${sizeValue[index] / 2}px`,
+            }),
+          } as React.CSSProperties
+        }
+        className="absolute top-1/2 h-[--project-overview-height-mobile] -translate-y-1/2 rounded-lg border border-base-grey p-5 lg:h-[--project-overview-height]"
+        {...props}
+      ></div>
+    </div>
+  )
+})
 
 export { Carousel, CarouselContent, CarouselItem, type CarouselApi }
