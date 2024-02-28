@@ -35,7 +35,7 @@ const ServiceTeaser = ({
       >
         <SanityImage
           image={service.illustration}
-          style="p-6 object-cover object-center lg:max-w-96 lg:max-h-96"
+          className="object-cover object-center p-6 lg:max-h-96 lg:max-w-96"
         />
       </div>
     </div>
