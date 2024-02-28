@@ -3,6 +3,7 @@ import Cards from './cards'
 import ProjectModule from './project-module'
 import FAQs from './faqs'
 import Text from './text'
+import Contact from './contact'
 
 export default function Module(props: {
   module: ModuleData
@@ -36,6 +37,9 @@ export default function Module(props: {
       //   </>
       // )
       return <div>preise go here</div>
+
+    case 'contact':
+      return <Contact module={module} />
 
     default:
       return <div>Modultyp wählen</div>

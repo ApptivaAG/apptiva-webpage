@@ -22,6 +22,7 @@ export default defineType({
           { title: 'Projekte', value: 'projects' },
           { title: 'Preise', value: 'prices' },
           { title: 'FAQs', value: 'faqs' },
+          { title: 'Kontakt / CTA', value: 'contact' },
         ],
       },
     }),
@@ -76,7 +77,7 @@ export default defineType({
           type: 'block',
         },
       ],
-      hidden: isNotType('cards', 'faqs', 'text'),
+      hidden: isNotType('cards', 'faqs', 'text', 'contact'),
     }),
     defineField({
       name: 'cards',

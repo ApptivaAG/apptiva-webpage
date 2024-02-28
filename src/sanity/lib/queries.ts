@@ -78,6 +78,17 @@ const Modules = q('modules')
     projects: Projects,
     faqs: FAQs,
     prices: Prices,
+    persons: q('*')
+      .filterByType('person')
+      .grab$({
+        image: sanityImageWithAlt(),
+        mail: q('contact').grab$({
+          mail: q.string().optional().default('Keine Email-Adresse'),
+        }),
+        phone: q('contact').grab$({
+          phone: q.string().optional().default('Keine Telefonnummer'),
+        }),
+      }),
   })
   .nullable()
 
