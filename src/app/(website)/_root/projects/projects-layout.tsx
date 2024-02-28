@@ -1,18 +1,23 @@
+import ProjectOverview from '@/components/project-overview'
 import Button from '@/components/ui/button'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from '@/components/ui/carousel'
 import Heading from '../../../../components/heading'
 import { ProjectsQueryData } from '../../projekte/types'
-import ProjectsCarousel from './carousel'
 
 export default function ProjectsLayout(props: { projects: ProjectsQueryData }) {
   return (
     <div className="full bg-primary text-base-white">
       <div className="mt-10">
-        <div className="content m-auto font-[600]">
+        <div className="content m-auto">
           <Heading level={2}>
             Gemeinsam wollen wir Geschichten schreiben.
           </Heading>
-          <Heading level={2} className="highlighted-text">
-            Erfolgsgeschichten.
+          <Heading level={2}>
+            <strong>Erfolgsgeschichten.</strong>
           </Heading>
           <div className="flex">
             <Button
@@ -25,8 +30,25 @@ export default function ProjectsLayout(props: { projects: ProjectsQueryData }) {
             </Button>
           </div>
         </div>
+
         {props.projects && (
-          <ProjectsCarousel slides={props.projects}></ProjectsCarousel>
+          <>
+            <Carousel
+              opts={{ loop: true }}
+              layout={'threeSlidesFadeOut'}
+              numberOfSlides={props.projects.length}
+            >
+              <CarouselContent>
+                {props.projects.map((project, index) => {
+                  return (
+                    <CarouselItem key={index} index={index}>
+                      <ProjectOverview project={project}></ProjectOverview>
+                    </CarouselItem>
+                  )
+                })}
+              </CarouselContent>
+            </Carousel>
+          </>
         )}
       </div>
     </div>
