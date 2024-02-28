@@ -227,7 +227,6 @@ const Carousel = React.forwardRef<
     const progressBarSize = 100 / slides
     const newTotalWidth = 100 - progressBarSize
     const progressBarLine = darkTheme ? 'bg-base-white' : 'bg-primary'
-    console.log('theme', darkTheme)
 
     return (
       <CarouselContext.Provider
