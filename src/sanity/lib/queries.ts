@@ -59,6 +59,11 @@ export const Prices = q('priceCards')
     title: q.string().optional().default('Ohne Titel'),
     image: sanityImageWithAlt(),
     content: q.contentBlocks().optional(),
+    subtitle: q.string().optional(),
+    pillText: q.string().optional(),
+    isFavourite: q.boolean().optional(),
+    linkText: q.string().optional(),
+    link: q.string().optional(),
   })
   .nullable()
 
