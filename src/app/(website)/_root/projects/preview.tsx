@@ -1,9 +1,9 @@
 'use client'
 
-import { projectsQuery } from '@/sanity/lib/queries'
+import { ModuleData, projectsQuery } from '@/sanity/lib/queries'
 import { QueryResponseInitial, useQuery } from '@sanity/react-loader'
-import ProjectsLayout from './projects-layout'
 import { ProjectsFromSettingsQueryData } from '../../projekte/types'
+import ProjectsLayout from './projects-layout'
 
 export default function ProjectsPreview({
   initial,
@@ -16,5 +16,5 @@ export default function ProjectsPreview({
     { initial }
   )
 
-  return <ProjectsLayout projects={data.projects} />
+  return <ProjectsLayout module={data.projectStartpage as ModuleData} />
 }

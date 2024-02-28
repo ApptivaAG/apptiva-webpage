@@ -73,6 +73,7 @@ const Modules = q('modules')
   .grab$({
     _key: q.string(),
     title: q.string().optional().default('Ohne Titel'),
+    introduction: q.contentBlocks().optional(),
     level: q.number().optional(),
     type: q.string().optional(),
     layout: q.string().optional(),
@@ -170,7 +171,10 @@ export const projectsFromSettingsQuery = q('*')
   .filterByType('settings')
   .slice(0)
   .grab$({
-    projects: Projects,
+    projectStartpage: q('projectStartpage').grab$({
+      introduction: q.contentBlocks().optional(),
+      projects: Projects,
+    }),
   })
 
 export const projectBySlugQuery = q('*')

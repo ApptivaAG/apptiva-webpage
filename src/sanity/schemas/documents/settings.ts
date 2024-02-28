@@ -1,4 +1,4 @@
-import { defineType } from 'sanity'
+import { defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'settings',
@@ -15,16 +15,10 @@ export default defineType({
         },
       ],
     },
-    {
-      title: 'Projekte Startseite',
-      name: 'projects',
-      type: 'array',
-      of: [
-        {
-          type: 'reference',
-          to: { type: 'project' },
-        },
-      ],
-    },
+    defineField({
+      name: 'projectStartpage',
+      title: 'Projekt Startseite',
+      type: 'projectStartpage',
+    }),
   ],
 })

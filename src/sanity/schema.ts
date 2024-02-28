@@ -8,17 +8,17 @@ import project from './schemas/documents/project'
 import servicePage from './schemas/documents/service-page'
 import settings from './schemas/documents/settings'
 import tag from './schemas/documents/tag'
+import card from './schemas/objects/card'
 import contact from './schemas/objects/contact'
 import header from './schemas/objects/header'
 import imageWithAlt from './schemas/objects/image-with-alt'
 import meta from './schemas/objects/meta'
 import module from './schemas/objects/module'
+import priceCard from './schemas/objects/price-card'
+import projectStartpage from './schemas/objects/project-startpage'
 import skill from './schemas/objects/skill'
 import skillItem from './schemas/objects/skill-item'
 import social from './schemas/objects/social'
-import card from './schemas/objects/card'
-import priceCard from './schemas/objects/price-card'
-import aboutPage from './schemas/documents/about-page'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -40,6 +40,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     meta,
     card,
     priceCard,
-    aboutPage
+    projectStartpage,
   ],
 }

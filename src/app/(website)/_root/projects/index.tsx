@@ -1,4 +1,4 @@
-import { projectsFromSettingsQuery, projectsQuery } from '@/sanity/lib/queries'
+import { ModuleData, projectsFromSettingsQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
 import { draftMode } from 'next/headers'
 import ProjectsPreview from './preview'
@@ -17,6 +17,6 @@ export default async function Projects() {
   return isEnabled ? (
     <ProjectsPreview initial={draft} />
   ) : (
-    <ProjectsLayout projects={published.projects} />
+    <ProjectsLayout module={published.projectStartpage as ModuleData} />
   )
 }
