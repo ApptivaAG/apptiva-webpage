@@ -20,8 +20,10 @@ export function PriceCard(
   } & VariantProps<typeof cardStyle>
 ) {
   return (
-    <div className={cn(cardStyle({ intent: props.intent }), props.className)}>
-      {props.children}
+    <div className="">
+      <div className={cn(cardStyle({ intent: props.intent }), props.className)}>
+        {props.children}
+      </div>
     </div>
   )
 }

@@ -30,25 +30,29 @@ export default function Prices(props: { module: ModuleData }) {
           </div>
           <div className="grid gap-7 lg:grid-cols-3">
             {props.module.prices?.map((price) => (
-              <div key={price._key}>
-                <PriceCard
-                  key={price._key}
-                  className=" flex flex-col items-center gap-6 bg-primary text-base-white"
-                >
-                  {/* [&>*:nth-child(even)] */}
-                  <Heading level={5} size={5}>
+              <div
+                key={price._key}
+                className="grid justify-items-center rounded-b-lg rounded-t-lg bg-base-white"
+              >
+                {/* upper part: blue or green */}
+                <div className=" flex flex-col items-center gap-6 rounded-lg border bg-primary p-9 pb-10 text-base-white">
+                  <Heading level={4} size={4}>
                     {price.title}
                   </Heading>
-                  <Heading level={6} size={6} className=" text-center">
-                    {price.subtitle}
-                  </Heading>
-                </PriceCard>
-                <div>{price.pillText}</div>
-                {module.content && (
-                  <div className="flex-1">
-                    <PortableText value={module.content} />
-                  </div>
-                )}
+                  <p className="text-center">{price.subtitle}</p>
+                </div>
+                {/* middle part */}
+                <div className=" m-[-1.5rem]  h-10 rounded-lg bg-base-grey px-4 py-1.5">
+                  {price.pillText}
+                </div>
+                {/* lower part: always on white bg */}
+                <div className="flex flex-col items-center gap-6  p-4 pt-10 text-primary">
+                  {module.content && (
+                    <div className="flex-1">
+                      <PortableText value={module.content} />
+                    </div>
+                  )}
+                </div>
               </div>
             ))}
           </div>
