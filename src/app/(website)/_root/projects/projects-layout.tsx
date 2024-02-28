@@ -16,13 +16,6 @@ export default function ProjectsLayout(props: { module: ModuleData }) {
           {props.module.introduction?.map((content: any) => (
             <StyledPortableText key={content._key} content={content} />
           ))}
-
-          {/* <Heading level={2}>
-            Gemeinsam wollen wir Geschichten schreiben.
-          </Heading>
-          <Heading level={2}>
-            <strong>Erfolgsgeschichten.</strong>
-          </Heading> */}
           <div className="flex">
             <Button
               intent="secondary"
@@ -40,6 +33,7 @@ export default function ProjectsLayout(props: { module: ModuleData }) {
             <Carousel
               opts={{ loop: true }}
               layout={'threeSlidesFadeOut'}
+              darkTheme={true}
               numberOfSlides={props.module.projects.length}
             >
               <CarouselContent>

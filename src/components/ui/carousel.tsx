@@ -35,6 +35,7 @@ type CarouselContextProps = {
   carouselRef: ReturnType<typeof useEmblaCarousel>[0]
   api: ReturnType<typeof useEmblaCarousel>[1]
   layout: CarouselLayout
+  darkTheme: boolean
   scrollPrev: () => void
   scrollNext: () => void
   handlePrevButtonHover: () => void
@@ -50,6 +51,7 @@ type CarouselContextProps = {
   progressBarSize: number
   scrollProgress: number
   newTotalWidth: number
+  progressBarLine: string
 } & CarouselProps
 
 const CarouselContext = React.createContext<CarouselContextProps | null>(null)
@@ -70,7 +72,11 @@ const numberWithinRange = (number: number, min: number, max: number): number =>
 const Carousel = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> &
-    CarouselProps & { layout: CarouselLayout; numberOfSlides: number }
+    CarouselProps & {
+      layout: CarouselLayout
+      darkTheme?: boolean
+      numberOfSlides: number
+    }
 >(
   (
     {
@@ -80,6 +86,7 @@ const Carousel = React.forwardRef<
       className,
       children,
       layout,
+      darkTheme = false,
       numberOfSlides: slides,
       ...props
     },
@@ -219,6 +226,8 @@ const Carousel = React.forwardRef<
 
     const progressBarSize = 100 / slides
     const newTotalWidth = 100 - progressBarSize
+    const progressBarLine = darkTheme ? 'bg-base-white' : 'bg-primary'
+    console.log('theme', darkTheme)
 
     return (
       <CarouselContext.Provider
@@ -227,6 +236,7 @@ const Carousel = React.forwardRef<
           api: api,
           opts,
           layout,
+          darkTheme,
           scrollPrev,
           scrollNext,
           handlePrevButtonHover,
@@ -242,6 +252,7 @@ const Carousel = React.forwardRef<
           progressBarSize,
           scrollProgress,
           newTotalWidth,
+          progressBarLine,
         }}
       >
         <div
@@ -281,6 +292,7 @@ const CarouselContent = React.forwardRef<
     progressBarSize,
     scrollProgress,
     newTotalWidth,
+    progressBarLine,
   } = useCarousel()
   let carouselNavigationButton
   switch (layout) {
@@ -348,7 +360,7 @@ const CarouselContent = React.forwardRef<
           }
         ></div>
         <div
-          className={`absolute bottom-10 left-0 right-0 top-1/2 z-10 h-[1px] w-full -translate-y-1/2 overflow-hidden rounded bg-primary`} // ${progressBarLine}`}
+          className={`absolute bottom-10 left-0 right-0 top-1/2 z-10 h-[1px] w-full -translate-y-1/2 overflow-hidden rounded ${progressBarLine}`}
         ></div>
       </div>
     </>
