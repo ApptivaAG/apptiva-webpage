@@ -21,7 +21,7 @@ const SheetOverlay = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Overlay
     className={cn(
-      'fixed inset-0 z-50 bg-gradient-to-br from-primary-light to-primary-dark data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
+      'fixed inset-0 z-50 bg-primary-dark/40 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
       className
     )}
     {...props}
@@ -31,7 +31,7 @@ const SheetOverlay = React.forwardRef<
 SheetOverlay.displayName = SheetPrimitive.Overlay.displayName
 
 const sheetVariants = cva(
-  'fixed left-0 z-50 gap-4 bg-white pl-8 !pr-12 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500 py-16',
+  'fixed left-0 z-50 gap-4 bg-white pl-8 !pr-12 transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500 py-16',
   {
     variants: {
       side: {
@@ -40,7 +40,7 @@ const sheetVariants = cva(
           'inset-x-0 bottom-0 border-t data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom',
         left: 'rounded-md inset-y-0 inset-x-0 bg-primary m-3 data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left',
         right:
-          'inset-y-0 right-0 h-full w-3/4  border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm',
+          'rounded-md inset-y-0 inset-x-0 bg-primary m-3 data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right',
       },
     },
     defaultVariants: {
@@ -65,7 +65,7 @@ const SheetContent = React.forwardRef<
       {...props}
     >
       {children}
-      <SheetPrimitive.Close className="rounded-sm data-[state=open]:bg-slate-100 absolute right-5 top-14 opacity-70 transition-opacity hover:opacity-100 focus:outline-none disabled:pointer-events-none">
+      <SheetPrimitive.Close className="rounded-sm absolute right-5 top-14 transition-opacity hover:opacity-100 focus:outline-none disabled:pointer-events-none data-[state=open]:bg-base-white">
         <Image priority src={navClose} alt="Close Menu" className="w-10" />
       </SheetPrimitive.Close>
     </SheetPrimitive.Content>

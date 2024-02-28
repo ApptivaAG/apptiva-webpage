@@ -31,7 +31,7 @@ const MobileNav = () => {
         />
       </SheetTrigger>
 
-      <SheetContent side="top" className="pr-0">
+      <SheetContent side="right" className="pr-0">
         <MobileLink
           href="/"
           className="flex items-center pl-2"
