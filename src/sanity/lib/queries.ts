@@ -93,7 +93,8 @@ const Modules = q('modules')
         phone: q('contact').grab$({
           phone: q.string().optional().default('Keine Telefonnummer'),
         }),
-      }),
+      })
+      .nullable(),
   })
   .nullable()
 
