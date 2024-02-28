@@ -3,7 +3,7 @@ import path from 'path'
 
 const customerList = [
   {
-    fileName: 'post-logo-2023.png',
+    fileName: 'post-logo-2023-edit.png',
     alt: 'Die Schweizerische Post AG',
     height: 55,
   },
@@ -48,7 +48,7 @@ const customerList = [
     height: 35,
   },
   {
-    fileName: 'fhnw-logo.png',
+    fileName: 'fhnw-logo-edit.png',
     alt: 'Fachhochschule Nordwestschweiz',
     height: 45,
   },
@@ -98,7 +98,7 @@ const customerList = [
     height: 35,
   },
   {
-    fileName: 'welti-furrer-300x66.png',
+    fileName: 'welti-furrer-300x66-edit.png',
     alt: 'Welti-Furrer',
     height: 25,
   },
