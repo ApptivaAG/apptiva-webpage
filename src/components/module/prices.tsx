@@ -30,7 +30,7 @@ export default function Prices(props: { module: ModuleData }) {
           </div>
           <div className="grid gap-7 lg:grid-cols-3">
             {props.module.prices?.map((price) => (
-              <div>
+              <div key={price._key}>
                 <PriceCard
                   key={price._key}
                   className=" flex flex-col items-center gap-6 bg-primary text-base-white"
