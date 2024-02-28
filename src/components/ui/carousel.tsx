@@ -140,7 +140,7 @@ const Carousel = React.forwardRef<
       }
     }, [api, onSelect])
 
-    const [mousePos, setMousePos] = React.useState({ x: String, y: String })
+    const [mousePos, setMousePos] = React.useState({ x: '', y: '' })
     const [isPrevButtonHovered, setIsPrevButtonHovered] = React.useState(false)
     const [isNextButtonHovered, setIsNextButtonHovered] = React.useState(false)
 
@@ -398,6 +398,7 @@ const OneSlideCarouselItem = React.forwardRef<
     />
   )
 })
+OneSlideCarouselItem.displayName = 'OneSlideCarouselItem'
 
 const ThreeSlidesFadeOutCarouselItem = React.forwardRef<
   HTMLDivElement,
@@ -412,7 +413,6 @@ const ThreeSlidesFadeOutCarouselItem = React.forwardRef<
       ref={ref}
       role="group"
       aria-roledescription="slide"
-      // className={`relative my-20 h-[--min-size-mobile] flex-[0_0_100%] md:flex-[0_0_60%] lg:h-[--min-size] lg:pl-[1rem]`}
       key={index}
       className={cn(
         'relative my-20 flex h-[--min-size-mobile] min-w-0 flex-[0_0_100%] shrink-0 grow-0 basis-full md:flex-[0_0_60%] lg:h-[--min-size] lg:pl-[1rem]',
@@ -443,5 +443,6 @@ const ThreeSlidesFadeOutCarouselItem = React.forwardRef<
     </div>
   )
 })
+ThreeSlidesFadeOutCarouselItem.displayName = 'ThreeSlidesFadeOutCarouselItem'
 
 export { Carousel, CarouselContent, CarouselItem, type CarouselApi }

@@ -41,7 +41,7 @@ export default function ProjectsLayout(props: { projects: ProjectsQueryData }) {
               <CarouselContent>
                 {props.projects.map((project, index) => {
                   return (
-                    <CarouselItem index={index}>
+                    <CarouselItem key={index} index={index}>
                       <ProjectOverview project={project}></ProjectOverview>
                     </CarouselItem>
                   )

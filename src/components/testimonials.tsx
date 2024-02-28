@@ -15,7 +15,7 @@ const Testimonials = () => {
         <CarouselContent>
           {testimonials.map((testimonial, index) => {
             return (
-              <CarouselItem index={index}>
+              <CarouselItem key={index} index={index}>
                 <Testimonial testimonial={testimonial}></Testimonial>
               </CarouselItem>
             )
