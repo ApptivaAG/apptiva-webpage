@@ -58,6 +58,7 @@ export default defineType({
         list: [
           { title: 'Fluss', value: 'card-flow' },
           { title: 'Aufklappbare Liste', value: 'card-list-expandable' },
+          { title: 'Karussell', value: 'card-carousel' },
         ],
       },
       hidden: isNotType('cards'),

@@ -1,4 +1,5 @@
 import { ModuleData } from '@/sanity/lib/queries'
+import CardCarousel from './card-carousel'
 import CardFlow from './card-flow'
 import CardListExpandable from './card-list-expandable'
 
@@ -11,6 +12,8 @@ export default function Cards(props: { module: ModuleData }) {
 
     case 'card-list-expandable':
       return <CardListExpandable module={module} />
+    case 'card-carousel':
+      return <CardCarousel module={module} />
 
     default:
       return <div>Layout wählen</div>
