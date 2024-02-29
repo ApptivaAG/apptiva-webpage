@@ -62,7 +62,7 @@ export default defineType({
           { title: 'Karussell', value: 'card-carousel' },
         ],
       },
-      hidden: isNotType('cards'),
+      hidden: isNotType('cards', 'text'),
     }),
     defineField({
       name: 'style',

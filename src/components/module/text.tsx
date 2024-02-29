@@ -9,6 +9,7 @@ export default function Text(props: { module: ModuleData }) {
 
   const darkBg = module.style === 'dark-bg'
   const isLevel = (level: 1 | 2) => (module.level ?? 1) == level
+  const colStyle = module.layout === '1-column' ? 'flex-col' : ''
 
   return (
     <section
@@ -21,7 +22,7 @@ export default function Text(props: { module: ModuleData }) {
     >
       <div className="content">
         <div className="space-y-20">
-          <div className="flex flex-wrap gap-x-32 gap-y-8">
+          <div className={cn('flex flex-wrap gap-x-32 gap-y-8', colStyle)}>
             <Heading level={isLevel(1) ? 2 : 3} size={isLevel(1) ? 3 : 4}>
               {module.title}
             </Heading>
