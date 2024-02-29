@@ -6,13 +6,13 @@ type Level = 1 | 2 | 3 | 4 | 5 | 6
 const getClassNameByLevel = (level: Level): string => {
   switch (level) {
     case 1:
-      return 'text-4xl lg:text-7xl'
+      return 'text-4xl md:text-7xl'
     case 2:
-      return 'text-3xl lg:text-6xl'
+      return 'text-3xl md:text-6xl'
     case 3:
-      return 'text-2xl lg:text-5xl'
+      return 'text-2xl md:text-5xl'
     case 4:
-      return 'text-xl lg:text-3xl'
+      return 'text-xl md:text-3xl'
     case 5:
       return 'text-base'
     default:
