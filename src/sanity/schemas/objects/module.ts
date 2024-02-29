@@ -1,4 +1,4 @@
-import { TitledListValue, defineField, defineType } from 'sanity'
+import { defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'module',
@@ -10,6 +10,18 @@ export default defineType({
       title: 'Titel',
       type: 'string',
     }),
+    defineField({
+      name: 'introduction',
+      title: 'Einleitung',
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+        },
+      ],
+      hidden: isNotType('projects'),
+    }),
+
     defineField({
       name: 'type',
       title: 'Typ',

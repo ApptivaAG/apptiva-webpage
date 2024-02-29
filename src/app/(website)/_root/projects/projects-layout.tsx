@@ -1,24 +1,21 @@
 import ProjectOverview from '@/components/project-overview'
+import StyledPortableText from '@/components/styled-portable-text'
 import Button from '@/components/ui/button'
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from '@/components/ui/carousel'
-import Heading from '../../../../components/heading'
-import { ProjectsQueryData } from '../../projekte/types'
+import { ModuleData } from '@/sanity/lib/queries'
 
-export default function ProjectsLayout(props: { projects: ProjectsQueryData }) {
+export default function ProjectsLayout(props: { module: ModuleData }) {
   return (
     <div className="full bg-primary text-base-white">
       <div className="mt-10">
         <div className="content m-auto">
-          <Heading level={2}>
-            Gemeinsam wollen wir Geschichten schreiben.
-          </Heading>
-          <Heading level={2}>
-            <strong>Erfolgsgeschichten.</strong>
-          </Heading>
+          {props.module.introduction?.map((content: any) => (
+            <StyledPortableText key={content._key} content={content} />
+          ))}
           <div className="flex">
             <Button
               intent="secondary"
@@ -31,15 +28,16 @@ export default function ProjectsLayout(props: { projects: ProjectsQueryData }) {
           </div>
         </div>
 
-        {props.projects && (
+        {props.module.projects && (
           <>
             <Carousel
               opts={{ loop: true }}
               layout={'threeSlidesFadeOut'}
-              numberOfSlides={props.projects.length}
+              darkTheme={true}
+              numberOfSlides={props.module.projects.length}
             >
               <CarouselContent>
-                {props.projects.map((project, index) => {
+                {props.module.projects.map((project, index) => {
                   return (
                     <CarouselItem key={index} index={index}>
                       <ProjectOverview project={project}></ProjectOverview>

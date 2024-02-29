@@ -9,7 +9,7 @@ import Button from './ui/button'
 
 export default function Footer() {
   return (
-    <div className="bg-300% from-primary-light bg-gradient-to-br to-primary-dark pt-4">
+    <div className="bg-gradient-to-br from-primary-light to-primary-dark bg-300% pt-4">
       <div className="mx-4 rounded-md bg-primary text-base-white">
         <div className="flex flex-wrap justify-between gap-24 rounded-md bg-black/40 p-4 sm:p-12">
           <div>
@@ -60,7 +60,9 @@ export default function Footer() {
             </Heading>
             <ul className="space-y-1">
               <li>
-                <a href="https://www.linkedin.com/company/apptiva-ag">LinkedIn</a>
+                <a href="https://www.linkedin.com/company/apptiva-ag">
+                  LinkedIn
+                </a>
               </li>
               <li>
                 <a href="https://www.xing.com/companies/apptivaag">Xing</a>
@@ -69,9 +71,13 @@ export default function Footer() {
                 <a href="https://www.facebook.com/apptivaag">Facebook</a>
               </li>
               <li>
-                <a href="https://www.youtube.com/channel/UCkRetskswz9I4-ohcYuTG3Q">Youtube</a>
+                <a href="https://www.youtube.com/channel/UCkRetskswz9I4-ohcYuTG3Q">
+                  Youtube
+                </a>
               </li>
-              <li><a href="https://x.com/ApptivaTeam">X</a></li>
+              <li>
+                <a href="https://x.com/ApptivaTeam">X</a>
+              </li>
             </ul>
           </div>
           <div className="flex items-end">
@@ -98,7 +104,7 @@ export default function Footer() {
           </p>
         </div>
       </div>
-      <p className="mx-auto my-16 max-w-2xl p-4 text-6xl font-bold text-base-white">
+      <p className="mx-auto my-16 max-w-2xl p-4 text-3xl font-bold text-base-white md:text-6xl">
         Du bist noch hier? Klasse! Wir haben noch ein paar{' '}
         <strong>Dinge für dich:</strong>
       </p>
