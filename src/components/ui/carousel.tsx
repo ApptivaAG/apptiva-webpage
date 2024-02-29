@@ -378,9 +378,9 @@ const CarouselItem = React.forwardRef<
     sizeValue,
     layout,
   } = useCarousel()
-  if (layout == 'oneSlide') {
+  if (layout === 'oneSlide') {
     return <OneSlideCarouselItem ref={ref} className={className} {...props} />
-  } else if (layout == 'threeSlidesFadeOut') {
+  } else if (layout === 'threeSlidesFadeOut') {
     return (
       <ThreeSlidesFadeOutCarouselItem
         index={index}
@@ -390,6 +390,14 @@ const CarouselItem = React.forwardRef<
         sizeValue={sizeValue}
         {...props}
       ></ThreeSlidesFadeOutCarouselItem>
+    )
+  } else if (layout === 'threeSlides') {
+    return (
+      <ThreeSlidesCarouselItem
+        ref={ref}
+        className={className}
+        {...props}
+      ></ThreeSlidesCarouselItem>
     )
   }
 })
@@ -455,5 +463,24 @@ const ThreeSlidesFadeOutCarouselItem = React.forwardRef<
   )
 })
 ThreeSlidesFadeOutCarouselItem.displayName = 'ThreeSlidesFadeOutCarouselItem'
+
+const ThreeSlidesCarouselItem = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => {
+  return (
+    <div
+      ref={ref}
+      role="group"
+      aria-roledescription="slide"
+      className={cn(
+        'relative my-20 flex min-w-0 flex-[0_0_100%] shrink-0 grow-0 basis-full md:flex-[0_0_80%]  lg:pl-[1rem] xl:flex-[0_0_60%] ',
+        className
+      )}
+      {...props}
+    ></div>
+  )
+})
+ThreeSlidesCarouselItem.displayName = 'ThreeSlidesCarouselItem'
 
 export { Carousel, CarouselContent, CarouselItem, type CarouselApi }
