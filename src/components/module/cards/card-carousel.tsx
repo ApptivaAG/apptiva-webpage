@@ -44,7 +44,7 @@ export default function CardCarousel(props: { module: ModuleData }) {
         <Carousel
           opts={{ loop: true }}
           layout={'threeSlides'}
-          numberOfSlides={module.cards?.length}
+          numberOfSlides={module.cards?.length || 0}
         >
           <CarouselContent>
             {module.cards?.map((card, index) => (
