@@ -5,7 +5,7 @@ import { ModuleData } from '@/sanity/lib/queries'
 import { PortableText } from '@portabletext/react'
 import { Card } from '../../ui/card'
 
-export default function CardListExpandable(props: { module: ModuleData }) {
+export default function CardList(props: { module: ModuleData }) {
   const { module } = props
   const isLevel = (level: 1 | 2) => (module.level ?? 1) == level
 
