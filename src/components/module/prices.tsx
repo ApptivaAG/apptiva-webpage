@@ -18,8 +18,8 @@ export default function Prices(props: { module: ModuleData }) {
     >
       <div className="content">
         <div className="space-y-20">
-          <div className="flex flex-wrap gap-x-32 gap-y-8">
-            <Heading level={3} size={3}>
+          <div className="flex flex-wrap gap-x-32 gap-y-8 ">
+            <Heading level={3} size={3} className="text-center">
               {module.title}
             </Heading>
             <SanityImage image={module.image} />
