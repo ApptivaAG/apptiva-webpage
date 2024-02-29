@@ -29,9 +29,7 @@ export default function CardCarousel(props: { module: ModuleData }) {
         <div className="content">
           <div className="space-y-20">
             <div className="flex flex-wrap gap-x-32 gap-y-8">
-              <Heading level={2} size={4}>
-                {module.title}
-              </Heading>
+              <Heading level={2}>{module.title}</Heading>
               <SanityImage image={module.image} />
               {module.content && (
                 <div className="flex-1">
@@ -45,39 +43,55 @@ export default function CardCarousel(props: { module: ModuleData }) {
           opts={{ loop: true }}
           layout={'threeSlides'}
           numberOfSlides={module.cards?.length || 0}
-          className="pb-14"
+          className="pb-20"
         >
           <CarouselContent>
             {module.cards?.map((card, index) => (
               <CarouselItem key={index} index={index}>
-                <Card
-                  key={card._key}
-                  className="my-8 flex h-full w-full flex-row gap-24"
-                  intent={
-                    xor(darkBg, card.style !== 'inverted') ? 'dark' : 'light'
-                  }
-                >
-                  <div className="ml-6 w-2/3">
-                    <div className="mb-8 inline-block rounded-lg bg-base-white px-4 py-1.5 text-primary">
-                      <p>Systemintegration</p>
-                    </div>
+                <div className="relativ">
+                  <Card
+                    key={card._key}
+                    className="my-8 flex h-full w-full flex-col gap-16 pt-20 md:flex-row"
+                    intent={
+                      xor(darkBg, card.style !== 'inverted') ? 'dark' : 'light'
+                    }
+                  >
+                    <div className="relative w-full md:w-2/3">
+                      <div className="clear-both h-16">
+                        <div className="flex shrink">
+                          {card.pill && (
+                            <div className="inline-block rounded-lg bg-base-white px-4 py-1.5 text-primary">
+                              {card.pill}
+                            </div>
+                          )}
 
-                    <Heading level={3} className="mb-7">
-                      {card.title}
-                    </Heading>
-                    {card.content && (
-                      <div className="flex flex-1 flex-col justify-between gap-6">
-                        <StyledPortableText content={card.content} />
+                          <div className="w-full"></div>
+                          <div className="h-10 md:hidden">
+                            <SanityImage
+                              className="h-full w-full"
+                              image={card.image}
+                            ></SanityImage>
+                          </div>
+                        </div>
                       </div>
-                    )}
-                  </div>
-                  <div className="mr-6 h-full w-1/3">
-                    <SanityImage
-                      className="h-full"
-                      image={card.image}
-                    ></SanityImage>
-                  </div>
-                </Card>
+
+                      <Heading level={3} className="mb-7">
+                        {card.title}
+                      </Heading>
+                      {card.content && (
+                        <div className="flex flex-1 flex-col justify-between gap-6">
+                          <StyledPortableText content={card.content} />
+                        </div>
+                      )}
+                    </div>
+                    <div className="hidden w-1/2 md:block  md:w-1/3">
+                      <SanityImage
+                        className="h-full w-full"
+                        image={card.image}
+                      ></SanityImage>
+                    </div>
+                  </Card>
+                </div>
               </CarouselItem>
             ))}
           </CarouselContent>

@@ -11,13 +11,16 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'pill',
+      title: 'Pille',
+      type: 'string',
+    }),
+    defineField({
       name: 'style',
       title: 'Stil',
       type: 'string',
       options: {
-        list: [
-          { title: 'Invertiert', value: 'inverted' },
-        ],
+        list: [{ title: 'Invertiert', value: 'inverted' }],
       },
     }),
     defineField({

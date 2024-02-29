@@ -6,10 +6,10 @@ import useEmblaCarousel, {
 import Image from 'next/image'
 import * as React from 'react'
 
-import Button from '@/components/ui/button'
 import { cn } from '@/utils/cn'
 import carouselNavigationLeftIcon from './../../../public/icons/arrow-left-circle.svg'
 import carouselNavigationRightIcon from './../../../public/icons/arrow-right-circle.svg'
+import Button from './button'
 
 const TWEEN_FACTOR = 1.5
 const SIZE_FACTOR = 1
@@ -474,7 +474,7 @@ const ThreeSlidesCarouselItem = React.forwardRef<
       role="group"
       aria-roledescription="slide"
       className={cn(
-        'relative my-20 flex min-w-0 flex-[0_0_100%] shrink-0 grow-0 basis-full md:flex-[0_0_80%]  lg:pl-[1rem] xl:flex-[0_0_60%] ',
+        'relative my-16 flex min-w-0 flex-[0_0_100%] shrink-0 grow-0 basis-full md:flex-[0_0_80%] md:pl-[0.8rem]  lg:pl-[1rem] xl:flex-[0_0_60%] 2xl:pl-[3rem] ',
         className
       )}
       {...props}

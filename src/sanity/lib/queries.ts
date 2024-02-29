@@ -20,6 +20,7 @@ const Cards = q('cards')
   .grab$({
     _key: q.string(),
     title: q.string().optional().default('Ohne Titel'),
+    pill: q.string().optional(),
     style: q.string().optional(),
     image: sanityImageWithAlt(),
     content: q.contentBlocks().optional(),
