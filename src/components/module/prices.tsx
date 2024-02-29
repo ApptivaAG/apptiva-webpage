@@ -16,7 +16,6 @@ export default function Prices(props: { module: ModuleData }) {
       key={module._key}
       className="full bg-base-grey py-8 text-primary lg:py-28"
     >
-      {/* {module.prices?.map((price) => <p key={price.title}>{price.title}</p>)} */}
       <div className="content">
         <div className="space-y-20">
           <div className="flex flex-wrap gap-x-32 gap-y-8">
@@ -30,7 +29,7 @@ export default function Prices(props: { module: ModuleData }) {
               </div>
             )}
           </div>
-          <div className="grid gap-7 lg:grid-cols-3 ">
+          <div className="grid gap-7 gap-y-14 lg:grid-cols-3 ">
             {props.module.prices?.map((price, index) => (
               <div
                 key={price._key}
@@ -43,7 +42,14 @@ export default function Prices(props: { module: ModuleData }) {
                   </div>
                 )}
                 {/* upper part: blue or green */}
-                <div className=" flex flex-col items-center rounded-lg border-secondary p-9 pb-10 odd:bg-primary odd:text-base-white even:border-secondary even:bg-secondary even:text-primary">
+                <div
+                  className={
+                    ' flex flex-col items-center rounded-lg border-secondary p-9 pb-10  ' +
+                    (index % 2
+                      ? 'border-secondary bg-secondary text-primary'
+                      : 'bg-primary text-base-white')
+                  }
+                >
                   <Heading level={4} size={4} className="gap-6">
                     {price.title}
                   </Heading>
