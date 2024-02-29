@@ -24,6 +24,7 @@ export default defineType({
       name: 'isFavourite',
       title: 'Favorit',
       type: 'boolean',
+      initialValue: false,
     }),
 
     defineField({

@@ -111,6 +111,13 @@ export default defineType({
       hidden: isNotType('projects'),
     }),
     defineField({
+      name: 'priceCards',
+      title: 'Preis Karten',
+      type: 'array',
+      of: [{ type: 'priceCard' }],
+      hidden: ({ parent }) => parent?.type !== 'prices',
+    }),
+    defineField({
       title: 'FAQs',
       name: 'faqs',
       type: 'array',

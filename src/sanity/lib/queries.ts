@@ -62,7 +62,7 @@ export const Prices = q('priceCards')
     subtitle: q.string().optional(),
     pillText: q.string().optional(),
     isFavourite: q.boolean().optional(),
-    linkText: q.string().optional(),
+    linktext: q.string().optional(),
     link: q.string().optional(),
   })
   .nullable()

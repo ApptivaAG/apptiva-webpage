@@ -5,6 +5,8 @@ import Heading from '../heading'
 import { Card } from '../ui/card'
 import { PriceCard } from '../ui/price-card'
 import { PortableText } from '@portabletext/react'
+import { HandHeart } from 'lucide-react'
+import Button from '../ui/button'
 
 export default function Prices(props: { module: ModuleData }) {
   const { module } = props
@@ -29,18 +31,18 @@ export default function Prices(props: { module: ModuleData }) {
             )}
           </div>
           <div className="grid gap-7 lg:grid-cols-3 ">
-            {props.module.prices?.map((price) => (
+            {props.module.prices?.map((price, index) => (
               <div
                 key={price._key}
                 className="grid justify-items-center  rounded-b-lg rounded-t-lg bg-base-white"
               >
                 {price.isFavourite && (
-                  <div className=" z-0 m-[-1.5rem] h-10 rounded-[40px] bg-primary px-6 py-1.5 text-base-white">
-                    yes
+                  <div className=" z-0 m-[-1.5rem] flex h-10 place-items-center rounded-[40px] bg-primary px-6 py-1.5 text-base-white">
+                    <HandHeart className=" h-4 w-4 shrink-0 transition-transform duration-200" />
+                    <div className=" pl-2">Favorit</div>
                   </div>
                 )}
                 {/* upper part: blue or green */}
-
                 <div className=" flex flex-col items-center rounded-lg border-secondary p-9 pb-10 odd:bg-primary odd:text-base-white even:border-secondary even:bg-secondary even:text-primary">
                   <Heading level={4} size={4} className="gap-6">
                     {price.title}
@@ -58,6 +60,15 @@ export default function Prices(props: { module: ModuleData }) {
                       <PortableText value={module.content} />
                     </div>
                   )}
+                  <div className="mb-4 flex flex-initial ">
+                    <Button
+                      element="a"
+                      intent={index % 2 ? 'secondary' : 'primary'}
+                      href={price.link}
+                    >
+                      <p>{price.linktext}</p>
+                    </Button>
+                  </div>
                 </div>
               </div>
             ))}
