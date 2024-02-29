@@ -28,21 +28,27 @@ export default function Prices(props: { module: ModuleData }) {
               </div>
             )}
           </div>
-          <div className="grid gap-7 lg:grid-cols-3">
+          <div className="grid gap-7 lg:grid-cols-3 ">
             {props.module.prices?.map((price) => (
               <div
                 key={price._key}
-                className="grid justify-items-center rounded-b-lg rounded-t-lg bg-base-white"
+                className="grid justify-items-center  rounded-b-lg rounded-t-lg bg-base-white"
               >
+                {price.isFavourite && (
+                  <div className=" z-0 m-[-1.5rem] h-10 rounded-[40px] bg-primary px-6 py-1.5 text-base-white">
+                    yes
+                  </div>
+                )}
                 {/* upper part: blue or green */}
-                <div className=" flex flex-col items-center gap-6 rounded-lg border bg-primary p-9 pb-10 text-base-white">
-                  <Heading level={4} size={4}>
+
+                <div className=" flex flex-col items-center rounded-lg border-secondary p-9 pb-10 odd:bg-primary odd:text-base-white even:border-secondary even:bg-secondary even:text-primary">
+                  <Heading level={4} size={4} className="gap-6">
                     {price.title}
                   </Heading>
                   <p className="text-center">{price.subtitle}</p>
                 </div>
                 {/* middle part */}
-                <div className=" m-[-1.5rem]  h-10 rounded-lg bg-base-grey px-4 py-1.5">
+                <div className=" m-[-1.5rem]  h-10 rounded-[40px] bg-base-grey px-6 py-1.5">
                   {price.pillText}
                 </div>
                 {/* lower part: always on white bg */}
