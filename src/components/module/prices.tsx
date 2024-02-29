@@ -44,7 +44,7 @@ export default function Prices(props: { module: ModuleData }) {
                 {/* upper part: blue or green */}
                 <div
                   className={
-                    ' flex flex-col items-center rounded-lg border-secondary p-9 pb-10  ' +
+                    ' flex w-full flex-col items-center rounded-lg border-secondary p-9 pb-10  ' +
                     (index % 2
                       ? 'border-secondary bg-secondary text-primary'
                       : 'bg-primary text-base-white')
