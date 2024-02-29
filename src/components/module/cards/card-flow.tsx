@@ -11,6 +11,8 @@ export default function CardFlow(props: { module: ModuleData }) {
   const darkBg = module.style === 'dark-bg'
   const isLevel = (level: 1 | 2) => (module.level ?? 1) == level
 
+  const colStyle =
+    module.layout === '2-column' ? 'lg:grid-cols-2' : 'lg:grid-cols-3'
   return (
     <>
       {isLevel(2) && <hr />}
@@ -34,7 +36,7 @@ export default function CardFlow(props: { module: ModuleData }) {
                 </div>
               )}
             </div>
-            <div className="grid gap-7 lg:grid-cols-3">
+            <div className={cn('grid gap-7', colStyle)}>
               {module.cards?.map((card) => (
                 <Card
                   key={card._key}

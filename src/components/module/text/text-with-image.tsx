@@ -4,7 +4,7 @@ import { ModuleData } from '@/sanity/lib/queries'
 import { cn } from '@/utils/cn'
 import { PortableText } from '@portabletext/react'
 
-export default function Text(props: { module: ModuleData }) {
+export default function TextWithImage(props: { module: ModuleData }) {
   const { module } = props
 
   const darkBg = module.style === 'dark-bg'
@@ -15,17 +15,16 @@ export default function Text(props: { module: ModuleData }) {
       key={module._key}
       className={cn(
         'full py-8 lg:py-28',
-        darkBg ? 'bg-primary text-base-white' : 'text-primary',
-        isLevel(2) && 'border-t'
+        darkBg ? 'bg-primary text-base-white' : 'text-primary'
       )}
     >
-      <div className="content">
-        <div className="space-y-20">
-          <div className="flex flex-wrap gap-x-32 gap-y-8">
+      <div className="content *:[grid-column:feature-start/content-end]">
+        <div className="flex">
+          <SanityImage image={module.image} />
+          <div className={cn('space-y-8')}>
             <Heading level={isLevel(1) ? 2 : 3} size={isLevel(1) ? 3 : 4}>
               {module.title}
             </Heading>
-            <SanityImage image={module.image} />
             {module.content && (
               <div className="flex-1">
                 <PortableText value={module.content} />

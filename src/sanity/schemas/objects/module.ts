@@ -56,12 +56,13 @@ export default defineType({
       type: 'string',
       options: {
         list: [
-          { title: 'Fluss', value: 'card-flow' },
-          { title: 'Aufklappbare Liste', value: 'card-list-expandable' },
+          { title: 'einspaltig', value: '1-column' },
+          { title: 'zweispaltig', value: '2-column' },
+          { title: 'dreispaltig', value: '3-column' },
           { title: 'Karussell', value: 'card-carousel' },
         ],
       },
-      hidden: isNotType('cards'),
+      hidden: isNotType('cards', 'text'),
     }),
     defineField({
       name: 'style',
