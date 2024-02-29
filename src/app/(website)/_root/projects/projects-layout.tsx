@@ -35,6 +35,7 @@ export default function ProjectsLayout(props: { module: ModuleData }) {
               layout={'threeSlidesFadeOut'}
               darkTheme={true}
               numberOfSlides={props.module.projects.length}
+              className="pb-14"
             >
               <CarouselContent>
                 {props.module.projects.map((project, index) => {
