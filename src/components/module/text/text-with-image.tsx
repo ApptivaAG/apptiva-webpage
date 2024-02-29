@@ -14,14 +14,18 @@ export default function TextWithImage(props: { module: ModuleData }) {
     <section
       key={module._key}
       className={cn(
-        'full py-8 lg:py-28',
-        darkBg ? 'bg-primary text-base-white' : 'text-primary'
+        'full',
+        darkBg ? 'bg-primary text-base-white' : 'text-primary',
+        isLevel(1) ? 'py-8 lg:py-28' : 'pb-8 lg:pb-28'
       )}
     >
       <div className="content *:[grid-column:feature-start/content-end]">
-        <div className="flex">
-          <SanityImage image={module.image} />
-          <div className={cn('space-y-8')}>
+        <div className="flex items-end gap-x-24 gap-y-8 max-lg:flex-col-reverse">
+          <SanityImage
+            className="aspect-square rounded object-cover"
+            image={module.image}
+          />
+          <div className="space-y-8 lg:py-16">
             <Heading level={isLevel(1) ? 2 : 3} size={isLevel(1) ? 3 : 4}>
               {module.title}
             </Heading>
