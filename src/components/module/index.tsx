@@ -5,6 +5,7 @@ import FAQs from './faqs'
 import Prices from './prices'
 import Text from './text'
 import Contact from './contact'
+import Quote from './quote'
 
 export default function Module(props: {
   module: ModuleData
@@ -33,6 +34,9 @@ export default function Module(props: {
 
     case 'prices':
       return <Prices module={module} />
+
+    case 'quote':
+      return <Quote module={module} />
 
     default:
       return <div>Modultyp wählen</div>

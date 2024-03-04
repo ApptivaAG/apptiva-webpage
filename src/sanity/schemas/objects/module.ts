@@ -35,6 +35,7 @@ export default defineType({
           { title: 'Preise', value: 'prices' },
           { title: 'FAQs', value: 'faqs' },
           { title: 'Kontakt / CTA', value: 'contact' },
+          { title: 'Zitat', value: 'quote' },
         ],
       },
     }),
@@ -130,6 +131,17 @@ export default defineType({
         },
       ],
       hidden: isNotType('faqs'),
+    }),
+    defineField({
+      name: 'quotetext',
+      title: 'Zitat',
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+        },
+      ],
+      hidden: isNotType('quote'),
     }),
   ],
 })

@@ -68,6 +68,18 @@ export const Prices = q('priceCards')
   })
   .nullable()
 
+export const Persons = q('*')
+  .filterByType('person')
+  .grab$({
+    image: sanityImageWithAlt(),
+    mail: q('contact').grab$({
+      mail: q.string().optional().default('Keine Email-Adresse'),
+    }),
+    phone: q('contact').grab$({
+      phone: q.string().optional().default('Keine Telefonnummer'),
+    }),
+  })
+
 export type ModuleData = NonNullable<InferType<typeof Modules>>[number]
 const Modules = q('modules')
   .filter()
@@ -85,17 +97,8 @@ const Modules = q('modules')
     projects: Projects,
     faqs: FAQs,
     prices: Prices,
-    persons: q('*')
-      .filterByType('person')
-      .grab$({
-        image: sanityImageWithAlt(),
-        mail: q('contact').grab$({
-          mail: q.string().optional().default('Keine Email-Adresse'),
-        }),
-        phone: q('contact').grab$({
-          phone: q.string().optional().default('Keine Telefonnummer'),
-        }),
-      }),
+    persons: Persons,
+    quotetext: q.contentBlocks().optional(),
   })
   .nullable()
 
