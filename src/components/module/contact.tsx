@@ -31,7 +31,7 @@ export default function Contact(props: { module: ModuleData }) {
       className={cn('full bg-primary py-8 text-base-white md:py-36')}
     >
       <div className="content">
-        <div className="mx-auto flex flex-col justify-center gap-16 md:flex-row md:gap-36">
+        <div className="mx-auto flex flex-col flex-wrap justify-center gap-16 md:flex-row md:gap-36">
           <SanityImage
             image={contactPerson.image}
             className="size-[26rem] object-cover"
