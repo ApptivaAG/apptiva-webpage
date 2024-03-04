@@ -9,7 +9,7 @@ export default function Quote(props: { module: ModuleData }) {
   return (
     <section
       key={module._key}
-      className="full bg-primary p-20 py-8 text-base-white lg:p-60 lg:py-28"
+      className="full bg-primary px-8 py-8 text-base-white lg:p-60 lg:py-28"
     >
       {module.quotetext && (
         <div>
