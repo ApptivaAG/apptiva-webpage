@@ -2,11 +2,10 @@ import SanityImage from '@/components/sanity-image'
 import { ModuleData } from '@/sanity/lib/queries'
 import { cn } from '@/utils/cn'
 import StyledPortableText from '../styled-portable-text'
+import Button from '../ui/button'
 
 export default function Contact(props: { module: ModuleData }) {
   const { module } = props
-
-  const darkBg = module.style === 'dark-bg'
 
   const weekday = new Date().getDay()
 
@@ -24,26 +23,30 @@ export default function Contact(props: { module: ModuleData }) {
     }
   }
 
+  const contactPerson = getContactPersonOfWeekday()
+
   return (
     <section
       key={module._key}
-      className={cn(
-        'full py-8 lg:py-28',
-        darkBg ? 'bg-primary text-base-white' : 'text-primary'
-      )}
+      className={cn('full bg-primary py-8 text-base-white md:py-36')}
     >
       <div className="content">
-        <div className="space-y-20">
-          <div className="flex flex-wrap gap-x-32 gap-y-8">
-            <SanityImage
-              image={getContactPersonOfWeekday().image}
-              className="size-[26rem] object-cover"
-            />
-            <div>
+        <div className="mx-auto flex flex-col justify-center gap-16 md:flex-row md:gap-36">
+          <SanityImage
+            image={contactPerson.image}
+            className="size-[26rem] object-cover"
+          />
+          <div className="flex flex-col justify-center">
+            <div className="w-[26rem]">
               {module.content && (
-                <StyledPortableText content={module.content} />
+                <StyledPortableText content={module.content} spreadParagraphs />
               )}
             </div>
+            <Button intent="secondary" className="mb-5 mt-16 w-fit px-6">
+              Termin buchen
+            </Button>
+            <p className="mb-3">{contactPerson.mail.mail}</p>
+            <p>{contactPerson.phone.phone}</p>
           </div>
         </div>
       </div>
