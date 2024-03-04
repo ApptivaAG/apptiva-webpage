@@ -32,14 +32,6 @@ export default function Module(props: {
       return <Contact module={module} />
 
     case 'prices':
-      console.log('module with prices? ', module)
-      // return (
-      //   <>
-      //     {module.prices?.map((price) => (
-      //       <p key={price.title}>{price.title}</p>
-      //     ))}
-      //   </>
-      // )
       return <Prices module={module} />
 
     default:
