@@ -9,45 +9,48 @@ import {
 import { ModuleData } from '@/sanity/lib/queries'
 
 export default function ProjectsLayout(props: { module: ModuleData }) {
+  console.log('props module introduction ', props.module?.introduction)
+
   return (
     <div className="full bg-primary text-base-white">
       <div className="mt-10">
-        <div className="content m-auto">
-          {props.module.introduction?.map((content: any) => (
-            <StyledPortableText key={content._key} content={content} />
-          ))}
-          <div className="flex">
-            <Button
-              intent="secondary"
-              element="a"
-              href={'/projekte'}
-              className="mt-10"
-            >
-              Alle Referenzen
-            </Button>
+        {props.module.introduction && (
+          <div className="content m-auto">
+            {props.module?.introduction?.map((content: any) => (
+              <StyledPortableText key={content._key} content={content} />
+            ))}
+
+            <div className="flex">
+              <Button
+                intent="secondary"
+                element="a"
+                href={'/projekte'}
+                className="mt-10"
+              >
+                Alle Referenzen
+              </Button>
+            </div>
           </div>
-        </div>
+        )}
 
         {props.module.projects && (
-          <>
-            <Carousel
-              opts={{ loop: true }}
-              layout={'threeSlidesFadeOut'}
-              darkTheme={true}
-              numberOfSlides={props.module.projects.length}
-              className="pb-14"
-            >
-              <CarouselContent>
-                {props.module.projects.map((project, index) => {
-                  return (
-                    <CarouselItem key={index} index={index}>
-                      <ProjectOverview project={project}></ProjectOverview>
-                    </CarouselItem>
-                  )
-                })}
-              </CarouselContent>
-            </Carousel>
-          </>
+          <Carousel
+            opts={{ loop: true }}
+            layout={'threeSlidesFadeOut'}
+            darkTheme={true}
+            numberOfSlides={props.module.projects.length}
+            className="pb-14"
+          >
+            <CarouselContent>
+              {props.module.projects.map((project, index) => {
+                return (
+                  <CarouselItem key={index} index={index}>
+                    <ProjectOverview project={project}></ProjectOverview>
+                  </CarouselItem>
+                )
+              })}
+            </CarouselContent>
+          </Carousel>
         )}
       </div>
     </div>
