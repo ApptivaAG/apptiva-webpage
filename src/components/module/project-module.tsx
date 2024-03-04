@@ -9,7 +9,10 @@ export default function ProjectModule(props: { module: ModuleData }) {
       key={module._key}
       className="full bg-primary py-8 text-base-white lg:py-28"
     >
-      <ProjectsLayout module={module} />
+      <ProjectsLayout
+        introduction={module.introduction}
+        projects={module.projects}
+      />
     </section>
   )
 }

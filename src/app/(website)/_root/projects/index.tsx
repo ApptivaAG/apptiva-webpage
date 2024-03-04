@@ -17,6 +17,9 @@ export default async function Projects() {
   return isEnabled ? (
     <ProjectsPreview initial={draft} />
   ) : (
-    <ProjectsLayout module={published.projectStartpage as ModuleData} />
+    <ProjectsLayout
+      projects={published.projectStartpage.projects}
+      introduction={published.projectStartpage.introduction}
+    />
   )
 }
