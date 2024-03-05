@@ -1,4 +1,4 @@
-import { claimQuery } from '@/sanity/lib/queries'
+import { settingsQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
 import { draftMode } from 'next/headers'
 import Content from './content'
@@ -6,7 +6,7 @@ import HeroPreview from './preview'
 
 export default async function Hero() {
   const { isEnabled } = draftMode()
-  const { draft, published } = await load(claimQuery, isEnabled, undefined, [
+  const { draft, published } = await load(settingsQuery, isEnabled, undefined, [
     'settings',
   ])
 
