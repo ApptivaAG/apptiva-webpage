@@ -33,7 +33,7 @@ export default function Heading(
     {
       className: cn(
         getClassNameByLevel(props.size ?? props.level),
-        'font-bold text-balance',
+        'font-bold text-balance whitespace-break-spaces',
         props.className
       ),
     },

@@ -34,9 +34,13 @@ const StyledPortableText = ({
       h2: ({ children }) => <Heading level={2}>{children}</Heading>,
       h3: ({ children }) => <Heading level={3}>{children}</Heading>,
       h4: ({ children }) => <Heading level={4}>{children}</Heading>,
-      ...(spreadParagraphs && {
-        normal: ({ children }) => <p className="py-4">{children}</p>,
-      }),
+      normal: ({ children }) => (
+        <p
+          className={`whitespace-break-spaces ${spreadParagraphs ? 'py-4' : ''}`}
+        >
+          {children}
+        </p>
+      ),
     },
   }
 
