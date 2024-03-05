@@ -88,11 +88,9 @@ const Modules = q('modules')
     persons: q('*')
       .filterByType('person')
       .grab$({
-        image: sanityImageWithAlt(),
-        mail: q('contact').grab$({
+        imageWithoutBackground: sanityImageWithAlt('imageWithoutBackground'),
+        contact: q('contact').grab$({
           mail: q.string().optional().default('Keine Email-Adresse'),
-        }),
-        phone: q('contact').grab$({
           phone: q.string().optional().default('Keine Telefonnummer'),
         }),
       }),
