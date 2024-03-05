@@ -15,6 +15,8 @@ export default async function AboutPage() {
     ['about-page']
   )
 
+  console.log('about page modules', published.modules)
+
   const customers = (
     <>
       <Testimonials />

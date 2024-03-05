@@ -13,8 +13,6 @@ export default function ProjectsLayout(props: {
   projects: ModuleData['projects']
   introduction: PortableText | undefined
 }) {
-  console.log('props module introduction ', props.introduction)
-
   return (
     <div className="full bg-primary text-base-white">
       <div className="mt-10">
