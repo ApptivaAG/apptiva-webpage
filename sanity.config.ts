@@ -46,7 +46,8 @@ export default defineConfig({
 
             // List out the rest of the document types, but filter out the singleton types
             ...S.documentTypeListItems().filter(
-              (listItem) => !['settings'].includes(String(listItem.getId()))
+              (listItem) =>
+                !['settings', 'about-page'].includes(String(listItem.getId()))
             ),
           ]),
     }),
