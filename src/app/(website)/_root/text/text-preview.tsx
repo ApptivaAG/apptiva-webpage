@@ -1,4 +1,5 @@
 'use client'
+
 import { settingsQuery } from '@/sanity/lib/queries'
 import { QueryResponseInitial, useQuery } from '@sanity/react-loader'
 import { SettingsData } from '../hero/types'
