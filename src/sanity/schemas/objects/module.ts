@@ -84,6 +84,18 @@ export default defineType({
       hidden: isNotType('cards', 'prices', 'text'),
     }),
     defineField({
+      name: 'orientation',
+      title: 'Ausrichtung',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Bild Links', value: 'left' },
+          { title: 'Bild Rechts', value: 'right' },
+        ],
+      },
+      hidden: isNotType('text'),
+    }),
+    defineField({
       name: 'content',
       title: 'Inhalt',
       type: 'array',

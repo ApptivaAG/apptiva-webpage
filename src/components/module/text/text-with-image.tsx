@@ -3,12 +3,15 @@ import SanityImage from '@/components/sanity-image'
 import { ModuleData } from '@/sanity/lib/queries'
 import { cn } from '@/utils/cn'
 import { PortableText } from '@portabletext/react'
+import { vercelStegaCleanAll } from '@sanity/client/stega'
 
 export default function TextWithImage(props: { module: ModuleData }) {
   const { module } = props
 
-  const darkBg = module.style === 'dark-bg'
+  const darkBg = vercelStegaCleanAll(module.style) === 'dark-bg'
   const isLevel = (level: 1 | 2) => (module.level ?? 1) == level
+  const isOrientation = (orientation: 'left' | 'right') =>
+    vercelStegaCleanAll(module.orientation) === orientation
 
   return (
     <section
@@ -19,8 +22,20 @@ export default function TextWithImage(props: { module: ModuleData }) {
         isLevel(1) ? 'py-8 lg:py-28' : 'pb-8 lg:pb-28'
       )}
     >
-      <div className="content *:[grid-column:feature-start/content-end]">
-        <div className="flex items-end gap-x-24 gap-y-8 max-lg:flex-col-reverse">
+      <div
+        className={cn(
+          'content',
+          isOrientation('left')
+            ? '*:[grid-column:feature-start/content-end]'
+            : '*:[grid-column:content-start/feature-end]'
+        )}
+      >
+        <div
+          className={cn(
+            isOrientation('right') && 'flex-row-reverse',
+            'flex items-end gap-x-24 gap-y-8 max-lg:flex-col-reverse'
+          )}
+        >
           <SanityImage
             className="aspect-square rounded object-cover"
             image={module.image}

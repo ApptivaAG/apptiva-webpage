@@ -90,6 +90,7 @@ const Modules = q('modules')
     layout: q.string().optional(),
     style: q.string().optional(),
     image: sanityImageWithAlt(),
+    orientation: q.string().optional(),
     content: q.contentBlocks().optional(),
     cards: Cards,
     projects: Projects,
