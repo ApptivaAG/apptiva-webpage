@@ -362,6 +362,8 @@ export const personBySlugQuery = q('*')
       .optional(),
   })
 
-export const claimQuery = q('*').filterByType('settings').grab$({
+export const settingsQuery = q('*').filterByType('settings').grab$({
   claim: q.contentBlocks().optional(),
+  text: q.contentBlocks().optional(),
+  //modules: Modules,
 })

@@ -2,10 +2,10 @@
 
 import { settingsQuery } from '@/sanity/lib/queries'
 import { QueryResponseInitial, useQuery } from '@sanity/react-loader'
-import Content from './content'
-import { SettingsData } from './types'
+import { SettingsData } from '../hero/types'
+import SettingsText from './settings-text'
 
-export default function HeroPreview({
+export default function TextPreview({
   initial,
 }: {
   initial: QueryResponseInitial<SettingsData[]>
@@ -13,6 +13,6 @@ export default function HeroPreview({
   const { data } = useQuery<SettingsData[]>(settingsQuery.query, undefined, {
     initial,
   })
-  const claim = data.at(0)?.claim
-  return claim ? <Content claim={claim} /> : 'No Claim'
+
+  return <SettingsText text={data?.at(0)?.text} />
 }

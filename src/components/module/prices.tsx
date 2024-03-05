@@ -7,6 +7,7 @@ import { PriceCard } from '../ui/price-card'
 import { PortableText } from '@portabletext/react'
 import { HandHeart } from 'lucide-react'
 import Button from '../ui/button'
+import StyledPortableText from '../styled-portable-text'
 
 export default function Prices(props: { module: ModuleData }) {
   const { module } = props
@@ -61,9 +62,9 @@ export default function Prices(props: { module: ModuleData }) {
                 </div>
                 {/* lower part: always on white bg */}
                 <div className="flex flex-col items-center gap-6  p-4 pt-10 text-primary">
-                  {module.content && (
+                  {price.content && (
                     <div className="flex-1">
-                      <PortableText value={module.content} />
+                      <StyledPortableText content={price.content} />
                     </div>
                   )}
                   <div className="mb-4 flex flex-initial ">

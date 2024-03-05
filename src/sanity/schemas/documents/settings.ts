@@ -15,6 +15,16 @@ export default defineType({
         },
       ],
     },
+    {
+      name: 'text',
+      title: 'Text nach Hero',
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+        },
+      ],
+    },
     defineField({
       name: 'projectStartpage',
       title: 'Projekt Startseite',

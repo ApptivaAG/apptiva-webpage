@@ -104,7 +104,7 @@ export default defineType({
           type: 'block',
         },
       ],
-      hidden: isNotType('cards', 'faqs', 'text', 'contact'),
+      hidden: isNotType('cards', 'faqs', 'text', 'contact', 'prices'),
     }),
     defineField({
       name: 'cards',
