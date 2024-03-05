@@ -19,6 +19,7 @@ import projectStartpage from './schemas/objects/project-startpage'
 import skill from './schemas/objects/skill'
 import skillItem from './schemas/objects/skill-item'
 import social from './schemas/objects/social'
+import aboutPage from './schemas/documents/about-page'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -40,6 +41,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     meta,
     card,
     priceCard,
+    aboutPage,
     projectStartpage,
   ],
 }
