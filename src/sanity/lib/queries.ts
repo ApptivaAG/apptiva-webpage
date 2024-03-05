@@ -71,11 +71,9 @@ export const Prices = q('priceCards')
 export const Persons = q('*')
   .filterByType('person')
   .grab$({
-    image: sanityImageWithAlt(),
-    mail: q('contact').grab$({
+    imageWithoutBackground: sanityImageWithAlt('imageWithoutBackground'),
+    contact: q('contact').grab$({
       mail: q.string().optional().default('Keine Email-Adresse'),
-    }),
-    phone: q('contact').grab$({
       phone: q.string().optional().default('Keine Telefonnummer'),
     }),
   })
@@ -92,6 +90,7 @@ const Modules = q('modules')
     layout: q.string().optional(),
     style: q.string().optional(),
     image: sanityImageWithAlt(),
+    orientation: q.string().optional(),
     content: q.contentBlocks().optional(),
     cards: Cards,
     projects: Projects,

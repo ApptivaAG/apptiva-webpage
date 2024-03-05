@@ -60,6 +60,11 @@ export default defineType({
       type: 'imageWithAlt',
     }),
     defineField({
+      name: 'imageWithoutBackground',
+      title: 'Bild ohne Hintergrund',
+      type: 'imageWithAlt',
+    }),
+    defineField({
       title: 'Skills',
       name: 'skills',
       type: 'array',
