@@ -1,7 +1,7 @@
+import Heading from '@/components/heading'
+import SanityImage from '@/components/sanity-image'
+import { ServiceTeaserData } from '@/sanity/lib/queries'
 import { PortableText } from '@portabletext/react'
-import Heading from '../../../../components/heading'
-import SanityImage from '../../../../components/sanity-image'
-import { ServiceTeaserData } from './types'
 
 const ServiceTeaser = ({
   service,

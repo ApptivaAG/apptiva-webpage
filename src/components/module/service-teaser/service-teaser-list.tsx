@@ -1,5 +1,5 @@
-import ServiceTeaser from './item'
-import { ServiceTeaserData } from './types'
+import { ServiceTeaserData } from '@/sanity/lib/queries'
+import ServiceTeaser from './service-teaser-item'
 
 export default function ServiceTeaserList(props: {
   services: ServiceTeaserData[]

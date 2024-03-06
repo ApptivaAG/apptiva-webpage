@@ -243,6 +243,9 @@ export const serviceBySlugQuery = q('*')
     modules: Modules,
   })
 
+export type ServiceTeaserData = NonNullable<
+  InferType<typeof servicesTeaserQuery>
+>[number]
 export const servicesTeaserQuery = q('*')
   .filterByType('service-page')
   .filter('showInHome')
@@ -365,4 +368,5 @@ export const personBySlugQuery = q('*')
 export const settingsQuery = q('*').filterByType('settings').grab$({
   claim: q.contentBlocks().optional(),
   modules: Modules,
+  serviceTeaser: servicesTeaserQuery,
 })

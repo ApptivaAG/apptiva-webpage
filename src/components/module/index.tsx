@@ -1,4 +1,4 @@
-import { ModuleData } from '@/sanity/lib/queries'
+import { ModuleData, ServiceTeaserData } from '@/sanity/lib/queries'
 import Cards from './cards'
 import ProjectModule from './project-module'
 import FAQs from './faqs'
@@ -6,10 +6,12 @@ import Prices from './prices'
 import Text from './text'
 import Contact from './contact'
 import Quote from './quote'
+import ServiceTeaserList from './service-teaser/service-teaser-list'
 
 export default function Module(props: {
   module: ModuleData
   customers: React.ReactNode
+  serviceTeasers?: ServiceTeaserData
 }) {
   const { module } = props
 
@@ -39,7 +41,7 @@ export default function Module(props: {
       return <Quote module={module} />
 
     case 'teaser-servicepage':
-      return <p>*****service teaser list*****</p>
+      return <ServiceTeaserList services={props.serviceTeasers} />
 
     default:
       return <div>Modultyp wählen</div>
