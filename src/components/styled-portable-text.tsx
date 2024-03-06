@@ -15,9 +15,6 @@ const StyledPortableText = ({
       underline: ({ children }) => (
         <span className="highlighted-text">{children}</span>
       ),
-      strong: ({ children }) => (
-        <span className="highlighted-text">{children}</span>
-      ),
     },
     list: {
       bullet: ({ children }) => (
