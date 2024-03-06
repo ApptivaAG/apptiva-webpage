@@ -36,6 +36,7 @@ export default defineType({
           { title: 'FAQs', value: 'faqs' },
           { title: 'Kontakt / CTA', value: 'contact' },
           { title: 'Zitat', value: 'quote' },
+          { title: 'Teaser Angebot', value: 'teaser-servicepage' },
         ],
       },
     }),

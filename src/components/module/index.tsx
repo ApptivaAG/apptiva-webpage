@@ -38,6 +38,9 @@ export default function Module(props: {
     case 'quote':
       return <Quote module={module} />
 
+    case 'teaser-servicepage':
+      return <p>*****service teaser list*****</p>
+
     default:
       return <div>Modultyp wählen</div>
   }
