@@ -15,16 +15,12 @@ export default defineType({
         },
       ],
     },
-    {
-      name: 'text',
-      title: 'Text nach Hero',
+    defineField({
+      name: 'modules',
+      title: 'Module',
       type: 'array',
-      of: [
-        {
-          type: 'block',
-        },
-      ],
-    },
+      of: [{ type: 'module' }],
+    }),
     defineField({
       name: 'projectStartpage',
       title: 'Projekt Startseite',

@@ -364,6 +364,5 @@ export const personBySlugQuery = q('*')
 
 export const settingsQuery = q('*').filterByType('settings').grab$({
   claim: q.contentBlocks().optional(),
-  text: q.contentBlocks().optional(),
-  //modules: Modules,
+  modules: Modules,
 })
