@@ -107,6 +107,11 @@ const customerList = [
     alt: 'Baumgartner Fenster',
     height: 40,
   },
+  {
+    fileName: 'oekowatt-logo.svg',
+    alt: 'OekoWatt AG',
+    height: 40,
+  },
 ]
 
 export default function getCustomerLogos() {
