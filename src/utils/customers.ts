@@ -18,14 +18,14 @@ const customerList = [
     height: 80,
   },
   {
-    fileName: 'vivanco-200.png',
+    fileName: 'vivanco-logo.svg',
     alt: 'Vivanco Gruppe AG',
     height: 50,
   },
   {
-    fileName: 'globus.png',
+    fileName: 'globus-logo.svg',
     alt: 'Magazine zum Globus',
-    height: 35,
+    height: 60,
   },
   {
     fileName: 'kanton-bern-logo.svg',
