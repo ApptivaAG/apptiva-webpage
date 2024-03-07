@@ -482,7 +482,7 @@ const ThreeSlidesCarouselItem = React.forwardRef<
       role="group"
       aria-roledescription="slide"
       className={cn(
-        'relative my-16 flex min-w-0 flex-[0_0_100%] shrink-0 grow-0 basis-full md:flex-[0_0_90%] md:pl-[0.8rem]  lg:pl-[1rem] xl:flex-[0_0_70%] 2xl:pl-[3rem] ',
+        'relative my-8 flex min-w-0 flex-[0_0_100%] shrink-0 grow-0 basis-full md:my-16 md:flex-[0_0_90%] md:pl-[0.8rem]  lg:pl-[1rem] xl:flex-[0_0_70%] 2xl:pl-[3rem] ',
         className
       )}
       {...props}
