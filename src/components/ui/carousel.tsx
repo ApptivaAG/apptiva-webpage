@@ -294,13 +294,19 @@ const CarouselContent = React.forwardRef<
     progressBarLine,
   } = useCarousel()
   let carouselNavigationButton
+  let xlCarouselNavigationButton
   switch (layout) {
     case 'oneSlide':
       carouselNavigationButton = 'w-6/12'
       break
     case 'threeSlidesFadeOut':
       carouselNavigationButton = 'w-[20%]'
+      xlCarouselNavigationButton = 'w-[20%]'
       break
+    case 'threeSlides':
+      carouselNavigationButton = 'w-[5%]'
+      xlCarouselNavigationButton = 'w-[15%]'
+
     default:
       break
   }
@@ -315,17 +321,19 @@ const CarouselContent = React.forwardRef<
         onMouseMove={handleMouseMove}
         onMouseEnter={handlePrevButtonHover}
         onMouseLeave={handlePrevButtonLeave}
-        className={`absolute left-0 top-0 z-30 hidden h-full w-6/12 bg-transparent hover:bg-transparent lg:block ${carouselNavigationButton}`}
+        xlCarouselNavigationButton="w-[5%]"
+        className={`absolute left-0 top-0 z-30 hidden h-full w-6/12 bg-transparent hover:bg-transparent lg:block ${carouselNavigationButton} xl:${xlCarouselNavigationButton}`}
       >
         {' '}
       </Button>
       {layout == 'threeSlidesFadeOut' && <div className="w-[60%]"> </div>}
+      {layout == 'threeSlides' && <div className="w-[60%]"> </div>}
       <Button
         onClick={scrollNext}
         onMouseMove={handleMouseMove}
         onMouseEnter={handleNextButtonHover}
         onMouseLeave={handleNextButtonLeave}
-        className={` absolute right-0 top-0 z-30 hidden h-full w-6/12 bg-transparent hover:bg-transparent lg:block ${carouselNavigationButton}`}
+        className={` absolute right-0 top-0 z-30 hidden h-full w-6/12 bg-transparent hover:bg-transparent lg:block ${carouselNavigationButton} xl:${xlCarouselNavigationButton}`}
       >
         {' '}
       </Button>
@@ -474,7 +482,7 @@ const ThreeSlidesCarouselItem = React.forwardRef<
       role="group"
       aria-roledescription="slide"
       className={cn(
-        'relative my-16 flex min-w-0 flex-[0_0_100%] shrink-0 grow-0 basis-full md:flex-[0_0_80%] md:pl-[0.8rem]  lg:pl-[1rem] xl:flex-[0_0_60%] 2xl:pl-[3rem] ',
+        'relative my-16 flex min-w-0 flex-[0_0_100%] shrink-0 grow-0 basis-full md:flex-[0_0_90%] md:pl-[0.8rem]  lg:pl-[1rem] xl:flex-[0_0_70%] 2xl:pl-[3rem] ',
         className
       )}
       {...props}
