@@ -442,7 +442,7 @@ const ThreeSlidesFadeOutCarouselItem = React.forwardRef<
       aria-roledescription="slide"
       key={index}
       className={cn(
-        'relative my-20 flex h-[--min-size-mobile] min-w-0 flex-[0_0_100%] shrink-0 grow-0 basis-full md:flex-[0_0_60%] lg:h-[--min-size] lg:pl-[1rem]',
+        'relative my-20 flex h-[--min-size-mobile] min-w-0 flex-[0_0_100%] shrink-0 grow-0 basis-full md:flex-[0_0_90%] md:pl-[1rem] lg:h-[--min-size] lg:flex-[0_0_60%]',
         className
       )}
       style={
@@ -460,11 +460,12 @@ const ThreeSlidesFadeOutCarouselItem = React.forwardRef<
           {
             ...(transitioinValues.length && {
               '--project-overview-height': `${sizeValue[index]}px`,
+              '--project-overview-height-tablet': `${sizeValue[index] / 1.5}px`,
               '--project-overview-height-mobile': `${sizeValue[index] / 2}px`,
             }),
           } as React.CSSProperties
         }
-        className="absolute top-1/2 h-[--project-overview-height-mobile] -translate-y-1/2 rounded-lg border border-base-grey p-5 lg:h-[--project-overview-height]"
+        className="absolute top-1/2 h-[--project-overview-height-mobile] -translate-y-1/2 rounded-lg border border-base-grey p-5 md:h-[--project-overview-height-tablet] xl:h-[--project-overview-height]"
         {...props}
       ></div>
     </div>
