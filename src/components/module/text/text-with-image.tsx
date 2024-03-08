@@ -19,7 +19,7 @@ export default function TextWithImage(props: { module: ModuleData }) {
       className={cn(
         'full',
         darkBg ? 'bg-primary text-base-white' : 'text-primary',
-        isLevel(1) ? 'py-8 lg:py-28' : 'pb-8 lg:pb-28'
+        isLevel(1) ? 'py-12 lg:py-28' : 'pb-12 lg:pb-28'
       )}
     >
       <div
@@ -36,11 +36,13 @@ export default function TextWithImage(props: { module: ModuleData }) {
             'flex items-end gap-x-24 gap-y-8 max-lg:flex-col-reverse'
           )}
         >
-          <SanityImage
-            className="aspect-square rounded object-cover"
-            image={module.image}
-          />
-          <div className="space-y-8 lg:py-16">
+          <div className="flex-[1.2]">
+            <SanityImage
+              className="aspect-square rounded object-cover"
+              image={module.image}
+            />
+          </div>
+          <div className="flex-1 space-y-4 lg:space-y-8 lg:py-16">
             <Heading level={isLevel(1) ? 2 : 3} size={isLevel(1) ? 3 : 4}>
               {module.title}
             </Heading>
