@@ -156,6 +156,18 @@ export default defineType({
       ],
       hidden: isNotType('quote'),
     }),
+    defineField({
+      title: 'Angebote',
+      name: 'servicePageTeaser',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: { type: 'service-page' },
+        },
+      ],
+      hidden: isNotType('teaser-servicepage'),
+    }),
   ],
 })
 
