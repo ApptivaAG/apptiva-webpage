@@ -49,7 +49,13 @@ const config: Config = {
       black: colors.black,
       transparent: colors.transparent,
     },
-    borderRadius: { none: '0', DEFAULT: '0.5rem', md: '0.75rem', lg: '1rem' },
+    borderRadius: {
+      none: '0',
+      DEFAULT: '0.5rem',
+      md: '0.75rem',
+      lg: '1rem',
+      full: '9999px',
+    },
     listStyleType: {
       none: 'none',
       disc: 'disc',
