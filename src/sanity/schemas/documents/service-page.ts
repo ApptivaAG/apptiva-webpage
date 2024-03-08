@@ -6,8 +6,8 @@ export default defineType({
   type: 'document',
   groups: [
     {
-      name: 'home',
-      title: 'Startseite',
+      name: 'teaser',
+      title: 'Teaser',
     },
   ],
   fields: [
@@ -26,23 +26,16 @@ export default defineType({
       },
     }),
     defineField({
-      name: 'showInHome',
-      title: 'Auf Startseite anzeigen',
-      type: 'boolean',
-      initialValue: false,
-      group: 'home',
-    }),
-    defineField({
       name: 'teaserTitle',
       title: 'Teaser Titel',
       type: 'string',
-      group: 'home',
+      group: 'teaser',
     }),
     defineField({
       name: 'illustration',
       title: 'Illustration',
       type: 'imageWithAlt',
-      group: 'home',
+      group: 'teaser',
     }),
     defineField({
       name: 'teaser',
@@ -53,7 +46,7 @@ export default defineType({
           type: 'block',
         },
       ],
-      group: 'home',
+      group: 'teaser',
     }),
     defineField({
       name: 'modules',
