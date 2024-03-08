@@ -20,9 +20,11 @@ export default async function Knowledge() {
         <div className="content space-y-4">
           <Heading level={2}>Neueste Blogposts</Heading>
           <div>
-            <Button>
-              <Link href={'/blog/'}>Alle Blogposts</Link>
-            </Button>
+            <Link href={'/blog/'}>
+              <Button element="div" className="inline">
+                Alle Blogposts
+              </Button>
+            </Link>
           </div>
         </div>
         <Carousel
@@ -40,11 +42,15 @@ export default async function Knowledge() {
                 >
                   <Heading level={2}>{post.title}</Heading>
                   <p className="line-clamp-5 flex-1">{post.description}</p>
-                  <Button className="self-end" intent={'secondary'}>
-                    <Link href={`/blog/${slug}`}>
-                      <p>→ Zum Blogpost</p>
-                    </Link>
-                  </Button>
+                  <Link className="self-end" href={`/blog/${slug}`}>
+                    <Button
+                      element="div"
+                      className="inline"
+                      intent={'secondary'}
+                    >
+                      → Zum Blogpost
+                    </Button>
+                  </Link>
                 </Card>
               </CarouselItem>
             ))}
