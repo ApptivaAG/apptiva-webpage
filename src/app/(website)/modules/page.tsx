@@ -7,14 +7,15 @@ import { draftMode } from 'next/headers'
 import ModuleWrapper from './modules'
 import ModulesPreview from './modules-preview'
 
-export default async function Modules() {
+export default async function ModulesPage() {
   const { isEnabled } = draftMode()
   const { published, draft } = await load(settingsQuery, isEnabled, undefined, [
     'settings',
   ])
 
-  console.log('at home page Modules', published[0].modules)
-  console.log('at home page service teaser', published[0].serviceTeaser)
+  // console.log('at home page draft', draft.data)
+  // console.log('at home page Modules', published[0].modules)
+  // console.log('at home page service teaser', published[0].serviceTeaser)
 
   const customers = (
     <>
@@ -26,7 +27,6 @@ export default async function Modules() {
   return isEnabled ? (
     <ModulesPreview initial={draft} customers={customers} />
   ) : (
-    // <About data={published} customers={customers} />
-    <ModuleWrapper data={published[0]} customers={customers} />
+    <ModuleWrapper data={published} customers={customers} />
   )
 }

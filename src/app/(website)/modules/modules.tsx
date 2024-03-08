@@ -1,11 +1,11 @@
 import Module from '@/components/module'
-import { SettingsData } from '../_root/hero/types'
+import { SettingsDataQueries } from '@/sanity/lib/queries'
 
 export default function ModuleWrapper(props: {
-  data: SettingsData
+  data: SettingsDataQueries
   customers: React.ReactNode
 }) {
-  console.log('modules at modulewrapper ', props.data?.modules)
+  console.log('modules at modulewrapper ', props.data.modules)
 
   return (
     <>
