@@ -1,39 +1,35 @@
+import Heading from '@/components/heading'
+import Cards from '@/components/module/cards'
+import Button from '@/components/ui/button'
+import { Card } from '@/components/ui/card'
 import { getPosts } from '@/utils/blog'
 import Link from 'next/link'
 
-export default async function BlogPosts({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string | string[] | undefined }
-}) {
+export default async function BlogPosts() {
   const posts = await getPosts()
 
-  const allPosts = Array.from(posts.entries())
-  const tagsInSearchParams = searchParams['tag']
-  const filteredPosts =
-    tagsInSearchParams === undefined
-      ? allPosts
-      : allPosts.filter(([slug, post]) =>
-          matchingTags(tagsInSearchParams, post.tags)
-        )
+  const allPosts = Array.from(posts.entries()).toSorted(
+    ([, a], [, b]) =>
+      new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
+  )
 
   return (
-    <ul>
-      {filteredPosts.map(([slug, post]) => (
+    <ul className="grid gap-4 py-16 lg:grid-cols-3">
+      {allPosts.map(([slug, post]) => (
         <li key={slug}>
-          <Link href={`/blog/${slug}`}>{post.title}</Link>
+          <Card className="flex h-full flex-col space-y-4">
+            <p
+              className="text-lg font-bold leading-5"
+              dangerouslySetInnerHTML={{ __html: post.title }}
+            />
+            <p className="line-clamp-5">{post.description}</p>
+            <div className="h-2"></div>
+            <Button className="!mt-auto">
+              <Link href={`/blog/${slug}`}>→ Zum Blogpost</Link>
+            </Button>
+          </Card>
         </li>
       ))}
     </ul>
   )
-}
-
-function matchingTags(
-  searchParamTag: Array<string> | string,
-  postTags: Array<string> | undefined
-) {
-  const tagArray =
-    typeof searchParamTag === 'string' ? [searchParamTag] : searchParamTag
-  const intersection = tagArray.filter((value) => postTags?.includes(value))
-  return intersection.length > 0
 }

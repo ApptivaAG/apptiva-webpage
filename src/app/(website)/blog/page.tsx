@@ -1,29 +1,22 @@
-import Heading from '@/components/heading'
-import { TagFilter } from '@/components/tag-filter'
-import { getTags } from '@/utils/tags'
-import BlogPosts from './blog-posts'
+import { PageHeader } from '@/components/page-header'
 import { Suspense } from 'react'
+import BlogPosts from './blog-posts'
 
-export default async function Home({
-  params,
-  searchParams,
-}: {
-  params: { slug: string }
-  searchParams: { [key: string]: string | string[] | undefined }
-}) {
-  const tags = await getTags()
-
+export default async function Home({ params }: { params: { slug: string } }) {
   return (
-    <div className="space-y-4">
-      <Heading level={2}>Blog</Heading>
-      <TagFilter tags={tags} searchParams={searchParams}></TagFilter>
-      <Suspense
-        fallback={
-          <p className="pb-64 pt-8 text-xl font-bold">Lade Blogposts...</p>
-        }
-      >
-        <BlogPosts searchParams={searchParams} />
-      </Suspense>
-    </div>
+    <>
+      <PageHeader title="Blog" lead="Aktuelles rund um die Apptiva" />
+      <div className="full bg-primary">
+        <div className="content ">
+          <Suspense
+            fallback={
+              <p className="pb-64 pt-8 text-xl font-bold">Lade Blogposts...</p>
+            }
+          >
+            <BlogPosts />
+          </Suspense>
+        </div>
+      </div>
+    </>
   )
 }
