@@ -4,8 +4,6 @@ import Heading from './heading'
 import SanityImage from './sanity-image'
 
 const ProjectOverview = ({ project }: { project: ProjectsData }) => {
-  console.log('project overview ', project)
-
   return (
     <>
       {project && (
