@@ -27,6 +27,8 @@ const Cards = q('cards')
   })
   .nullable()
 
+export type ProjectsData = NonNullable<InferType<typeof Projects>>[number]
+
 export const Projects = q('projects')
   .filter()
   .deref()
