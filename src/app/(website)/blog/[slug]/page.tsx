@@ -51,7 +51,7 @@ export default async function Home(props: { params: { slug: string } }) {
 
   return (
     <>
-      <header className="full relative mt-[-8rem] min-h-fit animate-gradient items-center bg-gradient-to-br from-primary-light to-primary-dark bg-300% pb-16 pt-44 text-base-white">
+      <header className="full relative mt-[-8rem] min-h-fit animate-gradient items-center bg-gradient-to-br from-primary-light to-primary-dark bg-300% pb-8 pt-32 text-base-white md:pb-16 md:pt-44">
         <div className="content">
           <Heading level={1}>{post.title}</Heading>
           <p className="mt-4 max-w-xl text-xl">{post.description}</p>
@@ -65,7 +65,7 @@ export default async function Home(props: { params: { slug: string } }) {
               {kebabCaseToTitleCase(post.author.toString())}
             </strong>
           </p>
-          <div className="popout justify-center pt-16">
+          <div className="popout justify-center pt-8 md:pt-16">
             {post.kind === 'markdown' && post.image.src && (
               <Image
                 className="rounded-lg"
