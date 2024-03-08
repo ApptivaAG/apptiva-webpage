@@ -2,6 +2,7 @@ import Heading from '@/components/heading'
 import MdxImage from '@/components/mdx-image'
 import SanityImage from '@/components/sanity-image'
 import { getPostBySlug, getPosts } from '@/utils/blog'
+import { kebabCaseToTitleCase } from '@/utils/format'
 import { PortableText } from '@portabletext/react'
 import remarkEmbedder from '@remark-embedder/core'
 import oembedTransformer from '@remark-embedder/transformer-oembed'
@@ -50,63 +51,79 @@ export default async function Home(props: { params: { slug: string } }) {
 
   return (
     <>
-      <Heading level={2}>{post.title}</Heading>
-      <p>
-        Publiziert am{' '}
-        <time dateTime={post.publishDate}>
-          {new Date(post.publishDate).toLocaleDateString('de-CH')}
-        </time>{' '}
-        von {post.author.toString()}.
-        {/* {post.authors.map((a) => (
-          <p>{a.toString()}</p>
-          // <span key={a}>{kebabCaseToTitleCase(a)}</span>
-        ))} */}
-      </p>
+      <header className="full relative mt-[-8rem] min-h-fit animate-gradient items-center bg-gradient-to-br from-primary-light to-primary-dark bg-300% pb-16 pt-44 text-base-white">
+        <div className="content">
+          <Heading level={1}>{post.title}</Heading>
+          <p className="mt-4 max-w-xl text-xl">{post.description}</p>
+          <p className="pt-2 text-lg text-base-white/60">
+            Publiziert am{' '}
+            <time dateTime={post.publishDate} className="font-bold">
+              {new Date(post.publishDate).toLocaleDateString('de-CH')}
+            </time>{' '}
+            von{' '}
+            <strong className="font-bold">
+              {kebabCaseToTitleCase(post.author.toString())}
+            </strong>
+          </p>
+          <div className="popout justify-center pt-16">
+            {post.kind === 'markdown' && post.image.src && (
+              <Image
+                className="rounded-lg"
+                src={post.image.src}
+                width={post.image.width}
+                height={post.image.height}
+                alt=""
+                sizes="(max-width: 600px) 100vw, 1200px"
+              />
+            )}
+            {post.kind === 'cms' && post.image && (
+              <SanityImage className="rounded-lg" image={post.image} />
+            )}
+          </div>
+        </div>
+      </header>
 
-      {post.kind === 'markdown' && post.image.src && (
-        <Image
-          className="full"
-          src={post.image.src}
-          width={post.image.width}
-          height={post.image.height}
-          alt=""
-          sizes="(max-width: 600px) 100vw, 1200px"
-        />
-      )}
-      {post.kind === 'cms' && post.image && <SanityImage image={post.image} />}
-      <p className="font-semibold">{post.description}</p>
-      {post.kind === 'markdown' && (
-        <MDXRemote
-          source={post.content}
-          components={{
-            img: MdxImage(post.blogPostAssetsDirectory),
-            pre: Code,
-          }}
-          options={{
-            mdxOptions: {
-              remarkPlugins: [
-                remarkGfm,
-                remarkUnwrapImages,
-                [
-                  remarkEmbedder,
-                  {
-                    transformers: [oembedTransformer],
-                  },
-                ],
-              ],
-            },
-            parseFrontmatter: true,
-          }}
-        />
-      )}
-      <hr />
-      {post.kind === 'cms' &&
-        post.content?.map((content) => (
-          <PortableText key={content._key} value={content} />
-        ))}
-      <hr />
-      <Heading level={3}>Tags:</Heading>
-      <ul>{post.tags && post.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
+      <div className="flex gap-16 py-16 max-md:flex-col">
+        <div className="prose prose-lg flex-1">
+          {post.kind === 'markdown' && (
+            <MDXRemote
+              source={post.content}
+              components={{
+                img: MdxImage(post.blogPostAssetsDirectory),
+                pre: Code,
+              }}
+              options={{
+                mdxOptions: {
+                  remarkPlugins: [
+                    remarkGfm,
+                    remarkUnwrapImages,
+                    [
+                      remarkEmbedder,
+                      {
+                        transformers: [oembedTransformer],
+                      },
+                    ],
+                  ],
+                },
+                parseFrontmatter: true,
+              }}
+            />
+          )}
+          {post.kind === 'cms' && post.content && (
+            <PortableText value={post.content} />
+          )}
+        </div>
+        <aside>
+          {post.tags && post.tags.length > 0 && (
+            <>
+              <p>Tags</p>
+              <ul>
+                {post.tags && post.tags.map((tag) => <li key={tag}>{tag}</li>)}
+              </ul>
+            </>
+          )}
+        </aside>
+      </div>
     </>
   )
 }
