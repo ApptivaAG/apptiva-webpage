@@ -18,9 +18,13 @@ export default async function BlogPosts() {
       {allPosts.map(([slug, post]) => (
         <li key={slug}>
           <Card className="flex h-full flex-col space-y-4">
-            <p className="text-lg font-bold leading-5">{post.title}</p>
-            <p className="flex-1">{post.description}</p>
-            <Button>
+            <p
+              className="text-lg font-bold leading-5"
+              dangerouslySetInnerHTML={{ __html: post.title }}
+            />
+            <p className="line-clamp-5">{post.description}</p>
+            <div className="h-2"></div>
+            <Button className="!mt-auto">
               <Link href={`/blog/${slug}`}>→ Zum Blogpost</Link>
             </Button>
           </Card>
