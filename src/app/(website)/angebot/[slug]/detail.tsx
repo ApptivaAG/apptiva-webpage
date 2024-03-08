@@ -9,16 +9,14 @@ export default function ServiceDetail(props: {
 }) {
   return (
     <>
-      <header className="full animate-gradient from-primary-light bg-300% mt-[-8rem] min-h-fit items-center bg-gradient-to-br to-primary-dark pt-44 text-base-white">
+      <header className="full mt-[-8rem] min-h-fit animate-gradient items-center bg-gradient-to-br from-primary-light to-primary-dark bg-300% pt-44 text-base-white">
         <div className="content ">
-          <div className="feature">
-            <Heading level={1}>{props.service.header?.title}</Heading>
-            <p className="mt-6">{props.service.header?.lead}</p>
-            <div className="flex justify-center pb-4 pt-16">
-              {props.service.header?.image && (
-                <SanityImage image={props.service.header?.image} />
-              )}
-            </div>
+          <Heading level={1}>{props.service.header?.title}</Heading>
+          <p className="mt-6">{props.service.header?.lead}</p>
+          <div className="flex justify-center pb-4 pt-16">
+            {props.service.header?.image && (
+              <SanityImage image={props.service.header?.image} />
+            )}
           </div>
         </div>
       </header>

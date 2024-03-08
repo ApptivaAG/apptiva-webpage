@@ -20,7 +20,7 @@ const ServiceTeaser = ({
       >
         <div className="m-4  text-primary  lg:m-28 lg:w-8/12">
           <Heading level={2} size={3} className="pb-6">
-            {service.header?.title}
+            {service.teaserTitle}
           </Heading>
           {service.teaser?.map((content: any) => (
             <PortableText key={content._key} value={content} />

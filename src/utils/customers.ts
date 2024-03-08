@@ -3,120 +3,124 @@ import path from 'path'
 
 const customerList = [
   {
-    fileName: 'post-logo-2023-edit.png',
+    fileName: 'post-logo.svg',
     alt: 'Die Schweizerische Post AG',
-    height: 55,
+    height: 120,
   },
   {
-    fileName: 'suva-300x75.png',
+    fileName: 'suva-logo.svg',
     alt: 'suva',
     height: 35,
   },
   {
-    fileName: 'roche.png',
+    fileName: 'roche-logo.svg',
     alt: 'F. Hoffmann-La Roche AG',
-    height: 50,
+    height: 80,
   },
   {
-    fileName: 'vivanco-200.png',
+    fileName: 'vivanco-logo.svg',
     alt: 'Vivanco Gruppe AG',
     height: 50,
   },
   {
-    fileName: 'globus.png',
+    fileName: 'globus-logo.svg',
     alt: 'Magazine zum Globus',
-    height: 35,
+    height: 60,
   },
   {
-    fileName: 'kanton-bern-200.png',
+    fileName: 'kanton-bern-logo.svg',
     alt: 'Amt für Informatik und Organisation des Kantons Bern',
     height: 50,
   },
   {
-    fileName: 'stadt-zuerich-finanzdepartement.png',
+    fileName: 'stadt-zuerich-finanzdepartement.svg',
     alt: 'Stadt Zürich Finanzdepartement',
-    height: 35,
+    height: 30,
   },
   {
-    fileName: 'luzerner-kantonsspital-500x113.png',
+    fileName: 'luzerner-kantonsspital-logo.svg',
     alt: 'Luzerner Kantonsspital',
-    height: 35,
+    height: 30,
   },
   {
-    fileName: 'akso.png',
+    fileName: 'akso-logo.svg',
     alt: 'Ausgleichskasse Solothurn',
     height: 35,
   },
   {
-    fileName: 'fhnw-logo-edit.png',
+    fileName: 'fhnw-logo.svg',
     alt: 'Fachhochschule Nordwestschweiz',
-    height: 45,
+    height: 40,
   },
   {
-    fileName: 'screenimage-logo.png',
+    fileName: 'screenimage-logo.svg',
     alt: 'Screenimage Systems AG',
     height: 40,
   },
   {
-    fileName: 'grandcasino-bern.png',
+    fileName: 'grandcasino-bern-logo.svg',
     alt: 'Grandcasino Bern',
     height: 35,
   },
   {
-    fileName: 'energie360-300x72.png',
+    fileName: 'energie360-logo.svg',
     alt: 'Energie 360° AG',
     height: 35,
   },
   {
-    fileName: 'hostettler-300x70.png',
+    fileName: 'hostettler-logo.svg',
     alt: 'hostettler',
     height: 35,
   },
   {
-    fileName: 'maxonmotor-300x45.png',
+    fileName: 'maxon-logo.svg',
     alt: 'maxon motor',
     height: 20,
   },
   {
-    fileName: 'hbTec.png',
+    fileName: 'hbtec-logo.svg',
     alt: 'hbTec AG',
     height: 22,
   },
   {
-    fileName: 'insel-gruppe-logo-300x70.png',
+    fileName: 'insel-gruppe-logo.svg',
     alt: 'Insel Gruppe',
     height: 35,
   },
   {
-    fileName: 'schurch-logo.png',
+    fileName: 'schurch-logo.svg',
     alt: 'Schürch Getränke AG',
     height: 45,
   },
   {
-    fileName: 'sd-295x145.png',
+    fileName: 'sd-logo.svg',
     alt: 'sd Gebäudeunterhalt AG',
     height: 35,
   },
   {
-    fileName: 'welti-furrer-300x66-edit.png',
+    fileName: 'welti-furrer.svg',
     alt: 'Welti-Furrer',
-    height: 25,
+    height: 20,
   },
   {
-    fileName: 'baumgartner-logo.png',
+    fileName: 'baumgartner-logo.svg',
     alt: 'Baumgartner Fenster',
+    height: 40,
+  },
+  {
+    fileName: 'oekowatt-logo.svg',
+    alt: 'OekoWatt AG',
     height: 40,
   },
 ]
 
 export default function getCustomerLogos() {
-  const allPostsData = customerList
-    .map((customer) => {
-      const relativePath = path.join('/img/customers/', customer.fileName)
-      const id = customer.fileName.replace(/\.png$/, '')
+  const allPostsData = customerList.map((customer) => {
+    const relativePath = path.join('/img/customers/', customer.fileName)
+    const id = customer.fileName.replace(/\.png$/, '')
 
-      return { ...customer, id, path: relativePath }
-    })
+    return { ...customer, id, path: relativePath }
+  })
 
   return allPostsData
 }

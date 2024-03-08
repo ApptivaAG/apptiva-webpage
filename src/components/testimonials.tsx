@@ -6,7 +6,7 @@ const Testimonials = () => {
   const testimonials = getTestimonialsData()
 
   return (
-    <div className="full">
+    <div className="full my-14 md:my-20 lg:my-32">
       <Carousel
         opts={{ loop: true }}
         layout={'oneSlide'}

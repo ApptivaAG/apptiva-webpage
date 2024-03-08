@@ -254,11 +254,7 @@ export const servicesTeaserQuery = q('*')
     slug: Slug,
     illustration: sanityImageWithAlt('illustration'),
     teaser: q.contentBlocks().optional(),
-    header: q('header')
-      .grab$({
-        title: q.string().optional().default('In Arbeit'),
-      })
-      .nullable(),
+    teaserTitle: q.string().optional().default('In Arbeit'),
   })
 
 export const glossaryQuery = q('*')

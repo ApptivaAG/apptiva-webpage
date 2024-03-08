@@ -33,6 +33,12 @@ export default defineType({
       group: 'home',
     }),
     defineField({
+      name: 'teaserTitle',
+      title: 'Teaser Titel',
+      type: 'string',
+      group: 'home',
+    }),
+    defineField({
       name: 'illustration',
       title: 'Illustration',
       type: 'imageWithAlt',
