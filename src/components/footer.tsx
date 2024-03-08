@@ -106,7 +106,7 @@ export default function Footer() {
       </div>
       <p className="mx-auto my-16 max-w-2xl p-4 text-3xl font-bold text-base-white md:text-6xl">
         Du bist noch hier? Klasse! Wir haben noch ein paar{' '}
-        <strong>Dinge für dich:</strong>
+        <u>Dinge für dich:</u>
       </p>
       <div className="flex flex-wrap gap-x-24 gap-y-8 bg-primary px-4 py-8 text-base-white sm:p-12 lg:px-32 lg:py-24 xl:justify-between">
         <div>
