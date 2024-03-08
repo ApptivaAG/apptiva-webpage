@@ -5,8 +5,6 @@ export default function ModuleWrapper(props: {
   data: SettingsDataQueries
   customers: React.ReactNode
 }) {
-  console.log('modules at modulewrapper ', props.data.modules)
-
   return (
     <>
       {props.data.modules?.map((module) => (

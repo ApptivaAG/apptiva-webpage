@@ -12,11 +12,6 @@ export default async function ModulesPage() {
   const { published, draft } = await load(settingsQuery, isEnabled, undefined, [
     'settings',
   ])
-
-  // console.log('at home page draft', draft.data)
-  // console.log('at home page Modules', published[0].modules)
-  // console.log('at home page service teaser', published[0].serviceTeaser)
-
   const customers = (
     <>
       <Testimonials />

@@ -17,7 +17,5 @@ export default function ModulesPreview(props: {
     }
   )
 
-  console.log('data? ', data)
-
   return <ModuleWrapper data={data} customers={props.customers} />
 }
