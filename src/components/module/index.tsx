@@ -1,12 +1,12 @@
-import { ModuleData, ServiceTeaserData } from '@/sanity/lib/queries'
+import { ModuleData } from '@/sanity/lib/queries'
 import Cards from './cards'
-import ProjectModule from './project-module'
+import Contact from './contact'
 import FAQs from './faqs'
 import Prices from './prices'
-import Text from './text'
-import Contact from './contact'
+import ProjectModule from './project-module'
 import Quote from './quote'
 import ServiceTeaserList from './service-teaser/service-teaser-list'
+import Text from './text'
 
 export default function Module(props: {
   module: ModuleData

@@ -78,7 +78,9 @@ export const Persons = q('*')
     }),
   })
 
-export type ServiceTeaserData = NonNullable<InferType<typeof ServicesTeasers>>[]
+export type ServiceTeaserData = NonNullable<
+  InferType<typeof ServicesTeasers>
+>[number]
 export const ServicesTeasers = q('*')
   .filterByType('service-page')
   .filter('showInHome')

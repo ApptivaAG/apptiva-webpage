@@ -1,4 +1,4 @@
-import { ModuleData, ServiceTeaserData } from '@/sanity/lib/queries'
+import { ModuleData } from '@/sanity/lib/queries'
 import ServiceTeaser from './service-teaser-item'
 
 export default function ServiceTeaserList(props: { module: ModuleData }) {
