@@ -30,11 +30,11 @@ export default function Prices(props: { module: ModuleData }) {
               </div>
             )}
           </div>
-          <div className="grid gap-7 gap-y-14 lg:grid-cols-3 ">
+          <div className=" grid gap-7 gap-y-14 lg:grid-cols-3 ">
             {props.module.prices?.map((price, index) => (
               <div
                 key={price._key}
-                className="grid justify-items-center  rounded-b-lg rounded-t-lg bg-base-white"
+                className="grid content-start justify-items-center  rounded-b-lg rounded-t-lg bg-base-white"
               >
                 {price.isFavourite && (
                   <div className=" z-0 m-[-1.5rem] flex h-10 place-items-center rounded-[40px] bg-primary px-6 py-1.5 text-base-white">
@@ -45,7 +45,7 @@ export default function Prices(props: { module: ModuleData }) {
                 {/* upper part: blue or green */}
                 <div
                   className={
-                    ' flex w-full flex-col items-center rounded-lg border-secondary p-9 pb-10  ' +
+                    '  flex w-full flex-col items-center rounded-lg border-secondary p-9 pb-10  ' +
                     (index % 2
                       ? 'border-secondary bg-secondary text-primary'
                       : 'bg-primary text-base-white')
@@ -63,11 +63,11 @@ export default function Prices(props: { module: ModuleData }) {
                 {/* lower part: always on white bg */}
                 <div className="flex flex-col items-center gap-6  p-4 pt-10 text-primary">
                   {price.content && (
-                    <div className="flex-1">
+                    <div className="self-stretch">
                       <StyledPortableText content={price.content} />
                     </div>
                   )}
-                  <div className="mb-4 flex flex-initial ">
+                  <div className="align-self-end mb-4 flex flex-initial ">
                     <Button
                       element="a"
                       intent={index % 2 ? 'secondary' : 'primary'}
