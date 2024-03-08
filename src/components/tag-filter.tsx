@@ -32,7 +32,7 @@ export const TagFilter = ({ tags, searchParams }: Props) => {
   }
 
   return (
-    <ul id="filters">
+    <ul id="filters" className="flex gap-2">
       {tags.map((tag) => (
         <li key={tag.name}>
           <input
