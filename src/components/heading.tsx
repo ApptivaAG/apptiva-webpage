@@ -14,7 +14,7 @@ const getClassNameByLevel = (level: Level): string => {
     case 4:
       return 'text-xl md:text-3xl'
     case 5:
-      return 'text-base'
+      return 'text-lg md:text-xl'
     default:
       return ''
   }
