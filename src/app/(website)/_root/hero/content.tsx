@@ -1,12 +1,16 @@
+import { SettingsDataQueries } from '@/sanity/lib/queries'
 import StyledPortableText from '../../../../components/styled-portable-text'
-import { SettingsData } from './types'
 
 export default async function Content(props: {
-  claim: NonNullable<SettingsData['claim']>
+  claim: NonNullable<SettingsDataQueries>
 }) {
   return (
     <div className="content">
-      <StyledPortableText content={props.claim} spreadParagraphs />
+      {props.claim.claim ? (
+        <StyledPortableText content={props.claim.claim} spreadParagraphs />
+      ) : (
+        <p>No Claim</p>
+      )}
     </div>
   )
 }

@@ -41,7 +41,8 @@ export default function Module(props: {
       return <Quote module={module} />
 
     case 'teaser-servicepage':
-      return <ServiceTeaserList services={props.serviceTeasers} />
+      // return <ServiceTeaserList services={props.serviceTeasers} />
+      return <p>Service Teaser List to be :-)</p>
 
     default:
       return <div>Modultyp wählen</div>

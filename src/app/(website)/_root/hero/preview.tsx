@@ -16,6 +16,6 @@ export default function HeroPreview({
       initial,
     }
   )
-  const claim = data?.claim
-  return claim ? <Content claim={claim} /> : 'No Claim'
+
+  return <Content claim={data} />
 }
