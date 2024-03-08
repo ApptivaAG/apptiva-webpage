@@ -321,7 +321,6 @@ const CarouselContent = React.forwardRef<
         onMouseMove={handleMouseMove}
         onMouseEnter={handlePrevButtonHover}
         onMouseLeave={handlePrevButtonLeave}
-        xlCarouselNavigationButton="w-[5%]"
         className={`absolute left-0 top-0 z-30 hidden h-full w-6/12 bg-transparent hover:bg-transparent lg:block ${carouselNavigationButton} xl:${xlCarouselNavigationButton}`}
       >
         {' '}
