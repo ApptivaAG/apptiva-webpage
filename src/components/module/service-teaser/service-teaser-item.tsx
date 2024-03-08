@@ -1,13 +1,13 @@
 import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
-import { ServiceTeaserData } from '@/sanity/lib/queries'
+import { ServicePageTeasersData } from '@/sanity/lib/queries'
 import { PortableText } from '@portabletext/react'
 
 const ServiceTeaser = ({
   service,
   rowNumber,
 }: {
-  service: ServiceTeaserData
+  service: ServicePageTeasersData
   rowNumber: number
 }) => {
   return (

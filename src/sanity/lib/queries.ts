@@ -43,6 +43,21 @@ export const Projects = q('projects')
   .order('order asc')
   .nullable()
 
+export type ServicePageTeasersData = NonNullable<
+  InferType<typeof ServicePageTeasers>
+>[number]
+export const ServicePageTeasers = q('servicePageTeaser')
+  .filter()
+  .deref()
+  .grab({
+    _id: q.string(),
+    slug: Slug,
+    illustration: sanityImageWithAlt('illustration'),
+    teaserTitle: q.string().optional().default('In Arbeit'),
+    teaser: q.contentBlocks().optional().nullable(),
+  })
+  .nullable()
+
 export const FAQs = q('faqs')
   .filter()
   .deref()
@@ -80,6 +95,7 @@ export const Persons = q('*')
     }),
   })
 
+/*
 export type ServiceTeaserData = NonNullable<
   InferType<typeof ServicesTeasers>
 >[number]
@@ -95,6 +111,22 @@ export const ServicesTeasers = q('*')
     teaserTitle: q.string().optional().default('In Arbeit'),
   })
   .nullable()
+  */
+
+export const servicesQuery = q('*')
+  .filterByType('service-page')
+  .grab$({
+    _id: q.string(),
+    slug: Slug,
+    header: q('header')
+      .grab$({
+        title: q.string().optional().default('In Arbeit'),
+        description: q.string().optional(),
+        image: sanityImageWithAlt(),
+        content: q.contentBlocks().optional(),
+      })
+      .nullable(),
+  })
 
 export type ModuleData = NonNullable<InferType<typeof Modules>>[number]
 const Modules = q('modules')
@@ -116,7 +148,7 @@ const Modules = q('modules')
     prices: Prices,
     persons: Persons,
     quotetext: q.contentBlocks().optional(),
-    serviceTeaser: ServicesTeasers,
+    servicePageTeaser: ServicePageTeasers,
   })
   .nullable()
 
@@ -224,21 +256,6 @@ export const queryTags = q('*').filterByType('tag').grab$({
   name: q.string(),
   _id: q.string(),
 })
-
-export const servicesQuery = q('*')
-  .filterByType('service-page')
-  .grab$({
-    _id: q.string(),
-    slug: Slug,
-    header: q('header')
-      .grab$({
-        title: q.string().optional().default('In Arbeit'),
-        description: q.string().optional(),
-        image: sanityImageWithAlt(),
-        content: q.contentBlocks().optional(),
-      })
-      .nullable(),
-  })
 
 export const aboutPageQuery = q('*')
   .filterByType('about-page')
@@ -371,5 +388,4 @@ export type SettingsDataQueries = NonNullable<InferType<typeof settingsQuery>>
 export const settingsQuery = q('*').filterByType('settings').slice(0).grab$({
   claim: q.contentBlocks().optional(),
   modules: Modules,
-  serviceTeaser: ServicesTeasers,
 })
