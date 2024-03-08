@@ -15,7 +15,7 @@ export default function ProjectsLayout(props: {
 }) {
   return (
     <div className="full bg-primary text-base-white">
-      <div className="mt-10">
+      <div className="my-14 md:my-20 lg:my-32">
         {props.introduction && (
           <div className="content m-auto">
             <StyledPortableText content={props.introduction} />
@@ -39,7 +39,7 @@ export default function ProjectsLayout(props: {
             layout={'threeSlidesFadeOut'}
             darkTheme={true}
             numberOfSlides={props.projects.length}
-            className="pb-14"
+            className="md:pb-8"
           >
             <CarouselContent>
               {props.projects.map((project, index) => {

@@ -294,13 +294,19 @@ const CarouselContent = React.forwardRef<
     progressBarLine,
   } = useCarousel()
   let carouselNavigationButton
+  let xlCarouselNavigationButton
   switch (layout) {
     case 'oneSlide':
       carouselNavigationButton = 'w-6/12'
       break
     case 'threeSlidesFadeOut':
       carouselNavigationButton = 'w-[20%]'
+      xlCarouselNavigationButton = 'w-[20%]'
       break
+    case 'threeSlides':
+      carouselNavigationButton = 'w-[5%]'
+      xlCarouselNavigationButton = 'w-[15%]'
+
     default:
       break
   }
@@ -315,17 +321,19 @@ const CarouselContent = React.forwardRef<
         onMouseMove={handleMouseMove}
         onMouseEnter={handlePrevButtonHover}
         onMouseLeave={handlePrevButtonLeave}
-        className={`absolute left-0 top-0 z-30 hidden h-full w-6/12 bg-transparent hover:bg-transparent lg:block ${carouselNavigationButton}`}
+        xlCarouselNavigationButton="w-[5%]"
+        className={`absolute left-0 top-0 z-30 hidden h-full w-6/12 bg-transparent hover:bg-transparent lg:block ${carouselNavigationButton} xl:${xlCarouselNavigationButton}`}
       >
         {' '}
       </Button>
       {layout == 'threeSlidesFadeOut' && <div className="w-[60%]"> </div>}
+      {layout == 'threeSlides' && <div className="w-[60%]"> </div>}
       <Button
         onClick={scrollNext}
         onMouseMove={handleMouseMove}
         onMouseEnter={handleNextButtonHover}
         onMouseLeave={handleNextButtonLeave}
-        className={` absolute right-0 top-0 z-30 hidden h-full w-6/12 bg-transparent hover:bg-transparent lg:block ${carouselNavigationButton}`}
+        className={` absolute right-0 top-0 z-30 hidden h-full w-6/12 bg-transparent hover:bg-transparent lg:block ${carouselNavigationButton} xl:${xlCarouselNavigationButton}`}
       >
         {' '}
       </Button>
@@ -434,7 +442,7 @@ const ThreeSlidesFadeOutCarouselItem = React.forwardRef<
       aria-roledescription="slide"
       key={index}
       className={cn(
-        'relative my-20 flex h-[--min-size-mobile] min-w-0 flex-[0_0_100%] shrink-0 grow-0 basis-full md:flex-[0_0_60%] lg:h-[--min-size] lg:pl-[1rem]',
+        'relative my-20 flex h-[--min-size-mobile] min-w-0 flex-[0_0_100%] shrink-0 grow-0 basis-full md:flex-[0_0_90%] md:pl-[1rem] lg:h-[--min-size] lg:flex-[0_0_60%]',
         className
       )}
       style={
@@ -452,11 +460,12 @@ const ThreeSlidesFadeOutCarouselItem = React.forwardRef<
           {
             ...(transitioinValues.length && {
               '--project-overview-height': `${sizeValue[index]}px`,
+              '--project-overview-height-tablet': `${sizeValue[index] / 1.5}px`,
               '--project-overview-height-mobile': `${sizeValue[index] / 2}px`,
             }),
           } as React.CSSProperties
         }
-        className="absolute top-1/2 h-[--project-overview-height-mobile] -translate-y-1/2 rounded-lg border border-base-grey p-5 lg:h-[--project-overview-height]"
+        className="absolute top-1/2 h-[--project-overview-height-mobile] -translate-y-1/2 rounded-lg border border-base-grey p-5 md:h-[--project-overview-height-tablet] xl:h-[--project-overview-height]"
         {...props}
       ></div>
     </div>
@@ -474,7 +483,7 @@ const ThreeSlidesCarouselItem = React.forwardRef<
       role="group"
       aria-roledescription="slide"
       className={cn(
-        'relative my-16 flex min-w-0 flex-[0_0_100%] shrink-0 grow-0 basis-full md:flex-[0_0_80%] md:pl-[0.8rem]  lg:pl-[1rem] xl:flex-[0_0_60%] 2xl:pl-[3rem] ',
+        'relative my-8 flex min-w-0 flex-[0_0_100%] shrink-0 grow-0 basis-full md:my-16 md:flex-[0_0_90%] md:pl-[0.8rem]  lg:pl-[1rem] xl:flex-[0_0_70%] 2xl:pl-[3rem] ',
         className
       )}
       {...props}
