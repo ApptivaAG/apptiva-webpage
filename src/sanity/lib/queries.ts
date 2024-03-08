@@ -78,6 +78,20 @@ export const Persons = q('*')
     }),
   })
 
+export type ServiceTeaserData = NonNullable<InferType<typeof ServicesTeasers>>[]
+export const ServicesTeasers = q('*')
+  .filterByType('service-page')
+  .filter('showInHome')
+  //.slice(0)
+  .grab$({
+    _id: q.string(),
+    slug: Slug,
+    illustration: sanityImageWithAlt('illustration'),
+    teaser: q.contentBlocks().optional(),
+    teaserTitle: q.string().optional().default('In Arbeit'),
+  })
+  .nullable()
+
 export type ModuleData = NonNullable<InferType<typeof Modules>>[number]
 const Modules = q('modules')
   .filter()
@@ -98,6 +112,7 @@ const Modules = q('modules')
     prices: Prices,
     persons: Persons,
     quotetext: q.contentBlocks().optional(),
+    serviceTeaser: ServicesTeasers,
   })
   .nullable()
 
@@ -243,20 +258,6 @@ export const serviceBySlugQuery = q('*')
     modules: Modules,
   })
 
-export type ServiceTeaserData = NonNullable<
-  InferType<typeof servicesTeaserQuery>
->[number]
-export const servicesTeaserQuery = q('*')
-  .filterByType('service-page')
-  .filter('showInHome')
-  .grab$({
-    _id: q.string(),
-    slug: Slug,
-    illustration: sanityImageWithAlt('illustration'),
-    teaser: q.contentBlocks().optional(),
-    teaserTitle: q.string().optional().default('In Arbeit'),
-  })
-
 export const glossaryQuery = q('*')
   .filterByType('glossary')
   .grab$({
@@ -366,5 +367,5 @@ export type SettingsDataQueries = NonNullable<InferType<typeof settingsQuery>>
 export const settingsQuery = q('*').filterByType('settings').slice(0).grab$({
   claim: q.contentBlocks().optional(),
   modules: Modules,
-  serviceTeaser: servicesTeaserQuery,
+  serviceTeaser: ServicesTeasers,
 })

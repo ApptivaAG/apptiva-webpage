@@ -11,7 +11,6 @@ import ServiceTeaserList from './service-teaser/service-teaser-list'
 export default function Module(props: {
   module: ModuleData
   customers: React.ReactNode
-  serviceTeasers?: ServiceTeaserData
 }) {
   const { module } = props
 
@@ -41,8 +40,7 @@ export default function Module(props: {
       return <Quote module={module} />
 
     case 'teaser-servicepage':
-      // return <ServiceTeaserList services={props.serviceTeasers} />
-      return <p>Service Teaser List to be :-)</p>
+      return <ServiceTeaserList module={module} />
 
     default:
       return <div>Modultyp wählen</div>
