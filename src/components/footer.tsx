@@ -65,18 +65,9 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://www.xing.com/companies/apptivaag">Xing</a>
-              </li>
-              <li>
-                <a href="https://www.facebook.com/apptivaag">Facebook</a>
-              </li>
-              <li>
                 <a href="https://www.youtube.com/channel/UCkRetskswz9I4-ohcYuTG3Q">
                   Youtube
                 </a>
-              </li>
-              <li>
-                <a href="https://x.com/ApptivaTeam">X</a>
               </li>
             </ul>
           </div>
