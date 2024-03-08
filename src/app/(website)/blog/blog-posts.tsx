@@ -24,9 +24,11 @@ export default async function BlogPosts() {
             />
             <p className="line-clamp-5">{post.description}</p>
             <div className="h-2"></div>
-            <Button className="!mt-auto">
-              <Link href={`/blog/${slug}`}>→ Zum Blogpost</Link>
-            </Button>
+            <Link className="!mt-auto" href={`/blog/${slug}`}>
+              <Button element="div" className="inline">
+                → Zum Blogpost
+              </Button>
+            </Link>
           </Card>
         </li>
       ))}

@@ -20,6 +20,7 @@ import {
   MarkdownBlog,
   MarkdownBlogPreview,
 } from './types'
+import { getPlaiceholder } from 'plaiceholder'
 
 const blogPostsPath = 'content/blog'
 const assetsPath = '/assets/blog'
@@ -143,11 +144,14 @@ const getMarkdownPosts = unstable_cache(async () => {
       : undefined
 
     const imageInfo = imageSrc ? getImageInfo(imageSrc) : undefined
-
+    const { base64 } = imageSrc
+      ? // @ts-ignore
+        await getPlaiceholder(imageSrc)
+      : { base64: '' }
     posts.push({
       kind: 'markdown',
       content: data,
-      image: { src: imageSrc, ...imageInfo },
+      image: { src: imageSrc, ...imageInfo, base64 },
       blogPostAssetsDirectory,
       title: markdown.frontmatter.title,
       description: markdown.frontmatter.description,

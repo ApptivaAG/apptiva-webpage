@@ -72,6 +72,8 @@ export default async function Home(props: { params: { slug: string } }) {
                 src={post.image.src}
                 width={post.image.width}
                 height={post.image.height}
+                placeholder="blur"
+                blurDataURL={post.image.base64}
                 alt=""
                 sizes="(max-width: 600px) 100vw, 1200px"
               />

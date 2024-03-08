@@ -45,6 +45,7 @@ export type Image = {
   height?: number | undefined
   orientation?: number | undefined
   type?: string | undefined
+  base64?: string | undefined
   src: string
 }
 export type NoImage = {

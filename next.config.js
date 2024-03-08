@@ -1,6 +1,8 @@
-/** @type {import('next').NextConfig} */
-
-module.exports = {
+const { withPlaiceholder } = require('@plaiceholder/next')
+/**
+ * @type {import('next').NextConfig}
+ */
+const config = {
   images: {
     domains: ['cdn.sanity.io'],
   },
@@ -11,3 +13,5 @@ module.exports = {
     taint: true,
   },
 }
+
+module.exports = withPlaiceholder(config)
