@@ -45,9 +45,12 @@ export default function CardFlow(props: { module: ModuleData }) {
                     xor(darkBg, card.style !== 'inverted') ? 'dark' : 'light'
                   }
                 >
-                  <Heading level={isLevel(2) ? 4 : 3} size={5}>
-                    {card.title}
-                  </Heading>
+                  <div className="flex items-start gap-4">
+                    <SanityImage image={card.image} className="flex-none" />
+                    <Heading level={isLevel(2) ? 4 : 3} size={5}>
+                      {card.title}
+                    </Heading>
+                  </div>
                   {card.content && (
                     <div className="flex flex-1 flex-col justify-between gap-6">
                       <StyledPortableText content={card.content} />
