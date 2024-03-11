@@ -3,7 +3,11 @@ title: So lernen Kunden unser Vorgehen kennen und schätzen
 source: apptiva
 slug: so-lernen-kunden-unser-vorgehen-software-entwicklung-kennen-und-schaetzen
 templateKey: blog-post
-image: hero-vorgehen.jpg
+image:
+  src: /assets/blog/2022-02-21-vorgehen-vermitteln/hero-vorgehen.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/AOju+7bF16q50KG0zZSmwn6Ur4WXtIaVsgDu9P6co7OIlKqAi5vEzt+0wNKptMqbqL4AAAIZXnKRSGSNLkJik6K8kqK5jZ21rbnLAAAZSlBxn9Pg7rrI3L3I19rh7Obs9uLo8AAtRWhPdK3S3ezu8/v3+//r8Pfk6vTY3+ovhlGTHO842AAAAABJRU5ErkJggg==
+  height: 1440
+  width: 2560
 date: 2022-02-21
 author: Philip Schönholzer
 description: >-

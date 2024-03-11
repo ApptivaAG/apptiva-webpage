@@ -3,7 +3,11 @@ title: Der Digitale Wandel
 source: apptiva
 slug: der-digitale-wandel
 templateKey: blog-post
-image: img/stonehenge-357227_1280.jpg
+image:
+  src: /assets/blog/img/stonehenge-357227_1280.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAIAAABxZ0isAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAoUlEQVR4nAGWAGn/AO7FcPHLd9K0XpuKNs2rUv/bjv/9yv/trQDnw2zgvWb71ID/77D/4Jj70oD30Hn/4JMA0bJb1rZf2LVe+9mP//zA//Ov/tmL/daCANi3YO7Icdy7Y+fDbPTNeuDFhu3TlvbThwCMfT5NTCZrZS1MTSZmWy8DDQApMhl2azoAABkDAA4AAh0JAA4AABkEAAcAAA4AABoHqHVOAyDc7L4AAAAASUVORK5CYII=
+  height: 898
+  width: 1280
 date: 2015-07-08T22:34:55.000Z
 author: linus-huesler
 description: >-

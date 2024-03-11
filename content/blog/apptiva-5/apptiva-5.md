@@ -3,7 +3,11 @@ title: Apptiva feiert den 5. Geburtstag
 source: apptiva
 slug: apptiva-5
 templateKey: blog-post
-image: 5-jahre.png
+image:
+  src: /assets/blog/apptiva-5/5-jahre.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAa0lEQVR4nGP4Awb//////vNnUX3LoUOH/oMBw58/vz9//XH2wpVv374zsDPaurv9////zfsPDJeuXDl+6tSGbZs37V5h7GZrHwWS+PXrN8PtW3fWbll+/sax/ec23Xt6/f7zKzceXfz//z8AHDlLymUGI4sAAAAASUVORK5CYII=
+  height: 1381
+  width: 2560
 date: 2020-08-25
 author: Markus Tanner
 description: >-

@@ -1,4 +1,3 @@
-const { withPlaiceholder } = require('@plaiceholder/next')
 /**
  * @type {import('next').NextConfig}
  */
@@ -14,4 +13,4 @@ const config = {
   },
 }
 
-module.exports = withPlaiceholder(config)
+module.exports = config

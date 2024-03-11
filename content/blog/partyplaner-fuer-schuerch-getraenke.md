@@ -3,7 +3,11 @@ title: Partyplaner für Schürch Getränke
 source: apptiva
 slug: partyplaner-fuer-schuerch-getraenke
 templateKey: blog-post
-image: ./img/partyplaner-hero.png
+image:
+  src: /assets/blog/img/partyplaner-hero.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAbUlEQVR4nGPYuGmzs6trTFxc/8SJVZVV/RMnzpk7d+369Qxbd+xIzcqMiInunzgxKzs7Lj6+f+LEdRs2giQSEhPaO9rv3bunraMjLS1dWFwM0rF2/fotW7Z8+fLl3r17qRkZi5csnjl79uKlSwHa/zUJ1GbaUwAAAABJRU5ErkJggg==
+  height: 1262
+  width: 2560
 date: 2018-04-17T10:16:49.000Z
 author: Linus Hüsler
 description: ''

@@ -3,7 +3,11 @@ title: Einblicke in Kundenbedürfnisse erhalten
 source: bot-fabrik
 slug: einblicke-in-die-kundenbeduerfnisse-erhalten
 templateKey: blog-post
-image: ./kundenbeduerfnisse.png
+image:
+  src: /assets/blog/einblicke-in-die-kundenbeduerfnisse-erhalten/kundenbeduerfnisse.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAADCAIAAAAhqtkfAAAACXBIWXMAAAsTAAALEwEAmpwYAAAATklEQVR4nGNgYGD4v8Fxz4blq7Zs+/zv/4GdO7u6uhggwLouZu+b7y9ff7vx/vvl6zd3btkClXBoveO37WPm8dev3319+PjJkSP7GRgYAMIWKCc1S9FCAAAAAElFTkSuQmCC
+  height: 986
+  width: 2560
 date: 2021-07-06T16:30:00
 author: Philip Schönholzer
 description: Ein Chatbot erlaubt es, einzigartige Einblicke in die Bedürfnisse der Kunden zu erhalten.

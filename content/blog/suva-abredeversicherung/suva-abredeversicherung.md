@@ -3,7 +3,11 @@ title: Suva Chatbot für Abredeversicherung
 source: bot-fabrik
 slug: suva-chatbot-fuer-abredeversicherung
 templateKey: blog-post
-image: ./suva-chatbot.png
+image:
+  src: /assets/blog/suva-abredeversicherung/suva-chatbot.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAIAAABxZ0isAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAoUlEQVR4nAGWAGn/AA0KABUVExsbHS8wNS4uLhEUEw8VFQoMDADS0tL////u59r49ev////4+fn////Iy8sAs62f+vjjs6WHn4Vozraby9fSyubotru7AJSGd8uvi35xXz03M4ZtW3GfnwCJm3OOkwDX19f////6+vr9//z///3Y7/Gg6emVubwAXl5ecXFzYF5cZ2VgXl5ee21tfHBuADI4dKZT6m9y81gAAAAASUVORK5CYII=
+  height: 1714
+  width: 2420
 date: 2020-03-06T11:16:49
 author: Philip Schönholzer
 description: Seit ein paar Wochen läuft unser Chatbot bei der Suva, um die Besucher beim Abschluss der Abredeversicherung zu unterstützen.

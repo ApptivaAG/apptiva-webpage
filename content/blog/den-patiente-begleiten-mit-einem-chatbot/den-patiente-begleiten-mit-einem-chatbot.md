@@ -7,7 +7,11 @@ slug: den-patiente-begleiten-mit-einem-chatbot
 author: 'Philip Schönholzer'
 templateKey: blog-post
 id: 276
-image: ./begleitbot@1x.png
+image:
+  src: /assets/blog/den-patiente-begleiten-mit-einem-chatbot/begleitbot@1x.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAIAAABxZ0isAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAkklEQVR4nGP4////6VuP+jYc+P//3+8/f/+Awf///xn+///fsWgpg6XN////f/769eLFi+/fv0Mlti4rygln+Pr918aNG1iZmRYvXgyV2L0mu6OI4eq1G1s3bYzPLli6fjNUYt/uTfNmtj179vzixQtrN2y6fOUaVOLx46e379z/9OnTzZs3Vy5f/vXr1////wMA235zOSo9GM4AAAAASUVORK5CYII=
+  height: 738
+  width: 978
 category:
   - Allgemein
 tag: []

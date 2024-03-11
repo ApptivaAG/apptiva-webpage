@@ -6,7 +6,11 @@ tags: blog
 date: 2022-10-26
 title: Tipps zur Entwicklung von Chatbots
 description: In diesem Artikel finden Sie sieben wichtige Tipps, die Ihnen bei der Entwicklung Ihres Chatbots helfen werden.
-image: tools.jpg
+image:
+  src: /assets/blog/tipps-zur-entwicklung-von-chatbots/tools.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVR4nAFkAJv/AIpfN7uLVcqeZt/HrPP1+vb//+/4/+v2/wDgzsL47uL79/Tx4tK2lnSLe3G7rKSooZ8ApaWmu77Dm5WRUUEzhF9AqX5djmlaYDkpABgAACcYDTMZACkKAIZZOqNyWYRraSYFAJUBNL4LNCKfAAAAAElFTkSuQmCC
+  height: 900
+  width: 1600
 imageCopy: Foto von <a href="https://unsplash.com/@yer_a_wizard?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Fleur</a> auf <a href="https://unsplash.com/de/fotos/dQf7RZhMOJU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 author: Markus Tanner
 ---

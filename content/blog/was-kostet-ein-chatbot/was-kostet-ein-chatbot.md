@@ -8,7 +8,11 @@ slug: was-kostet-ein-chatbot
 author: 'Philip Schönholzer'
 templateKey: blog-post
 id: 701
-image: ./money.jpg
+image:
+  src: /assets/blog/was-kostet-ein-chatbot/money.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/AOHl8+rt+O7z/u7z/ff8/+7y/urt+93f7wDg5fH0+f/z9v+PhXeno6Pz9//n6vfd4vEA6/D8sK6uc2ZXVkQsX002aV9Uo52a8PT/ALa5wXNmXEw7Jkk6JldHODEfD2tjX6eqtgANCgsQDQ0QDQ0KBQUJBQUMCQkFBAQDAgKeEUJ93/smswAAAABJRU5ErkJggg==
+  height: 1313
+  width: 1920
 category:
   - Allgemein
 tag: []

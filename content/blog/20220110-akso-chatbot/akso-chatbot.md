@@ -3,7 +3,11 @@ title: 'Chatbot der Ausgleichskasse Solothurn'
 source: bot-fabrik
 slug: akso-chatbot
 templateKey: blog-post
-image: ./akso-chatbot.png
+image:
+  src: /assets/blog/20220110-akso-chatbot/akso-chatbot.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/ANStsuS9vcqhnM6jnMabjqx4bb6YnenIxQBla2UNFwYVHQ8kKhMWGwEACgA0HhuUcm0Ad3NoKCIUNywnOy4tMigmPjMux5+d27GxAP/7+8cpOrkAB74AJMQFKrYAEOjX2PP//wDz8vLv2dnu1NTx2dnu2Njs1NTt6+vu7e2G9D9LZU9DSgAAAABJRU5ErkJggg==
+  height: 1691
+  width: 2560
 date: '2022-01-10T10:25:08+00:00'
 author: Markus Tanner
 description: Der Chatbot «Öufi» unterstützt die Ausgleichskasse Solothurn.

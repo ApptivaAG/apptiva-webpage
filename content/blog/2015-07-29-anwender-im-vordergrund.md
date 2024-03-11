@@ -3,7 +3,11 @@ title: Anwender im Vordergrund
 source: apptiva
 slug: anwender-im-vordergrund
 templateKey: blog-post
-image: img/junge-am-meer.jpg
+image:
+  src: /assets/blog/img/junge-am-meer.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAICAIAAAC+k6JsAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAi0lEQVR4nAGAAH//ANrr88Pf68/o8dXp8eb0+wDw/f/v/f/k8fTo9/7z//8A6PH13+juWWBq2uLn9v7/AMDQ16a2vgADE5ShqcrX3ADNz9S5vsNtbnWioaG9vsAA0M3QwsfOn5+l1dje4uTqANjY29fX26yjoMzL0eXg4wDOxcXl3d2jjofm4OD++/xyDF9mV7tDwQAAAABJRU5ErkJggg==
+  height: 3840
+  width: 2560
 date: 2015-07-29T20:22:18.000Z
 author: philip-schoenholzer
 description: >-

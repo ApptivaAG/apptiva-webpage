@@ -3,7 +3,11 @@ title: 'Warum Apptiva?'
 source: apptiva
 slug: warum-apptiva
 templateKey: blog-post
-image: img/blauer-himmel.jpg
+image:
+  src: /assets/blog/img/blauer-himmel.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/AHmjz0eCsoq02dLv//D9/1xxhTxYawAZKgBGgbNmns5rpdUAWotiiappf5RddIMBLEIAcqbQLXWlPoOzAFeJABlJAA0+ADhbABgsANT0/1SOuSlyoB1plmGSuDt3n014lgAaLgDc9f+fyOhtnsSoxN/B1OjT6fjT6/pXcYVouD120vIlvgAAAABJRU5ErkJggg==
+  height: 1440
+  width: 2560
 date: 2015-07-22T20:26:11.000Z
 author: philip-schoenholzer
 description: ''

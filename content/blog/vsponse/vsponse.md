@@ -3,7 +3,11 @@ title: V-Sponse - Plattform für Bewerbungsvideos
 source: apptiva
 slug: vsponse
 templateKey: blog-post
-image: video-answer.png
+image:
+  src: /assets/blog/vsponse/video-answer.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/AMvLyoygq6mxt9zb2djY19TU1NXV1crKygDw8O/F2+i+ydD+/Pv////8/Pz////s7OwA7Ozs////+Pj4pKSekpOLn5+H4ODW7e3vAOzs7P////z7/J6nnTkwKhwRANTX0Pr4+gDS0tLg4ODf399fZWUiDhATAACRlpji39/UuVq8K7QW2AAAAABJRU5ErkJggg==
+  height: 1655
+  width: 2560
 date: 2018-10-08
 author: Philip Schönholzer
 description: >-

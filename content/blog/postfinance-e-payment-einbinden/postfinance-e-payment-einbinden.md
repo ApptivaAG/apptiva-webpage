@@ -3,7 +3,11 @@ title: 'Unsere Erfahrungen mit PostFinance E-Payment'
 source: apptiva
 slug: unsere-erfahrungen-mit-postfinance-e-payment-service
 templateKey: blog-post
-image: postfinance-e-payment.png
+image:
+  src: /assets/blog/postfinance-e-payment-einbinden/postfinance-e-payment.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAACCAIAAADq9gq6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPUlEQVR4nAEyAM3/APv02TcmALWyqaqcSioPADwyAEAsAMixcgDp488xJgDd29G7rmk/NwBMRgBHOQDQuncbYxSajgy/ugAAAABJRU5ErkJggg==
+  height: 572
+  width: 2180
 date: 2020-04-27
 author: Philip Schönholzer
 description: >-

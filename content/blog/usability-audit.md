@@ -3,7 +3,11 @@ title: Was macht einen guten Usability-Audit aus?
 source: apptiva
 slug: usability-audit
 templateKey: blog-post
-image: img/magnifying-glass.jpg
+image:
+  src: /assets/blog/img/magnifying-glass.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAbUlEQVR4nGNgkKllUGhiEKtgMOhnCFvJoNPNoNzC4DiHgUGqlkGymoG7iGHFfatP/xlW3GfwXsKg1sHAIF3NoNjAELbS8vF/hsLdzh/+u379z6DUzAAySqWFQaaO4egXm7f/U/7/Z7jyl0G2AQDXgCNaIG81UgAAAABJRU5ErkJggg==
+  height: 1245
+  width: 2560
 date: 2018-05-30T17:16:49
 author: Philip Schönholzer
 description: 'Mit einem Usability-Audit deckt ein Entwicklungsteam bereits früh im Projektverlauf kritische Usability-Probleme auf. Dies spart Geld und erlaubt dem Entwicklungsteam frühzeitig zu reagieren.'

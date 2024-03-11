@@ -3,7 +3,11 @@ title: Die Digitale Kluft
 source: apptiva
 slug: digitale-kluft
 templateKey: blog-post
-image: img/digitale-kluft.png
+image:
+  src: /assets/blog/img/digitale-kluft.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAYElEQVR4nGP4DwY79+5/9fo1hA0BDN++fQNRPEKuHp7///+HcBESaqoqNrbW3799f/z4MYqEoqKitrZ2ZUVlTk7O////f/36xQCRnz5telNj0+7du3fu3Pnr16////8DAAG/Xv/x6PS2AAAAAElFTkSuQmCC
+  height: 1198
+  width: 1921
 date: 2016-03-03T11:48:45.000Z
 author: philip-schoenholzer
 description: >-

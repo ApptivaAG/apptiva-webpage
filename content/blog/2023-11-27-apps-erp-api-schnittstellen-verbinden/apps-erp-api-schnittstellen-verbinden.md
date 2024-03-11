@@ -3,7 +3,11 @@ title: "Die Kunst der Integration: Apps mit ERPs via API-Schnittstellen verbinde
 source: apptiva
 slug: apps-erp-api-schnittstellen-verbinden
 templateKey: blog-post
-image: apps-erp-api-schnittstellen.jpg
+image:
+  src: /assets/blog/2023-11-27-apps-erp-api-schnittstellen-verbinden/apps-erp-api-schnittstellen.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAbElEQVR4nDXMMREFIQwFQGaQcS0iqKnT06PiCUgfAQiIgAiIAQRgIALi4ObfzF8BWyKCiPhPVUUkM4u7t9aIaO8tIgDcPSLK+agqAGZen3NOUdXMZOY5p5mttcYYv+reC+B5nt47MwOotZrZCxgGQp0KnKI2AAAAAElFTkSuQmCC
+  height: 1280
+  width: 1920
 imageCaption: Markus Winkler auf Unsplash
 date: 2023-11-30
 author: Philip Schönholzer

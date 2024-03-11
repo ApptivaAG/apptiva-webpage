@@ -3,7 +3,11 @@ title: Qualitätsziele
 source: apptiva
 slug: qualitaetsziele
 templateKey: blog-post
-image: img/qualitaetsziele-a4.png
+image:
+  src: /assets/blog/img/qualitaetsziele-a4.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAIAAABxZ0isAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAoUlEQVR4nAGWAGn/ACOp8Smv9Sit9RSb6geV5BOb6COp7xSb6gAWotU2suIYo9cnrNs4tuUiqNZBteMansoARbDdddf/JqjYUL3sVMX1Ep/WOML/AJPIAB+Fm0iXqlWjtcvo7uTw8Mri4+z//7jO0AAAWmkAVmYYZXRBaG9gWUHQtJT669zCpYsADhoOQUY4VlI+WUctPSgASC0AVzQDJgAA/oBKjrTKpXIAAAAASUVORK5CYII=
+  height: 1258
+  width: 1783
 date: 2015-11-06T09:48:05.000Z
 author: linus-huesler
 description: >-

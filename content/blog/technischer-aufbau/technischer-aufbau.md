@@ -3,7 +3,11 @@ title: Technischer Aufbau von Chatbots
 source: bot-fabrik
 slug: technischer-aufbau-von-chatbots
 templateKey: blog-post
-image: ./technischer-aufbau.png
+image:
+  src: /assets/blog/technischer-aufbau/technischer-aufbau.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAADCAIAAAAhqtkfAAAACXBIWXMAAAsTAAALEwEAmpwYAAAASElEQVR4nGO4f/9+YWFhWkbmy5cv/yMBho0bN7KysmpoaJw+ffr////fvn2DSty6dSs7O7ujo+PxowfN3RN6p81+/+7d////AdLkNdsoL/2DAAAAAElFTkSuQmCC
+  height: 737
+  width: 1920
 date: 2020-01-23T11:16:49
 author: Philip Schönholzer
 description: Aus was besteht ein Chatbot und wie wird eine solcher von Grund aufgebaut.

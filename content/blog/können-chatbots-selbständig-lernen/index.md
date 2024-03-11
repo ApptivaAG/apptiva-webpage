@@ -6,7 +6,11 @@ tags: blog
 date: 2022-11-29
 title: Können Chatbots selbständig lernen?
 description: Diese Frage wird oft gestellt. Der Blogpost erläutert die Möglichkeiten der Lernfähigkeit eines Chatbots und erklärt, wie Bubble Chat mit der Thematik umgeht.
-image: learn.jpg
+image:
+  src: /assets/blog/können-chatbots-selbständig-lernen/learn.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAIAAABxZ0isAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAoUlEQVR4nAGWAGn/AGRTUmlJVoFJWZ9tcsCjqU0+TWNLXDEsRQBgRkliJjZeITdcP1DVvL1YP097WGY0KEAAdVRjhV5sr42Xm3F+h19uMAYiMAYhIQAYAPXl7rastomElJaKlpSEklRIXSgnQiUtRABYS1vHtLTJur398O3/+/H/9uz05Njn1cgAGiA6o6GojImUaGd2fnZ+h3N2bVxgX05W1VZDUsT6ctoAAAAASUVORK5CYII=
+  height: 2413
+  width: 3214
 imageCopy: Foto von <a href="https://unsplash.com/@aaronburden?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Aaron Burden</a> auf <a href="https://unsplash.com/de/fotos/QJDzYT_K8Xg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 author: Markus Tanner
 ---

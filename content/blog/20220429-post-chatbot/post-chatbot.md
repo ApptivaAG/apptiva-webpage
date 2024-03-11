@@ -3,7 +3,11 @@ title: 'Chatbot der Schweizerischen Post'
 source: bot-fabrik
 slug: post-chatbot
 templateKey: blog-post
-image: ./post-chatbot.png
+image:
+  src: /assets/blog/20220429-post-chatbot/post-chatbot.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAIAAABxZ0isAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAoUlEQVR4nAGWAGn/AMOvXubfyvX2+Pb29PX0+Nrcz8LDlNrg4ADb2NHKycfc29z09PT+/fyuvr52lpi2xcMA7+/w4+Li3d3b4N/f5ubm8u7sq7C1sLm+AObm5evr6v////7//+np6ePk4l53g4OVnwDq6enn6Oj////6/Pz38u+EoKwAEjVgipsA8fHw8fHw9vb19fb19PLy0trcnrXAz9faKeh29Ab15MIAAAAASUVORK5CYII=
+  height: 1770
+  width: 2452
 date: '2022-04-29T10:25:08+00:00'
 author: Linus Hüsler
 description: Seit fast vier Jahren helfen wir der Schweizerischen Post bei der Implementierung ihres Digitalen Assistenten. Entstanden ist eine wichtige Stütze, die dabei hilft, die stetig steigende Anzahl an Kundenanfragen zu beantworten.

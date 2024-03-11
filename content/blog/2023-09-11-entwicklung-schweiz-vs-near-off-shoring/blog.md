@@ -3,7 +3,11 @@ title: "App Entwicklung in der Schweiz: Vorteile gegenüber Offshore"
 source: apptiva
 slug: app-entwicklung-in-der-schweiz-vorteile-gegenueber-offshore
 templateKey: blog-post
-image: luzern.jpg
+image:
+  src: /assets/blog/2023-09-11-entwicklung-schweiz-vs-near-off-shoring/luzern.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/ADu+/2vW/3bc/4Dk/4Df/3/f/37j/4W74ACn7f+m6v+s8P+v4vm7/f+2///R//+5wMEAaZrAc5/Jfp2+fG9rmcvqveTwgW1Khn11AAQYIAAJAAwmMqajpXJoZnFSO19AL5ORmAAAQFkCRlsgVm2nq6xrcn58bWaqk3+MiIj0eka955y4LgAAAABJRU5ErkJggg==
+  height: 4160
+  width: 6240
 imageCaption: >- 
   Foto der Kapellbrücke in Luzern von Geertje Caliguire auf Unsplash. Ein Symbol für die Schweiz und Schweizer Qualität im Zusammenhang mit Software-Entwicklung.
   

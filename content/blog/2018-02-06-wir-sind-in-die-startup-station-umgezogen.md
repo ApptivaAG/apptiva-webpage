@@ -3,7 +3,11 @@ title: Wir sind in die Startup Station umgezogen
 source: apptiva
 slug: wir-sind-in-die-startup-station-umgezogen
 templateKey: blog-post
-image: img/buero_innen_02_.jpg
+image:
+  src: /assets/blog/img/buero_innen_02_.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVR4nAFkAJv/AK+qmaafjKmikqelmaytqLW6t7K3sr7FvgDUzr7LysTK0M3o6eHc5Njn8Oj3/vXV3tYAf3duXVJIdm9mkZOVjJKIp7WqusfEa3xpAGJgaDUqJhMRFh4jNCUpLxMiHAAAKyMwN3yJNSbXI+QrAAAAAElFTkSuQmCC
+  height: 1172
+  width: 2560
 date: 2018-02-06T20:16:49.000Z
 author: philip-schoenholzer
 description: ''

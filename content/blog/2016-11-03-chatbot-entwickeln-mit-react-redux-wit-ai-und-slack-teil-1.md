@@ -3,7 +3,11 @@ title: 'Chatbot entwickeln mit React, Redux, Wit.ai und Slack'
 source: apptiva
 slug: chatbot-entwickeln-mit-react-redux-wit-ai-und-slack-teil-1
 templateKey: blog-post
-image: img/roboter.jpg
+image:
+  src: /assets/blog/img/roboter.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/AOrr7+vs8fLz+e/z+NfY3eHi6NDQ1sLCygDw8fb2+P3x8fRuaGMIBADHyM7j4+nHyM8A9PX6+/7/qZqRMSIWDwEAq6qqzc3Qz9DXAPf4/fHv8sO9ubmysJSRkaqmn4mIiNfY4gD09fvm5ufd3dzp6/BOT01YVU40MjTNzdWYo1dOaXZHpwAAAABJRU5ErkJggg==
+  height: 683
+  width: 1024
 date: 2016-11-03T11:30:17.000Z
 author: linus-huesler
 description: 'In diesem Blogpost zeige ich, wie wir unseren Chatbot Pit entwickelt haben.'

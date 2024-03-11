@@ -3,7 +3,11 @@ title: Suva Slope Track-App Update 2021
 source: apptiva
 slug: suva-slope-track-app-update-2021
 templateKey: blog-post
-image: slope-track-2021.jpg
+image:
+  src: /assets/blog/slope-track-update-2021/slope-track-2021.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/AKOquKqvvLe9x8fM2IKHkgMJFcrP1+zw+ACfpLOlrLudo66FipGRlJsxNTs3OkH4+/8Ao6e2h4mVgHiAoKCnkpOYSlRadXqE7/P7AKGntoCFjpSBiV9fZ1FXYZmfq9bc59vf6QCjp7aIjZk6PkdaYnKVn62fqbafqbbM0t2sk0fOatzIdwAAAABJRU5ErkJggg==
+  height: 1080
+  width: 1920
 date: 2021-01-14
 author: Philip Schönholzer
 description: >-

@@ -3,7 +3,11 @@ title: 'Anwendungs­beispiele für VR und AR'
 source: apptiva
 slug: vr-anwendungsbeispiele
 templateKey: blog-post
-image: vr-in-action.jpg
+image:
+  src: /assets/blog/2020-10-vr-anwendungsbeispiele/vr-in-action.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAhklEQVR4nGMwNTYPCAhKTUs3M7dvKs+f2pATnxBjZ2PDoKqqw8MmKiwooa6mK8Mn7mZuHBMbY2NjzyAjKWNp4VTaMFlGWllFWjYto8zVziEjwJpBVlyipLrz6f//8vKaDg7e7ZOW2tu6BLnbMUhJKhkY2/r6RujrmEQERqaERWlqmkmIygAACVAhAeYi2Y0AAAAASUVORK5CYII=
+  height: 802
+  width: 1200
 date: 2020-10-02
 author: Linus Hüsler
 description: >-

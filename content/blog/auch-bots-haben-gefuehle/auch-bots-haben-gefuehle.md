@@ -7,7 +7,11 @@ slug: auch-bots-haben-gefuehle
 author: admin
 templateKey: blog-post
 id: 769
-image: ./alex_screenshot.png
+image:
+  src: /assets/blog/auch-bots-haben-gefuehle/alex_screenshot.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/ANLb1d7g3+Pj4/f39/v7++3u7u3u7u7u7gBeXV1oZ2hxcXFgYGBnZ2eGhoaMjIqBgoEAZmdncXFxeXl5aWlpyMjIq6uriYeNiomNAGNjY3FxcXh4eHd3d83NzZ2dm5qfhY+SggBfX19ZWVknJycCAgIcHB08PjaMnVabp3J4+EEuyi13kQAAAABJRU5ErkJggg==
+  height: 1380
+  width: 2056
 category:
   - Allgemein
 tag: []

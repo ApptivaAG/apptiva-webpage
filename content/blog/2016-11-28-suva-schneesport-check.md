@@ -3,7 +3,11 @@ title: Suva Schneesport-Check
 source: apptiva
 slug: suva-schneesport-check
 templateKey: blog-post
-image: img/schneesport-check.jpg
+image:
+  src: /assets/blog/img/schneesport-check.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/AAArZwAkXwAjUwAlRAAbOwAXOQAJLgAQRgAAKEwAOmMANmcASX4ARngAP3YASYEAMmkAL0FcZn2cYHyfSWqLTGqJfWZYsH1OXGyCADddh115naq4zsnS39HX5OLVy97Itqq3yADl5+r5+vvw8fXv8fLq7fHm7vfq8v/w8/gnfjoYjLBJqQAAAABJRU5ErkJggg==
+  height: 683
+  width: 1024
 date: 2016-11-28T14:18:33.000Z
 author: linus-huesler
 description: >-

@@ -7,7 +7,11 @@ slug: facebook-chatbot-unterhaltung-an-echte-person-uebergeben
 author: admin
 templateKey: blog-post
 id: 716
-image: ./facebook-ai-799x423.jpg
+image:
+  src: /assets/blog/facebook-chatbot-unterhaltung-an-echte-person-uebergeben/facebook-ai-799x423.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVR4nAFkAJv/AAo9cnWGqGV5nwo9cgAlXnGDpzdVggAOTQBccJj8/Px+ja5fc5sAOG35+fqZpb4ABEkAZHif6Ovwa3+hb4CkZ3qg/Pz8zdTfIUd5AA4/dHOEp0pjjS9Pf0FdinOEp22BpCNIesn0Lnet8SjBAAAAAElFTkSuQmCC
+  height: 423
+  width: 799
 category:
   - Allgemein
 tag: []

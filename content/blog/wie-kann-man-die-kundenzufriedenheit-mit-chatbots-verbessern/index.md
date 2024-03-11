@@ -7,7 +7,11 @@ date: 2022-10-10
 title: Wie kann man die Kundenzufriedenheit mit Chatbots verbessern?
 displayTitle: Wie kann man die Kunden&shy;zufrieden&shy;heit mit Chatbots verbessern?
 description: Chatbots liefern wichtige Erkenntnisse über Konversationen. Sie optimieren Prozesse in Unternehmen und sorgen für grössere Zufriedenheit Ihrer Kunden.
-image: happy.jpg
+image:
+  src: /assets/blog/wie-kann-man-die-kundenzufriedenheit-mit-chatbots-verbessern/happy.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAbUlEQVR4nGNwdLSODdEO91FlY2IP85ErzPA8ffrM7Cl9DFZWJu72ConBKspyYolBcg5WKkUFubFhXgzWFkbCfMzFaXZ/3+010uKVkRazNtVyczRn0NRQEhcX7Z0w7f+ffypq6vo6KiF+rglR/gCo9R2CbBk4ywAAAABJRU5ErkJggg==
+  height: 900
+  width: 1600
 imageCopy: Foto von <a href="https://unsplash.com/@jacquiemunguia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jacqueline Munguía</a> auf <a href="https://unsplash.com/de/fotos/1pAwJiCD60c?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 author: Markus Tanner
 ---

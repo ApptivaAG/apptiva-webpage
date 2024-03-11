@@ -4,7 +4,11 @@ source: bot-fabrik
 date: '2021-03-08T17:00:00+00:00'
 status: publish
 slug: chatbots-in-der-schweiz-hosten
-image: ./picto-safe-mountain.png
+image:
+  src: /assets/blog/chatbots-in-der-schweiz-hosten/picto-safe-mountain.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAYElEQVR4nGNgAIP///+fY+D9B+FAherrGRgYPpY03m7u9mBQ+XDpEkwCTN5hYDnBILSHXeOKXwzEAJDoDQaGpwwMZxgYbjMwXGRgmMrADNV0AcyfzMCwjYHhJAPDPLAoACVDHuCRTn0JAAAAAElFTkSuQmCC
+  height: 1256
+  width: 1920
 author: Patrik Stutz
 templateKey: blog-post
 id: 948

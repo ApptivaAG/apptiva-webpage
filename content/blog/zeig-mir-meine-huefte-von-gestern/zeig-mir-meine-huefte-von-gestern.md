@@ -7,7 +7,11 @@ slug: zeig-mir-meine-huefte-von-gestern
 author: 'Linus Hüsler'
 templateKey: blog-post
 id: 783
-image: ./Fluance-Cockpit.png
+image:
+  src: /assets/blog/zeig-mir-meine-huefte-von-gestern/Fluance-Cockpit.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAgUlEQVR4nB3NsQ3CMBAF0CupGY+OFtEi5kCioHPDAlSIAdJmAhQRjDGOc+cfn5skDVIWeI+89z2LJBkAZmEWVX29P/S0YRpHFxFZ5nkKPY6muj5qalpXNDf253woqu030vayP98JizAAklLRbIPQerPaGVqCBCB00rMg68FUp1v9B4lsZQLbgM+sAAAAAElFTkSuQmCC
+  height: 734
+  width: 1200
 category:
   - Allgemein
 tag: []

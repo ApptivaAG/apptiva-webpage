@@ -3,7 +3,11 @@ title: Unsere kleine Werkausstellung
 source: apptiva
 slug: werkausstellung
 templateKey: blog-post
-image: werkausstellung.jpg
+image:
+  src: /assets/blog/werkausstellung/werkausstellung.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVR4nAFkAJv/AMizhfXw4P3/9vT26vj79fLt4uXj3Pb17wB9a1KTh3KzrqOyqJfPwKLXyrmfm5NdXVMAKBwQOCYVMSAKTz4wbGBWnY+GLiQdGAAAADIdDEozIkEqGikZDiMWDiYVCyMTCh8RE8DoK+xe3wzZAAAAAElFTkSuQmCC
+  height: 834
+  width: 1670
 date: 2018-10-01
 author: Philip Schönholzer
 description: >-

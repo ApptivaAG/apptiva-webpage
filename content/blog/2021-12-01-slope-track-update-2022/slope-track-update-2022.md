@@ -3,7 +3,11 @@ title: Suva Slope Track App - Update 2022
 source: apptiva
 slug: suva-slope-track-app-update-2022
 templateKey: blog-post
-image: hero-slope-track-2022.png
+image:
+  src: /assets/blog/2021-12-01-slope-track-update-2022/hero-slope-track-2022.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVR4nAFkAJv/AACaywBAdQAiTwAxYQAxYAAxXwBPhQCOxAAAebZ/ttt+pMUAESoALUoAEDoAOGgAl8oAAG+vlMfYqMbJkJOZRmVuAFZ4AI7AAIzCAKDx/5WipmRwdOzp6ae5woSmrOT//6Tg/8txLB9tGiCTAAAAAElFTkSuQmCC
+  height: 1079
+  width: 1920
 date: 2021-12-01
 author: Philip Schönholzer
 description: >-

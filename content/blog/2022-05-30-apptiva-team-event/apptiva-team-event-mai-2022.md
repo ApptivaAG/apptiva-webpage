@@ -3,7 +3,11 @@ title: Apptiva am Abgrund
 source: apptiva
 slug: apptiva-team-event-mai-22
 templateKey: blog-post
-image: the-edge.jpg
+image:
+  src: /assets/blog/2022-05-30-apptiva-team-event/the-edge.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAADCAIAAAAhqtkfAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAVklEQVR4nAFLALT/ABMiMEdWaUZZbTxBVjY3Rh4lMgYSHwABDwB/lKptfY7R4PL/9P/66O+urr5KXG8xOkgAPERNISgyW2Vvm669eY6gaHiGOERRAAQS9QIcpLuqdnsAAAAASUVORK5CYII=
+  height: 1094
+  width: 2560
 date: 2022-05-30
 author: Markus Tanner
 description: >-

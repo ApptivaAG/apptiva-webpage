@@ -7,7 +7,11 @@ slug: ein-chatbot-am-empfang
 author: 'Roman Schaller'
 templateKey: blog-post
 id: 750
-image: ./Empfang.png
+image:
+  src: /assets/blog/ein-chatbot-am-empfang/Empfang.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVR4nAFkAJv/AP///+Xk5GNfXa2rqv////39/f///////wD///+LkJMADBdGUlrSyr6+uKP5+/z+/f0AzcjHeH+ETGh3TmNuSlZbdnp60MvL+/v7ANjV1cPFyK22vomYooqcp4KVn93Y2Pv7+7bcRGkpYe0CAAAAAElFTkSuQmCC
+  height: 255
+  width: 520
 category:
   - Allgemein
 tag:

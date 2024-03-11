@@ -3,7 +3,11 @@ title: So werden wir jede Woche etwas bessere Entwickler:innen
 source: apptiva
 slug: so-werden-wir-bessere-entwicklerinnen
 templateKey: blog-post
-image: light-bulbs.jpg
+image:
+  src: /assets/blog/2021-09-22-wissensaustausch/light-bulbs.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/AFxdW9LW1tzm42VpZJ6gnvD4+nt9fQsIAACFiIaeo56IjYrEzcm0u7ZYWlpAQUBFREEARkhGaGpogYJ8z9fUtrq4iImGjo+ONjQvAElJQ2psat/l5H6Afm9vbb7AwJSQikhFPgA4OC+Cg4BubmuQj4fFx8RubGdFQj08OjeLxjwvbaF89wAAAABJRU5ErkJggg==
+  height: 1631
+  width: 2560
 imageCaption: Photo by Wilhelm Gunkel on Unsplash
 date: 2021-09-22
 author: Philip Schönholzer

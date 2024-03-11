@@ -3,7 +3,11 @@ title: 'Screenimage lanciert neue Digital Signage Software'
 source: apptiva
 slug: screenimage-pro
 templateKey: blog-post
-image: screenimage-board.png
+image:
+  src: /assets/blog/screenimage-pro/screenimage-board.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/AAAALQ8GKykYN3lpeoh0g18wRmUvQXxMWADh3+nd3Nuur6+XoK9FSEPR09T2+v/m6u8AysXR0NDVy8XKtqmywsHC2NbY397g3d3fAMjN2t3e5MmzvZldc93W3ujj5ujo7OXo7ADCucfZ2N7l6Ovo7e/q7O3n6u3q7O/l6OyCw1SkbnsjjgAAAABJRU5ErkJggg==
+  height: 1565
+  width: 2560
 date: 2020-06-24
 author: Linus Hüsler
 description: >-

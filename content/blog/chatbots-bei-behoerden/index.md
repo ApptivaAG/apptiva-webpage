@@ -6,7 +6,11 @@ tags: blog
 date: 2023-03-20
 title: Chatbots bei Behörden
 description: Chatbots sind in der Geschäftswelt allgegenwärtig. Behörden können von dieser Technologie auch profitieren. 4 Argumente für Chatbots im öffentlichen Sektor.
-image: form.jpg
+image:
+  src: /assets/blog/chatbots-bei-behoerden/form.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/ABgWFSUkI3JcP8Wqi8Cumb+niKeJZkYyFQAfHyERDw9BOjLw7+7j6vHj4eDVyLfNsI4ADwAAVlVVk5mf7vH43+Pot73C6/H9x7quALato+Xr9PL0+/3+/9fa34SJj/j4/LGTcwDK093R193Z3uXu8ffk6e5pbXGwmHumglZM1ExZhnmUeAAAAABJRU5ErkJggg==
+  height: 2912
+  width: 4368
 imageCopy: Foto von <a href="https://unsplash.com/@elodiso?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Leon Dewiwje</a> auf <a href="https://unsplash.com/de/fotos/ldDmTgf89gU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 author: Markus Tanner
 ---

@@ -4,7 +4,11 @@ source: apptiva
 titleTag: 'App erstellen: Leitfaden & Tipps'
 slug: app-erstellen-schweiz
 templateKey: blog-post
-image: iphone-apps.jpg
+image:
+  src: /assets/blog/2023-07-04-erfolgreiche-app-entwickeln-schweiz/iphone-apps.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/ALDJ0b7a4cbj6IKbpFpygJq0vpy5woCbpAC+2N6vxs1ATVk8SFU9Z4VIdIevztW00t0ApLu9FzE4SG1yc4qfkKemhK7EhJ+tudbdAKzAwgAKC1aMm5/T4tjX2/7h99zU5pmYngDL4ON9jI0FGyS2yuz/8/D/1cv/9vS8usUMzEyam+sEaAAAAABJRU5ErkJggg==
+  height: 1280
+  width: 1920
 imageCaption: iPhone mit Apps von William Hook auf Unsplash
 date: 2023-07-04
 author: Philip Schönholzer

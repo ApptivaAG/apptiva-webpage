@@ -3,7 +3,11 @@ title: Wie sich der Aufwand für das Aufsetzen und Pflegen von Chatbots in Luft 
 source: bot-fabrik
 slug: kein-aufwand-fuer-aufsetzen-und-pflegen-von-chatbots
 templateKey: blog-post
-image: ./wissen-extrahieren.jpeg
+image:
+  src: /assets/blog/20230522-wissen-statt-absichten/wissen-extrahieren.jpeg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAb0lEQVR4nAFkAJv/AABAZQCmyABPegAGOjQYGJ+FfbSttMy/0QBMvNcAfagAgK0AW4QJGzfy5fWDfpViW3MAlu//PbTNAKzFedDofYWi//b/tq7Atqe5AJnk+FLC2Cq71KDf+HFWX3ZfXH90bE4vKvp7MjRhS4UYAAAAAElFTkSuQmCC
+  height: 480
+  width: 1024
 date: '2023-05-22'
 author: Philip Schönholzer
 description: Ein revolutionärer Durchbruch hat den Aufwand für das Aufsetzen und Pflegen von Chatbots drastisch reduziert. Erfahre, wie Chatbots heute innerhalb eines Tages eingerichtet werden können und kaum noch menschliche Pflege benötigen.

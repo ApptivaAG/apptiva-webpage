@@ -3,7 +3,11 @@ title: Geschäftsprozesse beschleunigen
 source: apptiva
 slug: geschaeftsprozesse-beschleunigen
 templateKey: blog-post
-image: img/beschleunigen.jpg
+image:
+  src: /assets/blog/img/beschleunigen.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/AFKBzovL/6Lq/6///3y2/2aX7YbE/5HU/wA/bqVclNZ+wP9zsPtmoOhmn+Vvq/Q6ZqIA/8aj/+Gz/b6c96+VxJSOi4KfdYOiW3OMAHNVRIhdPYdXLoZqO1BKJ1RDJlpNNk1HMwAnIxdGMRtaPBw8KRUWFwYBBQALGRIdHRIqzzsGP06WtAAAAABJRU5ErkJggg==
+  height: 1080
+  width: 1749
 date: 2015-12-03T15:53:27.000Z
 author: philip-schoenholzer
 description: >-

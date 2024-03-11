@@ -3,7 +3,11 @@ title: Dies macht einen erfolgreichen Produkt-Konfigurator aus
 source: apptiva
 slug: dies-macht-einen-erfolgreichen-produkt-konfigurator-aus
 templateKey: blog-post
-image: screws.jpg
+image:
+  src: /assets/blog/2023-03-06-dies-macht-einen-erfolgreichen-produkt-konfigurator/screws.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVR4nAFkAJv/AMfFxsTExEJBQH98fa2rrAIAAMXExOjn6ADr6+zJyMhpZma/u7uUj49HQkA+OziBf34AgYGC5+Lg+/3/1c7Kx9DV2/D46+Xf9vb2ANTU1FRLRsnIx1pWVZORkVxbWiclJODf3aMwO/TiB+CfAAAAAElFTkSuQmCC
+  height: 1255
+  width: 2400
 imageCaption: Photo von Dan Cristian Pădureț auf Unsplash
 date: 2023-03-06
 author: Philip Schönholzer

@@ -7,7 +7,11 @@ slug: der-bot-dein-freund-und-helfer
 author: admin
 templateKey: blog-post
 id: 877
-image: ./cop.png
+image:
+  src: /assets/blog/der-bot-dein-freund-und-helfer/cop.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/AJebrYaKnm1qdktNYCouQV1YY2lmb29xfwDExMqysLmOjZU4QVd9gpCtp62vp6eEeYAAtLO7aIOBXXJ6mJqliZGf2+Hlp6WqYWJ2AGhufgAnMxcyQT5laRdAUz92cldqk11hegBxZ3cmJ0IAACNuiJH///94kp0ABFJ6gaBJfTgNjt/xrAAAAABJRU5ErkJggg==
+  height: 653
+  width: 1045
 category:
   - Allgemein
 tag:

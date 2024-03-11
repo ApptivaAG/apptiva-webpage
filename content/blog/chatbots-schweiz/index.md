@@ -6,7 +6,11 @@ tags: blog
 date: 2023-07-10
 title: Wieso man einen Schweizer Chatbot-Anbieter auswählen sollte 
 description: In diesem Blogpost nennen wir drei wesentliche Aspekte, wieso die Wahl eines Schweizer Chatbot-Anbieters sinnvoll ist.
-image: chatbots-aus-der-schweiz.jpg
+image:
+  src: /assets/blog/chatbots-schweiz/chatbots-aus-der-schweiz.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA00lEQVR4nAHIADf/AD0uKUA/RAEAChEQFCkuMioqK2RbV1E/PABfW1xnam8tLDAYGB4VExc8NzhmV1RKOTYAP0JLPj9HZ2htbG9yRkdLWVRUWUhCRTUxAK+5w2pxejxBTEhNV5umr31xcT8rJzkpJwDAyNHz///O2eK1v8uLmKdUPEJMKCg8MjIAT0BClJSbusXQWV1mFhEaSk5ZjY2agIGNADIfIko4OWpiaUxIU5GUp77C1bK4yqCmuQAkFhkpGBwvGxxSQkaKhZGvtsWstsWSmaa8d0ku7jnzzQAAAABJRU5ErkJggg==
+  height: 1920
+  width: 1920
 imageCopy: Foto von <a href="https://unsplash.com/@goran_ivos?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Goran Ivos</a> auf <a href="https://unsplash.com/de/fotos/ly-RWaR0GXI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 author: Markus Tanner
 ---

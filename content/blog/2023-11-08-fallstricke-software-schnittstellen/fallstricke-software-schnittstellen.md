@@ -3,7 +3,11 @@ title: Die typischen Fallstricke bei der Implementierung von Software-Schnittste
 source: apptiva
 slug: fallstricke-software-schnittstellen
 templateKey: blog-post
-image: schnittstellen.jpg
+image:
+  src: /assets/blog/2023-11-08-fallstricke-software-schnittstellen/schnittstellen.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAgklEQVR4nGPg4+PjFxAQl5TkBgMhAQEuPj5eHh4GYQFeWxcXLbcgKSkpEWFBKTPbzLpWTTUVBkFOluXrVlmVtOkaGOnq6WnYun34+z8hMZ6Bi4Pdyc1F3thaQkJCTlZW1cK+vKFFXUOdgY+Pj52VVYiHW1JCUFxMWECAX0hAgIODAwANABUpgcbjSQAAAABJRU5ErkJggg==
+  height: 3541
+  width: 5311
 imageCaption: Wonderspaces - Foto von Israel Palacio auf Unsplash
 date: 2023-11-08
 author: Linus Hüsler

@@ -3,7 +3,11 @@ title: "Suva Slope Track App Update 23/24: Neue Funktionen und Verbesserungen"
 source: apptiva
 slug: suva-slope-track-app-update-23-24
 templateKey: blog-post
-image: slope-track-app-update-23-24.png
+image:
+  src: /assets/blog/2023-12-21-slope-track-update-23-24/slope-track-app-update-23-24.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/AGm34k6Nr1OUslujxYLc/EWEok6Wu33U+gC01OiSsb6lvcyovcGMrcQABRM0LSievc4A+/z+5PP39Pr+9PXzxM7dIiQoYlRU5+zyANPS0p6bm5eWlMLExIvG20lZYYqFhvDv8ADs7OzY2Nja2trf4OCxy9Ho7/P7+/rw8PAFIVOU657l9gAAAABJRU5ErkJggg==
+  height: 1080
+  width: 1920
 imageCaption: Suva Slope Track App Update 23/24
 date: 2023-12-21
 author: Philip Schönholzer

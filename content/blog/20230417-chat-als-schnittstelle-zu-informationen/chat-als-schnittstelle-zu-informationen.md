@@ -3,7 +3,11 @@ title: Wie Chat zur revolutionären Schnittstelle beim Zugriff auf Dokumente, Da
 source: bot-fabrik
 slug: chat-als-schnittstelle-zu-informationen
 templateKey: blog-post
-image: ./chat-interface.png
+image:
+  src: /assets/blog/20230417-chat-als-schnittstelle-zu-informationen/chat-interface.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAACE4AAAhOAFFljFgAAAAiElEQVR4nAF9AIL/AFJSUqenp7i5uJeXl7/X5LvEyZ6bm1xcXACrq6umpqbW1ta4s7PU6vmvtbabmppNTU0Aqampubm56Ofnx9bdr9rln52duLm4m5ubAK6urtTU1OTj4tDd48DN08fHxP39/ba2tgBzc3OKioqjo6NjY2MAAACdnZ2urq6enp6lrE+DSy2FOAAAAABJRU5ErkJggg==
+  height: 1023
+  width: 1683
 date: '2023-04-17'
 author: Philip Schönholzer
 description: Chat als Schnittstelle zum Wissen hat das Potenzial, die Art und Weise, wie wir auf Informationen zugreifen und sie verarbeiten, grundlegend zu verändern. Chat-GPT hat gezeigt, dass Chat möglicherweise der beste Weg ist, mit Dokumenten, Wissen und Datenbanken zu interagieren.

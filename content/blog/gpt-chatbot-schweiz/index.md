@@ -6,7 +6,11 @@ tags: blog
 date: 2023-11-06
 title: GPT-Chatbots aus der Schweiz
 description: Microsoft bietet den Azure-OpenAI-Dienst nun auch in der Schweiz an. Dadurch bleiben die Daten bei der Kommunikation mit GPT-Chatbots nun in der Schweiz.
-image: microsoft-openai-schweiz.jpg
+image:
+  src: /assets/blog/gpt-chatbot-schweiz/microsoft-openai-schweiz.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA00lEQVR4nAHIADf/AAArVQApTwAkRgATMwAGKQAEISIHGlUIFAAoeJYCYIIAQWUAU24FTWISLD1SODyYSToAH36eMZm0UcnXf+v1Xc7dW62tR11ajVM9AC+VtH7//5Tx/3z//23y/4zu/3i8rnhjSgA6psVu6PYUY5YfdbYYcp8tdZpBlJJibFwACWaGIoKfK5KnKH6SSZ+pI32GSGxpYltRAAAzUwApTQBQcQBQagAwSwAySTFCTTU1OgAAETMACzAAFTQADS0ACCoAFCsADiYAAyOD5EKFdNWIqgAAAABJRU5ErkJggg==
+  height: 1024
+  width: 1024
 imageCopy: Bild erstellt von <a target="_blank" href="https://www.bing.com/images/create/microsoft-bietet-openai-dienst-in-der-schweiz-an/6548d143e2a34648ad97d4b22cd86e14?id=5alz6QyuCWoHCBA7E70t4Q%3d%3d&view=detailv2&idpp=genimg&FORM=GCRIDP&mode=overlay">Microsoft Bing Image Creator</a>
 author: Markus Tanner
 ---

@@ -1,4 +1,4 @@
-import { getImageInfo } from '@/utils/blog'
+import imageSize from 'image-size'
 import Image from 'next/image'
 import path from 'path'
 
@@ -30,3 +30,7 @@ function MdxImage(contentPath: string) {
 }
 
 export default MdxImage
+
+function getImageInfo(imageSrc: string) {
+  return imageSize(path.join('./public', imageSrc))
+}

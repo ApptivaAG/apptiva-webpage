@@ -7,7 +7,11 @@ slug: allianz-cinema-chatbot
 author: 'Linus Hüsler'
 templateKey: blog-post
 id: 469
-image: ./allianz-cinema-bot.png
+image:
+  src: /assets/blog/allianz-cinema-chatbot/allianz-cinema-bot.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVR4nAFkAJv/AKqqq87PwNLUyOnh2/z57///+////v///wCdnZydbWOYaWQ0gbkAaq8AfbgAbbCHt9gAkpKSKwAAMQAAZ5rDCHy2N4W8IoS9osTfAH1+fn97e4yFhdTMxe/l2dDIve7o4Pn38i66PJAw6PDzAAAAAElFTkSuQmCC
+  height: 628
+  width: 1200
 category:
   - Allgemein
 tag: []

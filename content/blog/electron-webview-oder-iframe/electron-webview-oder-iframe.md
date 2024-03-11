@@ -3,7 +3,11 @@ title: 'Erfahrungen mit Electron und Webview'
 source: apptiva
 slug: erfahrungen-mit-electron-webview
 templateKey: blog-post
-image: electron-webview.png
+image:
+  src: /assets/blog/electron-webview-oder-iframe/electron-webview.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAADCAIAAAAhqtkfAAAACXBIWXMAAAsTAAALEwEAmpwYAAAARUlEQVR4nGPomzi9vXvS/////6ECBgZ2CQZ+mfv37z948ODtu3e379x98ODh8xcvGfqnzOrsm/r///+/f/78+/fvDwwAAD1POqjPCVt+AAAAAElFTkSuQmCC
+  height: 600
+  width: 1920
 date: 2020-05-15
 author: Renato Wasescha
 description: >-

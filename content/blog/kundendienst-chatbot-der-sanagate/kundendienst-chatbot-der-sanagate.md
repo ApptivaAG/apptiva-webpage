@@ -8,7 +8,11 @@ author: 'Philip Schönholzer'
 templateKey: blog-post
 description: Seit Kurzem beantwortet unser neuster Kundendienst-Chatbot einen Teil der Kundenanfragen der Sanagate.
 id: 577
-image: ./Blog.png
+image:
+  src: /assets/blog/kundendienst-chatbot-der-sanagate/Blog.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAbUlEQVR4nGNYunRpe3v7qlVr7t+98/XDu/////0HA4bcvDw2Tk4fD7eczqkMftkMSTUMoUW96/cxhIaFBocEx0ZF1k6Y4VDcHtg4zaWye8PRkwympqZ+vr6NTU27t217/ejumzfvPn568u/fJwDGjjcycs2hcwAAAABJRU5ErkJggg==
+  height: 492
+  width: 1024
 category:
   - Allgemein
 tag: []

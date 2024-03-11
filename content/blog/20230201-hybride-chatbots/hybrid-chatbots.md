@@ -3,7 +3,11 @@ title: 'Hybrid-Chatbots'
 source: bot-fabrik
 slug: hybrid-chatbots
 templateKey: blog-post
-image: ./hybrid-chatbots.png
+image:
+  src: /assets/blog/20230201-hybride-chatbots/hybrid-chatbots.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAiElEQVR4nAF9AIL/AP///93c3drX2tTU2NDQ1NfW2d/n7O3z9wD///+Um6JUUl2/vsK5uL6bmJ/R3eTK194A////XlxiJCMv////+vn56urs////wMDFAP///0RDSwQCE3t7hGFibGFibHZ2gHNzfgD////GxMa+vMDh4uPY2Nvc3N7W1tnk5OYoZlfPUgmEGAAAAABJRU5ErkJggg==
+  height: 1248
+  width: 2070
 date: '2023-02-01T10:25:08+00:00'
 author: Markus Tanner
 description: Hybride Chatbots kombinieren Chatbots mit Live-Chats. In vielen Fällen macht diese Kombination Sinn.

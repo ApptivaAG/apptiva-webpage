@@ -7,7 +7,11 @@ date: 2023-05-10
 title: 5 Dinge, die bei der Entwicklung von Chatbots vermieden werden sollten
 displayTitle: 5 Dinge, die bei der Entwicklung von Chatbots vermieden werden sollten
 description: So einfach die Entwicklung von Chatbots auch scheinen mag, gibt es einige Dinge die man verhindern sollte, wenn man ein gutes Resultat erzielen will. 
-image: interdiction.jpg
+image:
+  src: /assets/blog/5-dinge-bei-chatbotentwicklung-vermeiden/interdiction.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAIAAABxZ0isAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAoUlEQVR4nAGWAGn/AEAuGkgxGmdNKm1KLWgpGnlURbm0p6OViQAtHg81JhZZQimcSkvCk6p4MkWXa2ino5QAOikaRzojajYnx5Cf1///f4edXRcjn5KHADIgDzwrF08uHaZdbMje+5GUq2wlMZiKgAAgEgAtHxRRQio5AACHN015JzuPZWKalIYAKR8XMSQbaFE5Kh0JGAAAKBQIkYl8loh8N3wx3aMxbtYAAAAASUVORK5CYII=
+  height: 1440
+  width: 1920
 imageCopy: Foto von <a href="https://unsplash.com/es/@bel2000a?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Belinda Fewings</a> auf <a href="https://unsplash.com/de/fotos/73XDjmZQo6Y?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 author: Markus Tanner
 ---

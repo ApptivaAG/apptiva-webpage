@@ -6,7 +6,11 @@ tags: blog
 date: 2023-02-07
 title: Bubble Chat Assistent
 description: Der Bubble Chat Assistent ist ein bisschen wie Magie. Er hilft, den Chatbot ohne grossen Aufwand noch besser zu machen. Trotzdem ist alles unter Kontrolle.
-image: magic.jpg
+image:
+  src: /assets/blog/bubble-chat-assistent/magic.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/AKrQ5Mjw/9n//7bY6outwnGPo1RtgjxMXwCVu86kzd+94/K42OahvMp2i51QXnAxPk4Am8LSkbfHk7XH9v3+29vYXXGBQk9fKDJAAJvE1KrZ667b7LbN15Ofq1VjdTJAUSQpNwC03/F+lJ9LTE8XAABDU2FVbYAzQE8hJzTZhkRRiXcE1QAAAABJRU5ErkJggg==
+  height: 1600
+  width: 2400
 imageCopy: Foto von <a href="https://unsplash.com/@cristian1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Cristian Escobar</a> auf <a href="https://unsplash.com/de/fotos/abkEAOjnY0s?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 author: Linus Hüsler
 ---

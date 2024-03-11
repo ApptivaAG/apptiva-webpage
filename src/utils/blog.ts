@@ -5,7 +5,6 @@ import remarkEmbedder from '@remark-embedder/core'
 import oembedTransformer from '@remark-embedder/transformer-oembed'
 import { Code } from 'bright'
 import { promises as fs } from 'fs'
-import { imageSize } from 'image-size'
 import { compileMDX } from 'next-mdx-remote/rsc'
 import { unstable_cache } from 'next/cache'
 import path from 'path'
@@ -20,7 +19,6 @@ import {
   MarkdownBlog,
   MarkdownBlogPreview,
 } from './types'
-import { getPlaiceholder } from 'plaiceholder'
 
 const blogPostsPath = 'content/blog'
 const assetsPath = '/assets/blog'
@@ -137,21 +135,15 @@ const getMarkdownPosts = unstable_cache(async () => {
       },
     })
 
-    const imageSrc = markdown.frontmatter.image
-      ? path
-          .join(path.dirname(markdownFilePath), markdown.frontmatter.image)
-          .replace(blogPostsPath, assetsPath)
-      : undefined
-
-    const imageInfo = imageSrc ? getImageInfo(imageSrc) : undefined
-    const { base64 } = imageSrc
-      ? // @ts-ignore
-        await getPlaiceholder(imageSrc, { size: 8 })
-      : { base64: '' }
     posts.push({
       kind: 'markdown',
       content: data,
-      image: { src: imageSrc, ...imageInfo, base64 },
+      image: {
+        src: markdown.frontmatter.image?.src,
+        base64: markdown.frontmatter.image?.base64Placeholder,
+        width: markdown.frontmatter.image?.width,
+        height: markdown.frontmatter.image?.height,
+      },
       blogPostAssetsDirectory,
       title: markdown.frontmatter.title,
       description: markdown.frontmatter.description,
@@ -222,7 +214,3 @@ const getMarkdownPostsPreviews = unstable_cache(async () => {
 
   return posts
 }, ['markdown-preview'])
-
-export function getImageInfo(imageSrc: string) {
-  return imageSize(path.join('./public', imageSrc))
-}

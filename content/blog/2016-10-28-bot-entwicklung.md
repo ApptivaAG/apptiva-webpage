@@ -3,7 +3,11 @@ title: Bot Entwicklung in der Schweiz
 source: apptiva
 slug: bot-entwicklung
 templateKey: blog-post
-image: img/bot-entwicklung.png
+image:
+  src: /assets/blog/img/bot-entwicklung.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVR4nAFkAJv/AP///9fU0peSjtnZ2aKyu5aZm8bGxv///wD///9wf4QAFyOlqari5+ldXV1/f3////8A/v36ADxrAA5MZX+Mys7QWllZVlZW8vLyAP///2easi9+m+Pl5t7f4JeXlqqqqv///8ZPQH6BbRDzAAAAAElFTkSuQmCC
+  height: 1023
+  width: 2094
 date: 2016-10-28T14:57:14.000Z
 author: philip-schoenholzer
 description: ''

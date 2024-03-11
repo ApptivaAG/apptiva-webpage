@@ -3,7 +3,11 @@ title: Trial Store - Globus Innovationsprojekt
 source: apptiva
 slug: trial-store
 templateKey: blog-post
-image: trial-store-titel.png
+image:
+  src: /assets/blog/trial-store/trial-store-titel.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/AKqqqjc3N7+/v0xMSyYlJC0uLhobG66urQCSkpJERESurq55eXVdX10tJRsWCADY29sAxMTE2tra1dXViJCUV01JXUYnGwAA0MrFAJaWlldXV7W1tdHS0bSyr6ajnp2bluHh4AC9vb1MTEzS0tL8/Pzm5uff3+D6+vv4+Pn6OEPk6EkPsAAAAABJRU5ErkJggg==
+  height: 1440
+  width: 2560
 date: 2018-11-12
 author: Philip Schönholzer
 description: >-

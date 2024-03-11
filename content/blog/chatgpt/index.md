@@ -6,7 +6,11 @@ tags: blog
 date: 2022-12-17
 title: Die wichtigsten Fragen und Antworten zu ChatGPT
 description: ChatGPT ist ein Chatbot, der auf GPT-3 basiert und menschenähnliche Konversationen führen kann. Er kann in verschiedenen Bereichen eingesetzt werden.
-image: OpenAI.jpg
+image:
+  src: /assets/blog/chatgpt/OpenAI.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVR4nAFkAJv/AG/N/2yw/1t/2Eo8jkgAWVsAQn8AP6wARQBXlu3b9v/Cyf+ukNS3eLXIcaTxgarXJVkAAE/Burn/qpbXzKPX9rbc/63L/8fT+2toAAAAgQAAYBYARkwWS5BCYOVzgf+Mg/+ZXmgcNMC7MVfiAAAAAElFTkSuQmCC
+  height: 900
+  width: 1600
 author: Linus Hüsler
 ---
 

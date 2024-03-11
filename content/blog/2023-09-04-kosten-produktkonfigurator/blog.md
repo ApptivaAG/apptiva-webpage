@@ -3,7 +3,11 @@ title: Wie teuer ist ein Produktkonfigurator?
 source: apptiva
 slug: wie-teuer-ist-ein-produktkonfigurator
 templateKey: blog-post
-image: money-tree.jpg
+image:
+  src: /assets/blog/2023-09-04-kosten-produktkonfigurator/money-tree.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/AK+3vJWlo1J0PoObkcXQ29vi6vj4+/X8/wBWcnhfenpphWmKoaOtusOhqayqtbrT2t4AQ2hyVXBzbF1HwLCRx83Nt7e1sr3C5efqADNRVzxSUiEHAK2LaYKLjJ2foJSYm7CvrwAABQMCDAwvKSGQc1YfISAiIh4jIyEkJR+nvT1FiSzhKwAAAABJRU5ErkJggg==
+  height: 1280
+  width: 1920
 imageCaption: Foto von Micheile Henderson auf Unsplash
   
 date: 2023-09-05

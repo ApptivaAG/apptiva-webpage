@@ -3,7 +3,11 @@ title: 'Der neue Vivanco B2B Webshop'
 source: apptiva
 slug: neuer-vivanco-webshop
 templateKey: blog-post
-image: screenshot.png
+image:
+  src: /assets/blog/2020-12-03-vivanco/screenshot.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAIAAABxZ0isAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAoUlEQVR4nAGWAGn/AFZWVkhISFRUU1ZWVkxLSktLSURDQ1RUVAD7+/vx8fHs7evY2dji4N7Nzsu6u7v///8A+Pj40NDQjo6OxMXDuLi3srKw0NDQ////APHx8d3d3autq5mcnaanpaSkpMjGxfj4+QD////////k5OXa2tzg4N/d3d3v7u7///8AOjo6QkJCExQTCgoJCwsLBAUFIiIjQEBAtz1bR7BTyowAAAAASUVORK5CYII=
+  height: 1249
+  width: 1571
 date: 2020-12-03
 author: Patrik Stutz
 description: >-

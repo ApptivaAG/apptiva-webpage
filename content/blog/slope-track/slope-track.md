@@ -3,7 +3,11 @@ title: Suva Slope Track-App
 source: apptiva
 slug: suva-slope-track-app
 templateKey: blog-post
-image: vorstellung-slope-track.png
+image:
+  src: /assets/blog/slope-track/vorstellung-slope-track.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVR4nAFkAJv/AFaMjIOSXgB9l5m+y42wvAAZLQAMJS+LogA8iqF/qa2Tusj///+Tqq5FX2tteIg7iqIAm7XAnZ6htLW0t7a3ho2RQWBnWnV+x9LWAPHx8aurqsDAwK+vr6+vsHF3eRYoLc/a3OR7NhRRB94jAAAAAElFTkSuQmCC
+  height: 937
+  width: 1920
 date: 2019-11-22
 author: Philip Schönholzer
 description: >-

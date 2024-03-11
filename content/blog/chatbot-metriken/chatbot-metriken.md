@@ -3,7 +3,11 @@ templateKey: blog-post
 source: bot-fabrik
 title: Chatbot Metriken
 slug: chatbot-metriken
-image: ./bot-metriken.png
+image:
+  src: /assets/blog/chatbot-metriken/bot-metriken.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVR4nAFkAJv/APPz8/v7/Pb19MS7tvv7+////+jo6NbW1gDv8PD///+uwssADi3Iy8zb2tnQ0NDu7u4A6+zs1tLRg5igAFZzztDR7+7u9fX1////AOLi4srKyuvq6Pz58/r7+/b29vX19fn5+c6jUYylxijJAAAAAElFTkSuQmCC
+  height: 354
+  width: 720
 date: 2020-11-12T11:10:00
 author: Linus Hüsler
 description: Chatbots können einen sehr guten Einblick geben, wie sie von den Anwendern benutzt werden. Mit diesen Informationen und einigen Chatbot-KPIs können die richtigen Entscheidungen zum Verbessern der Kundenerfahrung getroffen werden.

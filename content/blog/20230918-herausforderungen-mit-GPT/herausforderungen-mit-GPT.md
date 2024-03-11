@@ -3,7 +3,11 @@ title: Herausforderungen bei GPT-basierten Unternehmens-Chatbots
 source: bot-fabrik
 slug: herausforderungen-gpt-unternehmens-chatbots
 templateKey: blog-post
-image: ./herausforderungen-mit-gpt-basierten-unternehmens-chatbots.jpg
+image:
+  src: /assets/blog/20230918-herausforderungen-mit-GPT/herausforderungen-mit-gpt-basierten-unternehmens-chatbots.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVR4nAFkAJv/AJ+Yltva29DNzfv8/fj5/Pn6/vn6/OPj5ABUQRt5aE9eT0GqnI3V2NiqrbNjXlw4NDEANiYAMyIGQC0Yd1QcZU0nLSYgGAwCCgEAACwZABgIACYaDmhLHx8TAB4YExoTChYPCYYaJiKdd8i/AAAAAElFTkSuQmCC
+  height: 900
+  width: 1914
 imageAlt: Erklimmen der Felsen in Old Man of Storr (Vereinigtes Königreich) als Symbol für Herausforderungen. Foto von <a href="https://unsplash.com/@dankapeter?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Danka & Peter</a> auf <a href="https://unsplash.com/photos/xv4L_bb0Z_8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 date: '2023-09-18'
 author: Philip Schönholzer

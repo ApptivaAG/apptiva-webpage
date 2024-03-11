@@ -56,7 +56,12 @@ export type BlogFrontmatter = {
   slug: string
   author: string
   date: string
-  image?: string
+  image?: {
+    src: string
+    width: number
+    height: number
+    base64Placeholder: string
+  }
   description: string
 }
 

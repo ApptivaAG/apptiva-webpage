@@ -3,7 +3,11 @@ title: 'Unternehmens-Chatbots mit ChatGPT'
 source: bot-fabrik
 slug: unternehmens-chatbots-mit-chat-gpt
 templateKey: blog-post
-image: ./chatgpt.png
+image:
+  src: /assets/blog/20230320-unternehmens-chatbots-mit-chatgpt/chatgpt.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAADCAIAAAAhqtkfAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAVklEQVR4nAFLALT/AL6+vujm5uXl5QAAAJh9db6+vrjH0JyTkwDY2Nj9/f3j4uGHm6QzpNhKqdbHubKvr7IAsrKylJmZU0xFCz1tJoraJFfpyry4tbW3Bygt2vHAMa8AAAAASUVORK5CYII=
+  height: 341
+  width: 1039
 date: '2023-03-21'
 author: Philip Schönholzer
 description: Chatbots sind zu einem wichtigen Instrument für Unternehmen geworden, um ihre Kunden besser zu erreichen und zu betreuen. Mit der Integration von ChatGPT in die Chatbots von Botfabrik.ch können Unternehmen ihren Kunden jetzt ein noch besseres Chat-Erlebnis bieten. In diesem Blogbeitrag zeigen wir die Vorteile dieser Integration auf, aber auch die Grenzen, die es zu beachten gilt.

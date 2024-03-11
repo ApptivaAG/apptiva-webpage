@@ -3,7 +3,11 @@ title: 1 Jahr Apptiva
 source: apptiva
 slug: 1-jahr-apptiva
 templateKey: blog-post
-image: img/birthday.jpg
+image:
+  src: /assets/blog/img/birthday.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVR4nAFkAJv/AAAWAAAXAAAKAIB/cNvi26nAx+L3/Gx2ZwAAFgBIPSQyHRFeUkXPn5TFk3////6fn50AXl9dtKanfGlhnoCFn3aLSEZVZW+DtLKuAKeJfJuDgKWGf51iaJFneBosRVJGSbqyqzVKLJHgkaY8AAAAAElFTkSuQmCC
+  height: 1347
+  width: 2560
 date: 2016-07-29T16:23:46.000Z
 author: philip-schoenholzer
 description: >-

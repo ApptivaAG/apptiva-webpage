@@ -3,7 +3,11 @@ title: Progressive Web Apps
 source: apptiva
 slug: pwa-apps
 templateKey: blog-post
-image: pwa-app-transparent.png
+image:
+  src: /assets/blog/pwa-apps/pwa-app-transparent.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAaUlEQVR4nGNgQAWSksZaWqFQzpmn/////z9jWsf8bt+GLLWsGBOoxJUjcy7tbTq6vvDWiXnLZxSGhtlBJVavnnvl2PpFE2NLihI3rFxeU5kJlZg5c+aGJavmTJk4tbTgXFnfmvpeBgYGABFBK/WxMoaCAAAAAElFTkSuQmCC
+  height: 1472
+  width: 2560
 date: 2019-01-07
 author: Roman Schaller
 description: >-

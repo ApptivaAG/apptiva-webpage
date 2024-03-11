@@ -3,7 +3,11 @@ title: Die Apptiva wächst
 source: apptiva
 slug: die-apptiva-waechst
 templateKey: blog-post
-image: renato-patrik.jpg
+image:
+  src: /assets/blog/die-apptiva-waechst/renato-patrik.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/AMq0mZeEamxUPlI4JJeHbm9PQIBxXvv24AArHBA9LSQ2Ljg8KScWGSSLZ16BbGeXm5QADAADFBgnXmp+a3F+NjU/bG98eX2JLyUlAIVfPKOBbevm3//99ZyBeF1MUoxsZhkAAACjeD24iVLfwp355cWwlXh0TC6RXjRpSiixHzKGBwZ3AgAAAABJRU5ErkJggg==
+  height: 1707
+  width: 2560
 date: 2019-06-12
 author: Philip Schönholzer
 description: >-

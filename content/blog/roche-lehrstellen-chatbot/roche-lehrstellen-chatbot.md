@@ -3,7 +3,11 @@ title: Roche Chatbot für Lehrstellensuchende
 source: bot-fabrik
 slug: roche-lehrstellen-chatbot
 templateKey: blog-post
-image: ./roche-chatbot.png
+image:
+  src: /assets/blog/roche-lehrstellen-chatbot/roche-chatbot.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAIAAABxZ0isAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAoUlEQVR4nAGWAGn/AIiLjY2Wm5OZnpecnpmeoXaCjGR2h3F7hQCQmJ2bn6SCgHt7h4t+gnVzkqeDtOCXscgAUEUwMTofAAoAIhoAQjEPtqqf////2dfUAKqqoIGphXuSXpaDZo+Bb8vGwfL19tTU0wDp6en////8/P3////+/v75+fn////c4uMAs7W4iY6UeIOFk5SJra2qpKejpaysh5ShLgBaPUtIdwoAAAAASUVORK5CYII=
+  height: 1906
+  width: 2560
 date: 2020-08-07T11:20:00
 author: Philip Schönholzer
 description: Im Sommer lancierte die Roche unseren Chatbot, um Lehrstellensuchende zu unterstützen, die Interesse an einer Lehre bei Roche haben.

@@ -7,7 +7,11 @@ date: 2023-08-02
 title: Wie Unternehmen von Chatbots im Kundenservice profitieren
 displayTitle: Wie Unternehmen von Chatbots im Kunden&shy;service profitieren
 description: KI-gestützte Chatbots optimieren den Kundenservice durch ständige Verfügbarkeit, schnelle Antworten, Skalierbarkeit und personalisierte Interaktionen.
-image: chatbots-im-kundenservice.jpg
+image:
+  src: /assets/blog/chatbots-kundenservice/chatbots-im-kundenservice.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/AGBZUE5HQaCVi//76P/26vvz6//77//77wAMEhgABAuQiYL/9eLg08HUzsr/9+394tgAGRwhExkcrZSG9civ5Nez+ezV/+zW/fTgABcYHRkeJrOto82/ru7n2uvf1K6LiuTWywBtam2RgGmjiGlMPT+kmovdy7JEPT6ckY/rLUr6tA6xSQAAAABJRU5ErkJggg==
+  height: 3377
+  width: 5065
 imageCopy: Foto von <a href="https://unsplash.com/de/@machec?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Petr Macháček</a> auf <a href="https://unsplash.com/de/fotos/BeVGrXEktIk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 author: Markus Tanner
 ---

@@ -7,7 +7,11 @@ date: 2023-04-17
 title: Wie Chatbots Wissensdatenbanken effizient nutzen
 displayTitle: Wie Chatbots Wissens&shy;daten&shy;banken effizient nutzen
 description: Eine Wissensdatenbank ist eine strukturierte Sammlung von Informationen aus verschiedenen Quellen. Chatbots nutzen diese, um passende Antworten zu finden.
-image: books.jpg
+image:
+  src: /assets/blog/wie-chatbots-wissensdatenbanken-effizient-nutzen/books.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/ACIAADMbC3RZRsavnL6jkpB3ZtK9rf/36gBILh1EKhmAalvNu6jNsp+oj37v2sv/+usANh4Ova2mrJmKpox51cSy6dXE+eXT6NXGAI59cejh3XhiU4ZqWZ+Id822pdzIud/OvwAjBACAal1NNSVhSTubg3aUdWLfzr765tcR0EQlOZzTPQAAAABJRU5ErkJggg==
+  height: 3648
+  width: 5472
 imageCopy: Foto von <a href="https://unsplash.com/@impatrickt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Patrick Tomasso</a> auf <a href="https://unsplash.com/de/fotos/Oaqk7qqNh_c?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 author: Linus Hüsler
 ---

@@ -7,7 +7,11 @@ slug: alexa-skill-pollenprognose-schweiz
 author: 'Philip Schönholzer'
 templateKey: blog-post
 id: 903
-image: ./paul-green-120592-unsplash.jpg
+image:
+  src: /assets/blog/alexa-skill-pollenprognose-schweiz/paul-green-120592-unsplash.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVR4nAFkAJv/APj9/vTYX5laACEAACcAAJpsAP35zPn7/gD7/f/47azcpACBTABiNgDJnAD178r7/P4A6Nut////3tiLx6wAtpEAdnUze4Va9/j3AIpxAO3ioZuaIJGEAEdSAh8kAGlsAOPfvyAgNljhiDuRAAAAAElFTkSuQmCC
+  height: 1272
+  width: 2560
 category:
   - Allgemein
 tag: []

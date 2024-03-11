@@ -7,7 +7,11 @@ slug: chatbot-konversationsstraenge-wie-geht-denn-das
 author: Markus Tanner
 templateKey: blog-post
 id: 861
-image: ./beautiful-beauty-chat-1126287.jpg
+image:
+  src: /assets/blog/chatbot-konversationsstraenge-wie-geht-denn-das/beautiful-beauty-chat-1126287.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAICAIAAAC6ZnJRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAu0lEQVR4nAGwAE//AHhWJ49cP91tnrl5jE8/HC8kFVNGMgCqXnn9W7/9WsvyXa2Xc0cwIwVPQCcAnICm/VzH+Eu24Hmyu6OLvaONtJ6PAJejs9Sbw+Ot0ZmCcRsAAHGSj6zHxwCHla/M1ODh8OG+ophwVkiHlJuipp4Ad4Sevsfk/+zsg5inSHOG//z/n6zJAGx2kG+EqXh4gZ2OgZuQi9PHyqGnsgDz4tLUy8Wml4OUfWC5oIe8t7p9iJNHa2HxcOWIBgAAAABJRU5ErkJggg==
+  height: 2930
+  width: 2560
 category:
   - Allgemein
 tag:
