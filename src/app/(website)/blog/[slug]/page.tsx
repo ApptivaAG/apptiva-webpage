@@ -53,7 +53,9 @@ export default async function Home(props: { params: { slug: string } }) {
     <>
       <header className="full relative mt-[-8rem] min-h-fit animate-gradient items-center bg-gradient-to-br from-primary-light to-primary-dark bg-300% pb-8 pt-32 text-base-white md:pb-16 md:pt-44">
         <div className="content">
-          <Heading level={1}>{post.title}</Heading>
+          <Heading level={1}>
+            <span dangerouslySetInnerHTML={{ __html: post.title }} />
+          </Heading>
           <p className="mt-4 max-w-xl text-xl">{post.description}</p>
           <p className="pt-2 text-lg text-base-white/60">
             Publiziert am{' '}
