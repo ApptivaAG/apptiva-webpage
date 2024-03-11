@@ -1,7 +1,6 @@
 import Heading from '@/components/heading'
 import { PageHeader } from '@/components/page-header'
 import Button from '@/components/ui/button'
-import { Card } from '@/components/ui/card'
 import {
   Carousel,
   CarouselContent,
@@ -9,10 +8,17 @@ import {
 } from '@/components/ui/carousel'
 import { getPosts } from '@/utils/blog'
 import Link from 'next/link'
+import { BlogTeaser } from '../blog/blog-teaser'
 
 export default async function Knowledge() {
   const posts = await getPosts()
-  const last5Posts = Array.from(posts.entries()).slice(0, 5)
+  const last5Posts = Array.from(posts.entries())
+    .toSorted(
+      ([, a], [, b]) =>
+        new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
+    )
+    .slice(0, 10)
+
   return (
     <>
       <PageHeader title="Wissen" lead="Interessantes aus der Apptiva" />
@@ -35,23 +41,7 @@ export default async function Knowledge() {
           <CarouselContent>
             {last5Posts.map(([slug, post], index) => (
               <CarouselItem key={slug} index={index}>
-                <Card
-                  key={slug}
-                  intent="dark"
-                  className="flex flex-col items-start gap-4"
-                >
-                  <Heading level={2}>{post.title}</Heading>
-                  <p className="line-clamp-5 flex-1">{post.description}</p>
-                  <Link className="self-end" href={`/blog/${slug}`}>
-                    <Button
-                      element="div"
-                      className="inline"
-                      intent={'secondary'}
-                    >
-                      → Zum Blogpost
-                    </Button>
-                  </Link>
-                </Card>
+                <BlogTeaser slug={slug} post={post} intent="dark" />
               </CarouselItem>
             ))}
           </CarouselContent>

@@ -12,13 +12,7 @@ import { cache } from 'react'
 import remarkGfm from 'remark-gfm'
 import remarkUnwrapImages from 'remark-unwrap-images'
 import { mapTags } from './tags'
-import {
-  BlogFrontmatter,
-  CmsBlog,
-  CmsContent,
-  MarkdownBlog,
-  MarkdownBlogPreview,
-} from './types'
+import { BlogFrontmatter, CmsBlog, CmsContent, MarkdownBlog } from './types'
 
 const blogPostsPath = 'content/blog'
 const assetsPath = '/assets/blog'
@@ -34,9 +28,9 @@ export const getPostBySlug = cache(async (slug: string) => {
 
 export const getPosts = cache(async () => {
   const cmsPosts = await getCmsPosts()
-  const markdownPosts = await getMarkdownPostsPreviews()
+  const markdownPosts = await getMarkdownPosts()
 
-  const posts = new Map<string, CmsBlog | MarkdownBlogPreview>()
+  const posts = new Map<string, CmsBlog | MarkdownBlog>()
   const mergedBlogposts = [...cmsPosts, ...markdownPosts]
   mergedBlogposts.forEach((post) => {
     const { slug } = post
@@ -157,60 +151,3 @@ const getMarkdownPosts = unstable_cache(async () => {
 
   return posts
 }, ['markdown-full'])
-
-const getMarkdownPostsPreviews = unstable_cache(async () => {
-  const posts: Array<MarkdownBlogPreview> = []
-  console.log('getting post previews...')
-
-  const files = await fs.readdir(blogPostsPath, { recursive: true })
-
-  const markdownFiles = files.filter(
-    (file) => path.extname(file).toLowerCase() === '.md'
-  )
-
-  for (const markdownFile of markdownFiles) {
-    const markdownFilePath = path.join(blogPostsPath, markdownFile)
-
-    const blogPostAssetsDirectory = path
-      .dirname(markdownFilePath)
-      .replace(blogPostsPath, assetsPath)
-
-    const data = await fs.readFile(markdownFilePath, 'utf8')
-
-    const markdown = await compileMDX<BlogFrontmatter>({
-      source: data,
-      components: {
-        img: MdxImage(blogPostAssetsDirectory),
-        pre: Code,
-      },
-      options: {
-        mdxOptions: {
-          remarkPlugins: [
-            remarkGfm,
-            remarkUnwrapImages,
-            [
-              remarkEmbedder,
-              {
-                transformers: [oembedTransformer],
-              },
-            ],
-          ],
-        },
-        parseFrontmatter: true,
-      },
-    })
-
-    posts.push({
-      kind: 'markdown',
-      title: markdown.frontmatter.title,
-      description: markdown.frontmatter.description,
-      slug: markdown.frontmatter.slug,
-      author: markdown.frontmatter.author,
-      publishDate: markdown.frontmatter.date,
-    } as const)
-  }
-
-  console.log('got all post previews')
-
-  return posts
-}, ['markdown-preview'])

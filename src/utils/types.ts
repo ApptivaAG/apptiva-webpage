@@ -14,9 +14,6 @@ export type Author = {
   personName: string
 }
 
-export interface MarkdownBlogPreview extends Blog {
-  kind: 'markdown'
-}
 export interface MarkdownBlog extends Blog {
   kind: 'markdown'
   content: string
