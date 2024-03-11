@@ -51,7 +51,7 @@
     "remark-unwrap-images": "^4.0.0",
     "sanity": "^3.26.0",
     "sanity-plugin-media": "^2.2.5",
-    "sharp": "^0.32.6",
+    "sharp": "^0.33.2",
     "styled-components": "^5.3.11",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7"
@@ -73,7 +73,6 @@
   "pnpm": {
     "updateConfig": {
       "ignoreDependencies": [
-        "sharp",
         "remark-gfm",
         "styled-components"
       ]
