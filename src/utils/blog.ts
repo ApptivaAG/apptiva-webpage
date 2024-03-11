@@ -146,7 +146,7 @@ const getMarkdownPosts = unstable_cache(async () => {
     const imageInfo = imageSrc ? getImageInfo(imageSrc) : undefined
     const { base64 } = imageSrc
       ? // @ts-ignore
-        await getPlaiceholder(imageSrc)
+        await getPlaiceholder(imageSrc, { size: 8 })
       : { base64: '' }
     posts.push({
       kind: 'markdown',
