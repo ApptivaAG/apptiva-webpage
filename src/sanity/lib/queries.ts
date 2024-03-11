@@ -149,6 +149,7 @@ const Modules = q('modules')
     persons: Persons,
     quotetext: q.contentBlocks().optional(),
     servicePageTeaser: ServicePageTeasers,
+    fullscreenImage: sanityImageWithAlt('fullscreenImage'),
   })
   .nullable()
 

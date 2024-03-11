@@ -7,6 +7,7 @@ import ProjectModule from './project-module'
 import Quote from './quote'
 import ServiceTeaserList from './service-teaser/service-teaser-list'
 import Text from './text'
+import FullscreenImage from './fullscreen-image'
 
 export default function Module(props: {
   module: ModuleData
@@ -41,6 +42,9 @@ export default function Module(props: {
 
     case 'teaser-servicepage':
       return <ServiceTeaserList module={module} />
+
+    case 'fullscreen-image':
+      return <FullscreenImage module={module} />
 
     default:
       return <div>Modultyp wählen</div>

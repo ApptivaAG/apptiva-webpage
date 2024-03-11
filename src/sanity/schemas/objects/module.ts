@@ -37,6 +37,7 @@ export default defineType({
           { title: 'Kontakt / CTA', value: 'contact' },
           { title: 'Zitat', value: 'quote' },
           { title: 'Teaser Angebot', value: 'teaser-servicepage' },
+          { title: 'Fullscreen Bild', value: 'fullscreen-image' },
         ],
       },
     }),
@@ -167,6 +168,12 @@ export default defineType({
         },
       ],
       hidden: isNotType('teaser-servicepage'),
+    }),
+    defineField({
+      name: 'fullscreenImage',
+      title: 'Bild gross',
+      type: 'imageWithAlt',
+      hidden: isNotType('fullscreen-image'),
     }),
   ],
 })
