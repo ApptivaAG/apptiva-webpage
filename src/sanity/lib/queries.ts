@@ -4,6 +4,7 @@ const Slug = ['slug.current', q.string().optional()] satisfies [string, any]
 
 const sanityImageWithAlt = (fieldName = 'image') =>
   sanityImage(fieldName, {
+    withAsset: ['base', 'lqip'],
     additionalFields: nullToUndefined({
       alt: q.string().optional().default('Fehlende Bildbeschreibung'),
     }),
