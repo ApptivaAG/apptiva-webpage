@@ -32,7 +32,7 @@ export default function CardFlow(props: { module: ModuleData }) {
             {module.title}
           </Heading>
           {module.content && (
-            <div className="[grid-column:content-gap-end/content-end] max-md:mt-4">
+            <div className="[grid-column:content-gap-end/content-end] max-lg:mt-4">
               <PortableText value={module.content} />
             </div>
           )}
