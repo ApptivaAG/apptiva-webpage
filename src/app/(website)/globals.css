@@ -20,8 +20,8 @@
   --gap: clamp(1rem, 6vw, 3rem);
   --full: minmax(var(--gap), 1fr);
   --content-gap: calc(100% - 2 * var(--gap));
-  --left-ratio: minmax(0, 28rem);
-  --right-ratio: minmax(0, 40rem);
+  --left-ratio: 0;
+  --right-ratio: 0;
   --popout: minmax(0, 2rem);
   --feature: minmax(0, 9rem);
   --gutter-top: 8rem;
@@ -44,6 +44,8 @@
 @media (min-width: 768px) {
   .content {
     --content-gap: 2rem;
+    --left-ratio: 28rem;
+    --right-ratio: 40rem;
 
     grid-template-columns:
       [full-start] var(--full)
