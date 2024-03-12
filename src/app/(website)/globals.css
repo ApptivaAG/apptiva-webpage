@@ -40,11 +40,17 @@
     padding-top: 8rem;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     .content {
       --content-gap: 2rem;
-      --left-ratio: 28rem;
-      --right-ratio: 40rem;
+      --left-ratio: min(
+        calc(41% - var(--gap) - (var(--content-gap) / 2)),
+        28rem
+      );
+      --right-ratio: min(
+        calc(59% - var(--gap) - (var(--content-gap) / 2)),
+        40rem
+      );
 
       grid-template-columns:
         [full-start] var(--full)
