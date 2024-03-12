@@ -19,7 +19,9 @@
 .content {
   --gap: clamp(1rem, 6vw, 3rem);
   --full: minmax(var(--gap), 1fr);
-  --content: min(110ch, 100% - var(--gap) * 2);
+  --content-gap: calc(100% - 2 * var(--gap));
+  --left-ratio: minmax(0, 28rem);
+  --right-ratio: minmax(0, 40rem);
   --popout: minmax(0, 2rem);
   --feature: minmax(0, 9rem);
   --gutter-top: 8rem;
@@ -29,12 +31,31 @@
     [full-start] var(--full)
     [feature-start] var(--feature)
     [popout-start] var(--popout)
-    [content-start] var(--content) [content-end]
+    [content-start] var(--left-ratio)
+    [content-gap-end] var(--content-gap) [content-gap-start]
+    var(--right-ratio) [content-end]
     var(--popout) [popout-end]
     var(--feature) [feature-end]
     var(--full) [full-end];
 
   padding-top: 8rem;
+}
+
+@media (min-width: 768px) {
+  .content {
+    --content-gap: 2rem;
+
+    grid-template-columns:
+      [full-start] var(--full)
+      [feature-start] var(--feature)
+      [popout-start] var(--popout)
+      [content-start] var(--left-ratio)
+      [content-gap-start] var(--content-gap) [content-gap-end]
+      var(--right-ratio) [content-end]
+      var(--popout) [popout-end]
+      var(--feature) [feature-end]
+      var(--full) [full-end];
+  }
 }
 
 .full .content {
