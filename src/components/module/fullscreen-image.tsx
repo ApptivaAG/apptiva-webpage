@@ -1,6 +1,7 @@
 import { ModuleData } from '@/sanity/lib/queries'
 import SanityImage from '../sanity-image'
 import { PortableText } from '@portabletext/react'
+import StyledPortableText from '../styled-portable-text'
 
 export default function FullscreenImage(props: { module: ModuleData }) {
   return (
@@ -14,8 +15,14 @@ export default function FullscreenImage(props: { module: ModuleData }) {
         image={props.module.fullscreenImage}
       />
       {props.module.fullscreenImageText && (
-        <div className="content absolute bg-transparent pb-11  text-base-white">
-          <PortableText value={props.module.fullscreenImageText} />
+        <div className="content absolute bg-transparent text-base-white lg:pb-36">
+          <div className="lg:w-2/3">
+            {' '}
+            <StyledPortableText
+              content={props.module.fullscreenImageText}
+              spreadParagraphs
+            />
+          </div>
         </div>
       )}
     </div>
