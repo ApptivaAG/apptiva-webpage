@@ -2,6 +2,7 @@ import SanityImage from '@/components/sanity-image'
 import { ModuleData } from '@/sanity/lib/queries'
 import { cn } from '@/utils/cn'
 import Image from 'next/image'
+import Link from 'next/link'
 import { HTMLAttributes } from 'react'
 import LogoIcon from '../logo-icon.svg'
 import StyledPortableText from '../styled-portable-text'
@@ -50,9 +51,15 @@ export default function Contact(props: { module: ModuleData }) {
             {module.content && (
               <StyledPortableText content={module.content} spreadParagraphs />
             )}
-            <Button intent="secondary" className="mb-5 mt-16 w-fit px-6">
-              Termin buchen
-            </Button>
+            <Link href={'/kontakt/'}>
+              <Button
+                intent="secondary"
+                className="mb-5 mt-16 w-fit px-6"
+                element="div"
+              >
+                Termin buchen
+              </Button>
+            </Link>
             <p className="mb-3">{contactPerson.contact.mail}</p>
             <p>{contactPerson.contact.phone}</p>
           </ContactElement>

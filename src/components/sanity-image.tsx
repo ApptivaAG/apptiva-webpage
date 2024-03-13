@@ -1,6 +1,6 @@
 import { urlForImage } from '@/sanity/lib/image'
 import { SanityImageWithAlt } from '@/utils/types'
-import { getImageDimensions } from '@sanity/asset-utils'
+import { getImageAsset, getImageDimensions } from '@sanity/asset-utils'
 import Image from 'next/image'
 
 const SanityImage = ({
@@ -19,7 +19,7 @@ const SanityImage = ({
       width={getImageDimensions(image).width}
       height={getImageDimensions(image).height}
       placeholder="blur"
-      blurDataURL={urlForImage(image).width(24).height(24).blur(10).url()}
+      blurDataURL={getImageAsset(image).metadata.lqip}
       sizes="(max-width: 768px) 100vw,
         (max-width: 1200px) 50vw,
         40vw"
