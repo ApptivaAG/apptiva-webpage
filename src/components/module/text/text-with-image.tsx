@@ -1,26 +1,23 @@
+import Section from '@/components/section'
 import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
 import { ModuleData } from '@/sanity/lib/queries'
 import { cn } from '@/utils/cn'
 import { PortableText } from '@portabletext/react'
 import { vercelStegaCleanAll } from '@sanity/client/stega'
+import { moduleStyleToSectionIntent } from '../utils'
 
 export default function TextWithImage(props: { module: ModuleData }) {
   const { module } = props
 
-  const darkBg = vercelStegaCleanAll(module.style) === 'dark-bg'
   const isLevel = (level: 1 | 2) => (module.level ?? 1) == level
   const isOrientation = (orientation: 'left' | 'right') =>
     vercelStegaCleanAll(module.orientation) === orientation
 
   return (
-    <section
-      key={module._key}
-      className={cn(
-        'full',
-        darkBg ? 'bg-primary text-base-white' : 'text-primary',
-        isLevel(1) ? 'py-12 lg:py-28' : 'pb-12 lg:pb-28'
-      )}
+    <Section
+      intent={moduleStyleToSectionIntent(module.style)}
+      level={module.level === 2 ? 'two' : 'one'}
     >
       <div
         className={cn(
@@ -54,6 +51,6 @@ export default function TextWithImage(props: { module: ModuleData }) {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   )
 }

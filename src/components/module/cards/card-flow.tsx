@@ -1,3 +1,4 @@
+import Section from '@/components/section'
 import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
 import StyledPortableText from '@/components/styled-portable-text'
@@ -5,6 +6,7 @@ import { ModuleData } from '@/sanity/lib/queries'
 import { cn } from '@/utils/cn'
 import { PortableText } from '@portabletext/react'
 import { Card } from '../../ui/card'
+import { moduleStyleToSectionIntent } from '../utils'
 
 export default function CardFlow(props: { module: ModuleData }) {
   const { module } = props
@@ -16,12 +18,9 @@ export default function CardFlow(props: { module: ModuleData }) {
   return (
     <>
       {isLevel(2) && <hr />}
-      <section
-        key={module._key}
-        className={cn(
-          'full py-8 lg:py-28',
-          darkBg ? 'bg-primary text-base-white' : 'text-primary'
-        )}
+      <Section
+        intent={moduleStyleToSectionIntent(module.style)}
+        level={isLevel(1) ? 'one' : 'two'}
       >
         <div className="content">
           <Heading
@@ -80,7 +79,7 @@ export default function CardFlow(props: { module: ModuleData }) {
             })}
           </div>
         </div>
-      </section>
+      </Section>
     </>
   )
 }

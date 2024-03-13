@@ -73,11 +73,12 @@ export default defineType({
       type: 'string',
       options: {
         list: [
-          { title: 'Dunkler Hintergrund', value: 'dark-bg' },
-          { title: 'Heller Hintergrund', value: 'light-bg' },
+          { title: 'Blauer Hintergrund', value: 'dark-bg' },
+          { title: 'Weisser Hintergrund', value: 'light-bg' },
+          { title: 'Grauer Hintergrund', value: 'light-gray-bg' },
         ],
       },
-      hidden: isNotType('cards'),
+      hidden: isNotType('cards', 'text'),
     }),
     defineField({
       name: 'image',

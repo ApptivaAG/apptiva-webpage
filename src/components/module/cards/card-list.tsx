@@ -1,24 +1,26 @@
+import Section from '@/components/section'
 import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
 import StyledPortableText from '@/components/styled-portable-text'
-import { ModuleData } from '@/sanity/lib/queries'
-import { PortableText } from '@portabletext/react'
-import { Card } from '../../ui/card'
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from '@/components/ui/collapsible'
+import { ModuleData } from '@/sanity/lib/queries'
+import { PortableText } from '@portabletext/react'
 import { MinusCircle, PlusCircle } from 'lucide-react'
+import { Card } from '../../ui/card'
+import { moduleStyleToSectionIntent } from '../utils'
 
 export default function CardList(props: { module: ModuleData }) {
   const { module } = props
   const isLevel = (level: 1 | 2) => (module.level ?? 1) == level
 
   return (
-    <section
-      key={module._key}
-      className="full bg-primary py-8 text-base-white lg:py-28"
+    <Section
+      intent={moduleStyleToSectionIntent(module.style)}
+      level={isLevel(1) ? 'one' : 'two'}
     >
       <div className="content">
         <div className="[grid-column:content-start/content-gap-start]">
@@ -58,6 +60,6 @@ export default function CardList(props: { module: ModuleData }) {
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   )
 }

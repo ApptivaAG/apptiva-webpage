@@ -1,3 +1,4 @@
+import Section from '@/components/section'
 import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
 import StyledPortableText from '@/components/styled-portable-text'
@@ -7,25 +8,17 @@ import {
   CarouselItem,
 } from '@/components/ui/carousel'
 import { ModuleData } from '@/sanity/lib/queries'
-import { cn } from '@/utils/cn'
 import { PortableText } from '@portabletext/react'
 import { Card } from '../../ui/card'
+import { moduleStyleToSectionIntent } from '../utils'
 
 export default function CardCarousel(props: { module: ModuleData }) {
   const { module } = props
   const darkBg = module.style === 'dark-bg'
-  //   const isLevel = (level: 1 | 2) => (module.level ?? 1) == level
 
   return (
     <>
-      {/* {isLevel(2) && <hr />} */}
-      <section
-        key={module._key}
-        className={cn(
-          'full py-8 lg:py-28',
-          darkBg ? 'bg-primary text-base-white' : 'text-primary'
-        )}
-      >
+      <Section intent={moduleStyleToSectionIntent(module.style)}>
         <div className="content">
           <div className="space-y-20">
             <div className="flex flex-wrap gap-x-32 gap-y-8">
@@ -94,7 +87,7 @@ export default function CardCarousel(props: { module: ModuleData }) {
             ))}
           </CarouselContent>
         </Carousel>
-      </section>
+      </Section>
     </>
   )
 }
