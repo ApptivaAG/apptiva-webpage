@@ -2,15 +2,20 @@ import { cn } from '@/utils/cn'
 import { VariantProps, cva } from 'class-variance-authority'
 import React from 'react'
 
-const cardStyle = cva('rounded-lg p-6 border md:p-9', {
+const cardStyle = cva('rounded-lg border', {
   variants: {
     intent: {
       light: ['bg-base-white', 'text-primary'],
       dark: ['bg-primary', 'text-base-white'],
     },
+    padding: {
+      default: 'p-6 md:p-9',
+      none: '',
+    },
   },
   defaultVariants: {
     intent: 'light',
+    padding: 'default',
   },
 })
 export function Card(
@@ -20,7 +25,12 @@ export function Card(
   } & VariantProps<typeof cardStyle>
 ) {
   return (
-    <div className={cn(cardStyle({ intent: props.intent }), props.className)}>
+    <div
+      className={cn(
+        cardStyle({ intent: props.intent, padding: props.padding }),
+        props.className
+      )}
+    >
       {props.children}
     </div>
   )

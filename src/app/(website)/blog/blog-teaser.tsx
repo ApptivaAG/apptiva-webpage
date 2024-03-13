@@ -15,7 +15,8 @@ export function BlogTeaser(props: {
     <Card
       key={slug}
       intent={props.intent}
-      className="flex h-full max-w-md flex-col overflow-hidden p-0"
+      padding="none"
+      className="flex h-full max-w-md flex-col overflow-hidden"
     >
       <div className="">
         {post.kind === 'markdown' && post.image?.src && (

@@ -1,22 +1,22 @@
-import Link from "next/link";
-import { ProjectQueryData } from "./types";
-import Heading from "@/components/heading";
+import { PageHeader } from '@/components/page-header'
+import { ProjectTeaser } from './projekt-teaser'
+import { ProjectQueryData } from './types'
 
-export default function ProjectList(props: {projects: ProjectQueryData[]}) {
-
+export default function ProjectList(props: { projects: ProjectQueryData[] }) {
   return (
-    <div className="container mx-auto px-4">
-      <Heading level={2}>Projekte</Heading>
-      {props.projects.map((project) => (
-        <div key={project._id}>
-          <Link href={'/projekte/' + project.slug}>
-            <Heading level={3} size={4} className="max-w-fit">
-              {project.projectName}
-            </Heading>
-            <div>{project.description}</div>
-          </Link>
-        </div>
-      ))}
-    </div>
-)
+    <>
+      <PageHeader
+        title="Referenzprojekte"
+        lead="Eine Auswahl unserer Projekte der letzten 10 Jahre."
+      />
+
+      <ul className="grid gap-4 py-16 lg:grid-cols-3">
+        {props.projects.map((project) => (
+          <li key={project._id}>
+            <ProjectTeaser project={project} intent="dark" />
+          </li>
+        ))}
+      </ul>
+    </>
+  )
 }
