@@ -175,6 +175,17 @@ export default defineType({
       type: 'imageWithAlt',
       hidden: isNotType('fullscreen-image'),
     }),
+    defineField({
+      name: 'fullscreenImageText',
+      title: 'Text über Bild gross',
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+        },
+      ],
+      hidden: isNotType('fullscreen-image'),
+    }),
   ],
 })
 

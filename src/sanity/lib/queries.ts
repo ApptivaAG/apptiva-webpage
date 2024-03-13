@@ -151,6 +151,7 @@ const Modules = q('modules')
     quotetext: q.contentBlocks().optional(),
     servicePageTeaser: ServicePageTeasers,
     fullscreenImage: sanityImageWithAlt('fullscreenImage'),
+    fullscreenImageText: q.contentBlocks().optional(),
   })
   .nullable()
 
