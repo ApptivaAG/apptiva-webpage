@@ -2,7 +2,7 @@ import { cn } from '@/utils/cn'
 import { VariantProps, cva } from 'class-variance-authority'
 import React from 'react'
 
-const cardStyle = cva('rounded-lg p-9 border', {
+const cardStyle = cva('rounded-lg p-6 border md:p-9', {
   variants: {
     intent: {
       light: ['bg-base-white', 'text-primary'],
