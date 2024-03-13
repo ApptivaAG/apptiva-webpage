@@ -20,24 +20,26 @@ export default function Text(props: { module: ModuleData }) {
       )}
     >
       <div className="content">
-        <div className="space-y-20">
+        <Heading
+          level={isLevel(1) ? 2 : 3}
+          size={isLevel(1) ? 3 : 4}
+          className={
+            !col1 ? '[grid-column:content-start/content-gap-start]' : ''
+          }
+        >
+          {module.title}
+        </Heading>
+        {module.content && (
           <div
-            className={cn(
-              'flex flex-wrap gap-x-32 gap-y-8',
-              col1 && 'flex-col'
-            )}
+            className={
+              col1
+                ? 'mt-4 max-w-2xl lg:mt-6'
+                : '[grid-column:content-gap-end/content-end] max-lg:mt-4'
+            }
           >
-            <Heading level={isLevel(1) ? 2 : 3} size={isLevel(1) ? 3 : 4}>
-              {module.title}
-            </Heading>
-            <SanityImage image={module.image} />
-            {module.content && (
-              <div className="flex-1">
-                <PortableText value={module.content} />
-              </div>
-            )}
+            <PortableText value={module.content} />
           </div>
-        </div>
+        )}
       </div>
     </section>
   )
