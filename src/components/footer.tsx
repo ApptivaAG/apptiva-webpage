@@ -95,7 +95,7 @@ export default function Footer() {
           </p>
         </div>
       </div>
-      <p className="mx-auto my-16 max-w-2xl p-4 text-3xl font-bold text-base-white md:text-6xl">
+      <p className="mx-auto my-16 max-w-[47rem] px-12 text-3xl font-bold text-base-white md:text-4xl lg:text-6xl">
         Du bist noch hier? Klasse! Wir haben noch ein paar{' '}
         <u>Dinge für dich:</u>
       </p>
