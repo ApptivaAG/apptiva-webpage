@@ -21,6 +21,7 @@ export default function ServicePreview(props: {
     <ServiceDetail
       service={serviceBySlugQuery.schema.parse(data)}
       customers={props.customers}
+      isPreview
     />
   )
 }
