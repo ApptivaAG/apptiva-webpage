@@ -1,5 +1,6 @@
 import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
+import StyledPortableText from '@/components/styled-portable-text'
 import { ModuleData } from '@/sanity/lib/queries'
 import { cn } from '@/utils/cn'
 import { PortableText } from '@portabletext/react'
@@ -33,7 +34,7 @@ export default function Text(props: { module: ModuleData }) {
             <SanityImage image={module.image} />
             {module.content && (
               <div className="flex-1">
-                <PortableText value={module.content} />
+                <StyledPortableText content={module.content} />
               </div>
             )}
           </div>
