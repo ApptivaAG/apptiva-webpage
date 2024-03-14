@@ -1,8 +1,11 @@
 'use client'
 
-import { serviceBySlugQuery } from '@/sanity/lib/queries'
+import {
+  ServiceBySlugQueryData,
+  serviceBySlugQuery,
+} from '@/sanity/lib/queries'
 import { QueryResponseInitial, useQuery } from '@sanity/react-loader'
-import { ServiceBySlugQueryData } from '../types'
+
 import ServiceDetail from './detail'
 
 export default function ServicePreview(props: {
@@ -17,11 +20,6 @@ export default function ServicePreview(props: {
     props.params,
     { initial: props.initial }
   )
-  return (
-    <ServiceDetail
-      service={serviceBySlugQuery.schema.parse(data)}
-      customers={props.customers}
-      isPreview
-    />
-  )
+
+  return <ServiceDetail service={data} customers={props.customers} isPreview />
 }

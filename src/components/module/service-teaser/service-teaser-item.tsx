@@ -2,7 +2,6 @@ import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
 import StyledPortableText from '@/components/styled-portable-text'
 import { ServicePageTeasersData } from '@/sanity/lib/queries'
-import { PortableText } from '@portabletext/react'
 
 const ServiceTeaser = ({
   service,
@@ -33,9 +32,10 @@ const ServiceTeaser = ({
         <Heading level={2} size={3} className="pb-4 lg:pb-6">
           {service.teaserTitle}
         </Heading>
-        {service.teaser?.map((content: any) => (
-          <StyledPortableText key={content._key} content={content} />
-        ))}
+        {service.teaser &&
+          service.teaser.map((content: any) => (
+            <StyledPortableText key={content._key} content={content} />
+          ))}
       </div>
       <div
         className={
@@ -43,10 +43,12 @@ const ServiceTeaser = ({
           ' flex items-center justify-center bg-primary p-12 [grid-column:full] max-lg:rounded-b-md lg:p-20'
         }
       >
-        <SanityImage
-          image={service.illustration}
-          className="max-size-[27rem] object-cover object-center"
-        />
+        {service.illustration && (
+          <SanityImage
+            image={service.illustration}
+            className="max-size-[27rem] object-cover object-center"
+          />
+        )}
       </div>
     </div>
   )

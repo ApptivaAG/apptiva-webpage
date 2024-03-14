@@ -50,8 +50,8 @@ export type ServicePageTeasersData = NonNullable<
 export const ServicePageTeasers = q('servicePageTeaser')
   .filter()
   .deref()
-  .grab({
-    _id: q.string(),
+  .grab$({
+    _id: q.string().nullable(),
     slug: Slug,
     illustration: sanityImageWithAlt('illustration'),
     teaserTitle: q.string().optional().default('In Arbeit'),
@@ -271,6 +271,9 @@ export const aboutPageQuery = q('*')
     modules: Modules,
   })
 
+export type ServiceBySlugQueryData = NonNullable<
+  InferType<typeof serviceBySlugQuery>
+>
 export const serviceBySlugQuery = q('*')
   .filterByType('service-page')
   .filter('slug.current == $slug')

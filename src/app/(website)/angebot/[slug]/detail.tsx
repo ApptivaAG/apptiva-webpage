@@ -1,9 +1,10 @@
 import Module from '@/components/module'
 import { PageHeader } from '@/components/page-header'
-import { ServiceBySlugQueryData } from '../types'
+
 import { ErrorBoundary } from 'react-error-boundary'
 import Button from '@/components/ui/button'
 import Heading from '@/components/heading'
+import { ServiceBySlugQueryData } from '@/sanity/lib/queries'
 export default function ServiceDetail(props: {
   service: ServiceBySlugQueryData
   customers: React.ReactNode
