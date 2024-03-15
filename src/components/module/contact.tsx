@@ -23,7 +23,8 @@ export default function Contact(props: { module: ModuleData }) {
       case 5:
       case 6:
       default:
-        return module.persons[2]
+        return module.persons.at(0)
+      //return module.persons[2]
     }
   }
 
@@ -34,37 +35,41 @@ export default function Contact(props: { module: ModuleData }) {
       key={module._key}
       className={cn('full bg-primary py-8 text-base-white md:py-36')}
     >
-      <div className="content">
-        <div className="mx-auto flex flex-col flex-wrap justify-center gap-16 md:flex-row md:gap-36">
-          <ContactElement>
-            <Image
-              src={LogoIcon}
-              alt="Apptiva Logo Icon"
-              className="absolute inset-y-0 size-[20rem] object-cover md:size-[26rem]"
-            />
-            <SanityImage
-              image={contactPerson.imageWithoutBackground}
-              className="absolute left-2 top-[-0.5rem] size-[19rem] rounded-md object-contain md:top-[-1rem] md:size-[25rem]"
-            />
-          </ContactElement>
-          <ContactElement className="flex flex-col justify-center">
-            {module.content && (
-              <StyledPortableText content={module.content} spreadParagraphs />
-            )}
-            <Link href={'/kontakt/'}>
-              <Button
-                intent="secondary"
-                className="mb-5 mt-16 w-fit px-6"
-                element="div"
-              >
-                Termin buchen
-              </Button>
-            </Link>
-            <p className="mb-3">{contactPerson.contact.mail}</p>
-            <p>{contactPerson.contact.phone}</p>
-          </ContactElement>
+      {contactPerson !== null && contactPerson !== undefined ? (
+        <div className="content">
+          <div className="mx-auto flex flex-col flex-wrap justify-center gap-16 md:flex-row md:gap-36">
+            <ContactElement>
+              <Image
+                src={LogoIcon}
+                alt="Apptiva Logo Icon"
+                className="absolute inset-y-0 size-[20rem] object-cover md:size-[26rem]"
+              />
+              <SanityImage
+                image={contactPerson.imageWithoutBackground}
+                className="absolute left-2 top-[-0.5rem] size-[19rem] rounded-md object-contain md:top-[-1rem] md:size-[25rem]"
+              />
+            </ContactElement>
+            <ContactElement className="flex flex-col justify-center">
+              {module.content && (
+                <StyledPortableText content={module.content} spreadParagraphs />
+              )}
+              <Link href={'/kontakt/'}>
+                <Button
+                  intent="secondary"
+                  className="mb-5 mt-16 w-fit px-6"
+                  element="div"
+                >
+                  Termin buchen
+                </Button>
+              </Link>
+              <p className="mb-3">{contactPerson.contact?.mail}</p>
+              <p>{contactPerson.contact?.phone}</p>
+            </ContactElement>
+          </div>
         </div>
-      </div>
+      ) : (
+        <p>no person found</p>
+      )}
     </section>
   )
 }
