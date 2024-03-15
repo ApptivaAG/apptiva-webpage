@@ -90,10 +90,12 @@ export const Persons = q('*')
   .filterByType('person')
   .grab$({
     imageWithoutBackground: sanityImageWithAlt('imageWithoutBackground'),
-    contact: q('contact').grab$({
-      mail: q.string().optional().default('Keine Email-Adresse'),
-      phone: q.string().optional().default('Keine Telefonnummer'),
-    }),
+    contact: q('contact')
+      .grab$({
+        mail: q.string().optional().default('Keine Email-Adresse'),
+        phone: q.string().optional().default('Keine Telefonnummer'),
+      })
+      .nullable(),
   })
 
 /*
