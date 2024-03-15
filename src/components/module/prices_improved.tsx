@@ -56,8 +56,8 @@ export default function PricesImproved(props: { module: ModuleData }) {
                     // )
                     <div
                       className={cn(
-                        'absolute -top-5 line-clamp-2 flex justify-items-center rounded-full  bg-primary  px-7 py-3 text-base-white',
-                        !(index % 2) && '-top-6 border bg-primary'
+                        'absolute -top-6 line-clamp-2 flex justify-items-center rounded-full  bg-primary  px-7 py-3 text-base-white',
+                        !(index % 2) && ' border bg-primary'
                       )}
                     >
                       <HandHeart className=" h-5 w-5 shrink-0 transition-transform duration-200" />
@@ -75,7 +75,7 @@ export default function PricesImproved(props: { module: ModuleData }) {
                 </div>
 
                 {/* lower part: always on white bg */}
-                <div className="row-span-2 bg-base-white pl-[20%] pt-16 lg:pl-4">
+                <div className=" m:px-[20%] row-span-2 bg-base-white px-[5%] pt-16 lg:px-4">
                   {price.content && (
                     <div className="self-stretch">
                       <StyledPortableText content={price.content} />
