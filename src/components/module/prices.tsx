@@ -38,7 +38,7 @@ export default function PricesImproved(props: { module: ModuleData }) {
                 {/* upper part: blue or green */}
                 <div
                   className={
-                    'relative row-span-1 row-start-1 flex w-full flex-col items-center justify-center rounded-lg border-secondary p-9   ' +
+                    'relative row-span-1 row-start-1 flex w-full flex-col items-center justify-center rounded-lg border-secondary p-10   ' +
                     (index % 2
                       ? 'border-secondary bg-secondary text-primary'
                       : 'bg-primary text-base-white')
@@ -70,7 +70,10 @@ export default function PricesImproved(props: { module: ModuleData }) {
                 <div className=" m:px-[20%] row-span-2 bg-base-white px-[5%] pt-16 lg:px-4">
                   {price.content && (
                     <div className="self-stretch">
-                      <StyledPortableText content={price.content} />
+                      <StyledPortableText
+                        className="m:px-[20%] space-y-2 pl-[5%] lg:pl-4"
+                        content={price.content}
+                      />
                     </div>
                   )}
                 </div>
