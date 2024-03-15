@@ -1,14 +1,12 @@
 import { ModuleData } from '@/sanity/lib/queries'
 
-import SanityImage from '../sanity-image'
-import Heading from '../heading'
-import { Card } from '../ui/card'
-import { PriceCard } from '../ui/price-card'
+import { cn } from '@/utils/cn'
 import { PortableText } from '@portabletext/react'
 import { HandHeart } from 'lucide-react'
-import Button from '../ui/button'
+import Heading from '../heading'
+import SanityImage from '../sanity-image'
 import StyledPortableText from '../styled-portable-text'
-import { cn } from '@/utils/cn'
+import Button from '../ui/button'
 
 export default function PricesImproved(props: { module: ModuleData }) {
   const { module } = props
@@ -40,7 +38,7 @@ export default function PricesImproved(props: { module: ModuleData }) {
                 {/* upper part: blue or green */}
                 <div
                   className={
-                    'relative  row-span-1 row-start-1 flex w-full flex-col items-center justify-center rounded-lg border-secondary p-9   ' +
+                    'relative row-span-1 row-start-1 flex w-full flex-col items-center justify-center rounded-lg border-secondary p-9   ' +
                     (index % 2
                       ? 'border-secondary bg-secondary text-primary'
                       : 'bg-primary text-base-white')
@@ -48,12 +46,6 @@ export default function PricesImproved(props: { module: ModuleData }) {
                 >
                   {/* show favourite badge */}
                   {price.isFavourite && (
-                    // cn(
-                    //   'absolute -bottom-5 left-9 mr-9 line-clamp-2 rounded-full px-7 py-3',
-                    //   style === 'light' &&
-                    //     'border bg-primary text-base-white',
-                    //   style === 'dark' && 'bg-base-white text-primary'
-                    // )
                     <div
                       className={cn(
                         'absolute -top-6 line-clamp-2 flex justify-items-center rounded-full  bg-primary  px-7 py-3 text-base-white',
