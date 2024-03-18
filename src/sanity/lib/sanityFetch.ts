@@ -32,18 +32,25 @@ export const runQuery = makeSafeQueryRunner(
 
 export type GroqdQuery = BaseQuery<z.ZodTypeAny>
 
-export async function load<T extends GroqdQuery>(query: T, isDraftMode = false, params: Record<string, number | string> = {}, cacheTags?: string[]) {
-  const result = await loadQuery<InferType<T>>(
-    query.query,
-    params,
-    {
-      perspective: isDraftMode ? 'previewDrafts' : 'published',
-      next: { tags: cacheTags }
-    }
-  )
+export async function load<T extends GroqdQuery>(
+  query: T,
+  isDraftMode = false,
+  params: Record<string, number | string> = {},
+  cacheTags?: string[]
+) {
+  const result = await loadQuery<InferType<T>>(query.query, params, {
+    perspective: isDraftMode ? 'previewDrafts' : 'published',
+    next: { tags: cacheTags },
+  })
+
+  const parsed = query.schema.safeParse(result.data) as z.SafeParseReturnType<
+    InferType<T>,
+    any
+  >
 
   return {
     draft: result,
-    published: query.schema.parse(result.data) as InferType<T>
+    published: result.data as InferType<T>,
+    error: !parsed.success ? parsed.error : undefined,
   }
 }

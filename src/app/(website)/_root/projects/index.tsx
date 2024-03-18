@@ -7,7 +7,7 @@ import ProjectsLayout from './projects-layout'
 export default async function Projects() {
   const { isEnabled } = draftMode()
 
-  const { draft, published } = await load(
+  const { draft, published, error } = await load(
     projectsFromSettingsQuery,
     isEnabled,
     undefined,
@@ -15,11 +15,16 @@ export default async function Projects() {
   )
 
   return isEnabled ? (
-    <ProjectsPreview initial={draft} />
+    <>
+      {error && <div>{JSON.stringify(error)}</div>}
+      <ProjectsPreview initial={draft} />
+    </>
   ) : (
-    <ProjectsLayout
-      projects={published.projectStartpage.projects}
-      introduction={published.projectStartpage.introduction}
-    />
+    <>
+      <ProjectsLayout
+        projects={published.projectStartpage.projects}
+        introduction={published.projectStartpage.introduction}
+      />
+    </>
   )
 }
