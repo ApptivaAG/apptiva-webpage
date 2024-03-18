@@ -26,12 +26,12 @@ export default function CardFlow(props: { module: ModuleData }) {
           <Heading
             level={isLevel(2) ? 3 : 2}
             size={isLevel(2) ? 4 : 3}
-            className="[grid-column:content-start/content-gap-start]"
+            className="col-left"
           >
             {module.title}
           </Heading>
           {module.content && (
-            <div className="[grid-column:content-gap-end/content-end] max-lg:mt-4">
+            <div className="col-right max-lg:mt-4">
               <PortableText value={module.content} />
             </div>
           )}

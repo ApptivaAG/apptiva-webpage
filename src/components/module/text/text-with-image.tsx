@@ -23,8 +23,8 @@ export default function TextWithImage(props: { module: ModuleData }) {
         className={cn(
           'content',
           isOrientation('left')
-            ? '*:[grid-column:feature-start/content-end]'
-            : '*:[grid-column:content-start/feature-end]'
+            ? '*:col-[feature-start/content-end]'
+            : '*:col-[content-start/feature-end]'
         )}
       >
         <div

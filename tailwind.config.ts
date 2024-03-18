@@ -64,6 +64,10 @@ const config: Config = {
       arrow: "'→'",
     },
     extend: {
+      gridColumn: {
+        left: 'left',
+        right: 'right',
+      },
       keyframes: {
         animatedgradient: {
           '0%': { backgroundPosition: '0% 50%' },

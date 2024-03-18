@@ -11,7 +11,7 @@ export default function FullscreenImage(props: { module: ModuleData }) {
         image={props.module.fullscreenImage}
       />
       {props.module.fullscreenImageText && (
-        <div className="content absolute bg-transparent text-base-white *:[grid-column:feature-start/content-end] lg:pb-36  ">
+        <div className="content absolute bg-transparent text-base-white *:col-[feature-start/content-end] lg:pb-36  ">
           <div className="md:pb-[5%] xl:w-2/3 xl:pb-[10%]">
             <StyledPortableText
               content={props.module.fullscreenImageText}

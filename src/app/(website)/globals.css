@@ -30,9 +30,10 @@
       [full-start] var(--full)
       [feature-start] var(--feature)
       [popout-start] var(--popout)
-      [content-start] var(--left-ratio)
-      [content-gap-end] var(--content-gap) [content-gap-start]
-      var(--right-ratio) [content-end]
+      [content-start left-start right-start] var(--left-ratio)
+      [content-gap-end] var(--content-gap)
+      [content-gap-start]
+      var(--right-ratio) [content-end left-end right-end]
       var(--popout) [popout-end]
       var(--feature) [feature-end]
       var(--full) [full-end];
@@ -56,9 +57,10 @@
         [full-start] var(--full)
         [feature-start] var(--feature)
         [popout-start] var(--popout)
-        [content-start] var(--left-ratio)
-        [content-gap-start] var(--content-gap) [content-gap-end]
-        var(--right-ratio) [content-end]
+        [content-start left-start] var(--left-ratio)
+        [left-end] var(--content-gap)
+        [right-start]
+        var(--right-ratio) [content-end right-end]
         var(--popout) [popout-end]
         var(--feature) [feature-end]
         var(--full) [full-end];
@@ -72,8 +74,8 @@
       [full-start] var(--full)
       [feature-start] var(--feature)
       [popout-start] var(--popout)
-      [content-start] var(--middle-ratio)
-      [middle] var(--middle-ratio) [content-end]
+      [content-start left-start] var(--middle-ratio)
+      [middle left-end right-start] var(--middle-ratio) [content-end right-end]
       var(--popout) [popout-end]
       var(--feature) [feature-end]
       var(--full) [full-end];

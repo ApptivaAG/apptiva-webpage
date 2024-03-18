@@ -27,16 +27,16 @@ export default function FAQs(props: { module: ModuleData }) {
           <Heading
             level={isLevel(1) ? 2 : 3}
             size={isLevel(1) ? 3 : 4}
-            className="[grid-column:content-start/content-gap-start]"
+            className="col-left"
           >
             {module.title}
           </Heading>
           {module.content && (
-            <div className="[grid-column:content-gap-end/content-end] max-lg:mt-4">
+            <div className="col-right max-lg:mt-4">
               <PortableText value={module.content} />
             </div>
           )}
-          <div className="mt-4 [grid-column:content-gap-end/content-end]">
+          <div className="col-right mt-4">
             <div className="w-full max-w-lg">
               <Accordion type="single" collapsible className="w-full">
                 {module.faqs?.map((faq) => (

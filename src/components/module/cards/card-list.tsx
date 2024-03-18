@@ -23,7 +23,7 @@ export default function CardList(props: { module: ModuleData }) {
       level={isLevel(1) ? 'one' : 'two'}
     >
       <div className="content">
-        <div className="[grid-column:content-start/content-gap-start]">
+        <div className="col-left">
           <Heading level={isLevel(1) ? 2 : 3} size={isLevel(1) ? 3 : 4}>
             {module.title}
           </Heading>
@@ -34,7 +34,7 @@ export default function CardList(props: { module: ModuleData }) {
             </div>
           )}
         </div>
-        <div className="space-y-10 [grid-column:content-gap-end/content-end] max-lg:mt-10">
+        <div className="col-right space-y-10 max-lg:mt-10">
           {module.cards?.map((card) => (
             <Card key={card._key}>
               <Collapsible>
