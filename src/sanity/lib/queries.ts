@@ -230,16 +230,6 @@ export const projectsQuery = q('*')
   })
   .order('order asc')
 
-export const projectsFromSettingsQuery = q('*')
-  .filterByType('settings')
-  .slice(0)
-  .grab$({
-    projectStartpage: q('projectStartpage').grab$({
-      introduction: q.contentBlocks().optional(),
-      projects: Projects,
-    }),
-  })
-
 export const projectBySlugQuery = q('*')
   .filterByType('project')
   .filter('slug.current == $slug')

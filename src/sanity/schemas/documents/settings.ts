@@ -21,10 +21,5 @@ export default defineType({
       type: 'array',
       of: [{ type: 'module' }],
     }),
-    defineField({
-      name: 'projectStartpage',
-      title: 'Projekt Startseite',
-      type: 'projectStartpage',
-    }),
   ],
 })

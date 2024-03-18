@@ -8,7 +8,7 @@ export default async function Home() {
       <Hero />
       <ModulesPage />
       {/* <ServiceTeasers />
-      <Projects />
+      
       <Testimonials />      
       <Customers />
       */}

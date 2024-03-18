@@ -1,5 +1,6 @@
 import { type SchemaTypeDefinition } from 'sanity'
 
+import aboutPage from './schemas/documents/about-page'
 import blog from './schemas/documents/blog'
 import faq from './schemas/documents/faq'
 import glossary from './schemas/documents/glossary'
@@ -15,11 +16,9 @@ import imageWithAlt from './schemas/objects/image-with-alt'
 import meta from './schemas/objects/meta'
 import module from './schemas/objects/module'
 import priceCard from './schemas/objects/price-card'
-import projectStartpage from './schemas/objects/project-startpage'
 import skill from './schemas/objects/skill'
 import skillItem from './schemas/objects/skill-item'
 import social from './schemas/objects/social'
-import aboutPage from './schemas/documents/about-page'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -42,6 +41,5 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     card,
     priceCard,
     aboutPage,
-    projectStartpage,
   ],
 }
