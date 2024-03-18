@@ -306,6 +306,9 @@ const CarouselContent = React.forwardRef<
     case 'threeSlides':
       carouselNavigationButton = 'w-[5%]'
       xlCarouselNavigationButton = 'w-[15%]'
+    case 'fiveSlides':
+      carouselNavigationButton = 'w-[5%]'
+      xlCarouselNavigationButton = 'w-[15%]'
 
     default:
       break
@@ -327,6 +330,7 @@ const CarouselContent = React.forwardRef<
       </Button>
       {layout == 'threeSlidesFadeOut' && <div className="w-[60%]"> </div>}
       {layout == 'threeSlides' && <div className="w-[60%]"> </div>}
+      {layout == 'fiveSlides' && <div className="w-[80%]"> </div>}
       <Button
         onClick={scrollNext}
         onMouseMove={handleMouseMove}

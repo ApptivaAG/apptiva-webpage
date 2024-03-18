@@ -34,8 +34,8 @@ export default async function Knowledge() {
           </div>
         </div>
         <Carousel
-          darkTheme={true}
-          layout="threeSlides"
+          darkTheme={false}
+          layout="fiveSlides"
           numberOfSlides={last5Posts.length}
         >
           <CarouselContent>
