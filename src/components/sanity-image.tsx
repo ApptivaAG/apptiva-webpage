@@ -1,16 +1,17 @@
 import { urlForImage } from '@/sanity/lib/image'
 import { SanityImageWithAlt } from '@/utils/types'
 import { getImageAsset, getImageDimensions } from '@sanity/asset-utils'
+import { SanityReference } from 'next-sanity'
 import Image from 'next/image'
 
 const SanityImage = ({
   image,
   className,
 }: {
-  image: SanityImageWithAlt
+  image: (SanityImageWithAlt & { asset?: any }) | null
   className?: string
-}) =>
-  image ? (
+}) => {
+  return image?.asset ? (
     <Image
       className={className}
       key={image.toString()}
@@ -25,5 +26,6 @@ const SanityImage = ({
         40vw"
     />
   ) : null
+}
 
 export default SanityImage
