@@ -6,7 +6,7 @@ import Heading from './heading'
 const Testimonial = ({ testimonial }: { testimonial: any }) => {
   const imagePath = path.join('/img/testimonials/', testimonial.avatar)
   return (
-    <div className="m-auto pb-14">
+    <div className="m-auto pb-4 lg:pb-0">
       <div className="content my-0 lg:my-10">
         <div className="flex lg:mx-0">
           <div>

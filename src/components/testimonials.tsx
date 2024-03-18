@@ -6,11 +6,12 @@ const Testimonials = () => {
   const testimonials = getTestimonialsData()
 
   return (
-    <div className="full my-14 md:my-20 lg:my-32">
+    <div className="full">
       <Carousel
         opts={{ loop: true }}
         layout={'oneSlide'}
         numberOfSlides={testimonials.length}
+        className="py-14 md:py-20 lg:py-28"
       >
         <CarouselContent>
           {testimonials.map((testimonial, index) => {
