@@ -7,11 +7,6 @@ export default async function Home() {
     <>
       <Hero />
       <ModulesPage />
-      {/* <ServiceTeasers />
-      
-      <Testimonials />      
-      <Customers />
-      */}
     </>
   )
 }
