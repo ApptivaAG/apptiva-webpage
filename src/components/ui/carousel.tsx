@@ -9,6 +9,7 @@ import * as React from 'react'
 import { cn } from '@/utils/cn'
 import carouselNavigationLeftIcon from './../../../public/icons/arrow-left-circle.svg'
 import carouselNavigationRightIcon from './../../../public/icons/arrow-right-circle.svg'
+import Button from './button'
 
 const TWEEN_FACTOR = 1.5
 const SIZE_FACTOR = 1
@@ -315,7 +316,7 @@ const CarouselContent = React.forwardRef<
       <div ref={carouselRef} className="overflow-hidden">
         <div ref={ref} className={cn('flex', className)} {...props} />
       </div>{' '}
-      {/* <Button
+      <Button
         onClick={scrollPrev}
         onMouseMove={handleMouseMove}
         onMouseEnter={handlePrevButtonHover}
@@ -334,7 +335,7 @@ const CarouselContent = React.forwardRef<
         className={` absolute right-0 top-0 z-30 hidden h-full w-6/12 bg-transparent hover:bg-transparent lg:block ${carouselNavigationButton} xl:${xlCarouselNavigationButton}`}
       >
         {' '}
-      </Button> */}
+      </Button>
       <div
         className="fixed left-[--mousePosX] top-[--mousePosY] z-20 h-24 w-24 -translate-x-1/2 -translate-y-1/2 bg-transparent opacity-[--iconOpacity] transition-opacity duration-500 ease-in"
         style={
