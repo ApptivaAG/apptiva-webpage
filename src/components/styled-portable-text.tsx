@@ -37,17 +37,22 @@ const StyledPortableText = ({
       h3: ({ children }) => <Heading level={3}>{children}</Heading>,
       h4: ({ children }) => <Heading level={4}>{children}</Heading>,
       normal: ({ children }) => (
-        <div
+        <p
           className={cn(
             'whitespace-break-spaces ',
             className && spreadParagraphs ? 'py-4' : ''
           )}
         >
           {children}
-        </div>
+        </p>
       ),
     },
-    hardBreak: () => <div className="h-2" />,
+    hardBreak: () => (
+      <>
+        <br />
+        <span className="block h-1" />
+      </>
+    ),
   }
 
   return <PortableText value={content} components={components} />
