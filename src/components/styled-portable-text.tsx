@@ -47,6 +47,7 @@ const StyledPortableText = ({
         </p>
       ),
     },
+    hardBreak: () => <div className="h-2" />,
   }
 
   return <PortableText value={content} components={components} />
