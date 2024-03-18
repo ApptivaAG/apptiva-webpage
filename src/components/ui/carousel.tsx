@@ -9,7 +9,6 @@ import * as React from 'react'
 import { cn } from '@/utils/cn'
 import carouselNavigationLeftIcon from './../../../public/icons/arrow-left-circle.svg'
 import carouselNavigationRightIcon from './../../../public/icons/arrow-right-circle.svg'
-import Button from './button'
 
 const TWEEN_FACTOR = 1.5
 const SIZE_FACTOR = 1
@@ -316,7 +315,7 @@ const CarouselContent = React.forwardRef<
       <div ref={carouselRef} className="overflow-hidden">
         <div ref={ref} className={cn('flex', className)} {...props} />
       </div>{' '}
-      <Button
+      {/* <Button
         onClick={scrollPrev}
         onMouseMove={handleMouseMove}
         onMouseEnter={handlePrevButtonHover}
@@ -335,7 +334,7 @@ const CarouselContent = React.forwardRef<
         className={` absolute right-0 top-0 z-30 hidden h-full w-6/12 bg-transparent hover:bg-transparent lg:block ${carouselNavigationButton} xl:${xlCarouselNavigationButton}`}
       >
         {' '}
-      </Button>
+      </Button> */}
       <div
         className="fixed left-[--mousePosX] top-[--mousePosY] z-20 h-24 w-24 -translate-x-1/2 -translate-y-1/2 bg-transparent opacity-[--iconOpacity] transition-opacity duration-500 ease-in"
         style={
@@ -396,16 +395,14 @@ const CarouselItem = React.forwardRef<
         transitioinValues={transitioinValues}
         sizeValue={sizeValue}
         {...props}
-      ></ThreeSlidesFadeOutCarouselItem>
+      />
     )
   } else if (layout === 'threeSlides') {
     return (
-      <ThreeSlidesCarouselItem
-        ref={ref}
-        className={className}
-        {...props}
-      ></ThreeSlidesCarouselItem>
+      <ThreeSlidesCarouselItem ref={ref} className={className} {...props} />
     )
+  } else if (layout === 'fiveSlides') {
+    return <FiveSlidesCarouselItem ref={ref} className={className} {...props} />
   }
 })
 CarouselItem.displayName = 'CarouselItem'
@@ -490,5 +487,24 @@ const ThreeSlidesCarouselItem = React.forwardRef<
   )
 })
 ThreeSlidesCarouselItem.displayName = 'ThreeSlidesCarouselItem'
+
+const FiveSlidesCarouselItem = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => {
+  return (
+    <div
+      ref={ref}
+      role="group"
+      aria-roledescription="slide"
+      className={cn(
+        'relative my-8 flex min-w-0 flex-[0_0_100%] shrink-0 grow-0 basis-full md:my-16 md:flex-[0_0_40%] md:pl-[0.8rem]  lg:pl-[1rem] xl:flex-[0_0_30%] 2xl:pl-[3rem] ',
+        className
+      )}
+      {...props}
+    ></div>
+  )
+})
+FiveSlidesCarouselItem.displayName = 'FiveSlidesCarouselItem'
 
 export { Carousel, CarouselContent, CarouselItem, type CarouselApi }

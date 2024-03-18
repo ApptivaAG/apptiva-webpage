@@ -19,7 +19,7 @@ export default defineType({
           type: 'block',
         },
       ],
-      hidden: isNotType('projects'),
+      hidden: isNotType('projects', 'team'),
     }),
 
     defineField({
@@ -38,6 +38,7 @@ export default defineType({
           { title: 'Zitat', value: 'quote' },
           { title: 'Teaser Angebot', value: 'teaser-servicepage' },
           { title: 'Fullscreen Bild', value: 'fullscreen-image' },
+          { title: 'Team', value: 'team' },
         ],
       },
     }),
@@ -128,6 +129,20 @@ export default defineType({
       ],
       hidden: isNotType('projects'),
     }),
+    defineField({
+      title: 'Team',
+      name: 'team',
+
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: { type: 'person' },
+        },
+      ],
+      hidden: isNotType('team'),
+    }),
+
     defineField({
       name: 'priceCards',
       title: 'Preis Karten',

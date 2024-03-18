@@ -89,7 +89,11 @@ export const Prices = q('priceCards')
 export const Persons = q('*')
   .filterByType('person')
   .grab$({
+    personName: q.string().optional(),
+    image: sanityImageWithAlt('image'),
     imageWithoutBackground: sanityImageWithAlt('imageWithoutBackground'),
+    claim: q.string().optional(),
+    slogan: q.string().optional(),
     contact: q('contact')
       .grab$({
         mail: q.string().optional().default('Keine Email-Adresse'),
