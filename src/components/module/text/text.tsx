@@ -21,18 +21,14 @@ export default function Text(props: { module: ModuleData }) {
         <Heading
           level={isLevel(1) ? 2 : 3}
           size={isLevel(1) ? 3 : 4}
-          className={
-            !col1 ? '[grid-column:content-start/content-gap-start]' : ''
-          }
+          className={!col1 ? 'col-left' : ''}
         >
           {module.title}
         </Heading>
         {module.content && (
           <div
             className={
-              col1
-                ? 'mt-4 max-w-2xl lg:mt-6'
-                : '[grid-column:content-gap-end/content-end] max-lg:mt-4'
+              col1 ? 'mt-4 max-w-2xl lg:mt-6' : 'col-right max-lg:mt-4'
             }
           >
             <StyledPortableText content={module.content} />
