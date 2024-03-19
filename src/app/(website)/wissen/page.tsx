@@ -21,7 +21,11 @@ export default async function Knowledge() {
 
   return (
     <>
-      <PageHeader title="Wissen" lead="Interessantes aus der Apptiva" />
+      <PageHeader
+        title="Wissen"
+        lead="Interessantes aus der Apptiva"
+        links={[{ name: 'Wissen', href: '/wissen' }]}
+      />
       <section className="full py-16 text-primary">
         <div className="content space-y-4">
           <Heading level={2}>Neueste Blogposts</Heading>

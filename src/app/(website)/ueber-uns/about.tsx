@@ -11,6 +11,7 @@ export default function About(props: {
       <PageHeader
         title={props.data.header?.title}
         lead={props.data.header?.lead}
+        links={[{ name: 'Über uns', href: '/ueber-uns' }]}
       />
 
       {props.data.modules?.map((module) => (

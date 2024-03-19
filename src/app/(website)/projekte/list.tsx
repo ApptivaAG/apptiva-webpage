@@ -8,6 +8,7 @@ export default function ProjectList(props: { projects: ProjectQueryData[] }) {
       <PageHeader
         title="Referenzprojekte"
         lead="Eine Auswahl unserer Projekte der letzten 10 Jahre."
+        links={[{ name: 'Projekte', href: '/projekte' }]}
       />
 
       <ul className="grid gap-4 py-16 lg:grid-cols-3">

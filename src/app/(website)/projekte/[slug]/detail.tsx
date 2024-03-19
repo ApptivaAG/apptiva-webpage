@@ -1,8 +1,9 @@
-import { PortableText } from '@portabletext/react'
-import { ProjectBySlugQueryData } from '../types'
+import BreadCrumb from '@/components/bread-crumb'
+import ContactPerson from '@/components/contact-person'
 import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
-import ContactPerson from '@/components/contact-person'
+import { PortableText } from '@portabletext/react'
+import { ProjectBySlugQueryData } from '../types'
 
 export default function ProjectDetail(props: {
   project: ProjectBySlugQueryData
@@ -12,6 +13,16 @@ export default function ProjectDetail(props: {
     <>
       <header className="full relative mt-[-8rem] min-h-fit animate-gradient items-center bg-gradient-to-br from-primary-light to-primary-dark bg-300% pb-8 pt-32 text-base-white md:pb-16 md:pt-44">
         <div className="content">
+          <BreadCrumb
+            className="pb-6"
+            links={[
+              { name: 'Projekte', href: '/projekte' },
+              {
+                name: project.projectName ?? 'Projekt',
+                href: `/projekte/${project.slug}`,
+              },
+            ]}
+          />
           <Heading level={1}>
             <span
               dangerouslySetInnerHTML={{
@@ -19,7 +30,7 @@ export default function ProjectDetail(props: {
               }}
             />
           </Heading>
-          <p className="mt-4 max-w-xl text-xl">{project.description}</p>
+          <p className="max-w-xl pt-6 text-xl">{project.description}</p>
 
           <div className="popout justify-center pt-8 md:pt-16">
             <SanityImage className="rounded-lg" image={project.image} />

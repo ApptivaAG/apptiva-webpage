@@ -5,7 +5,11 @@ import BlogPosts from './blog-posts'
 export default async function Home({ params }: { params: { slug: string } }) {
   return (
     <>
-      <PageHeader title="Blog" lead="Aktuelles rund um die Apptiva" />
+      <PageHeader
+        title="Blog"
+        lead="Aktuelles rund um die Apptiva"
+        links={[{ name: 'Blog', href: '/blog' }]}
+      />
       <div className="full bg-primary">
         <div className="content ">
           <Suspense

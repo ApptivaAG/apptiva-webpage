@@ -10,12 +10,20 @@ export default function ServiceDetail(props: {
   customers: React.ReactNode
   isPreview?: boolean
 }) {
+  const { slug: name = 'Service' } = props.service
   return (
     <>
       <PageHeader
         title={props.service.header?.title}
         lead={props.service.header?.lead}
         image={props.service.header?.image}
+        links={[
+          { name: 'Angebot', href: '/angebot' },
+          {
+            name: name.charAt(0).toUpperCase() + name.slice(1),
+            href: `/angebot/${props.service.slug}`,
+          },
+        ]}
       />
 
       {props.service.modules?.map((module) => (
