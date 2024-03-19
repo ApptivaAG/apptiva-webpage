@@ -92,7 +92,7 @@ export const Persons = q('*')
     personName: q.string().optional(),
     image: sanityImageWithAlt('image'),
     imageWithoutBackground: sanityImageWithAlt('imageWithoutBackground'),
-    claim: q.string().optional(),
+    role: q.string().optional(),
     slogan: q.string().optional(),
     contact: q('contact')
       .grab$({
