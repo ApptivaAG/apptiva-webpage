@@ -1,6 +1,5 @@
 import { ModuleData } from '@/sanity/lib/queries'
 import SanityImage from '../sanity-image'
-import { PortableText } from '@portabletext/react'
 import StyledPortableText from '../styled-portable-text'
 
 export default function FullscreenImage(props: { module: ModuleData }) {
