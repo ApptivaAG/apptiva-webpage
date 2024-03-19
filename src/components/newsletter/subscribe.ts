@@ -52,8 +52,9 @@ export async function subscribe(
     if (response.status === 'subscribed') {
       return { state: 'success', email, name } as const
     }
+    console.error('Error subscribing to newsletter: ', response)
   } catch (error) {
-    console.error('Error subscribing to newsletter', { cause: error })
+    console.error('Error subscribing to newsletter: ', error)
   }
 
   return {
