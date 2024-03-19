@@ -9,7 +9,7 @@ export default function Team(props: { module: ModuleData }) {
   const { module } = props
 
   return (
-    <section key={module._key} className="full py-8 lg:py-28">
+    <section key={module._key} className="full py-8 text-primary lg:py-28">
       <div className="content">
         <Heading level={2}>{module.title}</Heading>
         {module.introduction && (
