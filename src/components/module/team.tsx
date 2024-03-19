@@ -41,7 +41,7 @@ export default function Team(props: { module: ModuleData }) {
                   ></SanityImage>
                   <div className="mx-auto w-[90%] pt-12 md:mx-0">
                     <Heading level={4}>{person.personName}</Heading>
-                    <Heading level={5}>{person.claim}</Heading>
+                    <Heading level={5}>{person.role}</Heading>
                     <p className="pt-8">{person.slogan}</p>
                   </div>
                   <div className="mx-auto mt-auto w-[90%] py-8 md:mx-0">
