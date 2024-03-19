@@ -2,10 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Heading from './heading'
 import logo from './logo.svg'
+import NewsletterForm from './newsletter/newsletter-form'
 import sms from './swiss-made-software.svg'
-import { Input } from './ui/input'
-import { Label } from './ui/label'
-import Button from './ui/button'
 
 export default function Footer() {
   return (
@@ -40,19 +38,7 @@ export default function Footer() {
               Quartalsweise Apptiva-News mit hilfreichen Insights in deinem
               Postfach.
             </p>
-            <div className="flex flex-col gap-2 pt-6 md:flex-row md:items-end">
-              <div>
-                <Label>Dein Vorname</Label>
-                <Input intent="outline" type="text" name="name" />
-              </div>
-              <div>
-                <Label>Deine Email-Adresse*</Label>
-                <Input intent="outline" type="email" name="email" />
-              </div>
-              <Button className="max-md:mt-4" intent="secondary">
-                Anmelden
-              </Button>
-            </div>
+            <NewsletterForm />
           </div>
           <div>
             <Heading level={2} size={4} className="pb-3">
