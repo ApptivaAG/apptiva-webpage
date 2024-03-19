@@ -28,7 +28,7 @@ export function ProjectTeaser(props: {
           dangerouslySetInnerHTML={{ __html: project.projectName ?? '' }}
         />
         <p className="line-clamp-5 flex-1">{project.description}</p>
-        <Link className="self-end pt-6" href={`/projekte/${project.slug}`}>
+        <Link className="mt-6 self-end" href={`/projekte/${project.slug}`}>
           <Button
             element="div"
             className="inline"
