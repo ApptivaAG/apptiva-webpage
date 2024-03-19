@@ -96,8 +96,7 @@ export default function Footer() {
         </div>
       </div>
       <p className="mx-auto my-16 max-w-[47rem] px-12 text-3xl font-bold text-base-white md:text-4xl lg:text-6xl">
-        Du bist noch hier? Klasse! Wir haben noch ein paar{' '}
-        <u>Dinge für dich:</u>
+        <RandomText />
       </p>
       <div className="flex flex-wrap gap-x-24 gap-y-8 bg-primary px-4 py-8 text-base-white sm:p-12 lg:px-32 lg:py-24 xl:justify-between">
         <div>
@@ -192,4 +191,45 @@ export default function Footer() {
       </div>
     </div>
   )
+}
+
+function RandomText() {
+  switch (Math.floor(Math.random() * 5) as 0 | 1 | 2 | 3 | 4) {
+    case 0:
+      return (
+        <span>
+          Du hast es geschafft! Zur Belohnung gibt&apos;s unser{' '}
+          <u>Sahnehäubchen.</u>
+        </span>
+      )
+    case 1:
+      return (
+        <span>
+          Deine Neugier hat dich hierher geführt. Tauche jetzt tiefer in unsere{' '}
+          <u>vielfältigen Inhalte</u> ein.
+        </span>
+      )
+    case 2:
+      return (
+        <span>
+          Du bist noch hier? Klasse! Wir haben noch ein paar{' '}
+          <u>Dinge für dich:</u>
+        </span>
+      )
+    case 3:
+      return (
+        <span>
+          <u>Deine Entdeckungsreise</u> ist noch nicht vorbei. Schau, was es
+          noch zu erkunden gibt!
+        </span>
+      )
+    case 4:
+      return (
+        <span>
+          Finde heraus, was noch auf <u>dich wartet:</u>
+        </span>
+      )
+    default:
+      return null
+  }
 }
