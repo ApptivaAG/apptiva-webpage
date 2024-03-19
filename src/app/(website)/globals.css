@@ -68,17 +68,9 @@
   }
 
   .middle-grid {
-    --middle-ratio: min(calc(50% - var(--gap)), 35rem);
-
-    grid-template-columns:
-      [full-start] var(--full)
-      [feature-start] var(--feature)
-      [popout-start] var(--popout)
-      [content-start left-start] var(--middle-ratio)
-      [middle left-end right-start] var(--middle-ratio) [content-end right-end]
-      var(--popout) [popout-end]
-      var(--feature) [feature-end]
-      var(--full) [full-end];
+    --content-gap: 0;
+    --left-ratio: min(calc(50% - var(--gap)), 35rem);
+    --right-ratio: min(calc(50% - var(--gap)), 35rem);
   }
 
   .full .content,

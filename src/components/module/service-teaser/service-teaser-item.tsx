@@ -10,8 +10,8 @@ const ServiceTeaser = ({
   service: ServicePageTeasersData
   rowNumber: number
 }) => {
-  const leftCard = 'lg:col-[full-start/middle] lg:rounded-l-md'
-  const rightCard = 'lg:col-[middle/full-end] lg:rounded-r-md'
+  const leftCard = 'lg:col-[full-start/left-end] lg:rounded-l-md'
+  const rightCard = 'lg:col-[right-start/full-end] lg:rounded-r-md'
   const leftContent = 'lg:col-left lg:pr-20'
   const rightContent = 'lg:col-right lg:pl-20'
 
