@@ -40,7 +40,8 @@ const StyledPortableText = ({
         <p
           className={cn(
             'whitespace-break-spaces ',
-            className && spreadParagraphs ? 'py-4' : ''
+            className,
+            spreadParagraphs ? 'py-4' : ''
           )}
         >
           {children}
