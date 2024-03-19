@@ -2,6 +2,7 @@ import { PortableText } from '@portabletext/react'
 import { ProjectBySlugQueryData } from '../types'
 import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
+import ContactPerson from '@/components/contact-person'
 
 export default function ProjectDetail(props: {
   project: ProjectBySlugQueryData
@@ -27,10 +28,10 @@ export default function ProjectDetail(props: {
       </header>
 
       <div className="flex items-start justify-between gap-16 py-16 max-lg:flex-col">
-        <div className="prose prose-lg">
+        <div className="prose prose-lg max-lg:order-2">
           {project.content && <PortableText value={project.content} />}
         </div>
-        <aside className="flex-shrink-0 basis-80 rounded bg-base-grey p-4 lg:p-8 [&>div]:mb-4 [&>div]:text-lg [&>p]:text-sm [&>p]:font-bold [&>p]:text-primary">
+        <aside className="flex-shrink-0 basis-80 rounded bg-base-grey p-4 max-lg:order-1 lg:p-8 [&>div]:mb-4 [&>div]:text-lg [&>p]:text-sm [&>p]:font-bold [&>p]:text-primary">
           {project.tasks && (
             <>
               <p>Aufgaben</p>
@@ -58,27 +59,15 @@ export default function ProjectDetail(props: {
           {project.contactPerson && (
             <>
               <p>Kontaktperson</p>
-              <div>{project.contactPerson}</div>
+              <div>{project.contactPerson.personName}</div>
             </>
           )}
         </aside>
       </div>
-    </>
-  )
-
-  return (
-    <>
-      <Heading level={2}>{props.project.projectName}</Heading>
-      <SanityImage image={props.project.image} />
-      <div>{props.project.description}</div>
-      <div>{props.project.tasks}</div>
-      <div>{props.project.time}</div>
-      <div>{props.project.technologies}</div>
-      <div>{props.project.customer}</div>
-      {props.project.content?.map((content) => (
-        <PortableText key={content._key} value={content} />
-      ))}
-      <div>{props.project.contactPerson}</div>
+      <ContactPerson
+        person={project.contactPerson}
+        content={project.callToAction}
+      />
     </>
   )
 }

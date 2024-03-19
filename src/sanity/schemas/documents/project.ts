@@ -78,6 +78,16 @@ export default defineType({
       type: 'reference',
       to: [{ type: 'person' }],
     }),
+    defineField({
+      name: 'callToAction',
+      title: 'Call To Action',
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+        },
+      ],
+    }),
   ],
   orderings: [
     {

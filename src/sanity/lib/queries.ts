@@ -86,39 +86,22 @@ export const Prices = q('priceCards')
   })
   .nullable()
 
-export const Persons = q('*')
-  .filterByType('person')
-  .grab$({
-    personName: q.string().optional(),
-    image: sanityImageWithAlt('image'),
-    imageWithoutBackground: sanityImageWithAlt('imageWithoutBackground'),
-    role: q.string().optional(),
-    slogan: q.string().optional(),
-    contact: q('contact')
-      .grab$({
-        mail: q.string().optional().default('Keine Email-Adresse'),
-        phone: q.string().optional().default('Keine Telefonnummer'),
-      })
-      .nullable(),
-  })
+export type PersonData = NonNullable<InferType<typeof Persons>>[number]
 
-/*
-export type ServiceTeaserData = NonNullable<
-  InferType<typeof ServicesTeasers>
->[number]
-export const ServicesTeasers = q('*')
-  .filterByType('service-page')
-  .filter('showInHome')
-  //.slice(0)
-  .grab$({
-    _id: q.string(),
-    slug: Slug,
-    illustration: sanityImageWithAlt('illustration'),
-    teaser: q.contentBlocks().optional(),
-    teaserTitle: q.string().optional().default('In Arbeit'),
-  })
-  .nullable()
-  */
+const PersonSelection = {
+  personName: q.string().optional(),
+  image: sanityImageWithAlt('image'),
+  imageWithoutBackground: sanityImageWithAlt('imageWithoutBackground'),
+  role: q.string().optional(),
+  slogan: q.string().optional(),
+  contact: q('contact')
+    .grab$({
+      mail: q.string().optional().default('Keine Email-Adresse'),
+      phone: q.string().optional().default('Keine Telefonnummer'),
+    })
+    .nullable(),
+}
+export const Persons = q('*').filterByType('person').grab$(PersonSelection)
 
 export const servicesQuery = q('*')
   .filterByType('service-page')
@@ -244,11 +227,9 @@ export const projectBySlugQuery = q('*')
     time: q.string().optional(),
     technologies: q.string().optional(),
     customer: q.string().optional(),
-    contactPerson: q('contactPerson')
-      .deref()
-      .grabOne$('personName', q.string().optional())
-      .nullable(),
+    contactPerson: q('contactPerson').deref().grab$(PersonSelection).nullable(),
     content: q.contentBlocks().optional(),
+    callToAction: q.contentBlocks().optional(),
   })
 
 export const queryTags = q('*').filterByType('tag').grab$({
