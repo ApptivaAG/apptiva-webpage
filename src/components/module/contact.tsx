@@ -35,7 +35,7 @@ export default function Contact(props: { module: ModuleData }) {
       key={module._key}
       className={cn('full bg-primary py-8 text-base-white md:py-36')}
     >
-      {contactPerson !== null && contactPerson !== undefined ? (
+      {contactPerson ? (
         <div className="content">
           <div className="mx-auto flex flex-col flex-wrap justify-center gap-16 md:flex-row md:gap-36">
             <ContactElement>
@@ -46,7 +46,7 @@ export default function Contact(props: { module: ModuleData }) {
               />
               <SanityImage
                 image={contactPerson.imageWithoutBackground}
-                className="absolute left-2 top-[-0.5rem] size-[19rem] rounded-md object-contain md:top-[-1rem] md:size-[25rem]"
+                className="absolute left-7 top-[-2.7rem] h-[21rem] w-[16.5rem] rounded-b-[2.1rem] object-cover md:left-9 md:top-[-3.25rem] md:h-[27rem] md:w-[21.5rem] md:rounded-b-[2.75rem]"
               />
             </ContactElement>
             <ContactElement className="flex flex-col justify-center">
