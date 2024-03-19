@@ -1,4 +1,5 @@
 import { ModuleData } from '@/sanity/lib/queries'
+import Link from 'next/link'
 import Heading from '../heading'
 import SanityImage from '../sanity-image'
 import StyledPortableText from '../styled-portable-text'
@@ -44,8 +45,16 @@ export default function Team(props: { module: ModuleData }) {
                     <p className="pt-8">{person.slogan}</p>
                   </div>
                   <div className="mx-auto mt-auto w-[90%] py-8 md:mx-0">
-                    <p>{person.contact?.mail}</p>
-                    <p>{person.contact?.phone}</p>
+                    <div>
+                      <Link href={`mailto:${person.contact?.mail}`}>
+                        {person.contact?.mail}
+                      </Link>
+                    </div>
+                    <div>
+                      <Link href={`tel:${person.contact?.phone}`}>
+                        {person.contact?.phone}
+                      </Link>
+                    </div>
                   </div>
                 </Card>
               </CarouselItem>
