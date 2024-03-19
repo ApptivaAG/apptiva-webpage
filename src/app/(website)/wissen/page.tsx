@@ -1,3 +1,4 @@
+import FAQsComponent from '@/components/faqs'
 import Heading from '@/components/heading'
 import { PageHeader } from '@/components/page-header'
 import Button from '@/components/ui/button'
@@ -7,11 +8,14 @@ import {
   CarouselItem,
 } from '@/components/ui/carousel'
 import { getPosts } from '@/utils/blog'
+import { getFAQs } from '@/utils/faq'
 import Link from 'next/link'
 import { BlogTeaser } from '../blog/blog-teaser'
 
 export default async function Knowledge() {
   const posts = await getPosts()
+  const faqs = await getFAQs()
+
   const last5Posts = Array.from(posts.entries())
     .toSorted(
       ([, a], [, b]) =>
@@ -74,6 +78,18 @@ export default async function Knowledge() {
           </CarouselContent>
         </Carousel>
       </section>
+      <section className="full py-16 text-primary">
+        <div className="content">
+          <Heading level={2} size={3} className="col-left">
+            FAQ
+          </Heading>
+          <div className="col-right max-lg:mt-4">
+            <p>Hier kommt der FAQ Text</p>
+          </div>
+          {faqs && <FAQsComponent faqs={faqs}></FAQsComponent>}
+        </div>
+      </section>
+      <section className="full py-16 text-primary"></section>
     </>
   )
 }
