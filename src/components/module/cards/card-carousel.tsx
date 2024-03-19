@@ -1,6 +1,6 @@
-import Section from '@/components/section'
 import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
+import Section from '@/components/section'
 import StyledPortableText from '@/components/styled-portable-text'
 import {
   Carousel,
@@ -33,9 +33,9 @@ export default function CardCarousel(props: { module: ModuleData }) {
           </div>
         </div>
         <Carousel
-          opts={{ loop: true }}
           layout={'threeSlides'}
           numberOfSlides={module.cards?.length || 0}
+          loop={true}
           className="pb-8 md:pb-20"
         >
           <CarouselContent>

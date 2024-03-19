@@ -35,10 +35,10 @@ export default function ProjectsLayout(props: {
 
         {props.projects && (
           <Carousel
-            opts={{ loop: true }}
             layout={'threeSlidesFadeOut'}
             darkTheme={true}
             numberOfSlides={props.projects.length}
+            loop={true}
             className="md:pb-8"
           >
             <CarouselContent>
