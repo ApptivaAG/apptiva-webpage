@@ -37,6 +37,7 @@ export default async function Knowledge() {
           darkTheme={false}
           layout="fiveSlides"
           numberOfSlides={last5Posts.length}
+          loop={true}
         >
           <CarouselContent>
             {last5Posts.map(([slug, post], index) => (
