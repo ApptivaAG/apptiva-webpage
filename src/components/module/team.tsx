@@ -19,10 +19,10 @@ export default function Team(props: { module: ModuleData }) {
         )}
       </div>
       <Carousel
-        opts={{ loop: true }}
         layout={'fiveSlides'}
         darkTheme={false}
         numberOfSlides={module.persons.length}
+        loop={true}
         className="full md:pb-8"
       >
         <CarouselContent>
