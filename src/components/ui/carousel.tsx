@@ -76,6 +76,7 @@ const Carousel = React.forwardRef<
       layout: CarouselLayout
       darkTheme?: boolean
       numberOfSlides: number
+      loop: boolean
     }
 >(
   (
@@ -88,12 +89,14 @@ const Carousel = React.forwardRef<
       layout,
       darkTheme = false,
       numberOfSlides: slides,
+      loop = false,
       ...props
     },
     ref
   ) => {
     const [carouselRef, api] = useEmblaCarousel(
       {
+        loop: loop,
         ...opts,
       },
       plugins

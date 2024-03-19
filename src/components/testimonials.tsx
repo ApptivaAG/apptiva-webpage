@@ -8,7 +8,7 @@ const Testimonials = () => {
   return (
     <div className="full">
       <Carousel
-        opts={{ loop: true }}
+        loop={true}
         layout={'oneSlide'}
         numberOfSlides={testimonials.length}
         className="py-14 md:py-20 lg:py-28"
