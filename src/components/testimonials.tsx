@@ -11,7 +11,7 @@ const Testimonials = () => {
         loop={true}
         layout={'oneSlide'}
         numberOfSlides={testimonials.length}
-        className="py-14 md:py-20 lg:py-28"
+        className="py-14 md:py-16"
       >
         <CarouselContent>
           {testimonials.map((testimonial, index) => {
