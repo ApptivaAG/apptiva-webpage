@@ -12,8 +12,8 @@ export default function BreadCrumb(props: {
       <ol className="flex flex-wrap items-baseline gap-x-2">
         {links.map((link, index) => (
           <>
-            {index > 0 && <Chevron />}
-            <li key={link.name}>
+            {index > 0 && <Chevron key={index} />}
+            <li key={index}>
               <Link
                 href={link.href}
                 className={index + 1 === links.length ? '' : 'opacity-40'}
@@ -40,9 +40,9 @@ const Chevron = () => (
       <path
         d="M10 16L14 12L10 8"
         stroke="white"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </g>
   </svg>
