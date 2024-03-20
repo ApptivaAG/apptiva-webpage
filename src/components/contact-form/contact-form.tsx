@@ -173,9 +173,6 @@ const ContactForm = () => {
               <Button className="mt-4" intent="primary">
                 Senden
               </Button>
-              {/* <button type="submit" aria-disabled={pending}>
-                Add
-              </button> */}
             </form>
           </div>
         </div>

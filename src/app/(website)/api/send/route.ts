@@ -1,4 +1,4 @@
-import { EmailTemplate } from '@/components/contact-form/email-template'
+import { ContactEmailTemplate } from '@/components/contact-form/contact-email-template'
 import { NextRequest } from 'next/server'
 import { Resend } from 'resend'
 
@@ -15,7 +15,9 @@ export async function POST(req: NextRequest) {
       //   from: 'apptiva.ch <info@apptiva.ch>',
       //   to: `${email}`,
       subject: `${subject}`,
-      react: EmailTemplate({ firstName: `${name}` }) as React.ReactElement,
+      react: ContactEmailTemplate({
+        firstName: `${name}`,
+      }) as React.ReactElement,
     })
 
     if (error) {
