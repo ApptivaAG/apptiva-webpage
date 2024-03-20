@@ -9,7 +9,7 @@ import {
 } from '@/components/ui/collapsible'
 import { ModuleData } from '@/sanity/lib/queries'
 import { PortableText } from '@portabletext/react'
-import { MinusCircle, PlusCircle } from 'lucide-react'
+import { PiMinusCircle, PiPlusCircle } from 'react-icons/pi'
 import { Card } from '../../ui/card'
 import { moduleStyleToSectionIntent } from '../utils'
 
@@ -43,8 +43,8 @@ export default function CardList(props: { module: ModuleData }) {
                     {card.title}
                   </Heading>
                   <CollapsibleTrigger className="group grid *:size-8 *:transition-all *:[grid-area:1/1]">
-                    <PlusCircle className="rotate-0 scale-100 group-data-[state=open]:-rotate-90 group-data-[state=open]:scale-0" />
-                    <MinusCircle className="rotate-90 scale-0 group-data-[state=open]:rotate-0 group-data-[state=open]:scale-100" />
+                    <PiPlusCircle className="rotate-0 scale-100 group-data-[state=open]:-rotate-90 group-data-[state=open]:scale-0" />
+                    <PiMinusCircle className="rotate-90 scale-0 group-data-[state=open]:rotate-0 group-data-[state=open]:scale-100" />
                     <span className="sr-only">Aufklappen</span>
                   </CollapsibleTrigger>
                 </div>

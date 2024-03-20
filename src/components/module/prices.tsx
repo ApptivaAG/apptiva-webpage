@@ -2,7 +2,7 @@ import { ModuleData } from '@/sanity/lib/queries'
 
 import { cn } from '@/utils/cn'
 import { PortableText } from '@portabletext/react'
-import { HandHeart } from 'lucide-react'
+import { TbUserHeart } from 'react-icons/tb'
 import Heading from '../heading'
 import SanityImage from '../sanity-image'
 import StyledPortableText from '../styled-portable-text'
@@ -52,7 +52,7 @@ export default function PricesImproved(props: { module: ModuleData }) {
                         !(index % 2) && ' border bg-primary'
                       )}
                     >
-                      <HandHeart className=" h-5 w-5 shrink-0 transition-transform duration-200" />
+                      <TbUserHeart className=" h-5 w-5 shrink-0 transition-transform duration-200" />
                       <div className=" pl-2">Favorit</div>
                     </div>
                   )}
