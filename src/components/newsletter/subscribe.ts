@@ -2,6 +2,11 @@
 
 import client from '@mailchimp/mailchimp_marketing'
 
+client.setConfig({
+  apiKey: process.env.MAIL_CHIMP_API_KEY,
+  server: 'us13',
+})
+
 type FormState =
   | {
       state: 'idle'
@@ -20,7 +25,6 @@ export async function subscribe(
   currentState: FormState,
   formData: FormData
 ): Promise<FormState> {
-  'use server'
   const email = formData.get('email') as string
   const name = formData.get('name') as string
 
@@ -30,10 +34,6 @@ export async function subscribe(
       error: 'Bitte die Email-Adresse eintragen.',
     } as const
   }
-  client.setConfig({
-    apiKey: process.env.MAIL_CHIMP_API_KEY,
-    server: 'us13',
-  })
 
   const additionalFields = name
     ? {
@@ -49,9 +49,11 @@ export async function subscribe(
       status_if_new: 'subscribed',
       ...additionalFields,
     })
+
     if (response.status === 'subscribed') {
       return { state: 'success', email, name } as const
     }
+
     console.error('Error subscribing to newsletter: ', response)
   } catch (error) {
     console.error('Error subscribing to newsletter: ', error)
