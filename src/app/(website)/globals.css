@@ -99,5 +99,6 @@
     text-decoration-skip-ink: none;
     text-decoration-thickness: calc(2px + 0.2em);
     text-underline-offset: -0.11em;
+    text-shadow: 0 0.01em 0.05em rgb(var(--base-black) / 0.13);
   }
 }
