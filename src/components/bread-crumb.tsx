@@ -1,6 +1,7 @@
 import { cn } from '@/utils/cn'
 import Link from 'next/link'
 import UnderlineForLink from './ui/underline-for-link'
+import React from 'react'
 
 export default function BreadCrumb(props: {
   links: { name: string; href: string }[]
@@ -11,9 +12,13 @@ export default function BreadCrumb(props: {
     <nav className={cn('flex', props.className)} aria-label="Breadcrumb">
       <ol className="flex flex-wrap items-baseline gap-x-2">
         {links.map((link, index) => (
-          <>
-            {index > 0 && <Chevron key={index} />}
-            <li key={index}>
+          <React.Fragment key={index}>
+            {index > 0 && (
+              <li>
+                <Chevron />
+              </li>
+            )}
+            <li>
               <Link
                 href={link.href}
                 className={index + 1 === links.length ? '' : 'opacity-40'}
@@ -21,7 +26,7 @@ export default function BreadCrumb(props: {
                 <UnderlineForLink>{link.name}</UnderlineForLink>
               </Link>
             </li>
-          </>
+          </React.Fragment>
         ))}
       </ol>
     </nav>
