@@ -5,6 +5,7 @@ import SanityImage from '../sanity-image'
 import StyledPortableText from '../styled-portable-text'
 import { Card } from '../ui/card'
 import { Carousel, CarouselContent, CarouselItem } from '../ui/carousel'
+import UnderlineForLink from '../ui/underline-for-link'
 
 export default function Team(props: { module: ModuleData }) {
   const { module } = props
@@ -47,12 +48,16 @@ export default function Team(props: { module: ModuleData }) {
                   <div className="mx-auto mt-auto w-[90%] py-8 md:mx-0">
                     <div>
                       <Link href={`mailto:${person.contact?.mail}`}>
-                        {person.contact?.mail}
+                        <UnderlineForLink>
+                          {person.contact?.mail}
+                        </UnderlineForLink>
                       </Link>
                     </div>
                     <div>
                       <Link href={`tel:${person.contact?.phone}`}>
-                        {person.contact?.phone}
+                        <UnderlineForLink>
+                          {person.contact?.phone}
+                        </UnderlineForLink>
                       </Link>
                     </div>
                   </div>

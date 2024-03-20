@@ -1,7 +1,8 @@
+import { cn } from '@/utils/cn'
 import { PortableText as PortableTextType } from '@/utils/types'
 import { PortableText, PortableTextComponents } from '@portabletext/react'
 import Heading from './heading'
-import { cn } from '@/utils/cn'
+import UnderlineForLink from './ui/underline-for-link'
 
 const StyledPortableText = ({
   content,
@@ -18,6 +19,20 @@ const StyledPortableText = ({
       underline: ({ children }) => (
         <span className={cn('highlighted-text', className)}>{children}</span>
       ),
+      link: ({ value, children }) => {
+        const target = (value?.href || '').startsWith('http')
+          ? '_blank'
+          : undefined
+        return (
+          <a
+            href={value?.href}
+            target={target}
+            rel={target === '_blank' ? 'noindex nofollow' : undefined}
+          >
+            <UnderlineForLink>{children}</UnderlineForLink>
+          </a>
+        )
+      },
     },
     list: {
       bullet: ({ children }) => (

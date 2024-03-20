@@ -1,5 +1,6 @@
 import { cn } from '@/utils/cn'
 import Link from 'next/link'
+import UnderlineForLink from './ui/underline-for-link'
 
 export default function BreadCrumb(props: {
   links: { name: string; href: string }[]
@@ -12,12 +13,12 @@ export default function BreadCrumb(props: {
         {links.map((link, index) => (
           <>
             {index > 0 && <Chevron />}
-            <li key={index}>
+            <li key={link.name}>
               <Link
                 href={link.href}
                 className={index + 1 === links.length ? '' : 'opacity-40'}
               >
-                {link.name}
+                <UnderlineForLink>{link.name}</UnderlineForLink>
               </Link>
             </li>
           </>

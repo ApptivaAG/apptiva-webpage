@@ -7,7 +7,7 @@ import sms from './swiss-made-software.svg'
 
 export default function Footer() {
   return (
-    <div className="bg-gradient-to-br from-primary-light to-primary-dark bg-300% pt-4">
+    <div className="bg-gradient-to-br from-primary-light to-primary-dark bg-300% pt-4 [&_a]:underline [&_a]:decoration-from-font [&_a]:underline-offset-2 hover:[&_a]:decoration-2">
       <div className="mx-4 rounded-md bg-primary text-base-white">
         <div className="flex flex-wrap justify-between gap-24 rounded-md bg-black/40 p-4 sm:p-12">
           <div>
