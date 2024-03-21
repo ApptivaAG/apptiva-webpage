@@ -1,14 +1,15 @@
 'use client'
 
-import { cn } from '@/utils/cn'
-import { useFormState, useFormStatus } from 'react-dom'
-import Button from '../ui/button'
+import { useFormState } from 'react-dom'
+import { Submit } from '../submit'
 import { Input } from '../ui/input'
 import { Label } from '../ui/label'
-import { subscribe } from './subscribe'
+import { subscribeToNewsletter } from '../server-actions/subscribe-to-newsletter'
 
 export default function NewsletterForm() {
-  const [state, formAction] = useFormState(subscribe, { state: 'idle' })
+  const [state, formAction] = useFormState(subscribeToNewsletter, {
+    state: 'idle',
+  })
   if (state.state === 'success') {
     return (
       <div className="pt-4">
@@ -37,7 +38,7 @@ export default function NewsletterForm() {
           <Label>Deine Email-Adresse*</Label>
           <Input intent="outline" type="email" name="email" />
         </div>
-        <Submit />
+        <Submit>Abonnieren</Submit>
       </form>
       {state.state === 'error' && (
         <div className="pt-2">
@@ -45,17 +46,5 @@ export default function NewsletterForm() {
         </div>
       )}
     </>
-  )
-}
-
-function Submit() {
-  const { pending } = useFormStatus()
-  return (
-    <Button
-      className={cn('max-md:mt-4', pending && 'pointer-events-none opacity-40')}
-      intent="secondary"
-    >
-      Abonnieren{pending && '...'}
-    </Button>
   )
 }

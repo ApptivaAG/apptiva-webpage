@@ -1,110 +1,15 @@
 'use client'
 
-import { useState } from 'react'
+import { useFormState } from 'react-dom'
 import Heading from '../heading'
 import Section from '../section'
-import Button from '../ui/button'
+import { sendMail } from '../server-actions/send-mail'
+import { Submit } from '../submit'
 import { Input } from '../ui/input'
 import { Label } from '../ui/label'
-import { useFormStatus } from 'react-dom'
-
-export const encode = (data: { [x: string]: string | number | boolean }) =>
-  Object.keys(data)
-    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-    .join('&')
 
 const ContactForm = () => {
-  const { pending } = useFormStatus()
-
-  async function sendMessage(formData: any) {
-    const rawFormData = {
-      address: formData.get('address'),
-      name: formData.get('name'),
-      email: formData.get('email'),
-      company: formData.get('company'),
-      message: formData.get('message'),
-    }
-
-    console.log('*** rawFormData', rawFormData)
-
-    if (rawFormData.address !== (undefined || '')) {
-      return // spam
-    }
-
-    if (rawFormData.email === '' || rawFormData.name === '') {
-      /* eslint-disable-next-line no-alert */
-      alert('Ups, ein zwingendes Feld ist noch nicht ausgefüllt.')
-      return
-    }
-
-    // const body = encode({
-    //   'form-name': 'contact',
-    //   subject: 'Kontaktformular apptiva.ch',
-    //   ...rawFormData,
-    // })
-
-    // console.log('*** body', body)
-
-    await fetch('/api/send', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-
-      body: JSON.stringify({
-        name: rawFormData.name,
-        email: rawFormData.email,
-        message: rawFormData.message,
-        subject: 'Kontaktformular apptiva.ch',
-      }),
-    })
-      .then(() => {
-        // Toast notification
-        //toast.success('Your email message has been sent successfully')
-        /* eslint-disable-next-line no-alert */
-        alert(`Jupidupiduu.`)
-      })
-      .catch((error) => {
-        /* eslint-disable-next-line no-console */
-        console.log('Error', error)
-        /* eslint-disable-next-line no-alert */
-        alert(
-          `Leider hat dies nicht funktioniert. Entschuldigen Sie die Umstände. Wenn Sie uns auf info@apptiva.ch ein Email schicken melden wir uns sofort bei Ihnen.`
-        )
-      })
-
-    // todo: send mail here
-
-    // fetch('/', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    //   body,
-    // })
-    //   .then(() => {
-    //     //navigate('/formular-gesendet/')
-    //   })
-    //   .catch((error) => {
-    //     /* eslint-disable-next-line no-console */
-    //     console.log('Error', error)
-    //     /* eslint-disable-next-line no-alert */
-    //     alert(
-    //       `Leider hat dies nicht funktioniert. Entschuldigen Sie die Umstände. Wenn Sie uns auf info@apptiva.ch ein Email schicken melden wir uns sofort bei Ihnen.`
-    //     )
-    //   })
-
-    /*
-    formdata  FormData {
-  [Symbol(state)]: [
-    { name: 'address', value: '' },
-    { name: 'subject', value: '' },
-    { name: 'name', value: 'sdf' },
-    { name: 'email', value: 'carla.iten@apptiva.ch' },
-    { name: 'name', value: 'sdf' },
-    { name: 'message', value: 'hoi hoi hoi' }
-  ]
-}
-    */
-  }
+  const [state, formAction] = useFormState(sendMail, { state: 'idle' })
 
   return (
     <Section intent={'light'} level={'one'}>
@@ -142,38 +47,61 @@ const ContactForm = () => {
             <Heading level={5} size={5} className={''}>
               Kontaktformular
             </Heading>
-            <form action={sendMessage}>
-              <p hidden>
-                <label htmlFor="address">
-                  Nicht ausfüllen: <input type="text" name="address" />
-                </label>
-                <input type="text" name="subject" />
-              </p>
-              <div>
-                <Label>Name</Label>
-                <Input intent="default" type="text" name="name" />
+            {state.state === 'success' ? (
+              <div className="pt-4">
+                <div className="pb-2 text-5xl">👍</div>
+                <p>
+                  Vielen Dank{state.name && ` ${state.name}`}! Deine Nachricht
+                  wurde erfolgreich versendet. 😁
+                </p>
+                <p>Wir werden uns so schnell wie möglich bei dir melden.</p>
               </div>
-              <div>
-                <Label>Email-Adresse</Label>
-                <Input intent="default" type="email" name="email" />
-              </div>
-              <div>
-                <Label>Unternehmen</Label>
-                <Input intent="default" type="text" name="company" />
-              </div>
+            ) : (
+              <form action={formAction}>
+                <p hidden>
+                  <label htmlFor="address">
+                    Nicht ausfüllen: <input type="text" name="address" />
+                  </label>
+                  <input type="text" name="subject" />
+                </p>
+                <div>
+                  <Label>Name</Label>
+                  <Input intent="default" type="text" name="name" />
+                </div>
+                <div>
+                  <Label>Email-Adresse</Label>
+                  <Input intent="default" type="email" name="email" />
+                </div>
+                <div>
+                  <Label>Unternehmen</Label>
+                  <Input intent="default" type="text" name="company" />
+                </div>
 
-              <div>
-                <Label>Nachricht</Label>
-                <textarea
-                  className="ring-offset-white file:font-medium bg-white flex h-full w-full rounded border border-primary px-3 py-2 text-base file:border-0 file:bg-transparent file:text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                  name="message"
-                  rows={5}
-                />
-              </div>
-              <Button className="mt-4" intent="primary">
-                Senden
-              </Button>
-            </form>
+                <div>
+                  <Label>Nachricht</Label>
+                  <textarea
+                    title="Nachricht"
+                    className="ring-offset-white file:font-medium bg-white flex h-full w-full rounded border border-primary px-3 py-2 text-base file:border-0 file:bg-transparent file:text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    name="message"
+                    rows={5}
+                  />
+                </div>
+                {state.state === 'error' && (
+                  <div className="pt-2">
+                    <em className="">{state.error}</em>
+                  </div>
+                )}
+                {state.state === 'spam' && (
+                  <div className="pt-2">
+                    <em className="">
+                      Ups, es scheint als ob du ein Roboter bist. Bitte versuche
+                      es erneut.
+                    </em>
+                  </div>
+                )}
+                <Submit className="mt-4">Senden</Submit>
+              </form>
+            )}
           </div>
         </div>
       </div>

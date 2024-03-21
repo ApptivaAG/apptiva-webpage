@@ -21,7 +21,7 @@ type FormState =
       error: string
     }
 
-export async function subscribe(
+export async function subscribeToNewsletter(
   currentState: FormState,
   formData: FormData
 ): Promise<FormState> {
