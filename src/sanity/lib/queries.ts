@@ -69,6 +69,7 @@ export const FAQs = q('faqs')
     slug: Slug,
     tags: Tags,
   })
+  .order('question asc')
   .nullable()
 
 export const Prices = q('priceCards')
@@ -286,6 +287,7 @@ export const glossaryQuery = q('*')
       .nullable(),
     tags: Tags,
   })
+  .order('title asc')
 
 export const glossaryBySlugQuery = q('*')
   .filterByType('glossary')
@@ -308,13 +310,16 @@ export const glossaryBySlugQuery = q('*')
     tags: Tags,
   })
 
-export const faqsQuery = q('*').filterByType('faq').grab$({
-  _id: q.string(),
-  question: q.string().optional(),
-  answer: q.string().optional(),
-  slug: Slug,
-  tags: Tags,
-})
+export const faqsQuery = q('*')
+  .filterByType('faq')
+  .grab$({
+    _id: q.string(),
+    question: q.string().optional(),
+    answer: q.string().optional(),
+    slug: Slug,
+    tags: Tags,
+  })
+  .order('question asc')
 
 export const personsQuery = q('*').filterByType('person').grab$({
   personName: q.string().optional(),
