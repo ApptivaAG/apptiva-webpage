@@ -4,7 +4,7 @@ import UnderlineForLink from './ui/underline-for-link'
 import React from 'react'
 
 export default function BreadCrumb(props: {
-  links: { name: string; href: string }[]
+  links: { name: string; href?: string | undefined }[]
   className?: string
 }) {
   const links = [{ name: 'Home', href: '/' }, ...props.links]
@@ -19,12 +19,18 @@ export default function BreadCrumb(props: {
               </li>
             )}
             <li>
-              <Link
-                href={link.href}
-                className={index + 1 === links.length ? '' : 'opacity-40'}
-              >
-                <UnderlineForLink>{link.name}</UnderlineForLink>
-              </Link>
+              {link.href ? (
+                <Link
+                  href={link.href}
+                  className={index + 1 === links.length ? '' : 'opacity-40'}
+                >
+                  <UnderlineForLink>{link.name}</UnderlineForLink>
+                </Link>
+              ) : (
+                <p className={index + 1 === links.length ? '' : 'opacity-40'}>
+                  {link.name}
+                </p>
+              )}
             </li>
           </React.Fragment>
         ))}
