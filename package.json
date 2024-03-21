@@ -11,6 +11,7 @@
   "dependencies": {
     "@mailchimp/mailchimp_marketing": "^3.0.80",
     "@portabletext/react": "^3.0.11",
+    "@portabletext/to-html": "^2.0.10",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-collapsible": "^1.0.3",
     "@radix-ui/react-dialog": "^1.0.5",
@@ -46,8 +47,10 @@
     "react-error-boundary": "^4.0.13",
     "react-html-parser": "^2.0.2",
     "react-icons": "^5.0.1",
+    "react-simple-typewriter": "^5.0.1",
     "remark-gfm": "^3.0.1",
     "remark-unwrap-images": "^4.0.0",
+    "remeda": "^1.55.0",
     "resend": "^3.2.0",
     "sanity": "^3.26.0",
     "sanity-plugin-media": "^2.2.5",
