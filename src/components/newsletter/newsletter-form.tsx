@@ -5,8 +5,11 @@ import { Submit } from '../submit'
 import { Input } from '../ui/input'
 import { Label } from '../ui/label'
 import { subscribeToNewsletter } from '../server-actions/subscribe-to-newsletter'
+import { useState } from 'react'
+import { cn } from '@/utils/cn'
 
 export default function NewsletterForm() {
+  const [engaged, setEngaged] = useState(false)
   const [state, formAction] = useFormState(subscribeToNewsletter, {
     state: 'idle',
   })
@@ -27,18 +30,25 @@ export default function NewsletterForm() {
   return (
     <>
       <form
-        className="flex flex-col gap-2 pt-6 md:flex-row md:items-end"
+        className="flex flex-col gap-2 md:flex-row md:items-end"
         action={formAction}
       >
         <div>
-          <Label>Dein Vorname</Label>
+          <Label>Deine Email-Adresse</Label>
+          <Input
+            onFocus={() => setEngaged(true)}
+            intent="outline"
+            type="email"
+            name="email"
+          />
+        </div>
+        <div className={cn(!engaged && 'max-md:hidden')}>
+          <Label>
+            Dein Vorname <small>optional</small>
+          </Label>
           <Input intent="outline" type="text" name="name" />
         </div>
-        <div>
-          <Label>Deine Email-Adresse*</Label>
-          <Input intent="outline" type="email" name="email" />
-        </div>
-        <Submit>Abonnieren</Submit>
+        <Submit className={cn(!engaged && 'max-md:hidden')}>Abonnieren</Submit>
       </form>
       {state.state === 'error' && (
         <div className="pt-2">

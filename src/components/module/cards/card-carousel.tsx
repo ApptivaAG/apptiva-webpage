@@ -19,18 +19,15 @@ export default function CardCarousel(props: { module: ModuleData }) {
   return (
     <>
       <Section intent={moduleStyleToSectionIntent(module.style)}>
-        <div className="content">
-          <div className="space-y-20">
-            <div className="flex flex-wrap gap-x-32 gap-y-8">
-              <Heading level={2}>{module.title}</Heading>
-              <SanityImage image={module.image} />
-              {module.content && (
-                <div className="flex-1">
-                  <PortableText value={module.content} />
-                </div>
-              )}
+        <div className="content space-y-4 lg:space-y-6">
+          <Heading level={2} size={3}>
+            {module.title}
+          </Heading>
+          {module.content && (
+            <div className="max-w-2xl">
+              <PortableText value={module.content} />
             </div>
-          </div>
+          )}
         </div>
         <Carousel
           layout={'threeSlides'}
