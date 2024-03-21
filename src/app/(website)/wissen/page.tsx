@@ -5,14 +5,17 @@ import FAQ from './faq'
 import Glossar from './glossary'
 
 export default async function Knowledge() {
+  const lead =
+    'In unseren wöchentlichen Wissensaustausch-Sitzungen vermitteln wir untereinander abwechselnd neues Wissen. Unser Ziel ist es, dieses Wissen zu teilen und nicht für uns zu behalten. Deshalb haben wir es für dich aufgeschrieben: Durchstöbere unsere Blogposts, erweitere deinen Wortschatz mit unserem Glossar oder finde Antworten auf deine Fragen in unserem FAQ. Drückt der Schuh bei einem Thema, das wir noch nicht behandelt haben, kontaktiere uns gerne - wir sind möglicherweise in der Lage, dir weiterzuhelfen.'
+
   return (
     <>
       <PageHeader
-        title="Wissen"
-        lead="Interessantes aus der Apptiva"
+        title="Wissen wird bei uns gross geschrieben"
+        lead={lead}
         links={[{ name: 'Wissen', href: '/wissen' }]}
       />
-      <section className="full py-16 text-primary">
+      {/* <section className="full py-16 text-primary">
         <div className="content">
           <Heading level={2} size={3}>
             WISSEN wird bei uns gross geschrieben
@@ -30,7 +33,7 @@ export default async function Knowledge() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
       <Blogposts />
       <FAQ />
       <Glossar />

@@ -1,13 +1,12 @@
+import { Glossary } from '@/utils/types'
+import Link from 'next/link'
+import StyledPortableText from './styled-portable-text'
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from './ui/accordion'
-import StyledPortableText from './styled-portable-text'
-import { Glossary } from '@/utils/types'
-import Button from './ui/button'
-import Link from 'next/link'
 import UnderlineForLink from './ui/underline-for-link'
 
 const GlossaryComponent = (props: {
@@ -17,7 +16,6 @@ const GlossaryComponent = (props: {
   const glossaryArray: Glossary[] = []
 
   for (let [key, value] of glossaryEntries) {
-    console.log(value)
     glossaryArray.push(value)
   }
 
