@@ -312,6 +312,7 @@ export const glossaryBySlugQuery = q('*')
 
 export const faqsQuery = q('*')
   .filterByType('faq')
+  .filter('showAtWissen')
   .grab$({
     _id: q.string(),
     question: q.string().optional(),

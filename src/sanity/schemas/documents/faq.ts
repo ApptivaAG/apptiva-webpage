@@ -11,6 +11,12 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'showAtWissen',
+      title: 'Auf Wissensseite anzeigen',
+      type: 'boolean',
+      initialValue: true,
+    }),
+    defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
