@@ -6,7 +6,7 @@ import BreadCrumb from './bread-crumb'
 export function PageHeader(props: {
   title: string | undefined
   lead: string | undefined
-  links?: { name: string; href: string }[]
+  links?: { name: string; href?: string | undefined }[]
   image?: SanityImageWithAlt
 }) {
   return (
