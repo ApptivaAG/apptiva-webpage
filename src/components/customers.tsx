@@ -1,9 +1,9 @@
-import getCustomerLogos from '@/utils/customers'
+import getCustomerLogos, { Group } from '@/utils/customers'
 import Image from 'next/image'
 import Carousel from './carousel'
 
-const Customers = () => {
-  const customers = getCustomerLogos()
+export default function Customers(props: { groups?: Group[] }) {
+  const customers = getCustomerLogos(props.groups)
 
   return (
     <Carousel>
@@ -29,5 +29,3 @@ const Customers = () => {
     </Carousel>
   )
 }
-
-export default Customers

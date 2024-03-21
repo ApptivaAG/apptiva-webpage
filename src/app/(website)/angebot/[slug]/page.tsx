@@ -2,6 +2,7 @@ import Customers from '@/components/customers'
 import Testimonials from '@/components/testimonials'
 import { serviceBySlugQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
+import type { Group } from '@/utils/customers'
 import { draftMode } from 'next/headers'
 import ServiceDetail from './detail'
 import ServicePreview from './preview'
@@ -18,7 +19,7 @@ export default async function Home(props: { params: { slug: string } }) {
   const customers = (
     <>
       <Testimonials />
-      <Customers />
+      <Customers groups={mapSlugToGroup(props.params.slug)} />
     </>
   )
   return isEnabled ? (
@@ -30,4 +31,15 @@ export default async function Home(props: { params: { slug: string } }) {
   ) : (
     <ServiceDetail service={published} customers={customers} />
   )
+}
+
+function mapSlugToGroup(slug: string): Group[] | undefined {
+  switch (slug) {
+    case 'chatbots':
+      return ['chatbot']
+    case 'development':
+      return ['web', 'mobile']
+    default:
+      return undefined
+  }
 }
