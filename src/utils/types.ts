@@ -83,6 +83,7 @@ export type Module = {
 }
 
 export interface Glossary {
+  _id: string
   title: string
   slug: string
   summary?: CmsContent

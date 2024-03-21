@@ -19,6 +19,7 @@ export const getGlossaryItemBySlug = cache(async (slug: string) => {
   }
 
   return {
+    _id: glossaryFromCms._id,
     slug: glossaryFromCms.slug,
     title: glossaryFromCms.title,
     modules: glossaryFromCms.modules,
@@ -42,6 +43,7 @@ export const getGlossary = cache(async () => {
     )
     .forEach((glossaryEntry) => {
       glossary.set(glossaryEntry.slug, {
+        _id: glossaryEntry._id,
         title: glossaryEntry.title ?? 'Ohne Titel',
         slug: glossaryEntry.slug,
         summary: glossaryEntry.summary,

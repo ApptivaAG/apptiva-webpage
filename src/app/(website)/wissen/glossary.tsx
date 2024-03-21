@@ -1,8 +1,10 @@
+import GlossaryComponent from '@/components/glossary-entries'
 import Heading from '@/components/heading'
 import { getGlossary } from '@/utils/glossary'
 
 export default async function Glossar() {
-  const glossaries = await getGlossary()
+  const glossaryEntries = await getGlossary()
+  //   console.log('glossis', glossaryEntries)
   return (
     <>
       <section className="full py-16 text-primary">
@@ -11,10 +13,15 @@ export default async function Glossar() {
             Glossar
           </Heading>
           <div className="col-right max-lg:mt-4">
-            <p>Hier kommt der FAQ Text</p>
+            <p>
+              Hier kommt der <u>Glossar</u> Titel Text
+            </p>
           </div>
           {/* {faqs && <FAQsComponent faqs={faqs}></FAQsComponent>} */}
-          {/* {glossaries && } */}
+
+          {glossaryEntries && (
+            <GlossaryComponent glossaryEntries={glossaryEntries} />
+          )}
         </div>
       </section>
     </>

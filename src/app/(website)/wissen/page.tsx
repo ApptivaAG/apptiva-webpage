@@ -2,6 +2,7 @@ import Heading from '@/components/heading'
 import { PageHeader } from '@/components/page-header'
 import Blogposts from './blogposts'
 import FAQ from './faq'
+import Glossar from './glossary'
 
 export default async function Knowledge() {
   return (
@@ -32,6 +33,7 @@ export default async function Knowledge() {
       </section>
       <Blogposts />
       <FAQ />
+      <Glossar />
     </>
   )
 }
