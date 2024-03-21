@@ -19,15 +19,12 @@ export default function BreadCrumb(props: {
               </li>
             )}
             <li>
-              {link.href ? (
-                <Link
-                  href={link.href}
-                  className={index + 1 === links.length ? '' : 'opacity-40'}
-                >
+              {link.href && index + 1 !== links.length ? (
+                <Link href={link.href} className={'opacity-40'}>
                   <UnderlineForLink>{link.name}</UnderlineForLink>
                 </Link>
               ) : (
-                <p className={index + 1 === links.length ? '' : 'opacity-40'}>
+                <p className={cn(index + 1 !== links.length && 'opacity-40')}>
                   {link.name}
                 </p>
               )}
