@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <div className="bg-gradient-to-br from-primary-light to-primary-dark bg-300% pt-4 [&_a]:underline [&_a]:decoration-from-font [&_a]:underline-offset-2 hover:[&_a]:decoration-2">
       <div className="mx-4 rounded-md bg-primary text-base-white">
-        <div className="flex flex-wrap justify-between gap-24 rounded-md bg-black/40 p-4 sm:p-12">
+        <div className="flex flex-wrap justify-between gap-x-24 gap-y-12 rounded-md bg-black/40 p-4 sm:p-12">
           <div>
             <Link href={'/'}>
               <Image
@@ -30,8 +30,8 @@ export default function Footer() {
               <Link href="mail:info@apptiva.ch">info@apptiva.ch</Link>
             </p>
           </div>
-          <div className="max-w-lg">
-            <Heading level={2} size={4} className="pb-3">
+          <div className="max-w-lg space-y-3">
+            <Heading level={2} size={4} className="">
               Newsletter
             </Heading>
             <p>
