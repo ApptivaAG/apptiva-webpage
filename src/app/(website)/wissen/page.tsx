@@ -32,7 +32,6 @@ export default async function Knowledge() {
       </section>
       <Blogposts />
       <FAQ />
-      <section className="full py-16 text-primary"></section>
     </>
   )
 }
