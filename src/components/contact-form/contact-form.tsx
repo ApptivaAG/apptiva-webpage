@@ -14,15 +14,6 @@ const ContactForm = () => {
   return (
     <Section intent={'light'} level={'one'}>
       <div className="content">
-        <div className="pb-4">
-          <Heading level={2} size={3} className={'pb-5'}>
-            Kontakt
-          </Heading>
-          <p>
-            Möchtest du uns <u>kennenlernen</u> oder hast du Fragen zu unseren
-            Dienstleistungen? <u>Zögere nicht</u> und nimm mit uns Kontakt auf!
-          </p>
-        </div>
         <div className="col-left mt-4 max-w-2xl lg:mt-6">
           <Heading level={5} size={5} className={''}>
             Telefon
