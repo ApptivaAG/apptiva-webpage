@@ -260,6 +260,12 @@ export const serviceBySlugQuery = q('*')
     slug: Slug,
     header: Header,
     modules: Modules,
+    callToAction: q('callToAction')
+      .grab$({
+        name: q.string().optional(),
+        href: q.string().optional(),
+      })
+      .nullable(),
   })
 
 export const glossaryQuery = q('*')

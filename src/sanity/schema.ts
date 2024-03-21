@@ -19,6 +19,7 @@ import priceCard from './schemas/objects/price-card'
 import skill from './schemas/objects/skill'
 import skillItem from './schemas/objects/skill-item'
 import social from './schemas/objects/social'
+import link from './schemas/objects/link'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -36,6 +37,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     skill,
     skillItem,
     imageWithAlt,
+    link,
     settings,
     meta,
     card,

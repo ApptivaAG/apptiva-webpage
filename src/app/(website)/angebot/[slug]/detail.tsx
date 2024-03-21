@@ -5,6 +5,7 @@ import { ErrorBoundary } from 'react-error-boundary'
 import Button from '@/components/ui/button'
 import Heading from '@/components/heading'
 import { ServiceBySlugQueryData } from '@/sanity/lib/queries'
+import Link from 'next/link'
 export default function ServiceDetail(props: {
   service: ServiceBySlugQueryData
   customers: React.ReactNode
@@ -24,6 +25,15 @@ export default function ServiceDetail(props: {
             href: `/angebot/${props.service.slug}`,
           },
         ]}
+        callToAction={
+          props.service.callToAction?.href ? (
+            <Link href={props.service.callToAction.href}>
+              <Button intent="secondary">
+                {props.service.callToAction.name}
+              </Button>
+            </Link>
+          ) : undefined
+        }
       />
 
       {props.service.modules?.map((module) => (

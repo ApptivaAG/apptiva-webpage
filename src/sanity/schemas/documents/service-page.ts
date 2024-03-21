@@ -54,6 +54,11 @@ export default defineType({
       type: 'array',
       of: [{ type: 'module' }],
     }),
+    defineField({
+      name: 'callToAction',
+      title: 'Call To Action',
+      type: 'link',
+    }),
   ],
   orderings: [
     {
