@@ -6,19 +6,20 @@ import { notFound } from 'next/navigation'
 import GlossaryItemPreview from './preview'
 import Item from './item'
 
-export default async function GlossaryItem(props: { params: { slug: string } }) {
+export default async function GlossaryItem(props: {
+  params: { slug: string }
+}) {
   const { published, draft } =
     (await load(glossaryBySlugQuery, draftMode().isEnabled, props.params, [
       'glossary',
     ])) ?? notFound()
   return (
-    <div className="container mx-auto px-4">
-      <Heading level={2}>Glossar</Heading>
+    <>
       {draftMode().isEnabled ? (
         <GlossaryItemPreview initial={draft} params={props.params} />
       ) : (
         <Item glossary={published} />
       )}
-    </div>
+    </>
   )
 }

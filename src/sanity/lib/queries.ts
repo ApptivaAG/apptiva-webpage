@@ -276,15 +276,7 @@ export const glossaryQuery = q('*')
     title: q.string().optional().default('Ohne Titel'),
     slug: Slug,
     summary: q.contentBlocks().optional(),
-    modules: q('modules')
-      .filter()
-      .grab$({
-        title: q.string().optional().default('Ohne Titel'),
-        layout: q.string().optional(),
-        image: sanityImageWithAlt(),
-        content: q.contentBlocks().optional(),
-      })
-      .nullable(),
+    modules: Modules,
     tags: Tags,
   })
   .order('title asc')
@@ -298,15 +290,7 @@ export const glossaryBySlugQuery = q('*')
     title: q.string().optional().default('Ohne Titel'),
     slug: Slug,
     summary: q.contentBlocks().optional(),
-    modules: q('modules')
-      .filter()
-      .grab$({
-        title: q.string().optional().default('Ohne Titel'),
-        layout: q.string().optional(),
-        image: sanityImageWithAlt(),
-        content: q.contentBlocks().optional(),
-      })
-      .nullable(),
+    modules: Modules,
     tags: Tags,
   })
 
