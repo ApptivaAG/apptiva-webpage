@@ -11,6 +11,9 @@ dependencies:
   '@portabletext/react':
     specifier: ^3.0.11
     version: 3.0.11(react@18.2.0)
+  '@portabletext/to-html':
+    specifier: ^2.0.10
+    version: 2.0.10
   '@radix-ui/react-accordion':
     specifier: ^1.1.2
     version: 1.1.2(@types/react-dom@18.2.18)(@types/react@18.2.48)(react-dom@18.2.0)(react@18.2.0)
@@ -116,12 +119,18 @@ dependencies:
   react-icons:
     specifier: ^5.0.1
     version: 5.0.1(react@18.2.0)
+  react-simple-typewriter:
+    specifier: ^5.0.1
+    version: 5.0.1(react-dom@18.2.0)(react@18.2.0)
   remark-gfm:
     specifier: ^3.0.1
     version: 3.0.1
   remark-unwrap-images:
     specifier: ^4.0.0
     version: 4.0.0
+  remeda:
+    specifier: ^1.55.0
+    version: 1.55.0
   resend:
     specifier: ^3.2.0
     version: 3.2.0
@@ -1910,11 +1919,31 @@ packages:
       react: 18.2.0
     dev: false
 
+  /@portabletext/to-html@2.0.10:
+    resolution: {integrity: sha512-HLdY+Z8SNPaMJpZT20X9ITaTCcbjW2uNl8z/WfV1ZC+6FTFVdSjIKVAX5l02p1D0U+oVTqvzT4YAlB4dPg4eyg==}
+    engines: {node: ^14.13.1 || >=16.0.0}
+    dependencies:
+      '@portabletext/toolkit': 2.0.13
+      '@portabletext/types': 2.0.11
+    dev: false
+
   /@portabletext/toolkit@2.0.10:
     resolution: {integrity: sha512-d+F9JvpnMEx7kd6saZ9OWA4U1Iwuokh6TOht7iqkfWU+0ivh9yM4v+b0Kpu+iiPcElicoabhtXol+yTvWJ1jDw==}
     engines: {node: ^14.13.1 || >=16.0.0}
     dependencies:
       '@portabletext/types': 2.0.8
+    dev: false
+
+  /@portabletext/toolkit@2.0.13:
+    resolution: {integrity: sha512-RH/jzwlWcsDPnpJBO1xEByUnweVVciD1OVLGyRUA8P++XedAc+fxY3RlUkgi5FyDEyEdisPflKtUU/GAXtMSig==}
+    engines: {node: ^14.13.1 || >=16.0.0}
+    dependencies:
+      '@portabletext/types': 2.0.11
+    dev: false
+
+  /@portabletext/types@2.0.11:
+    resolution: {integrity: sha512-79Bj/tffVOV9mpMzQFLPMrxPpUXh4OKlUBG8eDJBirH/x1o28Qu8Tg2nO84/KAPmlCm4rC/TOGvDxqsP0apg5A==}
+    engines: {node: ^14.13.1 || >=16.0.0 || >=18.0.0}
     dev: false
 
   /@portabletext/types@2.0.8:
@@ -8567,6 +8596,17 @@ packages:
       - '@types/react'
     dev: false
 
+  /react-simple-typewriter@5.0.1(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-vA5HkABwJKL/DJ4RshSlY/igdr+FiVY4MLsSQYJX6FZG/f1/VwN4y1i3mPXRyfaswrvI8xii1kOVe1dYtO2Row==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: '>=18.0.0'
+      react-dom: '>=18.0.0'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
   /react-style-proptype@3.2.2:
     resolution: {integrity: sha512-ywYLSjNkxKHiZOqNlso9PZByNEY+FTyh3C+7uuziK0xFXu9xzdyfHwg4S9iyiRRoPCR4k2LqaBBsWVmSBwCWYQ==}
     dependencies:
@@ -8797,6 +8837,10 @@ packages:
       '@types/mdast': 4.0.3
       hast-util-whitespace: 3.0.0
       unist-util-visit: 5.0.0
+    dev: false
+
+  /remeda@1.55.0:
+    resolution: {integrity: sha512-JWINmzzyi7XPcKpBeRsGqGia7H7FQC3BfjCV3e2vDc+beXSB+ir/fEpWDMoFecxvhsu19mZDtACOSr9ZZcgv7w==}
     dev: false
 
   /require-directory@2.1.1:
