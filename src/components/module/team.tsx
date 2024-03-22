@@ -13,7 +13,7 @@ export default function Team(props: { module: ModuleData }) {
   return (
     <section key={module._key} className="full py-8 text-primary lg:py-28">
       <div className="content">
-        <Heading level={2}>{module.title}</Heading>
+        <Heading level={3}>{module.title}</Heading>
         {module.introduction && (
           <div className="mt-4">
             <StyledPortableText content={module.introduction} />
