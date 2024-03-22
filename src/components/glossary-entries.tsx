@@ -8,16 +8,19 @@ import {
   AccordionTrigger,
 } from './ui/accordion'
 import UnderlineForLink from './ui/underline-for-link'
+import { GlossaryQueryData } from '@/sanity/lib/queries'
 
 const GlossaryComponent = (props: {
-  glossaryEntries: Map<string, Glossary>
+  // glossaryEntries: Map<string, Glossary>
+  glossaryEntries: GlossaryQueryData
 }) => {
   const { glossaryEntries } = props
-  const glossaryArray: Glossary[] = []
+  // const glossaryArray: Glossary[] = []
 
-  for (let [key, value] of glossaryEntries) {
-    glossaryArray.push(value)
-  }
+  // for (let [key, value] of glossaryEntries) {
+  //   glossaryArray.push(value)
+  // }
+  const glossaryArray = props.glossaryEntries
 
   return (
     <>

@@ -34,14 +34,17 @@ export default async function Knowledge() {
       />
       <Blogposts />
       {/* <FAQ /> */}
-      <Glossar />
+      {/* <Glossar /> */}
       {draftMode().isEnabled ? (
         <KnowledgePreview
           initialFAQs={faqDraft}
           initialGlossar={glossaryDraft}
         />
       ) : (
-        <FAQ data={faqPublished} />
+        <>
+          <FAQ data={faqPublished} />
+          <Glossar data={glossaryPublished} />
+        </>
       )}
     </>
   )

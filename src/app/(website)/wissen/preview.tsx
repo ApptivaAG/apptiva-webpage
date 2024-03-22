@@ -17,7 +17,7 @@ export default function KnowledgePreview(props: {
   const { data: faqData } = useQuery<FAQQueryData>(faqsQuery.query, undefined, {
     initial: props.initialFAQs,
   })
-  const { data: glossaryData } = useQuery<FAQQueryData>(
+  const { data: glossaryData } = useQuery<GlossaryQueryData>(
     glossaryQuery.query,
     undefined,
     {
@@ -28,6 +28,7 @@ export default function KnowledgePreview(props: {
   return (
     <>
       <FAQ data={faqData} />
+      <Glossar data={glossaryData} />
     </>
   )
 }
