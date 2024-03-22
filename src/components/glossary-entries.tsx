@@ -1,4 +1,4 @@
-import { Glossary } from '@/utils/types'
+import { GlossaryQueryData } from '@/sanity/lib/queries'
 import Link from 'next/link'
 import StyledPortableText from './styled-portable-text'
 import {
@@ -8,7 +8,6 @@ import {
   AccordionTrigger,
 } from './ui/accordion'
 import UnderlineForLink from './ui/underline-for-link'
-import { GlossaryQueryData } from '@/sanity/lib/queries'
 
 const GlossaryComponent = (props: { glossaryEntries: GlossaryQueryData }) => {
   const { glossaryEntries } = props

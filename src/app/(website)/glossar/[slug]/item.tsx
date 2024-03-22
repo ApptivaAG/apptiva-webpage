@@ -1,11 +1,8 @@
 import BreadCrumb from '@/components/bread-crumb'
 import Heading from '@/components/heading'
 import Module from '@/components/module'
-import { PageHeader } from '@/components/page-header'
-import SanityImage from '@/components/sanity-image'
 import StyledPortableText from '@/components/styled-portable-text'
 import { glossaryBySlugQuery } from '@/sanity/lib/queries'
-import { PortableText } from '@portabletext/react'
 import { InferType } from 'groqd'
 
 export default function Item(props: {
