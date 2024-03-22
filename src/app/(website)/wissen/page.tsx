@@ -33,8 +33,6 @@ export default async function Knowledge() {
         links={[{ name: 'Wissen', href: '/wissen' }]}
       />
       <Blogposts />
-      {/* <FAQ /> */}
-      {/* <Glossar /> */}
       {draftMode().isEnabled ? (
         <KnowledgePreview
           initialFAQs={faqDraft}

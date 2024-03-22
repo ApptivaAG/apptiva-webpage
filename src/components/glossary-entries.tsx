@@ -15,19 +15,13 @@ const GlossaryComponent = (props: {
   glossaryEntries: GlossaryQueryData
 }) => {
   const { glossaryEntries } = props
-  // const glossaryArray: Glossary[] = []
-
-  // for (let [key, value] of glossaryEntries) {
-  //   glossaryArray.push(value)
-  // }
-  const glossaryArray = props.glossaryEntries
 
   return (
     <>
       <div className="col-right mt-4">
         <div className="w-full max-w-lg">
           <Accordion type="single" collapsible className="w-full">
-            {glossaryArray?.map((ge) => (
+            {glossaryEntries?.map((ge) => (
               <AccordionItem key={ge._id} value={ge.title ?? 'no-question'}>
                 <AccordionTrigger>{ge.title}</AccordionTrigger>
                 <AccordionContent>

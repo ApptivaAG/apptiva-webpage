@@ -1,10 +1,8 @@
 import GlossaryComponent from '@/components/glossary-entries'
 import Heading from '@/components/heading'
 import { GlossaryQueryData } from '@/sanity/lib/queries'
-import { getGlossary } from '@/utils/glossary'
 
 export default function Glossar(props: { data: GlossaryQueryData }) {
-  // const glossaryEntries = await getGlossary()
   const glossaryEntries = props.data
 
   return (
@@ -19,8 +17,6 @@ export default function Glossar(props: { data: GlossaryQueryData }) {
               Hier kommt der <u>Glossar</u> Titel Text
             </p>
           </div>
-          {/* {faqs && <FAQsComponent faqs={faqs}></FAQsComponent>} */}
-
           {glossaryEntries && (
             <GlossaryComponent glossaryEntries={glossaryEntries} />
           )}
