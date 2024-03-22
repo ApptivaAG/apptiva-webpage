@@ -53,7 +53,11 @@ const ContactForm = () => {
                   <label htmlFor="address">
                     Nicht ausfüllen: <input type="text" name="address" />
                   </label>
-                  <input type="text" name="subject" />
+                  <input
+                    type="text"
+                    name="subject"
+                    value="Kontaktformular apptiva.ch"
+                  />
                 </p>
                 <div>
                   <Label>Name</Label>

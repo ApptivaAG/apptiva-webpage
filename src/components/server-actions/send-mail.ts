@@ -56,9 +56,10 @@ export async function sendMail(
       error: 'Ups, ein zwingendes Feld ist noch nicht ausgefüllt.',
     }
   }
+
   try {
     const { name, email, message, subject } = rawFormData
-    console.log('sending mail via resend', name, email, message)
+    console.log('sending mail via resend', name, email, message, subject)
 
     const { data, error } = await resend.emails.send({
       from: 'Acme <onboarding@resend.dev>',
@@ -66,10 +67,11 @@ export async function sendMail(
       //   from: 'apptiva.ch <info@apptiva.ch>',
       //   to: `${email}`,
       subject: subject,
-      text: message,
-      // react: ContactEmailTemplate({
-      //   firstName: `${name}`,
-      // }) as React.ReactElement,
+      // text: message,
+      react: ContactEmailTemplate({
+        name,
+        message,
+      }) as React.ReactElement,
     })
 
     if (error) {
