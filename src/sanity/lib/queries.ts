@@ -269,6 +269,7 @@ export const serviceBySlugQuery = q('*')
       .nullable(),
   })
 
+export type GlossaryQueryData = NonNullable<InferType<typeof glossaryQuery>>
 export const glossaryQuery = q('*')
   .filterByType('glossary')
   .grab$({
@@ -294,6 +295,7 @@ export const glossaryBySlugQuery = q('*')
     tags: Tags,
   })
 
+export type FAQQueryData = NonNullable<InferType<typeof faqsQuery>>
 export const faqsQuery = q('*')
   .filterByType('faq')
   .filter('showAtWissen')

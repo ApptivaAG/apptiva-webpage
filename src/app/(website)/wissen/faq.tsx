@@ -1,13 +1,13 @@
 import FAQsComponent from '@/components/faqs'
 import Heading from '@/components/heading'
 import Section from '@/components/section'
-import { getFAQs } from '@/utils/faq'
+import { FAQQueryData } from '@/sanity/lib/queries'
 
-export default async function FAQ() {
-  const faqs = await getFAQs()
+export default function FAQ(props: { data: FAQQueryData }) {
+  const faqs = props.data
+
   return (
     <>
-      {/* <section className="full py-16 text-primary "> */}
       <Section intent="dark">
         <div className="content">
           <Heading level={2} size={3} className="col-left">
@@ -24,7 +24,6 @@ export default async function FAQ() {
           {faqs && <FAQsComponent faqs={faqs}></FAQsComponent>}
         </div>
       </Section>
-      {/* </section> */}
     </>
   )
 }
