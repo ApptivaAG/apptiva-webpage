@@ -40,12 +40,12 @@ export default function CardCarousel(props: { module: ModuleData }) {
               <CarouselItem key={index} index={index}>
                 <Card
                   key={card._key}
-                  className="flex h-full w-full flex-col gap-16 pt-20 md:flex-row"
+                  className="flex h-full w-full flex-col gap-16 md:flex-row "
                   intent={
                     xor(darkBg, card.style !== 'inverted') ? 'dark' : 'light'
                   }
                 >
-                  <div className="sm:1/3 relative w-full lg:w-2/3 xl:w-3/4">
+                  <div className="sm:1/3 relative w-full pl-10 pt-10 lg:w-2/3 lg:py-16 lg:pl-16 xl:w-3/4">
                     <div className="clear-both h-16">
                       <div className="flex">
                         {card.pill && (
@@ -73,7 +73,7 @@ export default function CardCarousel(props: { module: ModuleData }) {
                       </div>
                     )}
                   </div>
-                  <div className="hidden w-1/2 md:w-1/4  lg:block lg:w-1/3">
+                  <div className="hidden w-1/2 md:w-1/4 lg:block lg:w-1/3 lg:pr-16">
                     <SanityImage
                       className="h-full w-full"
                       image={card.image}
