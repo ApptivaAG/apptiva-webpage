@@ -9,6 +9,11 @@ export default async function Kontakt() {
       <PageHeader
         title="Du willst deinen Kundendialog effizienter gestalten?"
         lead="In der ca. einstündigen Online-Präsentation zeigen wir dir, wie das mit Hilfe eines Chatbots geht. Dabei gehen wir gezielt auf deine Fragen ein."
+        links={[
+          { name: 'Angebot' },
+          { name: 'Chatbots', href: '/angebot/chatbots' },
+          { name: 'Demo vereinbaren' },
+        ]}
       />
       <Section intent={'light'} level={'one'}>
         <div className="content">
