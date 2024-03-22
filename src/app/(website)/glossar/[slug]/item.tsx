@@ -33,22 +33,11 @@ export default function Item(props: {
             <span dangerouslySetInnerHTML={{ __html: glossary.title }} />
           </Heading>
           {glossary.summary && (
-            <p className="max-w-xl pt-6 text-xl">
-              <StyledPortableText content={glossary.summary} />
-            </p>
+            <StyledPortableText content={glossary.summary} />
           )}
         </div>
       </header>
 
-      {/* {props.glossary?.modules?.map((module) => (
-        <>
-          <Heading level={3} size={4}>
-            {module.title}
-          </Heading>
-          <SanityImage image={module.image} />
-          {module.content && <PortableText value={module.content} />}
-        </>
-      ))}       */}
       {glossary.modules?.map((module) => (
         <Module key={module._key} module={module} customers={undefined} />
       ))}

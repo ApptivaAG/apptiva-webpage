@@ -10,10 +10,7 @@ import {
 import UnderlineForLink from './ui/underline-for-link'
 import { GlossaryQueryData } from '@/sanity/lib/queries'
 
-const GlossaryComponent = (props: {
-  // glossaryEntries: Map<string, Glossary>
-  glossaryEntries: GlossaryQueryData
-}) => {
+const GlossaryComponent = (props: { glossaryEntries: GlossaryQueryData }) => {
   const { glossaryEntries } = props
 
   return (
