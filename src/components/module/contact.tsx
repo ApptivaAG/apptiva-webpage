@@ -7,18 +7,24 @@ export default function Contact(props: { module: ModuleData }) {
   const weekday = new Date().getDay()
 
   const getContactPersonOfWeekday = () => {
-    switch (weekday) {
-      case 0:
-      case 1:
-      case 2:
-      case 3:
-      case 4:
-      case 5:
-      case 6:
-      default:
-        return module.persons.at(0)
-      //return module.persons[2]
-    }
+    const contactablePersons = module.persons.filter(
+      (person) => !person.personName?.toLowerCase().includes('brigitte')
+    )
+    return contactablePersons[
+      Math.floor(Math.random() * contactablePersons.length)
+    ]
+    // switch (weekday) {
+    //   case 0:
+    //   case 1:
+    //   case 2:
+    //   case 3:
+    //   case 4:
+    //   case 5:
+    //   case 6:
+    //   default:
+    //     return module.persons.at(0)
+    //     return module.persons[2]
+    // }
   }
 
   const contactPerson = getContactPersonOfWeekday()
