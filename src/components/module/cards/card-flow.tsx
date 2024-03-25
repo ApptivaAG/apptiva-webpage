@@ -45,7 +45,7 @@ export default function CardFlow(props: { module: ModuleData }) {
               return (
                 <Card
                   key={card._key}
-                  className="relative flex flex-col gap-6"
+                  className="relative flex flex-col gap-6 overflow-visible"
                   intent={style}
                 >
                   <div className="flex items-start gap-4">
