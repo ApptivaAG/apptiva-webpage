@@ -119,18 +119,12 @@ dependencies:
   react-icons:
     specifier: ^5.0.1
     version: 5.0.1(react@18.2.0)
-  react-simple-typewriter:
-    specifier: ^5.0.1
-    version: 5.0.1(react-dom@18.2.0)(react@18.2.0)
   remark-gfm:
     specifier: ^3.0.1
     version: 3.0.1
   remark-unwrap-images:
     specifier: ^4.0.0
     version: 4.0.0
-  remeda:
-    specifier: ^1.55.0
-    version: 1.55.0
   resend:
     specifier: ^3.2.0
     version: 3.2.0
@@ -8596,17 +8590,6 @@ packages:
       - '@types/react'
     dev: false
 
-  /react-simple-typewriter@5.0.1(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-vA5HkABwJKL/DJ4RshSlY/igdr+FiVY4MLsSQYJX6FZG/f1/VwN4y1i3mPXRyfaswrvI8xii1kOVe1dYtO2Row==}
-    engines: {node: '>=14'}
-    peerDependencies:
-      react: '>=18.0.0'
-      react-dom: '>=18.0.0'
-    dependencies:
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-    dev: false
-
   /react-style-proptype@3.2.2:
     resolution: {integrity: sha512-ywYLSjNkxKHiZOqNlso9PZByNEY+FTyh3C+7uuziK0xFXu9xzdyfHwg4S9iyiRRoPCR4k2LqaBBsWVmSBwCWYQ==}
     dependencies:
@@ -8837,10 +8820,6 @@ packages:
       '@types/mdast': 4.0.3
       hast-util-whitespace: 3.0.0
       unist-util-visit: 5.0.0
-    dev: false
-
-  /remeda@1.55.0:
-    resolution: {integrity: sha512-JWINmzzyi7XPcKpBeRsGqGia7H7FQC3BfjCV3e2vDc+beXSB+ir/fEpWDMoFecxvhsu19mZDtACOSr9ZZcgv7w==}
     dev: false
 
   /require-directory@2.1.1:

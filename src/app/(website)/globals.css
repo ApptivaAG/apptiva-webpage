@@ -91,14 +91,33 @@
     grid-column: full;
   }
 
-  .highlighted-text,
-  u {
-    font-weight: inherit;
-    text-decoration-line: underline;
-    text-decoration-color: rgb(var(--secondary) / 1);
-    text-decoration-skip-ink: none;
-    text-decoration-thickness: calc(2px + 0.2em);
-    text-underline-offset: -0.11em;
+  @keyframes text-reveal {
+    to {
+      --split-position: 100%;
+    }
+  }
+
+  @property --split-position {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%;
+  }
+
+  u,
+  .highlighted-text {
+    --split-position: 0%;
+    text-decoration: none;
+    animation: text-reveal 0.5s ease-in-out 1s forwards;
+    background-image: linear-gradient(
+      to right,
+      rgb(var(--secondary)),
+      rgb(var(--secondary)) var(--split-position),
+      rgba(0, 0, 0, 0) var(--split-position),
+      rgba(0, 0, 0, 0)
+    );
+    background-position: 0 0.87em; /* TODO: on small text the line should be lower under the text like a normal underline for better readability */
+    background-size: 100% 0.2em;
+    background-repeat: repeat-x;
     text-shadow: 0 0.01em 0.05em rgb(var(--base-black) / 0.13);
   }
 }
