@@ -17,7 +17,9 @@ export default function CardFlow(props: { module: ModuleData }) {
     module.layout === '2-column' ? 'lg:grid-cols-2' : 'lg:grid-cols-3'
   return (
     <>
-      {isLevel(2) && <hr className="-translate-y-12 text-primary" />}
+      {isLevel(2) && (
+        <hr className="text-primary max-lg:hidden lg:-translate-y-12" />
+      )}
       <Section
         intent={moduleStyleToSectionIntent(module.style)}
         level={isLevel(1) ? 'one' : 'two'}

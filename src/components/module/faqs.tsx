@@ -12,7 +12,9 @@ export default function FAQs(props: { module: ModuleData }) {
 
   return (
     <>
-      {isLevel(2) && <hr className="-translate-y-12 text-primary" />}
+      {isLevel(2) && (
+        <hr className="text-primary max-lg:hidden lg:-translate-y-12" />
+      )}
 
       <Section
         intent={moduleStyleToSectionIntent(module.style)}
