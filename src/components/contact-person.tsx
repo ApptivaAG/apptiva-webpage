@@ -39,7 +39,7 @@ export default function ContactPerson(props: {
                   className="mb-5 mt-16 w-fit px-6"
                   element="div"
                 >
-                  Termin buchen
+                  Kontakt aufnehmen
                 </Button>
               </Link>
               <p className="mb-3">{props.person.contact?.mail}</p>
