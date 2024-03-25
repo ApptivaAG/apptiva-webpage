@@ -2,7 +2,7 @@ import { cn } from '@/utils/cn'
 import { VariantProps, cva } from 'class-variance-authority'
 import React from 'react'
 
-const cardStyle = cva('rounded-lg border', {
+const cardStyle = cva('rounded-lg border overflow-clip', {
   variants: {
     intent: {
       light: ['bg-base-white', 'text-primary'],

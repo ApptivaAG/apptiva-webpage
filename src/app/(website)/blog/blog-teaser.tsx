@@ -16,7 +16,7 @@ export function BlogTeaser(props: {
       key={slug}
       intent={props.intent}
       padding="none"
-      className="flex h-full max-w-md flex-col overflow-hidden"
+      className="flex h-full max-w-md flex-col"
     >
       <div className="">
         {post.kind === 'markdown' && post.image?.src && (

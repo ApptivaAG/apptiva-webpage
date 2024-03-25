@@ -14,7 +14,7 @@ export function ProjectTeaser(props: {
       key={project._id}
       intent={props.intent}
       padding="none"
-      className="flex h-full max-w-md flex-col overflow-hidden shadow"
+      className="flex h-full max-w-md flex-col shadow"
     >
       <div className="">
         <SanityImage
