@@ -2,6 +2,7 @@ import { cn } from '@/utils/cn'
 import { PortableText as PortableTextType } from '@/utils/types'
 import { PortableText, PortableTextComponents } from '@portabletext/react'
 import Heading from './heading'
+import Underline from './ui/underline'
 import UnderlineForLink from './ui/underline-for-link'
 
 const StyledPortableText = ({
@@ -17,7 +18,7 @@ const StyledPortableText = ({
     marks: {
       // Ex. 1: custom renderer for the em / italics decorator
       underline: ({ children }) => (
-        <span className={cn('highlighted-text', className)}>{children}</span>
+        <Underline className={className}>{children}</Underline>
       ),
       link: ({ value, children }) => {
         const target = (value?.href || '').startsWith('http')

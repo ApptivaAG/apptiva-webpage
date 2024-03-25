@@ -4,6 +4,7 @@ import Heading from './heading'
 import logo from './logo.svg'
 import NewsletterForm from './newsletter/newsletter-form'
 import sms from './swiss-made-software.svg'
+import Underline from './ui/underline'
 
 export default function Footer() {
   return (
@@ -185,34 +186,34 @@ function RandomText() {
       return (
         <span>
           Du hast es geschafft! Zur Belohnung gibt&apos;s unser{' '}
-          <u>Sahnehäubchen.</u>
+          <Underline>Sahnehäubchen.</Underline>
         </span>
       )
     case 1:
       return (
         <span>
           Deine Neugier hat dich hierher geführt. Tauche jetzt tiefer in unsere{' '}
-          <u>vielfältigen Inhalte</u> ein.
+          <Underline>vielfältigen Inhalte</Underline> ein.
         </span>
       )
     case 2:
       return (
         <span>
           Du bist noch hier? Klasse! Wir haben noch ein paar{' '}
-          <u>Dinge für dich:</u>
+          <Underline>Dinge für dich:</Underline>
         </span>
       )
     case 3:
       return (
         <span>
-          <u>Deine Entdeckungsreise</u> ist noch nicht vorbei. Schau, was es
-          noch zu erkunden gibt!
+          <Underline>Deine Entdeckungsreise</Underline> ist noch nicht vorbei.
+          Schau, was es noch zu erkunden gibt!
         </span>
       )
     case 4:
       return (
         <span>
-          Finde heraus, was noch auf <u>dich wartet:</u>
+          Finde heraus, was noch auf <Underline>dich wartet:</Underline>
         </span>
       )
     default:

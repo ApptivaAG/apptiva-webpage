@@ -2,8 +2,8 @@ import { getTestimonialsData } from '@/utils/testimonials'
 import Testimonial from './testimonial'
 import { Carousel, CarouselContent, CarouselItem } from './ui/carousel'
 
-const Testimonials = () => {
-  const testimonials = getTestimonialsData()
+const Testimonials = async () => {
+  const testimonials = await getTestimonialsData()
 
   return (
     <div className="full">

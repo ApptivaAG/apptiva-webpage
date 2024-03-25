@@ -1,10 +1,8 @@
-import path from 'path'
-import ReactHtmlParser from 'react-html-parser'
+import { Testimonial } from '@/utils/testimonials'
 import { FaQuoteLeft } from 'react-icons/fa'
 import Heading from './heading'
 
-const Testimonial = ({ testimonial }: { testimonial: any }) => {
-  const imagePath = path.join('/img/testimonials/', testimonial.avatar)
+const Testimonial = ({ testimonial }: { testimonial: Testimonial }) => {
   return (
     <div className="m-auto pb-4 lg:pb-0">
       <div className="content my-0 lg:my-10">
@@ -16,13 +14,13 @@ const Testimonial = ({ testimonial }: { testimonial: any }) => {
           </div>
           <div className="mt-10 lg:ml-8">
             <Heading level={3} className="text-primary">
-              {ReactHtmlParser(testimonial.statement)}
+              {testimonial.content}
             </Heading>
             <div className="mt-10 flex items-center gap-6 lg:mt-20 lg:gap-12">
               <div className="text-primary">
-                <Heading level={4}>{testimonial.name}</Heading>
-                <p>{testimonial.position}</p>
-                <p>{testimonial.company}</p>
+                <Heading level={4}>{testimonial.frontmatter.name}</Heading>
+                <p>{testimonial.frontmatter.position}</p>
+                <p>{testimonial.frontmatter.company}</p>
               </div>
             </div>
           </div>
