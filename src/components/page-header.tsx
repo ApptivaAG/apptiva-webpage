@@ -1,10 +1,10 @@
-import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
-import { SanityImageWithAlt } from '@/utils/types'
+import { PortableText, SanityImageWithAlt } from '@/utils/types'
 import BreadCrumb from './bread-crumb'
+import StyledPortableText from './styled-portable-text'
 
 export function PageHeader(props: {
-  title: string | undefined
+  title: PortableText | undefined
   lead: string | undefined
   links?: { name: string; href?: string | undefined }[]
   image?: SanityImageWithAlt
@@ -16,13 +16,7 @@ export function PageHeader(props: {
         {props.links && (
           <BreadCrumb className="pb-2 md:pb-6" links={props.links} />
         )}
-        <Heading level={1}>
-          <span
-            dangerouslySetInnerHTML={{
-              __html: props.title ?? '',
-            }}
-          />
-        </Heading>
+        {props.title && <StyledPortableText content={props.title} />}
         <p className="max-w-xl pt-4 text-xl md:pt-8">{props.lead}</p>
         {props.callToAction && (
           <div className="pt-8 md:pt-12">{props.callToAction}</div>

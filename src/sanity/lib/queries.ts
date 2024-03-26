@@ -104,20 +104,25 @@ const PersonSelection = {
 }
 export const Persons = q('*').filterByType('person').grab$(PersonSelection)
 
-export const servicesQuery = q('*')
-  .filterByType('service-page')
+const Header = q('header')
   .grab$({
-    _id: q.string(),
-    slug: Slug,
-    header: q('header')
+    title: q.contentBlocks().optional(),
+    lead: q.string().optional().default(''),
+    image: sanityImageWithAlt(),
+    meta: q('meta')
       .grab$({
-        title: q.string().optional().default('In Arbeit'),
+        title: q.string().optional(),
         description: q.string().optional(),
-        image: sanityImageWithAlt(),
-        content: q.contentBlocks().optional(),
       })
       .nullable(),
   })
+  .nullable()
+
+export const servicesQuery = q('*').filterByType('service-page').grab$({
+  _id: q.string(),
+  slug: Slug,
+  header: Header,
+})
 
 export type ModuleData = NonNullable<InferType<typeof Modules>>[number]
 const Modules = q('modules')
@@ -142,20 +147,6 @@ const Modules = q('modules')
     servicePageTeaser: ServicePageTeasers,
     fullscreenImage: sanityImageWithAlt('fullscreenImage'),
     fullscreenImageText: q.contentBlocks().optional(),
-  })
-  .nullable()
-
-const Header = q('header')
-  .grab$({
-    title: q.string().optional().default('In Arbeit'),
-    lead: q.string().optional().default(''),
-    image: sanityImageWithAlt(),
-    meta: q('meta')
-      .grab$({
-        title: q.string().optional(),
-        description: q.string().optional(),
-      })
-      .nullable(),
   })
   .nullable()
 
