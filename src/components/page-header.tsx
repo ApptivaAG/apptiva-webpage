@@ -5,7 +5,7 @@ import Heading from './heading'
 import StyledPortableText from './styled-portable-text'
 
 export function PageHeader(props: {
-  title: PortableText | undefined
+  title: string | PortableText | undefined
   lead: string | undefined
   links?: { name: string; href?: string | undefined }[]
   image?: SanityImageWithAlt
@@ -19,7 +19,11 @@ export function PageHeader(props: {
         )}
         {props.title && (
           <Heading level={1}>
-            <StyledPortableText content={props.title} />
+            {typeof props.title === 'string' ? (
+              props.title
+            ) : (
+              <StyledPortableText content={props.title} />
+            )}
           </Heading>
         )}
         <p className="max-w-xl pt-4 text-xl md:pt-8">{props.lead}</p>
