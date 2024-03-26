@@ -1,6 +1,7 @@
 import SanityImage from '@/components/sanity-image'
 import { PortableText, SanityImageWithAlt } from '@/utils/types'
 import BreadCrumb from './bread-crumb'
+import Heading from './heading'
 import StyledPortableText from './styled-portable-text'
 
 export function PageHeader(props: {
@@ -16,7 +17,11 @@ export function PageHeader(props: {
         {props.links && (
           <BreadCrumb className="pb-2 md:pb-6" links={props.links} />
         )}
-        {props.title && <StyledPortableText content={props.title} />}
+        {props.title && (
+          <Heading level={1}>
+            <StyledPortableText content={props.title} />
+          </Heading>
+        )}
         <p className="max-w-xl pt-4 text-xl md:pt-8">{props.lead}</p>
         {props.callToAction && (
           <div className="pt-8 md:pt-12">{props.callToAction}</div>

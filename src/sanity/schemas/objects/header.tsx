@@ -16,7 +16,6 @@ export default defineType({
             {
               title: 'Normal',
               value: 'normal',
-              component: (props) => <h1>{props.children}</h1>,
             },
           ],
           lists: [],
