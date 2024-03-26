@@ -8,13 +8,30 @@ export default defineType({
     defineField({
       name: 'title',
       title: 'Titel',
-      type: 'string',
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+          styles: [
+            {
+              title: 'Normal',
+              value: 'normal',
+              component: (props) => <h1>{props.children}</h1>,
+            },
+          ],
+          lists: [],
+          marks: {
+            decorators: [{ title: 'Underline', value: 'underline' }],
+            annotations: [],
+          },
+        },
+      ],
     }),
     defineField({
       name: 'lead',
       title: 'Einleitung',
       type: 'text',
-      rows: 3
+      rows: 3,
     }),
     defineField({
       name: 'image',
@@ -28,6 +45,6 @@ export default defineType({
       name: 'meta',
       title: 'Metadata',
       type: 'meta',
-    })
+    }),
   ],
 })
