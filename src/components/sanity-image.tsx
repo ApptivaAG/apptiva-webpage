@@ -7,10 +7,12 @@ const SanityImage = ({
   image,
   className,
   size,
+  sizes,
 }: {
   image: (SanityImageWithAlt & { asset?: any }) | null
   className?: string
-  size?: 'content' | 'popout' | 'default'
+  size?: 'content' | 'popout' | 'full' | 'default'
+  sizes?: string
 }) => {
   const { width = 0, height = 0 } = image?.asset
     ? getImageDimensions(image)
@@ -27,11 +29,15 @@ const SanityImage = ({
       {...((width > 40 || height > 40) && { placeholder: 'blur' })}
       blurDataURL={getImageAsset(image).metadata.lqip}
       sizes={
-        size === 'content'
-          ? '(max-width: 1200px) 100vw, 70rem'
-          : size === 'popout'
-            ? '(max-width: 1200px) 100vw, 74rem'
-            : '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw'
+        sizes
+          ? sizes
+          : size === 'content'
+            ? '(max-width: 1200px) 100vw, 70rem'
+            : size === 'popout'
+              ? '(max-width: 1200px) 100vw, 74rem'
+              : size === 'full'
+                ? '(max-width: 1200px) 100vw, 100vw'
+                : '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw'
       }
     />
   ) : null
