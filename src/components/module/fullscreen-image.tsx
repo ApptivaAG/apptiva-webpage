@@ -8,6 +8,7 @@ export default function FullscreenImage(props: { module: ModuleData }) {
       <SanityImage
         className=" object-cover"
         image={props.module.fullscreenImage}
+        size="full"
       />
       {props.module.fullscreenImageText && (
         <div className="content absolute bg-transparent text-base-white *:col-[feature-start/content-end] lg:pb-36  ">

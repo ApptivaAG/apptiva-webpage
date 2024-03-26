@@ -37,6 +37,7 @@ export default function TextWithImage(props: { module: ModuleData }) {
             <SanityImage
               className="aspect-square rounded object-cover"
               image={module.image}
+              sizes="(max-width: 1024px) 100vw, 40rem"
             />
           </div>
           <div className="flex-1 space-y-4 lg:space-y-8 lg:py-16">
