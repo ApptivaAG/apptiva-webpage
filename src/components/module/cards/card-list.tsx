@@ -34,12 +34,16 @@ export default function CardList(props: { module: ModuleData }) {
             </div>
           )}
         </div>
-        <div className="col-right space-y-10 max-lg:mt-10">
+        <div className="col-right space-y-4 max-lg:mt-10">
           {module.cards?.map((card) => (
-            <Card key={card._key}>
+            <Card key={card._key} padding="small">
               <Collapsible>
                 <div className="flex items-start justify-between gap-2">
-                  <Heading level={isLevel(1) ? 3 : 4} size={4}>
+                  <Heading
+                    level={isLevel(1) ? 3 : 4}
+                    size={4}
+                    className="md:text-2xl"
+                  >
                     {card.title}
                   </Heading>
                   <CollapsibleTrigger className="group grid *:size-8 *:transition-all *:[grid-area:1/1]">

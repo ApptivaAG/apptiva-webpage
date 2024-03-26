@@ -10,6 +10,7 @@ const cardStyle = cva('rounded-lg border overflow-clip', {
     },
     padding: {
       default: 'p-6 md:p-9',
+      small: 'p-4 md:p-6',
       none: '',
     },
   },
