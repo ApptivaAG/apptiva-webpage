@@ -39,8 +39,8 @@ export default defineConfig({
               .child(
                 S.editor()
                   .schemaType('about-page')
-                  .documentId('e068fd85-2bfd-41f5-9494-ba5c8691c0fa')
-                  .title('Über')
+                  .documentId('about-page')
+                  .title('Über Apptiva Seite')
               )
               .icon(FaAddressCard),
 

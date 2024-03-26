@@ -26,24 +26,4 @@ export default defineType({
       of: [{ type: 'module' }],
     }),
   ],
-  orderings: [
-    {
-      title: 'Title',
-      name: 'title',
-      by: [
-        {
-          field: 'header.title',
-          direction: 'asc',
-        },
-      ],
-    },
-  ],
-  preview: {
-    select: {
-      title: 'header.title',
-    },
-    prepare(selection) {
-      return { title: selection.title }
-    },
-  },
 })
