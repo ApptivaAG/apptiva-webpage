@@ -4,6 +4,7 @@ import MdxImage from '@/components/mdx-image'
 import SanityImage from '@/components/sanity-image'
 import { getPostBySlug, getPosts } from '@/utils/blog'
 import { kebabCaseToTitleCase } from '@/utils/format'
+import portableTextToString from '@/utils/portable-text-to-string'
 import { PortableText } from '@portabletext/react'
 import remarkEmbedder from '@remark-embedder/core'
 import oembedTransformer from '@remark-embedder/transformer-oembed'
@@ -29,7 +30,10 @@ export async function generateMetadata(props: {
   const post = (await getPostBySlug(props.params.slug)) ?? notFound()
 
   return {
-    title: post.title,
+    title:
+      typeof post.title === 'string'
+        ? post.title
+        : portableTextToString(post.title),
     description: post.description,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
@@ -56,13 +60,24 @@ export default async function Home(props: { params: { slug: string } }) {
             links={[
               { name: 'Blog', href: '/blog' },
               {
-                name: post.title ?? 'Post',
+                name: post.title
+                  ? typeof post.title === 'string'
+                    ? post.title
+                    : portableTextToString(post.title)
+                  : 'Post',
                 href: `/blog/${post.slug}`,
               },
             ]}
           />
           <Heading level={1}>
-            <span dangerouslySetInnerHTML={{ __html: post.title }} />
+            <span
+              dangerouslySetInnerHTML={{
+                __html:
+                  typeof post.title === 'string'
+                    ? post.title
+                    : portableTextToString(post.title),
+              }}
+            />
           </Heading>
           <p className="max-w-xl pt-6 text-xl">{post.description}</p>
           <p className="pt-2 text-lg text-base-white/60">

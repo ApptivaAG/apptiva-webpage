@@ -1,3 +1,4 @@
+import portableTextToString from '@/utils/portable-text-to-string'
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
@@ -53,11 +54,7 @@ export default defineType({
     },
     prepare(selection) {
       return {
-        title: selection.title
-          .flatMap((block: { children: { text: string }[] }) =>
-            block.children.map((child) => child.text)
-          )
-          .join(''),
+        title: portableTextToString(selection.title),
       }
     },
   },

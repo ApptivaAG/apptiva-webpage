@@ -2,7 +2,7 @@ import { SanityImageSource } from '@sanity/asset-utils'
 import { PortableTextTextBlock } from 'sanity'
 
 export interface Blog {
-  title: string
+  title: string | { children: { text: string }[] }[]
   description: string
   slug: string
   author: string | Author
