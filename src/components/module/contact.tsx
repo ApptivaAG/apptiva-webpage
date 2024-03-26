@@ -6,25 +6,48 @@ export default function Contact(props: { module: ModuleData }) {
 
   const weekday = new Date().getDay()
 
-  const getContactPersonOfWeekday = () => {
-    const contactablePersons = module.persons.filter(
-      (person) => !person.personName?.toLowerCase().includes('brigitte')
+  const getPersonsExcludingNames = ({
+    persons,
+    names,
+  }: {
+    persons: typeof module.persons
+    names: string[]
+  }) =>
+    persons.filter(
+      (person) =>
+        !names.some((name) => person.personName?.toLowerCase().includes(name))
     )
-    return contactablePersons[
-      Math.floor(Math.random() * contactablePersons.length)
-    ]
-    // switch (weekday) {
-    //   case 0:
-    //   case 1:
-    //   case 2:
-    //   case 3:
-    //   case 4:
-    //   case 5:
-    //   case 6:
-    //   default:
-    //     return module.persons.at(0)
-    //     return module.persons[2]
-    // }
+
+  const getContactPersonOfWeekday = () => {
+    const contactablePersons = getPersonsExcludingNames({
+      persons: module.persons,
+      names: ['brigitte', 'sarah', 'patrik', 'kevin'],
+    })
+
+    const getRandomPerson = (persons: typeof module.persons) =>
+      persons[Math.floor(Math.random() * persons.length)]
+
+    const getRandomPersonExcludingNames = (names: string[]) => {
+      const contactablePersonsOfWeekday = getPersonsExcludingNames({
+        persons: contactablePersons,
+        names,
+      })
+      return getRandomPerson(contactablePersonsOfWeekday)
+    }
+
+    switch (weekday) {
+      case 3: // wednesday
+        return getRandomPersonExcludingNames(['david', 'markus', 'robin'])
+      case 4: // thursday
+        return getRandomPersonExcludingNames(['david', 'roman'])
+      case 5: // friday
+        return getRandomPersonExcludingNames(['david', 'philip', 'robin'])
+      case 1: // monday
+      case 2: // tuesday
+      case 6: // saturday
+      case 0: // sunday
+        return getRandomPerson(contactablePersons)
+    }
   }
 
   const contactPerson = getContactPersonOfWeekday()
