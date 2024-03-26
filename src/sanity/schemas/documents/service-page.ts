@@ -77,7 +77,13 @@ export default defineType({
       title: 'header.title',
     },
     prepare(selection) {
-      return { title: selection.title }
+      return {
+        title: selection.title
+          .flatMap((block: { children: { text: string }[] }) =>
+            block.children.map((child) => child.text)
+          )
+          .join(''),
+      }
     },
   },
 })
