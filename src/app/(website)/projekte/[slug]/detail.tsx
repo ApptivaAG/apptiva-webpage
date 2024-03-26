@@ -33,7 +33,11 @@ export default function ProjectDetail(props: {
           <p className="max-w-xl pt-6 text-xl">{project.description}</p>
 
           <div className="popout justify-center pt-8 md:pt-16">
-            <SanityImage className="rounded-lg" image={project.image} />
+            <SanityImage
+              className="rounded-lg"
+              image={project.image}
+              size="popout"
+            />
           </div>
         </div>
       </header>

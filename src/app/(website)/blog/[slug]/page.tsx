@@ -85,11 +85,15 @@ export default async function Home(props: { params: { slug: string } }) {
                 placeholder="blur"
                 blurDataURL={post.image.base64}
                 alt=""
-                sizes="(max-width: 600px) 100vw, 1200px"
+                sizes="(max-width: 1200px) 100vw, 74rem"
               />
             )}
             {post.kind === 'cms' && post.image && (
-              <SanityImage className="rounded-lg" image={post.image} />
+              <SanityImage
+                className="rounded-lg"
+                image={post.image}
+                size="popout"
+              />
             )}
           </div>
         </div>
