@@ -67,7 +67,7 @@ export default defineType({
       name: 'title',
       by: [
         {
-          field: 'header.title',
+          field: 'header.title[0].children[0].text',
           direction: 'asc',
         },
       ],
