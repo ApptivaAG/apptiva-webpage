@@ -21,12 +21,15 @@ export default function BreadCrumb(props: {
             <li>
               {link.href && index + 1 !== links.length ? (
                 <Link href={link.href} className={'opacity-40'}>
-                  <UnderlineForLink>{link.name}</UnderlineForLink>
+                  <UnderlineForLink>
+                    <span dangerouslySetInnerHTML={{ __html: link.name }} />
+                  </UnderlineForLink>
                 </Link>
               ) : (
-                <p className={cn(index + 1 !== links.length && 'opacity-40')}>
-                  {link.name}
-                </p>
+                <p
+                  className={cn(index + 1 !== links.length && 'opacity-40')}
+                  dangerouslySetInnerHTML={{ __html: link.name }}
+                />
               )}
             </li>
           </React.Fragment>
