@@ -22,7 +22,7 @@ export default defineType({
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'header.title',
+        source: (document: any) => portableTextToString(document.header.title),
         maxLength: 96,
       },
     }),

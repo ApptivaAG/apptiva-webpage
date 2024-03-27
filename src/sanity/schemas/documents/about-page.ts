@@ -1,3 +1,4 @@
+import portableTextToString from '@/utils/portable-text-to-string'
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
@@ -15,7 +16,7 @@ export default defineType({
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'header.title',
+        source: (document: any) => portableTextToString(document.header.title),
         maxLength: 96,
       },
     }),
