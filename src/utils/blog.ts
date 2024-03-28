@@ -60,14 +60,13 @@ const getCmsPostBySlug = cache(async (slug: string) => {
     content: post.content as CmsContent,
     image: post.header?.image,
     title: post.header?.title
-      ? typeof post.header.title === 'string'
-        ? post.header.title
-        : portableTextToString(post.header.title)
+      ? portableTextToString(post.header.title)
       : 'Ohne Titel',
     description: post.header?.lead ?? 'Ohne Einleitung',
     slug: post.slug,
     author: post.author ?? 'Anonymous',
     publishDate: post._createdAt,
+    breadcrumb: post.breadcrumb,
     tags:
       post.tags?.filter((tag): tag is string => typeof tag === 'string') ??
       undefined,
