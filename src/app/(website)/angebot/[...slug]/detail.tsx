@@ -12,8 +12,6 @@ export default function ServiceDetail(props: {
   customers: React.ReactNode
   isPreview?: boolean
 }) {
-  console.log('ServiceDetail', props.service)
-
   return (
     <>
       <PageHeader
