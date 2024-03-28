@@ -8,7 +8,7 @@ import Quote from './quote'
 import ServiceTeaserList from './service-teaser/service-teaser-list'
 import Team from './team'
 import Text from './text'
-import FullscreenImage from './fullscreen-image'
+import Image from './image'
 
 export default function Module(props: {
   module: ModuleData
@@ -44,8 +44,8 @@ export default function Module(props: {
     case 'teaser-servicepage':
       return <ServiceTeaserList module={module} />
 
-    case 'fullscreen-image':
-      return <FullscreenImage module={module} />
+    case 'image':
+      return <Image module={module} />
     case 'team':
       return <Team module={module} />
 

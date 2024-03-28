@@ -37,7 +37,7 @@ export default defineType({
           { title: 'Kontakt / CTA', value: 'contact' },
           { title: 'Zitat', value: 'quote' },
           { title: 'Teaser Angebot', value: 'teaser-servicepage' },
-          { title: 'Fullscreen Bild', value: 'fullscreen-image' },
+          { title: 'Bild', value: 'image' },
           { title: 'Team', value: 'team' },
         ],
       },
@@ -60,13 +60,15 @@ export default defineType({
       type: 'string',
       options: {
         list: [
-          { title: 'einspaltig', value: '1-column' },
-          { title: 'zweispaltig', value: '2-column' },
-          { title: 'dreispaltig', value: '3-column' },
-          { title: 'Karussell', value: 'card-carousel' },
+          { title: 'Text: einspaltig', value: '1-column' },
+          { title: 'Text: zweispaltig', value: '2-column' },
+          { title: 'Text: dreispaltig', value: '3-column' },
+          { title: 'Text: Karussell', value: 'card-carousel' },
+          { title: 'Bild: Vollbild', value: 'full' },
+          { title: 'Bild: Breite Text', value: 'popout' },
         ],
       },
-      hidden: isNotType('cards', 'text'),
+      hidden: isNotType('cards', 'text', 'image'),
     }),
     defineField({
       name: 'style',
@@ -85,7 +87,7 @@ export default defineType({
       name: 'image',
       title: 'Bild',
       type: 'imageWithAlt',
-      hidden: isNotType('cards', 'prices', 'text'),
+      hidden: isNotType('cards', 'prices', 'text', 'image'),
     }),
     defineField({
       name: 'orientation',
@@ -108,7 +110,7 @@ export default defineType({
           type: 'block',
         },
       ],
-      hidden: isNotType('cards', 'faqs', 'text', 'contact', 'prices'),
+      hidden: isNotType('cards', 'faqs', 'text', 'contact', 'prices', 'image'),
     }),
     defineField({
       name: 'cards',
@@ -184,23 +186,6 @@ export default defineType({
         },
       ],
       hidden: isNotType('teaser-servicepage'),
-    }),
-    defineField({
-      name: 'fullscreenImage',
-      title: 'Bild gross',
-      type: 'imageWithAlt',
-      hidden: isNotType('fullscreen-image'),
-    }),
-    defineField({
-      name: 'fullscreenImageText',
-      title: 'Text über Bild gross',
-      type: 'array',
-      of: [
-        {
-          type: 'block',
-        },
-      ],
-      hidden: isNotType('fullscreen-image'),
     }),
   ],
 })
