@@ -1,8 +1,13 @@
 ---
 title: Drei Jahre Apptiva
+source: apptiva
 slug: drei-jahre-apptiva
 templateKey: blog-post
-image: apptiva-guys.png
+image:
+  src: /assets/blog/drei-jahre-apptiva/apptiva-guys.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVR4nAFkAJv/AKq4v2uHlsfPvrbCqrnDy77Hy9HewM7XyABPZG4ADyVsd2ZOXD0BMUItTFVIYiyFl3gA8e/u1NHO4+Ll1dLX3t3b2tnY1tTb3t3eAPv+/vf3+fv9+/////v+/v////b29f///+JfRQxUJCuaAAAAAElFTkSuQmCC
+  height: 924
+  width: 1884
 date: 2018-07-27
 author: Philip Schönholzer
 description: >-

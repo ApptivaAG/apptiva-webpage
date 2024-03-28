@@ -1,8 +1,13 @@
 ---
 title: Bots Holzöpfel ond Zipfelchappe
+source: apptiva
 slug: bots-holzoepfel-ond-zipfelchappe
 templateKey: blog-post
-image: ./img/DSC_0042.jpg
+image:
+  src: /assets/blog/img/DSC_0042.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/AN/gy9LMutrLu////vz+/fr66OPQn8StlgB/gHdaVUWBZlOopqGOko6FhX6Cg2XQvq8AAwMHEBkddW1tamprKzErFRcXPEFK1sCqABgZGhkbG0FRZldsi1NWWD4+PWliXLilkQANERISFRIuPE1HXYBicYu+tqfg1bunkXgeJzkZhlV/CAAAAABJRU5ErkJggg==
+  height: 1714
+  width: 2560
 date: 2018-02-01T08:33:14.000Z
 author: markus-tanner
 description: ''

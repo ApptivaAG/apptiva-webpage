@@ -1,8 +1,13 @@
 ---
 title: Fleet Assistant für hostettler autotechnik ag
+source: apptiva
 slug: fleet-assistant-hostettler-autotechnik-ag
 templateKey: blog-post
-image: fleet-assistant-header.png
+image:
+  src: /assets/blog/fleet-assistant/fleet-assistant-header.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/AKyrttXa3vb19fz7+Pf39v///9zc3NXV1QCbm6e5wMXAurwIIzIzR1Po5+eysrK5ubkA7e3tiYeGxs7TADVZRXKM5eTi7e3t////APv7++bm5v///w8NCQsJB/////j4+Pv7+wD///////////+0tbWysrP////7+/3///8PElyj5vt+YQAAAABJRU5ErkJggg==
+  height: 1080
+  width: 1920
 date: 2021-04-16
 author: Roman Schaller
 description: >-

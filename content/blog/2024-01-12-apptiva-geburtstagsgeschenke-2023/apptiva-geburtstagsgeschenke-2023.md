@@ -2,7 +2,11 @@
 title: 'Apptiva Geburtstags&shy;geschenke im 2023'
 slug: apptiva-geburtstagsgeschenke-2023
 templateKey: blog-post
-image: apptiva-geburtstagsgeschenke.jpg
+image:
+  src: /assets/blog/2024-01-12-apptiva-geburtstagsgeschenke-2023/apptiva-geburtstagsgeschenke.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAhElEQVR4nGNgE5Ri4JVg4BXnEpHlEZdl4RNn5pPgEpFhEJdRNjOztLdzVNbUk1bR1jWzVlTTAUmo6JqUVsY1xseUJ0UUJia2tdcVZ8byCskyMAtICioqb+4s/P9y9/8Xe/5f3eTj6c7AKcbAKyTNKyStoqquq2+ka2Jp5uAmra7Dzi8JAM+yHDXnH2czAAAAAElFTkSuQmCC
+  height: 2407
+  width: 4000
 imageCaption: Foto von Annie Spratt auf Unsplash
 date: 2024-01-12
 author: Markus Tanner

@@ -1,8 +1,13 @@
 ---
 title: 1 Jahr nicht im Büro
+source: apptiva
 slug: 1-jahr-home-office--traum-oder-albtraum
 templateKey: blog-post
-image: team-video-call.jpg
+image:
+  src: /assets/blog/home-office/team-video-call.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/AOvn8JGIi42EhYh+hNvX4J+jo7Oyr+Hi4wDSydKAeYCMg4abgIPEtL6cnph/gH6ZoZoA083Hl46IqJWFnp6era6tgYB6e399gouHAGVlZQAAAEFCPZ6alsS9vUtOTQAAAF9fYAD8/Pzf39/19fL38+/9+vvz9PTY19f+/v4UpUv6zzNe/gAAAABJRU5ErkJggg==
+  height: 1013
+  width: 1572
 date: 2021-03-17
 author: Philip Schönholzer
 description: >-

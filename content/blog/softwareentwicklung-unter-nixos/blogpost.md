@@ -1,8 +1,13 @@
 ---
 title: Softwareentwicklung unter NixOS - Mein Erfahrungsbericht
+source: apptiva
 slug: softwareentwicklung-unter-nixos
 templateKey: blog-post
-image: ./image.jpg
+image:
+  src: /assets/blog/softwareentwicklung-unter-nixos/image.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAIAAABxZ0isAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAoUlEQVR4nAGWAGn/AKKvr2lmXj4nHHZsZqevtmVqb4OMjr/S2QCswseGgnx0Sz2WiYeLlZojLDWGk5rt+v8AXXKFSEpPbVBJSUlYRUtZTEpJp62t8f7/AAAEFQADFBcfMxIcNUw6PJ5yW41+bXyDhwAqNkMEDyAlQlclO1FjWVlzamZlbXNVYGkAdYibAAUTHTlKHzxVBgUJNzxAnKivucjSl5I5inlZ/yIAAAAASUVORK5CYII=
+  height: 869
+  width: 1159
 date: 2020-03-24T16:24:00.000Z
 author: Patrik Stutz
 description: 'Vor über 9 Monaten startete ich meine Arbeit bei der Apptiva. Und gleichzeitig auch mein Experiment mit NixOS.'
@@ -76,6 +81,6 @@ Zur Kommunikation innerhalb der Firma verwenden wir glücklicherweise Slack, wel
 
 [[right]]
 |[[avatar]]
-||![Patrik Stutz](../../data/employees/patrik-stutz/patrik-stutz-prev.jpg)
+||![Patrik Stutz](patrik-stutz-prev.jpg)
 
 NixOS macht sehr vieles richtig, aber auch anders. Dies will zuerst gelernt werden. Ist diese Hürde aber erstmal genommen, wird es schwierig, sich wieder von den Vorteilen loszureissen. Deshalb beabsichtige ich auch weiterhin NixOS zu benutzen und irgendwann vielleicht auch den einen oder anderen Team-Kollegen zu überzeugen. Vielleicht werde ich aber auch plötzlich durch fehlende Software zurück zu Windows oder einem Mac verbannt.

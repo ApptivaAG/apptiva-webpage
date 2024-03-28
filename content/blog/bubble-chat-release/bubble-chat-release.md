@@ -1,8 +1,13 @@
 ---
 title: Bubble Chat ist da!
+source: apptiva
 slug: bubblechat-ist-da
 templateKey: blog-post
-image: bubble-chat-manage.png
+image:
+  src: /assets/blog/bubble-chat-release/bubble-chat-manage.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAhElEQVR4nB3Juw3CMBAA0BM1HTUb0VHTMgQjwCQuUoQWgWhQ+Cm4CYgRAhd0lmzLso8zIq99AIPJcqWa+rlb36p9fTlofbrrYwMAU1VenXEdWuusyDfnnFICGM5UUX2wQzRE5L1n5hACwGhelOe2fSGaNyIRxRj7GC8224f/SyKSe8z8AwguYAhblxTFAAAAAElFTkSuQmCC
+  height: 1717
+  width: 2560
 date: 2019-08-22
 author: Markus Tanner
 description: >-

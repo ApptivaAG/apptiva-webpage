@@ -1,8 +1,13 @@
 ---
 title: 'Erfahrungen mit Electron und Webview'
+source: apptiva
 slug: erfahrungen-mit-electron-webview
 templateKey: blog-post
-image: electron-webview.png
+image:
+  src: /assets/blog/electron-webview-oder-iframe/electron-webview.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAADCAIAAAAhqtkfAAAACXBIWXMAAAsTAAALEwEAmpwYAAAARUlEQVR4nGPomzi9vXvS/////6ECBgZ2CQZ+mfv37z948ODtu3e379x98ODh8xcvGfqnzOrsm/r///+/f/78+/fvDwwAAD1POqjPCVt+AAAAAElFTkSuQmCC
+  height: 600
+  width: 1920
 date: 2020-05-15
 author: Renato Wasescha
 description: >-
@@ -32,7 +37,7 @@ Dabei ist eine der grössten Herausforderungen wohl die Navigation zwischen mehr
 > ### Warnung
 >
 > Der Webview-Tag von Electron basiert auf dem Webview von Chromium, dessen Architektur dramatischen Veränderungen unterworfen ist. Dies wirkt sich auf die Stabilität der Webansichten aus, einschliesslich Rendering, Navigation und Ereignis-Routing. Wir empfehlen derzeit, das Webview-Tag nicht zu verwenden und Alternativen wie iframe, Electron's BrowserView oder eine Architektur in Betracht zu ziehen, die ganz auf eingebettete Inhalte verzichtet.
-> <br></br>
+> <br />
 > Quelle: [electronjs.org/Docs/API/Webview-Tag](https://www.electronjs.org/docs/api/webview-tag)
 
 Aufgrund dieser aktuellen Entwicklungen müsste man eigentlich auf Webview in Electron Apps verzichten. Allerdings haben iframe oder BrowserView ebenfalls ihre Nachteile, die dann wieder eher für den Einsatz von Webview sprechen. Auf diese Vor- und Nachteile möchte ich nun kurz eingehen.
@@ -97,9 +102,7 @@ app.on(
 
 ## Fazit
 
-[[right]]
-|[[avatar]]
-||![Renato Wasescha](./renato-wasescha.jpg)
+![Renato Wasescha](./renato-wasescha.jpg)
 
 Electron ist ein sehr mächtiges Framework, das eine Plattform-unabhängige Programmierung zulässt. Ausserdem ist die Dokumentation einfach und übersichtlich, und lässt schnelle Ergebnisse zu. In Verbindung mit React und Typescript macht es richtig Spass, damit zu arbeiten.
 

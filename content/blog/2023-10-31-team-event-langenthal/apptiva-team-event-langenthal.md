@@ -1,8 +1,13 @@
 ---
 title: Ein Tag voller Teamgeist und ein Hauch von Curling-Wahnsinn
+source: apptiva
 slug: apptiva-team-event-langenthal
 templateKey: blog-post
-image: curling_halle.jpg
+image:
+  src: /assets/blog/2023-10-31-team-event-langenthal/curling_halle.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/ACAWADozHDUkBzgoHkE3IyceAlZFJquVdQAlJRo6PTNQTkFFQ0E3OjEKBABKPCOmlG0AoImDs6Oj2dDQm5eaMScqzsDCx720o5ByALSOiejGv0RYeVVxkryWlqd2dtHK0ENoigDr5d///Pfb2d6Il62Vqr2Un7B5jKFqf5ePhDgJZYl1TAAAAABJRU5ErkJggg==
+  height: 1703
+  width: 2715
 imageCaption: Apptiva beim Curling
 date: 2023-10-31
 author: Sarah Schneider

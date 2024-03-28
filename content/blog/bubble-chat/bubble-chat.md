@@ -1,8 +1,13 @@
 ---
 title: Bubble Chat - Managing Chatbot Content
+source: apptiva
 slug: bubblechat
 templateKey: blog-post
-image: bubble-chat.png
+image:
+  src: /assets/blog/bubble-chat/bubble-chat.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/ACNIVxBFXAA9VgBCXQBGYQlHYh9OZgA4TwC4u738/v7j6Ozg4eLz9PX///7////X19cAoKKjyszOyszP5ODe9Ozn6ujo////z8/OAL29vf////f19MfW4Jq6zuvw9P///9fX1wCHh4ednqC9trQ8ZoAAEjujr7jd3NmxsrJkYVIqShE8WwAAAABJRU5ErkJggg==
+  height: 1753
+  width: 2560
 date: 2018-11-20
 author: Markus Tanner
 description: >-

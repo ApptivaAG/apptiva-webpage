@@ -1,8 +1,13 @@
 ---
 title: sacralis - nun mit Push-Notifikationen
+source: apptiva
 slug: sacralis-app
 templateKey: blog-post
-image: sacralis.png
+image:
+  src: /assets/blog/sacralis-app/sacralis.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAIAAABxZ0isAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAoUlEQVR4nAGWAGn/AIaEhCQAAC4fHycpKSgoKCopKR4eHqCgoABbVVVqKi6bfX2Ch4iGhYWMi4tWVVZrbGwAZWZml6Ki2t3d0M/PysrK1tfXn5+fdHR0AGpqasvJyf////n6+vb29v///8fHx3R0dABaWlpDQ0NycnNqamxpaWpxcnNDQ0RqamoAoKCgLS0uPz8/PT0+Pz8/QEBBODg4tbW1gSpEkbViPToAAAAASUVORK5CYII=
+  height: 1506
+  width: 2036
 date: 2018-12-24
 author: Markus Tanner
 description: >-

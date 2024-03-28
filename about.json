@@ -1,0 +1,514 @@
+[
+  {
+    "_updatedAt": "2024-03-26T16:30:08Z",
+    "modules": [
+      {
+        "level": 1,
+        "_type": "module",
+        "_key": "84427b7e08f9",
+        "title": "Less Waste & Holacracy - unsere Firmenkultur.",
+        "type": "text",
+        "content": [
+          {
+            "_key": "2d97d19360e9",
+            "markDefs": [],
+            "children": [
+              {
+                "_key": "dc8fb96ea388",
+                "_type": "span",
+                "marks": [],
+                "text": "Seit unserer Gründung im Jahr 2015 entwickeln wir gemeinsam mit unseren Kund:innen wegweisende Lösungen. Unsere Unternehmenskultur ist geprägt von Ehrlichkeit, Offenheit und Transparenz. In unserer Arbeitsweise setzen wir auf Holacracy, ein Organisationsmodell, das Selbstorganisation und dezentrale Entscheidungsfindung fördert. Bei der Apptiva schätzen wir den respektvollen Umgang miteinander und pflegen eine offene Kommunikation auf allen Ebenen."
+              }
+            ],
+            "_type": "block",
+            "style": "normal"
+          },
+          {
+            "_key": "201b51e05d88",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "\nZusätzlich verfolgen wir den Ansatz «Less Waste», um Ressourcen effizient zu nutzen und nachhaltige Lösungen zu entwickeln. Mit unserem fundierten Know-how und unserer umfangreichen Erfahrung begleiten wir dich durch den Prozess der Digitalisierung, um deine Vision in die Realität umzusetzen. Mit der Apptiva findest du nicht nur einen Dienstleister, sondern einen Partner, der deine Ziele verstehen will und mit dir gemeinsam umsetzt.",
+                "_key": "ab8d193b944b"
+              }
+            ],
+            "_type": "block",
+            "style": "normal"
+          }
+        ],
+        "layout": "1-column"
+      },
+      {
+        "type": "text",
+        "content": [
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "text": "In allen Projekten pflegen wir den engen und direkten Kontakt mit unseren Kund:innen. Während der ganzen Projektdauer hast du dieselbe Ansprechperson. Bei uns sprichst du direkt mit den Entwicklerinnen und Entwicklern, erlebst unkomplizierte Kommunikation und profitierst von kurzen Wegen.",
+                "_key": "d94d453ae4640",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block",
+            "style": "normal",
+            "_key": "4788c1777726"
+          }
+        ],
+        "image": {
+          "_type": "imageWithAlt",
+          "alt": "Linus und Robin pflegen den Kontakt zu ihren Kund:innen.",
+          "asset": {
+            "_type": "reference",
+            "_ref": "image-c9c9d7e260c9813fb2bd912d5bf80452cd85f97e-5464x8192-jpg"
+          }
+        },
+        "orientation": "left",
+        "level": 2,
+        "_type": "module",
+        "_key": "3d3079b11ece",
+        "title": "Unkompliziert, persönlich, direkt."
+      },
+      {
+        "_key": "2013bbf630d86ef76723149d4b11d22f",
+        "title": "Wir sprechen deine Sprache.",
+        "type": "text",
+        "content": [
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "text": "Jedes Projekt hat individuelle Anforderungen. Wir versetzen uns in deine Lage und erarbeiten gemeinsam die passende Lösung. Dabei spielt es keine Rolle, ob wir zusammen ein neues Projekt umsetzen oder uns in ein bestehendes einklinken. So, wie es eben am besten passt.",
+                "_key": "ea77ffb5ce7e0",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block",
+            "style": "normal",
+            "_key": "41c27e9ec664"
+          }
+        ],
+        "image": {
+          "_type": "imageWithAlt",
+          "alt": "Carla und Roman arbeiten gemeinsam an einer individuellen Softwarelösung.",
+          "asset": {
+            "_ref": "image-177c7ef0188b6920d6a75fdab53af31bf9835164-7299x4868-jpg",
+            "_type": "reference"
+          }
+        },
+        "orientation": "right",
+        "level": 2,
+        "_type": "module"
+      },
+      {
+        "content": [
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "Qualität und Transparenz sind für uns nicht nur Worte, sondern eine gelebte Philosophie, die sich in unserer internen Arbeitsweise und in der Beziehung zu unseren Kund:innen widerspiegelt. Wir verzichten auf klassische Hierarchien, stattdessen werden Herausforderungen gemeinsam angegangen, Probleme offen angesprochen und gelöst. Die passendste Lösung für unsere Kund:innen ist unser Ziel. Dabei gehen wir bewusst mit unseren Ressourcen um und setzen sie dort ein, wo sie am effektivsten gebraucht werden.",
+                "_key": "78e8e388d51f0"
+              }
+            ],
+            "_type": "block",
+            "style": "normal",
+            "_key": "35edf0e44fbe"
+          }
+        ],
+        "image": {
+          "_type": "imageWithAlt",
+          "alt": "Philip und Roman in einer Besprechung.",
+          "asset": {
+            "_type": "reference",
+            "_ref": "image-9611250817bdf35ac41d28c4eb9936b4d11e1734-8192x5464-jpg"
+          }
+        },
+        "orientation": "left",
+        "level": 2,
+        "_type": "module",
+        "_key": "213b2df224a01121bfa263e9d0a29f27",
+        "title": "Wir leben Qualität & Transparenz.",
+        "type": "text"
+      },
+      {
+        "quotetext": [
+          {
+            "_type": "block",
+            "style": "normal",
+            "_key": "a6cc90f96a92",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "In unserer Organisation mit Holacracy erleben wir eine beispiellose Flexibilität und Selbstbestimmung, was zu schnellen Entscheidungen, klar definierten Verantwortlichkeiten und einer kreativen, agilen Arbeitsatmosphäre führt.",
+                "_key": "0d7b9e26c1dc0"
+              }
+            ]
+          }
+        ],
+        "_type": "module",
+        "_key": "f40eda9db897",
+        "title": "Holacracy",
+        "type": "quote"
+      },
+      {
+        "fullscreenImageText": [
+          {
+            "style": "h3",
+            "_key": "b577998b20f9",
+            "markDefs": [],
+            "children": [
+              {
+                "_key": "c7b1ccf98511",
+                "_type": "span",
+                "marks": [],
+                "text": ""
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "text": "",
+                "_key": "6053e12a474a",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block",
+            "style": "normal",
+            "_key": "1ee4b752e9fb"
+          }
+        ],
+        "_type": "module",
+        "_key": "a990875c0b53",
+        "title": "Vollbild Bild",
+        "type": "fullscreen-image",
+        "fullscreenImage": {
+          "asset": {
+            "_ref": "image-6eef722e3dedb54dc2225b04d2ed0c86eba7ae06-8124x5419-jpg",
+            "_type": "reference"
+          },
+          "_type": "imageWithAlt",
+          "alt": "Bei der Apptiva richten wir die Arbeitsweise nach dir und deinen Bedürfnissen."
+        }
+      },
+      {
+        "layout": "2-column",
+        "cards": [
+          {
+            "title": "Co-Creation",
+            "content": [
+              {
+                "children": [
+                  {
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Du bist auf der Suche nach einem Partner, der dich bei einem neuen Projekt begleitet oder dir bei einem bereits bestehenden Projekt weiterhilft? Sei es über die gesamte Projektumsetzung hinweg oder nur in einem Teilprojekt. Wir unterstützen dich gerne in deinem Vorhaben.",
+                    "_key": "28206a17f8b80"
+                  }
+                ],
+                "_type": "block",
+                "style": "normal",
+                "_key": "4139d8606290",
+                "markDefs": []
+              }
+            ],
+            "_type": "card",
+            "_key": "c625f9765cb0"
+          },
+          {
+            "_key": "234d008c9b15",
+            "title": "Projektleitung",
+            "content": [
+              {
+                "markDefs": [],
+                "children": [
+                  {
+                    "text": "Du hast eine tolle Idee, dir fehlen aber die internen Ressourcen, damit du diese umsetzen kannst? Gerne übernehmen wir den Lead und setzen deine Idee in die Wirklichkeit um.",
+                    "_key": "af11c77de8a90",
+                    "_type": "span",
+                    "marks": []
+                  }
+                ],
+                "_type": "block",
+                "style": "normal",
+                "_key": "3c115d406043"
+              }
+            ],
+            "_type": "card"
+          },
+          {
+            "title": "Unterstützung",
+            "content": [
+              {
+                "_key": "ba0075b42f8b",
+                "markDefs": [],
+                "children": [
+                  {
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Brauchst du einfach einen Rat, einen Blick, eine Meinung von Aussen: Wir klinken uns unkompliziert, rasch und zielorientiert in dein Projekt ein.",
+                    "_key": "ae730fbf51f00"
+                  }
+                ],
+                "_type": "block",
+                "style": "normal"
+              }
+            ],
+            "_type": "card",
+            "_key": "9a2bd01c94f0"
+          },
+          {
+            "title": "Beratung",
+            "content": [
+              {
+                "markDefs": [
+                  {
+                    "_type": "link",
+                    "href": "/angebot/architektur-review",
+                    "_key": "c2bc1b6230ac"
+                  }
+                ],
+                "children": [
+                  {
+                    "_key": "c55cf2fa37f80",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Von Chatbot-Beratung bis hin zu Usability Audits und "
+                  },
+                  {
+                    "_type": "span",
+                    "marks": [
+                      "c2bc1b6230ac"
+                    ],
+                    "text": "Architektur Reviews",
+                    "_key": "47ce8c273999"
+                  },
+                  {
+                    "marks": [],
+                    "text": " – wir beraten dich dort, do du es brauchst.",
+                    "_key": "d087c6fd47cb",
+                    "_type": "span"
+                  }
+                ],
+                "_type": "block",
+                "style": "normal",
+                "_key": "79d1f20a2632"
+              }
+            ],
+            "_type": "card",
+            "_key": "c1c73ab0116e"
+          },
+          {
+            "_type": "card",
+            "_key": "b3a6dc66ed0c",
+            "title": "Workshops",
+            "content": [
+              {
+                "markDefs": [],
+                "children": [
+                  {
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Bei Interesse bieten wir Workshops in unseren Fachgebieten an, die dich in der Umsetzung deiner Projekte unterstützen.",
+                    "_key": "958ba34cdde30"
+                  }
+                ],
+                "_type": "block",
+                "style": "normal",
+                "_key": "80ab36a4c002"
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "_key": "1b565c985c41",
+                "markDefs": [],
+                "children": [
+                  {
+                    "marks": [],
+                    "text": "Suchst du Fragen auf Antworten und bist dir unsicher, wer dir dabei helfen kann? Gemeinsam finden wir ganz bestimmt eine Lösung.",
+                    "_key": "1aa9e12f40180",
+                    "_type": "span"
+                  }
+                ],
+                "_type": "block",
+                "style": "normal"
+              },
+              {
+                "_type": "block",
+                "style": "normal",
+                "_key": "b1068067ea99",
+                "markDefs": [
+                  {
+                    "_type": "link",
+                    "_key": "953cfaab8af1"
+                  },
+                  {
+                    "_type": "link",
+                    "href": "/kontakt",
+                    "_key": "dda9af3fe7b0"
+                  }
+                ],
+                "children": [
+                  {
+                    "_type": "span",
+                    "marks": [
+                      "dda9af3fe7b0"
+                    ],
+                    "text": "Melde dich bei ",
+                    "_key": "47b81a27b253"
+                  },
+                  {
+                    "_type": "span",
+                    "marks": [
+                      "953cfaab8af1"
+                    ],
+                    "text": "uns",
+                    "_key": "5323f46ff363"
+                  },
+                  {
+                    "_type": "span",
+                    "marks": [],
+                    "text": " →  ",
+                    "_key": "80da5614727d"
+                  }
+                ]
+              }
+            ],
+            "_type": "card",
+            "style": "inverted",
+            "_key": "4c237b6541a3",
+            "title": "Questions?"
+          }
+        ],
+        "_type": "module",
+        "style": "light-bg",
+        "_key": "be5e4f50bda0",
+        "title": "Zusammenarbeit",
+        "type": "cards",
+        "content": [
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "Unsere Arbeitsweise richtet sich nach dir und deinen Bedürfnissen. In einer Welt, die sich ständig verändert, bieten wir flexible Möglichkeiten der Zusammenarbeit an. Gemeinsam finden wir die beste Form, die zu deinen individuellen Herausforderungen, Ressourcen, Zielen und Rahmenbedingungen passt.",
+                "_key": "6caf3598e5740"
+              }
+            ],
+            "_type": "block",
+            "style": "normal",
+            "_key": "85cd7d2ffddc",
+            "markDefs": []
+          }
+        ]
+      },
+      {
+        "_key": "b97b56584984f110eda05f8d4b0e7b78",
+        "title": "Holacracy 2",
+        "type": "quote",
+        "quotetext": [
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "Uns ist es wichtig, dass jeder so sein darf, wie er ist. Dies ist eine Voraussetzung, dass jeder sein Bestes geben kann.",
+                "_key": "e46bd088a6200"
+              }
+            ],
+            "_type": "block",
+            "style": "normal",
+            "_key": "68e1e3c16dfe"
+          }
+        ],
+        "_type": "module"
+      },
+      {
+        "title": "Deine Expert:innen auf Augenhöhe",
+        "type": "team",
+        "introduction": [
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_key": "8b37072e8f020",
+                "_type": "span",
+                "marks": [],
+                "text": "In unserem Team herrscht eine Atmosphäre, in der Chefgehabe und starre Hierarchien keinen Platz haben. Stattdessen setzen wir auf gemeinsame Entscheidungsfindung, offene Kommunikation und gegenseitige Unterstützung. Wir schätzen die Vielfalt unserer Teammitglieder:innen und geben Raum für verschiedene Persönlichkeiten, Interessen und Entwicklungsmöglichkeiten. Dies ermöglicht es uns, unser volles Potenzial zu entfalten und als Team erfolgreich zu sein."
+              }
+            ],
+            "_type": "block",
+            "style": "normal",
+            "_key": "7162e8cf72bc"
+          }
+        ],
+        "_type": "module",
+        "team": [
+          {
+            "_key": "466972a36ab8",
+            "_ref": "9c47cd5a-0543-4f69-ab66-51cd2f8ff573",
+            "_type": "reference"
+          },
+          {
+            "_ref": "2fd1ca41-75ae-48e8-a7f8-6c17f10d6190",
+            "_type": "reference",
+            "_key": "cca9f04f6163"
+          },
+          {
+            "_key": "f45f0f257136",
+            "_ref": "5dc5e71e-0666-463e-8ddf-ea417ba6bf1a",
+            "_type": "reference"
+          }
+        ],
+        "_key": "c1665601236c"
+      }
+    ],
+    "slug": {
+      "current": "ueber-uns",
+      "_type": "slug"
+    },
+    "_createdAt": "2024-02-28T16:28:15Z",
+    "_rev": "EUn45sMFXPi9u0yzuz9Ink",
+    "_type": "about-page",
+    "header": {
+      "meta": {
+        "_type": "meta",
+        "description": "Bei der Apptiva leben wir eine Firmenkultur, die auf Ehrlichkeit, Offenheit und Agilität basiert - Holacracy.",
+        "title": "Apptiva - ehrlich, offen, transparent & agil."
+      },
+      "_type": "header",
+      "title": [
+        {
+          "markDefs": [],
+          "children": [
+            {
+              "text": "Hi, wir sind Apptiva.",
+              "_key": "f4f02ab491620",
+              "_type": "span",
+              "marks": []
+            }
+          ],
+          "_type": "block",
+          "style": "normal",
+          "_key": "58bc2c900ec2"
+        }
+      ],
+      "lead": "Seit 2015 sind wir live. Seit 2015 leben wir eine Firmenkultur, die auf Ehrlichkeit, Offenheit und Agilität basiert - Holacracy."
+    },
+    "_id": "e068fd85-2bfd-41f5-9494-ba5c8691c0fa"
+  }
+]

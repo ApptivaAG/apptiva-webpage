@@ -1,75 +1,36 @@
-# Apptiva Webpage
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-This repo contains the website of [Apptiva AG](https://apptiva.ch/)
+## Getting Started
 
-## Prerequisites
-
-- Node (I recommend using v8.2.0 or higher)
-
-## Getting Started (Recommended)
-
-`pnpm i`
-
-### Local development
+First, run the development server:
 
 ```bash
-npm start     #run the page locally with "hot reloading"
-npm run clean #clean caches
-npm run build #build a static version locally
-npm run serve #serve the local build
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-### Push update
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-To test and review an update make a Pull Request on Github. A preview will be built on netlify, which you can share.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-After changes of routes or usage of fonts run `npm run preload-fonts` to have the correct fonts be preloaded via http2.
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-To make a change to the live page apptiva.ch just git commit/push to the master branch. A new version will be built automatically on Gatsby Cloud and deployed to netlify.
+## Learn More
 
-## Author blog post
+To learn more about Next.js, take a look at the following resources:
 
-Blog post are written in Markdown and in the folder `content/blog`. New blog post should be in a new folder.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-### Markdown
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-The post are written in [Markdown](https://daringfireball.net/projects/markdown/syntax).
+## Deploy on Vercel
 
-Special are the custom-blocks which are configures [here](gatsby-config.js).
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Custom blocks are written as following:
-
-```markdown
-[[left]]
-| content
-```
-
-The following custom-blocks are configures:
-
-- left (float left)
-- right (float right)
-- row (grid row)
-- col (grid column)
-- button (button link)
-- avatar (round image)
-- 'no-margin' (no margin between content)
-
-Read more about custom-blocks [here](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-remark-custom-blocks)
-
-### Frontmatter
-
-The data of the blog post is written in Frontmatter/YAML. The structure is the following:
-
-`title`: Title of the post  
-`slug`: URL of the post. Only lowercase letters and "-"  
-`templateKey`: blog-post (which template should be used; for post it needs to be "blog-post")  
-`image`: URI to the hero image of the post. Also used for SEO.  
-`date`: Date of the post. Format like 2019-01-07  
-`author`: Roman Schaller  
-`description`: Lead text and used for SEO. Should be around 180 characters.  
-`categories`:
-
-- Allgemein
-- Multiple categories
-
-How to format a multiline sting in YAML Frontmatter: [Docs](https://yaml-multiline.info)
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

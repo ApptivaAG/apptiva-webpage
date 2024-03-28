@@ -1,0 +1,31 @@
+@keyframes text-reveal {
+  to {
+    --split-position: 100%;
+  }
+}
+
+@property --split-position {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 1%; /* 0% would be the correct, but is minimized to 0 on build. */
+}
+
+.highlighted-text {
+  --split-position: 0%;
+  text-decoration: none;
+  background-image: linear-gradient(
+    to right,
+    rgb(var(--secondary)),
+    rgb(var(--secondary)) var(--split-position),
+    rgba(0, 0, 0, 0) var(--split-position),
+    rgba(0, 0, 0, 0)
+  );
+  background-position: 0 0.87em; /* TODO: on small text the line should be lower, like a normal underline for better readability */
+  background-size: 100% 0.2em;
+  background-repeat: repeat-x;
+  text-shadow: 0 0.01em 0.05em rgb(var(--base-black) / 0.13);
+}
+
+.animate {
+  animation: text-reveal 0.7s ease-in-out forwards;
+}

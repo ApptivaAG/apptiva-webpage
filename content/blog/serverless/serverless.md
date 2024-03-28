@@ -1,8 +1,13 @@
 ---
 title: Serverless Apps
+source: apptiva
 slug: serverless
 templateKey: blog-post
-image: apptiva-lambda.png
+image:
+  src: /assets/blog/serverless/apptiva-lambda.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAZ0lEQVR4nGMQFBQQZGAQYmIQ4OcXFBTk4OFn5eATFBRkEBCTYEhsYAgtFBEVExYWNlWTttaWBUnwyylP+P+/+Ml/U2tbW2uL+kCd2ckm4mLCEB2NEB1CYB1WGtIgHWh2sHHzM4PtAACUVxJZXnfY7QAAAABJRU5ErkJggg==
+  height: 1440
+  width: 2560
 date: 2019-02-18
 author: Roman Schaller, Philip Schönholzer
 description: >-

@@ -1,8 +1,13 @@
 ---
 title: Suva Schneesport-Check
+source: apptiva
 slug: suva-schneesport-check
 templateKey: blog-post
-image: img/schneesport-check.jpg
+image:
+  src: /assets/blog/img/schneesport-check.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/AAArZwAkXwAjUwAlRAAbOwAXOQAJLgAQRgAAKEwAOmMANmcASX4ARngAP3YASYEAMmkAL0FcZn2cYHyfSWqLTGqJfWZYsH1OXGyCADddh115naq4zsnS39HX5OLVy97Itqq3yADl5+r5+vvw8fXv8fLq7fHm7vfq8v/w8/gnfjoYjLBJqQAAAABJRU5ErkJggg==
+  height: 683
+  width: 1024
 date: 2016-11-28T14:18:33.000Z
 author: linus-huesler
 description: >-
@@ -25,24 +30,24 @@ Ziel der Applikation ist Schneesportler für ihre Risiken zu sensibilisieren und
 Uns wurde gleich zu Beginn ein grosses Konzept in die Hand gedrückt. Darin waren Ergebnisse von über einem Jahr Konzeptarbeit festgehalten. So waren alle Fragen und Antworten, die Berechnung der Schneesportprofile und -typen sowie die Fitnessübungen in Dokumenten detailliert beschrieben. Aus Erfahrung ist ein grosses Konzept nicht immer die beste Ausgangslage. Der Kunde hat sich bereits über eine lange Zeit mit einem Thema auseinandergesetzt und sieht vieles als selbstverständlich an, für uns von der Apptiva waren diese Informationen jedoch alle neu. Die Herausforderung bestand darin, in kurzer Zeit das Erarbeitete korrekt zu interpretieren, sodass der Transfer des Wissen verlustfrei vonstatten ging. Um dies zu erreichen haben wir drei Massnahmen ergriffen:
 
 <ul>
- 	<li><span style="font-weight: 400;">Eine Risiko-Matrix erstellt</span></li>
- 	<li>Eine Storymap erstellt</li>
- 	<li>Alle zwei Wochen Release mit Review</li>
+  <li><span className="font-normal">Eine Risiko-Matrix erstellt</span></li>
+  <li>Eine Storymap erstellt</li>
+  <li>Alle zwei Wochen Release mit Review</li>
 </ul>
 
 <h2>Risiko-Matrix</h2>
 
 In der Runde haben wir alle Risiken auf Post-it-Zetteln gesammelt. Diese haben wir dann auf den Achsen “Wahrscheinlichkeit” und “Schweregrad” auf einem Flipchart platziert. Für alle Zettel im Quadranten “Wahrscheinlich und Schwerwiegend” haben wir eine Mitigationsstrategie beschrieben und die nötigen Task dafür festgehalten.
 
-<img src="img/schneesport-check-risiken.jpg" alt="Risiko-Matrix für die Entwicklung des Schneesport-Checks"  />
+![Risiko-Matrix für die Entwicklung des Schneesport-Checks](img/schneesport-check-risiken.jpg)
 
 Ein Risiko war fehlendes Suva-Framework Know-how. Unsere Strategie um dieses Risiko zu reduzieren war damals:
 
 <ul>
- 	<li>Möglichste schnell ein [walking skeleton](http://alistair.cockburn.us/Walking+skeleton) zu haben</li>
- 	<li>Review durch das Suva-Framework-Team</li>
- 	<li>Einführung in das Framework erhalten</li>
- 	<li>Eine Beispielapplikation im Zugriff zu haben</li>
+  <li>Möglichste schnell ein [walking skeleton](http://alistair.cockburn.us/Walking+skeleton) zu haben</li>
+  <li>Review durch das Suva-Framework-Team</li>
+  <li>Einführung in das Framework erhalten</li>
+  <li>Eine Beispielapplikation im Zugriff zu haben</li>
 </ul>
 Unsere festgehaltenen Risiken hatten wir jederzeit im Griff und sind glücklicherweise von unbekannten Risiken verschont geblieben.
 
@@ -52,21 +57,21 @@ Die Storymap erlaubt es wie kein zweites Werkzeug ein gemeinsames Verständnis 
 
 Die horizontalen Striche, die mit einem Titel versehen sind, zeigen, dass die Funktionalität des Schneesport-Checks in sechs Phasen unterteilt ist. Eine der wichtigsten Phasen ist bestimmt die erste; hier “Walking Skeleton” genannt. Mit dem Walking Skeleton will man möglichst schnell die grössten Risiken angehen. In unserem Falls war dies die technische Herausforderung und die grobe grafische Darstellung. Zudem wollten wir bereits eine erste Auswertung haben, um sicher zu stellen, dass wir diese korrekt verstanden haben.
 
-<img src="img/schneesport-check-storymap.jpg" alt="Schneesport-Check Story Map" />
+![Schneesport-Check Story Map](img/schneesport-check-storymap.jpg)
 
 <h2>Release und Review</h2>
 
 Um zu wissen, ob wir uns auf dem richtigen Weg befinden, haben wir bereits zu einem sehr frühen Zeitpunkt und dann alle zwei Wochen den aktuellen Stand den Fachverantwortlichen bei der Suva präsentiert. Diese Reviews waren meistens länger als angenommen. Zu unserer aller Überraschung kamen immer sehr viele Punkte zum Vorschein, die wir besprechen wollten. Wir waren echt froh um das konstruktive Feedback und die anschliessende Diskussion von möglichen Lösungen. So konnten wir alle nach jedem Review den Raum einiges schlauer verlassen als wir ihn betreten haben.
 
-<img src="img/schneesport-check-notizen.jpg" alt="Schneesport-Check Notizen" />
+![Schneesport-Check Notizen](img/schneesport-check-notizen.jpg)
 
 <h2>Evolutionäre Entwicklung</h2>
 
 Nebst allem was bereits zu einem frühen Zeitpunkt erarbeitet und festgehalten wurde, waren einige Dinge noch nicht in Stein gemeisselt. So waren zwar die Design-Elemente wie Butttons und Schriften bereits definiert, aber das Layout auf Desktop und Mobile noch nicht. Um diesen Umstand gerecht zu werden, hätten wir unterschiedliche Strategien wählen können.
 
 <ol>
- 	<li>Wasserfall: Design-Entwürfe erstellen, diese Absegnen lassen und danach so umsetzen.</li>
- 	<li>Evolutionäre Entwicklung: Frühzeitig am Beispiel von 2-3 Fragen eine einfache erste Lösung erstellen und präsentieren. Aufgrund des Feedbacks die Lösung verbessern und wieder präsentieren.</li>
+  <li>Wasserfall: Design-Entwürfe erstellen, diese Absegnen lassen und danach so umsetzen.</li>
+  <li>Evolutionäre Entwicklung: Frühzeitig am Beispiel von 2-3 Fragen eine einfache erste Lösung erstellen und präsentieren. Aufgrund des Feedbacks die Lösung verbessern und wieder präsentieren.</li>
 </ol>
 
 Da wir auf dem Framework der Suva aufsetzten, waren uns auch technische Aspekte noch unklar. Zudem wollten wir auch früh ein Gespür für die Benutzbarkeit erhalten. Wir haben uns deshalb für die Evolutionäre Entwicklung entschieden. Mit einem evolutionären Ansatz ist es möglich in kurzer Zeit eine Lösung nicht nur optisch, sondern auch technisch und von der Benutzbarkeit her zu validieren.
@@ -87,7 +92,7 @@ In einer zweiten Evolution haben wir die Texte überarbeitet und ein Hintergrund
 
 Mit der dritten und vierten Evolution haben wir je ein Hintergrundbild für Ski, Snowboard und Freeriding als Animation hinzugefügt, die Text auf Mobile kürzer gemacht und zusätzlich den “Neustart” eleganter gelöst. Auch bei dieser Evolutionsstufe gab es noch Dinge die wir gerne verbessert hätte, aber im Hinblick auf das Gesamtprojekt war dies ein Stand der seinen Zweck sehr gut erfüllt.
 
-<img src="img/schneesport-check-intro-screen.jpg" alt="Schneesport-Check Intro Screen"  />
+![Schneesport-Check Intro Screen](img/schneesport-check-intro-screen.jpg)
 
 <h3>Fragen</h3>
 
@@ -97,13 +102,13 @@ Mit der zweiten Evolutionsstufe haben wir nach Ideen gesucht, wie wir alle Frage
 
 Mit der dritten Evolutionsstufe haben wir einen Fortschrittsbalken im Panorama und einen expliziten “Zurück”-Button oben hinzugefügt. Diese Evolutionsstufe hat ihren Zweck erfüllt.
 
-<img src="img/schneesport-check-fragen-screen.jpg" alt="Schneesport-Check Fragen-Screen" />
+![Schneesport-Check Fragen-Screen](img/schneesport-check-fragen-screen.jpg)
 
 <h2>Feinschliff</h2>
 
 Als wir das Beta-Stadium des Schneesport-Checks erreicht hatten, stellten wir von regelmässigen Reviews auf ein Trello-Board um. Da es sich nun um kleine Details und Korrekturen handelte, wollten wir diese tracken können, um den Überblick zu behalten. Alle die beim Schneesport-Check mitgearbeitet haben, hatten auf ein Trello-Board zugriff. Dort konnten sie sehr einfach und schnell ein Problem erfassen.
 
-<img src="img/schneesport-check-trello.jpg" alt="schneesport-check-trello"  />
+![schneesport-check-trello](img/schneesport-check-trello.jpg)
 
 Nach der Korrektur eines Tasks, schoben wir diesen von “In Bearbeitung” über “Behoben” zu “Veröffentlicht”. Diejenige Person die den Task ursprünglich erfasste, schaute ob das Problem behoben war. Diese Vorgehensweise war sehr leichtgewichtig und hat perfekt funktioniert.
 

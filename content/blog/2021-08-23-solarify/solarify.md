@@ -1,8 +1,13 @@
 ---
 title: 'Unsere eigenen Solarpanels'
+source: apptiva
 slug: solarify
 templateKey: blog-post
-image: solar-panels-wikipedia.jpg
+image:
+  src: /assets/blog/2021-08-23-solarify/solar-panels-wikipedia.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/AKetsKiutLK3vba8v7zBwsPGxsDDwra5uQBuc4KUk5ZtcHdOWGw7S2Y5TWs3TGhHVWoAOUZoNkFhABhAABlGABtPABtPAB9SKEJtAL27v4OGkwAKNgAOOwAXQQAYRQAGOwANOwD//vn89u4tPlwAADYAJU0+T21VXnaBhJSKry/iunuQWAAAAABJRU5ErkJggg==
+  height: 1703
+  width: 2560
 imageCaption: Quelle Wikipedia, Creative Commons
 date: 2021-08-23
 author: Roman Schaller

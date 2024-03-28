@@ -1,8 +1,13 @@
 ---
 title: Apptiva hat gezügelt
+source: apptiva
 slug: apptiva-neuer-standort
 templateKey: blog-post
-image: gebaeude.jpg
+image:
+  src: /assets/blog/2022-07-25-apptiva-neuer-standort/gebaeude.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVR4nAFkAJv/ACCL5Sprny5xoiN5uABkrhmF5CyR+BqF5wBEoOsZIjMvN0k6R2IAM3cAOGVSgrpquf8AaZTAKD1TJDZODiE/ACFSAAcobXOL9Pr/AFZVSB8jFiIjG29ubkQ+PU9OUqChorm8u172JSujToK3AAAAAElFTkSuQmCC
+  height: 2211
+  width: 4000
 date: 2022-07-25
 author: Markus Tanner
 description: Apptiva hat ein neues Zuhause. Die Anforderungen an unser Büro haben sich in den letzten Monaten geändert. Deswegen haben wir uns nach einer neuen Bleibe umgeschaut und sind ganz in der Nähe fündig geworden.

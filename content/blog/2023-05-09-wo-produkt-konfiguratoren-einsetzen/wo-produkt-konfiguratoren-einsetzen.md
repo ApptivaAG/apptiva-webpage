@@ -1,8 +1,13 @@
 ---
 title: Wo und wofür Produkt-Konfiguratoren einsetzen
+source: apptiva
 slug: wo-produkt-konfiguratoren-einsetzen
 templateKey: blog-post
-image: konfiguriertes-produkt.jpg
+image:
+  src: /assets/blog/2023-05-09-wo-produkt-konfiguratoren-einsetzen/konfiguriertes-produkt.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVR4nAFkAJv/AKQAVbQAXbcAV74AW68ATIsALHYAGVQAAACGADmGADaDADK7KV3/6cX1lH2yS0I9AAAAlEhgpD9hvUBx12N//4qb/zOE3xlsagAYAHg5UY5CYaBQcG0jSIAAOf8+lP9Nsv9IpuHaJq505zgbAAAAAElFTkSuQmCC
+  height: 1946
+  width: 4000
 imageCaption: Photo by hoor studio on Unsplash
 date: 2023-05-09
 author: Philip Schönholzer

@@ -1,8 +1,13 @@
 ---
 title: Der Frischling im Homeoffice
+source: apptiva
 slug: der-frischling-im-homeoffice
 templateKey: blog-post
-image: ./img/Kevin_Homeoffice.jpg
+image:
+  src: /assets/blog/img/Kevin_Homeoffice.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAIAAABxZ0isAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAoUlEQVR4nAGWAGn/AOXm45R4bJB2acG9ttHLxNDKvszGu8e9sgD39vGJfXl5cGnAurLNx77Mx7zHvbPFu68A8vLycmxZVkc9lJeYwsrQg4SCo6Scn52WAP37/19lbRMPIF1UT3+Ah3FycqGopIiOiwBhXFxUfbIAIl47OEhQMhxrTTdpWkNfUkAAJiQlGUh6AAAyABJCVEA8rH1Jm3VFnHVEqeBKFWG2PPwAAAAASUVORK5CYII=
+  height: 3072
+  width: 4096
 date: 2023-10-03T08:33:14.000Z
 author: kevin-rickenbach
 description: 'Von den ersten Erfahrungen mit 100% Homeoffice, bis zu meiner Rollenfindung in einer Holocracy Unternehmensstruktur.'
