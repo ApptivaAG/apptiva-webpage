@@ -62,12 +62,9 @@ export async function sendMail(
     console.log('sending mail via resend', name, email, message, subject)
 
     const { data, error } = await resend.emails.send({
-      from: 'Acme <onboarding@resend.dev>',
-      to: ['delivered@resend.dev'],
-      //   from: 'apptiva.ch <info@apptiva.ch>',
-      //   to: `${email}`,
+      from: 'Kontaktformular apptiva.ch <kontaktformular@apptiva-mailer.ch>',
+      to: `${email}`,
       subject: subject,
-      // text: message,
       react: ContactEmailTemplate({
         name,
         message,

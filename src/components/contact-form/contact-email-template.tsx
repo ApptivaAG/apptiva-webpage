@@ -24,6 +24,6 @@ export const ContactEmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
     <br />
     Deine Nachricht:
     <br />
-    {message}
+    <p>{message}</p>
   </div>
 )
