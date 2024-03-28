@@ -156,8 +156,6 @@ export default async function Home(props: { params: { slug: string } }) {
 }
 
 function getBreadcrumb(post: Awaited<ReturnType<typeof getPostBySlug>>) {
-  console.log('post', post)
-
   if (post?.kind === 'cms') {
     return post.breadcrumb ?? post.title
   }
