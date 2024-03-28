@@ -7,7 +7,7 @@ imageCaption: Foto von Towfiqu Barbhuiya auf Unsplash
 date: 2024-03-27
 author: Philip Schönholzer
 description: >-
-  Es gilt viele Aspekte hinsichtlich Datenschutz und Datensicherheit bei der Entwicklung von Web-Apps zu beachtet werden. Einige davon wollen wir in diesem Artikel beleuchten. 
+  Es gilt viele Aspekte hinsichtlich Datenschutz und Datensicherheit bei der Entwicklung von Web-Apps zu beachten. Einige davon wollen wir in diesem Artikel beleuchten. 
 categories:
   - Allgemein
 ---
@@ -16,7 +16,7 @@ In der heutigen digitalen Landschaft, in der Datenschutzbedenken eine immer grö
 
 ## Datenschutz für Web-Apps
 
-Der Schutz personenbezogener Daten ist ein grundlegendes Recht jedes Einzelnen, und Unternehmen sind gesetzlich verpflichtet, sicherzustellen, dass die Daten ihrer Benutzer angemessen geschützt sind. Dies bedeutet, dass bei der Entwicklung einer [Web-App](/web-apps/) Datenschutzpraktiken implementiert werden müssen, die sicherstellen, dass personenbezogene Daten nur für legitime Zwecke verwendet werden und angemessen geschützt sind. Dazu gehören Massnahmen wie die Einholung der ausdrücklichen Zustimmung der Benutzer:innen zur Datenerhebung und -verarbeitung, die Minimierung der Datenmenge auf das für den jeweiligen Zweck erforderliche Minimum und die Bereitstellung transparenter Datenschutzrichtlinien, die erklären, wie die Daten verwendet werden.
+Der Schutz personenbezogener Daten ist ein grundlegendes Recht jedes Einzelnen, und Unternehmen sind gesetzlich verpflichtet, sicherzustellen, dass die Daten ihrer Benutzer:innen angemessen geschützt sind. Dies bedeutet, dass bei der Entwicklung einer [Web-App](/web-apps/) Datenschutzpraktiken implementiert werden müssen, die sicherstellen, dass personenbezogene Daten nur für legitime Zwecke verwendet werden und angemessen geschützt sind. Dazu gehören Massnahmen wie die Einholung der ausdrücklichen Zustimmung der Benutzer:innen zur Datenerhebung und -verarbeitung, die Minimierung der Datenmenge auf das für den jeweiligen Zweck erforderliche Minimum und die Bereitstellung transparenter Datenschutzrichtlinien, die erklären, wie die Daten verwendet werden.
 
 ## Datensicherheit für Web-Apps
 
@@ -44,7 +44,7 @@ Die Apptiva AG verfolgt einen äusserst sorgfältigen und benutzerzentrierten An
    Bei jedem Projekt, das wir durchführen, vereinbaren wir die nötigen Datenschutz- und Datensicherheitsmassnahmen. Dies umfasst Massnahmen wie die Implementierung von Verschlüsselungstechnologien, den Zugriffsschutz auf Daten, regelmässige Sicherheitsaudits und die Schulung unserer Mitarbeiterinnen und Mitarbeiter in Datenschutz- und Sicherheitsverfahren.
 
 4. **Automatische Backups:**
-   Wir erstellen automatische Backups der Daten, um sicherzustellen, dass im Falle eines Ausfalls oder einer Störung die Daten unserer Benutzer nicht verloren gehen. Durch regelmässige Backups gewährleisten wir die Integrität und Verfügbarkeit der Daten und minimieren das Risiko von Datenverlust.
+   Wir erstellen automatische Backups der Daten, um sicherzustellen, dass im Falle eines Ausfalls oder einer Störung die Daten unserer Benutzer:innen nicht verloren gehen. Durch regelmässige Backups gewährleisten wir die Integrität und Verfügbarkeit der Daten und minimieren das Risiko von Datenverlust.
 
 5. **Transparenz und Kommunikation:**
    Wir legen grossen Wert auf transparente Kommunikation mit unseren Anwendern und Anwenderinnen in Bezug auf Datenschutz und Datensicherheit. Wir stellen klar dar, wie wir die Daten verwenden, welche Sicherheitsmassnahmen wir ergreifen und welche Rechte und Kontrollmöglichkeiten die Benutzer:innen in Bezug auf ihre Daten haben.
