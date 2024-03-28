@@ -1,6 +1,6 @@
 'use server'
 
-import { ContactEmailTemplate } from '@/components/contact-form/contact-email-template'
+import { ContactFromMailSenderCopy } from '@/components/contact-form/contact-from-mail-sender'
 import { Resend } from 'resend'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
@@ -65,10 +65,11 @@ export async function sendMail(
       from: 'Kontaktformular apptiva.ch <kontaktformular@apptiva-mailer.ch>',
       to: `${email}`,
       subject: subject,
-      react: ContactEmailTemplate({
-        name,
-        message,
-      }) as React.ReactElement,
+      // react: ContactEmailTemplate({
+      //   name,
+      //   message,
+      // }) as React.ReactElement,
+      react: ContactFromMailSenderCopy({ name, message }),
     })
 
     if (error) {
