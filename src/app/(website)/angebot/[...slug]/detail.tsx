@@ -6,25 +6,19 @@ import Button from '@/components/ui/button'
 import Heading from '@/components/heading'
 import { ServiceBySlugQueryData } from '@/sanity/lib/queries'
 import Link from 'next/link'
+
 export default function ServiceDetail(props: {
   service: ServiceBySlugQueryData
   customers: React.ReactNode
   isPreview?: boolean
 }) {
-  const { slug: name = 'Service' } = props.service
   return (
     <>
       <PageHeader
         title={props.service.header?.title}
         lead={props.service.header?.lead}
         image={props.service.header?.image}
-        links={[
-          { name: 'Angebot' },
-          {
-            name: name.charAt(0).toUpperCase() + name.slice(1),
-            href: `/angebot/${props.service.slug}`,
-          },
-        ]}
+        links={buildBreadcrumb(props.service, ['angebot'])}
         callToAction={
           props.service.callToAction?.href ? (
             <Link href={props.service.callToAction.href}>
@@ -74,4 +68,29 @@ function fallbackRender(props: {
       </div>
     </div>
   )
+}
+
+type Breadcrumb = Pick<ServiceBySlugQueryData, 'breadcrumb' | 'slug'>
+function buildBreadcrumb(
+  service: Breadcrumb & { subPageOf?: Breadcrumb },
+  parentSlugs: string[]
+): { name: string; href?: string }[] {
+  const { slug: name = 'Angebot' } = service
+
+  const currentCrumb = {
+    name: service.breadcrumb ?? name.charAt(0).toUpperCase() + name.slice(1),
+    href: `/${parentSlugs.join('/')}/`,
+  }
+
+  if (service.subPageOf?.breadcrumb && service.subPageOf?.slug) {
+    return [
+      ...buildBreadcrumb(service.subPageOf, [
+        ...parentSlugs,
+        service.subPageOf.slug ?? '',
+      ]),
+      currentCrumb,
+    ]
+  }
+
+  return [{ name: 'Angebot' }, currentCrumb]
 }

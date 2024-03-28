@@ -2,7 +2,7 @@ import { SanityImageSource } from '@sanity/asset-utils'
 import { PortableTextTextBlock } from 'sanity'
 
 export interface Blog {
-  title: string | { children: { text: string }[] }[]
+  title: string
   description: string
   slug: string
   author: string | Author
@@ -24,6 +24,7 @@ export interface MarkdownBlog extends Blog {
 export interface CmsBlog extends Blog {
   kind: 'cms'
   content: CmsContent
+  breadcrumb?: string | undefined
   image: SanityImageWithAlt | undefined
 }
 

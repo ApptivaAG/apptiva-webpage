@@ -21,6 +21,11 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'breadcrumb',
+      title: 'Breadcrumb',
+      type: 'string',
+    }),
+    defineField({
       name: 'content',
       title: 'Inhalt',
       type: 'array',

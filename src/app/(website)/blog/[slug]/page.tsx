@@ -60,11 +60,7 @@ export default async function Home(props: { params: { slug: string } }) {
             links={[
               { name: 'Blog', href: '/blog' },
               {
-                name: post.title
-                  ? typeof post.title === 'string'
-                    ? post.title
-                    : portableTextToString(post.title)
-                  : 'Post',
+                name: getBreadcrumb(post),
                 href: `/blog/${post.slug}`,
               },
             ]}
@@ -157,4 +153,11 @@ export default async function Home(props: { params: { slug: string } }) {
       </div>
     </>
   )
+}
+
+function getBreadcrumb(post: Awaited<ReturnType<typeof getPostBySlug>>) {
+  if (post?.kind === 'cms') {
+    return post.breadcrumb ?? post.title
+  }
+  return post?.title ?? 'Post'
 }

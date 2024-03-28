@@ -5,9 +5,9 @@ import { ModuleData } from '@/sanity/lib/queries'
 import { cn } from '@/utils/cn'
 import { PortableText } from '@portabletext/react'
 import { vercelStegaCleanAll } from '@sanity/client/stega'
-import { moduleStyleToSectionIntent } from '../utils'
+import { moduleStyleToSectionIntent } from '../../utils'
 
-export default function TextWithImage(props: { module: ModuleData }) {
+export default function TextWithImageTwoCol(props: { module: ModuleData }) {
   const { module } = props
 
   const isLevel = (level: 1 | 2) => (module.level ?? 1) == level

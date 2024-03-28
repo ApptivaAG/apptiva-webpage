@@ -178,6 +178,7 @@ export const queryPostFromCmsBySlug = q('*')
     _createdAt: q.string(),
     _id: q.string(),
     slug: Slug,
+    breadcrumb: q.string().optional(),
     name: q.string().optional(),
     content: q.contentBlocks().optional(),
     author: q('author')
@@ -250,6 +251,10 @@ export const serviceBySlugQuery = q('*')
   .grab$({
     _id: q.string(),
     slug: Slug,
+    breadcrumb: q.string().optional(),
+    subPageOf: q('subPageOf')
+      .deref()
+      .grab$({ slug: Slug, breadcrumb: q.string().optional() }),
     header: Header,
     modules: Modules,
     callToAction: q('callToAction')
