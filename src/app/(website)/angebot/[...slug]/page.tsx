@@ -6,26 +6,32 @@ import type { Group } from '@/utils/customers'
 import { draftMode } from 'next/headers'
 import ServiceDetail from './detail'
 import ServicePreview from './preview'
+import { notFound } from 'next/navigation'
 
-export default async function Home(props: { params: { slug: string } }) {
+function getLastParam(params: { slug: string[] }) {
+  return { slug: params.slug[params.slug.length - 1] }
+}
+
+export default async function Home(props: { params: { slug: string[] } }) {
+  const lastParam = props.params.slug.at(-1) ?? notFound()
   const { isEnabled } = draftMode()
   const { published, draft } = await load(
     serviceBySlugQuery,
     isEnabled,
-    props.params,
+    getLastParam(props.params),
     ['service-page']
   )
 
   const customers = (
     <>
       <Testimonials />
-      <Customers groups={mapSlugToGroup(props.params.slug)} />
+      <Customers groups={mapSlugToGroup(lastParam)} />
     </>
   )
   return isEnabled ? (
     <ServicePreview
       initial={draft}
-      params={props.params}
+      params={getLastParam(props.params)}
       customers={customers}
     />
   ) : (

@@ -27,6 +27,17 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'breadcrumb',
+      title: 'Breadcrumb',
+      type: 'string',
+    }),
+    defineField({
+      name: 'subPageOf',
+      title: 'Unterseite von',
+      type: 'reference',
+      to: [{ type: 'service-page' }],
+    }),
+    defineField({
       name: 'teaserTitle',
       title: 'Teaser Titel',
       type: 'string',
@@ -76,10 +87,14 @@ export default defineType({
   preview: {
     select: {
       title: 'header.title',
+      breadcrumb: 'breadcrumb',
     },
     prepare(selection) {
       return {
-        title: portableTextToString(selection.title),
+        title: selection.breadcrumb || portableTextToString(selection.title),
+        subtitle: selection.breadcrumb
+          ? portableTextToString(selection.title)
+          : undefined,
       }
     },
   },
