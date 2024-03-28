@@ -1,11 +1,12 @@
 import SanityImage from '@/components/sanity-image'
 import { PortableText, SanityImageWithAlt } from '@/utils/types'
+import { isValidElement } from 'react'
 import BreadCrumb from './bread-crumb'
 import Heading from './heading'
 import StyledPortableText from './styled-portable-text'
 
 export function PageHeader(props: {
-  title: string | PortableText | undefined
+  title: React.ReactNode | PortableText | undefined
   lead: string | undefined
   links?: { name: string; href?: string | undefined }[]
   image?: SanityImageWithAlt
@@ -19,7 +20,7 @@ export function PageHeader(props: {
         )}
         {props.title && (
           <Heading level={1}>
-            {typeof props.title === 'string' ? (
+            {isReactNode(props.title) ? (
               props.title
             ) : (
               <StyledPortableText content={props.title} />
@@ -37,5 +38,14 @@ export function PageHeader(props: {
         )}
       </div>
     </header>
+  )
+}
+
+function isReactNode(value: any): value is React.ReactNode {
+  return (
+    isValidElement(value) ||
+    typeof value === 'string' ||
+    typeof value === 'boolean' ||
+    typeof value === 'number'
   )
 }

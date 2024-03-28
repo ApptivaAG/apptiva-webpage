@@ -1,6 +1,6 @@
 import ContactForm from '@/components/contact-form/contact-form'
-import Hero from '../_root/hero'
 import { PageHeader } from '@/components/page-header'
+import Underline from '@/components/ui/underline'
 
 export default async function Kontakt() {
   const leadText =
@@ -9,7 +9,7 @@ export default async function Kontakt() {
   return (
     <>
       <PageHeader
-        title="Kontakt"
+        title={<Underline>Kontakt</Underline>}
         lead={leadText}
         links={[{ name: 'Kontakt', href: '/kontakt' }]}
       />

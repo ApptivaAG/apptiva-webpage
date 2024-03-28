@@ -1,4 +1,5 @@
 import { PageHeader } from '@/components/page-header'
+import Underline from '@/components/ui/underline'
 import { faqsQuery, glossaryQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
 import { draftMode } from 'next/headers'
@@ -28,7 +29,12 @@ export default async function Knowledge() {
   return (
     <>
       <PageHeader
-        title="Wissen wird bei uns gross geschrieben"
+        title={
+          <>
+            Wissen wird bei uns{' '}
+            <Underline className="uppercase">gross</Underline> geschrieben
+          </>
+        }
         lead={lead}
         links={[{ name: 'Wissen', href: '/wissen' }]}
       />
