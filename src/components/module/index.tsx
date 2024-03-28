@@ -2,13 +2,13 @@ import { ModuleData } from '@/sanity/lib/queries'
 import Cards from './cards'
 import Contact from './contact'
 import FAQs from './faqs'
+import Image from './image'
 import Prices from './prices'
 import ProjectModule from './project-module'
 import Quote from './quote'
 import ServiceTeaserList from './service-teaser/service-teaser-list'
 import Team from './team'
 import Text from './text'
-import Image from './image'
 
 export default function Module(props: {
   module: ModuleData
@@ -45,6 +45,7 @@ export default function Module(props: {
       return <ServiceTeaserList module={module} />
 
     case 'image':
+      // eslint-disable-next-line jsx-a11y/alt-text
       return <Image module={module} />
     case 'team':
       return <Team module={module} />
