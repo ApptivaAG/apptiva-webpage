@@ -111,6 +111,8 @@ const config: Config = {
         },
         DEFAULT: {
           css: {
+            strong: { color: 'rgb(var(--primary))' },
+            a: { color: 'rgb(var(--primary))' },
             color: 'rgb(var(--primary))',
             'h1,h2,h3,h4,h5,h6': {
               color: 'rgb(var(--primary))',
