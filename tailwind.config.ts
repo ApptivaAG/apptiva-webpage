@@ -101,6 +101,25 @@ const config: Config = {
         'collapsible-down': 'collapsible-down 0.2s ease-out',
         'collapsible-up': 'collapsible-up 0.2s ease-out',
       },
+      typography: {
+        lg: {
+          css: {
+            'h1,h2,h3,h4,h5,h6': {
+              marginBottom: '0.5em',
+            },
+          },
+        },
+        DEFAULT: {
+          css: {
+            color: 'rgb(var(--primary))',
+            'h1,h2,h3,h4,h5,h6': {
+              color: 'rgb(var(--primary))',
+              fontWeight: '600',
+              marginBottom: '0.5em',
+            },
+          },
+        },
+      },
     },
   },
   plugins: [animate, typography],

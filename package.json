@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@mailchimp/mailchimp_marketing": "^3.0.80",
+    "@mdx-js/loader": "^3.0.1",
+    "@mdx-js/react": "^3.0.1",
+    "@next/mdx": "^14.1.4",
     "@portabletext/react": "^3.0.11",
     "@portabletext/to-html": "^2.0.10",
     "@radix-ui/react-accordion": "^1.1.2",
@@ -27,6 +30,7 @@
     "@sanity/react-loader": "^1.8.3",
     "@sanity/ui": "^2.0.1",
     "@sanity/vision": "^3.26.0",
+    "@types/mdx": "^2.0.12",
     "@types/react-html-parser": "^2.0.6",
     "bluebird": "^3.7.2",
     "bright": "^0.8.4",
