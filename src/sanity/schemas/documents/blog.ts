@@ -41,7 +41,26 @@ export default defineType({
         {
           type: 'block',
         },
-        { type: 'code', title: 'Code' },
+        {
+          type: 'code',
+          title: 'Code',
+          options: {
+            languageAlternatives: [
+              //Add this list to have nix as a possible language
+              { title: 'Bash', value: 'sh' },
+              { title: 'Typescript', value: 'typescript' },
+              { title: 'React Typescript', value: 'tsx' },
+              { title: 'JSON', value: 'json' },
+              { title: 'CSS', value: 'css' },
+              { title: 'Html', value: 'html' },
+              { title: 'Yaml', value: 'yaml' },
+              { title: 'Java', value: 'java' },
+              { title: 'SQL', value: 'sql' },
+              { title: 'Xml', value: 'xml' },
+              { title: 'NIX', value: 'nix', mode: 'json' },
+            ],
+          },
+        },
       ],
     }),
     defineField({
