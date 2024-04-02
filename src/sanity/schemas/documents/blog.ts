@@ -57,6 +57,7 @@ export default defineType({
               { title: 'Java', value: 'java' },
               { title: 'SQL', value: 'sql' },
               { title: 'Xml', value: 'xml' },
+              { title: 'Rust', value: 'rust' },
               { title: 'NIX', value: 'nix', mode: 'json' },
             ],
           },

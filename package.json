@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@codemirror/language": "^6.10.1",
+    "@codemirror/legacy-modes": "^6.3.3",
     "@codemirror/state": "^6.4.1",
     "@mailchimp/mailchimp_marketing": "^3.0.80",
     "@mdx-js/loader": "^3.0.1",

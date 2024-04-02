@@ -2,6 +2,7 @@
  * This configuration is used to for the Sanity Studio that’s mounted on the `/app/studio/[[...index]]/page.tsx` route
  */
 
+import { StreamLanguage } from '@codemirror/language'
 import { codeInput } from '@sanity/code-input'
 import { visionTool } from '@sanity/vision'
 import { groqdPlaygroundTool } from 'groqd-playground'
@@ -63,6 +64,17 @@ export default defineConfig({
         },
       },
     }),
-    codeInput(),
+    codeInput({
+      codeModes: [
+        {
+          name: 'rust',
+          // dynamic import so the language is only be loaded on demand
+          loader: () =>
+            import('@codemirror/legacy-modes/mode/rust').then(({ rust }) =>
+              StreamLanguage.define(rust)
+            ),
+        },
+      ],
+    }),
   ],
 })
