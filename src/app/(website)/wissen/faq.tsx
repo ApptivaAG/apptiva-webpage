@@ -14,12 +14,7 @@ export default function FAQ(props: { data: FAQQueryData }) {
             FAQ
           </Heading>
           <div className="col-right max-lg:mt-4">
-            <p>
-              <u>
-                Hier kommt der FAQ Text, der wohl noch geschrieben werden muss
-                :-)
-              </u>
-            </p>
+            <p>Was wir immer mal wieder gefragt werden.</p>
           </div>
           {faqs && <FAQsComponent faqs={faqs}></FAQsComponent>}
         </div>
