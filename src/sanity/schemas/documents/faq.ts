@@ -27,8 +27,18 @@ export default defineType({
     }),
     defineField({
       name: 'answer',
-      title: 'Answer',
+      title: 'Answer unstyled',
       type: 'text',
+    }),
+    defineField({
+      name: 'answerStyled',
+      title: 'Answer',
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+        },
+      ],
     }),
     defineField({
       name: 'tags',
