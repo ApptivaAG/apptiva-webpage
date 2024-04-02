@@ -27,7 +27,8 @@ export async function generateStaticParams() {
 export async function generateMetadata(props: {
   params: { slug: string }
 }): Promise<Metadata> {
-  const post = (await getPostBySlug(props.params.slug)) ?? notFound()
+  const paramsSlug = decodeURIComponent(props.params.slug)
+  const post = (await getPostBySlug(paramsSlug)) ?? notFound()
 
   return {
     title:
@@ -40,7 +41,7 @@ export async function generateMetadata(props: {
       type: 'article',
       images: [
         {
-          url: `https://apptiva-uber-website.netlify.app/_ipx/w_1200,q_75/%2Fassets%2Fblog%2F${props.params.slug}%2F${post.image}`,
+          url: `https://apptiva-uber-website.netlify.app/_ipx/w_1200,q_75/%2Fassets%2Fblog%2F${paramsSlug}%2F${post.image}`,
         },
       ],
       publishedTime: post.publishDate,
@@ -49,7 +50,8 @@ export async function generateMetadata(props: {
 }
 
 export default async function Home(props: { params: { slug: string } }) {
-  const post = (await getPostBySlug(props.params.slug)) ?? notFound()
+  const paramsSlug = decodeURIComponent(props.params.slug)
+  const post = (await getPostBySlug(paramsSlug)) ?? notFound()
 
   return (
     <>
