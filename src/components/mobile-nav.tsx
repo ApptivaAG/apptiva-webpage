@@ -94,7 +94,11 @@ const MobileNav = () => {
             ))}
           </div>
         </div>
-        <Link href={'/kontakt/'}>
+        <MobileLink
+          href="/kontakt/"
+          onOpenChange={setOpen}
+          className="text-[1.25rem] leading-[1.25rem]"
+        >
           <Button
             element="div"
             intent="secondary"
@@ -102,7 +106,7 @@ const MobileNav = () => {
           >
             Kontakt
           </Button>
-        </Link>
+        </MobileLink>
       </SheetContent>
     </Sheet>
   )
