@@ -19,7 +19,7 @@ export default function Item(props: {
           <BreadCrumb
             className="pb-6"
             links={[
-              { name: 'Glossar', href: '/glossar' },
+              { name: 'Glossar', href: '' },
               {
                 name: glossary.title ?? 'Glossar',
                 href: `/glossar/${glossary.slug}`,
