@@ -5,11 +5,19 @@ export default defineType({
   name: 'blog',
   title: 'Blog',
   type: 'document',
+  initialValue: () => ({
+    publishedAt: new Date().toISOString(),
+  }),
   fields: [
     defineField({
       name: 'header',
       title: 'Header',
       type: 'header',
+    }),
+    defineField({
+      name: 'publishedAt',
+      type: 'datetime',
+      title: 'Publiziert am',
     }),
     defineField({
       name: 'slug',
@@ -33,6 +41,7 @@ export default defineType({
         {
           type: 'block',
         },
+        { type: 'code', title: 'Code' },
       ],
     }),
     defineField({

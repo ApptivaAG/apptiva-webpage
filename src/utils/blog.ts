@@ -1,6 +1,6 @@
 import MdxImage from '@/components/mdx-image'
 import { queryPostFromCmsBySlug, queryPostsFromCms } from '@/sanity/lib/queries'
-import { runQuery } from '@/sanity/lib/sanityFetch'
+import { load, runQuery } from '@/sanity/lib/sanityFetch'
 import remarkEmbedder from '@remark-embedder/core'
 import oembedTransformer from '@remark-embedder/transformer-oembed'
 import { Code } from 'bright'
@@ -43,8 +43,9 @@ export const getPosts = cache(async () => {
 })
 
 const getCmsPostBySlug = cache(async (slug: string) => {
-  const post = await runQuery(
+  const { published: post } = await load(
     queryPostFromCmsBySlug,
+    false,
     {
       slug,
     },
@@ -65,7 +66,7 @@ const getCmsPostBySlug = cache(async (slug: string) => {
     description: post.header?.lead ?? 'Ohne Einleitung',
     slug: post.slug,
     author: post.author ?? 'Anonymous',
-    publishDate: post._createdAt,
+    publishDate: post.publishedAt ?? post._createdAt,
     breadcrumb: post.breadcrumb,
     tags:
       post.tags?.filter((tag): tag is string => typeof tag === 'string') ??
@@ -74,7 +75,12 @@ const getCmsPostBySlug = cache(async (slug: string) => {
 })
 
 const getCmsPosts = cache(async () => {
-  const postsFromCMS = await runQuery(queryPostsFromCms, undefined, ['blog'])
+  const { published: postsFromCMS } = await load(
+    queryPostsFromCms,
+    false,
+    undefined,
+    ['blog']
+  )
 
   return postsFromCMS.map((post) => {
     return {
@@ -89,7 +95,7 @@ const getCmsPosts = cache(async () => {
       description: post.header?.lead ?? 'Ohne Einleitung',
       slug: post.slug,
       author: post.author ?? 'Anonymous',
-      publishDate: post._createdAt,
+      publishDate: post.publishedAt ?? post._createdAt,
       tags: mapTags(post.tags),
     } as const
   })

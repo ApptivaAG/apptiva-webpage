@@ -1,3 +1,4 @@
+import BlogPortableText from '@/components/blog-portable-text'
 import BreadCrumb from '@/components/bread-crumb'
 import Heading from '@/components/heading'
 import MdxImage from '@/components/mdx-image'
@@ -5,7 +6,6 @@ import SanityImage from '@/components/sanity-image'
 import { getPostBySlug, getPosts } from '@/utils/blog'
 import { kebabCaseToTitleCase } from '@/utils/format'
 import portableTextToString from '@/utils/portable-text-to-string'
-import { PortableText } from '@portabletext/react'
 import remarkEmbedder from '@remark-embedder/core'
 import oembedTransformer from '@remark-embedder/transformer-oembed'
 import { Code } from 'bright'
@@ -139,7 +139,7 @@ export default async function Home(props: { params: { slug: string } }) {
             />
           )}
           {post.kind === 'cms' && post.content && (
-            <PortableText value={post.content} />
+            <BlogPortableText content={post.content} />
           )}
         </div>
         <aside>

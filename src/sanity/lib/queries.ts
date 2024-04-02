@@ -153,9 +153,19 @@ export const queryPostsFromCms = q('*')
   .grab$({
     _createdAt: q.string(),
     _id: q.string(),
+    publishedAt: q.string().optional(),
     slug: Slug,
     name: q.string().optional(),
-    content: q.contentBlocks().optional(),
+    content: q
+      .contentBlocks({
+        markDefs: q.object({
+          _type: q.literal('code'),
+          language: q.string(),
+          _key: q.string(),
+          code: q.string(),
+        }),
+      })
+      .optional(),
     author: q('author')
       .deref()
       .grabOne$('personName', q.string().optional())
@@ -175,10 +185,20 @@ export const queryPostFromCmsBySlug = q('*')
   .grab$({
     _createdAt: q.string(),
     _id: q.string(),
+    publishedAt: q.string().optional(),
     slug: Slug,
     breadcrumb: q.string().optional(),
     name: q.string().optional(),
-    content: q.contentBlocks().optional(),
+    content: q
+      .contentBlocks({
+        markDefs: q.object({
+          _type: q.literal('code'),
+          language: q.string(),
+          _key: q.string(),
+          code: q.string(),
+        }),
+      })
+      .optional(),
     author: q('author')
       .deref()
       .grabOne$('personName', q.string().optional())
