@@ -68,7 +68,9 @@ const ContactForm = () => {
                   <Input intent="default" type="email" name="email" />
                 </div>
                 <div>
-                  <Label>Unternehmen</Label>
+                  <Label>
+                    Unternehmen <small>optional</small>
+                  </Label>
                   <Input intent="default" type="text" name="company" />
                 </div>
 
