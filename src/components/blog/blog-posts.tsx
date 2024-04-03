@@ -21,7 +21,7 @@ export default async function BlogPosts(props: {
             slug={slug}
             post={post}
             intent="light"
-            parentSlug="blog"
+            parentSlug={props.show}
           />
         </li>
       ))}
