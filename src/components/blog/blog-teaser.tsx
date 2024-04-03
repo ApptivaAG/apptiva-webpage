@@ -9,6 +9,7 @@ export function BlogTeaser(props: {
   slug: string
   post: CmsBlog | MarkdownBlog
   intent: 'dark' | 'light'
+  parentSlug: 'blog' | 'apptiva-lernt'
 }) {
   const { slug, post } = props
   return (
@@ -44,13 +45,13 @@ export function BlogTeaser(props: {
           dangerouslySetInnerHTML={{ __html: post.title }}
         />
         <p className="line-clamp-5 flex-1">{post.description}</p>
-        <Link className="mt-6 self-end" href={`/blog/${slug}`}>
+        <Link className="mt-6 self-end" href={`/${props.parentSlug}/${slug}`}>
           <Button
             element="div"
             className="inline"
             intent={props.intent === 'dark' ? 'secondary' : 'primary'}
           >
-            → Zum Blogpost
+            → Zum Artikel
           </Button>
         </Link>
       </div>

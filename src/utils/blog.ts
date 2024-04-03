@@ -1,6 +1,6 @@
 import MdxImage from '@/components/mdx-image'
 import { queryPostFromCmsBySlug, queryPostsFromCms } from '@/sanity/lib/queries'
-import { load, runQuery } from '@/sanity/lib/sanityFetch'
+import { load } from '@/sanity/lib/sanityFetch'
 import remarkEmbedder from '@remark-embedder/core'
 import oembedTransformer from '@remark-embedder/transformer-oembed'
 import { Code } from 'bright'
@@ -17,6 +17,13 @@ import { BlogFrontmatter, CmsBlog, CmsContent, MarkdownBlog } from './types'
 
 const blogPostsPath = 'content/blog'
 const assetsPath = '/assets/blog'
+
+export function hasTag(kind: 'blog' | 'apptiva-lernt') {
+  return ([, post]: [string, { tags?: string[] }]) =>
+    kind === 'apptiva-lernt'
+      ? post.tags?.includes('Apptiva lernt')
+      : !post.tags?.includes('Apptiva lernt')
+}
 
 export const getPostBySlug = cache(async (slug: string) => {
   const cmsPost = await getCmsPostBySlug(slug)
