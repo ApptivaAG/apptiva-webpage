@@ -1,6 +1,6 @@
+import BlogPosts from '@/components/blog/blog-posts'
 import { PageHeader } from '@/components/page-header'
 import { Suspense } from 'react'
-import BlogPosts from './blog-posts'
 
 export default async function Home({ params }: { params: { slug: string } }) {
   return (
@@ -17,7 +17,7 @@ export default async function Home({ params }: { params: { slug: string } }) {
               <p className="pb-64 pt-8 text-xl font-bold">Lade Blogposts...</p>
             }
           >
-            <BlogPosts />
+            <BlogPosts show="blog" />
           </Suspense>
         </div>
       </div>

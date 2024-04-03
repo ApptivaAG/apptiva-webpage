@@ -1,3 +1,4 @@
+import { BlogTeaser } from '@/components/blog/blog-teaser'
 import Heading from '@/components/heading'
 import Button from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
@@ -6,14 +7,17 @@ import {
   CarouselContent,
   CarouselItem,
 } from '@/components/ui/carousel'
-import { getPosts } from '@/utils/blog'
+import { getPosts, hasTag } from '@/utils/blog'
 import Link from 'next/link'
-import { BlogTeaser } from '../blog/blog-teaser'
 
-export default async function Blogposts() {
+export default async function Blogposts(props: {
+  children: React.ReactNode
+  show: 'blog' | 'apptiva-lernt'
+}) {
   const posts = await getPosts()
 
   const last5Posts = Array.from(posts.entries())
+    .filter(hasTag(props.show))
     .toSorted(
       ([, a], [, b]) =>
         new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
@@ -23,18 +27,7 @@ export default async function Blogposts() {
   return (
     <>
       <section className="full py-16 text-primary">
-        <div className="content space-y-8">
-          <Heading level={2} size={3}>
-            Neueste Blogposts
-          </Heading>
-          <div>
-            <Link href={'/blog/'}>
-              <Button element="div" className="inline">
-                Alle Blogposts
-              </Button>
-            </Link>
-          </div>
-        </div>
+        {props.children}
         <Carousel
           darkTheme={false}
           layout="fiveSlides"
@@ -44,21 +37,33 @@ export default async function Blogposts() {
           <CarouselContent>
             {last5Posts.map(([slug, post], index) => (
               <CarouselItem key={slug} index={index}>
-                <BlogTeaser slug={slug} post={post} intent="dark" />
+                <BlogTeaser
+                  slug={slug}
+                  post={post}
+                  intent="dark"
+                  parentSlug={props.show}
+                />
               </CarouselItem>
             ))}
             <CarouselItem key="last" index={last5Posts.length}>
-              <Card intent="light" className="flex flex-col">
+              <Card intent="light" className="flex h-full flex-col">
                 <p className="flex-1 text-lg font-bold">
-                  Weitere Blogposts von der Apptiva
+                  Weitere{' '}
+                  {props.show === 'blog'
+                    ? 'Blogposts von der Apptiva'
+                    : 'Artikel'}
                 </p>
-                <Link href={'/blog'} className="block translate-y-3 text-right">
+                <Link
+                  href={`/${props.show}`}
+                  className="block translate-y-3 text-right"
+                >
                   <Button
                     intent="secondary"
                     element="div"
                     className="inline-block"
                   >
-                    → Zu allen Blogposts
+                    → Zu allen{' '}
+                    {props.show === 'blog' ? 'Blogposts' : 'Artikeln'}
                   </Button>
                 </Link>
               </Card>
