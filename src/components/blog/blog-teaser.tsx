@@ -44,8 +44,10 @@ export function BlogTeaser(props: {
           className="text-lg font-bold leading-5"
           dangerouslySetInnerHTML={{ __html: post.title }}
         />
-        <p className="line-clamp-5 flex-1">{post.description}</p>
-        <Link className="mt-6 self-end" href={`/${props.parentSlug}/${slug}`}>
+        <div className="mb-6 flex-1">
+          <p className="line-clamp-5">{post.description}</p>
+        </div>
+        <Link className=" self-end" href={`/${props.parentSlug}/${slug}`}>
           <Button
             element="div"
             className="inline"
