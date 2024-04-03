@@ -43,7 +43,7 @@ export default function ContactPerson(props: {
               </Button>
             </Link>
             <p className="mb-3">{props.person.contact?.mail}</p>
-            <p>{props.person.contact?.phone}</p>
+            <p>+41 41 322 26 26</p>
           </div>
         </div>
       ) : (

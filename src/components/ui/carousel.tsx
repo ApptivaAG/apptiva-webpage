@@ -76,7 +76,7 @@ const Carousel = React.forwardRef<
       layout: CarouselLayout
       darkTheme?: boolean
       numberOfSlides: number
-      loop: boolean
+      loop?: boolean
     }
 >(
   (
@@ -97,6 +97,7 @@ const Carousel = React.forwardRef<
     const [carouselRef, api] = useEmblaCarousel(
       {
         loop: loop,
+        align: 'start',
         ...opts,
       },
       plugins
@@ -260,7 +261,7 @@ const Carousel = React.forwardRef<
         <div
           ref={ref}
           onKeyDownCapture={handleKeyDown}
-          className={cn('relative', className)}
+          className={cn('relative pb-16 pt-8', className)}
           role="region"
           aria-roledescription="carousel"
           {...props}
@@ -319,9 +320,9 @@ const CarouselContent = React.forwardRef<
 
   return (
     <>
-      <div ref={carouselRef} className="overflow-hidden">
-        <div ref={ref} className={cn('flex', className)} {...props} />
-      </div>{' '}
+      <div ref={carouselRef} className="content overflow-hidden">
+        <div ref={ref} className={cn('flex gap-4', className)} {...props} />
+      </div>
       <Button
         onClick={scrollPrev}
         onMouseMove={handleMouseMove}
@@ -329,7 +330,7 @@ const CarouselContent = React.forwardRef<
         onMouseLeave={handlePrevButtonLeave}
         className={`absolute left-0 top-0 z-30 hidden h-full w-6/12 bg-transparent hover:bg-transparent lg:block ${carouselNavigationButton} xl:${xlCarouselNavigationButton}`}
       >
-        {' '}
+        <span className="sr-only">Nach links</span>
       </Button>
       {layout == 'threeSlidesFadeOut' && <div className="w-[60%]"> </div>}
       {layout == 'threeSlides' && <div className="w-[60%]"> </div>}
@@ -341,7 +342,7 @@ const CarouselContent = React.forwardRef<
         onMouseLeave={handleNextButtonLeave}
         className={` absolute right-0 top-0 z-30 hidden h-full w-6/12 bg-transparent hover:bg-transparent lg:block ${carouselNavigationButton} xl:${xlCarouselNavigationButton}`}
       >
-        {' '}
+        <span className="sr-only">Nach rechts</span>
       </Button>
       <div
         className="fixed left-[--mousePosX] top-[--mousePosY] z-20 h-24 w-24 -translate-x-1/2 -translate-y-1/2 bg-transparent opacity-[--iconOpacity] transition-opacity duration-500 ease-in"
@@ -362,7 +363,7 @@ const CarouselContent = React.forwardRef<
           alt="Carousel Navigations Icon"
         />
       </div>
-      <div className=" absolute bottom-8 left-0 right-0 z-10 mx-auto h-1 w-4/5 max-w-full overflow-hidden rounded bg-transparent">
+      <div className=" content absolute bottom-8 left-0 right-0 z-10 mx-auto h-1 max-w-full overflow-hidden rounded bg-transparent">
         <div
           className="absolute bottom-0 left-[--leftScrollOffset] top-0 z-20 w-[--progressBarSize] rounded bg-secondary"
           style={
@@ -392,11 +393,10 @@ const CarouselItem = React.forwardRef<
     sizeValue,
     layout,
   } = useCarousel()
-  if (layout === 'oneSlide') {
-    return <OneSlideCarouselItem ref={ref} className={className} {...props} />
-  } else if (layout === 'threeSlidesFadeOut') {
+
+  if (layout === 'threeSlidesFadeOut') {
     return (
-      <ThreeSlidesFadeOutCarouselItem
+      <SlidesFadeOutCarouselItem
         index={index}
         ref={ref}
         className={className}
@@ -405,17 +405,12 @@ const CarouselItem = React.forwardRef<
         {...props}
       />
     )
-  } else if (layout === 'threeSlides') {
-    return (
-      <ThreeSlidesCarouselItem ref={ref} className={className} {...props} />
-    )
-  } else if (layout === 'fiveSlides') {
-    return <FiveSlidesCarouselItem ref={ref} className={className} {...props} />
   }
+  return <SlideCarouselItem ref={ref} className={className} {...props} />
 })
 CarouselItem.displayName = 'CarouselItem'
 
-const OneSlideCarouselItem = React.forwardRef<
+const SlideCarouselItem = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
@@ -424,14 +419,17 @@ const OneSlideCarouselItem = React.forwardRef<
       ref={ref}
       role="group"
       aria-roledescription="slide"
-      className={cn('min-w-0 shrink-0 grow-0 basis-full', className)}
+      className={cn(
+        'min-w-0 max-w-[76vw] shrink-0 grow-0 basis-auto',
+        className
+      )}
       {...props}
     />
   )
 })
-OneSlideCarouselItem.displayName = 'OneSlideCarouselItem'
+SlideCarouselItem.displayName = 'SlideCarouselItem'
 
-const ThreeSlidesFadeOutCarouselItem = React.forwardRef<
+const SlidesFadeOutCarouselItem = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & {
     index: number
@@ -475,44 +473,6 @@ const ThreeSlidesFadeOutCarouselItem = React.forwardRef<
     </div>
   )
 })
-ThreeSlidesFadeOutCarouselItem.displayName = 'ThreeSlidesFadeOutCarouselItem'
-
-const ThreeSlidesCarouselItem = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => {
-  return (
-    <div
-      ref={ref}
-      role="group"
-      aria-roledescription="slide"
-      className={cn(
-        'relative my-8 flex min-w-0 flex-[0_0_100%] shrink-0 grow-0 basis-full md:my-16 md:flex-[0_0_90%] md:pl-[0.8rem]  lg:pl-[1rem] xl:flex-[0_0_70%] 2xl:pl-[3rem] ',
-        className
-      )}
-      {...props}
-    ></div>
-  )
-})
-ThreeSlidesCarouselItem.displayName = 'ThreeSlidesCarouselItem'
-
-const FiveSlidesCarouselItem = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => {
-  return (
-    <div
-      ref={ref}
-      role="group"
-      aria-roledescription="slide"
-      className={cn(
-        'relative my-8 flex min-w-0 flex-[0_0_100%] shrink-0 grow-0 basis-full md:my-16 md:flex-[0_0_40%] md:pl-[0.8rem]  lg:pl-[1rem] xl:flex-[0_0_30%] 2xl:pl-[3rem] ',
-        className
-      )}
-      {...props}
-    ></div>
-  )
-})
-FiveSlidesCarouselItem.displayName = 'FiveSlidesCarouselItem'
+SlidesFadeOutCarouselItem.displayName = 'SlidesFadeOutCarouselItem'
 
 export { Carousel, CarouselContent, CarouselItem, type CarouselApi }

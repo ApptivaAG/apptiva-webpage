@@ -2,14 +2,15 @@
  * This configuration is used to for the Sanity Studio that’s mounted on the `/app/studio/[[...index]]/page.tsx` route
  */
 
+import { StreamLanguage } from '@codemirror/language'
+import { codeInput } from '@sanity/code-input'
 import { visionTool } from '@sanity/vision'
 import { groqdPlaygroundTool } from 'groqd-playground'
-import { FaCog, FaAddressCard } from 'react-icons/fa'
+import { FaAddressCard, FaCog } from 'react-icons/fa'
 import { defineConfig } from 'sanity'
-import { structureTool } from 'sanity/structure'
-import { presentationTool } from 'sanity/presentation'
 import { media } from 'sanity-plugin-media'
-
+import { presentationTool } from 'sanity/presentation'
+import { structureTool } from 'sanity/structure'
 import { apiVersion, dataset, projectId } from './src/sanity/env'
 import { schema } from './src/sanity/schema'
 
@@ -62,6 +63,18 @@ export default defineConfig({
           enable: '/api/draft',
         },
       },
+    }),
+    codeInput({
+      codeModes: [
+        {
+          name: 'rust',
+          // dynamic import so the language is only be loaded on demand
+          loader: () =>
+            import('@codemirror/legacy-modes/mode/rust').then(({ rust }) =>
+              StreamLanguage.define(rust)
+            ),
+        },
+      ],
     }),
   ],
 })

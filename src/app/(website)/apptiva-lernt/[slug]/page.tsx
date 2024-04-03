@@ -1,20 +1,12 @@
 import BlogPortableText from '@/components/blog-portable-text'
 import BreadCrumb from '@/components/bread-crumb'
 import Heading from '@/components/heading'
-import MdxImage from '@/components/mdx-image'
 import SanityImage from '@/components/sanity-image'
 import { getPostBySlug, getPosts } from '@/utils/blog'
 import { kebabCaseToTitleCase } from '@/utils/format'
 import portableTextToString from '@/utils/portable-text-to-string'
-import remarkEmbedder from '@remark-embedder/core'
-import oembedTransformer from '@remark-embedder/transformer-oembed'
-import { Code } from 'bright'
 import { Metadata } from 'next'
-import { MDXRemote } from 'next-mdx-remote/rsc'
-import Image from 'next/image'
 import { notFound } from 'next/navigation'
-import remarkGfm from 'remark-gfm'
-import remarkUnwrapImages from 'remark-unwrap-images'
 
 export async function generateStaticParams() {
   const posts = await getPosts()
@@ -53,6 +45,10 @@ export default async function Home(props: { params: { slug: string } }) {
   const paramsSlug = decodeURIComponent(props.params.slug)
   const post = (await getPostBySlug(paramsSlug)) ?? notFound()
 
+  if (post.kind === 'markdown') {
+    return <div>Apptiva lernt unterstützt nur CMS Beiträge</div>
+  }
+
   return (
     <>
       <header className="full relative mt-[-8rem] min-h-fit animate-gradient items-center bg-gradient-to-br from-primary-light to-primary-dark bg-300% pb-8 pt-32 text-base-white md:pb-16 md:pt-44">
@@ -60,10 +56,10 @@ export default async function Home(props: { params: { slug: string } }) {
           <BreadCrumb
             className="pb-6"
             links={[
-              { name: 'Blog', href: '/blog' },
+              { name: 'Apptiva lernt', href: '/apptiva-lernt' },
               {
                 name: getBreadcrumb(post),
-                href: `/blog/${post.slug}`,
+                href: `/apptiva-lernt/${post.slug}`,
               },
             ]}
           />
@@ -89,19 +85,7 @@ export default async function Home(props: { params: { slug: string } }) {
             </strong>
           </p>
           <div className="popout justify-center pt-8 md:pt-16">
-            {post.kind === 'markdown' && post.image.src && (
-              <Image
-                className="rounded-lg"
-                src={post.image.src}
-                width={post.image.width}
-                height={post.image.height}
-                placeholder="blur"
-                blurDataURL={post.image.base64}
-                alt=""
-                sizes="(max-width: 1200px) 100vw, 74rem"
-              />
-            )}
-            {post.kind === 'cms' && post.image && (
+            {post.image && (
               <SanityImage
                 className="rounded-lg"
                 image={post.image}
@@ -114,33 +98,7 @@ export default async function Home(props: { params: { slug: string } }) {
 
       <div className="flex gap-16 py-16 max-md:flex-col">
         <div className="prose prose-lg flex-1">
-          {post.kind === 'markdown' && (
-            <MDXRemote
-              source={post.content}
-              components={{
-                img: MdxImage(post.blogPostAssetsDirectory),
-                pre: Code,
-              }}
-              options={{
-                mdxOptions: {
-                  remarkPlugins: [
-                    remarkGfm,
-                    remarkUnwrapImages,
-                    [
-                      remarkEmbedder,
-                      {
-                        transformers: [oembedTransformer],
-                      },
-                    ],
-                  ],
-                },
-                parseFrontmatter: true,
-              }}
-            />
-          )}
-          {post.kind === 'cms' && post.content && (
-            <BlogPortableText content={post.content} />
-          )}
+          {post.content && <BlogPortableText content={post.content} />}
         </div>
         <aside>
           {post.tags && post.tags.length > 0 && (

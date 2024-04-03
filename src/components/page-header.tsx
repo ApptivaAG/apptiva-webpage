@@ -11,9 +11,10 @@ export function PageHeader(props: {
   links?: { name: string; href?: string | undefined }[]
   image?: SanityImageWithAlt
   callToAction?: React.ReactNode
+  children?: React.ReactNode
 }) {
   return (
-    <header className="full mt-[-8rem] min-h-fit animate-gradient items-center bg-gradient-to-br from-primary-light to-primary-dark bg-300% pb-8 pt-32 text-base-white md:pb-16 md:pt-44">
+    <header className="full relative mt-[-8rem] min-h-fit animate-gradient items-center bg-gradient-to-br from-primary-light to-primary-dark bg-300% pb-8 pt-32 text-base-white md:pb-16 md:pt-44">
       <div className="content">
         {props.links && (
           <BreadCrumb className="pb-2 md:pb-6" links={props.links} />
@@ -37,6 +38,7 @@ export function PageHeader(props: {
           </div>
         )}
       </div>
+      {props.children}
     </header>
   )
 }

@@ -24,8 +24,7 @@ export default function Team(props: { module: ModuleData }) {
         layout={'fiveSlides'}
         darkTheme={false}
         numberOfSlides={module.persons.length}
-        loop={true}
-        className="full md:pb-8"
+        className="full pb-20"
       >
         <CarouselContent>
           {module.persons.map((person, index) => {
@@ -33,19 +32,18 @@ export default function Team(props: { module: ModuleData }) {
               <CarouselItem key={index} index={index}>
                 <Card
                   key={index}
-                  className="flex w-full flex-col border-none"
+                  className="flex h-full w-80 max-w-full flex-col overflow-visible border-none"
                   padding="none"
                 >
                   <SanityImage
                     image={person.image}
-                    className="rounded"
+                    className="-translate-x-2 rounded-lg"
                   ></SanityImage>
-                  <div className="mx-auto w-[90%] pt-12 md:mx-0">
+                  <div className="flex-1 pt-6 md:mx-0">
                     <Heading level={4}>{person.personName}</Heading>
                     <Heading level={5}>{person.role}</Heading>
-                    <p className="pt-8">{person.slogan}</p>
                   </div>
-                  <div className="mx-auto mt-auto w-[90%] py-8 md:mx-0">
+                  <div className="mt-auto pt-4 md:mx-0">
                     <div>
                       <Link href={`mailto:${person.contact?.mail}`}>
                         <UnderlineForLink>

@@ -1,8 +1,11 @@
+import Heading from '@/components/heading'
 import { PageHeader } from '@/components/page-header'
+import Button from '@/components/ui/button'
 import Underline from '@/components/ui/underline'
 import { faqsQuery, glossaryQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
 import { draftMode } from 'next/headers'
+import Link from 'next/link'
 import Blogposts from './blogposts'
 import FAQ from './faq'
 import Glossar from './glossary'
@@ -38,7 +41,20 @@ export default async function Knowledge() {
         lead={lead}
         links={[{ name: 'Wissen', href: '/wissen' }]}
       />
-      {/* <Blogposts /> */}
+      <Blogposts show="blog">
+        <div className="content space-y-8">
+          <Heading level={2} size={3}>
+            Neueste Blogposts
+          </Heading>
+          <div>
+            <Link href={'/blog/'}>
+              <Button element="div" className="inline">
+                Alle Blogposts
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </Blogposts>
       {draftMode().isEnabled ? (
         <KnowledgePreview
           initialFAQs={faqDraft}
@@ -50,6 +66,24 @@ export default async function Knowledge() {
           <Glossar data={glossaryPublished} />
         </>
       )}
+      <Blogposts show="apptiva-lernt">
+        <div className="content space-y-8">
+          <Heading level={2} size={3}>
+            Apptiva lernt
+          </Heading>
+          <p>
+            Kleine (technische) Wissenshappen, die wir jede Woche neu dazu
+            lernen.
+          </p>
+          <div>
+            <Link href={'/blog/'}>
+              <Button element="div" className="inline">
+                Alle Engineering Posts
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </Blogposts>
     </>
   )
 }

@@ -5,11 +5,19 @@ export default defineType({
   name: 'blog',
   title: 'Blog',
   type: 'document',
+  initialValue: () => ({
+    publishedAt: new Date().toISOString(),
+  }),
   fields: [
     defineField({
       name: 'header',
       title: 'Header',
       type: 'header',
+    }),
+    defineField({
+      name: 'publishedAt',
+      type: 'datetime',
+      title: 'Publiziert am',
     }),
     defineField({
       name: 'slug',
@@ -32,6 +40,27 @@ export default defineType({
       of: [
         {
           type: 'block',
+        },
+        {
+          type: 'code',
+          title: 'Code',
+          options: {
+            languageAlternatives: [
+              //Add this list to have nix as a possible language
+              { title: 'Bash', value: 'sh' },
+              { title: 'Typescript', value: 'typescript' },
+              { title: 'React Typescript', value: 'tsx' },
+              { title: 'JSON', value: 'json' },
+              { title: 'CSS', value: 'css' },
+              { title: 'Html', value: 'html' },
+              { title: 'Yaml', value: 'yaml' },
+              { title: 'Java', value: 'java' },
+              { title: 'SQL', value: 'sql' },
+              { title: 'Xml', value: 'xml' },
+              { title: 'Rust', value: 'rust' },
+              { title: 'NIX', value: 'nix', mode: 'json' },
+            ],
+          },
         },
       ],
     }),
