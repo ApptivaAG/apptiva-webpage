@@ -38,9 +38,6 @@ export default function Item(props: {
       {glossary.modules?.map((module) => (
         <Module key={module._key} module={module} customers={undefined} />
       ))}
-
-      <Heading level={3}>Tags</Heading>
-      <ul>{props.glossary.tags?.map((tag) => <li key={tag}>{tag}</li>)}</ul>
     </>
   )
 }
