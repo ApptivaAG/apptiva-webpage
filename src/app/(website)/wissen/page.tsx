@@ -38,7 +38,7 @@ export default async function Knowledge() {
         lead={lead}
         links={[{ name: 'Wissen', href: '/wissen' }]}
       />
-      <Blogposts />
+      {/* <Blogposts /> */}
       {draftMode().isEnabled ? (
         <KnowledgePreview
           initialFAQs={faqDraft}

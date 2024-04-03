@@ -10,7 +10,7 @@ export const getFAQs = cache(async () => {
       return {
         _id: faq._id,
         question: faq.question ?? 'Keine Frage',
-        answer: faq.answer ?? 'Keine Antwort',
+        answer: faq.answerStyled ?? 'Keine Antwort',
       } as const
     })
   }

@@ -59,13 +59,14 @@ export const ServicePageTeasers = q('servicePageTeaser')
   })
   .nullable()
 
+export type FAQQueryModuleData = NonNullable<InferType<typeof FAQs>>
 export const FAQs = q('faqs')
   .filter()
   .deref()
   .grab$({
     _id: q.string(),
     question: q.string().optional(),
-    answer: q.string().optional(),
+    answerStyled: q.contentBlocks().optional(),
     slug: Slug,
     tags: Tags,
   })
@@ -296,7 +297,7 @@ export const faqsQuery = q('*')
   .grab$({
     _id: q.string(),
     question: q.string().optional(),
-    answer: q.string().optional(),
+    answerStyled: q.contentBlocks().optional(),
     slug: Slug,
     tags: Tags,
   })

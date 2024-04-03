@@ -1,17 +1,14 @@
+import StyledPortableText from './styled-portable-text'
+import { PortableText as PortableTextType } from '@/utils/types'
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from './ui/accordion'
+import { FAQQueryData } from '@/sanity/lib/queries'
 
-type FAQs = {
-  _id: string
-  question?: string
-  answer?: string
-}[]
-
-const FAQsComponent = (props: { faqs: FAQs }) => {
+const FAQsComponent = (props: { faqs: FAQQueryData }) => {
   const { faqs } = props
   return (
     <>
@@ -24,7 +21,11 @@ const FAQsComponent = (props: { faqs: FAQs }) => {
                 value={faq.question ?? 'no-question'}
               >
                 <AccordionTrigger>{faq.question}</AccordionTrigger>
-                <AccordionContent>{faq.answer}</AccordionContent>
+                {faq.answerStyled && (
+                  <AccordionContent>
+                    <StyledPortableText content={faq.answerStyled} />
+                  </AccordionContent>
+                )}
               </AccordionItem>
             ))}
           </Accordion>

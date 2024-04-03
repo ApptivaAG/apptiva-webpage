@@ -1,6 +1,7 @@
 // ./nextjs-app/app/page.tsx
 
 import Heading from '@/components/heading'
+import StyledPortableText from '@/components/styled-portable-text'
 import { faqsQuery } from '@/sanity/lib/queries'
 import { runQuery } from '@/sanity/lib/sanityFetch'
 
@@ -13,7 +14,9 @@ export default async function Home() {
       {faqs.map((faq) => (
         <>
           <b>{faq.question}</b>
-          <p>{faq.answer}</p>
+          {faq.answerStyled && (
+            <StyledPortableText content={faq.answerStyled} />
+          )}
         </>
       ))}
     </div>

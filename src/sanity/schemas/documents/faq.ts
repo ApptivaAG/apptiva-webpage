@@ -27,7 +27,7 @@ export default defineType({
     }),
     defineField({
       name: 'answer',
-      title: 'Answer unstyled',
+      title: 'Answer unstyled (nicht mehr verwenden!)',
       type: 'text',
     }),
     defineField({
