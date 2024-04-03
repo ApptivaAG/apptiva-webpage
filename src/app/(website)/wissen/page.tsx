@@ -66,7 +66,7 @@ export default async function Knowledge() {
           <Glossar data={glossaryPublished} />
         </>
       )}
-      <Blogposts show="apptiva-lernt">
+      {/* <Blogposts show="apptiva-lernt">
         <div className="content space-y-8">
           <Heading level={2} size={3}>
             Apptiva lernt
@@ -83,7 +83,7 @@ export default async function Knowledge() {
             </Link>
           </div>
         </div>
-      </Blogposts>
+      </Blogposts> */}
     </>
   )
 }

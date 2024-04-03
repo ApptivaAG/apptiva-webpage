@@ -9,7 +9,7 @@ export default function About(props: {
   data: AboutPageQueryData
   customers: React.ReactNode
 }) {
-  console.log('media', window.matchMedia('(min-width: 768px)'))
+  // console.log('media', window.matchMedia('(min-width: 768px)'))
 
   return (
     <>
@@ -18,7 +18,7 @@ export default function About(props: {
         lead={props.data.header?.lead}
         links={[{ name: 'Über uns', href: '/ueber-uns' }]}
       >
-        {props.data.modules && (
+        {/* {props.data.modules && (
           <div className="mt-[-20rem]">
             {props.data.modules[0].persons.map((person, index) => (
               <div
@@ -37,7 +37,7 @@ export default function About(props: {
               </div>
             ))}
           </div>
-        )}
+        )} */}
       </PageHeader>
 
       {props.data.modules?.map((module) => (
