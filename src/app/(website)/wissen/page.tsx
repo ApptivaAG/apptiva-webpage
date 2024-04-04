@@ -76,7 +76,7 @@ export default async function Knowledge() {
             lernen.
           </p>
           <div>
-            <Link href={'/blog/'}>
+            <Link href={'/apptiva-lernt/'}>
               <Button element="div" className="inline">
                 Alle Engineering Posts
               </Button>

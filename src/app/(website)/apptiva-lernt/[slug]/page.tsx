@@ -2,7 +2,7 @@ import BlogPortableText from '@/components/blog-portable-text'
 import BreadCrumb from '@/components/bread-crumb'
 import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
-import { getPostBySlug, getPosts } from '@/utils/blog'
+import { getPostBySlug, getPosts, hasTag } from '@/utils/blog'
 import { kebabCaseToTitleCase } from '@/utils/format'
 import portableTextToString from '@/utils/portable-text-to-string'
 import { Metadata } from 'next'
@@ -11,9 +11,11 @@ import { notFound } from 'next/navigation'
 export async function generateStaticParams() {
   const posts = await getPosts()
 
-  return Array.from(posts.keys()).map((slug) => ({
-    slug,
-  }))
+  return Array.from(posts)
+    .filter(hasTag('apptiva-lernt'))
+    .map(([slug]) => ({
+      slug,
+    }))
 }
 
 export async function generateMetadata(props: {
@@ -28,14 +30,9 @@ export async function generateMetadata(props: {
         ? post.title
         : portableTextToString(post.title),
     description: post.description,
-    alternates: { canonical: `/blog/${post.slug}` },
+    alternates: { canonical: `/apptiva-lernt/${post.slug}` },
     openGraph: {
       type: 'article',
-      images: [
-        {
-          url: `https://apptiva-uber-website.netlify.app/_ipx/w_1200,q_75/%2Fassets%2Fblog%2F${paramsSlug}%2F${post.image}`,
-        },
-      ],
       publishedTime: post.publishDate,
     },
   }
