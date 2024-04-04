@@ -30,8 +30,6 @@ export const ContactFromMailSenderCopy = ({
       <Container style={container}>
         <Img
           src={`https://cdn.sanity.io/images/g5oll5fh/production/389335468433792ed23b3533b27f583bfca0ccb4-1198x630.png`}
-          width="100%"
-          height="42"
           alt="Apptiva Logo"
           style={logo}
         />
@@ -41,31 +39,18 @@ export const ContactFromMailSenderCopy = ({
           </Heading>
           <Text style={text}>Wir melden uns schon bald bei dir.</Text>
           <Text style={text}>
-            GaLiGrü
-            <br />
-            Das Apptiva Team
+            Mit einem Schwung von Nullen und Einsen.
+            <br /> Das Apptiva Team
           </Text>
+          <br />
         </Text>
-
         <Section style={section}>
           <Text style={text}>Deine Nachricht:</Text>
           <Text style={text}>{message}</Text>
         </Section>
 
         {/* <code style={code}>code code code</code> */}
-        <Container style={container}>
-          <Img
-            src={`https://cdn.sanity.io/images/g5oll5fh/production/8fb47a4e5dd1fa27d23fdef4adaa850bdf2071cc-1584x396.png`}
-            width="100%"
-            height="100%"
-            alt="Apptiva Claim"
-            style={imageContainer}
-          />
-        </Container>
-        <Hr style={hr} />
-        <Link href="https://apptiva.ch" style={reportLink}>
-          Apptiva
-        </Link>
+        <Container style={container}></Container>
       </Container>
     </Body>
   </Html>
@@ -75,8 +60,8 @@ export default ContactFromMailSenderCopy
 
 const logo = {
   borderRadius: 21,
-  width: '50%',
-  height: '50%',
+  width: '30%',
+  height: 'auto',
 }
 
 const main = {
