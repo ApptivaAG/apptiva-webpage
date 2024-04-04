@@ -1,7 +1,11 @@
 import { dataset, projectId } from '@/sanity/env'
 import { urlForImage } from '@/sanity/lib/image'
 import { SanityImageWithAlt } from '@/utils/types'
-import { getImageAsset, getImageDimensions } from '@sanity/asset-utils'
+import {
+  SanityImageSource,
+  getImageAsset,
+  getImageDimensions,
+} from '@sanity/asset-utils'
 import type { PlaceholderValue } from 'next/dist/shared/lib/get-img-props'
 import Image from 'next/image'
 
@@ -21,12 +25,7 @@ export default function SanityImage({
     ? getImageDimensions(image)
     : {}
 
-  const asset = getImageAsset(image, {
-    projectId: projectId,
-    dataset: dataset,
-  })
-
-  return asset ? (
+  return image.asset ? (
     <Image
       className={className}
       key={image.toString()}
@@ -34,7 +33,7 @@ export default function SanityImage({
       alt={image.alt}
       width={width}
       height={height}
-      placeholder={buildPlaceholder(asset.metadata.lqip, width, height)}
+      placeholder={buildPlaceholder(image, width, height)}
       sizes={
         sizes
           ? sizes
@@ -51,7 +50,9 @@ export default function SanityImage({
 }
 
 function buildPlaceholder(
-  lqip: string | undefined,
+  image: SanityImageSource & {
+    alt: string
+  },
   width: number,
   height: number
 ): PlaceholderValue | undefined {
@@ -61,8 +62,10 @@ function buildPlaceholder(
     return undefined
   }
 
+  const asset = getImageAsset(image, { projectId: projectId, dataset: dataset })
+
   return (
-    (lqip as `data:image/${string}`) ??
+    (asset.metadata.lqip as `data:image/${string}` | undefined) ??
     `data:image/svg+xml;base64,${toBase64(shimmer(width, height))}`
   )
 }
