@@ -3,7 +3,7 @@ import BreadCrumb from '@/components/bread-crumb'
 import Heading from '@/components/heading'
 import MdxImage from '@/components/mdx-image'
 import SanityImage from '@/components/sanity-image'
-import { getPostBySlug, getPosts } from '@/utils/blog'
+import { getPostBySlug, getPosts, hasTag } from '@/utils/blog'
 import { kebabCaseToTitleCase } from '@/utils/format'
 import portableTextToString from '@/utils/portable-text-to-string'
 import remarkEmbedder from '@remark-embedder/core'
@@ -19,9 +19,11 @@ import remarkUnwrapImages from 'remark-unwrap-images'
 export async function generateStaticParams() {
   const posts = await getPosts()
 
-  return Array.from(posts.keys()).map((slug) => ({
-    slug,
-  }))
+  return Array.from(posts)
+    .filter(hasTag('blog'))
+    .map(([slug]) => ({
+      slug,
+    }))
 }
 
 export async function generateMetadata(props: {
