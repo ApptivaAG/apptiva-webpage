@@ -22,7 +22,7 @@ const FAQsComponent = (props: { faqs: FAQQueryModuleData }) => {
                 <AccordionTrigger>{faq.question}</AccordionTrigger>
                 {faq.answerStyled && (
                   <AccordionContent>
-                    <StyledPortableText content={faq.answerStyled} />)
+                    <StyledPortableText content={faq.answerStyled} />
                   </AccordionContent>
                 )}
               </AccordionItem>
