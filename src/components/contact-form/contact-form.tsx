@@ -57,6 +57,7 @@ const ContactForm = () => {
                     type="text"
                     name="subject"
                     value="Kontaktformular apptiva.ch"
+                    readOnly={true}
                   />
                 </p>
                 <div>
