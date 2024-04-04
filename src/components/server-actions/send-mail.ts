@@ -2,6 +2,7 @@
 
 import { ContactFromMailSenderCopy } from '@/components/contact-form/contact-from-mail-sender'
 import { Resend } from 'resend'
+import ContactFromMailApptivaCopy from '../contact-form/contact-from-apptiva'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
@@ -58,19 +59,38 @@ export async function sendMail(
   }
 
   try {
-    const { name, email, message, subject } = rawFormData
+    const { name, email, message, subject, company } = rawFormData
     console.log('sending mail via resend', name, email, message, subject)
-
-    const { data, error } = await resend.emails.send({
+    console.log('sending copy to apptiva.ch', {
       from: 'Kontaktformular apptiva.ch <kontaktformular@apptiva-mailer.ch>',
-      to: `${email}`,
+      to: `info@apptiva.ch`,
       subject: subject,
-      // react: ContactEmailTemplate({
-      //   name,
-      //   message,
-      // }) as React.ReactElement,
-      react: ContactFromMailSenderCopy({ name, message }),
+      name,
+      message,
+      email,
+      company,
     })
+
+    const { data, error } = await resend.batch.send([
+      {
+        from: 'Kontaktformular apptiva.ch <kontaktformular@apptiva-mailer.ch>',
+        to: `${email}`,
+        subject: subject,
+        react: ContactFromMailSenderCopy({ name, message }),
+      },
+      // todo: reenable before GoLive
+      // {
+      //   from: 'Kontaktformular apptiva.ch <kontaktformular@apptiva-mailer.ch>',
+      //   to: `info@apptiva.ch`,
+      //   subject: subject,
+      //   react: ContactFromMailApptivaCopy({
+      //     name,
+      //     message,
+      //     email,
+      //     company,
+      //   }),
+      // },
+    ])
 
     if (error) {
       console.error('Error sending mail', error)

@@ -1,18 +1,13 @@
 import {
   Body,
-  Button,
   Container,
   Head,
   Heading,
-  Hr,
   Html,
   Img,
-  Link,
   Preview,
-  Section,
   Text,
 } from '@react-email/components'
-import * as React from 'react'
 
 interface ContactFromMailSenderCopyProps {
   name: string
@@ -39,18 +34,14 @@ export const ContactFromMailSenderCopy = ({
           </Heading>
           <Text style={text}>Wir melden uns schon bald bei dir.</Text>
           <Text style={text}>
-            Mit einem Schwung von Nullen und Einsen.
+            Mit einem Schwung von Nullen und Einsen 🤓.
             <br /> Das Apptiva Team
           </Text>
-          <br />
         </Text>
-        <Section style={section}>
+        <Container style={container}>
           <Text style={text}>Deine Nachricht:</Text>
-          <Text style={text}>{message}</Text>
-        </Section>
-
-        {/* <code style={code}>code code code</code> */}
-        <Container style={container}></Container>
+          <Text style={review}>{message}</Text>
+        </Container>
       </Container>
     </Body>
   </Html>
@@ -70,15 +61,7 @@ const main = {
     '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
 }
 
-const imageContainer = {
-  maxWidth: '480px',
-  width: '100%',
-}
-
 const container = {
-  // margin: '0 auto',
-  // padding: '20px 0 48px',
-  // maxWidth: '560px',
   maxWidth: '480px',
   margin: '0 auto',
   padding: '20px 0 48px',
@@ -100,54 +83,15 @@ const paragraph = {
   color: '#3c4149',
 }
 
-const buttonContainer = {
-  padding: '27px 0 27px',
-}
-
-const button = {
-  backgroundColor: '#5e6ad2',
-  borderRadius: '3px',
-  fontWeight: '600',
-  color: '#fff',
-  fontSize: '15px',
-  textDecoration: 'none',
-  textAlign: 'center' as const,
-  display: 'block',
-  padding: '11px 23px',
-}
-
-const reportLink = {
-  fontSize: '14px',
-  color: '#b4becc',
-}
-
-const hr = {
-  borderColor: '#dfe1e4',
-  margin: '5px 0 26px',
-}
-
-const code = {
-  fontFamily: 'monospace',
-  fontWeight: '700',
-  padding: '1px 4px',
-  backgroundColor: '#dfe1e4',
-  letterSpacing: '-0.3px',
-  fontSize: '21px',
+const review = {
+  ...paragraph,
+  padding: '24px',
+  backgroundColor: '#f2f3f3',
   borderRadius: '4px',
-  color: '#3c4149',
 }
-
 const title = {
   fontSize: '24px',
   lineHeight: 1.25,
-}
-
-const section = {
-  padding: '24px',
-  border: 'solid 1px #dedede',
-  borderRadius: '5px',
-  marginBlock: '15px',
-  textAlign: 'center' as const,
 }
 
 const text = {

@@ -4,56 +4,55 @@ import {
   Head,
   Heading,
   Html,
-  Img,
   Preview,
   Text,
 } from '@react-email/components'
 
-interface ContactFromMailSenderCopyProps {
+interface ContactFromMailApptivaCopyProps {
   name: string
   message: string
+  mailAddress: string
+  companyName: string
 }
 
-export const ContactFromMailSenderCopy = ({
-  name,
-  message,
-}: ContactFromMailSenderCopyProps) => (
+export const ContactFromMailApptivaCopy = ({
+  name = 'Carla',
+  message = 'Hoi liebe Apptiva, ichs chreibe euch weil ich euch toll finde',
+  mailAddress = 'carla@carla.de',
+  companyName = 'Carla AG',
+}: ContactFromMailApptivaCopyProps) => (
   <Html>
     <Head />
     <Preview>Danke für deine Nachricht!</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Img
-          src={`https://cdn.sanity.io/images/g5oll5fh/production/389335468433792ed23b3533b27f583bfca0ccb4-1198x630.png`}
-          alt="Apptiva Logo"
-          style={logo}
-        />
         <Text style={title}>
           <Heading style={heading}>
-            Hoi <strong>{name}</strong>, danke für deine Nachricht!
+            <strong>{name}</strong> hat uns eine Nachricht hinterlassen:
           </Heading>
-          <Text style={text}>Wir melden uns schon bald bei dir.</Text>
-          <Text style={text}>
-            Mit einem Schwung von Nullen und Einsen 🤓.
-            <br /> Das Apptiva Team
-          </Text>
         </Text>
+
         <Container style={container}>
-          <Text style={text}>Deine Nachricht:</Text>
           <Text style={review}>{message}</Text>
+          <Text style={{ ...paragraph, marginTop: 40 }}>
+            <b>Name: </b>
+            {name}
+          </Text>
+          <Text style={{ ...paragraph, marginTop: -5 }}>
+            <b>E-Mail Adresse: </b>
+            {mailAddress}
+          </Text>
+          <Text style={{ ...paragraph, marginTop: -5 }}>
+            <b>Unternehmen: </b>
+            {companyName}
+          </Text>
         </Container>
       </Container>
     </Body>
   </Html>
 )
 
-export default ContactFromMailSenderCopy
-
-const logo = {
-  borderRadius: 21,
-  width: '30%',
-  height: 'auto',
-}
+export default ContactFromMailApptivaCopy
 
 const main = {
   backgroundColor: '#ffffff',
@@ -89,12 +88,8 @@ const review = {
   backgroundColor: '#f2f3f3',
   borderRadius: '4px',
 }
+
 const title = {
   fontSize: '24px',
   lineHeight: 1.25,
-}
-
-const text = {
-  margin: '0 0 10px 0',
-  textAlign: 'left' as const,
 }
