@@ -1,3 +1,4 @@
+import { dataset, projectId } from '@/sanity/env'
 import { urlForImage } from '@/sanity/lib/image'
 import { SanityImageWithAlt } from '@/utils/types'
 import { getImageAsset, getImageDimensions } from '@sanity/asset-utils'
@@ -14,9 +15,15 @@ const SanityImage = ({
   size?: 'content' | 'popout' | 'full' | 'default'
   sizes?: string
 }) => {
+  if (!image) return null
   const { width = 0, height = 0 } = image?.asset
     ? getImageDimensions(image)
     : {}
+
+  const asset = getImageAsset(image, {
+    projectId: projectId,
+    dataset: dataset,
+  })
 
   return image?.asset ? (
     <Image
@@ -26,8 +33,9 @@ const SanityImage = ({
       alt={image.alt}
       width={width}
       height={height}
-      {...((width > 40 || height > 40) && { placeholder: 'blur' })}
-      blurDataURL={getImageAsset(image).metadata.lqip}
+      {...(asset.metadata.lqip &&
+        (width > 40 || height > 40) && { placeholder: 'blur' })}
+      blurDataURL={asset.metadata.lqip}
       sizes={
         sizes
           ? sizes

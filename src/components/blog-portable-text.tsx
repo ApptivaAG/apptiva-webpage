@@ -3,6 +3,7 @@ import { PortableText, PortableTextComponents } from '@portabletext/react'
 import { Code } from 'bright'
 import Underline from './ui/underline'
 import UnderlineForLink from './ui/underline-for-link'
+import SanityImage from './sanity-image'
 
 export default function BlogPortableText({
   content,
@@ -13,11 +14,19 @@ export default function BlogPortableText({
 }) {
   const components: PortableTextComponents = {
     types: {
+      imageWithAlt: (props: {
+        value: {
+          asset: { _ref: string; _type: 'reference' }
+          _type: 'imageWithAlt'
+          alt: string
+          _key: string
+        }
+      }) => {
+        return <SanityImage image={props.value} size="content" />
+      },
       code: (props: {
         value: { _key: string; code: string; _type: 'code'; language: string }
       }) => {
-        console.log('props', props)
-
         return <Code lang={props.value.language}>{props.value.code}</Code>
       },
     },
