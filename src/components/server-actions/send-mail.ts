@@ -78,18 +78,17 @@ export async function sendMail(
         subject: subject,
         react: ContactFromMailSenderCopy({ name, message }),
       },
-      // todo: reenable before GoLive
-      // {
-      //   from: 'Kontaktformular apptiva.ch <kontaktformular@apptiva-mailer.ch>',
-      //   to: `info@apptiva.ch`,
-      //   subject: subject,
-      //   react: ContactFromMailApptivaCopy({
-      //     name,
-      //     message,
-      //     email,
-      //     company,
-      //   }),
-      // },
+      {
+        from: 'Kontaktformular apptiva.ch <kontaktformular@apptiva-mailer.ch>',
+        to: `info@apptiva.ch`,
+        subject: subject,
+        react: ContactFromMailApptivaCopy({
+          name,
+          message,
+          email,
+          company,
+        }),
+      },
     ])
 
     if (error) {
