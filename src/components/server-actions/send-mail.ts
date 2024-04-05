@@ -60,16 +60,6 @@ export async function sendMail(
 
   try {
     const { name, email, message, subject, company } = rawFormData
-    console.log('sending mail via resend', name, email, message, subject)
-    console.log('sending copy to apptiva.ch', {
-      from: 'Kontaktformular apptiva.ch <kontaktformular@apptiva-mailer.ch>',
-      to: `info@apptiva.ch`,
-      subject: subject,
-      name,
-      message,
-      email,
-      company,
-    })
 
     const { data, error } = await resend.batch.send([
       {
