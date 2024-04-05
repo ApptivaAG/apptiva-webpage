@@ -10,6 +10,11 @@ import UnderlineForLink from '../ui/underline-for-link'
 export default function Team(props: { module: ModuleData }) {
   const { module } = props
 
+  const teamSorted = [
+    ...module.persons.filter((p) => p.contact),
+    ...module.persons.filter((p) => !p.contact),
+  ]
+
   return (
     <section key={module._key} className="full py-8 text-primary lg:py-28">
       <div className="content">
@@ -27,7 +32,7 @@ export default function Team(props: { module: ModuleData }) {
         className="full pb-20"
       >
         <CarouselContent>
-          {module.persons.map((person, index) => {
+          {teamSorted.map((person, index) => {
             return (
               <CarouselItem key={index} index={index}>
                 <Card
