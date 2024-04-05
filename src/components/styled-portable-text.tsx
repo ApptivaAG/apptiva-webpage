@@ -55,7 +55,7 @@ const StyledPortableText = ({
       normal: ({ children }) => (
         <p
           className={cn(
-            'whitespace-break-spaces ',
+            'whitespace-break-spaces py-1',
             className,
             spreadParagraphs ? 'py-4' : ''
           )}
@@ -67,7 +67,7 @@ const StyledPortableText = ({
     hardBreak: () => (
       <>
         <br />
-        <span className="block h-1" />
+        <span className="block h-1 " />
       </>
     ),
   }
