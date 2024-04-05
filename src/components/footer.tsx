@@ -92,15 +92,16 @@ export default function Footer() {
           </Heading>
           <ul>
             <li>
-              <Link href="/conversational-user-interfaces">
-                Conversational User Interfaces
-              </Link>
+              <Link href="/angebot/schnittstellen">Schnittstellen</Link>
             </li>
             <li>
-              <Link href={'/konfiguratoren'}>Konfiguratoren</Link>
+              <Link href="/angebot/konfiguratoren">Konfiguratoren</Link>
             </li>
             <li>
-              <Link href={'/user-centered-design'}>User Centered Design</Link>
+              <Link href="angebot/webshops">Webshops</Link>
+            </li>
+            <li>
+              <Link href="angebot/weiterentwicklung">Weiterentwicklung</Link>
             </li>
           </ul>
         </div>
@@ -109,6 +110,7 @@ export default function Footer() {
           <Heading level={2} size={4} className="pb-4">
             Angebot
           </Heading>
+
           <ul>
             <li>
               <Link href="/angebot/development">Development </Link>
@@ -117,7 +119,10 @@ export default function Footer() {
               <Link href="/angebot/chatbots">Chatbots</Link>
             </li>
             <li>
-              <Link href="/angebot/consulting">Consulting</Link>
+              <Link href="/angebot/webentwicklung">Webentwicklung</Link>
+            </li>
+            <li>
+              <Link href="/angebot/app-entwicklung">App Entwicklung</Link>
             </li>
           </ul>
         </div>
@@ -128,10 +133,15 @@ export default function Footer() {
           </Heading>
           <ul>
             <li>
-              <Link href="/personas">Personas</Link>
+              <Link href="/angebot/architektur-review">Architektur Review</Link>
             </li>
             <li>
-              <Link href={'/user-centered-design'}>User Centered Design</Link>
+              <Link href="/angebot/persona-workshop">Persona Workshop</Link>
+            </li>
+            <li>
+              <Link href="/angebot/user-centered-design-workshop">
+                User-Centered Design
+              </Link>
             </li>
           </ul>
         </div>
@@ -142,16 +152,13 @@ export default function Footer() {
           </Heading>
           <ul>
             <li>
-              <Link href="/firmenkultur">Less Waste - Firmenkultur </Link>
-            </li>
-            <li>
               <Link href="/holacracy">Holacracy</Link>
             </li>
             <li>
               <Link href="/consulting">Zusammenarbeit</Link>
             </li>
             <li>
-              <Link href="/team">Team</Link>
+              <Link href="/ueber-uns">Team</Link>
             </li>
             <li>
               <Link href="/jobs">Jobs</Link>
@@ -163,12 +170,13 @@ export default function Footer() {
           <Heading level={2} size={4} className="pb-4">
             Rechtliches
           </Heading>
+
           <ul>
             <li>
               <Link href="/impressum">Impressum</Link>
             </li>
             <li>
-              <Link href="/datenschutz">Datenschutz</Link>
+              <Link href="/datenschutzerklaerung">Datenschutz</Link>
             </li>
             <li>
               <Link href="/tracking">Tracking</Link>
