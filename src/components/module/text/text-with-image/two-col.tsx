@@ -3,7 +3,7 @@ import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
 import { ModuleData } from '@/sanity/lib/queries'
 import { cn } from '@/utils/cn'
-import { PortableText } from '@portabletext/react'
+import StyledPortableText from '@/components/styled-portable-text'
 import { vercelStegaCleanAll } from '@sanity/client/stega'
 import { moduleStyleToSectionIntent } from '../../utils'
 
@@ -46,7 +46,7 @@ export default function TextWithImageTwoCol(props: { module: ModuleData }) {
             </Heading>
             {module.content && (
               <div className="flex-1">
-                <PortableText value={module.content} />
+                <StyledPortableText content={module.content} />
               </div>
             )}
           </div>

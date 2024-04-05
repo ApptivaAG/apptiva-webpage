@@ -1,9 +1,7 @@
-import Section from '@/components/section'
 import Heading from '@/components/heading'
-import SanityImage from '@/components/sanity-image'
+import Section from '@/components/section'
 import StyledPortableText from '@/components/styled-portable-text'
 import { ModuleData } from '@/sanity/lib/queries'
-import { PortableText } from '@portabletext/react'
 import { moduleStyleToSectionIntent } from '../utils'
 
 export default function Text(props: { module: ModuleData }) {

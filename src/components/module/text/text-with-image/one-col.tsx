@@ -1,10 +1,8 @@
-import Section from '@/components/section'
 import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
+import Section from '@/components/section'
+import StyledPortableText from '@/components/styled-portable-text'
 import { ModuleData } from '@/sanity/lib/queries'
-import { cn } from '@/utils/cn'
-import { PortableText } from '@portabletext/react'
-import { vercelStegaCleanAll } from '@sanity/client/stega'
 import { moduleStyleToSectionIntent } from '../../utils'
 
 export default function TextWithImageOneCol(props: { module: ModuleData }) {
@@ -27,7 +25,7 @@ export default function TextWithImageOneCol(props: { module: ModuleData }) {
         </Heading>
         {module.content && (
           <div className="pb-8">
-            <PortableText value={module.content} />
+            <StyledPortableText content={module.content} />
           </div>
         )}
         <SanityImage
