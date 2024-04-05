@@ -7,6 +7,7 @@ import Heading from '../heading'
 import SanityImage from '../sanity-image'
 import StyledPortableText from '../styled-portable-text'
 import Button from '../ui/button'
+import NextLink from 'next/link'
 
 export default function PricesImproved(props: { module: ModuleData }) {
   const { module } = props
@@ -77,15 +78,19 @@ export default function PricesImproved(props: { module: ModuleData }) {
                     </div>
                   )}
                 </div>
-                <div className=" flex items-center justify-center p-10 pb-12">
-                  <Button
-                    element="div"
-                    intent={index % 2 ? 'secondary' : 'primary'}
-                    href={price.link}
-                  >
-                    <p>{price.linktext}</p>
-                  </Button>
-                </div>
+                {price.link && (
+                  <div className=" flex items-center justify-center p-10 pb-12">
+                    <NextLink href={price.link} className="hidden md:block">
+                      <Button
+                        element="div"
+                        intent={index % 2 ? 'secondary' : 'primary'}
+                        href={price.link}
+                      >
+                        <p>{price.linktext}</p>
+                      </Button>
+                    </NextLink>
+                  </div>
+                )}
               </div>
             ))}
           </div>
