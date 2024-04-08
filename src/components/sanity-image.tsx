@@ -46,16 +46,14 @@ function getSizes(sizes: string | undefined, size: string | undefined) {
 
   switch (size) {
     case 'content':
-      return '(max-width: 1200px) 100vw, 70rem'
-
     case 'popout':
-      return '(max-width: 1200px) 100vw, 74rem'
+      return '(min-width: 1200px) 1200px, 100vw'
 
     case 'full':
-      return '(max-width: 1200px) 100vw, 100vw'
+      return '(min-width: 1200px) 100vw, 100vw'
 
     default:
-      return '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw'
+      return '(min-width: 768px) 50vw, (min-width: 1200px) 40vw, 100vw'
   }
 }
 

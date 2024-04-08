@@ -31,7 +31,7 @@ export default function TextWithImageOneCol(props: { module: ModuleData }) {
         <SanityImage
           className="popout aspect-square rounded object-cover"
           image={module.image}
-          sizes="(max-width: 1024px) 100vw, 40rem"
+          size="popout"
         />
       </div>
     </Section>

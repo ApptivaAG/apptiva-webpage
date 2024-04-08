@@ -21,7 +21,7 @@ function MdxImage(contentPath: string) {
           alt={props.alt ?? ''}
           width={width}
           height={height}
-          sizes="(max-width: 1024px) 100vw, 1024px"
+          sizes="(max-width: 1200px) 1200px, 100vw"
         />
         {props.title && <figcaption>{props.title}</figcaption>}
       </figure>
