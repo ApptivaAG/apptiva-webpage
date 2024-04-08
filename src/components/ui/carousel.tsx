@@ -19,11 +19,7 @@ type CarouselApi = UseEmblaCarouselType[1]
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>
 type CarouselOptions = UseCarouselParameters[0]
 type CarouselPlugin = UseCarouselParameters[1]
-type CarouselLayout =
-  | 'oneSlide'
-  | 'threeSlidesFadeOut'
-  | 'threeSlides'
-  | 'fiveSlides'
+type CarouselLayout = 'autoWidth' | 'fadeOut'
 
 type CarouselProps = {
   opts?: CarouselOptions
@@ -73,10 +69,11 @@ const Carousel = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> &
     CarouselProps & {
-      layout: CarouselLayout
+      layout?: CarouselLayout
       darkTheme?: boolean
       numberOfSlides: number
       loop?: boolean
+      align?: 'center' | 'start' | 'end'
     }
 >(
   (
@@ -86,10 +83,11 @@ const Carousel = React.forwardRef<
       plugins,
       className,
       children,
-      layout,
+      layout = 'autoWidth',
       darkTheme = false,
       numberOfSlides: slides,
       loop = false,
+      align = 'center',
       ...props
     },
     ref
@@ -97,7 +95,8 @@ const Carousel = React.forwardRef<
     const [carouselRef, api] = useEmblaCarousel(
       {
         loop: loop,
-        align: 'start',
+        align,
+        containScroll: 'keepSnaps',
         ...opts,
       },
       plugins
@@ -297,26 +296,6 @@ const CarouselContent = React.forwardRef<
     newTotalWidth,
     progressBarLine,
   } = useCarousel()
-  let carouselNavigationButton
-  let xlCarouselNavigationButton
-  switch (layout) {
-    case 'oneSlide':
-      carouselNavigationButton = 'w-6/12'
-      break
-    case 'threeSlidesFadeOut':
-      carouselNavigationButton = 'w-[20%]'
-      xlCarouselNavigationButton = 'w-[20%]'
-      break
-    case 'threeSlides':
-      carouselNavigationButton = 'w-[5%]'
-      xlCarouselNavigationButton = 'w-[15%]'
-    case 'fiveSlides':
-      carouselNavigationButton = 'w-[5%]'
-      xlCarouselNavigationButton = 'w-[15%]'
-
-    default:
-      break
-  }
 
   return (
     <>
@@ -328,19 +307,17 @@ const CarouselContent = React.forwardRef<
         onMouseMove={handleMouseMove}
         onMouseEnter={handlePrevButtonHover}
         onMouseLeave={handlePrevButtonLeave}
-        className={`absolute left-0 top-0 z-30 hidden h-full w-6/12 bg-transparent hover:bg-transparent lg:block ${carouselNavigationButton} xl:${xlCarouselNavigationButton}`}
+        className={`absolute left-0 top-0 z-30 hidden h-full w-1/5 bg-transparent hover:bg-transparent lg:block`}
       >
         <span className="sr-only">Nach links</span>
       </Button>
-      {layout == 'threeSlidesFadeOut' && <div className="w-[60%]"> </div>}
-      {layout == 'threeSlides' && <div className="w-[60%]"> </div>}
-      {layout == 'fiveSlides' && <div className="w-[80%]"> </div>}
+      <div className="w-4/5"> </div>
       <Button
         onClick={scrollNext}
         onMouseMove={handleMouseMove}
         onMouseEnter={handleNextButtonHover}
         onMouseLeave={handleNextButtonLeave}
-        className={` absolute right-0 top-0 z-30 hidden h-full w-6/12 bg-transparent hover:bg-transparent lg:block ${carouselNavigationButton} xl:${xlCarouselNavigationButton}`}
+        className={` absolute right-0 top-0 z-30 hidden h-full w-1/5 bg-transparent hover:bg-transparent lg:block`}
       >
         <span className="sr-only">Nach rechts</span>
       </Button>
@@ -394,7 +371,7 @@ const CarouselItem = React.forwardRef<
     layout,
   } = useCarousel()
 
-  if (layout === 'threeSlidesFadeOut') {
+  if (layout === 'fadeOut') {
     return (
       <SlidesFadeOutCarouselItem
         index={index}
@@ -444,7 +421,7 @@ const SlidesFadeOutCarouselItem = React.forwardRef<
       aria-roledescription="slide"
       key={index}
       className={cn(
-        'relative my-20 flex h-[--min-size-mobile] min-w-0 flex-[0_0_100%] shrink-0 grow-0 basis-full md:flex-[0_0_90%] md:pl-[1rem] lg:h-[--min-size] lg:flex-[0_0_60%]',
+        'relative flex h-[--min-size-mobile] min-w-0 shrink-0 grow-0 basis-full md:pl-[1rem] lg:h-[--min-size]',
         className
       )}
       style={

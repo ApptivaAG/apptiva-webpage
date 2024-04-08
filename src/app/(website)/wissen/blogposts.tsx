@@ -30,7 +30,6 @@ export default async function Blogposts(props: {
         {props.children}
         <Carousel
           darkTheme={false}
-          layout="fiveSlides"
           numberOfSlides={last5Posts.length}
           loop={false}
         >

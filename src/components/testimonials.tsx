@@ -9,7 +9,7 @@ const Testimonials = async () => {
     <div className="full">
       <Carousel
         loop={true}
-        layout={'oneSlide'}
+        layout={'autoWidth'}
         numberOfSlides={testimonials.length}
         className="py-14 md:py-16"
       >

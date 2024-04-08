@@ -30,17 +30,17 @@ export default function CardCarousel(props: { module: ModuleData }) {
           )}
         </div>
         <Carousel
-          layout={'threeSlides'}
           numberOfSlides={module.cards?.length || 0}
           loop={true}
+          align="center"
           className="pb-8 md:pb-20"
         >
           <CarouselContent>
             {module.cards?.map((card, index) => (
-              <CarouselItem key={index} index={index}>
+              <CarouselItem key={index} index={index} className="basis-full">
                 <Card
                   key={card._key}
-                  className="content flex flex-col gap-16 md:flex-row"
+                  className="flex h-full flex-col gap-16 md:flex-row"
                   intent={
                     xor(darkBg, card.style !== 'inverted') ? 'dark' : 'light'
                   }
