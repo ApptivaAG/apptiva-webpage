@@ -119,11 +119,17 @@ const Header = q('header')
   })
   .nullable()
 
-export const servicesQuery = q('*').filterByType('service-page').grab$({
-  _id: q.string(),
-  slug: Slug,
-  header: Header,
-})
+export type ServicesQueryData = NonNullable<InferType<typeof servicesQuery>>
+export const servicesQuery = q('*')
+  .filterByType('service-page')
+  .grab$({
+    _id: q.string(),
+    slug: Slug,
+    header: Header,
+    subPageOf: q('subPageOf')
+      .deref()
+      .grab$({ slug: Slug, breadcrumb: q.string().optional() }),
+  })
 
 export type ModuleData = NonNullable<InferType<typeof Modules>>[number]
 const Modules = q('modules')
