@@ -34,19 +34,29 @@ export default function SanityImage({
       width={width}
       height={height}
       placeholder={buildPlaceholder(image, width, height)}
-      sizes={
-        sizes
-          ? sizes
-          : size === 'content'
-            ? '(max-width: 1200px) 100vw, 70rem'
-            : size === 'popout'
-              ? '(max-width: 1200px) 100vw, 74rem'
-              : size === 'full'
-                ? '(max-width: 1200px) 100vw, 100vw'
-                : '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw'
-      }
+      sizes={getSizes(sizes, size)}
     />
   ) : null
+}
+
+function getSizes(sizes: string | undefined, size: string | undefined) {
+  if (sizes) {
+    return sizes
+  }
+
+  switch (size) {
+    case 'content':
+      return '(max-width: 1200px) 100vw, 70rem'
+
+    case 'popout':
+      return '(max-width: 1200px) 100vw, 74rem'
+
+    case 'full':
+      return '(max-width: 1200px) 100vw, 100vw'
+
+    default:
+      return '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw'
+  }
 }
 
 function buildPlaceholder(
