@@ -31,23 +31,22 @@ export default function CardCarousel(props: { module: ModuleData }) {
         </div>
         <Carousel
           numberOfSlides={module.cards?.length || 0}
-          loop={true}
           align="center"
-          className="pb-8 md:pb-20"
+          className="pb-12 md:pb-20"
         >
           <CarouselContent>
             {module.cards?.map((card, index) => (
               <CarouselItem key={index} index={index} className="basis-full">
                 <Card
                   key={card._key}
-                  className="flex h-full flex-col gap-16 md:flex-row"
+                  className="flex h-full flex-col gap-24 md:flex-row"
                   intent={
                     xor(darkBg, card.style !== 'inverted') ? 'dark' : 'light'
                   }
                 >
-                  <div className="relative pl-10 pt-10 lg:py-16 lg:pl-16">
+                  <div className="relative md:pl-10 md:pt-10 lg:py-16 lg:pl-16">
                     <div className="clear-both h-16">
-                      <div className="flex">
+                      <div className="flex gap-2">
                         {card.pill && (
                           <div className="w-full">
                             <div className="inline-block rounded-lg bg-base-white px-4 py-1.5 text-primary">
@@ -57,8 +56,9 @@ export default function CardCarousel(props: { module: ModuleData }) {
                         )}
                         <div className="h-10 lg:hidden">
                           <SanityImage
-                            className="h-full w-full"
                             image={card.image}
+                            className="h-full w-full"
+                            sizes="40px"
                           ></SanityImage>
                         </div>
                       </div>
@@ -73,11 +73,8 @@ export default function CardCarousel(props: { module: ModuleData }) {
                       </div>
                     )}
                   </div>
-                  <div className="hidden lg:block lg:pr-16">
-                    <SanityImage
-                      className="h-full w-full"
-                      image={card.image}
-                    ></SanityImage>
+                  <div className="hidden shrink-0 basis-72 self-center lg:block lg:pr-16">
+                    <SanityImage sizes="224px" image={card.image}></SanityImage>
                   </div>
                 </Card>
               </CarouselItem>

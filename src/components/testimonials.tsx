@@ -13,10 +13,10 @@ const Testimonials = async () => {
         numberOfSlides={testimonials.length}
         className="py-14 md:py-16"
       >
-        <CarouselContent>
+        <CarouselContent className="gap-96">
           {testimonials.map((testimonial, index) => {
             return (
-              <CarouselItem key={index} index={index}>
+              <CarouselItem key={index} index={index} className="basis-full">
                 <Testimonial testimonial={testimonial}></Testimonial>
               </CarouselItem>
             )
