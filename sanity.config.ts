@@ -6,7 +6,7 @@ import { StreamLanguage } from '@codemirror/language'
 import { codeInput } from '@sanity/code-input'
 import { visionTool } from '@sanity/vision'
 import { groqdPlaygroundTool } from 'groqd-playground'
-import { FaAddressCard, FaCog } from 'react-icons/fa'
+import { FaAddressCard, FaHome } from 'react-icons/fa'
 import { defineConfig } from 'sanity'
 import { media } from 'sanity-plugin-media'
 import { presentationTool } from 'sanity/presentation'
@@ -27,14 +27,14 @@ export default defineConfig({
           .title('Content')
           .items([
             S.listItem()
-              .title('Einstellungen')
+              .title('Startseite')
               .child(
                 S.editor()
                   .schemaType('settings')
                   .documentId('settings')
-                  .title('Einstellungen')
+                  .title('Startseite')
               )
-              .icon(FaCog),
+              .icon(FaHome),
             S.listItem()
               .title('Über Apptiva Seite')
               .child(
