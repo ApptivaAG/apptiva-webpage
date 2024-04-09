@@ -41,7 +41,7 @@ export default function RootLayout({
     <html lang="de" className={gentona.className}>
       <body>
         <Navbar />
-        <div className="content">{children}</div>
+        <main className="content">{children}</main>
         <Footer />
         {draftMode().isEnabled && <LiveVisualEditing />}
       </body>
