@@ -30,8 +30,8 @@ export default defineConfig({
               .title('Startseite')
               .child(
                 S.editor()
-                  .schemaType('settings')
-                  .documentId('settings')
+                  .schemaType('homepage')
+                  .documentId('homepage')
                   .title('Startseite')
               )
               .icon(FaHome),
@@ -48,7 +48,7 @@ export default defineConfig({
             // List out the rest of the document types, but filter out the singleton types
             ...S.documentTypeListItems().filter(
               (listItem) =>
-                !['settings', 'about-page'].includes(String(listItem.getId()))
+                !['homepage', 'about-page'].includes(String(listItem.getId()))
             ),
           ]),
     }),

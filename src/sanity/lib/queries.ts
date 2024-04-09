@@ -385,9 +385,9 @@ export const personBySlugQuery = q('*')
       .optional(),
   })
 
-export type SettingsDataQueries = NonNullable<InferType<typeof settingsQuery>>
+export type HomepageDataQueries = NonNullable<InferType<typeof homepageQuery>>
 
-export const settingsQuery = q('*').filterByType('settings').slice(0).grab$({
+export const homepageQuery = q('*').filterByType('homepage').slice(0).grab$({
   claim: q.contentBlocks().optional(),
   modules: Modules,
 })

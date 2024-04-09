@@ -1,4 +1,4 @@
-import { settingsQuery } from '@/sanity/lib/queries'
+import { homepageQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
 import { draftMode } from 'next/headers'
 import Content from './content'
@@ -6,8 +6,8 @@ import HeroPreview from './preview'
 
 export default async function Hero() {
   const { isEnabled } = draftMode()
-  const { draft, published } = await load(settingsQuery, isEnabled, undefined, [
-    'settings',
+  const { draft, published } = await load(homepageQuery, isEnabled, undefined, [
+    'homepage',
   ])
 
   // const { claim } = published ?? { claim: undefined }
