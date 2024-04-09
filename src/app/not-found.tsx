@@ -2,11 +2,12 @@ import Heading from '@/components/heading'
 import RootLayout from './(website)/layout'
 import Button from '@/components/ui/button'
 import Link from 'next/link'
+import Section from '@/components/section'
 
 export default function NotFound() {
   return (
     <RootLayout>
-      <p className="py-20 text-center">
+      <Section className="py-28 text-center">
         <Heading level={1} size={3}>
           Diese Seite gibt es leider nicht...
         </Heading>
@@ -15,7 +16,7 @@ export default function NotFound() {
             Zurück zur Startseite
           </Button>
         </Link>
-      </p>
+      </Section>
     </RootLayout>
   )
 }
