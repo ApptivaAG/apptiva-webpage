@@ -59,8 +59,9 @@ export default async function Knowledge() {
           </div>
         </div>
       </Blogposts>
+
       <Blogposts show="apptiva-lernt">
-        <div className="content space-y-8">
+        <div className="content space-y-4">
           <Heading level={2} size={3}>
             Apptiva lernt
           </Heading>
@@ -68,7 +69,7 @@ export default async function Knowledge() {
             Kleine (technische) Wissenshappen, die wir jede Woche neu dazu
             lernen.
           </p>
-          <div className="pb-8">
+          <div className="pb-8 pt-4">
             <Link href={'/apptiva-lernt/'}>
               <Button element="div" className="inline" intent="secondary">
                 Alle Engineering Posts
