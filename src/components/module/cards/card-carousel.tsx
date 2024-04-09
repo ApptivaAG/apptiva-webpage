@@ -56,9 +56,9 @@ export default function CardCarousel(props: { module: ModuleData }) {
                         )}
                         <div className="h-10 lg:hidden">
                           <SanityImage
-                            className="h-full w-full"
                             image={card.image}
-                            sizes="224px"
+                            className="h-full w-full"
+                            sizes="40px"
                           ></SanityImage>
                         </div>
                       </div>
@@ -73,11 +73,8 @@ export default function CardCarousel(props: { module: ModuleData }) {
                       </div>
                     )}
                   </div>
-                  <div className="hidden shrink-0 basis-72 lg:block lg:pr-16">
-                    <SanityImage
-                      className="h-full w-full"
-                      image={card.image}
-                    ></SanityImage>
+                  <div className="hidden shrink-0 basis-72 self-center lg:block lg:pr-16">
+                    <SanityImage sizes="224px" image={card.image}></SanityImage>
                   </div>
                 </Card>
               </CarouselItem>
