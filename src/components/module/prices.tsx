@@ -30,7 +30,7 @@ export default function PricesImproved(props: { module: ModuleData }) {
               </div>
             )}
           </div>
-          <div className=" grid gap-7 gap-y-14 lg:grid-cols-3">
+          <div className="grid gap-7 gap-y-14 lg:grid-cols-3">
             {props.module.prices?.map((price, index) => (
               <div
                 key={price._key}
@@ -68,7 +68,7 @@ export default function PricesImproved(props: { module: ModuleData }) {
                 </div>
 
                 {/* lower part: always on white bg */}
-                <div className=" m:px-[20%] row-span-2 bg-base-white px-[5%] pt-16 lg:px-4">
+                <div className="m:px-[20%] row-span-2 bg-base-white px-[5%] pt-16 lg:px-4">
                   {price.content && (
                     <div className="self-stretch">
                       <StyledPortableText
@@ -78,9 +78,9 @@ export default function PricesImproved(props: { module: ModuleData }) {
                     </div>
                   )}
                 </div>
-                {price.link && (
-                  <div className=" flex items-center justify-center p-10 pb-12">
-                    <NextLink href={price.link} className="hidden md:block">
+                {price.link ? (
+                  <div className="flex items-center justify-center p-10 pb-12">
+                    <NextLink href={price.link}>
                       <Button
                         element="div"
                         intent={index % 2 ? 'secondary' : 'primary'}
@@ -90,6 +90,8 @@ export default function PricesImproved(props: { module: ModuleData }) {
                       </Button>
                     </NextLink>
                   </div>
+                ) : (
+                  <div className="m-10 mb-12 h-12" />
                 )}
               </div>
             ))}
