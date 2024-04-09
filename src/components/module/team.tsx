@@ -42,8 +42,8 @@ export default function Team(props: { module: ModuleData }) {
                 >
                   <SanityImage
                     image={person.image}
-                    className="-translate-x-2 rounded-lg"
-                  ></SanityImage>
+                    className="aspect-[4/5] -translate-x-2 rounded-lg object-cover"
+                  />
                   <div className="flex-1 pt-6 md:mx-0">
                     <Heading level={4}>{person.personName}</Heading>
                     <Heading level={5}>{person.role}</Heading>
