@@ -396,10 +396,7 @@ const SlideCarouselItem = React.forwardRef<
       ref={ref}
       role="group"
       aria-roledescription="slide"
-      className={cn(
-        'min-w-0 max-w-[76vw] shrink-0 grow-0 basis-auto',
-        className
-      )}
+      className={cn('min-w-0 shrink-0 grow-0 basis-auto', className)}
       {...props}
     />
   )
