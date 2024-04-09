@@ -1,8 +1,8 @@
 import Module from '@/components/module'
-import { SettingsDataQueries } from '@/sanity/lib/queries'
+import { HomepageDataQueries } from '@/sanity/lib/queries'
 
 export default function ModuleWrapper(props: {
-  data: SettingsDataQueries
+  data: HomepageDataQueries
   customers: React.ReactNode
 }) {
   return (

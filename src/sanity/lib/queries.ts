@@ -119,11 +119,17 @@ const Header = q('header')
   })
   .nullable()
 
-export const servicesQuery = q('*').filterByType('service-page').grab$({
-  _id: q.string(),
-  slug: Slug,
-  header: Header,
-})
+export type ServicesQueryData = NonNullable<InferType<typeof servicesQuery>>
+export const servicesQuery = q('*')
+  .filterByType('service-page')
+  .grab$({
+    _id: q.string(),
+    slug: Slug,
+    header: Header,
+    subPageOf: q('subPageOf')
+      .deref()
+      .grab$({ slug: Slug, breadcrumb: q.string().optional() }),
+  })
 
 export type ModuleData = NonNullable<InferType<typeof Modules>>[number]
 const Modules = q('modules')
@@ -379,9 +385,9 @@ export const personBySlugQuery = q('*')
       .optional(),
   })
 
-export type SettingsDataQueries = NonNullable<InferType<typeof settingsQuery>>
+export type HomepageDataQueries = NonNullable<InferType<typeof homepageQuery>>
 
-export const settingsQuery = q('*').filterByType('settings').slice(0).grab$({
+export const homepageQuery = q('*').filterByType('homepage').slice(0).grab$({
   claim: q.contentBlocks().optional(),
   modules: Modules,
 })

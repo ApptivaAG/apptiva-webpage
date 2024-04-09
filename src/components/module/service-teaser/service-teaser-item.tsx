@@ -12,8 +12,8 @@ const ServiceTeaser = ({
 }) => {
   const leftCard = 'lg:col-[full-start/left-end] lg:rounded-l-md'
   const rightCard = 'lg:col-[right-start/full-end] lg:rounded-r-md'
-  const leftContent = 'lg:col-left lg:pr-20'
-  const rightContent = 'lg:col-right lg:pl-20'
+  const leftContent = 'pr-12 lg:col-left lg:pr-20'
+  const rightContent = 'pl-12 lg:col-right lg:pl-20'
 
   return (
     <div className="content middle-grid">
@@ -26,7 +26,7 @@ const ServiceTeaser = ({
       <div
         className={
           (rowNumber % 2 ? rightContent : leftContent) +
-          ' col-[full] row-start-1 flex flex-col justify-center align-middle text-primary max-lg:p-12'
+          ' col-[full] row-start-1 flex flex-col justify-center py-12 align-middle text-primary max-lg:p-12'
         }
       >
         <Heading level={2} size={3} className="pb-4 lg:pb-6">
@@ -46,7 +46,7 @@ const ServiceTeaser = ({
         {service.illustration && (
           <SanityImage
             image={service.illustration}
-            className="max-size-[27rem] object-cover object-center"
+            className="max-size-[27rem] aspect-square object-contain object-center"
           />
         )}
       </div>

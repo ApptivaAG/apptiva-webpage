@@ -6,7 +6,7 @@ import { StreamLanguage } from '@codemirror/language'
 import { codeInput } from '@sanity/code-input'
 import { visionTool } from '@sanity/vision'
 import { groqdPlaygroundTool } from 'groqd-playground'
-import { FaAddressCard, FaCog } from 'react-icons/fa'
+import { FaAddressCard, FaHome } from 'react-icons/fa'
 import { defineConfig } from 'sanity'
 import { media } from 'sanity-plugin-media'
 import { presentationTool } from 'sanity/presentation'
@@ -27,14 +27,14 @@ export default defineConfig({
           .title('Content')
           .items([
             S.listItem()
-              .title('Einstellungen')
+              .title('Startseite')
               .child(
                 S.editor()
-                  .schemaType('settings')
-                  .documentId('settings')
-                  .title('Einstellungen')
+                  .schemaType('homepage')
+                  .documentId('homepage')
+                  .title('Startseite')
               )
-              .icon(FaCog),
+              .icon(FaHome),
             S.listItem()
               .title('Über Apptiva Seite')
               .child(
@@ -48,7 +48,7 @@ export default defineConfig({
             // List out the rest of the document types, but filter out the singleton types
             ...S.documentTypeListItems().filter(
               (listItem) =>
-                !['settings', 'about-page'].includes(String(listItem.getId()))
+                !['homepage', 'about-page'].includes(String(listItem.getId()))
             ),
           ]),
     }),

@@ -100,7 +100,7 @@ export default async function Home(props: { params: { slug: string } }) {
                 placeholder="blur"
                 blurDataURL={post.image.base64}
                 alt=""
-                sizes="(max-width: 1200px) 100vw, 74rem"
+                sizes="(min-width: 1200px) 1200px, 100vw"
               />
             )}
             {post.kind === 'cms' && post.image && (

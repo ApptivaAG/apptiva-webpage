@@ -77,9 +77,6 @@ export default function Footer() {
           <p>
             <Link href={'/datenschutzerklaerung'}>Datenschutzerklärung</Link>
           </p>
-          <p>
-            <Link href={'/tracking'}>Tracking</Link>
-          </p>
         </div>
       </div>
       <p className="mx-auto my-16 max-w-[47rem] px-12 text-3xl font-bold text-base-white md:text-4xl lg:text-6xl">
@@ -177,9 +174,6 @@ export default function Footer() {
             </li>
             <li>
               <Link href="/datenschutzerklaerung">Datenschutz</Link>
-            </li>
-            <li>
-              <Link href="/tracking">Tracking</Link>
             </li>
           </ul>
         </div>

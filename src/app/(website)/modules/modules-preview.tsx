@@ -2,15 +2,15 @@
 
 import { QueryResponseInitial, useQuery } from '@sanity/react-loader'
 
-import { SettingsDataQueries, settingsQuery } from '@/sanity/lib/queries'
+import { HomepageDataQueries, homepageQuery } from '@/sanity/lib/queries'
 import ModuleWrapper from './modules'
 
 export default function ModulesPreview(props: {
-  initial: QueryResponseInitial<SettingsDataQueries>
+  initial: QueryResponseInitial<HomepageDataQueries>
   customers: React.ReactNode
 }) {
-  const { data } = useQuery<SettingsDataQueries>(
-    settingsQuery.query,
+  const { data } = useQuery<HomepageDataQueries>(
+    homepageQuery.query,
     undefined,
     {
       initial: props.initial,
