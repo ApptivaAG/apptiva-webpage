@@ -27,29 +27,52 @@ export default async function Knowledge() {
   )
 
   const lead =
-    'In unseren wöchentlichen Wissensaustausch-Sitzungen vermitteln wir untereinander abwechselnd neues Wissen. Unser Ziel ist es, dieses Wissen zu teilen und nicht für uns zu behalten. Deshalb haben wir es für dich aufgeschrieben: Durchstöbere unsere Blogposts, erweitere deinen Wortschatz mit unserem Glossar oder finde Antworten auf deine Fragen in unserem FAQ. Drückt der Schuh bei einem Thema, das wir noch nicht behandelt haben, kontaktiere uns gerne - wir sind möglicherweise in der Lage, dir weiterzuhelfen.'
+    'In unseren wöchentlichen Wissensaustausch-Sitzungen vermitteln wir untereinander abwechselnd neues Wissen. Unser Ziel ist es, dieses Wissen zu teilen und nicht für uns zu behalten. Deshalb haben wir es für dich aufgeschrieben.'
 
   return (
     <>
       <PageHeader
         title={
           <>
-            Wissen wird bei uns{' '}
-            <Underline className="uppercase">gross</Underline> geschrieben
+            <Underline>Wissen</Underline> wird bei uns{' '}
+            <Underline>gross</Underline> geschrieben.
           </>
         }
         lead={lead}
         links={[{ name: 'Wissen', href: '/wissen' }]}
       />
       <Blogposts show="blog">
-        <div className="content space-y-8">
+        <div className="content space-y-4">
           <Heading level={2} size={3}>
             Neueste Blogposts
           </Heading>
-          <div>
+          <p>
+            Wissenswertes über Chatbots, Softwareentwicklung und alles Mögliche
+            aus der Apptiva Welt.
+          </p>
+          <div className=" pb-8 pt-4">
             <Link href={'/blog/'}>
-              <Button element="div" className="inline">
+              <Button element="div" className="inline" intent="secondary">
                 Alle Blogposts
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </Blogposts>
+
+      <Blogposts show="apptiva-lernt">
+        <div className="content space-y-4">
+          <Heading level={2} size={3}>
+            Apptiva lernt
+          </Heading>
+          <p>
+            Kleine (technische) Wissenshappen, die wir jede Woche neu dazu
+            lernen.
+          </p>
+          <div className="pb-8 pt-4">
+            <Link href={'/apptiva-lernt/'}>
+              <Button element="div" className="inline" intent="secondary">
+                Alle Engineering Posts
               </Button>
             </Link>
           </div>
@@ -66,24 +89,6 @@ export default async function Knowledge() {
           <Glossar data={glossaryPublished} />
         </>
       )}
-      <Blogposts show="apptiva-lernt">
-        <div className="content space-y-8">
-          <Heading level={2} size={3}>
-            Apptiva lernt
-          </Heading>
-          <p>
-            Kleine (technische) Wissenshappen, die wir jede Woche neu dazu
-            lernen.
-          </p>
-          <div>
-            <Link href={'/apptiva-lernt/'}>
-              <Button element="div" className="inline">
-                Alle Engineering Posts
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </Blogposts>
     </>
   )
 }

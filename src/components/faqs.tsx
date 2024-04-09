@@ -1,4 +1,4 @@
-import { FAQQueryData, FAQQueryModuleData } from '@/sanity/lib/queries'
+import { FAQQueryModuleData } from '@/sanity/lib/queries'
 import StyledPortableText from './styled-portable-text'
 import {
   Accordion,
@@ -7,12 +7,19 @@ import {
   AccordionTrigger,
 } from './ui/accordion'
 
-const FAQsComponent = (props: { faqs: FAQQueryModuleData }) => {
-  const { faqs } = props
+const FAQsComponent = (props: {
+  faqs: FAQQueryModuleData
+  width?: 'full' | 'col'
+}) => {
+  const { faqs, width } = props
+  const colContainer =
+    width?.includes('col') || width === undefined ? 'col-right' : ''
+  const col = width?.includes('col') || width === undefined ? 'max-w-lg' : ''
+
   return (
     <>
-      <div className="col-right mt-4">
-        <div className="w-full max-w-lg">
+      <div className={`${colContainer} mt-4 `}>
+        <div className={`w-full ${col}`}>
           <Accordion type="single" collapsible className="w-full">
             {faqs?.map((faq) => (
               <AccordionItem

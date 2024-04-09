@@ -14,7 +14,8 @@ export default function Glossar(props: { data: GlossaryQueryData }) {
           </Heading>
           <div className="col-right max-lg:mt-4">
             <p>
-              Hier kommt der <u>Glossar</u> Titel Text
+              Hier haben wir alle wichtigen Fachbegriffe rund um die Themen
+              Chatbot und Conversational AI für dich zusammengestellt.
             </p>
           </div>
           {glossaryEntries && (
