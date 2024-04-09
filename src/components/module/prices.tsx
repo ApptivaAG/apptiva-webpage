@@ -49,12 +49,12 @@ export default function PricesImproved(props: { module: ModuleData }) {
                   {price.isFavourite && (
                     <div
                       className={cn(
-                        'absolute -top-6 line-clamp-2 flex justify-items-center rounded-full  bg-primary  px-7 py-3 text-base-white',
+                        'absolute -top-6 line-clamp-2 flex justify-items-center rounded-full bg-primary  px-7 py-3 text-base-white',
                         !(index % 2) && ' border bg-primary'
                       )}
                     >
-                      <TbUserHeart className=" h-5 w-5 shrink-0 transition-transform duration-200" />
-                      <div className=" pl-2">Favorit</div>
+                      <TbUserHeart className="h-5 w-5 shrink-0 transition-transform duration-200" />
+                      <div className="pl-2">Favorit</div>
                     </div>
                   )}
                   <Heading level={4} size={4} className="gap-6 pb-2">
@@ -68,7 +68,7 @@ export default function PricesImproved(props: { module: ModuleData }) {
                 </div>
 
                 {/* lower part: always on white bg */}
-                <div className="m:px-[20%] row-span-2 bg-base-white px-[5%] pt-16 lg:px-4">
+                <div className="row-span-2 rounded-lg bg-base-white px-[5%] pb-8 pt-16 md:px-[20%] lg:px-4">
                   {price.content && (
                     <div className="self-stretch">
                       <StyledPortableText
@@ -79,7 +79,7 @@ export default function PricesImproved(props: { module: ModuleData }) {
                   )}
                 </div>
                 {price.link ? (
-                  <div className="flex items-center justify-center p-10 pb-12">
+                  <div className="flex items-center justify-center px-10 pb-12 pt-2">
                     <NextLink href={price.link}>
                       <Button
                         element="div"
@@ -91,7 +91,7 @@ export default function PricesImproved(props: { module: ModuleData }) {
                     </NextLink>
                   </div>
                 ) : (
-                  <div className="m-10 mb-12 h-12" />
+                  <div className="mx-10 mb-12 mt-2 hidden h-12 md:block" />
                 )}
               </div>
             ))}
