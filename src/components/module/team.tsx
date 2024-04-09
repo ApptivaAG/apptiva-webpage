@@ -27,6 +27,7 @@ export default function Team(props: { module: ModuleData }) {
       </div>
       <Carousel
         darkTheme={false}
+        align="start"
         numberOfSlides={module.persons.length}
         className="full pb-20"
       >

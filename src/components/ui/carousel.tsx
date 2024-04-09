@@ -34,14 +34,6 @@ type CarouselContextProps = {
   darkTheme: boolean
   scrollPrev: () => void
   scrollNext: () => void
-  handlePrevButtonHover: () => void
-  handlePrevButtonLeave: () => void
-  handleNextButtonHover: () => void
-  handleNextButtonLeave: () => void
-  isPrevButtonHovered: boolean
-  isNextButtonHovered: boolean
-  handleMouseMove: (event: any) => void
-  mousePos: { x: string; y: string }
   transitionValues: number[]
   sizeValue: number[]
   progressBarSize: number
@@ -150,38 +142,11 @@ const Carousel = React.forwardRef<
       }
     }, [api, onSelect])
 
-    const [mousePos, setMousePos] = React.useState({ x: '', y: '' })
-    const [isPrevButtonHovered, setIsPrevButtonHovered] = React.useState(false)
-    const [isNextButtonHovered, setIsNextButtonHovered] = React.useState(false)
-
-    const handlePrevButtonHover = React.useCallback(() => {
-      setIsPrevButtonHovered(true)
-    }, [])
-
-    const handlePrevButtonLeave = React.useCallback(() => {
-      setIsPrevButtonHovered(false)
-    }, [])
-    const handleNextButtonHover = React.useCallback(() => {
-      setIsNextButtonHovered(true)
-    }, [])
-
-    const handleNextButtonLeave = React.useCallback(() => {
-      setIsNextButtonHovered(false)
-    }, [])
-
-    const handleMouseMove = React.useCallback(
-      (event: any) => {
-        setMousePos({ x: event.clientX, y: event.clientY })
-      },
-      [setMousePos]
-    )
-
     const [transitioinValues, setTransitioinValues] = React.useState<number[]>(
       []
     )
     const [sizeValue, setSizeValue] = React.useState<number[]>([])
     const [scrollProgress, setScrollProgress] = React.useState(0)
-    // const [emblaRef, emblaApi] = useEmblaCarousel()
 
     const onScroll = React.useCallback((emblaApi: any) => {
       const progress = Math.max(0, Math.min(1, emblaApi.scrollProgress()))
@@ -241,14 +206,6 @@ const Carousel = React.forwardRef<
           darkTheme,
           scrollPrev,
           scrollNext,
-          handlePrevButtonHover,
-          handlePrevButtonLeave,
-          handleNextButtonHover,
-          handleNextButtonLeave,
-          isPrevButtonHovered,
-          isNextButtonHovered,
-          handleMouseMove,
-          mousePos,
           transitionValues: transitioinValues,
           sizeValue,
           progressBarSize,
@@ -277,84 +234,16 @@ const CarouselContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
-  const {
-    carouselRef,
-    layout,
-    scrollPrev,
-    scrollNext,
-    handlePrevButtonHover,
-    handlePrevButtonLeave,
-    handleNextButtonHover,
-    handleNextButtonLeave,
-    isPrevButtonHovered,
-    isNextButtonHovered,
-    handleMouseMove,
-    mousePos,
-    sizeValue,
-    progressBarSize,
-    scrollProgress,
-    newTotalWidth,
-    progressBarLine,
-  } = useCarousel()
+  const { carouselRef } = useCarousel()
 
   return (
-    <>
-      <div ref={carouselRef} className="content overflow-hidden">
+    <div className="group relative">
+      <div ref={carouselRef} className="content overflow-clip">
         <div ref={ref} className={cn('flex gap-4', className)} {...props} />
       </div>
-      <Button
-        onClick={scrollPrev}
-        onMouseMove={handleMouseMove}
-        onMouseEnter={handlePrevButtonHover}
-        onMouseLeave={handlePrevButtonLeave}
-        className={`absolute left-0 top-0 z-30 hidden h-full w-1/5 bg-transparent hover:bg-transparent lg:block`}
-      >
-        <span className="sr-only">Nach links</span>
-      </Button>
-      <div className="w-4/5"> </div>
-      <Button
-        onClick={scrollNext}
-        onMouseMove={handleMouseMove}
-        onMouseEnter={handleNextButtonHover}
-        onMouseLeave={handleNextButtonLeave}
-        className={` absolute right-0 top-0 z-30 hidden h-full w-1/5 bg-transparent hover:bg-transparent lg:block`}
-      >
-        <span className="sr-only">Nach rechts</span>
-      </Button>
-      <div
-        className="fixed left-[--mousePosX] top-[--mousePosY] z-20 h-24 w-24 -translate-x-1/2 -translate-y-1/2 bg-transparent opacity-[--iconOpacity] transition-opacity duration-500 ease-in"
-        style={
-          {
-            '--mousePosX': `${mousePos.x}px`,
-            '--mousePosY': `${mousePos.y}px`,
-            '--iconOpacity': isPrevButtonHovered || isNextButtonHovered ? 1 : 0,
-          } as React.CSSProperties
-        }
-      >
-        <Image
-          src={
-            isPrevButtonHovered
-              ? carouselNavigationLeftIcon
-              : carouselNavigationRightIcon
-          }
-          alt="Carousel Navigations Icon"
-        />
-      </div>
-      <div className=" content absolute bottom-8 left-0 right-0 z-10 mx-auto h-1 max-w-full overflow-hidden rounded bg-transparent">
-        <div
-          className="absolute bottom-0 left-[--leftScrollOffset] top-0 z-20 w-[--progressBarSize] rounded bg-secondary"
-          style={
-            {
-              '--progressBarSize': `${progressBarSize}%`,
-              '--leftScrollOffset': `${(scrollProgress / 100) * newTotalWidth}%`,
-            } as React.CSSProperties
-          }
-        ></div>
-        <div
-          className={`absolute bottom-10 left-0 right-0 top-1/2 z-10 h-[1px] w-full -translate-y-1/2 overflow-hidden rounded ${progressBarLine}`}
-        ></div>
-      </div>
-    </>
+      <ProgressBar />
+      <NavigationButtons />
+    </div>
   )
 })
 CarouselContent.displayName = 'CarouselContent'
@@ -365,11 +254,7 @@ const CarouselItem = React.forwardRef<
     index: number
   }
 >(({ className, index, ...props }, ref) => {
-  const {
-    transitionValues: transitioinValues,
-    sizeValue,
-    layout,
-  } = useCarousel()
+  const { layout } = useCarousel()
 
   if (layout === 'fadeOut') {
     return (
@@ -377,8 +262,6 @@ const CarouselItem = React.forwardRef<
         index={index}
         ref={ref}
         className={className}
-        transitioinValues={transitioinValues}
-        sizeValue={sizeValue}
         {...props}
       />
     )
@@ -410,10 +293,9 @@ const SlidesFadeOutCarouselItem = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & {
     index: number
-    transitioinValues: number[]
-    sizeValue: number[]
   }
->(({ className, index, transitioinValues, sizeValue, ...props }, ref) => {
+>(({ className, index, ...props }, ref) => {
+  const { transitionValues: transitioinValues, sizeValue } = useCarousel()
   return (
     <div
       ref={ref}
@@ -452,5 +334,50 @@ const SlidesFadeOutCarouselItem = React.forwardRef<
   )
 })
 SlidesFadeOutCarouselItem.displayName = 'SlidesFadeOutCarouselItem'
+
+function NavigationButtons() {
+  const { scrollPrev, scrollNext } = useCarousel()
+  return (
+    <div className="pointer-events-none absolute inset-0 hidden h-full overflow-clip lg:block">
+      <div className="content h-full items-center justify-items-center *:pointer-events-auto *:size-24 *:overflow-clip *:rounded-full *:p-0">
+        <Button
+          onClick={scrollPrev}
+          className="col-[full-start] bg-transparent opacity-0 transition-opacity hover:bg-transparent hover:!opacity-95 group-hover:opacity-60"
+        >
+          <Image src={carouselNavigationLeftIcon} alt="Links" />{' '}
+        </Button>
+        <Button
+          onClick={scrollNext}
+          className="col-[feature-end] bg-transparent opacity-0 transition-opacity hover:bg-transparent hover:!opacity-95 group-hover:opacity-60"
+        >
+          <Image src={carouselNavigationRightIcon} alt="Rechts" />
+        </Button>
+      </div>
+    </div>
+  )
+}
+
+function ProgressBar() {
+  const { progressBarSize, scrollProgress, newTotalWidth, progressBarLine } =
+    useCarousel()
+  return (
+    <div className="content mt-8 h-2 items-center overflow-hidden rounded bg-transparent">
+      <div
+        className={`col-[content] row-[1/1] h-[1px] w-full overflow-hidden rounded ${progressBarLine}`}
+      />
+      <div className="relative col-[content] row-[1/1] h-1">
+        <div
+          className="absolute left-[--leftScrollOffset] h-full w-[--progressBarSize] rounded bg-secondary"
+          style={
+            {
+              '--progressBarSize': `${progressBarSize}%`,
+              '--leftScrollOffset': `${(scrollProgress / 100) * newTotalWidth}%`,
+            } as React.CSSProperties
+          }
+        />
+      </div>
+    </div>
+  )
+}
 
 export { Carousel, CarouselContent, CarouselItem, type CarouselApi }
