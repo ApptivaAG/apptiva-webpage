@@ -302,6 +302,17 @@ export const glossaryQuery = q('*')
     summary: q.contentBlocks().optional(),
     modules: Modules,
     tags: Tags,
+    header: Header,
+    content: q
+      .contentBlocks({
+        markDefs: q.object({
+          _type: q.literal('code'),
+          language: q.string(),
+          _key: q.string(),
+          code: q.string(),
+        }),
+      })
+      .optional(),
   })
   .order('title asc')
 
@@ -316,6 +327,17 @@ export const glossaryBySlugQuery = q('*')
     summary: q.contentBlocks().optional(),
     modules: Modules,
     tags: Tags,
+    header: Header,
+    content: q
+      .contentBlocks({
+        markDefs: q.object({
+          _type: q.literal('code'),
+          language: q.string(),
+          _key: q.string(),
+          code: q.string(),
+        }),
+      })
+      .optional(),
   })
 
 export type FAQQueryData = NonNullable<InferType<typeof faqsQuery>>

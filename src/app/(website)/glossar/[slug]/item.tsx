@@ -19,7 +19,7 @@ export default function Item(props: {
           <BreadCrumb
             className="pb-6"
             links={[
-              { name: 'Glossar', href: '' },
+              { name: 'Glossar', href: '/glossar' },
               {
                 name: glossary.title ?? 'Glossar',
                 href: `/glossar/${glossary.slug}`,
@@ -35,6 +35,10 @@ export default function Item(props: {
         </div>
       </header>
 
+      {/* todo: 
+          - add glossary text analog to blog       
+          - use BlogPortableText (mabye rename it)
+       */}
       {glossary.modules?.map((module) => (
         <Module key={module._key} module={module} customers={undefined} />
       ))}
