@@ -32,12 +32,11 @@ export async function generateMetadata(props: {
   const post = (await getPostBySlug(paramsSlug)) ?? notFound()
 
   return {
-    title: post.title,
-    description: post.description,
+    title: `${post.meta.title} | Blog`,
+    description: post.meta.description,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
-      title: post.title,
-      description: post.description,
+      title: post.meta.title,
       type: 'article',
       images: [
         {

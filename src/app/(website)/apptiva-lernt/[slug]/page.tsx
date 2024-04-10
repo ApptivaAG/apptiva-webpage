@@ -24,10 +24,11 @@ export async function generateMetadata(props: {
   const post = (await getPostBySlug(paramsSlug)) ?? notFound()
 
   return {
-    title: post.title,
-    description: post.description,
+    title: `${post.meta.title} | Apptiva lernt`,
+    description: post.meta.description,
     alternates: { canonical: `/apptiva-lernt/${post.slug}` },
     openGraph: {
+      title: post.meta.title,
       type: 'article',
       publishedTime: post.publishDate,
     },

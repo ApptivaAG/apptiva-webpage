@@ -8,6 +8,7 @@ export interface Blog {
   author: string | Author
   publishDate: string
   tags?: string[]
+  meta: { title: string; description: string }
 }
 
 export type Author = {
