@@ -1,9 +1,6 @@
-const portableTextToString = (
-  portableText: { children: { text: string }[] }[] | undefined
-) => {
-  if (!portableText) {
-    return undefined
-  }
+function portableTextToString(
+  portableText: { children: { text: string }[] }[]
+) {
   return portableText
     .flatMap((block: { children: { text: string }[] }) =>
       block.children.map((child) => child.text)

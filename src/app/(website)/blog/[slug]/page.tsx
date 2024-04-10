@@ -5,7 +5,6 @@ import MdxImage from '@/components/mdx-image'
 import SanityImage from '@/components/sanity-image'
 import { getPostBySlug, getPosts, hasTag } from '@/utils/blog'
 import { kebabCaseToTitleCase } from '@/utils/format'
-import portableTextToString from '@/utils/portable-text-to-string'
 import remarkEmbedder from '@remark-embedder/core'
 import oembedTransformer from '@remark-embedder/transformer-oembed'
 import { Code } from 'bright'
@@ -33,13 +32,12 @@ export async function generateMetadata(props: {
   const post = (await getPostBySlug(paramsSlug)) ?? notFound()
 
   return {
-    title:
-      typeof post.title === 'string'
-        ? post.title
-        : portableTextToString(post.title),
+    title: post.title,
     description: post.description,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
+      title: post.title,
+      description: post.description,
       type: 'article',
       images: [
         {
@@ -69,16 +67,7 @@ export default async function Home(props: { params: { slug: string } }) {
               },
             ]}
           />
-          <Heading level={1}>
-            <span
-              dangerouslySetInnerHTML={{
-                __html:
-                  typeof post.title === 'string'
-                    ? post.title
-                    : portableTextToString(post.title),
-              }}
-            />
-          </Heading>
+          <Heading level={1}>{post.title}</Heading>
           <p className="max-w-xl pt-6 text-xl">{post.description}</p>
           <p className="pt-2 text-lg text-base-white/60">
             Publiziert am{' '}
