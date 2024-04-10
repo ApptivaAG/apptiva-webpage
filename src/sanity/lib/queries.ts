@@ -124,6 +124,7 @@ export const servicesQuery = q('*')
   .filterByType('service-page')
   .grab$({
     _id: q.string(),
+    _updatedAt: q.string(),
     slug: Slug,
     header: Header,
     subPageOf: q('subPageOf')
@@ -223,6 +224,7 @@ export const projectsQuery = q('*')
   .filterByType('project')
   .grab$({
     _id: q.string(),
+    _updatedAt: q.string(),
     projectName: q.string().optional(),
     image: sanityImageWithAlt(),
     slug: Slug,
