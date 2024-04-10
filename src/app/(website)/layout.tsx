@@ -5,6 +5,7 @@ import Navbar from './../../components/Navbar'
 import './globals.css'
 import { draftMode } from 'next/headers'
 import LiveVisualEditing from '@/components/live-visual-editing'
+import { description, rootUrl, title } from '../env'
 
 const gentona = localFont({
   src: [
@@ -27,9 +28,20 @@ const gentona = localFont({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://apptiva.ch'),
-  title: 'Apptiva AG',
-  description: 'Webseite der Apptiva AG',
+  metadataBase: new URL(rootUrl),
+  title: {
+    template: `%s | ${title}`,
+    default: title,
+  },
+  description: description,
+  openGraph: {
+    title: title,
+    description: description,
+    url: rootUrl,
+    siteName: title,
+    locale: 'de_CH',
+    type: 'website',
+  },
 }
 
 export default function RootLayout({
