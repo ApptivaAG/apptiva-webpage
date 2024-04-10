@@ -13,13 +13,13 @@ export default async function Glossary() {
   ])
 
   return (
-    <div className="container mx-auto px-4">
+    <>
       <Heading level={2}>Glossar</Heading>
       {draftMode().isEnabled ? (
         <GlossaryPreview initial={glossary.draft} />
       ) : (
         <GlossaryList data={glossary.published} />
       )}
-    </div>
+    </>
   )
 }
