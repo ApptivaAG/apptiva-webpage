@@ -49,6 +49,7 @@ const config: Config = {
       },
       black: colors.black,
       transparent: colors.transparent,
+      inherit: colors.inherit,
     },
     borderRadius: {
       none: '0',
