@@ -1,4 +1,4 @@
-import { projectBySlugQuery } from '@/sanity/lib/queries'
+import { projectBySlugQuery, projectsQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
 import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
@@ -16,15 +16,25 @@ export async function generateMetadata(props: {
     ['project']
   )
 
+  const url = `/projekte/${project.slug}`
+
   return {
     title: `${project.projectName ?? 'Projekt'} | Projekte`,
     description: project.description ?? 'Ohne Beschreibung',
-    alternates: { canonical: project.slug },
+    alternates: { canonical: url },
     openGraph: {
       title: project.projectName ?? 'Projekt',
-      url: project.slug,
+      url,
     },
   }
+}
+
+export async function generateStaticParams() {
+  const { published: projects } = await load(projectsQuery, false, undefined, [
+    'project',
+  ])
+
+  return projects?.map(({ slug }) => ({ slug }))
 }
 
 export default async function Home(props: { params: { slug: string } }) {
