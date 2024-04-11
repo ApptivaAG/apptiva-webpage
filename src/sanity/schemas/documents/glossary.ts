@@ -12,11 +12,6 @@ export default defineType({
       type: 'header',
     }),
     defineField({
-      name: 'title',
-      title: 'Titel (nicht mehr verwenden -> Header Titel verwenden)',
-      type: 'string',
-    }),
-    defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -57,12 +52,6 @@ export default defineType({
       ],
     }),
     defineField({
-      name: 'modules',
-      title: 'Module (Nicht mehr verwenden -> Inhalt stattdessen',
-      type: 'array',
-      of: [{ type: 'module' }],
-    }),
-    defineField({
       name: 'tags',
       title: 'Tags',
       type: 'array',
@@ -77,13 +66,12 @@ export default defineType({
   preview: {
     select: {
       title: 'header.title',
-      oldTitel: 'title',
     },
     prepare(selection) {
       return {
         title: selection.title
           ? portableTextToString(selection.title)
-          : selection.oldTitel,
+          : 'No titel',
       }
     },
   },

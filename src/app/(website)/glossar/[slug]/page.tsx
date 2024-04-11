@@ -18,15 +18,18 @@ export async function generateMetadata(props: {
   )
 
   const url = `/glossar/${glossary.slug}`
+  const title = glossary.header?.title
+    ? portableTextToString(glossary.header.title)
+    : 'Glossareintrag'
 
   return {
-    title: `${glossary.title ?? 'Ohne Titel'} | Glossar`,
+    title: `${title} | Glossar`,
     description: glossary.summary
       ? portableTextToString(glossary.summary)
       : 'Ohne Zusammenfassung',
     alternates: { canonical: url },
     openGraph: {
-      title: glossary.title ?? 'Ohne Titel',
+      title,
       url,
     },
   }

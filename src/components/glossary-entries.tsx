@@ -23,11 +23,11 @@ const GlossaryComponent = (props: { glossaryEntries: GlossaryQueryData }) => {
                 <AccordionTrigger>
                   {ge.header?.title
                     ? portableTextToString(ge.header.title)
-                    : ge.title}
+                    : 'Kein Titel'}
                 </AccordionTrigger>
                 <AccordionContent>
                   {ge.summary && <StyledPortableText content={ge.summary} />}
-                  {(ge.content || ge.modules) && (
+                  {ge.content && (
                     <div className="pt-4">
                       <Link href={`/glossar/${ge.slug}`}>
                         <UnderlineForLink>mehr erfahren →</UnderlineForLink>

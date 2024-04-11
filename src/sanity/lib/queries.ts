@@ -302,11 +302,9 @@ export type GlossaryQueryData = NonNullable<InferType<typeof glossaryQuery>>
 export const glossaryQuery = q('*').filterByType('glossary').grab$({
   _id: q.string(),
   header: Header,
-  title: q.string().optional(),
   slug: Slug,
   summary: q.contentBlocks().optional(),
   content: q.contentBlocks().optional(),
-  modules: Modules,
   tags: Tags,
 })
 
@@ -317,11 +315,9 @@ export const glossaryBySlugQuery = q('*')
   .grab$({
     _id: q.string(),
     header: Header,
-    title: q.string().optional(),
     slug: Slug,
     summary: q.contentBlocks().optional(),
     content: q.contentBlocks().optional(),
-    modules: Modules,
     tags: Tags,
   })
 

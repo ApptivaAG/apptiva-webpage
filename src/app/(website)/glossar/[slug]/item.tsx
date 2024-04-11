@@ -14,11 +14,11 @@ export default function Item(props: {
 
   const title = glossary.header?.title
     ? portableTextToString(glossary.header.title)
-    : glossary.title ?? 'Glossar'
+    : 'Glossar'
   return (
     <>
       <PageHeader
-        title={glossary.header?.title ?? glossary.title}
+        title={glossary.header?.title ?? 'Glossar'}
         lead={glossary.summary ?? glossary.header?.lead}
         image={glossary.header?.image}
         links={[
@@ -30,19 +30,13 @@ export default function Item(props: {
         ]}
       />
 
-      {glossary.content ? (
+      {glossary.content && (
         <div className="py-16">
           <div className="prose prose-lg">
             <GlossaryPortableText content={glossary.content} />
           </div>
         </div>
-      ) : glossary.modules ? (
-        <div className="py-16">
-          {glossary.modules?.map((module) => (
-            <Module key={module._key} module={module} customers={undefined} />
-          ))}
-        </div>
-      ) : null}
+      )}
     </>
   )
 }
