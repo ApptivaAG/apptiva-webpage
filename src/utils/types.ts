@@ -26,6 +26,7 @@ export interface CmsBlog extends Blog {
   kind: 'cms'
   content: CmsContent
   breadcrumb?: string | undefined
+  modifiedDate: string
   image: SanityImageWithAlt | undefined
 }
 

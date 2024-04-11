@@ -3,19 +3,63 @@ import Testimonials from '@/components/testimonials'
 import { serviceBySlugQuery, servicesQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
 import type { Group } from '@/utils/customers'
+import portableTextToString from '@/utils/portable-text-to-string'
+import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
+import { notFound } from 'next/navigation'
 import ServiceDetail from './detail'
 import ServicePreview from './preview'
-import { notFound } from 'next/navigation'
 
 export async function generateStaticParams() {
   const { published: services } = await load(servicesQuery, false, undefined, [
     'service-page',
   ])
 
-  return services.map(({ slug, subPageOf }) => ({
+  return services?.map(({ slug, subPageOf }) => ({
     slug: subPageOf ? [subPageOf.slug, slug] : [slug],
   }))
+}
+
+export async function generateMetadata(props: {
+  params: { slug: string[] }
+}): Promise<Metadata> {
+  const { published: service } = await load(
+    serviceBySlugQuery,
+    false,
+    getLastParam(props.params),
+    ['service-page']
+  )
+
+  const url = service.subPageOf
+    ? `/angebot/${service.subPageOf.slug}/${service.slug}`
+    : `/angebot/${service.slug}`
+
+  const headerTitle = service.header?.title
+    ? portableTextToString(service.header?.title)
+    : undefined
+
+  const currentPageTitle =
+    service.header?.meta?.title ??
+    service.breadcrumb ??
+    headerTitle ??
+    'Angebot'
+
+  return {
+    title: `${[currentPageTitle, service.subPageOf?.breadcrumb].filter(Boolean).join(' | ')} | Angebot`,
+    description: service.header?.lead ?? 'Ohne Beschreibung',
+    alternates: { canonical: url },
+    openGraph: {
+      title: service.header?.meta?.title ?? headerTitle ?? 'Angebot',
+      description:
+        service.header?.meta?.description ??
+        service.header?.lead ??
+        'Ohne Beschreibung',
+      type: 'article',
+      url,
+      publishedTime: service._createdAt,
+      modifiedTime: service._updatedAt,
+    },
+  }
 }
 
 function getLastParam(params: { slug: string[] }) {

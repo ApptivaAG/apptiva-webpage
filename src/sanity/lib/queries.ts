@@ -129,7 +129,8 @@ export const servicesQuery = q('*')
     header: Header,
     subPageOf: q('subPageOf')
       .deref()
-      .grab$({ slug: Slug, breadcrumb: q.string().optional() }),
+      .grab$({ slug: Slug, breadcrumb: q.string().optional() })
+      .nullable(),
   })
 
 export type ModuleData = NonNullable<InferType<typeof Modules>>[number]
@@ -160,6 +161,7 @@ export const queryPostsFromCms = q('*')
   .filterByType('blog')
   .grab$({
     _createdAt: q.string(),
+    _updatedAt: q.string(),
     _id: q.string(),
     publishedAt: q.string().optional(),
     slug: Slug,
@@ -192,6 +194,7 @@ export const queryPostFromCmsBySlug = q('*')
   .slice(0)
   .grab$({
     _createdAt: q.string(),
+    _updatedAt: q.string(),
     _id: q.string(),
     publishedAt: q.string().optional(),
     slug: Slug,
@@ -277,11 +280,14 @@ export const serviceBySlugQuery = q('*')
   .slice(0)
   .grab$({
     _id: q.string(),
+    _createdAt: q.string(),
+    _updatedAt: q.string(),
     slug: Slug,
     breadcrumb: q.string().optional(),
     subPageOf: q('subPageOf')
       .deref()
-      .grab$({ slug: Slug, breadcrumb: q.string().optional() }),
+      .grab$({ slug: Slug, breadcrumb: q.string().optional() })
+      .nullable(),
     header: Header,
     modules: Modules,
     callToAction: q('callToAction')

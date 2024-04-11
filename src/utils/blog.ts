@@ -80,6 +80,7 @@ const getCmsPostBySlug = cache(async (slug: string) => {
     slug: post.slug,
     author: post.author ?? 'Anonymous',
     publishDate: post.publishedAt ?? post._createdAt,
+    modifiedDate: post._updatedAt,
     breadcrumb: post.breadcrumb,
     tags:
       post.tags?.filter((tag): tag is string => typeof tag === 'string') ??
@@ -115,6 +116,7 @@ const getCmsPosts = cache(async () => {
       slug: post.slug,
       author: post.author ?? 'Anonymous',
       publishDate: post.publishedAt ?? post._createdAt,
+      modifiedDate: post._updatedAt,
       tags: mapTags(post.tags),
     } as const
   })

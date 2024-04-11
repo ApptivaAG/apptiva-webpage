@@ -44,6 +44,7 @@ export async function generateMetadata(props: {
         },
       ],
       publishedTime: post.publishDate,
+      modifiedTime: post.kind === 'cms' ? post.modifiedDate : undefined,
     },
   }
 }

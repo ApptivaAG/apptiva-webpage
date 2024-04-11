@@ -72,7 +72,7 @@ function fallbackRender(props: {
 
 type Breadcrumb = Pick<ServiceBySlugQueryData, 'breadcrumb' | 'slug'>
 function buildBreadcrumb(
-  service: Breadcrumb & { subPageOf?: Breadcrumb },
+  service: Breadcrumb & { subPageOf?: Breadcrumb | null },
   parentSlugs: string[]
 ): { name: string; href?: string }[] {
   const { slug: name = 'Angebot' } = service
