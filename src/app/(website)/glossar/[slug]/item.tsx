@@ -30,17 +30,19 @@ export default function Item(props: {
         ]}
       />
 
-      <div className="py-16">
-        {glossary.content ? (
+      {glossary.content ? (
+        <div className="py-16">
           <div className="prose prose-lg">
             <GlossaryPortableText content={glossary.content} />
           </div>
-        ) : glossary.modules ? (
-          glossary.modules?.map((module) => (
+        </div>
+      ) : glossary.modules ? (
+        <div className="py-16">
+          {glossary.modules?.map((module) => (
             <Module key={module._key} module={module} customers={undefined} />
-          ))
-        ) : null}
-      </div>
+          ))}
+        </div>
+      ) : null}
     </>
   )
 }
