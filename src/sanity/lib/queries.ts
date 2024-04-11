@@ -303,13 +303,15 @@ export const glossaryQuery = q('*')
   .filterByType('glossary')
   .grab$({
     _id: q.string(),
-    title: q.string().optional().default('Ohne Titel'),
+    header: Header,
+    title: q.string().optional(),
     slug: Slug,
     summary: q.contentBlocks().optional(),
+    content: q.contentBlocks().optional(),
     modules: Modules,
     tags: Tags,
   })
-  .order('title asc')
+  .order('header.title asc', 'title asc')
 
 export const glossaryBySlugQuery = q('*')
   .filterByType('glossary')
@@ -317,9 +319,11 @@ export const glossaryBySlugQuery = q('*')
   .slice(0)
   .grab$({
     _id: q.string(),
-    title: q.string().optional().default('Ohne Titel'),
+    header: Header,
+    title: q.string().optional(),
     slug: Slug,
     summary: q.contentBlocks().optional(),
+    content: q.contentBlocks().optional(),
     modules: Modules,
     tags: Tags,
   })

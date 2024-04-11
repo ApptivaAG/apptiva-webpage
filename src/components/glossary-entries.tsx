@@ -1,4 +1,5 @@
 import { GlossaryQueryData } from '@/sanity/lib/queries'
+import portableTextToString from '@/utils/portable-text-to-string'
 import Link from 'next/link'
 import StyledPortableText from './styled-portable-text'
 import {
@@ -18,11 +19,15 @@ const GlossaryComponent = (props: { glossaryEntries: GlossaryQueryData }) => {
         <div className="w-full max-w-lg">
           <Accordion type="single" collapsible className="w-full">
             {glossaryEntries?.map((ge) => (
-              <AccordionItem key={ge._id} value={ge.title ?? 'no-question'}>
-                <AccordionTrigger>{ge.title}</AccordionTrigger>
+              <AccordionItem key={ge._id} value={ge._id}>
+                <AccordionTrigger>
+                  {ge.header?.title
+                    ? portableTextToString(ge.header.title)
+                    : ge.title}
+                </AccordionTrigger>
                 <AccordionContent>
                   {ge.summary && <StyledPortableText content={ge.summary} />}
-                  {ge.modules && (
+                  {(ge.content || ge.modules) && (
                     <div className="pt-4">
                       <Link href={`/glossar/${ge.slug}`}>
                         <UnderlineForLink>mehr erfahren →</UnderlineForLink>

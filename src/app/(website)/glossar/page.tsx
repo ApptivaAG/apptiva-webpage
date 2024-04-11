@@ -1,12 +1,9 @@
-// ./nextjs-app/app/page.tsx
-
-import Heading from '@/components/heading'
 import { glossaryQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
+import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import { GlossaryList } from './list'
 import GlossaryPreview from './preview'
-import { Metadata } from 'next'
 
 const url = '/glossar'
 const title = 'Glossar'
@@ -28,7 +25,6 @@ export default async function Glossary() {
 
   return (
     <>
-      <Heading level={2}>Glossar</Heading>
       {draftMode().isEnabled ? (
         <GlossaryPreview initial={glossary.draft} />
       ) : (

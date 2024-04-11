@@ -1,3 +1,4 @@
+import portableTextToString from '@/utils/portable-text-to-string'
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
@@ -6,8 +7,13 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
+      name: 'header',
+      title: 'Header',
+      type: 'header',
+    }),
+    defineField({
       name: 'title',
-      title: 'Titel',
+      title: 'Titel (nicht mehr verwenden -> Header Titel verwenden)',
       type: 'string',
     }),
     defineField({
@@ -30,8 +36,29 @@ export default defineType({
       ],
     }),
     defineField({
+      name: 'content',
+      title: 'Inhalt',
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+          styles: [
+            { title: 'Normal', value: 'normal' },
+            { title: 'H2', value: 'h2' },
+            { title: 'H3', value: 'h3' },
+            { title: 'H4', value: 'h4' },
+            { title: 'H5', value: 'h5' },
+            { title: 'Quote', value: 'blockquote' },
+          ],
+        },
+        {
+          type: 'imageWithAlt',
+        },
+      ],
+    }),
+    defineField({
       name: 'modules',
-      title: 'Module',
+      title: 'Module (Nicht mehr verwenden -> Inhalt stattdessen',
       type: 'array',
       of: [{ type: 'module' }],
     }),
@@ -47,4 +74,17 @@ export default defineType({
       ],
     }),
   ],
+  preview: {
+    select: {
+      title: 'header.title',
+      oldTitel: 'title',
+    },
+    prepare(selection) {
+      return {
+        title: selection.title
+          ? portableTextToString(selection.title)
+          : selection.oldTitel,
+      }
+    },
+  },
 })
