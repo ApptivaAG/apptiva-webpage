@@ -4,13 +4,14 @@ import Button from '@/components/ui/button'
 import Underline from '@/components/ui/underline'
 import { faqsQuery, glossaryQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
+import { orderGlossaryByTitle } from '@/utils/glossary'
+import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import Link from 'next/link'
 import Blogposts from './blogposts'
 import FAQ from './faq'
 import Glossar from './glossary'
 import KnowledgePreview from './preview'
-import { Metadata } from 'next'
 
 const meta = {
   title: 'Wissen wird bei uns gross geschrieben.',
@@ -100,7 +101,7 @@ export default async function Knowledge() {
       ) : (
         <>
           <FAQ data={faqPublished} />
-          <Glossar data={glossaryPublished} />
+          <Glossar data={orderGlossaryByTitle(glossaryPublished)} />
         </>
       )}
     </>

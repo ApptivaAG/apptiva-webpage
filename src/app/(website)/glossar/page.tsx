@@ -1,5 +1,6 @@
 import { glossaryQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
+import { orderGlossaryByTitle } from '@/utils/glossary'
 import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import { GlossaryList } from './list'
@@ -28,7 +29,7 @@ export default async function Glossary() {
       {draftMode().isEnabled ? (
         <GlossaryPreview initial={glossary.draft} />
       ) : (
-        <GlossaryList data={glossary.published} />
+        <GlossaryList data={orderGlossaryByTitle(glossary.published)} />
       )}
     </>
   )
