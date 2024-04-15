@@ -7,6 +7,7 @@ import Link from 'next/link'
 import LogoIcon from './logo-icon.svg'
 import StyledPortableText from './styled-portable-text'
 import Button from './ui/button'
+import UnderlineForLink from './ui/underline-for-link'
 
 export default function ContactPerson(props: {
   person: PersonData | null
@@ -42,8 +43,18 @@ export default function ContactPerson(props: {
                 Kontakt aufnehmen
               </Button>
             </Link>
-            <p className="mb-3">{props.person.contact?.mail}</p>
-            <p>+41 41 322 26 26</p>
+            <p className="mb-3">
+              <Link href={`mailto:${props.person.contact?.mail}`}>
+                <UnderlineForLink>
+                  {props.person.contact?.mail}
+                </UnderlineForLink>
+              </Link>
+            </p>
+            <p>
+              <Link href="tel:+41413222626">
+                <UnderlineForLink>041 322 26 26</UnderlineForLink>
+              </Link>
+            </p>
           </div>
         </div>
       ) : (
