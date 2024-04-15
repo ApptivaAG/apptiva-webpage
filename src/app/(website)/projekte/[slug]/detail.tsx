@@ -43,10 +43,10 @@ export default function ProjectDetail(props: {
       </header>
 
       <div className="flex items-start justify-between gap-16 py-16 max-lg:flex-col">
-        <div className="prose prose-lg max-lg:order-2">
+        <div className="prose max-lg:order-2">
           {project.content && <PortableText value={project.content} />}
         </div>
-        <aside className="flex-shrink-0 basis-80 rounded bg-base-grey p-4 max-lg:order-1 lg:p-8 [&>div]:mb-4 [&>div]:text-lg [&>p]:text-sm [&>p]:font-bold [&>p]:text-primary">
+        <aside className="flex-shrink-0 basis-80 rounded bg-base-grey p-4 max-lg:order-1 lg:p-8 [&>div]:mb-4 [&>div]:text-xl [&>p]:text-sm [&>p]:font-bold [&>p]:text-primary">
           {project.tasks && (
             <>
               <p>Aufgaben</p>

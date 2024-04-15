@@ -69,7 +69,7 @@ export default async function Home(props: { params: { slug: string } }) {
           />
           <Heading level={1}>{post.title}</Heading>
           <p className="max-w-xl pt-6 text-xl">{post.description}</p>
-          <p className="pt-2 text-lg text-base-white/60">
+          <p className="pt-2 text-base-white/60">
             Publiziert am{' '}
             <time dateTime={post.publishDate} className="font-bold">
               {new Date(post.publishDate).toLocaleDateString('de-CH')}
@@ -104,7 +104,7 @@ export default async function Home(props: { params: { slug: string } }) {
       </header>
 
       <div className="flex gap-16 py-16 max-md:flex-col">
-        <div className="prose prose-lg flex-1">
+        <div className="prose flex-1">
           {post.kind === 'markdown' && (
             <MDXRemote
               source={post.content}

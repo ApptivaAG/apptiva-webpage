@@ -32,7 +32,7 @@ export default function Item(props: {
 
       {glossary.content && (
         <div className="py-16">
-          <div className="prose prose-lg">
+          <div className="prose">
             <GlossaryPortableText content={glossary.content} />
           </div>
         </div>

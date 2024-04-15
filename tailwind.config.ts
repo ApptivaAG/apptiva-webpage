@@ -103,15 +103,10 @@ const config: Config = {
         'collapsible-up': 'collapsible-up 0.2s ease-out',
       },
       typography: {
-        lg: {
-          css: {
-            'h1,h2,h3,h4,h5,h6': {
-              marginBottom: '0.5em',
-            },
-          },
-        },
         DEFAULT: {
           css: {
+            fontSize: rem(18),
+            lineHeight: round(28 / 18),
             strong: { color: 'rgb(var(--primary))' },
             a: { color: 'rgb(var(--primary))' },
             color: 'rgb(var(--primary))',
@@ -126,5 +121,15 @@ const config: Config = {
     },
   },
   plugins: [animate, typography],
+}
+
+function round(num: number) {
+  return num
+    .toFixed(7)
+    .replace(/(\.[0-9]+?)0+$/, '$1')
+    .replace(/\.0$/, '')
+}
+function rem(px: number) {
+  return `${round(px / 16)}rem`
 }
 export default config

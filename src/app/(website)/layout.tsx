@@ -51,7 +51,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de" className={gentona.className}>
-      <body>
+      <body className="text-lg">
         <Navbar />
         <main className="content">{children}</main>
         <Footer />

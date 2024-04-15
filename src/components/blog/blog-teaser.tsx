@@ -41,7 +41,7 @@ export function BlogTeaser(props: {
       </div>
       <div className="flex flex-1 flex-col items-start gap-4 p-9">
         <p
-          className="text-lg font-bold leading-5"
+          className="text-xl font-bold leading-5"
           dangerouslySetInnerHTML={{ __html: post.title }}
         />
         <div className="mb-6 flex-1">
