@@ -3,6 +3,7 @@ import Button from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import Link from 'next/link'
 import { ProjectQueryData } from './types'
+import UnderlineForLink from '@/components/ui/underline-for-link'
 
 export function ProjectTeaser(props: {
   project: ProjectQueryData
@@ -31,13 +32,7 @@ export function ProjectTeaser(props: {
           <p className="line-clamp-5 ">{project.description}</p>
         </div>
         <Link className="mt-6 self-end" href={`/projekte/${project.slug}`}>
-          <Button
-            element="div"
-            className="inline"
-            intent={props.intent === 'dark' ? 'secondary' : 'primary'}
-          >
-            → Zum Projekt
-          </Button>
+          <UnderlineForLink>→&ensp;Zum Projekt</UnderlineForLink>
         </Link>
       </div>
     </Card>
