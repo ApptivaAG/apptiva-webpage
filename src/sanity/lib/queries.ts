@@ -301,6 +301,7 @@ export const serviceBySlugQuery = q('*')
 export type GlossaryQueryData = NonNullable<InferType<typeof glossaryQuery>>
 export const glossaryQuery = q('*').filterByType('glossary').grab$({
   _id: q.string(),
+  _updatedAt: q.string(),
   header: Header,
   slug: Slug,
   summary: q.contentBlocks().optional(),

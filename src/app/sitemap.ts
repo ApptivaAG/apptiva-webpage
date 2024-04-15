@@ -1,5 +1,7 @@
 import {
+  GlossaryQueryData,
   ServicesQueryData,
+  glossaryQuery,
   projectsQuery,
   servicesQuery,
 } from '@/sanity/lib/queries'
@@ -18,6 +20,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const { published: projects } = await load(projectsQuery, false, undefined, [
     'project',
+  ])
+
+  const { published: glossary } = await load(glossaryQuery, false, undefined, [
+    'glossary',
   ])
 
   return [
@@ -46,7 +52,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'weekly',
       priority: 0.8,
     },
-    ...buildProjectsSiteMap(projects),
+    ...buildSiteMap(projects, { parentSlug: 'projekte' }),
     {
       url: buildFullUrl('/wissen'),
       lastModified: new Date(),
@@ -60,13 +66,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.5,
     },
     ...buildPostsSiteMap(posts, 'blog'),
-    ...buildPostsSiteMap(posts, 'apptiva-lernt'),
     {
       url: buildFullUrl('/apptiva-lernt'),
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.5,
     },
+    ...buildPostsSiteMap(posts, 'apptiva-lernt'),
+    {
+      url: buildFullUrl('/glossar'),
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.5,
+    },
+    ...buildSiteMap(glossary, { parentSlug: 'glossar' }),
     {
       url: buildFullUrl('/impressum'),
       lastModified: new Date(),
@@ -82,13 +95,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ]
 }
 
-function buildProjectsSiteMap(projects: ProjectQueryData[]) {
-  return projects.map(
+function buildSiteMap(
+  data: ProjectQueryData[] | GlossaryQueryData,
+  options: {
+    parentSlug: string
+    changeFrequency?: 'weekly' | 'monthly' | 'daily' | 'yearly' | 'never'
+  }
+) {
+  return data.map(
     ({ slug, _updatedAt }) =>
       ({
-        url: buildFullUrl(`/projekte/${slug}`),
+        url: buildFullUrl(`/${options.parentSlug}/${slug}`),
         lastModified: new Date(_updatedAt),
-        changeFrequency: 'weekly',
+        changeFrequency: options.changeFrequency ?? 'weekly',
         priority: 0.5,
       }) as const
   )
