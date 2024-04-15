@@ -66,7 +66,7 @@ const MobileNav = () => {
                               <Image
                                 src={subitem.icon}
                                 alt={subitem.title}
-                                className="w-24"
+                                className="size-24"
                               />
                               <div className="flex flex-col justify-center">
                                 <span className="leading-6">
