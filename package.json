@@ -35,8 +35,6 @@
     "@sanity/react-loader": "^1.8.3",
     "@sanity/ui": "^2.0.1",
     "@sanity/vision": "^3.26.0",
-    "@types/mdx": "^2.0.12",
-    "@types/react-html-parser": "^2.0.6",
     "bluebird": "^3.7.2",
     "bright": "^0.8.4",
     "class-variance-authority": "^0.7.0",
@@ -69,6 +67,7 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
     "@types/mailchimp__mailchimp_marketing": "^3.0.19",
+    "@types/mdx": "^2.0.12",
     "@types/node": "^20.11.6",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",

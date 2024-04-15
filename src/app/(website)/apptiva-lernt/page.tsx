@@ -1,6 +1,20 @@
 import BlogPosts from '@/components/blog/blog-posts'
 import { PageHeader } from '@/components/page-header'
+import { Metadata } from 'next'
 import { Suspense } from 'react'
+
+const url = '/apptiva-lernt'
+const title = 'Apptiva lernt'
+export const metadata: Metadata = {
+  title,
+  description:
+    'Kleine (technische) Wissenshappen, die wir jede Woche neu dazu lernen.',
+  alternates: { canonical: url },
+  openGraph: {
+    title,
+    url,
+  },
+}
 
 export default async function ApptivaLerntList({
   params,

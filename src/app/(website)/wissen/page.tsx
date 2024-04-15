@@ -4,12 +4,30 @@ import Button from '@/components/ui/button'
 import Underline from '@/components/ui/underline'
 import { faqsQuery, glossaryQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
+import { orderGlossaryByTitle } from '@/utils/glossary'
+import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import Link from 'next/link'
 import Blogposts from './blogposts'
 import FAQ from './faq'
 import Glossar from './glossary'
 import KnowledgePreview from './preview'
+
+const meta = {
+  title: 'Wissen wird bei uns gross geschrieben.',
+  description:
+    'In unseren wöchentlichen Wissensaustausch-Sitzungen vermitteln wir untereinander abwechselnd neues Wissen. Unser Ziel ist es, dieses Wissen zu teilen und nicht für uns zu behalten. Deshalb haben wir es für dich aufgeschrieben.',
+}
+const url = '/wissen'
+
+export const metadata: Metadata = {
+  ...meta,
+  alternates: { canonical: url },
+  openGraph: {
+    ...meta,
+    url,
+  },
+}
 
 export default async function Knowledge() {
   const { published: faqPublished, draft: faqDraft } = await load(
@@ -26,9 +44,6 @@ export default async function Knowledge() {
     ['glossary']
   )
 
-  const lead =
-    'In unseren wöchentlichen Wissensaustausch-Sitzungen vermitteln wir untereinander abwechselnd neues Wissen. Unser Ziel ist es, dieses Wissen zu teilen und nicht für uns zu behalten. Deshalb haben wir es für dich aufgeschrieben.'
-
   return (
     <>
       <PageHeader
@@ -38,8 +53,8 @@ export default async function Knowledge() {
             <Underline>gross</Underline> geschrieben.
           </>
         }
-        lead={lead}
-        links={[{ name: 'Wissen', href: '/wissen' }]}
+        lead={meta.description}
+        links={[{ name: 'Wissen', href: url }]}
       />
       <Blogposts show="blog">
         <div className="content space-y-4">
@@ -86,7 +101,7 @@ export default async function Knowledge() {
       ) : (
         <>
           <FAQ data={faqPublished} />
-          <Glossar data={glossaryPublished} />
+          <Glossar data={orderGlossaryByTitle(glossaryPublished)} />
         </>
       )}
     </>

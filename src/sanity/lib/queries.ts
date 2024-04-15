@@ -124,11 +124,13 @@ export const servicesQuery = q('*')
   .filterByType('service-page')
   .grab$({
     _id: q.string(),
+    _updatedAt: q.string(),
     slug: Slug,
     header: Header,
     subPageOf: q('subPageOf')
       .deref()
-      .grab$({ slug: Slug, breadcrumb: q.string().optional() }),
+      .grab$({ slug: Slug, breadcrumb: q.string().optional() })
+      .nullable(),
   })
 
 export type ModuleData = NonNullable<InferType<typeof Modules>>[number]
@@ -159,6 +161,7 @@ export const queryPostsFromCms = q('*')
   .filterByType('blog')
   .grab$({
     _createdAt: q.string(),
+    _updatedAt: q.string(),
     _id: q.string(),
     publishedAt: q.string().optional(),
     slug: Slug,
@@ -191,6 +194,7 @@ export const queryPostFromCmsBySlug = q('*')
   .slice(0)
   .grab$({
     _createdAt: q.string(),
+    _updatedAt: q.string(),
     _id: q.string(),
     publishedAt: q.string().optional(),
     slug: Slug,
@@ -223,6 +227,7 @@ export const projectsQuery = q('*')
   .filterByType('project')
   .grab$({
     _id: q.string(),
+    _updatedAt: q.string(),
     projectName: q.string().optional(),
     image: sanityImageWithAlt(),
     slug: Slug,
@@ -275,11 +280,14 @@ export const serviceBySlugQuery = q('*')
   .slice(0)
   .grab$({
     _id: q.string(),
+    _createdAt: q.string(),
+    _updatedAt: q.string(),
     slug: Slug,
     breadcrumb: q.string().optional(),
     subPageOf: q('subPageOf')
       .deref()
-      .grab$({ slug: Slug, breadcrumb: q.string().optional() }),
+      .grab$({ slug: Slug, breadcrumb: q.string().optional() })
+      .nullable(),
     header: Header,
     modules: Modules,
     callToAction: q('callToAction')
@@ -291,17 +299,14 @@ export const serviceBySlugQuery = q('*')
   })
 
 export type GlossaryQueryData = NonNullable<InferType<typeof glossaryQuery>>
-export const glossaryQuery = q('*')
-  .filterByType('glossary')
-  .grab$({
-    _id: q.string(),
-    title: q.string().optional().default('Ohne Titel'),
-    slug: Slug,
-    summary: q.contentBlocks().optional(),
-    modules: Modules,
-    tags: Tags,
-  })
-  .order('title asc')
+export const glossaryQuery = q('*').filterByType('glossary').grab$({
+  _id: q.string(),
+  header: Header,
+  slug: Slug,
+  summary: q.contentBlocks().optional(),
+  content: q.contentBlocks().optional(),
+  tags: Tags,
+})
 
 export const glossaryBySlugQuery = q('*')
   .filterByType('glossary')
@@ -309,10 +314,10 @@ export const glossaryBySlugQuery = q('*')
   .slice(0)
   .grab$({
     _id: q.string(),
-    title: q.string().optional().default('Ohne Titel'),
+    header: Header,
     slug: Slug,
     summary: q.contentBlocks().optional(),
-    modules: Modules,
+    content: q.contentBlocks().optional(),
     tags: Tags,
   })
 

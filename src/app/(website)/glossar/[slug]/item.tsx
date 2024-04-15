@@ -1,9 +1,9 @@
-import BreadCrumb from '@/components/bread-crumb'
-import Heading from '@/components/heading'
 import Module from '@/components/module'
-import StyledPortableText from '@/components/styled-portable-text'
+import { PageHeader } from '@/components/page-header'
 import { glossaryBySlugQuery } from '@/sanity/lib/queries'
+import portableTextToString from '@/utils/portable-text-to-string'
 import { InferType } from 'groqd'
+import GlossaryPortableText from './glossar-portable-text'
 
 export default function Item(props: {
   glossary: InferType<typeof glossaryBySlugQuery>
@@ -12,32 +12,31 @@ export default function Item(props: {
 
   const { glossary } = props
 
+  const title = glossary.header?.title
+    ? portableTextToString(glossary.header.title)
+    : 'Glossar'
   return (
     <>
-      <header className="full relative mt-[-8rem] min-h-fit animate-gradient items-center bg-gradient-to-br from-primary-light to-primary-dark bg-300% pb-8 pt-32 text-base-white md:pb-16 md:pt-44">
-        <div className="content">
-          <BreadCrumb
-            className="pb-6"
-            links={[
-              { name: 'Glossar', href: '' },
-              {
-                name: glossary.title ?? 'Glossar',
-                href: `/glossar/${glossary.slug}`,
-              },
-            ]}
-          />
-          <Heading level={1}>
-            <span dangerouslySetInnerHTML={{ __html: glossary.title }} />
-          </Heading>
-          {glossary.summary && (
-            <StyledPortableText content={glossary.summary} />
-          )}
-        </div>
-      </header>
+      <PageHeader
+        title={glossary.header?.title ?? 'Glossar'}
+        lead={glossary.summary ?? glossary.header?.lead}
+        image={glossary.header?.image}
+        links={[
+          { name: 'Glossar', href: '/glossar' },
+          {
+            name: title,
+            href: `/glossar/${glossary.slug}`,
+          },
+        ]}
+      />
 
-      {glossary.modules?.map((module) => (
-        <Module key={module._key} module={module} customers={undefined} />
-      ))}
+      {glossary.content && (
+        <div className="py-16">
+          <div className="prose prose-lg">
+            <GlossaryPortableText content={glossary.content} />
+          </div>
+        </div>
+      )}
     </>
   )
 }

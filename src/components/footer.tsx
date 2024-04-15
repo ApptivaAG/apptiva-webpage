@@ -4,6 +4,7 @@ import Heading from './heading'
 import logo from './logo.svg'
 import NewsletterForm from './newsletter/newsletter-form'
 import sms from './swiss-made-software.svg'
+import whatsApp from './whatsapp.svg'
 import Underline from './ui/underline'
 
 export default function Footer() {
@@ -29,6 +30,18 @@ export default function Footer() {
             </p>
             <p className="pt-1">
               <Link href="mailto:info@apptiva.ch">info@apptiva.ch</Link>
+            </p>
+            <p className="pt-3">
+              <a
+                title="WhatsApp Chat starten"
+                href="https://wa.me/41766011561"
+                rel="noopener noreferrer"
+                target="_blank"
+                className="flex gap-1 rounded bg-base-white px-3 py-2 text-primary !no-underline"
+              >
+                <Image height="25" src={whatsApp} alt="WhatsApp Logo" />
+                Chat auf WhatsApp
+              </a>
             </p>
           </div>
           <div className="max-w-lg space-y-3">

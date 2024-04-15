@@ -6,6 +6,7 @@ import {
   faqsQuery,
   glossaryQuery,
 } from '@/sanity/lib/queries'
+import { orderGlossaryByTitle } from '@/utils/glossary'
 import { QueryResponseInitial, useQuery } from '@sanity/react-loader'
 import FAQ from './faq'
 import Glossar from './glossary'
@@ -28,7 +29,7 @@ export default function KnowledgePreview(props: {
   return (
     <>
       <FAQ data={faqData} />
-      <Glossar data={glossaryData} />
+      <Glossar data={orderGlossaryByTitle(glossaryData)} />
     </>
   )
 }
