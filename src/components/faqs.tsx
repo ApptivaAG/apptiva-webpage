@@ -6,20 +6,15 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from './ui/accordion'
+import portableTextToString from '@/utils/portable-text-to-string'
 
-const FAQsComponent = (props: {
-  faqs: FAQQueryModuleData
-  width?: 'full' | 'col'
-}) => {
-  const { faqs, width } = props
-  const colContainer =
-    width?.includes('col') || width === undefined ? 'col-right' : ''
-  const col = width?.includes('col') || width === undefined ? 'max-w-lg' : ''
+const FAQsComponent = (props: { faqs: FAQQueryModuleData }) => {
+  const { faqs } = props
 
   return (
     <>
-      <div className={`${colContainer} mt-4 `}>
-        <div className={`w-full ${col}`}>
+      <div className="col-right mt-4">
+        <div className="w-full max-w-lg">
           <Accordion type="single" collapsible className="w-full">
             {faqs?.map((faq) => (
               <AccordionItem
