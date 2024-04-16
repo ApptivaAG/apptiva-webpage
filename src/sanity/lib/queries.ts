@@ -320,17 +320,6 @@ export const glossaryBySlugQuery = q('*')
     summary: q.contentBlocks().optional(),
     content: q.contentBlocks().optional(),
     tags: Tags,
-    header: Header,
-    content: q
-      .contentBlocks({
-        markDefs: q.object({
-          _type: q.literal('code'),
-          language: q.string(),
-          _key: q.string(),
-          code: q.string(),
-        }),
-      })
-      .optional(),
   })
 
 export type FAQQueryData = NonNullable<InferType<typeof faqsQuery>>
