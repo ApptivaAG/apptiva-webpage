@@ -161,18 +161,18 @@ export default function Footer() {
             Apptiva
           </Heading>
           <ul>
-            <li>
+            {/* <li>
               <Link href="/holacracy">Holacracy</Link>
             </li>
             <li>
               <Link href="/consulting">Zusammenarbeit</Link>
-            </li>
+            </li> */}
             <li>
-              <Link href="/ueber-uns">Team</Link>
+              <Link href="/ueber-uns">Über uns</Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/jobs">Jobs</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
 
@@ -187,6 +187,9 @@ export default function Footer() {
             </li>
             <li>
               <Link href="/datenschutzerklaerung">Datenschutz</Link>
+            </li>
+            <li>
+              <Link href="/tracking">Tracking</Link>
             </li>
           </ul>
         </div>
