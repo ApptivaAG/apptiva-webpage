@@ -34,7 +34,7 @@ export default function Footer() {
             <p className="pt-3">
               <a
                 title="WhatsApp Chat starten"
-                href="https://wa.me/41766011561"
+                href="https://wa.me/41766012056"
                 rel="noopener noreferrer"
                 target="_blank"
                 className="flex gap-1 rounded bg-base-white px-3 py-2 text-primary !no-underline"
