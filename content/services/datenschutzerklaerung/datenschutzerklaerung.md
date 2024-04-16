@@ -173,7 +173,7 @@ Für die Chat-Funktion auf unserer Webseite nutzen wir [Bubble-Chat](https://www
 
 Grundsätzlich besteht die Möglichkeit, die ganze Konversation herunterzuladen oder per E-Mail zu erhalten. Wenn Sie sich den Chatverlauf senden möchten, geben Sie bitte Ihre E-Mail-Adresse in das entsprechende Feld ein.
 
-Zur Absichtserkennung verschickt Bubble-Chat Daten an Google und um Ihnen passende Antworten zur Verfügung zu stellen, werden Ihre Daten ebenfalls an die OpenAI OpCo, LLC, mit  Sitz in den USA, bzw. wenn Sie ihren gewöhnlichen Aufenthalt in der Schweiz oder dem Europäischen Wirtschaftsraum (EWR) haben, OpenAI Ireland Limited, mit Sitz in Irland, übermittelt («OpenAI»).
+Zur Absichtserkennung verschickt Bubble-Chat Daten an Google und um Ihnen passende Antworten zur Verfügung zu stellen, werden Ihre Daten ebenfalls an die OpenAI OpCo, LLC, mit Sitz in den USA, bzw. wenn Sie ihren gewöhnlichen Aufenthalt in der Schweiz oder dem Europäischen Wirtschaftsraum (EWR) haben, OpenAI Ireland Limited, mit Sitz in Irland, übermittelt («OpenAI»).
 
 Zum Schutz Ihrer Persönlichkeit haben wir mit Open-AI ein «Data Processing Addendum» geschlossen. Darin verpflichtet sich OpenAI bei der Bekanntgabe von Daten in Länder, die über kein angemessenes Datenschutz-niveau verfügen, einen geeigneten Datenschutz sicherzustellen, durch den Abschluss von Standardvertrags-klauseln.
 
@@ -223,17 +223,17 @@ Eine Ausnahme sind durch Mailchimp (vgl. Ziffer 3.2) versendete E-Mails.
 
 Die Bearbeitung dieser Daten, inklusive der von Ihnen dort angegebenen Kontaktdaten erfolgt zweck der Bearbeitung Ihres Anliegens und zur Kontaktaufnahme durch uns, für den Fall von Anschlussfragen.
 
-Sie können dieser Datenbearbeitung jederzeit widersprechen. Senden Sie Ihren Widerspruch bitte an <daten-schutz@apptiva.ch> und wir werden Ihr Anliegen prüfen. In einem solchen Fall wird Ihre Kontaktaufnahme nicht weiterbearbeitet.
+Sie können dieser Datenbearbeitung jederzeit widersprechen. Senden Sie Ihren Widerspruch bitte an [datenschutz@apptiva.ch](mailto:datenschutz@apptiva.ch) und wir werden Ihr Anliegen prüfen. In einem solchen Fall wird Ihre Kontaktaufnahme nicht weiterbearbeitet.
 
 Ihre Personendaten werden gelöscht, sobald das von Ihnen gestellte Anliegen erledigt ist. Dies ist dann der Fall, wenn sich aus den Umständen entnehmen lässt, dass der betroffene Sachverhalt abschliessend geklärt ist und der Löschung keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
 
 ##### Google Voice
 
-Anrufe über unsere Haupt-Telefonnummer und Support-Telefonnummern werden über Google Voice abgewickelt. Dabei speichert, bearbeitet und verwaltet Google Voice verschiedene Daten, insbesondere Ihre Telefonnummer, Datum, Uhrzeit und Dauer des Anrufs, sowie Nachrichten, die Sie auf unserer Mailbox hinterlassen.  
+Anrufe über unsere Haupt-Telefonnummer und Support-Telefonnummern werden über Google Voice abgewickelt. Dabei speichert, bearbeitet und verwaltet Google Voice verschiedene Daten, insbesondere Ihre Telefonnummer, Datum, Uhrzeit und Dauer des Anrufs, sowie Nachrichten, die Sie auf unserer Mailbox hinterlassen.
 
 Diese Bearbeitung dieser Daten ist einerseits erforderlich, damit Google diesen Dienst uns gegenüber erbringen kann und andererseits um Ihnen die telefonische Kontaktaufnahme mit uns zu ermöglichen. Die dabei bearbeiteten Daten werden zwecks Bearbeitung Ihres Anliegens und zur Kontaktaufnahme durch uns, für den Fall von Anschlussfragen.
 
-Sie können dieser Datenbearbeitung jederzeit widersprechen. Senden Sie Ihren Widerspruch bitte an <daten-schutz@apptiva.ch> und wir werden Ihr Anliegen prüfen. In einem solchen Fall wird Ihre Kontaktaufnahme nicht weiterbearbeitet.
+Sie können dieser Datenbearbeitung jederzeit widersprechen. Senden Sie Ihren Widerspruch bitte an [datenschutz@apptiva.ch](mailto:datenschutz@apptiva.ch) und wir werden Ihr Anliegen prüfen. In einem solchen Fall wird Ihre Kontaktaufnahme nicht weiterbearbeitet.
 
 Ihre Personendaten, insbesondere Mailbox-Nachrichten, SMS-Nachrichten oder allfällig aufgezeichnete Ge-spräche, werden gelöscht, sobald das von Ihnen gestellte Anliegen erledigt ist. Dies ist dann der Fall, wenn sich aus den Umständen entnehmen lässt, dass der betroffene Sachverhalt abschliessend geklärt ist und der Löschung keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
 
@@ -297,7 +297,7 @@ Weitere Informationen zu Google Fonts finden Sie in den [Google Fonts FAQ](https
 
 ### 3.7 Trello
 
-Wir benutzen Trello, ein Ticketing-System der Atlassian Pty Ltd., mit Sitz in Australien.  Wenn sie mit uns über das Kontaktformular, per E-Mail oder auch den Chatbot in Kontakt treten, legen wir in den meisten Fällen dazu ein Trello-Ticket an, das die entsprechenden Daten enthält und uns hilft den Fortschritt zu Anfrage zu dokumentieren und überblicken.
+Wir benutzen Trello, ein Ticketing-System der Atlassian Pty Ltd., mit Sitz in Australien. Wenn sie mit uns über das Kontaktformular, per E-Mail oder auch den Chatbot in Kontakt treten, legen wir in den meisten Fällen dazu ein Trello-Ticket an, das die entsprechenden Daten enthält und uns hilft den Fortschritt zu Anfrage zu dokumentieren und überblicken.
 
 Dabei werden alle Benutzerinhalte auf Amazon Web Services (AWS) Servern in den USA gehostet.
 
