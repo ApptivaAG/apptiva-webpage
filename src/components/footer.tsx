@@ -29,7 +29,7 @@ export default function Footer() {
               <Link href="tel:+41413222626">041 322 26 26</Link>
             </p>
             <p className="pt-1">
-              <Link href="mail:info@apptiva.ch">info@apptiva.ch</Link>
+              <Link href="mailto:info@apptiva.ch">info@apptiva.ch</Link>
             </p>
             <p className="pt-3">
               <a

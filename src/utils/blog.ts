@@ -63,17 +63,24 @@ const getCmsPostBySlug = cache(async (slug: string) => {
     return undefined
   }
 
+  const description = post.header?.lead ?? 'Ohne Einleitung'
+  const title = post.header?.title
+    ? portableTextToString(post.header.title)
+    : 'Ohne Titel'
   return {
     kind: 'cms',
     content: post.content as CmsContent,
     image: post.header?.image,
-    title: post.header?.title
-      ? portableTextToString(post.header.title)
-      : 'Ohne Titel',
-    description: post.header?.lead ?? 'Ohne Einleitung',
+    title,
+    description,
+    meta: {
+      title: post.header?.meta?.title ?? title,
+      description: post.header?.meta?.description ?? description,
+    },
     slug: post.slug,
     author: post.author ?? 'Anonymous',
     publishDate: post.publishedAt ?? post._createdAt,
+    modifiedDate: post._updatedAt,
     breadcrumb: post.breadcrumb,
     tags:
       post.tags?.filter((tag): tag is string => typeof tag === 'string') ??
@@ -90,19 +97,26 @@ const getCmsPosts = cache(async () => {
   )
 
   return postsFromCMS.map((post) => {
+    const title = post.header?.title
+      ? typeof post.header.title === 'string'
+        ? post.header.title
+        : portableTextToString(post.header.title)
+      : 'Ohne Titel'
+    const description = post.header?.lead ?? 'Ohne Einleitung'
     return {
       kind: 'cms',
       content: post.content as CmsContent,
       image: post.header?.image,
-      title: post.header?.title
-        ? typeof post.header.title === 'string'
-          ? post.header.title
-          : portableTextToString(post.header.title)
-        : 'Ohne Titel',
-      description: post.header?.lead ?? 'Ohne Einleitung',
+      title,
+      description,
+      meta: {
+        title: post.header?.meta?.title ?? title,
+        description: post.header?.meta?.description ?? description,
+      },
       slug: post.slug,
       author: post.author ?? 'Anonymous',
       publishDate: post.publishedAt ?? post._createdAt,
+      modifiedDate: post._updatedAt,
       tags: mapTags(post.tags),
     } as const
   })
@@ -162,6 +176,10 @@ const getMarkdownPosts = unstable_cache(async () => {
       blogPostAssetsDirectory,
       title: markdown.frontmatter.title,
       description: markdown.frontmatter.description,
+      meta: {
+        title: markdown.frontmatter.title,
+        description: markdown.frontmatter.description,
+      },
       slug: markdown.frontmatter.slug,
       author: markdown.frontmatter.author,
       publishDate: markdown.frontmatter.date,

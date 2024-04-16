@@ -46,7 +46,7 @@ export default async function Blogposts(props: {
             ))}
             <CarouselItem key="last" index={last5Posts.length}>
               <Card intent="light" className="flex h-full flex-col">
-                <p className="flex-1 text-lg font-bold">
+                <p className="flex-1 text-xl font-bold">
                   Weitere{' '}
                   {props.show === 'blog'
                     ? 'Blogposts von der Apptiva'

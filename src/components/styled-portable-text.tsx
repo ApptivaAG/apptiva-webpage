@@ -42,7 +42,7 @@ const StyledPortableText = ({
     },
     listItem: {
       bullet: ({ children }) => (
-        <li className={cn('list-arrow pl-8 marker:text-lg', className)}>
+        <li className={cn('list-arrow pl-8 marker:text-xl', className)}>
           {children}
         </li>
       ),

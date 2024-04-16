@@ -1,6 +1,7 @@
 'use client'
 
 import { glossaryQuery } from '@/sanity/lib/queries'
+import { orderGlossaryByTitle } from '@/utils/glossary'
 import { QueryResponseInitial, useQuery } from '@sanity/react-loader'
 import { InferType } from 'groqd'
 import { GlossaryList } from './list'
@@ -12,8 +13,6 @@ export default function GlossaryPreview({
 }: {
   initial: QueryResponseInitial<Data>
 }) {
-
-  const {data} = useQuery<Data>(glossaryQuery.query, undefined, {initial})
-  return <GlossaryList data={data} />
-
+  const { data } = useQuery<Data>(glossaryQuery.query, undefined, { initial })
+  return <GlossaryList data={orderGlossaryByTitle(data)} />
 }

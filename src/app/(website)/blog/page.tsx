@@ -1,6 +1,19 @@
 import BlogPosts from '@/components/blog/blog-posts'
 import { PageHeader } from '@/components/page-header'
+import { Metadata } from 'next'
 import { Suspense } from 'react'
+
+const url = '/blog'
+const title = 'Blog'
+export const metadata: Metadata = {
+  title,
+  description: 'Aktuelles rund um die Apptiva',
+  alternates: { canonical: url },
+  openGraph: {
+    title,
+    url,
+  },
+}
 
 export default async function Home({ params }: { params: { slug: string } }) {
   return (

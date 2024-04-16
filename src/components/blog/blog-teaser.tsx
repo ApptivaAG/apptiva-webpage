@@ -4,6 +4,7 @@ import { Card } from '@/components/ui/card'
 import { CmsBlog, MarkdownBlog } from '@/utils/types'
 import Image from 'next/image'
 import Link from 'next/link'
+import UnderlineForLink from '../ui/underline-for-link'
 
 export function BlogTeaser(props: {
   slug: string
@@ -41,20 +42,14 @@ export function BlogTeaser(props: {
       </div>
       <div className="flex flex-1 flex-col items-start gap-4 p-9">
         <p
-          className="text-lg font-bold leading-5"
+          className="text-xl font-bold leading-5"
           dangerouslySetInnerHTML={{ __html: post.title }}
         />
         <div className="mb-6 flex-1">
           <p className="line-clamp-5">{post.description}</p>
         </div>
-        <Link className=" self-end" href={`/${props.parentSlug}/${slug}`}>
-          <Button
-            element="div"
-            className="inline"
-            intent={props.intent === 'dark' ? 'secondary' : 'primary'}
-          >
-            → Zum Artikel
-          </Button>
+        <Link className="self-end" href={`/${props.parentSlug}/${slug}`}>
+          <UnderlineForLink>→&ensp;Zum Artikel</UnderlineForLink>
         </Link>
       </div>
     </Card>

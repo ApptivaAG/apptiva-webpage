@@ -4,7 +4,6 @@ import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
 import { getPostBySlug, getPosts, hasTag } from '@/utils/blog'
 import { kebabCaseToTitleCase } from '@/utils/format'
-import portableTextToString from '@/utils/portable-text-to-string'
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
@@ -25,13 +24,11 @@ export async function generateMetadata(props: {
   const post = (await getPostBySlug(paramsSlug)) ?? notFound()
 
   return {
-    title:
-      typeof post.title === 'string'
-        ? post.title
-        : portableTextToString(post.title),
-    description: post.description,
+    title: `${post.meta.title} | Apptiva lernt`,
+    description: post.meta.description,
     alternates: { canonical: `/apptiva-lernt/${post.slug}` },
     openGraph: {
+      title: post.meta.title,
       type: 'article',
       publishedTime: post.publishDate,
     },
@@ -60,18 +57,9 @@ export default async function Home(props: { params: { slug: string } }) {
               },
             ]}
           />
-          <Heading level={1}>
-            <span
-              dangerouslySetInnerHTML={{
-                __html:
-                  typeof post.title === 'string'
-                    ? post.title
-                    : portableTextToString(post.title),
-              }}
-            />
-          </Heading>
+          <Heading level={1}>{post.title}</Heading>
           <p className="max-w-xl pt-6 text-xl">{post.description}</p>
-          <p className="pt-2 text-lg text-base-white/60">
+          <p className="pt-2 text-base-white/60">
             Publiziert am{' '}
             <time dateTime={post.publishDate} className="font-bold">
               {new Date(post.publishDate).toLocaleDateString('de-CH')}
@@ -94,7 +82,7 @@ export default async function Home(props: { params: { slug: string } }) {
       </header>
 
       <div className="flex gap-16 py-16 max-md:flex-col">
-        <div className="prose prose-lg flex-1">
+        <div className="prose flex-1">
           {post.content && <BlogPortableText content={post.content} />}
         </div>
         <aside>
@@ -114,7 +102,7 @@ export default async function Home(props: { params: { slug: string } }) {
 
 function getBreadcrumb(post: Awaited<ReturnType<typeof getPostBySlug>>) {
   if (post?.kind === 'cms') {
-    return post.breadcrumb ?? post.title
+    return post.breadcrumb ?? post.title ?? 'Post'
   }
   return post?.title ?? 'Post'
 }
