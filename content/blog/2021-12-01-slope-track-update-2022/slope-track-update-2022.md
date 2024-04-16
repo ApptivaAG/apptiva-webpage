@@ -16,7 +16,7 @@ categories:
   - Allgemein
 ---
 
-Mit dem Update für 2022 der [Slope Track App](/suva-slope-track-app/) für die Suva bieten wir einige interessante Neuerungen an:
+Mit dem Update für 2022 der [Slope Track App](/blog/suva-slope-track-app/) für die Suva bieten wir einige interessante Neuerungen an:
 
 - Einen Wettbewerb, um ein Skiweekend mit Wendy Holdener zu gewinnen
 - Statistiken über alle Abfahrten wie z.B. zurückgelegte Kilometer, Durchschnittsgeschwindigkeit etc.

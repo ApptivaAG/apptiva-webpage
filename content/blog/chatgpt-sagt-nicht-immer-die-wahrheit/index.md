@@ -15,7 +15,7 @@ imageCopy: Foto von <a href="https://unsplash.com/de/@jorgkarg?utm_source=unspla
 author: Linus Hüsler
 ---
 
-Viele unter uns haben bestimmt schon mal mit [ChatGPT](https://chat.openai.com/){target="_blank"} von OpenAI oder [Bard](https://bard.google.com/){target="_blank"} von Google herumgespielt. Dabei gab es sicherlich Situationen, bei denen der Chatbot in voller Überzeugung falsche Antworten geliefert hat.
+Viele unter uns haben bestimmt schon mal mit [ChatGPT](https://chat.openai.com/){target="\_blank"} von OpenAI oder [Bard](https://bard.google.com/){target="\_blank"} von Google herumgespielt. Dabei gab es sicherlich Situationen, bei denen der Chatbot in voller Überzeugung falsche Antworten geliefert hat.
 
 Zum Beispiel antwortet ChatGPT bei “Was weisst du über Linus Hüsler?” (Quasi der Klassiker unter den Fragen): “Linus Hüsler ist ein Schweizer Tennisspieler, der am 16. November 1996 in Zürich geboren wurde. Er begann im Alter von fünf Jahren mit dem Tennisspiel und hat sich in den letzten Jahren in der nationalen und internationalen Tenniswelt einen Namen gemacht.”
 
@@ -60,8 +60,8 @@ Die Moderation von Inhalten ist ein entscheidender Schritt. Bei Bubble Chat habe
 
 Ein weiterer Ansatz besteht darin, den Benutzer:innen die Möglichkeit zu geben, uns beim Training unserer Modelle zu helfen. Durch Feedback können wir das Verhalten der KI besser verstehen und sie effektiver trainieren. Es bietet die Möglichkeit, Fehler direkt zu korrigieren und uns dabei zu helfen, das Modell in eine sicherere Richtung zu lenken.
 
-Das Kernstück ist jedoch eine spezialisierte [Wissensdatenbank](/funktionen/wissensdatenbanken/), die ausschliesslich die für den jeweiligen Anwendungszweck des Chatbots relevanten Informationen beinhaltet. Diese Datenbank wird sorgfältig erstellt und gepflegt, um sicherzustellen, dass die bereitgestellten Informationen genauestens auf den Zweck und den Anspruch des betreffenden Chatbots abgestimmt sind.
+Das Kernstück ist jedoch eine spezialisierte [Wissensdatenbank](/angebot/funktionen/wissensdatenbanken/), die ausschliesslich die für den jeweiligen Anwendungszweck des Chatbots relevanten Informationen beinhaltet. Diese Datenbank wird sorgfältig erstellt und gepflegt, um sicherzustellen, dass die bereitgestellten Informationen genauestens auf den Zweck und den Anspruch des betreffenden Chatbots abgestimmt sind.
 
-Gibt es eine Frage oder Anforderung, die nicht direkt mit der in der Wissensdatenbank enthaltenen Information abgedeckt werden kann, so generiert der Chatbot keine eigenständige Antwort, sondern leitet an [menschliche Experten](/funktionen/live-chat/) weiter oder zeigt an, dass er die Anforderung nicht verarbeiten kann.
+Gibt es eine Frage oder Anforderung, die nicht direkt mit der in der Wissensdatenbank enthaltenen Information abgedeckt werden kann, so generiert der Chatbot keine eigenständige Antwort, sondern leitet an [menschliche Experten](/angebot/funktionen/live-chat/) weiter oder zeigt an, dass er die Anforderung nicht verarbeiten kann.
 
 Dies gewährleistet einerseits, dass die Benutzer nur validierte und sichere Informationen erhalten. Andererseits wird dadurch die Möglichkeit, dass der Chatbot unangemessene oder potenziell gefährliche Informationen generiert, weiter reduziert. Dies ist ein Eckpfeiler unserer Verpflichtung, die von den Large Language Models ausgehenden Risiken zu minimieren und gleichzeitig einen effizienten und hilfreichen Service zu bieten.

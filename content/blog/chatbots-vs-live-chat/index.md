@@ -5,7 +5,7 @@ slug: chatbots-vs-live-chat
 tags: blog
 date: 2023-11-30
 title: Chatbot vs. Live Chat - was ist besser für den Kundendienst?
-description: Im Kundendienst sind Chatbots und Live-Chats zu unverzichtbaren Werkzeugen geworden, um Kundenanfragen zu beantworten. Doch welcher Ansatz ist effizienter? 
+description: Im Kundendienst sind Chatbots und Live-Chats zu unverzichtbaren Werkzeugen geworden, um Kundenanfragen zu beantworten. Doch welcher Ansatz ist effizienter?
 image:
   src: /assets/blog/chatbots-vs-live-chat/menschen-im-kundendienst.jpg
   base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/APT19Pn5+f7//25tXtTUzuHj36mqnZGThgDz9vXw8u/3+POvraLf39fr7OvExsK9wLkAt7Sug3lvqqukqqiempqRhIJ9g3VmdXJrAC0rKAsAAIp/d56UfZuXkHRnWCwfFxYRCgAvLymXiXjUxrK7qofFtp6hkHw8LRQLBwBJCUZs4HuiuwAAAABJRU5ErkJggg==
@@ -25,7 +25,7 @@ Chatbots sind besonders effektiv bei der Bereitstellung von grundlegenden Inform
 
 ## Die Stärken des Live-Chats
 
-[Live-Chats](/funktionen/live-chat/) bieten eine menschliche Interaktionsebene, die Chatbots oft fehlt. Menschliche Kundendienstmitarbeiter können komplexe Anfragen verstehen, individuell auf Kunden eingehen und empathisch reagieren. Ihre Fähigkeit, Emotionen zu erfassen und kundenspezifische Probleme anzugehen, ist besonders wertvoll in Situationen mit hoher Komplexität oder emotionaler Sensibilität.
+[Live-Chats](/angebot/funktionen/live-chat/) bieten eine menschliche Interaktionsebene, die Chatbots oft fehlt. Menschliche Kundendienstmitarbeiter können komplexe Anfragen verstehen, individuell auf Kunden eingehen und empathisch reagieren. Ihre Fähigkeit, Emotionen zu erfassen und kundenspezifische Probleme anzugehen, ist besonders wertvoll in Situationen mit hoher Komplexität oder emotionaler Sensibilität.
 
 Live-Chats eignen sich gut für die Behandlung individueller Probleme, die menschliche Intervention erfordern, und bieten die Möglichkeit, Kundenbeziehungen aufzubauen und zu stärken. Sie sind besonders wertvoll in Situationen, in denen persönliche Aufmerksamkeit und massgeschneiderte Lösungen erforderlich sind.
 
