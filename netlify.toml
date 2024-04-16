@@ -26,3 +26,743 @@ to = "/payflink/"
 [[redirects]]
 from = "/app-entwickeln-schweiz"
 to = "/app-erstellen-schweiz/"
+
+
+
+[[redirects]]
+  from = "/apptiva-lernt/magic-wormhole/"
+  to = "/apptiva-lernt/magic-wormhole"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/apptiva-lernt/typescript-noch-strikter-machen/"
+  to = "/apptiva-lernt/typescript-noch-strikter-machen"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/apptiva-lernt/nextjs-app-router/"
+  to = "/apptiva-lernt/nextjs-app-router"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/apptiva-lernt/cloud-native-buildpacks/"
+  to = "/apptiva-lernt/cloud-native-buildpacks"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/apptiva-lernt/prisma-mit-satisfies-keyword/"
+  to = "/apptiva-lernt/prisma-mit-satisfies-keyword"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/apptiva-lernt/javascript-date/"
+  to = "/apptiva-lernt/javascript-date"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/apptiva-lernt/ui-elemente-tailwind/"
+  to = "/apptiva-lernt/ui-elemente-tailwind"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/apptiva-lernt/seo-audit/"
+  to = "/apptiva-lernt/seo-audit"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/apptiva-lernt/nix-flakes/"
+  to = "/apptiva-lernt/nix-flakes"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/apptiva-lernt/tailwindcss/"
+  to = "/apptiva-lernt/tailwindcss"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/apptiva-lernt/sdkman/"
+  to = "/apptiva-lernt/sdkman"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/apptiva-lernt/rust/"
+  to = "/apptiva-lernt/rust"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/apptiva-lernt/nix-die-sprache/"
+  to = "/apptiva-lernt/nix-die-sprache"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/apptiva-lernt/xstate/"
+  to = "/apptiva-lernt/xstate"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/apptiva-lernt/praktische-unix-befehle/"
+  to = "/apptiva-lernt/praktische-unix-befehle"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/apptiva-lernt/seo/"
+  to = "/apptiva-lernt/seo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/neujahrsessen-apptiva-2024/"
+  to = "/blog/neujahrsessen-mit-der-apptiva"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/schnittstellen-programmieren/"
+  to = "/blog/bedeutung-der-schnittstellen-programmierung"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/vorteile-der-app-entwicklung-in-der-schweiz/"
+  to = "/blog/fuenf-vorteile-der-app-entwicklung-in-der-schweiz"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/apptiva-geburtstagsgeschenke-2023/"
+  to = "/blog/apptiva-geburtstagsgeschenke-2023"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/suva-slope-track-app-update-23-24/"
+  to = "/blog/suva-slope-track-app-update-23-24"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/apps-erp-api-schnittstellen-verbinden/"
+  to = "/blog/apps-erp-api-schnittstellen-verbinden"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/fallstricke-software-schnittstellen/"
+  to = "/blog/fallstricke-software-schnittstellen"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/apptiva-team-event-langenthal/"
+  to = "/blog/apptiva-team-event-langenthal"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/der-frischling-im-homeoffice/"
+  to = "/blog/der-frischling-im-homeoffice"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/app-entwicklung-in-der-schweiz-vorteile-gegenueber-offshore/"
+  to = "/blog/app-entwicklung-in-der-schweiz-vorteile-gegenueber-offshore"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wie-teuer-ist-ein-produktkonfigurator/"
+  to = "/blog/wie-teuer-ist-ein-produktkonfigurator"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/app-erstellen-schweiz/"
+  to = "/blog/app-erstellen-schweiz"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/produktkonfiguratoren-bestehende-webshops-integrieren/"
+  to = "/blog/produktkonfiguratoren-bestehende-webshops-integrieren"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wo-produkt-konfiguratoren-einsetzen/"
+  to = "/blog/wo-produkt-konfiguratoren-einsetzen"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/apptiva-team-event-maerz-23/"
+  to = "/blog/apptiva-team-event-maerz-23"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/dies-macht-einen-erfolgreichen-produkt-konfigurator-aus/"
+  to = "/blog/dies-macht-einen-erfolgreichen-produkt-konfigurator-aus"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/entwicklung-produkt-konfiguratoren/"
+  to = "/blog/entwicklung-produkt-konfiguratoren"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/gaston-ist-jetzt-payflink/"
+  to = "/blog/gaston-ist-jetzt-payflink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/5-tipps-für-erfolgreiche-workation/"
+  to = "/blog/5-tipps-für-erfolgreiche-workation"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/apptiva-neuer-standort/"
+  to = "/blog/apptiva-neuer-standort"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/apptiva-team-event-mai-22/"
+  to = "/blog/apptiva-team-event-mai-22"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/so-lernen-kunden-unser-vorgehen-software-entwicklung-kennen-und-schaetzen/"
+  to = "/blog/so-lernen-kunden-unser-vorgehen-software-entwicklung-kennen-und-schaetzen"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/suva-slope-track-app-update-2022/"
+  to = "/blog/suva-slope-track-app-update-2022"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/konfigurierbare-event-angebote-verkaufen-und-per-qr-code-einloesen/"
+  to = "/blog/konfigurierbare-event-angebote-verkaufen-und-per-qr-code-einloesen"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/so-werden-wir-bessere-entwicklerinnen/"
+  to = "/blog/so-werden-wir-bessere-entwicklerinnen"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/solarify/"
+  to = "/blog/solarify"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/vor-und-nachteile-apple-ios-google-android-app-webapp-pwa/"
+  to = "/blog/vor-und-nachteile-apple-ios-google-android-app-webapp-pwa"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/fleet-assistant-hostettler-autotechnik-ag/"
+  to = "/blog/fleet-assistant-hostettler-autotechnik-ag"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/1-jahr-home-office--traum-oder-albtraum/"
+  to = "/blog/1-jahr-home-office--traum-oder-albtraum"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/suva-slope-track-app-update-2021/"
+  to = "/blog/suva-slope-track-app-update-2021"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/neuer-vivanco-webshop/"
+  to = "/blog/neuer-vivanco-webshop"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/erste-schritte-in-der-informatik/"
+  to = "/blog/erste-schritte-in-der-informatik"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/vr-anwendungsbeispiele/"
+  to = "/blog/vr-anwendungsbeispiele"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/apptiva-5/"
+  to = "/blog/apptiva-5"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/screenimage-pro/"
+  to = "/blog/screenimage-pro"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/erfahrungen-mit-electron-webview/"
+  to = "/blog/erfahrungen-mit-electron-webview"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/unsere-erfahrungen-mit-postfinance-e-payment-service/"
+  to = "/blog/unsere-erfahrungen-mit-postfinance-e-payment-service"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/softwareentwicklung-unter-nixos/"
+  to = "/blog/softwareentwicklung-unter-nixos"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/die-dynamik-von-g-kraeften-betriebssystemen-und-neuen-teammitgliedern/"
+  to = "/blog/die-dynamik-von-g-kraeften-betriebssystemen-und-neuen-teammitgliedern"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/suva-slope-track-app/"
+  to = "/blog/suva-slope-track-app"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/datenmodell-eines-chatbots-testen/"
+  to = "/blog/datenmodell-eines-chatbots-testen"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/bubblechat-ist-da/"
+  to = "/blog/bubblechat-ist-da"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/app-store-eintrag-details-ueberblick/"
+  to = "/blog/app-store-eintrag-details-ueberblick"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/die-apptiva-waechst/"
+  to = "/blog/die-apptiva-waechst"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/mit-einem-chatbot-rapportieren/"
+  to = "/blog/mit-einem-chatbot-rapportieren"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/serverless/"
+  to = "/blog/serverless"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pwa-apps/"
+  to = "/blog/pwa-apps"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sacralis-app/"
+  to = "/blog/sacralis-app"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/bubblechat/"
+  to = "/blog/bubblechat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/trial-store/"
+  to = "/blog/trial-store"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/vsponse/"
+  to = "/blog/vsponse"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/werkausstellung/"
+  to = "/blog/werkausstellung"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/drei-jahre-apptiva/"
+  to = "/blog/drei-jahre-apptiva"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/usability-audit/"
+  to = "/blog/usability-audit"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/partyplaner-fuer-schuerch-getraenke/"
+  to = "/blog/partyplaner-fuer-schuerch-getraenke"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wir-sind-in-die-startup-station-umgezogen/"
+  to = "/blog/wir-sind-in-die-startup-station-umgezogen"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/bots-holzoepfel-ond-zipfelchappe/"
+  to = "/blog/bots-holzoepfel-ond-zipfelchappe"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/jest-test-debuggen-mit-visual-studio-code/"
+  to = "/blog/jest-test-debuggen-mit-visual-studio-code"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/amazon-lambda-zusammen-mit-dem-serverless-framework/"
+  to = "/blog/amazon-lambda-zusammen-mit-dem-serverless-framework"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/allianz-cinema-chatbot/"
+  to = "/blog/allianz-cinema-chatbot"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/suva-schneesport-check/"
+  to = "/blog/suva-schneesport-check"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/react-komponenten-mit-chrome-timeline-analysieren/"
+  to = "/blog/react-komponenten-mit-chrome-timeline-analysieren"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/chatbot-entwickeln-mit-react-redux-wit-ai-und-slack-teil-1/"
+  to = "/blog/chatbot-entwickeln-mit-react-redux-wit-ai-und-slack-teil-1"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/bot-entwicklung/"
+  to = "/blog/bot-entwicklung"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/mwst-startups/"
+  to = "/blog/mwst-startups"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/1-jahr-apptiva/"
+  to = "/blog/1-jahr-apptiva"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/it-landschaft-einer-organisation-langfristig-positiv-beeinflussen/"
+  to = "/blog/it-landschaft-einer-organisation-langfristig-positiv-beeinflussen"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/mehr-ueberblick-mit-storymap/"
+  to = "/blog/mehr-ueberblick-mit-storymap"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/digitale-kluft/"
+  to = "/blog/digitale-kluft"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/stakeholder-interviews/"
+  to = "/blog/stakeholder-interviews"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/geschaeftsprozesse-beschleunigen/"
+  to = "/blog/geschaeftsprozesse-beschleunigen"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/qualitaetsziele/"
+  to = "/blog/qualitaetsziele"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/eine-moderne-ui-architektur/"
+  to = "/blog/eine-moderne-ui-architektur"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/anwender-im-vordergrund/"
+  to = "/blog/anwender-im-vordergrund"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/warum-apptiva/"
+  to = "/blog/warum-apptiva"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/der-digitale-wandel/"
+  to = "/blog/der-digitale-wandel"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/bargeldlos-bezahlen/"
+  to = "/angebot/development"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/bubble-chat/"
+  to = "/angebot/chatbots"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/architektur-review/"
+  to = "/angebot/architektur-review"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/chatbots/"
+  to = "/angebot/chatbots"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/custom-dashboard/"
+  to = "/projekte/notaufnahme-dashboard-inselspital"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/dashboard-notaufnahme/"
+  to = "/projekte/notaufnahme-dashboard-inselspital"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/digitalisierung-unternehmen/"
+  to = "/angebot/development/digitalisierung"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/einsatzplanung/"
+  to = "/projekte/einsatzplanung-gebaeudeunterhalt"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/impressum/"
+  to = "/impressum"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/interface-programmierung/"
+  to = "/angebot/development"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/landingpage-optimierung/"
+  to = "/angebot/ux"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/landingpage-tests/"
+  to = "/angebot/ux"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/modernisierung-legacy-systeme/"
+  to = "/angebot/development"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/mobile-app-entwicklung/"
+  to = "/angebot/development/mobile-app-entwicklung"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/modernes-ui-design/"
+  to = "/angebot/ux"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/product-management/"
+  to = "/angebot/development"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/seo-optimierung/"
+  to = "/angebot/seo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/seo-strategie/"
+  to = "/angebot/seo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/software-auftragsentwicklung/"
+  to = "/angebot/development"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/software-entwickler-schweiz/"
+  to = "/angebot/development"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/tailwind-css/"
+  to = "/angebot/development"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/typescript/"
+  to = "/angebot/development"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ux-design/"
+  to = "/angebot/ux"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/webapp-entwicklung/"
+  to = "/angebot/development/webapp-entwicklung"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/weiterbildung-software-entwickler/"
+  to = "/angebot/weiterbildung"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wireframes/"
+  to = "/angebot/ux"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/xing/"
+  to = "https://www.xing.com/companies/apptivaag"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/app-erstellen-schweiz/"
+  to = "/angebot/development/mobile-app-entwicklung"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/gaming-app-entwicklung/"
+  to = "/angebot/development/mobile-app-entwicklung"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/kiosk-app-entwicklung/"
+  to = "/angebot/development/mobile-app-entwicklung"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/webapp-entwicklung/"
+  to = "/angebot/development/webapp-entwicklung"
+  status = 301
+  force = true
