@@ -22,14 +22,15 @@ const config = {
   async redirects() {
     return [
       {
-        source: '/web-apps/',
-        destination: '/angebot/development/webentwicklung/',
+        source: '/web-apps',
+        destination: '/angebot/development/webentwicklung',
         permanent: true,
       },
     ]
   
   }
 }
+
 
 
 
