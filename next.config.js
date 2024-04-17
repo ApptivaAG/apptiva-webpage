@@ -18,15 +18,19 @@ const config = {
       '/blog': ['./content/blog/**/*'],
     },
     taint: true,
-  },
-  redirects: async () => {return [
-    {
-      source: '/web-apps/',
-      destination: '/angebot/development/webentwicklung/',
-      permanent: true,
-    },
-  ]},
+  },  
+  async redirects() {
+    return [
+      {
+        source: '/web-apps/',
+        destination: '/angebot/development/webentwicklung/',
+        permanent: true,
+      },
+    ]
   
+  }
 }
+
+
 
 module.exports = withMDX(config)
