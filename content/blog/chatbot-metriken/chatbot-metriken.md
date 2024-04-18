@@ -84,4 +84,4 @@ Nachfolgend eine mögliche Auswahl:
 
 ## Chatbot Analytics Tools
 
-Es gibt mehrere Analytics-Tools für Chatbots. Diese unterscheiden sich teils stark im Preis und Funktionsumfang. In unseren Chatbot Projekten nutzen wir oft [Bubble Chat](https://bubble-chat.ch/de) oder [Dashbot](https://www.dashbot.io/). Beide Tools bieten die wichtigsten Kennzahlen für die Chatbot-Analyse. Mit Bubble Chat ist es zudem möglich, alle Daten in ein eigenes Reporting-Tool wie Tableu oder Qlik Sense zu exportieren und man kann Bubble Chat sogar im eigenen Rechenzentrum betreiben.
+Es gibt mehrere Analytics-Tools für Chatbots. Diese unterscheiden sich teils stark im Preis und Funktionsumfang. In unseren Chatbot Projekten nutzen wir oft [Bubble Chat](/angebot/chatbots) oder [Dashbot](https://www.dashbot.io/). Beide Tools bieten die wichtigsten Kennzahlen für die Chatbot-Analyse. Mit Bubble Chat ist es zudem möglich, alle Daten in ein eigenes Reporting-Tool wie Tableu oder Qlik Sense zu exportieren und man kann Bubble Chat sogar im eigenen Rechenzentrum betreiben.

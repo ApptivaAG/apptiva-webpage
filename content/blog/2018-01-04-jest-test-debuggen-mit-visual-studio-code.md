@@ -19,7 +19,7 @@ categories:
   - Qualitätssicherung
 ---
 
-Unsere JavaScript Projekte testen wir in der Regel mittels [Jest](https://facebook.github.io/jest/), eine Testbibliothek von Facebook. Als Code-Editor verwenden wir [Visual Studio Code](https://code.visualstudio.com/) von Microsoft.
+Unsere JavaScript Projekte testen wir in der Regel mittels [Jest](https://jestjs.io/), eine Testbibliothek von Facebook. Als Code-Editor verwenden wir [Visual Studio Code](https://code.visualstudio.com/) von Microsoft.
 
 Mit untenstehender Launch-Konfiguration kannst du Jest Tests in Visual Studio Code debuggen. Nachdem du sie zu deinen Launch-Konfigurationen hinzugefügt hast, kannst du den Jest Test selektieren und dann die Launch-Konfiguration starten. Alternativ kannst du auch die Datei, welche du testen möchtest selektieren. Jest sucht dann automatisch den dazugehörigen Test und führt diesen aus.
 

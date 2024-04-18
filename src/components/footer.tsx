@@ -108,10 +108,10 @@ export default function Footer() {
               <Link href="/angebot/konfiguratoren">Konfiguratoren</Link>
             </li>
             <li>
-              <Link href="angebot/webshops">Webshops</Link>
+              <Link href="/angebot/webshops">Webshops</Link>
             </li>
             <li>
-              <Link href="angebot/weiterentwicklung">Weiterentwicklung</Link>
+              <Link href="/angebot/weiterentwicklung">Weiterentwicklung</Link>
             </li>
           </ul>
         </div>
