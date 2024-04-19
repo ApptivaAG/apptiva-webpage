@@ -15,7 +15,7 @@ imageCopy: Bild erstellt von <a target="_blank" href="https://www.bing.com/image
 author: Markus Tanner
 ---
 
-Microsoft bietet den [Azure-OpenAI-Dienst nun auch in der Schweiz](https://news.microsoft.com/de-ch/2023/09/18/microsoft-gibt-verfugbarkeit-des-azure-openai-dienstes-im-schweizer-rechenzentrum-bekannt-und-beschleunigt-damit-ki-innovation-in-der-schweiz/){target="_blank"} an. Da haben wir selbstverständlich nicht lange zugewartet und den Dienst sofort bei Bubble Chat integriert. Dadurch bleiben die Daten bei der Kommunikation mit unseren Chatbots nun in der Schweiz.
+Microsoft bietet den [Azure-OpenAI-Dienst nun auch in der Schweiz](https://news.microsoft.com/de-ch/2023/09/18/microsoft-gibt-verfugbarkeit-des-azure-openai-dienstes-im-schweizer-rechenzentrum-bekannt-und-beschleunigt-damit-ki-innovation-in-der-schweiz/){target="\_blank"} an. Da haben wir selbstverständlich nicht lange zugewartet und den Dienst sofort bei Bubble Chat integriert. Dadurch bleiben die Daten bei der Kommunikation mit unseren Chatbots nun in der Schweiz.
 
 Mit der Integration des Azure-OpenAI-Dienstes können wir unseren Nutzern ein verbessertes Chatbot-Erlebnis bieten, das auf hochmoderner KI-Technologie basiert und gleichzeitig die Anforderungen an Datenschutz und Compliance erfüllt. Unsere Nutzer können sich darauf verlassen, dass ihre Daten in einer sicheren und vertrauenswürdigen Umgebung verwaltet werden, während sie gleichzeitig von der Effizienz und Leistungsfähigkeit des Azure-OpenAI-Dienstes profitieren.
 
@@ -23,13 +23,13 @@ Der Dienst ist in der Cloud-Region Switzerland North verfügbar und erfüllt lok
 
 ## Verwendung von GPT-Modellen bei Bubble Chat
 
-Bei Bubble Chat kann der Chatbot mit relevanten Informationsquellen versorgt werden, indem Dokumente (PDF, Word, etc. - siehe [Wissensdatenbanken](/funktionen/wissensdatenbanken/)) hochgeladen oder ganze Webseiten eingelesen werden. Durch den Einsatz der GPT-Technologie (Generative Pre-trained Transformer) kann der Chatbot daraufhin automatisch Antworten generieren. Diese Funktion erleichtert die Bereitstellung umfassender und kontextbezogener Informationen an die Nutzer, ohne dass menschliches Eingreifen erforderlich ist.
+Bei Bubble Chat kann der Chatbot mit relevanten Informationsquellen versorgt werden, indem Dokumente (PDF, Word, etc. - siehe [Wissensdatenbanken](/angebot/chatbots)) hochgeladen oder ganze Webseiten eingelesen werden. Durch den Einsatz der GPT-Technologie (Generative Pre-trained Transformer) kann der Chatbot daraufhin automatisch Antworten generieren. Diese Funktion erleichtert die Bereitstellung umfassender und kontextbezogener Informationen an die Nutzer, ohne dass menschliches Eingreifen erforderlich ist.
 
 Indem der Chatbot mit Dokumenten und Webseiten gefüttert wird, können Unternehmen und Organisationen komplexe Anfragen effizient beantworten. Die GPT-Technologie ermöglicht eine präzise Analyse des bereitgestellten Inhalts und generiert daraus relevante und verständliche Antworten. Diese automatisierte Methode ermöglicht eine schnelle Reaktion auf Benutzeranfragen und bietet eine konsistente und zeitnahe Kommunikation, wodurch die Gesamteffizienz des Kundenservice erhöht wird.
 
 ## Optimierung von Abläufen in Unternehmen
 
-Die Verwendung dieser Funktion trägt zur Optimierung interner und externer Abläufe bei, da häufig gestellte Fragen automatisiert werden können, was Ressourcen freisetzt und Mitarbeitern die Möglichkeit gibt, sich auf anspruchsvollere Aufgaben zu konzentrieren. Darüber hinaus verbessert ein Chatbot die [Skalierbarkeit des Kundenservice](/anwendungsfaelle/kundendienst/) und ermöglicht Unternehmen, eine grössere Anzahl von Anfragen zu verarbeiten, ohne dabei die Qualität der bereitgestellten Informationen zu beeinträchtigen.
+Die Verwendung dieser Funktion trägt zur Optimierung interner und externer Abläufe bei, da häufig gestellte Fragen automatisiert werden können, was Ressourcen freisetzt und Mitarbeitern die Möglichkeit gibt, sich auf anspruchsvollere Aufgaben zu konzentrieren. Darüber hinaus verbessert ein Chatbot die [Skalierbarkeit des Kundenservice](/angebot/chatbots/) und ermöglicht Unternehmen, eine grössere Anzahl von Anfragen zu verarbeiten, ohne dabei die Qualität der bereitgestellten Informationen zu beeinträchtigen.
 
 Durch die Kombination vom einfachen Einlesen von Dokumenten und Webseiten mit der leistungsstarken GPT-Technologie schafft Bubble Chat eine robuste Umgebung für eine effiziente und präzise Kommunikation. Diese Technologie ermöglicht es Unternehmen, den Kunden hochwertige und zeitnahe Informationen bereitzustellen, was letztendlich zu einer verbesserten Kundenzufriedenheit und einer stärkeren Bindung an die Marke führt.
 

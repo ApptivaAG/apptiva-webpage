@@ -15,11 +15,11 @@ imageCopy: Bild von Yan Krukau auf <a target="_blank" href="https://www.pexels.c
 author: Markus Tanner
 ---
 
-Im modernen [Kundendienst](/anwendungsfaelle/kundendienst/) sind Chatbots und Live-Chats zu unverzichtbaren Werkzeugen geworden, um Kundenanfragen zu bearbeiten und eine effiziente Betreuung zu gewährleisten. Oft stellt sich die Frage, welcher Ansatz dabei effizienter ist. In diesem Blogpost gehen wir auf die beiden Tools ein und erörtern die optimale Lösung für den Kundenservice.
+Im modernen Kundendienst sind Chatbots und Live-Chats zu unverzichtbaren Werkzeugen geworden, um Kundenanfragen zu bearbeiten und eine effiziente Betreuung zu gewährleisten. Oft stellt sich die Frage, welcher Ansatz dabei effizienter ist. In diesem Blogpost gehen wir auf die beiden Tools ein und erörtern die optimale Lösung für den Kundenservice.
 
 ## Die Effizienz von Chatbots
 
-Chatbots nutzen [Künstliche Intelligenz](/) und maschinelles Lernen, um automatisierte Unterstützung zu bieten. Ihre Stärke liegt in der Fähigkeit, eine Vielzahl von Anfragen gleichzeitig zu bearbeiten und Kunden rund um die Uhr zu bedienen. Die Skalierbarkeit von Chatbots ermöglicht es, häufig gestellte Fragen sofort zu beantworten und repetitive Aufgaben effizient zu erledigen. Dadurch können Unternehmen Ressourcen sparen und gleichzeitig eine schnellere Reaktionszeit für Standardanfragen gewährleisten.
+Chatbots nutzen [Künstliche Intelligenz](/glossar/kuenstliche-intelligenz-ki) und maschinelles Lernen, um automatisierte Unterstützung zu bieten. Ihre Stärke liegt in der Fähigkeit, eine Vielzahl von Anfragen gleichzeitig zu bearbeiten und Kunden rund um die Uhr zu bedienen. Die Skalierbarkeit von Chatbots ermöglicht es, häufig gestellte Fragen sofort zu beantworten und repetitive Aufgaben effizient zu erledigen. Dadurch können Unternehmen Ressourcen sparen und gleichzeitig eine schnellere Reaktionszeit für Standardanfragen gewährleisten.
 
 Chatbots sind besonders effektiv bei der Bereitstellung von grundlegenden Informationen, dem Lenken von Kunden zu Self-Service-Optionen und der Bewältigung von wiederkehrenden Anfragen. Die Verwendung vordefinierter Skripte gewährleistet eine konsistente Servicequalität und ermöglicht es, Kundenanfragen automatisch zu beantworten.
 

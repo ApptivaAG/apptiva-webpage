@@ -38,7 +38,7 @@ Neben den Faktoren, die einen grossen Einfluss auf die Kosten haben, gibt es auc
 
 ## Preisgestaltung
 
-Auf der Seite [Preisgestaltung](/preisrechner/) haben wir Beispiele für Chatbots zusammengestellt, welche zeigen, mit welchen Kosten in etwa zu rechnen ist.
+Auf der [Bubble-Chat](/angebot/chatbots/) Seite haben wir Beispiele für Chatbots zusammengestellt, welche zeigen, mit welchen Kosten in etwa zu rechnen ist.
 
 ## Erfahrung zahlt sich aus
 
