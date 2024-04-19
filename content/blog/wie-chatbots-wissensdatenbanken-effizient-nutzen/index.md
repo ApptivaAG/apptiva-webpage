@@ -24,19 +24,19 @@ Eine Wissensdatenbank ist im Grunde genommen eine zentrale Sammlung von Informat
 
 ### Wissen aufbereiten
 
-Chatbots, die mit Bubble Chat erstellt werden, können die Informationen in Wissensdatenbanken nutzen, um die richtigen Antworten auf die gestellten Fragen zu finden und die bestmögliche Lösung für ein Problem anzubieten. Bubble Chat bietet dazu eine Reihe von [Konnektoren](/funktionen/wissensdatenbanken/) an, die die Integration und den Zugriff auf externe Wissensdatenbanken ermöglichen. Jeder Konnektor stellt im Wesentlichen folgende Funktionen zur Verfügung:
+Chatbots, die mit Bubble Chat erstellt werden, können die Informationen in Wissensdatenbanken nutzen, um die richtigen Antworten auf die gestellten Fragen zu finden und die bestmögliche Lösung für ein Problem anzubieten. Bubble Chat bietet dazu eine Reihe von [Konnektoren](/angebot/chatbots/) an, die die Integration und den Zugriff auf externe Wissensdatenbanken ermöglichen. Jeder Konnektor stellt im Wesentlichen folgende Funktionen zur Verfügung:
 
 - **Datenzugriff**
-    Der Konnektor ermöglicht dem Chatbot, auf die externe Wissensdatenbank zuzugreifen.
+  Der Konnektor ermöglicht dem Chatbot, auf die externe Wissensdatenbank zuzugreifen.
 
 - **Inhaltsextraktion**
-    Der Konnektor extrahiert Texte und andere wichtige Informationen aus der externen Wissensdatenbank und verwandelt sie in ein für den Chatbot leicht verständliches Format.
+  Der Konnektor extrahiert Texte und andere wichtige Informationen aus der externen Wissensdatenbank und verwandelt sie in ein für den Chatbot leicht verständliches Format.
 
 - **Anreicherung der Chatbot Wissensdatenbank**
-    Die extrahierten Informationen werden automatisch in die Wissensdatenbank des Chatbots integriert, um die Chatbot-Funktionalität zu erweitern und die Qualität der Antworten auf Benutzeranfragen zu verbessern.
+  Die extrahierten Informationen werden automatisch in die Wissensdatenbank des Chatbots integriert, um die Chatbot-Funktionalität zu erweitern und die Qualität der Antworten auf Benutzeranfragen zu verbessern.
 
 - **Aktualisierung von Informationen**
-    Der Konnektor ermöglicht es, die in der externen Wissensdatenbank gespeicherten Informationen regelmässig zu aktualisieren, um sicherzustellen, dass der Chatbot immer auf dem neuesten Stand ist und die Benutzer mit aktuellen Informationen versorgt werden.
+  Der Konnektor ermöglicht es, die in der externen Wissensdatenbank gespeicherten Informationen regelmässig zu aktualisieren, um sicherzustellen, dass der Chatbot immer auf dem neuesten Stand ist und die Benutzer mit aktuellen Informationen versorgt werden.
 
 ### Antworten generieren
 
@@ -47,31 +47,31 @@ Der Chatbot kann nun sein aufbereitetes Wissen nutzen, indem er während des Ant
 Die Nutzung von Wissensdatenbanken bei Chatbots bietet verschiedene Vorteile:
 
 - **Informationsvielfalt**
-    Eine gut gepflegte Wissensdatenbank ermöglicht es dem Chatbot, auf eine breite Palette von Informationen zuzugreifen und Benutzeranfragen effektiv zu beantworten.
+  Eine gut gepflegte Wissensdatenbank ermöglicht es dem Chatbot, auf eine breite Palette von Informationen zuzugreifen und Benutzeranfragen effektiv zu beantworten.
 
 - **Genauigkeit und Relevanz**
-    Durch die Verwendung von Wissensdatenbanken kann ein Chatbot genauere und relevantere Antworten auf Benutzeranfragen liefern.
+  Durch die Verwendung von Wissensdatenbanken kann ein Chatbot genauere und relevantere Antworten auf Benutzeranfragen liefern.
 
 - **Konsistenz**
-    Die Verwendung einer zentralen Wissensdatenbank stellt sicher, dass der Chatbot konsistente Informationen bereitstellt, unabhängig davon, wer die Frage stellt oder zu welchem Zeitpunkt.
+  Die Verwendung einer zentralen Wissensdatenbank stellt sicher, dass der Chatbot konsistente Informationen bereitstellt, unabhängig davon, wer die Frage stellt oder zu welchem Zeitpunkt.
 
 - **Schnelligkeit**
-    Chatbots können auf Informationen in Wissensdatenbanken schnell zugreifen und Benutzeranfragen in Echtzeit beantworten.
+  Chatbots können auf Informationen in Wissensdatenbanken schnell zugreifen und Benutzeranfragen in Echtzeit beantworten.
 
 - **Skalierbarkeit**
-    Die Integration einer Wissensdatenbank ermöglicht es Chatbots, mit wachsenden Informationsmengen umzugehen und ihre Leistungsfähigkeit zu erhöhen.
+  Die Integration einer Wissensdatenbank ermöglicht es Chatbots, mit wachsenden Informationsmengen umzugehen und ihre Leistungsfähigkeit zu erhöhen.
 
 - **Lernfähigkeit**
-    Chatbots können aus den in der Wissensdatenbank gespeicherten Informationen lernen und ihre Antworten im Laufe der Zeit verbessern.
+  Chatbots können aus den in der Wissensdatenbank gespeicherten Informationen lernen und ihre Antworten im Laufe der Zeit verbessern.
 
 - **Effizienzsteigerung**
-    Durch die Nutzung von Wissensdatenbanken können Chatbots menschliche Mitarbeiter entlasten und ihnen ermöglichen, sich auf komplexere Aufgaben und Projekte zu konzentrieren.
+  Durch die Nutzung von Wissensdatenbanken können Chatbots menschliche Mitarbeiter entlasten und ihnen ermöglichen, sich auf komplexere Aufgaben und Projekte zu konzentrieren.
 
 - **Kosteneinsparung**
-    Chatbots, die auf Wissensdatenbanken zugreifen, können Unternehmen dabei helfen, Kosten zu reduzieren, indem sie den Bedarf an menschlichen Kundenservicemitarbeitern verringern.
+  Chatbots, die auf Wissensdatenbanken zugreifen, können Unternehmen dabei helfen, Kosten zu reduzieren, indem sie den Bedarf an menschlichen Kundenservicemitarbeitern verringern.
 
 - **Kundenzufriedenheit**
-    Durch die Bereitstellung schneller, genauer und relevanter Antworten auf Benutzeranfragen können Chatbots dazu beitragen, die Kundenzufriedenheit und -bindung zu erhöhen.
+  Durch die Bereitstellung schneller, genauer und relevanter Antworten auf Benutzeranfragen können Chatbots dazu beitragen, die Kundenzufriedenheit und -bindung zu erhöhen.
 
 ## Fazit
 
