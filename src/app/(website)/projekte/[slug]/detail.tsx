@@ -46,7 +46,7 @@ export default function ProjectDetail(props: {
         <div className="prose max-lg:order-2">
           {project.content && <PortableText value={project.content} />}
         </div>
-        <aside className="flex-shrink-0 basis-80 rounded bg-base-grey p-4 max-lg:order-1 lg:p-8 [&>div]:mb-4 [&>div]:text-xl [&>p]:text-sm [&>p]:font-bold [&>p]:text-primary">
+        <aside className="flex-shrink-0 basis-80 rounded bg-base-grey p-4 text-primary max-lg:order-1 lg:p-8 [&>div]:mb-4 [&>div]:text-xl [&>p]:text-sm [&>p]:font-bold">
           {project.tasks && (
             <>
               <p>Aufgaben</p>
