@@ -19,6 +19,7 @@ export default function Glossar(props: { data: GlossaryQueryData }) {
               Tauche ein in unser Glossar und erweitere dein Verständnis über
               Begriffe wie Chatbots, KI, und mehr.
               <br />
+              <br />
               <Link className="self-end" href={`/glossar`}>
                 <UnderlineForLink>Alle Begriffe →</UnderlineForLink>
               </Link>
