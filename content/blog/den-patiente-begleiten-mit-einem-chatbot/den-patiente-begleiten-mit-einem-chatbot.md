@@ -1,5 +1,5 @@
 ---
-title: 'Den Patienten begleiten &#8211; mit einem Chatbot'
+title: 'Den Patienten begleiten mit einem Chatbot'
 source: bot-fabrik
 date: '2017-06-23T17:23:34+00:00'
 status: publish
@@ -30,7 +30,3 @@ Der Patient-Begleit-Bot steht dem Patiente vor, während und nach dem Spitalbesu
 Ein solcher Chatbot kann je nach Anforderungen auf mehreren Kommunikationskanälen gleichzeitig laufen. Als Kanäle kommen das Web, Facebook-Messenger, Twitter, Skype oder in-house Messaging-Lösungen in Frage. Der Aufwand einen Chatbot auf mehreren Kanälen zu betreiben ist relativ klein.
 
 Wird ein Chatbot auf einem bestehenden Kanal wie beispielsweise Skype betrieben, so muss sich der Patient nicht mehr registrieren, falls dieser bereits auf Skype ein Konto besitzt. Deshalb ist die Kontaktaufnahme mit einem Chatbot extrem bequem und einfach.
-
-<div className="w-72"><video controls="controls" height="960" id="video-0-4" width="640"><source src="patientenbegleitung_small_nosound.mp4" type="video/mp4"></source></video></div>
-
-Hat dies dein Interesse geweckt? Dann melde dich bei uns unter [mensch@botfabrik.ch](mensch@botfabrik.ch) oder ruf [041 322 26 26](tel:+41413222626) an.
