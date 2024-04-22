@@ -64,7 +64,7 @@ const MobileNav = () => {
                               key={subitem.href}
                             >
                               <Image
-                                src={subitem.icon}
+                                src={subitem.iconPrimary ?? subitem.icon}
                                 alt={subitem.title}
                                 className="size-24"
                               />

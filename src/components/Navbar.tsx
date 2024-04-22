@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import NextLink from 'next/link'
+import chatbotsIconPrimary from './chatbots-primary.svg'
 import chatbotsIcon from './chatbots.svg'
 import developmentIcon from './development.svg'
 import apptivaLogo from './logo.svg'
@@ -26,6 +27,7 @@ export const navbarData = [
         text: 'Kundenanfragen mit künstlicher Intelligenz beantworten.',
         href: '/angebot/chatbots',
         icon: chatbotsIcon,
+        iconPrimary: chatbotsIconPrimary,
       },
     ],
   },
