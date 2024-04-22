@@ -72,11 +72,17 @@ export default function Footer() {
             </ul>
           </div>
           <div className="flex items-end">
-            <Image
-              src={sms}
-              className="w-32 mix-blend-luminosity"
-              alt="Swiss Made Software"
-            ></Image>
+            <Link
+              href={
+                'https://www.swissmadesoftware.org/companies/apptiva-ag/home.html'
+              }
+            >
+              <Image
+                src={sms}
+                className="w-32 mix-blend-luminosity"
+                alt="Swiss Made Software"
+              ></Image>
+            </Link>
           </div>
         </div>
         <div className="flex flex-col justify-center gap-x-12 gap-y-4 p-4 opacity-60 sm:px-12 lg:flex-row">
