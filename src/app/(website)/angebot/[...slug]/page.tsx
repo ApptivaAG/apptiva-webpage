@@ -44,16 +44,18 @@ export async function generateMetadata(props: {
     headerTitle ??
     'Angebot'
 
+  const description =
+    service.header?.meta?.description ??
+    service.header?.lead ??
+    'Ohne Beschreibung'
+
   return {
     title: `${[currentPageTitle, service.subPageOf?.breadcrumb].filter(Boolean).join(' | ')} | Angebot`,
-    description: service.header?.lead ?? 'Ohne Beschreibung',
+    description: description,
     alternates: { canonical: url },
     openGraph: {
       title: service.header?.meta?.title ?? headerTitle ?? 'Angebot',
-      description:
-        service.header?.meta?.description ??
-        service.header?.lead ??
-        'Ohne Beschreibung',
+      description: description,
       type: 'article',
       url,
       publishedTime: service._createdAt,

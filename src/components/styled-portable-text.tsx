@@ -1,6 +1,7 @@
 import { cn } from '@/utils/cn'
 import { PortableText as PortableTextType } from '@/utils/types'
 import { PortableText, PortableTextComponents } from '@portabletext/react'
+import Link from 'next/link'
 import Heading from './heading'
 import Underline from './ui/underline'
 import UnderlineForLink from './ui/underline-for-link'
@@ -21,17 +22,17 @@ const StyledPortableText = ({
         <Underline className={className}>{children}</Underline>
       ),
       link: ({ value, children }) => {
-        const target = (value?.href || '').startsWith('http')
-          ? '_blank'
-          : undefined
-        return (
-          <a
-            href={value?.href}
-            target={target}
-            rel={target === '_blank' ? 'noindex nofollow' : undefined}
-          >
+        const href = value?.href
+        if (!href) return children
+        const target = href.startsWith('http') ? '_blank' : undefined
+        if (target)
+          <a href={href} target={target} rel="noindex nofollow">
             <UnderlineForLink>{children}</UnderlineForLink>
           </a>
+        return (
+          <Link href={href}>
+            <UnderlineForLink>{children}</UnderlineForLink>
+          </Link>
         )
       },
     },
