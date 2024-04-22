@@ -65,7 +65,7 @@ const SheetContent = React.forwardRef<
       {...props}
     >
       {children}
-      <SheetPrimitive.Close className="rounded-sm absolute right-5 top-14 transition-opacity hover:opacity-100 focus:outline-none disabled:pointer-events-none data-[state=open]:bg-base-white">
+      <SheetPrimitive.Close className="rounded-sm absolute right-9 top-14 transition-opacity hover:opacity-100 focus:outline-none disabled:pointer-events-none data-[state=open]:bg-base-white">
         <Image priority src={navClose} alt="Close Menu" className="w-10" />
       </SheetPrimitive.Close>
     </SheetPrimitive.Content>
