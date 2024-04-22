@@ -67,7 +67,7 @@ Um Architekturentscheide treffen oder eine bestehende Architektur bewerten zu k�
 
 Qualitätsziele und -szenarien helfen beim Fällen von Architekturentscheide und machen Softwarearchitektur nachvollziehbar. Wir nehmen sie bei all unseren Entwicklungsprojekten zur Hilfe und haben damit durchwegs gute Erfahrungen gemacht.
 
-- [PDF herunterladen](attachment/qualitaetsziele-a4.pdf)
+- [PDF herunterladen](/assets/blog/attachment/qualitaetsziele-a4.pdf)
 
 <h2 class="p1">Weitere Infos</h2>
 
