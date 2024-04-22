@@ -38,11 +38,7 @@ export async function generateMetadata(props: {
     openGraph: {
       title: post.meta.title,
       type: 'article',
-      images: [
-        {
-          url: `https://apptiva-uber-website.netlify.app/_ipx/w_1200,q_75/%2Fassets%2Fblog%2F${paramsSlug}%2F${post.image}`,
-        },
-      ],
+      url: `/blog/${post.slug}`,
       publishedTime: post.publishDate,
       modifiedTime: post.kind === 'cms' ? post.modifiedDate : undefined,
     },
