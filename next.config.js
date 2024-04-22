@@ -613,7 +613,7 @@ const config = {
       },
       {
         source: '/referenzen/diluna',
-        destination: '	(projekte/diluna',
+        destination: '/projekte/diluna',
         permanent: true,
       },
       {
@@ -654,8 +654,11 @@ const config = {
       { source: '/apptiva-lernt', destination: '/wissen', permanent: true },
       { source: '/jobs', destination: '/ueber-uns', permanent: true },
       { source: '/referenzen', destination: '/projekte', permanent: true },
-      { source: '/vorgehen', destination: '/ueber-uns', permanent: true },
-      { source: '/tracking', destination: '/', permanent: true },
+      {
+        source: '/vorgehen',
+        destination: '/angebot/development/projektumsetzung',
+        permanent: true,
+      },
       { source: '/newsletter', destination: '/', permanent: true },
     ]
   },
