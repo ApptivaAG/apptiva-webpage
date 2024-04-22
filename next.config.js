@@ -651,7 +651,6 @@ const config = {
         destination: '/projekte/konfigurator-schreinerei-holz-art',
         permanent: true,
       },
-      { source: '/apptiva-lernt', destination: '/wissen', permanent: true },
       { source: '/jobs', destination: '/ueber-uns', permanent: true },
       { source: '/referenzen', destination: '/projekte', permanent: true },
       {
