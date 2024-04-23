@@ -10,7 +10,7 @@ export default async function Content(props: {
 
   return (
     <div className="content">
-      <StyledPortableText content={props.claim.claim} spreadParagraphs />
+      <StyledPortableText content={props.claim.claim} isHero />
     </div>
   )
 }

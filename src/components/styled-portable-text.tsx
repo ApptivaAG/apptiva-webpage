@@ -3,16 +3,19 @@ import { PortableText as PortableTextType } from '@/utils/types'
 import { PortableText, PortableTextComponents } from '@portabletext/react'
 import Link from 'next/link'
 import Heading from './heading'
+import { leadStyle } from './page-header'
 import Underline from './ui/underline'
 import UnderlineForLink from './ui/underline-for-link'
 
 const StyledPortableText = ({
   content,
   spreadParagraphs = false,
+  isHero = false,
   className = '',
 }: {
   content: PortableTextType
   spreadParagraphs?: boolean
+  isHero?: boolean
   className?: string
 }) => {
   const components: PortableTextComponents = {
@@ -58,7 +61,8 @@ const StyledPortableText = ({
           className={cn(
             'whitespace-break-spaces py-1',
             className,
-            spreadParagraphs ? 'py-4' : ''
+            spreadParagraphs ? 'py-4' : '',
+            isHero ? leadStyle : ''
           )}
         >
           {children}

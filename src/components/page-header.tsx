@@ -5,6 +5,8 @@ import BreadCrumb from './bread-crumb'
 import Heading from './heading'
 import StyledPortableText from './styled-portable-text'
 
+export const leadStyle = 'max-w-xl pt-4 text-xl md:pt-8'
+
 export function PageHeader(props: {
   title: React.ReactNode | PortableText | undefined
   lead: React.ReactNode | PortableText | undefined
@@ -31,7 +33,7 @@ export function PageHeader(props: {
           <BreadCrumb className="pb-2 md:pb-6" links={props.links} />
         )}
         {props.title && <Heading level={1}>{title}</Heading>}
-        <p className="max-w-xl pt-4 text-xl md:pt-8">{lead}</p>
+        <p className={leadStyle}>{lead}</p>
         {props.callToAction && (
           <div className="pt-8 md:pt-12">{props.callToAction}</div>
         )}
