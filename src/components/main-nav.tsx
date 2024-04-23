@@ -33,8 +33,8 @@ const MainNav = () => (
                         className="aspect-square size-24 object-contain object-center py-2"
                       />
                       <div className="flex flex-col justify-center">
-                        <span className="leading-6">{subitem.title}</span>
-                        <small>{subitem.text}</small>
+                        <span className="pb-1">{subitem.title}</span>
+                        <small className="leading-normal">{subitem.text}</small>
                       </div>
                     </Link>
                   ))}
