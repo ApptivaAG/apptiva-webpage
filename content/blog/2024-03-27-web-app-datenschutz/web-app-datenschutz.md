@@ -2,7 +2,11 @@
 title: "Datenschutz und Datensicherheit: Wichtige Aspekte bei der Entwicklung einer Web-App"
 slug: web-app-datenschutz
 templateKey: blog-post
-image: data-privacy.jpg
+image:
+  src: /assets/blog/2024-03-27-web-app-datenschutz/data-privacy.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/AN3f4ODj5O3u8+7u6+Pn6MDDwLatj72tdgDh5Ofz7uXf0rmcglV0YDuShFWrkUi4nkYA4eTo0smxdl0oIQAAKB8PrZ9twq9jsp5MAOHk6N3e3pCOhXl5eJ+ip7m0oZeHVKWSTQDw9Pr6/P/09vzs7Or98cXy5KXo1JPiy5QroFKV80nD0wAAAABJRU5ErkJggg==
+  height: 3064
+  width: 4592
 imageCaption: Foto von Towfiqu Barbhuiya auf Unsplash
 date: 2024-03-27
 author: Philip Schönholzer

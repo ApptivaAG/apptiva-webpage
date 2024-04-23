@@ -2,7 +2,11 @@
 title: Fünf Vorteile der App-Entwicklung in der Schweiz
 slug: vorteile-der-app-entwicklung-in-der-schweiz
 templateKey: blog-post
-image: entwicklung-schweiz.jpg
+image:
+  src: /assets/blog/2024-01-15-vorteile-app-entwicklung-schweiz/entwicklung-schweiz.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVR4nAFkAJv/AKCZiP7783p+flFTTjs8MklJQbm3r4SFgwCjnpOwq55WXVklKSg2KyYoIhVAREB5foQAnZeKenZltravioV/SD80OTUmExQKMDIvAGNeUn16cNDPzMrKxUdKQTk6NS4wLAEEAFKlJsUGFBatAAAAAElFTkSuQmCC
+  height: 1342
+  width: 2735
 imageCaption: Photo von Johannes Hofmann auf Unsplash
 date: 2024-01-22
 author: Philip Schönholzer

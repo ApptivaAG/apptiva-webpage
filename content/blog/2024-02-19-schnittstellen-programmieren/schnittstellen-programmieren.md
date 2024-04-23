@@ -2,7 +2,11 @@
 title: "Die Bedeutung der Schnittstellen&shy;programmierung: Ihre Systeme optimal integrieren"
 slug: schnittstellen-programmieren
 templateKey: blog-post
-image: schnittstellen-programmieren.jpg
+image:
+  src: /assets/blog/2024-02-19-schnittstellen-programmieren/schnittstellen-programmieren.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/ALpIG6QnEVAqCWoYBY0eDaafQ73feZ2zUAADACdVFgCYoFJWORZrRxHa64za/5Gx3V8ALUIzdo5Aw9dty65dr7xr5/+kqbVo5sV8AFZOQXBxUYqVYKixd8fikeD/lJWZVrBiSwASDg4ZERUZExRUUEp6dWmquWOepFcFBgCwRjSJN48+3AAAAABJRU5ErkJggg==
+  height: 1280
+  width: 1920
 imageCaption: Photo by Bermix Studio auf Unsplash
   
 date: 2024-02-19
