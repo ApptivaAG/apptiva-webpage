@@ -30,20 +30,16 @@ export default function ContactPerson(props: {
               className="absolute left-7 top-[-2.7rem] h-[21rem] w-[16.5rem] rounded-b-[2.1rem] object-cover md:left-9 md:top-[-3.25rem] md:h-[27rem] md:w-[21.5rem] md:rounded-b-[2.75rem]"
             />
           </div>
-          <div className="col-right flex flex-col justify-center">
+          <div className="col-right flex flex-col items-start justify-center gap-3">
             {props.content && (
-              <StyledPortableText content={props.content} spreadParagraphs />
+              <StyledPortableText content={props.content} className="py-0" />
             )}
-            <Link href={'/kontakt/'}>
-              <Button
-                intent="secondary"
-                className="my-5 w-fit px-6 md:mt-16"
-                element="div"
-              >
+            <Link href={'/kontakt/'} className="mb-2 mt-8 md:mt-16">
+              <Button intent="secondary" element="div">
                 Kontakt aufnehmen
               </Button>
             </Link>
-            <p className="mb-3">
+            <p>
               <Link href={`mailto:${props.person.contact?.mail}`}>
                 <UnderlineForLink>
                   {props.person.contact?.mail}
