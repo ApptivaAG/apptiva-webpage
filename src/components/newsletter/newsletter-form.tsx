@@ -34,19 +34,25 @@ export default function NewsletterForm() {
         action={formAction}
       >
         <div>
-          <Label>Deine Email-Adresse</Label>
+          <Label htmlFor="newsletter-email">Deine Email-Adresse</Label>
           <Input
             onFocus={() => setEngaged(true)}
             intent="outline"
             type="email"
             name="email"
+            id="newsletter-email"
           />
         </div>
         <div className={cn(!engaged && 'max-md:hidden')}>
-          <Label>
+          <Label htmlFor="newsletter-name">
             Dein Vorname <small>optional</small>
           </Label>
-          <Input intent="outline" type="text" name="name" />
+          <Input
+            intent="outline"
+            type="text"
+            name="name"
+            id="newsletter-name"
+          />
         </div>
         <Submit className={cn(!engaged && 'max-md:hidden')}>Abonnieren</Submit>
       </form>

@@ -15,15 +15,15 @@ const ContactForm = () => {
     <Section intent={'light'} level={'one'}>
       <div className="content">
         <div className="col-left mt-4 max-w-2xl lg:mt-6">
-          <Heading level={5} size={5} className={''}>
+          <Heading level={2} size={5}>
             Telefon
           </Heading>
           <p>041 322 26 26</p>
-          <Heading level={5} size={5} className={'pt-3'}>
+          <Heading level={2} size={5} className="pt-3">
             Mail
           </Heading>
           <p>info@apptiva.ch</p>
-          <Heading level={5} size={5} className={'pt-3'}>
+          <Heading level={2} size={5} className="pt-3">
             Adresse
           </Heading>
           <p>
@@ -35,7 +35,7 @@ const ContactForm = () => {
         </div>
         <div className=" col-right max-lg:mt-4">
           <div className="flex flex-col gap-2 pt-6 ">
-            <Heading level={5} size={5} className={''}>
+            <Heading level={2} size={5}>
               Kontaktformular
             </Heading>
             {state.state === 'success' ? (
@@ -61,23 +61,34 @@ const ContactForm = () => {
                   />
                 </p>
                 <div>
-                  <Label>Name</Label>
-                  <Input intent="default" type="text" name="name" />
+                  <Label htmlFor="name">Name</Label>
+                  <Input intent="default" type="text" name="name" id="name" />
                 </div>
                 <div>
-                  <Label>Email-Adresse</Label>
-                  <Input intent="default" type="email" name="email" />
+                  <Label htmlFor="email">Email-Adresse</Label>
+                  <Input
+                    intent="default"
+                    id="email"
+                    type="email"
+                    name="email"
+                  />
                 </div>
                 <div>
-                  <Label>
+                  <Label htmlFor="company">
                     Unternehmen <small>optional</small>
                   </Label>
-                  <Input intent="default" type="text" name="company" />
+                  <Input
+                    intent="default"
+                    type="text"
+                    name="company"
+                    id="company"
+                  />
                 </div>
 
                 <div>
-                  <Label>Nachricht</Label>
+                  <Label htmlFor="message">Nachricht</Label>
                   <textarea
+                    id="message"
                     title="Nachricht"
                     className="ring-offset-white file:font-medium bg-white flex h-full w-full rounded border border-primary px-3 py-2 text-base file:border-0 file:bg-transparent file:text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     name="message"
