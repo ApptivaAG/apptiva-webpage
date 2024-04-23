@@ -1,8 +1,13 @@
 ---
 title: Mit einem Chatbot rapportieren
+source: apptiva
 slug: mit-einem-chatbot-rapportieren
 templateKey: blog-post
-image: chefbot.png
+image:
+  src: /assets/blog/mit-chatbot-rapportieren/chefbot.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAADCAIAAAAhqtkfAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAVklEQVR4nAFLALT/APT09I6UmdTW2Pb19fT09Onp6fT09Pv7+wDHysoAChc2Q0t3dnRPT1A0NDRVVVXQ0NAA+/v7r7S3293e8vHx3t7f6enp4uLi+/v7lkQ0WhhajV0AAAAASUVORK5CYII=
+  height: 1059
+  width: 2560
 date: 2019-04-28
 author: Philip Schönholzer
 description: >-

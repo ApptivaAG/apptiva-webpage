@@ -1,8 +1,13 @@
 ---
 title: Gaston ist jetzt Payflink
+source: apptiva
 slug: gaston-ist-jetzt-payflink
 templateKey: blog-post
-image: gaston-now-payflink.png
+image:
+  src: /assets/blog/2023-01-25-gaston-ist-jetzt-payflink/gaston-now-payflink.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAgUlEQVR4nGMIYZAPYpBJYND5+PjV//////79+x8MGEIY5EIZ5P0ZJHYWzvz///+vHz9//vwJkohgUM5hsE5k0C1j8Hzy9duhm7d379n9/ft3hhAG+XAGpTAGxSAG2YvL9/369+/bl69///4FGRXCIAs2TWyaZtb//////P7z//9/AKniRGsrV0RbAAAAAElFTkSuQmCC
+  height: 2121
+  width: 3594
 date: 2023-01-25
 author: Philip Schönholzer
 description: >-

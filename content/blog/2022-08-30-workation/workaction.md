@@ -1,8 +1,13 @@
 ---
 title: 5 Tipps für erfolgreiche Workation
+source: apptiva
 slug: 5-tipps-für-erfolgreiche-workation
 templateKey: blog-post
-image: workation.jpg
+image:
+  src: /assets/blog/2022-08-30-workation/workation.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/AJb4/4XH2XuyvIC2vo7Cwqnd1rbezLHSrQBczPo3g4ldhnFsh2Bpd0iYkWb22rh3f04ANq3dJJm+OoWRUoyGz7mQ2Jlq7Kt4i6ylAABMSzZtYyhmab3Yzf/2yF5QS8uVaLnErQBKa148d308dICJkpAxMTkAADEAGTcvNUN8mT9p2Xv7/gAAAABJRU5ErkJggg==
+  height: 1115
+  width: 1800
 date: 2022-08-31
 author: Philip Schönholzer
 description: >-

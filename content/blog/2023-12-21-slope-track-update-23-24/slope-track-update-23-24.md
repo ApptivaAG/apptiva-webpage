@@ -1,8 +1,13 @@
 ---
 title: "Suva Slope Track App Update 23/24: Neue Funktionen und Verbesserungen"
+source: apptiva
 slug: suva-slope-track-app-update-23-24
 templateKey: blog-post
-image: slope-track-app-update-23-24.png
+image:
+  src: /assets/blog/2023-12-21-slope-track-update-23-24/slope-track-app-update-23-24.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/AGm34k6Nr1OUslujxYLc/EWEok6Wu33U+gC01OiSsb6lvcyovcGMrcQABRM0LSievc4A+/z+5PP39Pr+9PXzxM7dIiQoYlRU5+zyANPS0p6bm5eWlMLExIvG20lZYYqFhvDv8ADs7OzY2Nja2trf4OCxy9Ho7/P7+/rw8PAFIVOU657l9gAAAABJRU5ErkJggg==
+  height: 1080
+  width: 1920
 imageCaption: Suva Slope Track App Update 23/24
 date: 2023-12-21
 author: Philip Schönholzer
@@ -35,5 +40,7 @@ Das Update der Slope Track App für die Saison 23/24 bringt sinnvolle Ergänzung
 
 Die Slope Track App ist auf Deutsch, Französisch und Italienisch verfügbar und kann kostenlos im App-Store von Apple und im Play-Store von Google heruntergeladen werden. Wir wünschen viel Spass!
 
-<a href="https://apps.apple.com/ch/app/slope-track/id405253094" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/de-de?size=250x83&amp;releaseDate=1292803200" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;"></a>
-<a href='https://play.google.com/store/apps/details?id=ch.suva.slopetrack.beta&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' target="_new" rel="nofollow noopener noreferrer" style="display: inline-block; overflow: hidden; height: 96px;"><img style="height: 108px;" alt='Jetzt bei Google Play' class="lazyload" src='https://play.google.com/intl/en_us/badges/images/generic/de_badge_web_generic.png'/></a>
+<div className="flex items-center gap-4">
+<a className="basis-44" href="https://apps.apple.com/ch/app/slope-track/id405253094"><img className="w-full" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/de-de?size=250x83&amp;releaseDate=1292803200" alt="Download on the App Store" /></a>
+<a className="basis-48" href='https://play.google.com/store/apps/details?id=ch.suva.slopetrack.beta&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' target="_new" rel="nofollow noopener noreferrer" ><img alt='Jetzt bei Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/de_badge_web_generic.png'/></a>
+</div>

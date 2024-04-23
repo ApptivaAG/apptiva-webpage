@@ -1,8 +1,13 @@
 ---
 title: 'Erste Schritte in der Informatik'
+source: apptiva
 slug: erste-schritte-in-der-informatik
 templateKey: blog-post
-image: dave-4gewinnt.jpg
+image:
+  src: /assets/blog/2020-11-erste-schritte-in-der-informatik/dave-4gewinnt.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/AI1hQv/00cexn0tRXDg9RjYyN7SKeunLtgBDMChwcn9LS0skNkUACh1jRkbhiXKXb1kAIxoXBhgmW01EknlvIystgFZQ1H9paDokAIZbOFxORMSPefKtlINyaJB1aINZVU5ARgDjrYf12MV4YVS0fWQlFQt+bF00VnUPRm4OmDD8vhI+zAAAAABJRU5ErkJggg==
+  height: 1536
+  width: 2560
 date: 2020-11-26
 author: David Decker
 description: >-

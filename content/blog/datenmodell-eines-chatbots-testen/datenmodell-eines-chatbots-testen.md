@@ -1,8 +1,13 @@
 ---
 title: Datenmodell eines Chatbots testen
+source: apptiva
 slug: datenmodell-eines-chatbots-testen
 templateKey: blog-post
-image: similarity_chart.png
+image:
+  src: /assets/blog/datenmodell-eines-chatbots-testen/similarity_chart.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAcElEQVR4nDXLsQ2DMABEUc8R1iClR0hBh5jBEowRKgrTewtLJ0HtCTzBAZkgtIcA8dunbwB0bRdC4JWkd1k650z/7b0fc8568sPQ1LVJKe3/XdKyrDf/tm2ephMkxRittQDuieQJJKvqUxQvACTz1QGO2llZIjJZAgAAAABJRU5ErkJggg==
+  height: 1160
+  width: 1878
 date: 2019-10-07
 author: Linus Hüsler
 description: >-

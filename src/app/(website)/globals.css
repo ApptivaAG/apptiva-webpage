@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 6 48 98;
+    --primary-light: 17 126 255;
+    --primary-dark: 11 28 57;
+    --secondary: 133 255 0;
+    --secondary-dark: 0 111 79;
+    --base-black: 24 24 24;
+    --base-grey: 239 239 239;
+    --base-grey-light: 249 249 249;
+    --base-white: 255 255 255;
+  }
+
+  .content {
+    --gap: clamp(1rem, 6vw, 3rem);
+    --full: minmax(var(--gap), 1fr);
+    --content-gap: calc(100% - 2 * var(--gap));
+    --left-ratio: 0;
+    --right-ratio: 0;
+    --popout: minmax(0, 2rem);
+    --feature: minmax(0, 9rem);
+    --gutter-top: 8rem;
+
+    display: grid;
+    grid-template-columns:
+      [full-start] var(--full)
+      [feature-start] var(--feature)
+      [popout-start] var(--popout)
+      [content-start left-start right-start] var(--left-ratio)
+      [content-gap-end] var(--content-gap)
+      [content-gap-start]
+      var(--right-ratio) [content-end left-end right-end]
+      var(--popout) [popout-end]
+      var(--feature) [feature-end]
+      var(--full) [full-end];
+
+    padding-top: 8rem;
+  }
+
+  @media (min-width: 1024px) {
+    .content {
+      --content-gap: 2rem;
+      --left-ratio: min(
+        calc(41% - var(--gap) - (var(--content-gap) / 2)),
+        28rem
+      );
+      --right-ratio: min(
+        calc(59% - var(--gap) - (var(--content-gap) / 2)),
+        40rem
+      );
+
+      grid-template-columns:
+        [full-start] var(--full)
+        [feature-start] var(--feature)
+        [popout-start] var(--popout)
+        [content-start left-start] var(--left-ratio)
+        [left-end] var(--content-gap)
+        [right-start]
+        var(--right-ratio) [content-end right-end]
+        var(--popout) [popout-end]
+        var(--feature) [feature-end]
+        var(--full) [full-end];
+    }
+  }
+
+  .middle-grid {
+    --content-gap: 0;
+    --left-ratio: min(calc(50% - var(--gap)), 35rem);
+    --right-ratio: min(calc(50% - var(--gap)), 35rem);
+  }
+
+  .full .content,
+  .feature .content {
+    padding-top: 0;
+  }
+
+  .content > * {
+    grid-column: content;
+  }
+  .popout {
+    grid-column: popout;
+  }
+  .feature {
+    grid-column: feature;
+  }
+  .full {
+    grid-column: full;
+  }
+}

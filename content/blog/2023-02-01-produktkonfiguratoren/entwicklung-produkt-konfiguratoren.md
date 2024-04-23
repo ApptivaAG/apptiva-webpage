@@ -1,8 +1,13 @@
 ---
 title: Entwicklung von Produkt Konfiguratoren
+source: apptiva
 slug: entwicklung-produkt-konfiguratoren
 templateKey: blog-post
-image: entwicklung-produkt-konfiguratoren.png
+image:
+  src: /assets/blog/2023-02-01-produktkonfiguratoren/entwicklung-produkt-konfiguratoren.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAIAAAC6O5sJAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAnElEQVR4nC3KsQnCQBSH8escwRkcwFZcxdYBHCML2JlWSSuIZRYQlGARi0QkyRmePO/eGY77S0iar/l9CoBzzhgzlPnrnAOgvPfMXFV13TREpPWbmUcYll1yXK03nZNf13nve7AiViTaxkqpsigDwgjGGAD7c6omU2pbK9IDgMvjuYgO9yybzZfJKQUwQv7ScXololtelPoDhAD8AU51ki016ngjAAAAAElFTkSuQmCC
+  height: 829
+  width: 991
 date: 2023-02-01
 author: Markus Tanner
 description: >-

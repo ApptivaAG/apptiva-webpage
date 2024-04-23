@@ -1,8 +1,13 @@
 ---
 title: Suva Slope Track App - Update 2022
+source: apptiva
 slug: suva-slope-track-app-update-2022
 templateKey: blog-post
-image: hero-slope-track-2022.png
+image:
+  src: /assets/blog/2021-12-01-slope-track-update-2022/hero-slope-track-2022.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVR4nAFkAJv/AACaywBAdQAiTwAxYQAxYAAxXwBPhQCOxAAAebZ/ttt+pMUAESoALUoAEDoAOGgAl8oAAG+vlMfYqMbJkJOZRmVuAFZ4AI7AAIzCAKDx/5WipmRwdOzp6ae5woSmrOT//6Tg/8txLB9tGiCTAAAAAElFTkSuQmCC
+  height: 1079
+  width: 1920
 date: 2021-12-01
 author: Philip Schönholzer
 description: >-
@@ -11,7 +16,7 @@ categories:
   - Allgemein
 ---
 
-Mit dem Update für 2022 der [Slope Track App](/suva-slope-track-app/) für die Suva bieten wir einige interessante Neuerungen an:
+Mit dem Update für 2022 der [Slope Track App](/blog/suva-slope-track-app/) für die Suva bieten wir einige interessante Neuerungen an:
 
 - Einen Wettbewerb, um ein Skiweekend mit Wendy Holdener zu gewinnen
 - Statistiken über alle Abfahrten wie z.B. zurückgelegte Kilometer, Durchschnittsgeschwindigkeit etc.
@@ -57,5 +62,7 @@ Was G-Kräfte genau sind und wie diese auf unseren Körper beim Schneesport wirk
 
 Die Slope Track-App ist auf Deutsch, Französisch und Italienisch verfügbar und kann kostenlos aus dem App-Store von Apple und dem Play-Store von Google heruntergeladen werden. Wir wünschen euch viel Spass und Hals- und Beinbruch.
 
-<a href="https://apps.apple.com/ch/app/slope-track/id405253094?mt=8" target="_new_" rel="nofollow noopener noreferrer" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/de-de/badge-lrg.svg?releaseDate=2010-12-20&kind=iossoftware&bubble=ios_apps) no-repeat;width:135px;height:40px;margin: 0.5em;"></a>
-<a href='https://play.google.com/store/apps/details?id=ch.suva.slopetrack.beta&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' target="_new" rel="nofollow noopener noreferrer"><img style="height: 2.95em;" alt='Jetzt bei Google Play' class="lazyload" src='https://play.google.com/intl/en_us/badges/images/generic/de_badge_web_generic.png'/></a>
+<div className="flex items-center gap-4">
+<a className="basis-44" href="https://apps.apple.com/ch/app/slope-track/id405253094"><img className="w-full" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/de-de?size=250x83&amp;releaseDate=1292803200" alt="Download on the App Store" /></a>
+<a className="basis-48" href='https://play.google.com/store/apps/details?id=ch.suva.slopetrack.beta&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' target="_new" rel="nofollow noopener noreferrer" ><img alt='Jetzt bei Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/de_badge_web_generic.png'/></a>
+</div>

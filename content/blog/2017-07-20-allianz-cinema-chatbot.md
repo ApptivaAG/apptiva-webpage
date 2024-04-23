@@ -1,8 +1,13 @@
 ---
 title: Allianz Cinema Chatbot
+source: apptiva
 slug: allianz-cinema-chatbot
 templateKey: blog-post
-image: img/allianz-cinema-bot.png
+image:
+  src: /assets/blog/img/allianz-cinema-bot.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVR4nAFkAJv/AKqqq87PwNLUyOnh2/z57///+////v///wCdnZydbWOYaWQ0gbkAaq8AfbgAbbCHt9gAkpKSKwAAMQAAZ5rDCHy2N4W8IoS9osTfAH1+fn97e4yFhdTMxe/l2dDIve7o4Pn38i66PJAw6PDzAAAAAElFTkSuQmCC
+  height: 628
+  width: 1200
 date: 2017-07-20T15:37:14.000Z
 author: linus-huesler
 description: 'Das neuste Projekt der Botfabrik ist jetzt live: Der Allianz Cinema Chatbot'

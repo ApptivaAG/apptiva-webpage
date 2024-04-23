@@ -1,8 +1,13 @@
 ---
 title: Eine moderne UI-Architektur
+source: apptiva
 slug: eine-moderne-ui-architektur
 templateKey: blog-post
-image: img/netz.jpg
+image:
+  src: /assets/blog/img/netz.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAIAAABxZ0isAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAoUlEQVR4nAGWAGn/AGafw0eEtW6mx8vv8uH69+X//YC614O+2gAaT3wkXoolXZAnX5MYR4MaSYYnW5sgT5EADkZgG1Z0EkJ1CzpwAC1pACtoDz13ACRgAAAvUA1CYwM0YgAoYwAoYQ08bwEvYwAYSwAAGEABNFIAL1UAGE4AF00BMGUAJlsADj8AAAAuABo8ACRJABxLABZGABVHAAc6AAAzlQ4p2zwTGkYAAAAASUVORK5CYII=
+  height: 1200
+  width: 1600
 date: 2015-10-29T09:22:59.000Z
 author: roman-schaller
 description: ''

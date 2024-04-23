@@ -1,8 +1,13 @@
 ---
 title: Die Dynamik von G-Kräften, Betriebssystemen und neuen Teammitgliedern
+source: apptiva
 slug: die-dynamik-von-g-kraeften-betriebssystemen-und-neuen-teammitgliedern
 templateKey: blog-post
-image: ./renato-snowboarding.jpg
+image:
+  src: /assets/blog/g-kraefte-teammitglied/renato-snowboarding.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAIAAABxZ0isAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAoUlEQVR4nAGWAGn/ABBJiCRYmBxZnCdnrRhKgkNsqoin4JWx4wBVcZ90jbtxj76HpdQABB88SGW60v+btN4Ai5OxurzWu8Pf297yFBgoTU9h+/r/oafEANvc8dja8c/Q5ebn9VxsmF5vnN3e8rK20ABgao1kbZJma4OEiJtvd5JfZ4a/v9fe3O4AQUdfgX+Xi4mfb2+BcXKGpajApanD0tHgbHhUHQqCnzsAAAAASUVORK5CYII=
+  height: 1920
+  width: 2560
 date: 2020-03-06T13:33:33.000Z
 author: Renato Wasescha
 description: 'Schon beim ersten Treffen mit dem Apptiva-Team spürte ich, dass es passt. Hier treffen verschiedene Kräfte aufeinander: kreativer Erfindergeist, innovatives Unternehmertum und ein dynamischer Team-Spirit. Ich freute mich sehr auf die Herausforderung, das Team per Anfang April 2019 zu ergänzen, obwohl der Start aufgrund eines Snowboard-Unfalls etwas holpriger war, als geplant.'

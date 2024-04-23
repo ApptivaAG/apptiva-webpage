@@ -1,8 +1,13 @@
 ---
 title: Jest Test debuggen mit Visual Studio Code
+source: apptiva
 slug: jest-test-debuggen-mit-visual-studio-code
 templateKey: blog-post
-image: img/Jest-Test-debuggen-mit-Visual-Studio-Code.png
+image:
+  src: /assets/blog/img/Jest-Test-debuggen-mit-Visual-Studio-Code.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/AKqrq01NTjk5OGpqYIiHfXJuZVFQSTc3LgB2dnkiIiMPDw0lJiVmZmIxLywFBQMAAAAAdnZ3enh8KSgpKSgnW1pXMzMyJycnGxsbAHN1eKmssE1QUSQlJjw+PzI2NzQ3OAoNEAD/9/Td0MrdzsfRyL6ajYehlI6ZjYSGfHQilCsYaR/fdgAAAABJRU5ErkJggg==
+  height: 1719
+  width: 2560
 date: 2018-01-04T11:13:30.000Z
 author: linus-huesler
 description: >-
@@ -14,7 +19,7 @@ categories:
   - Qualitätssicherung
 ---
 
-Unsere JavaScript Projekte testen wir in der Regel mittels [Jest](https://facebook.github.io/jest/), eine Testbibliothek von Facebook. Als Code-Editor verwenden wir [Visual Studio Code](https://code.visualstudio.com/) von Microsoft.
+Unsere JavaScript Projekte testen wir in der Regel mittels [Jest](https://jestjs.io/), eine Testbibliothek von Facebook. Als Code-Editor verwenden wir [Visual Studio Code](https://code.visualstudio.com/) von Microsoft.
 
 Mit untenstehender Launch-Konfiguration kannst du Jest Tests in Visual Studio Code debuggen. Nachdem du sie zu deinen Launch-Konfigurationen hinzugefügt hast, kannst du den Jest Test selektieren und dann die Launch-Konfiguration starten. Alternativ kannst du auch die Datei, welche du testen möchtest selektieren. Jest sucht dann automatisch den dazugehörigen Test und führt diesen aus.
 

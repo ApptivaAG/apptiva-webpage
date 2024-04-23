@@ -1,8 +1,13 @@
 ---
 title: Kampf um den "Throne of Games"
+source: apptiva
 slug: apptiva-team-event-maerz-23
 templateKey: blog-post
-image: gameorama.jpg
+image:
+  src: /assets/blog/2023-03-29-apptiva-teamevent/gameorama.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAICAIAAABVpBlvAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAo0lEQVR4nAGYAGf/AFNMR2FZVciqo9HHvaybkm9cUgCVi3+Gg4Luzb7/7+nCrqSBX1sAiYKAuKCeqZSc8evtwsTDb1tdAGteXJqGi6yOjvvQwL2nnmtaVwApMFhtd5ixl3f/+Nv/+ulBQT8AFyRzIT5/joR0tKOVl5eckYByAB4hNVxGNn5oXzQrLiQqPUtHRAAKAwAPCwYjIh5JSUZmaWYjJSHAg0Uk6vlqMAAAAABJRU5ErkJggg==
+  height: 3444
+  width: 2772
 date: 2023-03-29
 author: Kevin Rickenbach
 description: >-

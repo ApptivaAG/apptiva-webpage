@@ -1,8 +1,13 @@
 ---
 title: Mehr Überblick mit Storymap
+source: apptiva
 slug: mehr-ueberblick-mit-storymap
 templateKey: blog-post
-image: img/storymap-post-image.png
+image:
+  src: /assets/blog/img/storymap-post-image.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAIAAABxZ0isAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAoUlEQVR4nAGWAGn/AP///87OzmxxcnF3e729v6CgoxolKK+1uABlbW0eMz0YKDA3R0oQJS4VJy8iLzSqsrIAhX12GQ0AMT0AWV82Ulw7UFc4ISMAi4x6AKqelCgXAMC7lX12VKCnrVhRHV9XEL27sQC2q58lHQgtOjmkn35bVRuOiF/u7ebMzc4A5uLdn5uXaG9wj4puUk4rxcS97e7w3d3dHw1Cmzzj5pkAAAAASUVORK5CYII=
+  height: 800
+  width: 1100
 date: 2016-04-15T16:50:44.000Z
 author: roman-schaller
 description: ''

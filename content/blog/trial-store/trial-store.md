@@ -1,8 +1,13 @@
 ---
 title: Trial Store - Globus Innovationsprojekt
+source: apptiva
 slug: trial-store
 templateKey: blog-post
-image: trial-store-titel.png
+image:
+  src: /assets/blog/trial-store/trial-store-titel.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/AKqqqjc3N7+/v0xMSyYlJC0uLhobG66urQCSkpJERESurq55eXVdX10tJRsWCADY29sAxMTE2tra1dXViJCUV01JXUYnGwAA0MrFAJaWlldXV7W1tdHS0bSyr6ajnp2bluHh4AC9vb1MTEzS0tL8/Pzm5uff3+D6+vv4+Pn6OEPk6EkPsAAAAABJRU5ErkJggg==
+  height: 1440
+  width: 2560
 date: 2018-11-12
 author: Philip Schönholzer
 description: >-
@@ -22,7 +27,3 @@ Die App für den Abverkauf erlaubt es dem Verkaufspersonal in der Filiale, eine 
 ## Webshop
 
 Durch den Webshop lernen wir schneller, was wie gut bei den Kunden ankommt. Zuerst hatten wir bloss eine Landingpage. Damit konnten wir die Attraktivität von unterschiedlichen Wertversprechen messen. Zusätzlich schauten wir, wie oft die Kunden auf die verfügbaren Filialen klickten oder sich für den Newsletter anmeldeten. Noch aussagekräftiger ist allerdings ein Test, ob ein Kunde für ein Produkt tatsächlich Geld in die Hand nimmt. Deshalb bieten wir inzwischen einige Artikel zum Verleih an.
-
-## Ausblick
-
-Ziel ist es, in den nächsten Monaten die Lösungen zu skalieren und einem breiteren Publikum zugänglich zu machen. Wer bereits jetzt einen Blick auf den «Trial Store» werfen will, kann dies unter folgendem Link tun: [www.trialstore.ch](https://www.trialstore.ch)

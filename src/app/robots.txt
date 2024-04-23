@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Disallow: /studio/
+
+Sitemap: https://apptiva.ch/sitemap.xml

@@ -1,8 +1,13 @@
 ---
 title: Produktkonfiguratoren in bestehende Webseiten und Webshops integrieren
+source: apptiva
 slug: produktkonfiguratoren-bestehende-webshops-integrieren
 templateKey: blog-post
-image: zipper.jpg
+image:
+  src: /assets/blog/2023-06-19-produktkonfiguratoren-bestehende-webshops-integrieren/zipper.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nAF9AIL/AMi2uuvt7vf8/fr9/vf4+ff09Pj29dTZ4wCmdHqiaWqyhIfYwsLt5+XI2uOBnreAnLkAKWWQOmKJACZVAAY1OQAYVwYjjERKolpaAF44SXtVYHh4iV92j0FVdTJBYU5ffVZlgwB4aXaIhZSip7Shq72ptcWxvc2eqr6Km7C2DETNmLdELAAAAABJRU5ErkJggg==
+  height: 1588
+  width: 2400
 imageCaption: Photo by Tomas Sobek on Unsplash
 date: 2023-06-20
 author: Philip Schönholzer

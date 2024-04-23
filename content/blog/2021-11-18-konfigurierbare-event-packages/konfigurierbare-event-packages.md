@@ -1,8 +1,13 @@
 ---
 title: Konfigurierbare Event-Angebote verkaufen und per QR-Code einlösen
+source: apptiva
 slug: konfigurierbare-event-angebote-verkaufen-und-per-qr-code-einloesen
 templateKey: blog-post
-image: hero.png
+image:
+  src: /assets/blog/2021-11-18-konfigurierbare-event-packages/hero.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAIAAAD38zoCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAe0lEQVR4nGNQlBFiZGbmZGSXFhMXFxGT5OdSERUSFxNn2LRx/bFjx4/s3XVs96bje7ZcPnzgzY1re/bsZfj27dt/EPgDRr/A7P8fP35k+PLly////79+/QoR+vfvH1TiwYMHr169unXr1pMnj1+/fv3q1avXr1/fv38fADBRWGlY3OQ5AAAAAElFTkSuQmCC
+  height: 1731
+  width: 2560
 date: 2021-11-22
 author: Philip Schönholzer
 description: >-
@@ -32,7 +37,7 @@ Die Mitarbeiter:innen des Casinos können hier neue Leistungserbringer und deren
 
 ## Schnittstelle zu den Leistungserbringern
 
-Die Leistungserbringer werden z.Z. entweder per Email oder über die [Restaurant-Reservations-Schnittstelle](/schnittstellen-entwickeln/) von Aleno über eine neue Reservation informiert. Die Kapazität der Leistungserbringer speichern wir entsprechend der vereinbarten Quota bei uns in der Software oder prüfen die Kapazität ebenfalls über Aleno. Mit Email haben wir eine sehr einfache "Anbindung" der Leistungserbringer, welche in jedem Fall funktioniert. Bei in Aleno erfassten Restaurants können wir die Kapazitätsprüfung und Reservation sehr genau vornehmen und entsprechend den administrativen Aufwand nochmals reduzieren.
+Die Leistungserbringer werden z.Z. entweder per Email oder über die [Restaurant-Reservations-Schnittstelle](/angebot/development/schnittstellen/) von Aleno über eine neue Reservation informiert. Die Kapazität der Leistungserbringer speichern wir entsprechend der vereinbarten Quota bei uns in der Software oder prüfen die Kapazität ebenfalls über Aleno. Mit Email haben wir eine sehr einfache "Anbindung" der Leistungserbringer, welche in jedem Fall funktioniert. Bei in Aleno erfassten Restaurants können wir die Kapazitätsprüfung und Reservation sehr genau vornehmen und entsprechend den administrativen Aufwand nochmals reduzieren.
 
 ## Kapazität prüfen
 
@@ -60,7 +65,7 @@ Neben der Online-Zahlung und der Zahlung vor Ort gibt es für grössere Gruppen 
 
 Beim Checkout wählen die Kundinnen und Kunden aus, ob sie direkt ein Ticket für das Event oder lieber einen Gutschein zum Verschenken erhalten wollen. Nach der Bezahlung erhalten die Gäste per Email einen Link zum Einlösen des Gutscheins, oder direkt einen QR-Code mit welchem die Leistungen bezogen werden können.
 
-<div style="max-width: 400px; margin-left: auto; margin-right: auto">
+<div className="max-w-96 mx-auto">
 
 ![Email](email.png)
 
@@ -70,7 +75,7 @@ Beim Checkout wählen die Kundinnen und Kunden aus, ob sie direkt ein Ticket fü
 
 Um die Leistungen beziehen zu können, müssen die Besucher:innen bloss ihr Handy mit dem QR-Code im Email zücken. Die Leistungserbringer sind in der Lage über unsere Lösung den QR-Code zu scannen, um zu prüfen ob der QR-Code gültig ist und um Leistungen auch gleich einzulösen. Die QR-Codes können pro Person oder pro Gruppe erstellt und eingelöst werden, damit bei grösseren Gruppen nicht jeder einzelne Gast das Handy hervornehmen muss.
 
-<div style="max-width: 400px; margin-left: auto; margin-right: auto">
+<div className="max-w-96 mx-auto">
 
 ![QR-Code scannen](scanner.png)
 

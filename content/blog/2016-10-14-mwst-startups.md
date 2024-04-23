@@ -1,8 +1,13 @@
 ---
 title: MwSt & Startups
+source: apptiva
 slug: mwst-startups
 templateKey: blog-post
-image: ./img/mwst.jpg
+image:
+  src: /assets/blog/img/mwst.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVR4nAFkAJv/ANnVz+bk3tjX0cjHwtjX0uno49PTz8TEwgDy8Or29OzQzsW6uLGjoZvb29XV1tC/v70A5uTgr62mvbuxxcG6fHhyrKmkpaSfkZGNANXU05+blLm1rcvIwpaTjURCPgsJBhYWFrLLQs6R70DHAAAAAElFTkSuQmCC
+  height: 1033
+  width: 1920
 date: 2016-10-14T17:40:09.000Z
 author: philip-schoenholzer
 description: ''
@@ -38,7 +43,6 @@ Wenn ja, so muss spätestens ab diesem Zeitpunkt bezahlt werden. Punkt. Wer nic
 |![Beispiel zum Beginn der Steuerpflicht](img/mwst-beispiel.png)
 
 <h3>Quelle</h3>
-<a href="https://www.gate.estv.admin.ch/mwst-webpublikationen/public/pages/taxInfos/cipherDisplay.xhtml?publicationId=1010164&amp;componentId=1010314&amp;winid=701377">https://www.gate.estv.admin.ch/mwst-webpublikationen/public/pages/taxInfos/cipherDisplay.xhtml?publicationId=1010164&amp;componentId=1010314&amp;winid=701377
-</a>
+<a href="https://www.gate.estv.admin.ch/mwst-webpublikationen/public/pages/taxInfos/cipherDisplay.xhtml?publicationId=1010164&amp;componentId=1010314&amp;winid=701377">https://www.gate.estv.admin.ch/mwst-webpublikationen/public/pages/taxInfos/cipherDisplay.xhtml?publicationId=1010164&amp;componentId=1010314&amp;winid=701377</a>
 
 [https://www.gate.estv.admin.ch/mwst-webpublikationen/public/pages/taxInfos/cipherDisplay.xhtml?publicationId=1010164&amp;componentId=1010319&amp;winid=701377](https://www.gate.estv.admin.ch/mwst-webpublikationen/public/pages/taxInfos/cipherDisplay.xhtml?publicationId=1010164&componentId=1010319&winid=701377)

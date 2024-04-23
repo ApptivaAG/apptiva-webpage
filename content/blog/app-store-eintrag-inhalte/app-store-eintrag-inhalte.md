@@ -1,8 +1,13 @@
 ---
 title: 'App Store Einträge: Alle Details auf einen Blick'
+source: apptiva
 slug: app-store-eintrag-details-ueberblick
 templateKey: blog-post
-image: store-logos.png
+image:
+  src: /assets/blog/app-store-eintrag-inhalte/store-logos.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAADCAIAAAAhqtkfAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAT0lEQVR4nGP4//9/1a7TDFVzug9cWH77esfNo/////33/z/D////GXKnM2in6pbPt952lEGG4cnVJVCJaauOMrjWLtp8ZsepC2snzoPoAAAwiTGt23WrTwAAAABJRU5ErkJggg==
+  height: 375
+  width: 1102
 date: 2019-07-14
 author: Philip Schönholzer
 description: >-

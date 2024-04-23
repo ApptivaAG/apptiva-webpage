@@ -1,8 +1,13 @@
 ---
 title: Suva Slope Track-App
+source: apptiva
 slug: suva-slope-track-app
 templateKey: blog-post
-image: vorstellung-slope-track.png
+image:
+  src: /assets/blog/slope-track/vorstellung-slope-track.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVR4nAFkAJv/AFaMjIOSXgB9l5m+y42wvAAZLQAMJS+LogA8iqF/qa2Tusj///+Tqq5FX2tteIg7iqIAm7XAnZ6htLW0t7a3ho2RQWBnWnV+x9LWAPHx8aurqsDAwK+vr6+vsHF3eRYoLc/a3OR7NhRRB94jAAAAAElFTkSuQmCC
+  height: 937
+  width: 1920
 date: 2019-11-22
 author: Philip Schönholzer
 description: >-
@@ -74,5 +79,7 @@ Beim Verarbeiten der Sensordaten kommt es auf jede Millisekunde an. Deshalb prog
 
 Die Slope Track-App ist auf Deutsch, Französisch und Italienisch verfügbar und kann kostenlos aus dem App-Store von Apple und dem Play-Store von Google heruntergeladen werden. Wir wünschen euch viel Spass und Hals- und Beinbruch.
 
-<a href="https://apps.apple.com/ch/app/slope-track/id405253094?mt=8" target="_new_" rel="nofollow noopener noreferrer" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/de-de/badge-lrg.svg?releaseDate=2010-12-20&kind=iossoftware&bubble=ios_apps) no-repeat;width:135px;height:40px;margin: 0.5em;"></a>
-<a href='https://play.google.com/store/apps/details?id=ch.suva.slopetrack.beta&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' target="_new" rel="nofollow noopener noreferrer"><img style="height: 2.95em;" alt='Jetzt bei Google Play' class="lazyload" src='https://play.google.com/intl/en_us/badges/images/generic/de_badge_web_generic.png'/></a>
+<div className="flex items-center gap-4">
+<a className="basis-44" href="https://apps.apple.com/ch/app/slope-track/id405253094"><img className="w-full" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/de-de?size=250x83&amp;releaseDate=1292803200" alt="Download on the App Store" /></a>
+<a className="basis-48" href='https://play.google.com/store/apps/details?id=ch.suva.slopetrack.beta&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' target="_new" rel="nofollow noopener noreferrer" ><img alt='Jetzt bei Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/de_badge_web_generic.png'/></a>
+</div>

@@ -1,8 +1,13 @@
 ---
 title: 1 Jahr Apptiva
+source: apptiva
 slug: 1-jahr-apptiva
 templateKey: blog-post
-image: img/birthday.jpg
+image:
+  src: /assets/blog/img/birthday.jpg
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVR4nAFkAJv/AAAWAAAXAAAKAIB/cNvi26nAx+L3/Gx2ZwAAFgBIPSQyHRFeUkXPn5TFk3////6fn50AXl9dtKanfGlhnoCFn3aLSEZVZW+DtLKuAKeJfJuDgKWGf51iaJFneBosRVJGSbqyqzVKLJHgkaY8AAAAAElFTkSuQmCC
+  height: 1347
+  width: 2560
 date: 2016-07-29T16:23:46.000Z
 author: philip-schoenholzer
 description: >-
@@ -18,17 +23,17 @@ Wir hatten das Glück bereits im ersten Jahr an vielen spannenden Projekten mit
 
 ![Highlight: Dashboard für die Notaufnahme](img/highlight-dashboard.png)
 
-<ul style="list-style: none; margin-left: 0; padding-left: 1.6em; text-indent: -1.6em;">
- 	<li style="text-align: left;">⭐  SUVA Schneesport-Check</li>
- 	<li style="text-align: left;">⭐  Dashboard für den Kindernotfall des Inselspital Bern</li>
- 	<li style="text-align: left;">⭐  Digitalisierungsworkshop mit der SUVA</li>
- 	<li style="text-align: left;">⭐  Mitarbeit am SUVA RESTretto-Framework</li>
- 	<li style="text-align: left;">⭐  eGo - Landing Page</li>
- 	<li style="text-align: left;">⭐ Yamaha Promotion Page</li>
- 	<li style="text-align: left;">⭐ Lean Enterprise App - Manifest</li>
+<ul className="pl-8 indent-8 [&>li]:text-left">
+  <li>⭐  SUVA Schneesport-Check</li>
+  <li>⭐  Dashboard für den Kindernotfall des Inselspital Bern</li>
+  <li>⭐  Digitalisierungsworkshop mit der SUVA</li>
+  <li>⭐  Mitarbeit am SUVA RESTretto-Framework</li>
+  <li>⭐  eGo - Landing Page</li>
+  <li>⭐ Yamaha Promotion Page</li>
+  <li>⭐ Lean Enterprise App - Manifest</li>
 </ul>
-<h2 class="null" style="text-align: left;">Kommt und feiert mit uns</h2>
-<p dir="ltr" style="text-align: left;">Wir feiern den ersten Geburtstag der Apptiva. Feiert mit uns.</p>
+<h2 className="text-left">Kommt und feiert mit uns</h2>
+<p dir="ltr" className="text-left">Wir feiern den ersten Geburtstag der Apptiva. Feiert mit uns.</p>
 
 [[right]]
 |![25. August](img/date.png)
@@ -40,13 +45,13 @@ Wir hatten das Glück bereits im ersten Jahr an vielen spannenden Projekten mit
 <span><span><strong>Büro Apptiva
 </strong></span></span><span><span><strong>Industriestr. 9, 6210 Sursee</strong></span></span>
 
-<h3 dir="ltr" class="null" style="text-align: left;">Tag der Offenen Tür ab 9:00</h3>
-<p dir="ltr" style="text-align: left;">Kommt zu uns in die App-Werkstatt. Nehmt aktiv Einfluss auf die aktuelle Entwicklung. Seht live wie eine Applikation entsteht.</p>
+<h3 dir="ltr" className="text-left">Tag der Offenen Tür ab 9:00</h3>
+<p dir="ltr" className="text-left">Kommt zu uns in die App-Werkstatt. Nehmt aktiv Einfluss auf die aktuelle Entwicklung. Seht live wie eine Applikation entsteht.</p>
 
-<h3 dir="ltr" class="null" style="text-align: left;">Abend Apero 16:00 bis 22:00</h3>
-<p dir="ltr" style="text-align: left;">Stosst mit uns auf das einjährige Bestehen der Apptiva an. Wir schauen auf ein tolles Jahr zurück und wollen diesen Moment mit euch teilen.</p>
+<h3 dir="ltr" className="text-left">Abend Apero 16:00 bis 22:00</h3>
+<p dir="ltr" className="text-left">Stosst mit uns auf das einjährige Bestehen der Apptiva an. Wir schauen auf ein tolles Jahr zurück und wollen diesen Moment mit euch teilen.</p>
 
-<h2 style="text-align: left;">Danke an unsere Kunden</h2>
+<h2 className="text-left">Danke an unsere Kunden</h2>
 
 ![suva](img/suva-300.png)![Insel Gruppe](img/insel-gruppe-logo-300x70.png)![hostettler](img/hostettler-300x70.png)![Energie 360° AG](img/energie360-300x72.png)
 

@@ -1,8 +1,13 @@
 ---
 title: 'Unsere Erfahrungen mit PostFinance E-Payment'
+source: apptiva
 slug: unsere-erfahrungen-mit-postfinance-e-payment-service
 templateKey: blog-post
-image: postfinance-e-payment.png
+image:
+  src: /assets/blog/postfinance-e-payment-einbinden/postfinance-e-payment.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAACCAIAAADq9gq6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPUlEQVR4nAEyAM3/APv02TcmALWyqaqcSioPADwyAEAsAMixcgDp488xJgDd29G7rmk/NwBMRgBHOQDQuncbYxSajgy/ugAAAABJRU5ErkJggg==
+  height: 572
+  width: 2180
 date: 2020-04-27
 author: Philip Schönholzer
 description: >-
@@ -13,7 +18,7 @@ categories:
 
 Wir verwenden PostFinance E-Payment für ein aktuelles Projekt, um Zahlungstransaktionen durchzuführen. Unsere gewonnenen Eindrücke teilen wir nun im folgenden Video. Wir möchten betonen, dass wir PostFinance nicht gewählt haben, weil es der "beste" Anbieter ist, sondern weil unser Kunde bereits PostFinance einsetzt. Der Kunde war froh, dass er nicht nochmals den ganzen administrativen Aufwand für einen neuen Anbieter treiben musste. Für uns spielte die Wahl des Zahlungsdiestleisters keine grosse Rolle. So fiel die Wahl auf PostFinance E-Payment.
 
-`youtube: https://youtu.be/feFnkgM9Mpw`
+https://youtu.be/feFnkgM9Mpw
 
 ## PostFinance E-Payment einbinden
 

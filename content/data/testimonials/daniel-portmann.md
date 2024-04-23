@@ -1,9 +1,9 @@
 ---
 templateKey: testimonial-data
-avatar: img/daniel-portmann.jpg
-statement: >-
-  Die Apptiva AG hat unsere Ideen nicht nur im Bezug auf die Softwareentwicklung hochkompetent umgesetzt, sondern hat sich mit Lösungsvorschlägen eingebracht und damit massgeblich zum Projekterfolg beigetragen!
+avatar: /daniel-portmann.jpg
 name: Daniel Portmann
 position: Innovations-Coach
 company: ITZ InnovationsTransfer
 ---
+
+Die Apptiva hat unsere Ideen nicht nur hochkompetent umgesetzt, sondern hat sich mit Lösungsvorschlägen eingebracht und damit *massgeblich zum Projekterfolg beigetragen!*

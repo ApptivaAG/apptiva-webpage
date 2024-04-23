@@ -1,8 +1,13 @@
 ---
 title: Stakeholder-Interviews
+source: apptiva
 slug: stakeholder-interviews
 templateKey: blog-post
-image: img/stakeholder-interviews.png
+image:
+  src: /assets/blog/img/stakeholder-interviews.png
+  base64Placeholder: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAIAAABxZ0isAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAoUlEQVR4nAGWAGn/AInt/5D3/47z/4rt/3TP/3TR/4Tn/33a/wBclLui6v+Gv+iy8P+f4v+DvOSt9P9mo8wAL47IkfT/RqLnedr/Y77/TKrsmv//HH+7AEan3HfS/0Gc4H3g/2O+/06s7IXl/yOCwgBQqM6j//+v//931/9s0f+f9v+h//9pstwAAwwMTE5Jf351ICcvFR0janBmgoN3YF5TrfdfPS9NPAgAAAAASUVORK5CYII=
+  height: 1239
+  width: 1754
 date: 2016-01-15T15:43:50.000Z
 author: philip-schoenholzer
 description: Stakeholder-Interviews sind die Grundlage um das Richtige zu tun.
@@ -56,7 +61,7 @@ Die Interviews sind die Basis für die Entwicklung. Um aus der Flut an Informati
 
 <h3>Anhang</h3>
 
-- [Cheat sheet für Stakeholder-Interviews](attachment/stakeholder-interviews.pdf)
+- [Cheat sheet für Stakeholder-Interviews](/assets/blog/attachment/stakeholder-interviews.pdf)
 - [Vorlagen für Stakeholderfragen](https://github.com/ApptivaAG/kompakt-stakeholder-interview)
 
 <h3>Weitere Literatur</h3>

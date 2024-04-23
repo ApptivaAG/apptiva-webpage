@@ -49,7 +49,7 @@ Wir entwickeln unter anderem:
 
 - ### [Web Apps und Applikationen](/web-apps/)
 
-- ### [Schnittstellen zwischen Anwendungen](/schnittstellen-entwickeln/)
+- ### [Schnittstellen zwischen Anwendungen](/angebot/development/schnittstellen/)
 
 - ### [Individuelle Dashboards](/custom-dashboard/)
 

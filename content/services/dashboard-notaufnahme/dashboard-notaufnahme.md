@@ -106,7 +106,7 @@ Sie verlegen einen Patienten von der Triage in eine Koje? Ändern Sie einfach de
 
 # Schnittstellen zu bestehenden Systemen
 
-Das Apptiva Dashboard lässt sich einfach mit Ihren bestehenden Systemen verbinden. Synchronisieren Sie zum Beispiel das Patientendossier von Ihrem KIS oder übernehmen Sie administrative Daten vom ERP. Dazu setzen wir auf HL7 – dem internationalen Standard für den elektronischen Austausch von medizinischen Daten. Die [Schnittstellen](/schnittstellen-entwickeln/) lassen sich nach Belieben an Ihre Anforderungen anpassen.
+Das Apptiva Dashboard lässt sich einfach mit Ihren bestehenden Systemen verbinden. Synchronisieren Sie zum Beispiel das Patientendossier von Ihrem KIS oder übernehmen Sie administrative Daten vom ERP. Dazu setzen wir auf HL7 – dem internationalen Standard für den elektronischen Austausch von medizinischen Daten. Die [Schnittstellen](/angebot/development/schnittstellen/) lassen sich nach Belieben an Ihre Anforderungen anpassen.
 
 Änderungen, die im Dashboard gemacht werden (z.B. Aufenthaltsort ändern) können natürlich auch wieder in Ihr Zentralsystem zurückgeschrieben werden. Dadurch verhindern Sie doppelte Arbeiten und erhöhen die Transparenz.
 
