@@ -30,7 +30,7 @@ const MainNav = () => (
                       <Image
                         src={subitem.icon}
                         alt={subitem.title}
-                        className="w-24"
+                        className="aspect-square size-24 object-contain object-center py-2"
                       />
                       <div className="flex flex-col justify-center">
                         <span className="leading-6">{subitem.title}</span>
