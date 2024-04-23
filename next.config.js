@@ -22,6 +22,11 @@ const config = {
   async redirects() {
     return [
       {
+        source: '/web-app-datenschutz',
+        destination: '/blog/web-app-datenschutz',
+        permanent: true,
+      },
+      {
         source: '/neujahrsessen-apptiva-2024',
         destination: '/blog/neujahrsessen-mit-der-apptiva',
         permanent: true,
