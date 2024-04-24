@@ -1,16 +1,10 @@
-import MdxImage from '@/components/mdx-image'
 import { queryPostFromCmsBySlug, queryPostsFromCms } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
-import remarkEmbedder from '@remark-embedder/core'
-import oembedTransformer from '@remark-embedder/transformer-oembed'
-import { Code } from 'bright'
 import { promises as fs } from 'fs'
 import { compileMDX } from 'next-mdx-remote/rsc'
 import { unstable_cache } from 'next/cache'
 import path from 'path'
 import { cache } from 'react'
-import remarkGfm from 'remark-gfm'
-import remarkUnwrapImages from 'remark-unwrap-images'
 import portableTextToString from './portable-text-to-string'
 import { mapTags } from './tags'
 import { BlogFrontmatter, CmsBlog, CmsContent, MarkdownBlog } from './types'
@@ -143,23 +137,7 @@ const getMarkdownPosts = unstable_cache(async () => {
 
     const markdown = await compileMDX<BlogFrontmatter>({
       source: data,
-      components: {
-        img: () => null,
-        pre: Code,
-      },
       options: {
-        mdxOptions: {
-          remarkPlugins: [
-            remarkGfm,
-            remarkUnwrapImages,
-            [
-              remarkEmbedder,
-              {
-                transformers: [oembedTransformer],
-              },
-            ],
-          ],
-        },
         parseFrontmatter: true,
       },
     })
