@@ -144,7 +144,7 @@ const getMarkdownPosts = unstable_cache(async () => {
     const markdown = await compileMDX<BlogFrontmatter>({
       source: data,
       components: {
-        img: MdxImage(blogPostAssetsDirectory),
+        img: () => null,
         pre: Code,
       },
       options: {
