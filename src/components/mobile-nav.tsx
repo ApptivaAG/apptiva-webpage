@@ -8,12 +8,7 @@ import * as React from 'react'
 import { navbarData } from './Navbar'
 import apptivaLogo from './logo.svg'
 import navBurger from './nav-burger.svg'
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from './ui/accordion'
+import { Accordion, AccordionContent, AccordionItem } from './ui/accordion'
 import Button from './ui/button'
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet'
 
@@ -50,17 +45,25 @@ const MobileNav = () => {
               <div key={item.href}>
                 <div className="flex flex-col pb-5 pt-4 focus:outline-none">
                   {item.items ? (
-                    <Accordion type="single" collapsible className="w-full">
-                      <AccordionItem value={item.title} className="border-none">
-                        <AccordionTrigger className="group flex w-full justify-between p-0 text-[1.25rem] leading-[1.25rem] !no-underline focus:outline-none data-[state=open]:text-secondary">
-                          {item.title}
-                        </AccordionTrigger>
-                        <AccordionContent className="flex flex-col gap-3 py-8">
+                    <Accordion
+                      className="w-full"
+                      transition
+                      transitionTimeout={200}
+                    >
+                      <AccordionItem
+                        header={
+                          <div className="group flex w-full justify-between p-0 text-[1.25rem] leading-[1.25rem] !no-underline focus:outline-none data-[state=open]:text-secondary">
+                            {item.title}
+                          </div>
+                        }
+                        className="p-0 hover:no-underline"
+                      >
+                        <AccordionContent className="mt-4 flex flex-col divide-y divide-base-white/40 rounded bg-base-white/5 px-4">
                           {item.items.map((subitem) => (
                             <MobileLink
                               href={subitem.href}
                               onOpenChange={setOpen}
-                              className="flex gap-5 rounded-md py-1 align-middle"
+                              className="flex items-center gap-5 py-4"
                               key={subitem.href}
                             >
                               <Image
@@ -68,11 +71,9 @@ const MobileNav = () => {
                                 alt={subitem.title}
                                 className="size-24"
                               />
-                              <div className="flex flex-col justify-center">
-                                <span className="leading-6">
-                                  {subitem.title}
-                                </span>
-                                <small>{subitem.text}</small>
+                              <div className="">
+                                <p className="text-lg">{subitem.title}</p>
+                                <p className="text-xs">{subitem.text}</p>
                               </div>
                             </MobileLink>
                           ))}

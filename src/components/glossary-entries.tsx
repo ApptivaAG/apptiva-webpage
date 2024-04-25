@@ -2,12 +2,7 @@ import { GlossaryQueryData } from '@/sanity/lib/queries'
 import portableTextToString from '@/utils/portable-text-to-string'
 import Link from 'next/link'
 import StyledPortableText from './styled-portable-text'
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from './ui/accordion'
+import { Accordion, AccordionContent, AccordionItem } from './ui/accordion'
 import UnderlineForLink from './ui/underline-for-link'
 
 const GlossaryComponent = (props: { glossaryEntries: GlossaryQueryData }) => {
@@ -17,14 +12,20 @@ const GlossaryComponent = (props: { glossaryEntries: GlossaryQueryData }) => {
     <>
       <div className="col-right mt-4">
         <div className="w-full max-w-lg">
-          <Accordion type="single" collapsible className="w-full">
+          <Accordion
+            className="w-full divide-y"
+            transition
+            transitionTimeout={200}
+          >
             {glossaryEntries?.map((ge) => (
-              <AccordionItem key={ge._id} value={ge._id}>
-                <AccordionTrigger>
-                  {ge.header?.title
+              <AccordionItem
+                key={ge._id}
+                header={
+                  ge.header?.title
                     ? portableTextToString(ge.header.title)
-                    : 'Kein Titel'}
-                </AccordionTrigger>
+                    : 'Kein Titel'
+                }
+              >
                 <AccordionContent>
                   {ge.summary && <StyledPortableText content={ge.summary} />}
                   {ge.content && (

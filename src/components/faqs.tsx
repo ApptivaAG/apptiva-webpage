@@ -1,12 +1,6 @@
 import { FAQQueryModuleData } from '@/sanity/lib/queries'
 import StyledPortableText from './styled-portable-text'
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from './ui/accordion'
-import portableTextToString from '@/utils/portable-text-to-string'
+import { Accordion, AccordionContent, AccordionItem } from './ui/accordion'
 
 const FAQsComponent = (props: { faqs: FAQQueryModuleData }) => {
   const { faqs } = props
@@ -15,13 +9,16 @@ const FAQsComponent = (props: { faqs: FAQQueryModuleData }) => {
     <>
       <div className="col-right mt-4">
         <div className="w-full max-w-lg">
-          <Accordion type="single" collapsible className="w-full">
+          <Accordion
+            className="w-full divide-y"
+            transition
+            transitionTimeout={200}
+          >
             {faqs?.map((faq) => (
               <AccordionItem
                 key={faq._id}
-                value={faq.question ?? 'no-question'}
+                header={faq.question ?? 'no-question'}
               >
-                <AccordionTrigger>{faq.question}</AccordionTrigger>
                 {faq.answerStyled && (
                   <AccordionContent>
                     <StyledPortableText content={faq.answerStyled} />
