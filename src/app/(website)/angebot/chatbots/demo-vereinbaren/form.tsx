@@ -27,7 +27,11 @@ export default function Form() {
         <label htmlFor="address">
           Nicht ausfüllen: <input type="text" name="address" />
         </label>
-        <input type="text" name="subject" value="Bubblechat Demo vereinbaren" />
+        <input
+          type="text"
+          name="subject"
+          value="Bubble Chat Demo vereinbaren"
+        />
       </p>
       <div>
         <Label>Name</Label>
