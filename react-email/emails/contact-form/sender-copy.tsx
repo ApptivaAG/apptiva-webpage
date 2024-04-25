@@ -50,7 +50,7 @@ export const ContactFromMailSenderCopy = ({
 export default ContactFromMailSenderCopy
 
 const logo = {
-  borderRadius: 21,
+  borderRadius: 5,
   width: '30%',
   height: 'auto',
 }
