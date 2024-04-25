@@ -1,11 +1,12 @@
 import Footer from '@/components/footer'
+import LiveVisualEditing from '@/components/live-visual-editing'
 import type { Metadata } from 'next'
+import PlausibleProvider from 'next-plausible'
 import localFont from 'next/font/local'
+import { draftMode } from 'next/headers'
+import { description, rootUrl, title } from '../env'
 import Navbar from './../../components/Navbar'
 import './globals.css'
-import { draftMode } from 'next/headers'
-import LiveVisualEditing from '@/components/live-visual-editing'
-import { description, rootUrl, title } from '../env'
 
 const gentona = localFont({
   src: [
@@ -51,6 +52,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de" className={gentona.className}>
+      <head>
+        <PlausibleProvider domain="apptiva.ch" />
+      </head>
       <body className="text-lg">
         <Navbar />
         <main className="content">{children}</main>
