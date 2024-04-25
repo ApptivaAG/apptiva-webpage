@@ -39,75 +39,79 @@ const MobileNav = () => {
             className="w-32"
           />
         </MobileLink>
-        <div className="mb-10 mt-[3.25rem] text-base-white">
-          <div className="flex flex-col">
-            {navbarData.map((item) => (
-              <div key={item.href}>
-                <div className="flex flex-col pb-5 pt-4 focus:outline-none">
-                  {item.items ? (
-                    <Accordion
-                      className="w-full"
-                      transition
-                      transitionTimeout={200}
-                    >
-                      <AccordionItem
-                        header={
-                          <div className="group flex w-full justify-between p-0 text-[1.25rem] leading-[1.25rem] !no-underline focus:outline-none data-[state=open]:text-secondary">
-                            {item.title}
-                          </div>
-                        }
-                        className="p-0 hover:no-underline"
-                      >
-                        <AccordionContent className="mt-4 flex flex-col divide-y divide-base-white/40 rounded bg-base-white/5 px-4">
-                          {item.items.map((subitem) => (
-                            <MobileLink
-                              href={subitem.href}
-                              onOpenChange={setOpen}
-                              className="flex items-center gap-5 py-4"
-                              key={subitem.href}
-                            >
-                              <Image
-                                src={subitem.iconPrimary ?? subitem.icon}
-                                alt={subitem.title}
-                                className="size-24"
-                              />
-                              <div className="">
-                                <p className="text-lg">{subitem.title}</p>
-                                <p className="text-xs">{subitem.text}</p>
+        <div className="mt-12 overflow-y-auto overflow-x-clip">
+          <div className="h-[calc(100vh-14rem)]">
+            <div className="mb-10 text-base-white">
+              <div className="flex flex-col">
+                {navbarData.map((item) => (
+                  <div key={item.href}>
+                    <div className="flex flex-col pb-5 pt-4 focus:outline-none">
+                      {item.items ? (
+                        <Accordion
+                          className="w-full"
+                          transition
+                          transitionTimeout={200}
+                        >
+                          <AccordionItem
+                            header={
+                              <div className="group flex w-full justify-between p-0 text-[1.25rem] leading-[1.25rem] !no-underline focus:outline-none data-[state=open]:text-secondary">
+                                {item.title}
                               </div>
-                            </MobileLink>
-                          ))}
-                        </AccordionContent>
-                      </AccordionItem>
-                    </Accordion>
-                  ) : (
-                    <MobileLink
-                      href={item.href}
-                      onOpenChange={setOpen}
-                      className="text-[1.25rem] leading-[1.25rem]"
-                    >
-                      {item.title}
-                    </MobileLink>
-                  )}
-                </div>
-                <hr className="text-base-white/40" />
+                            }
+                            className="p-0 hover:no-underline"
+                          >
+                            <AccordionContent className="mt-4 flex flex-col divide-y divide-base-white/40 rounded bg-base-white/5 px-4">
+                              {item.items.map((subitem) => (
+                                <MobileLink
+                                  href={subitem.href}
+                                  onOpenChange={setOpen}
+                                  className="flex items-center gap-5 py-4"
+                                  key={subitem.href}
+                                >
+                                  <Image
+                                    src={subitem.iconPrimary ?? subitem.icon}
+                                    alt={subitem.title}
+                                    className="size-24"
+                                  />
+                                  <div className="">
+                                    <p className="text-lg">{subitem.title}</p>
+                                    <p className="text-xs">{subitem.text}</p>
+                                  </div>
+                                </MobileLink>
+                              ))}
+                            </AccordionContent>
+                          </AccordionItem>
+                        </Accordion>
+                      ) : (
+                        <MobileLink
+                          href={item.href}
+                          onOpenChange={setOpen}
+                          className="text-[1.25rem] leading-[1.25rem]"
+                        >
+                          {item.title}
+                        </MobileLink>
+                      )}
+                    </div>
+                    <hr className="text-base-white/40" />
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+            <MobileLink
+              href="/kontakt/"
+              onOpenChange={setOpen}
+              className="text-[1.25rem] leading-[1.25rem]"
+            >
+              <Button
+                element="div"
+                intent="secondary"
+                className="text-center text-primary"
+              >
+                Kontakt
+              </Button>
+            </MobileLink>
           </div>
         </div>
-        <MobileLink
-          href="/kontakt/"
-          onOpenChange={setOpen}
-          className="text-[1.25rem] leading-[1.25rem]"
-        >
-          <Button
-            element="div"
-            intent="secondary"
-            className="text-center text-primary"
-          >
-            Kontakt
-          </Button>
-        </MobileLink>
       </SheetContent>
     </Sheet>
   )
