@@ -31,7 +31,7 @@ const SheetOverlay = React.forwardRef<
 SheetOverlay.displayName = SheetPrimitive.Overlay.displayName
 
 const sheetVariants = cva(
-  'fixed left-0 z-50 gap-4 bg-white pl-8 !pr-12 transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500 py-16',
+  'fixed left-0 z-50 gap-4 bg-white px-8 transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500 py-16',
   {
     variants: {
       side: {
@@ -65,7 +65,7 @@ const SheetContent = React.forwardRef<
       {...props}
     >
       {children}
-      <SheetPrimitive.Close className="rounded-sm absolute right-9 top-14 transition-opacity hover:opacity-100 focus:outline-none disabled:pointer-events-none data-[state=open]:bg-base-white">
+      <SheetPrimitive.Close className="rounded-sm absolute right-8 top-14 transition-opacity hover:opacity-100 focus:outline-none disabled:pointer-events-none data-[state=open]:bg-base-white">
         <Image priority src={navClose} alt="Close Menu" className="w-10" />
       </SheetPrimitive.Close>
     </SheetPrimitive.Content>

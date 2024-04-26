@@ -26,22 +26,22 @@ const MobileNav = () => {
         />
       </SheetTrigger>
 
-      <SheetContent side="right" className="pr-0">
-        <MobileLink
-          href="/"
-          className="flex items-center pl-2"
-          onOpenChange={setOpen}
-        >
-          <Image
-            priority
-            src={apptivaLogo}
-            alt="Apptiva Logo"
-            className="w-32"
-          />
-        </MobileLink>
-        <div className="mt-12 overflow-y-auto overflow-x-clip">
-          <div className="h-[calc(100vh-14rem)]">
-            <div className="mb-10 text-base-white">
+      <SheetContent side="right">
+        <div className="flex h-full flex-col gap-12">
+          <MobileLink
+            href="/"
+            className="flex items-center pl-2"
+            onOpenChange={setOpen}
+          >
+            <Image
+              priority
+              src={apptivaLogo}
+              alt="Apptiva Logo"
+              className="w-32"
+            />
+          </MobileLink>
+          <div className="flex-1 space-y-10 overflow-y-auto overflow-x-clip">
+            <div className="text-base-white">
               <div className="flex flex-col">
                 {navbarData.map((item) => (
                   <div key={item.href}>
@@ -54,11 +54,11 @@ const MobileNav = () => {
                         >
                           <AccordionItem
                             header={
-                              <div className="group flex w-full justify-between p-0 text-[1.25rem] leading-[1.25rem] !no-underline focus:outline-none data-[state=open]:text-secondary">
+                              <div className="group flex w-full justify-between p-0 text-xl !no-underline focus:outline-none">
                                 {item.title}
                               </div>
                             }
-                            className="p-0 hover:no-underline"
+                            className="p-0 outline-none transition-colors duration-700 hover:no-underline aria-expanded:text-secondary"
                           >
                             <AccordionContent className="mt-4 flex flex-col divide-y divide-base-white/40 rounded bg-base-white/5 px-4">
                               {item.items.map((subitem) => (
@@ -86,7 +86,7 @@ const MobileNav = () => {
                         <MobileLink
                           href={item.href}
                           onOpenChange={setOpen}
-                          className="text-[1.25rem] leading-[1.25rem]"
+                          className="text-xl"
                         >
                           {item.title}
                         </MobileLink>
@@ -100,7 +100,7 @@ const MobileNav = () => {
             <MobileLink
               href="/kontakt/"
               onOpenChange={setOpen}
-              className="text-[1.25rem] leading-[1.25rem]"
+              className="block text-xl"
             >
               <Button
                 element="div"
