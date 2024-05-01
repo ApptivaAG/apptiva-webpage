@@ -1,7 +1,8 @@
 export const rootUrl = process.env.ROOT_URL ?? 'https://apptiva.ch'
 export const description =
-  'Dein Spezialist für Chatbots und massgeschneiderte Softwarelösungen aus der Schweiz.'
-export const title = 'Apptiva AG'
+  'Entdecke individuelle Softwareentwicklung mit Apptiva: Chatbots, Mobile Apps & Webanwendungen. 100% in der Zentralschweiz entwickelt.'
+export const title =
+  'Apptiva AG | Chatbots und individuelle Softwarelösungen aus der Schweiz'
 
 function assertValue<T>(v: T | undefined, errorMessage: string): T {
   if (v === undefined) {
