@@ -35,7 +35,7 @@ export default function ProjectDetail(props: {
           <div className="popout justify-center pt-8 md:pt-16">
             <SanityImage
               className="rounded-lg"
-              image={project.image}
+              image={project.imageHeader ?? project.image}
               size="popout"
             />
           </div>

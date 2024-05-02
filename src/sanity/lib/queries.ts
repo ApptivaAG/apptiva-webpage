@@ -245,6 +245,7 @@ export const projectBySlugQuery = q('*')
     projectName: q.string().optional(),
     slug: Slug,
     image: sanityImageWithAlt(),
+    imageHeader: sanityImageWithAlt('imageHeader'),
     description: q.string().optional(),
     tasks: q.string().optional(),
     time: q.string().optional(),
