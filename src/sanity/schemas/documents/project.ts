@@ -21,7 +21,15 @@ export default defineType({
     }),
     defineField({
       name: 'image',
-      title: 'Bild',
+      title: 'Bild Vorschau',
+      type: 'imageWithAlt',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
+      name: 'imageHeader',
+      title: 'Bild Header',
       type: 'imageWithAlt',
       options: {
         hotspot: true,
@@ -69,6 +77,9 @@ export default defineType({
       of: [
         {
           type: 'block',
+        },
+        {
+          type: 'image',
         },
       ],
     }),
