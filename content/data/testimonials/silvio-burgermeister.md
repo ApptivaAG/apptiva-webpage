@@ -6,4 +6,4 @@ position: Leiter Support
 company: Amt für Informatik und Organisation des Kantons Bern
 ---
 
-Durch die Automatisierung von simplen Anfragen mit Bubble Chat können sich die Mitarbeitenden im Support mehr auf die Tätigkeiten des First-Level-Supports konzentrieren. Dies wiederum bringt eine Effizienzsteigerung für alle Beteiligten.
+Durch die _Automatisierung von simplen Anfragen mit Bubble Chat_ können sich die Mitarbeitenden im Support mehr auf die Tätigkeiten des First-Level-Supports konzentrieren.

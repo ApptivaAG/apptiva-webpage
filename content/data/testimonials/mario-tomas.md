@@ -6,4 +6,4 @@ position: Abteilungsleiter ICT
 company: AKSO Ausgleichskasse des Kantons Solothurn
 ---
 
-Wem ein partnerschaftliches Verhältnis mit einem kompetenten, unkomplizierten und respektvollen Chatbot-Provider wichtig ist, der sollte sich unbedingt mit dem Bubble Chat Team über einen gemeinsamen, zukünftigen Weg unterhalten. Es lohnt sich.
+Wem ein _partnerschaftliches Verhältnis_ mit einem _kompetenten und respektvollen Chatbot-Provider_ wichtig ist, der sollte sich unbedingt mit der Apptiva über einen gemeinsamen Weg unterhalten. Es lohnt sich.
