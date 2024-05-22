@@ -9,11 +9,13 @@ import UnderlineForLink from './ui/underline-for-link'
 
 const StyledPortableText = ({
   content,
+  individualComponents,
   spreadParagraphs = false,
   isHero = false,
   className = '',
 }: {
   content: PortableTextType
+  individualComponents?: PortableTextComponents
   spreadParagraphs?: boolean
   isHero?: boolean
   className?: string
@@ -75,6 +77,7 @@ const StyledPortableText = ({
         <span className="block h-1 " />
       </>
     ),
+    ...individualComponents,
   }
 
   return <PortableText value={content} components={components} />

@@ -1,9 +1,20 @@
 import { FAQQueryModuleData } from '@/sanity/lib/queries'
+import { PortableTextComponents } from '@portabletext/react'
+import Heading from './heading'
 import StyledPortableText from './styled-portable-text'
 import { Accordion, AccordionContent, AccordionItem } from './ui/accordion'
 
 const FAQsComponent = (props: { faqs: FAQQueryModuleData }) => {
   const { faqs } = props
+  const portableTextComponents: PortableTextComponents = {
+    block: {
+      h3: ({ children }) => (
+        <Heading level={3} size={5} className="pt-16">
+          {children}
+        </Heading>
+      ),
+    },
+  }
 
   return (
     <>
@@ -21,7 +32,10 @@ const FAQsComponent = (props: { faqs: FAQQueryModuleData }) => {
               >
                 {faq.answerStyled && (
                   <AccordionContent>
-                    <StyledPortableText content={faq.answerStyled} />
+                    <StyledPortableText
+                      content={faq.answerStyled}
+                      individualComponents={portableTextComponents}
+                    />
                   </AccordionContent>
                 )}
               </AccordionItem>
