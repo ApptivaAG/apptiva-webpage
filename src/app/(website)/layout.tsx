@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import PlausibleProvider from 'next-plausible'
 import localFont from 'next/font/local'
 import { draftMode } from 'next/headers'
+import Script from 'next/script'
 import { description, rootUrl, title } from '../env'
 import Navbar from './../../components/Navbar'
 import './globals.css'
@@ -59,7 +60,17 @@ export default function RootLayout({
         <Navbar />
         <main className="content">{children}</main>
         <Footer />
-        {draftMode().isEnabled && <LiveVisualEditing />}
+        {draftMode().isEnabled ? (
+          <LiveVisualEditing />
+        ) : (
+          <Script
+            id="chatbot"
+            data-server="https://chatbot.apptiva.ch/chatbot"
+            strategy="lazyOnload"
+            defer
+            src="https://chatbot.apptiva.ch/chatbot/embed/bundle.js"
+          />
+        )}
       </body>
     </html>
   )
