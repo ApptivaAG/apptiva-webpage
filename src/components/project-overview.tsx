@@ -13,7 +13,7 @@ const ProjectOverview = ({ project }: { project: ProjectsData }) => {
               image={project.image}
               className="h-full object-cover object-center"
             />
-            <div className="absolute bottom-0 h-full w-full bg-gradient-to-b from-transparent to-base-black"></div>
+            <div className="absolute bottom-0 h-full w-full bg-gradient-to-b from-transparent via-transparent to-primary-dark/80"></div>
             <Heading className="absolute bottom-5 left-5" level={3}>
               {project.projectName}
             </Heading>

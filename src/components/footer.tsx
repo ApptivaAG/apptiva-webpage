@@ -4,6 +4,7 @@ import Heading from './heading'
 import logo from './logo.svg'
 import NewsletterForm from './newsletter/newsletter-form'
 import sms from './swiss-made-software.svg'
+import lbv from './lehrbetrieb-vignette.png'
 import whatsApp from './whatsapp.svg'
 import Underline from './ui/underline'
 
@@ -71,7 +72,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className="flex items-end">
+          <div className="gap4 flex items-end space-y-5 lg:flex-col lg:items-center">
             <Link
               href={
                 'https://www.swissmadesoftware.org/companies/apptiva-ag/home.html'
@@ -81,6 +82,13 @@ export default function Footer() {
                 src={sms}
                 className="w-32 mix-blend-luminosity"
                 alt="Swiss Made Software"
+              ></Image>
+            </Link>
+            <Link href={'https://www.berufsbildungplus.ch/'}>
+              <Image
+                src={lbv}
+                className=" w-28 mix-blend-luminosity"
+                alt="Lehrbetrieb Vignette"
               ></Image>
             </Link>
           </div>

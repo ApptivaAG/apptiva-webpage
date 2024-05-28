@@ -38,20 +38,23 @@ export default function CardList(props: { module: ModuleData }) {
           {module.cards?.map((card) => (
             <Card key={card._key} padding="small">
               <Collapsible>
-                <div className="flex items-start justify-between gap-2">
-                  <Heading
-                    level={isLevel(1) ? 3 : 4}
-                    size={4}
-                    className="md:text-2xl"
-                  >
-                    {card.title}
-                  </Heading>
-                  <CollapsibleTrigger className="group grid *:size-8 *:transition-all *:[grid-area:1/1]">
-                    <PiPlusCircle className="rotate-0 scale-100 group-data-[state=open]:-rotate-90 group-data-[state=open]:scale-0" />
-                    <PiMinusCircle className="rotate-90 scale-0 group-data-[state=open]:rotate-0 group-data-[state=open]:scale-100" />
-                    <span className="sr-only">Aufklappen</span>
-                  </CollapsibleTrigger>
-                </div>
+                <CollapsibleTrigger className="w-full">
+                  <div className="grid auto-cols-auto grid-flow-col items-start justify-between gap-2">
+                    <Heading
+                      level={isLevel(1) ? 3 : 4}
+                      size={4}
+                      className=" text-start md:text-2xl"
+                    >
+                      {card.title}
+                    </Heading>
+
+                    <div className="group grid justify-self-end  *:size-8 *:transition-all *:[grid-area:1/1]">
+                      <PiPlusCircle className="rotate-0 scale-100 group-data-[state=open]:-rotate-90 group-data-[state=open]:scale-0" />
+                      <PiMinusCircle className="rotate-90 scale-0 group-data-[state=open]:rotate-0 group-data-[state=open]:scale-100" />
+                      <span className="sr-only">Aufklappen</span>
+                    </div>
+                  </div>
+                </CollapsibleTrigger>
                 {card.content && (
                   <CollapsibleContent className="data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
                     <div className="pt-6">
