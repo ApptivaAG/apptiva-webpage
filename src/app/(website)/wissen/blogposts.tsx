@@ -1,5 +1,4 @@
 import { BlogTeaser } from '@/components/blog/blog-teaser'
-import Heading from '@/components/heading'
 import Button from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import {
@@ -41,6 +40,7 @@ export default async function Blogposts(props: {
                   post={post}
                   intent="dark"
                   parentSlug={props.show}
+                  className="max-w-md"
                 />
               </CarouselItem>
             ))}

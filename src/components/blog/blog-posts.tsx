@@ -16,7 +16,7 @@ export default async function BlogPosts(props: {
   return (
     <ul className="grid gap-4 py-16 lg:grid-cols-3">
       {allPosts.map(([slug, post]) => (
-        <li key={slug}>
+        <li key={slug} className="first:lg:col-span-full">
           <BlogTeaser
             slug={slug}
             post={post}

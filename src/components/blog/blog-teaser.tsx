@@ -1,6 +1,6 @@
 import SanityImage from '@/components/sanity-image'
-import Button from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
+import { cn } from '@/utils/cn'
 import { CmsBlog, MarkdownBlog } from '@/utils/types'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -11,6 +11,7 @@ export function BlogTeaser(props: {
   post: CmsBlog | MarkdownBlog
   intent: 'dark' | 'light'
   parentSlug: 'blog' | 'apptiva-lernt'
+  className?: string
 }) {
   const { slug, post } = props
   return (
@@ -18,7 +19,7 @@ export function BlogTeaser(props: {
       key={slug}
       intent={props.intent}
       padding="none"
-      className="flex h-full max-w-md flex-col"
+      className={cn('flex h-full flex-col', props.className)}
     >
       <div className="">
         {post.kind === 'markdown' && post.image?.src && (
