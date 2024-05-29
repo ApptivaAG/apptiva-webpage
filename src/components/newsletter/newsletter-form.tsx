@@ -1,12 +1,12 @@
 'use client'
 
+import { cn } from '@/utils/cn'
+import { useState } from 'react'
 import { useFormState } from 'react-dom'
+import { subscribeToNewsletter } from '../server-actions/subscribe-to-newsletter'
 import { Submit } from '../submit'
 import { Input } from '../ui/input'
 import { Label } from '../ui/label'
-import { subscribeToNewsletter } from '../server-actions/subscribe-to-newsletter'
-import { useState } from 'react'
-import { cn } from '@/utils/cn'
 
 export default function NewsletterForm() {
   const [engaged, setEngaged] = useState(false)
@@ -41,6 +41,7 @@ export default function NewsletterForm() {
             type="email"
             name="email"
             id="newsletter-email"
+            placeholder="deine@email.ch"
           />
         </div>
         <div className={cn(!engaged && 'max-md:hidden')}>
@@ -52,6 +53,7 @@ export default function NewsletterForm() {
             type="text"
             name="name"
             id="newsletter-name"
+            placeholder="Vorname"
           />
         </div>
         <Submit className={cn(!engaged && 'max-md:hidden')}>Abonnieren</Submit>
