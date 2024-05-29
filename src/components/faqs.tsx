@@ -9,7 +9,7 @@ const FAQsComponent = (props: { faqs: FAQQueryModuleData }) => {
   const portableTextComponents: PortableTextComponents = {
     block: {
       h3: ({ children }) => (
-        <Heading level={3} size={5} className="pt-16">
+        <Heading level={3} size={5} className="pt-6">
           {children}
         </Heading>
       ),
