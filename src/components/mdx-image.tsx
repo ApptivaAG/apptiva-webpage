@@ -32,5 +32,14 @@ function MdxImage(contentPath: string) {
 export default MdxImage
 
 function getImageInfo(imageSrc: string) {
-  return imageSize(path.join(process.cwd(), './public', imageSrc))
+  try {
+    return imageSize(path.join(process.cwd(), './public', imageSrc))
+  } catch (error) {
+    console.error('Error getting image size', error)
+    console.error(
+      'Tried to get image at',
+      path.join(process.cwd(), './public', imageSrc)
+    )
+  }
+  return { height: 100, width: 100 }
 }
