@@ -32,5 +32,5 @@ function MdxImage(contentPath: string) {
 export default MdxImage
 
 function getImageInfo(imageSrc: string) {
-  return imageSize(path.join('./public', imageSrc))
+  return imageSize(path.join(process.cwd(), './public', imageSrc))
 }
