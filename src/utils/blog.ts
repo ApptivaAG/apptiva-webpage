@@ -9,7 +9,7 @@ import portableTextToString from './portable-text-to-string'
 import { mapTags } from './tags'
 import { BlogFrontmatter, CmsBlog, CmsContent, MarkdownBlog } from './types'
 
-const blogPostsPath = 'content/blog'
+const blogPostsPath = path.join(process.cwd(), 'content/blog')
 const assetsPath = '/assets/blog'
 
 export function hasTag(kind: 'blog' | 'apptiva-lernt') {
