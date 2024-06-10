@@ -3,6 +3,7 @@ import BreadCrumb from '@/components/bread-crumb'
 import Heading from '@/components/heading'
 import MdxImage from '@/components/mdx-image'
 import SanityImage from '@/components/sanity-image'
+import Button from '@/components/ui/button'
 import { getPostBySlug, getPosts, hasTag } from '@/utils/blog'
 import { kebabCaseToTitleCase } from '@/utils/format'
 import remarkEmbedder from '@remark-embedder/core'
@@ -11,6 +12,7 @@ import { Code } from 'bright'
 import { Metadata } from 'next'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import Image from 'next/image'
+import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import remarkGfm from 'remark-gfm'
 import remarkUnwrapImages from 'remark-unwrap-images'
@@ -20,6 +22,10 @@ export async function generateStaticParams() {
 
   return Array.from(posts)
     .filter(hasTag('blog'))
+    .toSorted(
+      ([, a], [, b]) =>
+        new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
+    )
     .map(([slug]) => ({
       slug,
     }))
@@ -48,6 +54,11 @@ export async function generateMetadata(props: {
 export default async function Home(props: { params: { slug: string } }) {
   const paramsSlug = decodeURIComponent(props.params.slug)
   const post = (await getPostBySlug(paramsSlug)) ?? notFound()
+
+  const postSlugs = (await generateStaticParams()).map(({ slug }) => slug)
+  const currentIndex = postSlugs.indexOf(paramsSlug)
+  const previousSlug = postSlugs[currentIndex - 1]
+  const nextSlug = postSlugs[currentIndex + 1]
 
   return (
     <>
@@ -128,6 +139,32 @@ export default async function Home(props: { params: { slug: string } }) {
           {post.kind === 'cms' && post.content && (
             <BlogPortableText content={post.content} />
           )}
+          <div className="flex justify-between gap-4 pt-8">
+            {previousSlug ? (
+              <Link href={`/blog/${previousSlug}`} className="no-underline">
+                <Button
+                  intent="primary"
+                  element="div"
+                  className="flex items-center gap-4"
+                >
+                  <span className="text-l">←</span>Zum vorherigen Artikel
+                </Button>
+              </Link>
+            ) : (
+              <div />
+            )}
+            {nextSlug && (
+              <Link href={`/blog/${nextSlug}`} className="no-underline">
+                <Button
+                  intent="primary"
+                  element="div"
+                  className="flex items-center gap-4"
+                >
+                  Zum nächsten Artikel<span className="text-l">→</span>
+                </Button>
+              </Link>
+            )}
+          </div>
         </div>
         <aside>
           {post.tags && post.tags.length > 0 && (
