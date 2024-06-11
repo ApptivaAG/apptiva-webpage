@@ -63,13 +63,14 @@ export default function RootLayout({
         {draftMode().isEnabled ? (
           <LiveVisualEditing />
         ) : (
-          <Script
-            id="chatbot"
-            data-server="https://chatbot.apptiva.ch/chatbot"
-            strategy="lazyOnload"
-            defer
-            src="https://chatbot.apptiva.ch/chatbot/embed/bundle.js"
-          />
+          // <Script
+          //   id="chatbot"
+          //   data-server="https://chatbot.apptiva.ch/chatbot"
+          //   strategy="lazyOnload"
+          //   defer
+          //   src="https://chatbot.apptiva.ch/chatbot/embed/bundle.js"
+          // />
+          ''
         )}
       </body>
     </html>
