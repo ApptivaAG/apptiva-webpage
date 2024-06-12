@@ -7,7 +7,6 @@ import {
 } from '@szhsin/react-accordion'
 import * as React from 'react'
 import { IoChevronDown } from 'react-icons/io5'
-import { IconType } from 'react-icons/lib'
 
 const Accordion = AccordionPrimitive
 

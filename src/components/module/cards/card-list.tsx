@@ -59,10 +59,10 @@ export default function CardList(props: { module: ModuleData }) {
                     <div
                       className="grid justify-self-end *:size-8 *:transition-all *:[grid-area:1/1]"
                       data-state="closed"
+                      aria-label="Aufklappen"
                     >
                       <PiPlusCircle className="rotate-0 scale-100 group-aria-expanded:-rotate-90 group-aria-expanded:scale-0" />
                       <PiMinusCircle className="rotate-90 scale-0 group-aria-expanded:rotate-0 group-aria-expanded:scale-100" />
-                      <span className="sr-only">Aufklappen</span>
                     </div>
                   }
                 >
