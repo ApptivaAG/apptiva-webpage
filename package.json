@@ -18,7 +18,6 @@
     "@next/mdx": "^14.1.4",
     "@portabletext/react": "^3.0.11",
     "@portabletext/to-html": "^2.0.10",
-    "@radix-ui/react-collapsible": "^1.0.3",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-navigation-menu": "^1.1.4",
