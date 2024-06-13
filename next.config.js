@@ -668,6 +668,16 @@ async function redirects() {
       destination: '/angebot/development/projektumsetzung',
       permanent: true,
     },
+    {
+      source: '/vorgehensweise',
+      destination: '/angebot/development/projektumsetzung',
+      permanent: true,
+    },
+    {
+      source: '/apptiva-lernt/tailwindcss/',
+      destination: '/apptiva-lernt/tailwind-css',
+      permanent: true,
+    },
     { source: '/newsletter', destination: '/', permanent: true },
   ]
 }
