@@ -1,7 +1,7 @@
 ---
 templateKey: 'testimonial-data'
 avatar:
-name: Mario Tomas
+name: Philipp Erni
 position: Abteilungsleiter ICT
 company: AKSO Ausgleichskasse des Kantons Solothurn
 ---
