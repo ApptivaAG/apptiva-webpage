@@ -35,6 +35,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     ...buildServicesSiteMap(services),
     {
+      url: buildFullUrl('/angebot/chatbots/demo-vereinbaren'),
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: buildFullUrl('/ueber-uns'),
       lastModified: new Date(),
       changeFrequency: 'monthly',
@@ -125,7 +131,7 @@ function buildServicesSiteMap(services: ServicesQueryData) {
       url: buildFullUrl(url),
       lastModified: new Date(_updatedAt),
       changeFrequency: 'weekly',
-      priority: 0.8,
+      priority: 0.9,
     } as const
   })
 }
