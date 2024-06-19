@@ -76,6 +76,12 @@ const customerList = [
     group: ['web', 'mobile'],
   },
   {
+    fileName: 'kanton-schwyz.svg',
+    alt: 'Konton Schwyz',
+    height: 60,
+    group: ['chatbot'],
+  },
+  {
     fileName: 'grandcasino-bern-logo.svg',
     alt: 'Grandcasino Bern',
     height: 35,
