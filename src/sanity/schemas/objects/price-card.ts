@@ -1,4 +1,4 @@
-import { defineField, defineType } from 'sanity'
+import { defineArrayMember, defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'priceCard',
@@ -31,10 +31,11 @@ export default defineType({
       name: 'content',
       title: 'Inhalt',
       type: 'array',
+      // @ts-ignore
       of: [
-        {
+        defineArrayMember({
           type: 'block',
-        },
+        }),
       ],
     }),
     defineField({

@@ -1,5 +1,5 @@
 import portableTextToString from '@/utils/portable-text-to-string'
-import { defineField, defineType } from 'sanity'
+import { defineArrayMember, defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'service-page',
@@ -35,7 +35,8 @@ export default defineType({
       name: 'subPageOf',
       title: 'Unterseite von',
       type: 'reference',
-      to: [{ type: 'service-page' }],
+      // @ts-ignore
+      to: [defineArrayMember({ type: 'service-page' })],
     }),
     defineField({
       name: 'teaserTitle',
@@ -53,10 +54,11 @@ export default defineType({
       name: 'teaser',
       title: 'Teaser',
       type: 'array',
+      // @ts-ignore
       of: [
-        {
+        defineArrayMember({
           type: 'block',
-        },
+        }),
       ],
       group: 'teaser',
     }),
@@ -64,7 +66,8 @@ export default defineType({
       name: 'modules',
       title: 'Module',
       type: 'array',
-      of: [{ type: 'module' }],
+      // @ts-ignore
+      of: [defineArrayMember({ type: 'module' })],
     }),
     defineField({
       name: 'callToAction',

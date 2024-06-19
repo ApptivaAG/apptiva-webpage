@@ -1,47 +1,18 @@
-import BlogPortableText from '@/components/blog-portable-text'
 import BreadCrumb from '@/components/bread-crumb'
 import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
-import { getPostBySlug, getPosts, hasTag } from '@/utils/blog'
+import Button from '@/components/ui/button'
 import { kebabCaseToTitleCase } from '@/utils/format'
-import { Metadata } from 'next'
-import { notFound } from 'next/navigation'
+import { CmsBlog, MarkdownBlog } from '@/utils/types'
+import Link from 'next/link'
 
-export async function generateStaticParams() {
-  const posts = await getPosts()
-
-  return Array.from(posts)
-    .filter(hasTag('apptiva-lernt'))
-    .map(([slug]) => ({
-      slug,
-    }))
-}
-
-export async function generateMetadata(props: {
-  params: { slug: string }
-}): Promise<Metadata> {
-  const paramsSlug = decodeURIComponent(props.params.slug)
-  const post = (await getPostBySlug(paramsSlug, false)) ?? notFound()
-
-  return {
-    title: `${post.meta.title} | Apptiva lernt`,
-    description: post.meta.description,
-    alternates: { canonical: `/apptiva-lernt/${post.slug}` },
-    openGraph: {
-      title: post.meta.title,
-      type: 'article',
-      publishedTime: post.publishDate,
-    },
-  }
-}
-
-export default async function Home(props: { params: { slug: string } }) {
-  const paramsSlug = decodeURIComponent(props.params.slug)
-  const post = (await getPostBySlug(paramsSlug, false)) ?? notFound()
-
-  if (post.kind === 'markdown') {
-    return <div>Apptiva lernt unterstützt nur CMS Beiträge</div>
-  }
+export default function CmsBlogPost(props: {
+  post: CmsBlog
+  previousSlug: string | undefined
+  nextSlug: string | undefined
+  PortableText: any
+}) {
+  const { post, previousSlug, nextSlug, PortableText } = props
 
   return (
     <>
@@ -50,10 +21,10 @@ export default async function Home(props: { params: { slug: string } }) {
           <BreadCrumb
             className="pb-6"
             links={[
-              { name: 'Apptiva lernt', href: '/apptiva-lernt' },
+              { name: 'Blog', href: '/blog' },
               {
                 name: getBreadcrumb(post),
-                href: `/apptiva-lernt/${post.slug}`,
+                href: `/blog/${post.slug}`,
               },
             ]}
           />
@@ -83,7 +54,33 @@ export default async function Home(props: { params: { slug: string } }) {
 
       <div className="flex gap-16 py-16 max-md:flex-col">
         <div className="prose flex-1">
-          {post.content && <BlogPortableText content={post.content} />}
+          {post.content && <PortableText content={post.content} />}
+          <div className="flex justify-between gap-4 pt-8">
+            {previousSlug ? (
+              <Link href={`/blog/${previousSlug}`} className="no-underline">
+                <Button
+                  intent="primary"
+                  element="div"
+                  className="flex items-center gap-4"
+                >
+                  <span className="text-l">←</span>Zum vorherigen Artikel
+                </Button>
+              </Link>
+            ) : (
+              <div />
+            )}
+            {nextSlug && (
+              <Link href={`/blog/${nextSlug}`} className="no-underline">
+                <Button
+                  intent="primary"
+                  element="div"
+                  className="flex items-center gap-4"
+                >
+                  Zum nächsten Artikel<span className="text-l">→</span>
+                </Button>
+              </Link>
+            )}
+          </div>
         </div>
         <aside>
           {post.tags && post.tags.length > 0 && (
@@ -100,9 +97,9 @@ export default async function Home(props: { params: { slug: string } }) {
   )
 }
 
-function getBreadcrumb(post: Awaited<ReturnType<typeof getPostBySlug>>) {
+function getBreadcrumb(post: MarkdownBlog | CmsBlog) {
   if (post?.kind === 'cms') {
-    return post.breadcrumb ?? post.title ?? 'Post'
+    return post.breadcrumb ?? post.title
   }
   return post?.title ?? 'Post'
 }

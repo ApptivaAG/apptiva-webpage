@@ -1,4 +1,4 @@
-import { defineField, defineType } from 'sanity'
+import { defineArrayMember, defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'header',
@@ -9,8 +9,9 @@ export default defineType({
       name: 'title',
       title: 'Titel',
       type: 'array',
+      // @ts-ignore
       of: [
-        {
+        defineArrayMember({
           type: 'block',
           styles: [
             {
@@ -23,13 +24,14 @@ export default defineType({
             decorators: [{ title: 'Underline', value: 'underline' }],
             annotations: [],
           },
-        },
+        }),
       ],
     }),
     defineField({
       name: 'lead',
       title: 'Einleitung',
       type: 'text',
+      // @ts-ignore
       rows: 3,
     }),
     defineField({

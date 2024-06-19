@@ -1,4 +1,4 @@
-import { defineField, defineType } from 'sanity'
+import { defineArrayMember, defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'module',
@@ -14,10 +14,11 @@ export default defineType({
       name: 'introduction',
       title: 'Einleitung',
       type: 'array',
+      // @ts-ignore
       of: [
-        {
+        defineArrayMember({
           type: 'block',
-        },
+        }),
       ],
       hidden: isNotType('projects', 'team'),
     }),
@@ -105,10 +106,11 @@ export default defineType({
       name: 'content',
       title: 'Inhalt',
       type: 'array',
+      // @ts-ignore
       of: [
-        {
+        defineArrayMember({
           type: 'block',
-        },
+        }),
       ],
       hidden: isNotType('cards', 'faqs', 'text', 'contact', 'prices', 'image'),
     }),
@@ -116,18 +118,20 @@ export default defineType({
       name: 'cards',
       title: 'Cards',
       type: 'array',
-      of: [{ type: 'card' }],
+      // @ts-ignore
+      of: [defineArrayMember({ type: 'card' })],
       hidden: isNotType('cards'),
     }),
     defineField({
       title: 'Projekte',
       name: 'projects',
       type: 'array',
+      // @ts-ignore
       of: [
-        {
+        defineArrayMember({
           type: 'reference',
           to: { type: 'project' },
-        },
+        }),
       ],
       hidden: isNotType('projects'),
     }),
@@ -136,11 +140,12 @@ export default defineType({
       name: 'team',
 
       type: 'array',
+      // @ts-ignore
       of: [
-        {
+        defineArrayMember({
           type: 'reference',
           to: { type: 'person' },
-        },
+        }),
       ],
       hidden: isNotType('team'),
     }),
@@ -149,18 +154,20 @@ export default defineType({
       name: 'priceCards',
       title: 'Preis Karten',
       type: 'array',
-      of: [{ type: 'priceCard' }],
+      // @ts-ignore
+      of: [defineArrayMember({ type: 'priceCard' })],
       hidden: ({ parent }) => parent?.type !== 'prices',
     }),
     defineField({
       title: 'FAQs',
       name: 'faqs',
       type: 'array',
+      // @ts-ignore
       of: [
-        {
+        defineArrayMember({
           type: 'reference',
           to: { type: 'faq' },
-        },
+        }),
       ],
       hidden: isNotType('faqs'),
     }),
@@ -168,10 +175,11 @@ export default defineType({
       name: 'quotetext',
       title: 'Zitat',
       type: 'array',
+      // @ts-ignore
       of: [
-        {
+        defineArrayMember({
           type: 'block',
-        },
+        }),
       ],
       hidden: isNotType('quote'),
     }),
@@ -179,11 +187,12 @@ export default defineType({
       title: 'Angebote',
       name: 'servicePageTeaser',
       type: 'array',
+      // @ts-ignore
       of: [
-        {
+        defineArrayMember({
           type: 'reference',
           to: { type: 'service-page' },
-        },
+        }),
       ],
       hidden: isNotType('teaser-servicepage'),
     }),

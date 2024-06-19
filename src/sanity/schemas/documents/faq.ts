@@ -34,6 +34,7 @@ export default defineType({
       name: 'answerStyled',
       title: 'Answer',
       type: 'array',
+      // @ts-ignore
       of: [
         {
           type: 'block',
@@ -44,6 +45,7 @@ export default defineType({
       name: 'tags',
       title: 'Tags',
       type: 'array',
+      // @ts-ignore
       of: [
         {
           type: 'reference',
