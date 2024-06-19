@@ -24,9 +24,11 @@ export async function generateMetadata(props: {
 
   return {
     title: `${title} | Glossar`,
-    description: glossary.summary
-      ? portableTextToString(glossary.summary)
-      : 'Ohne Zusammenfassung',
+    description:
+      glossary.header?.meta?.description ??
+      (glossary.summary
+        ? portableTextToString(glossary.summary)
+        : 'Ohne Zusammenfassung'),
     alternates: { canonical: url },
     openGraph: {
       title,
