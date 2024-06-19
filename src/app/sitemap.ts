@@ -79,7 +79,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'weekly',
       priority: 0.5,
     },
-    ...buildSiteMap(glossary, { parentSlug: 'glossar' }),
+    ...buildSiteMap(
+      glossary.filter((g) => g.content),
+      { parentSlug: 'glossar' }
+    ),
     {
       url: buildFullUrl('/impressum'),
       lastModified: new Date(),
