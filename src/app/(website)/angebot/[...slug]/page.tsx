@@ -50,7 +50,7 @@ export async function generateMetadata(props: {
     'Ohne Beschreibung'
 
   return {
-    title: `${[currentPageTitle, service.subPageOf?.breadcrumb].filter(Boolean).join(' | ')} | Angebot`,
+    title: currentPageTitle,
     description: description,
     alternates: { canonical: url },
     openGraph: {
