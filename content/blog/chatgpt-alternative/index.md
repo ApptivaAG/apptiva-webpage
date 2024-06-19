@@ -15,7 +15,7 @@ imageCopy: Foto von <a href="https://unsplash.com/de/@jupp?utm_source=unsplash&u
 author: Markus Tanner
 ---
 
-Seit dem öffentlichen Start im November 2022 hat [ChatGPT](/glossar/chatgpt/), der faszinierende KI-Chatbot von OpenAI, eine beeindruckende Popularität erreicht. Die Feeds in den sozialen Medien sind voll von unglaublichen Dingen, die Menschen mit dem Chatbot tun. Arbeitssuchende, Programmierer, Inhaltsersteller und Fachleute in fast allen Bereichen finden gute Verwendungsmöglichkeiten für den Chatbot.
+Seit dem öffentlichen Start im November 2022 hat [ChatGPT](/glossar/chatgpt), der faszinierende KI-Chatbot von OpenAI, eine beeindruckende Popularität erreicht. Die Feeds in den sozialen Medien sind voll von unglaublichen Dingen, die Menschen mit dem Chatbot tun. Arbeitssuchende, Programmierer, Inhaltsersteller und Fachleute in fast allen Bereichen finden gute Verwendungsmöglichkeiten für den Chatbot.
 
 Wenn jedoch ein Tool dermassen im Mittelpunkt steht, verliert man leicht den Überblick über die Alternativen, die einen gleichwertigen oder sogar besseren Nutzen bieten könnten. Deshalb stellen wir hier einige der besten ChatGPT-Alternativen zusammen, welche ab sofort verwendet werden können.
 

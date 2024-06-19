@@ -29,7 +29,7 @@ Als das Casino uns vor über zwei Jahren kontaktierte, war ihre Hoffnung mit wen
 
 ## Der Angebots-Konfigurator
 
-Kernstück der neuen Lösung ist der Angebots-Konfigurator, welcher im Rahmen des Projekts meistens "Package-Konfigurator" genannt wird. Dieser erlaubt es dem Casino selbstständig bestehende Angebote anzupassen oder auch neue zu erfassen.
+Kernstück der neuen Lösung ist der [Angebots-Konfigurator](/angebot/konfiguratoren), welcher im Rahmen des Projekts meistens "Package-Konfigurator" genannt wird. Dieser erlaubt es dem Casino selbstständig bestehende Angebote anzupassen oder auch neue zu erfassen.
 
 ![Konfigurator](./konfigurator.png)
 
@@ -37,7 +37,7 @@ Die Mitarbeiter:innen des Casinos können hier neue Leistungserbringer und deren
 
 ## Schnittstelle zu den Leistungserbringern
 
-Die Leistungserbringer werden z.Z. entweder per Email oder über die [Restaurant-Reservations-Schnittstelle](/angebot/development/schnittstellen/) von Aleno über eine neue Reservation informiert. Die Kapazität der Leistungserbringer speichern wir entsprechend der vereinbarten Quota bei uns in der Software oder prüfen die Kapazität ebenfalls über Aleno. Mit Email haben wir eine sehr einfache "Anbindung" der Leistungserbringer, welche in jedem Fall funktioniert. Bei in Aleno erfassten Restaurants können wir die Kapazitätsprüfung und Reservation sehr genau vornehmen und entsprechend den administrativen Aufwand nochmals reduzieren.
+Die Leistungserbringer werden z.Z. entweder per Email oder über die [Restaurant-Reservations-Schnittstelle](/angebot/development/schnittstellen) von Aleno über eine neue Reservation informiert. Die Kapazität der Leistungserbringer speichern wir entsprechend der vereinbarten Quota bei uns in der Software oder prüfen die Kapazität ebenfalls über Aleno. Mit Email haben wir eine sehr einfache "Anbindung" der Leistungserbringer, welche in jedem Fall funktioniert. Bei in Aleno erfassten Restaurants können wir die Kapazitätsprüfung und Reservation sehr genau vornehmen und entsprechend den administrativen Aufwand nochmals reduzieren.
 
 ## Kapazität prüfen
 
@@ -89,4 +89,4 @@ Wer bereits einmal ein solches System umgesetzt hat, weiss, dass dies mit teils 
 
 ## Fazit
 
-Mit dem neuen Konfigurator wurde der Verkauf vereinfacht und der administrative Aufwand deutlich reduziert. Zudem ist das Grand Casino Bern nun viel dynamischer in der Angebotserstellung. Gibt es ein temporäres, cooles Event in der Stadt, welches das Casino mit einem Besuch im Casino verknüpfen möchte, so können sie ein solches Angebot innerhalb von wenigen Minuten online schalten. Ob das Casino seine Umsatzziele erreicht hat, kann ich hingegen nicht beantworten.
+Mit dem neuen [Konfigurator](/angebot/konfiguratoren) wurde der Verkauf vereinfacht und der administrative Aufwand deutlich reduziert. Zudem ist das Grand Casino Bern nun viel dynamischer in der Angebotserstellung. Gibt es ein temporäres, cooles Event in der Stadt, welches das Casino mit einem Besuch im Casino verknüpfen möchte, so können sie ein solches Angebot innerhalb von wenigen Minuten online schalten. Ob das Casino seine Umsatzziele erreicht hat, kann ich hingegen nicht beantworten.

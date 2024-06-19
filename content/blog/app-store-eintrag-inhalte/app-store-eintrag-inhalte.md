@@ -16,7 +16,7 @@ categories:
   - Allgemein
 ---
 
-Apps im [Apple App-Store](https://www.apple.com/ios/app-store/) und [Google Play-Store](https://play.google.com/store) benötigen eine Beschreibung, damit die Kunden und Nutzer entscheiden können, ob sie eine App herunterladen wollen. Diese Beschreibung beinhaltet Icons, Name der App, eine Beschreibung, ein paar Screenshots usw. Für diese Inhalte geben die App-Stores die Qualität, Menge und Dimensionen vor, wie zum Beispiel die Auflösung oder Menge der Zeichen. Jeder Store hat dabei leicht andere Vorgaben. In der folgenden Übersicht listen wir die wichtigsten Store-Attribute.
+[Apps](/angebot/development/app-entwicklung) im [Apple App-Store](https://www.apple.com/ios/app-store/) und [Google Play-Store](https://play.google.com/store) benötigen eine Beschreibung, damit die Kunden und Nutzer entscheiden können, ob sie eine App herunterladen wollen. Diese Beschreibung beinhaltet Icons, Name der App, eine Beschreibung, ein paar Screenshots usw. Für diese Inhalte geben die App-Stores die Qualität, Menge und Dimensionen vor, wie zum Beispiel die Auflösung oder Menge der Zeichen. Jeder Store hat dabei leicht andere Vorgaben. In der folgenden Übersicht listen wir die wichtigsten Store-Attribute.
 
 | Attribut           | iOS [][1]                 | Android [][2]             |
 | ------------------ | ------------------------- | ------------------------- |
@@ -53,4 +53,4 @@ Detailliertere Informationen sind über die jeweiligen Links in der Tabelle oben
 
 Fehler oder Lücken in der Liste bitte auf [info@apptiva.ch](mailto:info@apptiva.ch?subject=Blogpost%20App%20Store%20Eintragbeschreibung) melden.
 
-Weiterführende Informationen zum Thema sind hier zu finden: [App entwickeln](/mobile-apps-ios-android/)
+Weiterführende Informationen zum Thema sind hier zu finden: [App entwickeln](/angebot/development/app-entwicklung)

@@ -21,7 +21,7 @@ categories:
   - Projekte
 ---
 
-Anfang Mai 2016 haben wir von der Suva den Auftrag zur Umsetzung einer Webapplikation erhalten.
+Anfang Mai 2016 haben wir von der Suva den Auftrag zur Umsetzung einer [Webapplikation](/angebot/development/webentwicklung) erhalten.
 
 Ziel der Applikation ist Schneesportler für ihre Risiken zu sensibilisieren und persönliche Tipps anzubieten. Dazu werden ca. 50 Fragen gestellt und 5 Fitnessübungen durchgeführt. Am Ende erhält der Teilnehmer oder die Teilnehmerin ein persönliches Profil mit Tipps und Links zu weiterführenden Informationen.
 
@@ -53,7 +53,7 @@ Unsere festgehaltenen Risiken hatten wir jederzeit im Griff und sind glückliche
 
 <h2>Storymap</h2>
 
-Die Storymap erlaubt es wie kein zweites Werkzeug ein gemeinsames Verständnis zwischen Personen zu schaffen. Zudem zeigt die Storymap eindrücklich den erwarteten Umfang auf und den geplanten Ablauf des Projekts in Bezug auf die Umsetzung. Eine Beschreibung des Werkzeuges “Storymaps” findet man hier: [apptiva.ch/mehr-ueberblick-mit-storymap/](/mehr-ueberblick-mit-storymap/)
+Die Storymap erlaubt es wie kein zweites Werkzeug ein gemeinsames Verständnis zwischen Personen zu schaffen. Zudem zeigt die Storymap eindrücklich den erwarteten Umfang auf und den geplanten Ablauf des Projekts in Bezug auf die Umsetzung. Eine Beschreibung des Werkzeuges “Storymaps” findet man in unserem [Blogbeitrag](/blog/mehr-ueberblick-mit-storymap)
 
 Die horizontalen Striche, die mit einem Titel versehen sind, zeigen, dass die Funktionalität des Schneesport-Checks in sechs Phasen unterteilt ist. Eine der wichtigsten Phasen ist bestimmt die erste; hier “Walking Skeleton” genannt. Mit dem Walking Skeleton will man möglichst schnell die grössten Risiken angehen. In unserem Falls war dies die technische Herausforderung und die grobe grafische Darstellung. Zudem wollten wir bereits eine erste Auswertung haben, um sicher zu stellen, dass wir diese korrekt verstanden haben.
 
@@ -114,6 +114,6 @@ Nach der Korrektur eines Tasks, schoben wir diesen von “In Bearbeitung” übe
 
 <h2>Abschluss</h2>
 
-Zum Abschluss führten wir eine Retrospektive des gesamten Projektes durch. Alles in Allem wurde das Projekt von allen Beteiligten als grosser Erfolg bewertet. Alle waren der Meinung, dass die konstruktive Zusammenarbeit und das iterative Vorgehen massgebend waren. Die resultierende Lösung funktioniert sehr gut und die gesteckten Meilensteine wurden alle erreicht. Wir sind stolz darauf, Teil dieses Projektes gewesen zu sein.
+Zum Abschluss führten wir eine Retrospektive des gesamten Projektes durch. Alles in Allem wurde das Projekt von allen Beteiligten als grosser Erfolg bewertet. Alle waren der Meinung, dass die konstruktive Zusammenarbeit und das iterative Vorgehen massgebend waren. Die resultierende Lösung funktioniert sehr gut und die gesteckten Meilensteine wurden alle erreicht. Wir sind stolz auf die Entwicklung dieser [Applikation](/angebot/development/webentwicklung).
 
 Der Schneesport-Check ist erreichbar unter: [http://www.suva.ch/schneesportcheck](http://www.suva.ch/schneesportcheck)

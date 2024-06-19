@@ -41,4 +41,4 @@ Die Integration eines Produktkonfigurators in eine bestehende Webseite oder eine
 
 Die Integration eines Produktkonfigurators in eine bestehende Webseite oder einen Webshop eröffnet neue Möglichkeiten für Unternehmen, ihren Kunden personalisierte Produkte anzubieten. Mit den richtigen Schritten und der erforderlichen technischen Unterstützung kann die Integration erfolgreich umgesetzt werden. Ein gut integrierter Produktkonfigurator kann nicht nur die Kundenbindung stärken, sondern auch den Umsatz steigern und Ihrem Unternehmen einen Wettbewerbsvorteil verschaffen.
 
-Erfahren Sie mehr über [Produkt-Konfiguratoren](/produktkonfiguratoren/) auf unserer Dienstleistungsseite.
+Erfahren Sie mehr über [Produkt-Konfiguratoren](/angebot/konfiguratoren) auf unserer Dienstleistungsseite.

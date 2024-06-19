@@ -16,7 +16,7 @@ categories:
   - Allgemein
 ---
 
-Mit dem Update für 2021 der [Slope Track App](/blog/suva-slope-track-app/) für die Suva bieten wir einige interessante Optimierungen an. So verbessern wir unter anderem die Navigation und Darstellung der aufgezeichneten Abfahrten, erkennen die Abfahrten präzisier und bieten neue Tipps an.
+Mit dem Update für 2021 der [Slope Track App](/blog/suva-slope-track-app) für die Suva bieten wir einige interessante Optimierungen an. So verbessern wir in der [App](/angebot/development/app-entwicklung) unter anderem die Navigation und Darstellung der aufgezeichneten Abfahrten, erkennen die Abfahrten präzisier und bieten neue Tipps an.
 
 ## Bessere Navigation und Darstellung von Abfahrten
 

@@ -18,8 +18,7 @@ categories:
 
 Die hervorragende Auftragslage des Jahres 2018 geht für die Apptiva in diesem Jahr nahtlos weiter. Aufgrund dessen fällten wir vor einigen Monaten den Entscheid, uns zu verstärken. Zu unserem Glück haben wir zwei kompetente und teamfähige Menschen getroffen, die uns unterstützen wollen.
 
-[[right]]
-|![Renato Wasescha](renato-wasescha.jpg)
+![Renato Wasescha](renato-wasescha.jpg)
 
 ## Renato
 
@@ -29,10 +28,9 @@ Renato unterstützt uns mit Node.js im Backend und HTML, CSS und JS im Frontend.
 
 ## Patrik
 
-[[right]]
-|![Patrik Stutz](patrik-stutz-prev.jpg)
+![Patrik Stutz](patrik-stutz-prev.jpg)
 
-[Patrik](/patrik-stutz/) ist ebenfalls Software-Entwickler und hat eben bei uns zu arbeiten begonnen.
+[Patrik](/ueber-uns) ist ebenfalls Software-Entwickler und hat eben bei uns zu arbeiten begonnen.
 
 Patrik unterstützt uns mit Java/Node.js im Backend und React im Frontend. Er hilft uns als erstes bei einem Webshop-Backend für einen grossen deutschen B2B-Händler. Patrik hat uns mit seinem Tüftler-Enthusiasmus und grossem Interesse an moderner Softwareentwicklung überzeugt. Bereits in seiner ersten Woche hat er uns interessante Dinge an seiner Entwicklungsumgebung zeigen können. Patrik hat eine echt freundliche Art, die die Zusammenarbeit zur Freude macht.
 

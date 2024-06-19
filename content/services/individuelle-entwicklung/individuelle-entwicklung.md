@@ -45,9 +45,9 @@ Oft kommt es vor, dass man von der ursprünglichen Idee etwas abweicht, da es ei
 
 Wir entwickeln unter anderem:
 
-- ### [Mobile Apps für iOS und Android](/mobile-apps-ios-android/)
+- ### [Mobile Apps für iOS und Android](/angebot/development/app-entwicklung)
 
-- ### [Web Apps und Applikationen](/web-apps/)
+- ### [Web Apps und Applikationen](/angebot/development/webentwicklung)
 
 - ### [Schnittstellen zwischen Anwendungen](/angebot/development/schnittstellen/)
 

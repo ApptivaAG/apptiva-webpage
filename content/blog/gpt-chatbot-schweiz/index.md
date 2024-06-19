@@ -29,7 +29,7 @@ Indem der Chatbot mit Dokumenten und Webseiten gefüttert wird, können Unterneh
 
 ## Optimierung von Abläufen in Unternehmen
 
-Die Verwendung dieser Funktion trägt zur Optimierung interner und externer Abläufe bei, da häufig gestellte Fragen automatisiert werden können, was Ressourcen freisetzt und Mitarbeitern die Möglichkeit gibt, sich auf anspruchsvollere Aufgaben zu konzentrieren. Darüber hinaus verbessert ein Chatbot die [Skalierbarkeit des Kundenservice](/angebot/chatbots/) und ermöglicht Unternehmen, eine grössere Anzahl von Anfragen zu verarbeiten, ohne dabei die Qualität der bereitgestellten Informationen zu beeinträchtigen.
+Die Verwendung dieser Funktion trägt zur Optimierung interner und externer Abläufe bei, da häufig gestellte Fragen automatisiert werden können, was Ressourcen freisetzt und Mitarbeitern die Möglichkeit gibt, sich auf anspruchsvollere Aufgaben zu konzentrieren. Darüber hinaus verbessert ein Chatbot die [Skalierbarkeit des Kundenservice](/angebot/chatbots) und ermöglicht Unternehmen, eine grössere Anzahl von Anfragen zu verarbeiten, ohne dabei die Qualität der bereitgestellten Informationen zu beeinträchtigen.
 
 Durch die Kombination vom einfachen Einlesen von Dokumenten und Webseiten mit der leistungsstarken GPT-Technologie schafft Bubble Chat eine robuste Umgebung für eine effiziente und präzise Kommunikation. Diese Technologie ermöglicht es Unternehmen, den Kunden hochwertige und zeitnahe Informationen bereitzustellen, was letztendlich zu einer verbesserten Kundenzufriedenheit und einer stärkeren Bindung an die Marke führt.
 

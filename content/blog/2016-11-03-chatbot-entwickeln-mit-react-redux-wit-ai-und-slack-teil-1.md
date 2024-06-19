@@ -16,7 +16,7 @@ categories:
   - Bots und Chatbots
 ---
 
-In unserem letzten Blogpost hat Philip über die [Lancierung der Botfabrik](/bot-entwicklung/) berichtet. Ich möchte in diesem Post etwas technischer werden und dir zeigen, wie wir unseren Chatbot Pit entwickelt haben. Pits Fähigkeiten kannst du übrigens hier ausprobieren: [www.botfabrik.ch](http://www.botfabrik.ch)
+In unserem letzten Blogpost hat Philip über die [Lancierung der Botfabrik](/angebot/chatbots) berichtet. Ich möchte in diesem Post etwas technischer werden und dir zeigen, wie wir unseren Chatbot Pit entwickelt haben. Pits Fähigkeiten kannst du übrigens hier ausprobieren: [www.botfabrik.ch](http://www.botfabrik.ch)
 
 ## Über Pit
 
@@ -282,4 +282,4 @@ Wir haben hier eine weitere Action vom Typ ‘CONNECT’ eingeführt. Diese wird
 
 Wir haben jetzt den Client soweit, dass dieser mittels WebSocket mit dem Backend kommunizieren kann. Meldungen die der Benutzer eingibt, werden via Redux in den State gestellt und via Middleware an den Server übermittelt. Der Server kann beliebige Actions an den Client senden und diese werden via Redux vom Client verarbeitet. Im zweiten Teil dieses Blogposts kannst du dann lesen, wie wir das Backend implementiert haben. Folge uns auf Twitter [@ApptivaTeam](http://twitter.com/ApptivaTeam) damit du nichts verpasst.
 
-> Du möchtest auch einen Chatbot der für dich wichtige Arbeiten erledigt? Brauchst du Unterstützung bei der Implementation eines Bots bzw. Chatbots? Nimm mit uns Kontakt auf, wir helfen gerne.
+> Du möchtest auch einen [Chatbot](/angebot/chatbots) der für dich wichtige Arbeiten erledigt? Brauchst du Unterstützung bei der Implementation eines Bots bzw. Chatbots? Nimm mit uns Kontakt auf, wir helfen gerne.

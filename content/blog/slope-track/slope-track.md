@@ -26,14 +26,14 @@ Eine konkrete Metrik für die App ist, dass jede(r) AnwenderIn die vorhandenen T
 
 ## Vorgehen
 
-Wie üblich sind wir bei der [App Entwicklung](/mobile-apps-ios-android/) agil vorgegangen. Dies hatte in diesem Fall folgende Vorteile:
+Wie üblich sind wir bei der [App Entwicklung](/angebot/development/app-entwicklung) agil vorgegangen. Dies hatte in diesem Fall folgende Vorteile:
 
 - Wir konnten bereits mit einem frühen Prototyp herausfinden, ob Beschleunigungsaufzeichnung und Abfahrtserkennung möglich sind und funktionieren.
 - Bereits zu Beginn mit vielen unterschiedlichen Mobile-Geräten und Sensoren die Beschleunigungsaufzeichnung testen.
 - Ideen beim Interaktionskonzept bereits in einer frühen Phase testen.
 - Neue Erkenntnisse und Ideen während der Entwicklung in das Projekt einfliessen lassen.
 
-Zu Beginn haben wir wie gewohnt eine [Story Map](/mehr-ueberblick-mit-storymap/) erstellt, um den Umfang und die Abfolge der Entwicklung zu visualisieren.
+Zu Beginn haben wir wie gewohnt eine [Story Map](/blog/mehr-ueberblick-mit-storymap) erstellt, um den Umfang und die Abfolge der Entwicklung zu visualisieren.
 
 ![Story Map der Slope Track-App](storymap.png)
 

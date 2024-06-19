@@ -16,7 +16,7 @@ categories:
   - Allgemein
 ---
 
-Mit dem Update für 2022 der [Slope Track App](/blog/suva-slope-track-app/) für die Suva bieten wir einige interessante Neuerungen an:
+Mit dem Update für 2022 der [Slope Track App](/blog/suva-slope-track-app) für die Suva bieten wir einige interessante Neuerungen in der [App](/angebot/development/app-entwicklung) an:
 
 - Einen Wettbewerb, um ein Skiweekend mit Wendy Holdener zu gewinnen
 - Statistiken über alle Abfahrten wie z.B. zurückgelegte Kilometer, Durchschnittsgeschwindigkeit etc.
@@ -60,7 +60,7 @@ Was G-Kräfte genau sind und wie diese auf unseren Körper beim Schneesport wirk
 
 ## Direkt ausprobieren
 
-Die Slope Track-App ist auf Deutsch, Französisch und Italienisch verfügbar und kann kostenlos aus dem App-Store von Apple und dem Play-Store von Google heruntergeladen werden. Wir wünschen euch viel Spass und Hals- und Beinbruch.
+Die Slope Track-App ist auf Deutsch, Französisch und Italienisch verfügbar und kann kostenlos aus dem App-Store von Apple und dem Play-Store von Google heruntergeladen werden. Wir wünschen euch viel Spass und Hals- und Beinbruch mit der [App](/angebot/development/app-entwicklung).
 
 <div className="flex items-center gap-4">
 <a className="basis-44" href="https://apps.apple.com/ch/app/slope-track/id405253094"><img className="w-full" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/de-de?size=250x83&amp;releaseDate=1292803200" alt="Download on the App Store" /></a>

@@ -26,11 +26,11 @@ Wenn von einer nativen App gesprochen wird, ist damit eine App gemeint, welche s
 
 ### Web App
 
-Wird von [Web App Entwicklung](/web-apps/) gesprochen, so heisst dies, dass die App mit Web-Technologien entwickelt wurde. Dies sind dieselben Technologien, um Webseiten zu entwickeln: HTML, CSS und Javascript. Eine Web App kann alles, was eine Webseite auch kann und von Apple und Google in ihren Browsern zugelassen wird. Genau wie eine Webseite kann einen Web App irgendwo publiziert und ohne Installation genutzt werden. Auch das Update einer Web App passiert einfach mit jedem Aufruf der Web App, ohne dass ein Update im Store heruntergeladen werden muss. Das Icon für eine Web App erscheint nicht automatisch auf dem Startbildschirm des Smartphones. Dies müssen die Anwender explizit zulassen oder selber hinzufügen. Es ist möglich, eine Web App auch in den Stores von Apple und Google zu publizieren, was aber mit zusätzlichem Entwicklungsaufwand verbunden ist.
+Wird von [Web App Entwicklung](/angebot/development/webentwicklung) gesprochen, so heisst dies, dass die App mit Web-Technologien entwickelt wurde. Dies sind dieselben Technologien, um Webseiten zu entwickeln: HTML, CSS und Javascript. Eine Web App kann alles, was eine Webseite auch kann und von Apple und Google in ihren Browsern zugelassen wird. Genau wie eine Webseite kann einen Web App irgendwo publiziert und ohne Installation genutzt werden. Auch das Update einer Web App passiert einfach mit jedem Aufruf der Web App, ohne dass ein Update im Store heruntergeladen werden muss. Das Icon für eine Web App erscheint nicht automatisch auf dem Startbildschirm des Smartphones. Dies müssen die Anwender explizit zulassen oder selber hinzufügen. Es ist möglich, eine Web App auch in den Stores von Apple und Google zu publizieren, was aber mit zusätzlichem Entwicklungsaufwand verbunden ist.
 
 ### PWA
 
-Eine PWA ist eine spezielle Web App. PWA steht für Progressive Web App. Damit ist gemeint, dass die Web App spezielle Instruktionen für Google und Apple haben, damit die App einer nativen App ähnlicher sieht. Eine PWA lässt sich dadurch einfacher auf einem mobilen Gerät installieren als eine Web App. Ansonsten gilt dasselbe wie für eine Web App. (Siehe auch [PWA Apps](/pwa-apps/))
+Eine PWA ist eine spezielle Web App. PWA steht für Progressive Web App. Damit ist gemeint, dass die Web App spezielle Instruktionen für Google und Apple haben, damit die App einer nativen App ähnlicher sieht. Eine PWA lässt sich dadurch einfacher auf einem mobilen Gerät installieren als eine Web App. Ansonsten gilt dasselbe wie für eine Web App. (Siehe auch [PWA Apps](/blog/pwa-apps))
 
 ## Unterschiede von nativen und Web Apps
 

@@ -20,7 +20,7 @@ categories:
   - Lean Enterprise App
 ---
 
-Wir konnten in den letzten Wochen über 15 Spitäler besuchen und ihnen unser [Dashboard für die Notaufnahme](/dashboard-notaufnahme/) zeigen. Wir sprachen mit Ärzten, Pflegenden und IT-Verantwortlichen. In den Gesprächen mit den Ärzten und Pflegenden ging es hauptsächlich um funktionale Anforderungen, wo hingegen sich die IT-Verantwortlichen primär für die Architektur der Lösung interessierten. Unser Dashboard ist nach dem Manifest der Lean Enterprise App implementiert. Die zentrale Frage der IT-Verantwortlichen ging oft in diese Richtung: <em>„Wie schaffen Sie es, dass unsere IT-Landschaft durch den Einsatz einer Lean Enterprise App langfristig positiv oder ebene nicht negativ beeinflusst wird?“</em> Dieser Frage möchte ich in diesem Blogpost nachgehen.
+Wir konnten in den letzten Wochen über 15 Spitäler besuchen und ihnen unser [Dashboard für die Notaufnahme](/projekte/notaufnahme-dashboard-inselspital) zeigen. Wir sprachen mit Ärzten, Pflegenden und IT-Verantwortlichen. In den Gesprächen mit den Ärzten und Pflegenden ging es hauptsächlich um funktionale Anforderungen, wo hingegen sich die IT-Verantwortlichen primär für die Architektur der Lösung interessierten. Unser Dashboard ist nach dem Manifest der Lean Enterprise App implementiert. Die zentrale Frage der IT-Verantwortlichen ging oft in diese Richtung: <em>„Wie schaffen Sie es, dass unsere IT-Landschaft durch den Einsatz einer Lean Enterprise App langfristig positiv oder ebene nicht negativ beeinflusst wird?“</em> Dieser Frage möchte ich in diesem Blogpost nachgehen.
 
 <h2>Heutige IT-Systemlandschaften</h2>
 

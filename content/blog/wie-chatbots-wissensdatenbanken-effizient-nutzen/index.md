@@ -24,7 +24,7 @@ Eine Wissensdatenbank ist im Grunde genommen eine zentrale Sammlung von Informat
 
 ### Wissen aufbereiten
 
-Chatbots, die mit Bubble Chat erstellt werden, können die Informationen in Wissensdatenbanken nutzen, um die richtigen Antworten auf die gestellten Fragen zu finden und die bestmögliche Lösung für ein Problem anzubieten. Bubble Chat bietet dazu eine Reihe von [Konnektoren](/angebot/chatbots/) an, die die Integration und den Zugriff auf externe Wissensdatenbanken ermöglichen. Jeder Konnektor stellt im Wesentlichen folgende Funktionen zur Verfügung:
+Chatbots, die mit Bubble Chat erstellt werden, können die Informationen in Wissensdatenbanken nutzen, um die richtigen Antworten auf die gestellten Fragen zu finden und die bestmögliche Lösung für ein Problem anzubieten. Bubble Chat bietet dazu eine Reihe von [Konnektoren](/angebot/chatbots) an, die die Integration und den Zugriff auf externe Wissensdatenbanken ermöglichen. Jeder Konnektor stellt im Wesentlichen folgende Funktionen zur Verfügung:
 
 - **Datenzugriff**
   Der Konnektor ermöglicht dem Chatbot, auf die externe Wissensdatenbank zuzugreifen.

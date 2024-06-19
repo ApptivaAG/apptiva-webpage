@@ -18,7 +18,7 @@ author: Markus Tanner
 
 “Wie können Informationen am schnellsten und einfachsten an den Kunden übermittelt werden?” In Bereichen wie Sales, Marketing oder Support, die sich mit Kunden befassen, ist dies eine alltägliche Frage, da fehlende Informationen die Kundenzufriedenheit beeinflussen können. Daher ist es nicht verwunderlich, dass künstliche Intelligenz ein wachsender Trend in verschiedenen Bereichen des Kundenkontakts ist.
 
-Durch Conversational AI können Menschen mit einer Maschine interagieren, wie sie es mit anderen Menschen tun würden. Das Ergebnis sind Chatbots, welche die Kundenzufriedenheit erhöhen und nicht nur das, sondern sie bringen auch Kostenersparnisse für Unternehmen.
+Durch Conversational AI können Menschen mit einer Maschine interagieren, wie sie es mit anderen Menschen tun würden. Das Ergebnis sind [Chatbots](/angebot/chatbots), welche die Kundenzufriedenheit erhöhen und nicht nur das, sondern sie bringen auch Kostenersparnisse für Unternehmen.
 
 Auch wenn der Kunde im Mittelpunkt steht, ist es mehr als verständlich, dass auch Unternehmen wissen wollen, welche Vorteile Chatbots ihnen bringen können. Deshalb werden im folgenden Artikel konkrete Angaben zur Kundenzufriedenheit und zu den Vorteilen von Chatbots für Unternehmen erwähnt.
 
@@ -74,4 +74,4 @@ Chatbots repräsentieren Ihr Unternehmen und das bedeutet, dass das Design, die 
 
 ## Zufriedenheit garantieren
 
-Wollen Sie die Zufriedenheit Ihrer Kunden mit Chatbots garantieren?<br/>Konzentrieren Sie sich auf die fachlichen Inhalte Ihres Chatbots, Bubble Chat übernimmt den Rest.<br/>Mit Bubble Chat können Sie Ihre Kommunikation mit Kunden jetzt auf das nächste Level heben. Nehmen Sie [Kontakt](/kontakt/) mit uns auf!
+Wollen Sie die Zufriedenheit Ihrer Kunden mit [Chatbots](/angebot/chatbots) garantieren?<br/>Konzentrieren Sie sich auf die fachlichen Inhalte Ihres Chatbots, Bubble Chat übernimmt den Rest.<br/>Mit Bubble Chat können Sie Ihre Kommunikation mit Kunden jetzt auf das nächste Level heben. Nehmen Sie [Kontakt](/kontakt) mit uns auf!

@@ -22,7 +22,7 @@ seo-title: 'Was kostet ein Chatbot? Was sind die Kostentreiben? - Botfabrik'
 
 ## Kostentreiber bei Chatbots
 
-Die folgenden Faktoren haben grossen Einfluss auf die Kosten von Chatbots:
+Die folgenden Faktoren haben grossen Einfluss auf die Kosten von [Chatbots](/angebot/chatbots):
 
 - **Ist manuelles Training notwendig?** In den meisten Fällen funktioniert ein Chatbot auch ohne manuelles Training sehr gut. In diesen Fällen müssen dem Chatbot lediglich die benötigten Quellen wie Webseiten, Word-Dokumente, PDFs oder allgemeine Texte zur Verfügung gestellt werden. Kann ein Chatbot damit nicht die gewünschten Anforderungen erfüllen, ist es möglich, dem Chatbot zusätzlich gezielt Absichten beizubringen. Das Trainieren von Absichten und das Formulieren der gewünschten Antworten ist mit einem höheren Aufwand verbunden. Ob ein manuelles Training notwendig ist, kann zu Beginn eines Projektes festgestellt werden.
 - **Wie komplex sind die Konversationen?** Wenn der Chatbot immer nur auf die letzte Frage antwortet, spricht man oft von einem FAQ-Chatbot. In diesem Fall bleiben die Konversationen einfach und die Kosten entsprechend niedrig. Sind die Konversationen hingegen verschachtelt, so steigt die Komplexität und damit auch die Kosten.
@@ -38,8 +38,8 @@ Neben den Faktoren, die einen grossen Einfluss auf die Kosten haben, gibt es auc
 
 ## Preisgestaltung
 
-Auf der [Bubble-Chat](/angebot/chatbots/) Seite haben wir Beispiele für Chatbots zusammengestellt, welche zeigen, mit welchen Kosten in etwa zu rechnen ist.
+Auf der [Bubble-Chat](/angebot/chatbots) Seite haben wir Beispiele für Chatbots zusammengestellt, welche zeigen, mit welchen Kosten in etwa zu rechnen ist.
 
 ## Erfahrung zahlt sich aus
 
-Egal wie sich ein Chatbot zusammensetzt, die Erfahrung in der Entwicklung von Chatbots zahlt sich aus. Bei der Botfabrik haben wir die Kostentreiber im Griff und wissen, wo Sparpotentiale vorhanden sind. Sich mit uns auszutauschen lohnt sich deshalb immer.
+Egal wie sich ein [Chatbot](/angebot/chatbots) zusammensetzt, die Erfahrung in der Entwicklung von Chatbots zahlt sich aus. Bei der Botfabrik haben wir die Kostentreiber im Griff und wissen, wo Sparpotentiale vorhanden sind. Sich mit uns auszutauschen lohnt sich deshalb immer.
