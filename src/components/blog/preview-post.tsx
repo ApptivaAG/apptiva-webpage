@@ -14,6 +14,7 @@ export default function BlogPostPreview(props: {
   params: {
     slug: string
   }
+  kind: 'blog' | 'apptiva-lernt'
 }) {
   const { data } = useQuery<PostBySlugQueryData>(
     queryPostFromCmsBySlug.query,
@@ -33,6 +34,7 @@ export default function BlogPostPreview(props: {
       nextSlug={undefined}
       previousSlug={undefined}
       PortableText={StyledPortableText}
+      kind={props.kind}
     />
   )
 }

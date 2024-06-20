@@ -1,11 +1,12 @@
 import BlogPortableText from '@/components/blog-portable-text'
-import BreadCrumb from '@/components/bread-crumb'
-import Heading from '@/components/heading'
-import SanityImage from '@/components/sanity-image'
+import CmsBlogPost from '@/components/blog/cms-post'
+import BlogPostPreview from '@/components/blog/preview-post'
+import { queryPostFromCmsBySlug } from '@/sanity/lib/queries'
+import { load } from '@/sanity/lib/sanityFetch'
 import { getPostBySlug, getPosts } from '@/utils/blog'
 import { hasTag } from '@/utils/blog/helpers'
-import { kebabCaseToTitleCase } from '@/utils/format'
 import { Metadata } from 'next'
+import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 
 export async function generateStaticParams() {
@@ -42,6 +43,28 @@ export async function generateMetadata(props: {
 
 export default async function Home(props: { params: { slug: string } }) {
   const paramsSlug = decodeURIComponent(props.params.slug)
+  const { isEnabled } = draftMode()
+
+  if (isEnabled) {
+    const data = await load(
+      queryPostFromCmsBySlug,
+      true,
+      {
+        slug: paramsSlug,
+      },
+      ['blog']
+    )
+    if (!data || !data.draft || !data.draft.data) {
+      return <p>No preview data.</p>
+    }
+    return (
+      <BlogPostPreview
+        initial={data.draft}
+        params={{ slug: paramsSlug }}
+        kind="blog"
+      />
+    )
+  }
   const post = (await getPostBySlug(paramsSlug, false)) ?? notFound()
 
   if (post.kind === 'markdown') {
@@ -49,65 +72,12 @@ export default async function Home(props: { params: { slug: string } }) {
   }
 
   return (
-    <>
-      <header className="full relative mt-[-8rem] min-h-fit animate-gradient items-center bg-gradient-to-br from-primary-light to-primary-dark bg-300% pb-8 pt-32 text-base-white md:pb-16 md:pt-44">
-        <div className="content">
-          <BreadCrumb
-            className="pb-6"
-            links={[
-              { name: 'Apptiva lernt', href: '/apptiva-lernt' },
-              {
-                name: getBreadcrumb(post),
-                href: `/apptiva-lernt/${post.slug}`,
-              },
-            ]}
-          />
-          <Heading level={1}>{post.title}</Heading>
-          <p className="max-w-xl pt-6 text-xl">{post.description}</p>
-          <p className="pt-2 text-base-white/60">
-            Publiziert am{' '}
-            <time dateTime={post.publishDate} className="font-bold">
-              {new Date(post.publishDate).toLocaleDateString('de-CH')}
-            </time>{' '}
-            von{' '}
-            <strong className="font-bold">
-              {kebabCaseToTitleCase(post.author.toString())}
-            </strong>
-          </p>
-          <div className="popout justify-center pt-8 md:pt-16">
-            {post.image && (
-              <SanityImage
-                className="rounded-lg"
-                image={post.image}
-                size="popout"
-              />
-            )}
-          </div>
-        </div>
-      </header>
-
-      <div className="flex gap-16 py-16 max-md:flex-col">
-        <div className="prose flex-1">
-          {post.content && <BlogPortableText content={post.content} />}
-        </div>
-        <aside>
-          {post.tags && post.tags.length > 0 && (
-            <>
-              <p>Tags</p>
-              <ul>
-                {post.tags && post.tags.map((tag) => <li key={tag}>{tag}</li>)}
-              </ul>
-            </>
-          )}
-        </aside>
-      </div>
-    </>
+    <CmsBlogPost
+      post={post}
+      PortableText={BlogPortableText}
+      kind="apptiva-lernt"
+      nextSlug={undefined}
+      previousSlug={undefined}
+    />
   )
-}
-
-function getBreadcrumb(post: Awaited<ReturnType<typeof getPostBySlug>>) {
-  if (post?.kind === 'cms') {
-    return post.breadcrumb ?? post.title ?? 'Post'
-  }
-  return post?.title ?? 'Post'
 }

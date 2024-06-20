@@ -2,7 +2,7 @@ import { getPosts } from '@/utils/blog'
 import { queryPostsFromCms } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
 import BlogList from './list'
-import BlogPostsPreview from './preview'
+import BlogPostsPreview from './preview-list'
 
 export default async function BlogPosts(props: {
   show: 'blog' | 'apptiva-lernt'

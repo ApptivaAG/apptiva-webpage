@@ -2,8 +2,8 @@ import { getPostBySlug, getPosts } from '@/utils/blog'
 import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
-import CmsBlogPost from './cms-post'
-import BlogPostPreview from './preview'
+import CmsBlogPost from '../../../../components/blog/cms-post'
+import BlogPostPreview from '../../../../components/blog/preview-post'
 import { load } from '@/sanity/lib/sanityFetch'
 import { queryPostFromCmsBySlug } from '@/sanity/lib/queries'
 import MarkdownBlogPost from './markdown-post'
@@ -65,7 +65,11 @@ export default async function Home(props: { params: { slug: string } }) {
       return <p>No preview data.</p>
     }
     return (
-      <BlogPostPreview initial={data.draft} params={{ slug: paramsSlug }} />
+      <BlogPostPreview
+        initial={data.draft}
+        params={{ slug: paramsSlug }}
+        kind="blog"
+      />
     )
   }
   const post = (await getPostBySlug(paramsSlug, isEnabled)) ?? notFound()
@@ -81,6 +85,7 @@ export default async function Home(props: { params: { slug: string } }) {
       previousSlug={previousSlug}
       nextSlug={nextSlug}
       PortableText={BlogPortableText}
+      kind="blog"
     />
   ) : (
     <MarkdownBlogPost

@@ -6,11 +6,17 @@ import { kebabCaseToTitleCase } from '@/utils/format'
 import { CmsBlog, MarkdownBlog } from '@/utils/types'
 import Link from 'next/link'
 
+const kindData = {
+  blog: 'Blog',
+  'apptiva-lernt': 'Apptiva lernt',
+}
+
 export default function CmsBlogPost(props: {
   post: CmsBlog
   previousSlug: string | undefined
   nextSlug: string | undefined
   PortableText: any
+  kind: 'blog' | 'apptiva-lernt'
 }) {
   const { post, previousSlug, nextSlug, PortableText } = props
 
@@ -21,10 +27,10 @@ export default function CmsBlogPost(props: {
           <BreadCrumb
             className="pb-6"
             links={[
-              { name: 'Blog', href: '/blog' },
+              { name: kindData[props.kind], href: `/${props.kind}` },
               {
                 name: getBreadcrumb(post),
-                href: `/blog/${post.slug}`,
+                href: `/${props.kind}/${post.slug}`,
               },
             ]}
           />
@@ -57,7 +63,10 @@ export default function CmsBlogPost(props: {
           {post.content && <PortableText content={post.content} />}
           <div className="flex justify-between gap-4 pt-8">
             {previousSlug ? (
-              <Link href={`/blog/${previousSlug}`} className="no-underline">
+              <Link
+                href={`/${props.kind}/${previousSlug}`}
+                className="no-underline"
+              >
                 <Button
                   intent="primary"
                   element="div"
@@ -70,7 +79,10 @@ export default function CmsBlogPost(props: {
               <div />
             )}
             {nextSlug && (
-              <Link href={`/blog/${nextSlug}`} className="no-underline">
+              <Link
+                href={`/${props.kind}/${nextSlug}`}
+                className="no-underline"
+              >
                 <Button
                   intent="primary"
                   element="div"
