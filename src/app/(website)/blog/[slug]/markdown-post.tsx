@@ -2,8 +2,8 @@ import BreadCrumb from '@/components/bread-crumb'
 import Heading from '@/components/heading'
 import MdxImage from '@/components/mdx-image'
 import Button from '@/components/ui/button'
-import { kebabCaseToTitleCase } from '@/utils/format'
 import { CmsBlog, MarkdownBlog } from '@/domain/types'
+import { kebabCaseToTitleCase } from '@/utils/format'
 import remarkEmbedder from '@remark-embedder/core'
 import oembedTransformer from '@remark-embedder/transformer-oembed'
 import { Code } from 'bright'
@@ -75,9 +75,11 @@ export default function MarkdownBlogPost(props: {
               options={{
                 mdxOptions: {
                   remarkPlugins: [
+                    // @ts-ignore
                     remarkGfm,
                     remarkUnwrapImages,
                     [
+                      // @ts-ignore
                       remarkEmbedder,
                       {
                         transformers: [oembedTransformer],
