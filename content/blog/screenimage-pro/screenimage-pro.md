@@ -40,9 +40,7 @@ Dank dem Einsatz neuester Webtechnologien lassen sich automatisierte Inhalte gan
 
 Mehr Informationen zur Software und zu Screenimage finden sie hier: [Screenimage](https://screenimage.ch)
 
-[[right]]
-|[[avatar]]
-||![Marc Menz](./marc-menz.jpg)
+![Marc Menz](./marc-menz.jpg)
 
 Marc Menz ist bei Screenimage Systems AG fürs Marketing und die Unternehmensentwicklung verantwortlich. Dank seiner grosse Erfahrung im Einsatz von Digital Signage Software konnte er viel zum guten Gelingen der neuen Software beitragen.
 

@@ -32,8 +32,6 @@ In meiner früheren Tätigkeit konnte ich einige Projekte im Digital Signage-Seg
 
 Jedes Mal, wenn einer der Tech-Giganten eine neue Version seines Betriebssystems veröffentlicht, kann dies zu einem mehr oder weniger grossen Anpassungsbedarf bei bestehenden Applikationen führen. Mit genau dieser Problematik hat uns ein Kunde kontaktiert. Seine App wurde mehrere Jahre nicht weiterentwickelt oder aktualisiert, weshalb sie von Apple irgendwann aus dem Apple-Store entfernt wurde. Der ursprüngliche Entwickler bietet seine Dienstleistungen nicht mehr an, weshalb es nun in der Hand von unserem Team lag, ca. 4-5 Jahre Entwicklung aufzuholen. Inzwischen konnte unser Team die nötigen Code-Anpassungen vornehmen und den Review durch Apple in die Wege leiten. Sobald dieser durch ist, wird die App wieder im öffentlichen Store verfügbar sein.
 
-[[right]]
-|[[avatar]]
-||![Renato Wasescha](./renato-wasescha.jpg)
+![Renato Wasescha](./renato-wasescha.jpg)
 
 Ich blicke nun zurück auf bald ein Jahr bei der Apptiva und bin dankbar, Teil dieses kreativen und dynamischen Teams zu sein. Unser Stil der Zusammenarbeit erlaubt es jedem Teammitglied, seine Erfahrungen zu teilen und gleichzeitig täglich seine Fähigkeiten zu erweitern. So können wir gemeinsam als Unternehmen wachsen und kommende Projekte hoffentlich mit Bravour meistern.

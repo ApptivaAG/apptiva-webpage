@@ -19,8 +19,7 @@ categories:
 
 <h2>Verluste in der Kommunikation</h2>
 
-[[right]]
-|![Diagramm Digitale Kluft](img/diagramm-digitale-kluft.png)
+![Diagramm Digitale Kluft](img/diagramm-digitale-kluft.png)
 
 Der technologische Fortschritt bringt immer neue Innovationen hervor. Viele dieser Innovationen wie beispielsweise mobile Geräte, Socialmedia oder neue Kommunikations-Apps werden von der Gesellschaft gut angenommen. Da die meisten Unternehmen Innovationen weniger schnell annehmen als dies die Gesellschaft tut, entsteht eine Digitale Kluft, welche zu Kommunikationsverlusten zwischen Unternehmen und der Gesellschaft führt.
 

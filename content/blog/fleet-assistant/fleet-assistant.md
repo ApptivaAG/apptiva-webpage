@@ -25,9 +25,7 @@ helfen, die Abläufe zu standardisieren und die Datenflüsse von verschiedenen S
 >
 > Die [hostettler autotechnik ag](https://www.autotechnik.ch/) ist der Partner des Schweizer Garagengewerbes für Ersatz- und Verschleissteile, Zubehör und Werkstatteinrichtung. Rund 300 Mitarbeitende sorgen für einen professionellen und persönlichen Service.
 >
-> [[right]]
-> |[[avatar]]
-> ||![Marcel Stocker](./marcel-stocker.jpg)
+> ![Marcel Stocker](./marcel-stocker.jpg)
 >
 > Über die Zusammenarbeit mit uns sagt Marcel Stocker:
 >

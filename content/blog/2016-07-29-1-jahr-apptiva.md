@@ -35,8 +35,7 @@ Wir hatten das Glück bereits im ersten Jahr an vielen spannenden Projekten mit
 <h2 className="text-left">Kommt und feiert mit uns</h2>
 <p dir="ltr" className="text-left">Wir feiern den ersten Geburtstag der Apptiva. Feiert mit uns.</p>
 
-[[right]]
-|![25. August](img/date.png)
+![25. August](img/date.png)
 
 <span>Datum</span>
 <span><span><strong>Donnerstag, 25. August 2016</strong></span></span>

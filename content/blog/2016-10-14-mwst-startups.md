@@ -26,8 +26,7 @@ Von Beginn weg.
 
 <h3>Längere Antwort</h3>
 
-[[right]]
-|![Grafik zum Beginn der Steuerpflicht](img/mwst-wann.png)
+![Grafik zum Beginn der Steuerpflicht](img/mwst-wann.png)
 
 Wir sind nun über ein Jahr mit der Apptiva unterwegs und haben auch im Bereich der Mehrwertsteuer unsere Erfahrung machen dürfen. Wir haben viele Personen gefragt, wann MwSt bezahlt werden muss. Der Tenor war, dass man im ersten Jahr als neues Unternehmen keine MwSt bezahlen muss. Leider stimmt dies nicht. Dies gilt nur für Unternehmen, welche die künftigen Umsatzverhältnisse beurteilen können (z.B. bestehende Unternehmen, welche jahrelang unter 100’000.- CHF Umsatz erzielt haben).
 
@@ -39,8 +38,7 @@ Nun ist es aber nicht so, dass sich damit das Thema für ein Jahr erledigt hätt
 
 Wenn ja, so muss spätestens ab diesem Zeitpunkt bezahlt werden. Punkt. Wer nicht sicher ist, sollte sich lieber zu früh als zu spät mit dem Steueramt in Verbindung setzen.
 
-[[left]]
-|![Beispiel zum Beginn der Steuerpflicht](img/mwst-beispiel.png)
+![Beispiel zum Beginn der Steuerpflicht](img/mwst-beispiel.png)
 
 <h3>Quelle</h3>
 <a href="https://www.gate.estv.admin.ch/mwst-webpublikationen/public/pages/taxInfos/cipherDisplay.xhtml?publicationId=1010164&amp;componentId=1010314&amp;winid=701377">https://www.gate.estv.admin.ch/mwst-webpublikationen/public/pages/taxInfos/cipherDisplay.xhtml?publicationId=1010164&amp;componentId=1010314&amp;winid=701377</a>

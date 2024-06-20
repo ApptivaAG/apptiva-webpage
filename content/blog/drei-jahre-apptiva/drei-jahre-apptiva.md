@@ -34,8 +34,7 @@ Die letzten Jahre haben wir so einiges erlebt und arbeiteten an vielen spannende
 
 Wir feiern den dritten Geburtstag der Apptiva. Kommt und feiert mit uns!
 
-[[right]]
-|![30. August](30-aug.png)
+![30. August](30-aug.png)
 
 ## Datum
 

@@ -45,8 +45,6 @@ In meiner neuen Rolle wurde ich ermutigt, eigenständig Verantwortung zu überne
 
 Die Erfahrung, in einer Holacracy basierten Organisation zu arbeiten, ist herausfordernd, aber äusserst lehrreich. Es erforderte eine Umstellung meiner Denkweise und meiner Arbeitsgewohnheiten, aber ich entdeckte auch die Freiheit und die Möglichkeiten, die diese Struktur bietet.
 
-[[right]]
-|[[avatar]]
-||![](img/kevin-rickenbach.jpg)
+![](img/kevin-rickenbach.jpg)
 
 Alles in allem war das erste halbe Jahr grossartig, und ich bin gespannt, wie die Reise bei der Apptiva weiter geht.
