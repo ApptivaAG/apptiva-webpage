@@ -1,6 +1,6 @@
 import { glossaryQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
-import { orderGlossaryByTitle } from '@/utils/glossary'
+import { orderGlossaryByTitle } from '@/domain/glossary'
 import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import { GlossaryList } from './list'

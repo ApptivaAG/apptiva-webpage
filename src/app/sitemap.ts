@@ -6,12 +6,12 @@ import {
   servicesQuery,
 } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
-import { getPosts } from '@/utils/blog'
-import { CmsBlog, MarkdownBlog } from '@/utils/types'
+import { getPosts } from '@/domain/blog/repository'
+import { CmsBlog, MarkdownBlog } from '@/domain/types'
 import { MetadataRoute } from 'next'
 import { ProjectQueryData } from './(website)/projekte/types'
 import { rootUrl } from './env'
-import { hasTag } from '@/utils/blog/helpers'
+import { hasTag } from '@/domain/blog/helpers'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = await getPosts()

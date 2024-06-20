@@ -1,4 +1,4 @@
-import type { Testimonial as TestimonialType } from '@/utils/testimonials'
+import type { Testimonial as TestimonialType } from '@/domain/testimonials'
 import { FaQuoteLeft } from 'react-icons/fa'
 import Heading from './heading'
 

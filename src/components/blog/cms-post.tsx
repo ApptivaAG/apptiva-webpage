@@ -2,8 +2,8 @@ import BreadCrumb from '@/components/bread-crumb'
 import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
 import Button from '@/components/ui/button'
-import { kebabCaseToTitleCase } from '@/utils/format'
-import { CmsBlog, MarkdownBlog } from '@/utils/types'
+import { kebabCaseToTitleCase } from '@/domain/format'
+import { CmsBlog, MarkdownBlog } from '@/domain/types'
 import Link from 'next/link'
 import BlogPortableText from '../blog-portable-text'
 
@@ -20,8 +20,6 @@ export default function CmsBlogPost(props: {
   Code: React.ComponentType<{ lang?: string; children: React.ReactNode }>
 }) {
   const { post, previousSlug, nextSlug, kind, Code } = props
-
-  console.log('CmsBlogPost', props.kind)
 
   return (
     <>

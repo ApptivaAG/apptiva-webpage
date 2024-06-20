@@ -1,4 +1,4 @@
-import portableTextToString from '@/utils/portable-text-to-string'
+import portableTextToString from '@/domain/portable-text-to-string'
 import { defineArrayMember, defineField, defineType } from 'sanity'
 
 export default defineType({

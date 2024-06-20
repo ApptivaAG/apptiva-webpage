@@ -1,4 +1,4 @@
-import { getTestimonialsData } from '@/utils/testimonials'
+import { getTestimonialsData } from '@/domain/testimonials'
 import Testimonial from './testimonial'
 import { Carousel, CarouselContent, CarouselItem } from './ui/carousel'
 

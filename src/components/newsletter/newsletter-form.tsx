@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '@/utils/cn'
+import { cn } from '@/domain/cn'
 import { useState } from 'react'
 import { useFormState } from 'react-dom'
 import { subscribeToNewsletter } from '../server-actions/subscribe-to-newsletter'

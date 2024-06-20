@@ -1,5 +1,5 @@
-import { cn } from '@/utils/cn'
-import { PortableText as PortableTextType } from '@/utils/types'
+import { cn } from '@/domain/cn'
+import { PortableText as PortableTextType } from '@/domain/types'
 import { PortableText, PortableTextComponents } from '@portabletext/react'
 import Link from 'next/link'
 import Heading from './heading'

@@ -6,7 +6,7 @@ import useEmblaCarousel, {
 import Image from 'next/image'
 import * as React from 'react'
 
-import { cn } from '@/utils/cn'
+import { cn } from '@/domain/cn'
 import carouselNavigationLeftIcon from './../../../public/icons/arrow-left-circle.svg'
 import carouselNavigationRightIcon from './../../../public/icons/arrow-right-circle.svg'
 import Button from './button'

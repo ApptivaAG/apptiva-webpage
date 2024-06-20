@@ -1,4 +1,4 @@
-import { getPostBySlug, getPosts } from '@/utils/blog'
+import { getPostBySlug, getPosts } from '@/domain/blog/repository'
 import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
@@ -8,7 +8,7 @@ import { load } from '@/sanity/lib/sanityFetch'
 import { queryPostFromCmsBySlug } from '@/sanity/lib/queries'
 import MarkdownBlogPost from './markdown-post'
 import BlogPortableText from '@/components/blog-portable-text'
-import { hasTag } from '@/utils/blog/helpers'
+import { hasTag } from '@/domain/blog/helpers'
 import { Code } from 'bright'
 
 export async function generateStaticParams() {

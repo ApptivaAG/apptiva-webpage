@@ -1,4 +1,4 @@
-import { PortableText as PortableTextType } from '@/utils/types'
+import { PortableText as PortableTextType } from '@/domain/types'
 import { PortableText, PortableTextComponents } from '@portabletext/react'
 import SanityImage from './sanity-image'
 

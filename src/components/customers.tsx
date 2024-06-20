@@ -1,4 +1,4 @@
-import getCustomerLogos, { Group } from '@/utils/customers'
+import getCustomerLogos, { Group } from '@/domain/customers'
 import Image from 'next/image'
 import Carousel from './carousel'
 

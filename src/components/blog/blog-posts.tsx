@@ -1,4 +1,4 @@
-import { getPosts } from '@/utils/blog'
+import { getPosts } from '@/domain/blog/repository'
 import { queryPostsFromCms } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
 import BlogList from './list'

@@ -1,4 +1,4 @@
-import portableTextToString from '@/utils/portable-text-to-string'
+import portableTextToString from '@/domain/portable-text-to-string'
 import Link from 'next/link'
 import { ServiceQueryData } from './types'
 

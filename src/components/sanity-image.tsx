@@ -1,6 +1,6 @@
 import { dataset, projectId } from '@/sanity/env'
 import { urlForImage } from '@/sanity/lib/image'
-import { SanityImageWithAlt } from '@/utils/types'
+import { SanityImageWithAlt } from '@/domain/types'
 import {
   SanityImageSource,
   getImageAsset,

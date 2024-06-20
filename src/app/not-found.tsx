@@ -4,7 +4,7 @@ import Button from '@/components/ui/button'
 import UnderlineForLink from '@/components/ui/underline-for-link'
 import { servicesQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
-import portableTextToString from '@/utils/portable-text-to-string'
+import portableTextToString from '@/domain/portable-text-to-string'
 import Link from 'next/link'
 import RootLayout from './(website)/layout'
 

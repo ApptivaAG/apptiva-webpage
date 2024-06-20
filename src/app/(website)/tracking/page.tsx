@@ -3,7 +3,7 @@
 import Heading from '@/components/heading'
 import Section from '@/components/section'
 import Button from '@/components/ui/button'
-import { useLocalStorage } from '@/utils/use-local-storage'
+import { useLocalStorage } from '@/domain/use-local-storage'
 
 export default function Tracking() {
   const [ignore, setIgnore] = useLocalStorage('plausible_ignore', false)

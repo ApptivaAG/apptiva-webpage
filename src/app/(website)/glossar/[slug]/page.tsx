@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation'
 import Item from './item'
 import GlossaryItemPreview from './preview'
 import { Metadata } from 'next'
-import portableTextToString from '@/utils/portable-text-to-string'
+import portableTextToString from '@/domain/portable-text-to-string'
 
 export async function generateMetadata(props: {
   params: { slug: string }
