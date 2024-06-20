@@ -16,7 +16,7 @@ categories:
   - Allgemein
 ---
 
-# Wir feiern unsere Highlights
+## Wir feiern unsere Highlights
 
 Die letzten Jahre haben wir so einiges erlebt und arbeiteten an vielen spannenden Projekten.
 
@@ -30,17 +30,17 @@ Die letzten Jahre haben wir so einiges erlebt und arbeiteten an vielen spannende
 ⭐ Umzug nach Sempach Station  
 ⭐ Und natürlich die Verstärkung durch Markus Tanner
 
-# Alle sind herzlich eingeladen
+## Alle sind herzlich eingeladen
 
 Wir feiern den dritten Geburtstag der Apptiva. Kommt und feiert mit uns!
 
 ![30. August](30-aug.png)
 
-## Datum
+### Datum
 
 Donnerstag, 30. August 2018
 
-## Ort
+### Ort
 
 Büro Apptiva  
 Neuenkirchstr. 19  
@@ -48,6 +48,6 @@ Neuenkirchstr. 19
 
 [Google Maps](https://goo.gl/maps/GzhMRqBnKyn)
 
-## Apero von 16:00 bis 22:00
+### Apero von 16:00 bis 22:00
 
 Stosst mit uns auf das dreijährige Bestehen der Apptiva an. Wir schauen auf tolle Jahre zurück und wollen dies mit euch teilen.

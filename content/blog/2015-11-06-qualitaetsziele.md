@@ -18,11 +18,11 @@ categories:
   - Apptiva kompakt
 ---
 
-# Motivation
+## Motivation
 
 Üblicherweise werden Anforderungen an ein System in Form von User Stories oder Anwendungsfällen beschrieben. Diese definieren, was das System fachlich können soll. Es gibt aber auch Anforderungen die über eine reine Funktionalität hinausgehen. Sie werden als nicht-funktionale Anforderungen oder immer öfter auch als Qualitätsmerkmale bezeichnet. In diesem “Apptiva kompakt” zeigen wir, wie Qualitätsziele helfen, die wichtigsten Qualitätsmerkmale bei Architekturentscheidungen in der <a href="/">Softwareentwicklung</a> zu berücksichtigen.
 
-# Qualitätsmerkmale
+## Qualitätsmerkmale
 
 Es gibt eine grosse Menge an möglichen Qualitätsmerkmalen. Die Norm ISO/IEC 92126 listet die oft verwendeten auf und verfeinert sie mittels beispielhaften Teilmerkmalen:
 
@@ -32,7 +32,7 @@ Dieser Überblick ist ein gutes Hilfsmittel beim Finden der für Ihre Softwarel�
 
 > Schauen Sie die Qualitätsmerkmale in einem Workshop mit den Stakeholdern an und identifizieren Sie die für Sie wichtigsten drei bis maximal fünf.
 
-# Qualitätsziele
+## Qualitätsziele
 
 Jetzt wo Sie die für Ihr Vorhaben wichtigsten Qualitätsmerkmale kennen, geht es darum diese etwas genauer zu beschreiben und als Qualitätsziele zu formulieren. Was ist zum Beispiel konkret mit Benutzbarkeit gemeint? Warum ist dies so wichtig und wo kommt die Anforderung her? Überlegen Sie sich auch was passieren könnte, wenn dieses Ziel verfehlt wird.
 
@@ -45,7 +45,7 @@ Leider ist es so, dass sich einzelne Qualitätsziele konkurrenzieren können (z.
 Hohe Verfügbarkeit (Prio 1)
 Die Mitarbeiter der Notfallabteilung sind auf eine ständige Verfügbarkeit der Patientendaten angewiesen um jederzeit alle relevanten Informationen im Zugriff zu haben. Fällt das System aus, entsteht durch die Informationslücke eine direkte Gefahr für den Patienten.
 
-# Qualitätsszenarien
+## Qualitätsszenarien
 
 Um Architekturentscheide treffen oder eine bestehende Architektur bewerten zu können, reichen die Qualitätsziele alleine noch nicht aus. Diese müssen weiter konkretisiert und mit Messwerten versehen werden. Bei einigen Qualitätszielen geht dies einfacher (z.B. Antwortzeiten), bei anderen ist es schwieriger (z.B. Benutzbarkeit). Qualitätsszenarien helfen dieses Problem zu lösen. Sie beschreiben z.B. exemplarisch die Verwendung des Systems, sodass ein Qualitätsziel die Hauptrolle spielt. Eine grosse Stärke von Qualitätsszenarien ist, dass sie eine gute Basis bieten, worüber sich Stakeholder und Softwareentwickler austauschen können, denn oftmals sind bei solchen Diskussionen auch fachliche Entscheidungen betroffen.
 
@@ -63,7 +63,7 @@ Um Architekturentscheide treffen oder eine bestehende Architektur bewerten zu k�
  <li>Das Netzwerk fällt komplett aus. Die Mitarbeiter der Notfallabteilung können auf speziell definierten Arbeitsstationen alle Funktionen des Dashboards für bereits angemeldete Patienten aufrufen und zusätzlich neue Patienten voranmelden.</li>
 </ul>
 
-# Fazit
+## Fazit
 
 Qualitätsziele und -szenarien helfen beim Fällen von Architekturentscheide und machen Softwarearchitektur nachvollziehbar. Wir nehmen sie bei all unseren Entwicklungsprojekten zur Hilfe und haben damit durchwegs gute Erfahrungen gemacht.
 

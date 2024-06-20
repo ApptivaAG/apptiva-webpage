@@ -18,7 +18,7 @@ categories:
 
 Moderne Chatbots basieren auf den Prinzipien der künstlichen Intelligenz (KI) und sind daher effektiver als regelbasierte Chatbots. Was akademisch tönt ist im Prinzip etwas Mathematik verbunden mit einem Softwaresystem - und wir wissen, dass Softwaresysteme getestet werden müssen. KI-Systeme erfordern jedoch andere Testansätze als regelbasierte Systeme. In diesem Blogpost möchte ich etwas detaillierter auf die Grundsätze beim Testen von Chatbot-Datenmodellen eingehen.
 
-# Grundlagen
+## Grundlagen
 
 Chatbots nutzen im Hintergrund ein Datenmodell, welches für die Interpretation der Benutzereingabe verwendet wird. Dieses Datenmodell ist die Grundlage für die natürliche Sprachverarbeitung (NLP) und hat primär das Ziel, die Absicht einer Benutzeräusserung zu erkennen und Entitäten daraus zu extrahieren.
 
@@ -33,7 +33,7 @@ Chatbots nutzen im Hintergrund ein Datenmodell, welches für die Interpretation 
 
 Anhand der erkannten Absicht und der Entitäten ist der Chatbot nun in der Lage, eine passende Antwort zu liefern: _“Im Film The Mule spielt Clint Eastwood die Hauptrolle.”_
 
-# Qualität der Trainingssätze analysieren und bewerten
+## Qualität der Trainingssätze analysieren und bewerten
 
 KI-basierte Chatbots werden mit einer Reihe von Beispielsätzen trainiert. Diese Beispielsätze (auch Trainingssätze genannt) sind einer Absicht (Intent) zugeordnet und darin enthaltene Entitäten sind markiert. Durch die Nutzung des Chatbots erhält man immer mehr konkrete Benutzeräusserungen, welche als Beispielsätze im Training verwendet werden können. So wird der Chatbot über die Zeit immer intelligenter.
 
@@ -96,7 +96,7 @@ Weiter ist aus der Ähnlichkeitsmatrix ersichtlich, dass die Trainingssätze der
 
 Um die Qualität des Chatbots zu verbessern, würde sich also ein genauerer Blick in die beiden Absichten “Erscheinungsjahr” und “Handlung” lohnen. Durch optimalere Trainingssätze kann es gelingen, diese besser zu separieren. Bei Absichten mit einer tiefen Kohäsion kann es sich zudem lohnen, weitere Trainingssätze hinzuzufügen.
 
-# Precision, Recall und F1 Score
+## Precision, Recall und F1 Score
 
 Nachdem wir eine statische Analyse der Trainingssätze vorgenommen haben, wollen wir nun die Qualität das Datenmodells überprüfen.
 
@@ -122,7 +122,7 @@ _True Positive_ und _True Negative_ sind also das, was wir eigentlich wollen. In
 
 Mit diesen Daten können wir nun pro Absicht unten stehende Metriken ermitteln.
 
-## Precision
+### Precision
 
 Die Precision (Präzision) ist das Verhältnis von den korrekt zugeordneten Testsätzen gegenüber allen dieser Absicht zugeordneten Testsätzen (falsche und korrekte). Sie beantwortet also die Frage, bei wie vielen Sätzen die als “Altersfreigabe” eingestuft werden, es sich tatsächlich um dieses Thema handelt.
 
@@ -132,7 +132,7 @@ Die Precision (Präzision) ist das Verhältnis von den korrekt zugeordneten Test
 
 Eine Präzision von 44.4% sagt uns, dass der Chatbot bei allen Fragen die er mit “Altersfreigabe” beantwortet bei weniger als der Hälfte richtig lag. Bei 55% der Fragen hätte er eine andere Antwort geben müssen.
 
-## Recall
+### Recall
 
 Der Recall (Rückruf) ist das Verhältnis der korrekt zugeordneten Testsätze gegenüber allen Testsätzen. Sie beantwortet also die Frage, wie viele Sätze einer Absicht der Chatbot korrekt erkannt hat.
 
@@ -142,7 +142,7 @@ Der Recall (Rückruf) ist das Verhältnis der korrekt zugeordneten Testsätze ge
 
 Ein Recall von 66.7% sagt uns, dass zwei Drittel aller Testsätze der Absicht “Altersfreigabe” korrekt erkannt wurden. Ein Drittel der Testsätze hätte er anderen Absichten zuordnen sollen.
 
-## F1 Score
+### F1 Score
 
 Um die Qualität eines Modells vollständig zu bewerten, sollten sowohl Precision als auch Recall überprüft werden. Leider ist es oftmals so, dass eine Verbesserung der Precision zu einem tieferen Recall Wert führt (und umgekehrt). Mit der Entwicklung des F1 Scores wurde diesem Umstand Rechnung getragen, denn er ist der gewichtete Durchschnitt aus Precision und Recall und berücksichtigt sowohl False Positives als auch False Negatives.
 
@@ -152,7 +152,7 @@ Der F1 Score beantwortet also die Frage, wie präzise der Chatbot ist (wie viele
 
 ![F1 Score](f1-score.png)
 
-## Summary
+### Summary
 
 Obige Metriken betrachteten jeweils die einzelnen Absichten isoliert voneinander. Um eine Aussage über alle Absichten machen zu können, addieren wir nun noch die Einzelwerte gewichtet anhand der Anzahl Testsätze der Absichten. Unser Film-Chatbot hat im Total 25 Testsätze: 6 Altersfreigabe, 9 Besetzung, and 10 Handlung.
 
@@ -166,7 +166,7 @@ Somit erhalten wir nun folgende finalen Werte:
 
 Diese Werte helfen, Veränderungen der Qualität des Chatbots festzustellen. Es lohnt sich, diese auf einer Zeitachse zu visualisieren und regelmässig zu interpretieren.
 
-# Fazit
+## Fazit
 
 Wie man aus diesen Ausführungen sehen kann, erfordert das Testen von KI-Systemen andere Testansätze als dass es bei regelbasierten Systemen der Fall ist. Es ist nicht damit getan einen Test zu implementieren der von diesem Zeitpunkt an immer erfolgreich durchlaufen muss (“grün sein”).
 
