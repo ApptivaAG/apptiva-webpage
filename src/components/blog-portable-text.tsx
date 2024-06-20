@@ -1,17 +1,15 @@
 import { PortableText as PortableTextType } from '@/utils/types'
 import { PortableText, PortableTextComponents } from '@portabletext/react'
-import { Code } from 'bright'
+import SanityImage from './sanity-image'
 import Underline from './ui/underline'
 import UnderlineForLink from './ui/underline-for-link'
-import SanityImage from './sanity-image'
 
-export default function BlogPortableText({
-  content,
-  className = '',
-}: {
+export default function BlogPortableText(props: {
   content: PortableTextType
   className?: string
+  Code: React.ComponentType<{ lang?: string; children: React.ReactNode }>
 }) {
+  const { content, className, Code } = props
   const components: PortableTextComponents = {
     types: {
       imageWithAlt: (props: {

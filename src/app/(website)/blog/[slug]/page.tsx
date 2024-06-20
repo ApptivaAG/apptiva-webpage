@@ -9,19 +9,14 @@ import { queryPostFromCmsBySlug } from '@/sanity/lib/queries'
 import MarkdownBlogPost from './markdown-post'
 import BlogPortableText from '@/components/blog-portable-text'
 import { hasTag } from '@/utils/blog/helpers'
+import { Code } from 'bright'
 
 export async function generateStaticParams() {
   const posts = await getPosts()
 
-  return Array.from(posts.values())
-    .filter(hasTag('blog'))
-    .toSorted(
-      (a, b) =>
-        new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
-    )
-    .map((post) => ({
-      slug: post.slug,
-    }))
+  return posts.filter(hasTag('blog')).map((post) => ({
+    slug: post.slug,
+  }))
 }
 
 export async function generateMetadata(props: {
@@ -34,14 +29,15 @@ export async function generateMetadata(props: {
     return {}
   }
 
+  const url = `/blog/${post.slug}`
   return {
     title: `${post.meta.title} | Blog`,
     description: post.meta.description,
-    alternates: { canonical: `/blog/${post.slug}` },
+    alternates: { canonical: url },
     openGraph: {
       title: post.meta.title,
       type: 'article',
-      url: `/blog/${post.slug}`,
+      url,
       publishedTime: post.publishDate,
       modifiedTime: post.kind === 'cms' ? post.modifiedDate : undefined,
     },
@@ -84,7 +80,7 @@ export default async function Home(props: { params: { slug: string } }) {
       post={post}
       previousSlug={previousSlug}
       nextSlug={nextSlug}
-      PortableText={BlogPortableText}
+      Code={Code}
       kind="blog"
     />
   ) : (

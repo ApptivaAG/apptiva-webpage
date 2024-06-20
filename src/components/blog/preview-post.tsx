@@ -1,6 +1,5 @@
 'use client'
 
-import StyledPortableText from '@/components/styled-portable-text'
 import {
   PostBySlugQueryData,
   queryPostFromCmsBySlug,
@@ -33,8 +32,21 @@ export default function BlogPostPreview(props: {
       post={post}
       nextSlug={undefined}
       previousSlug={undefined}
-      PortableText={StyledPortableText}
+      Code={Code}
       kind={props.kind}
     />
+  )
+}
+
+function Code(props: { lang?: string; children: React.ReactNode }) {
+  return (
+    <>
+      <p>
+        <small>Code sieht nur in der Vorschau so schlecht aus.</small>
+      </p>
+      <code>
+        <pre>{props.children}</pre>
+      </code>
+    </>
   )
 }

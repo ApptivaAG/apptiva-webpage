@@ -1,9 +1,6 @@
-import { queryPostFromCmsBySlug } from '@/sanity/lib/queries'
-import { load } from '@/sanity/lib/sanityFetch'
 import { cache } from 'react'
-import { CmsBlog, MarkdownBlog } from '../types'
-import { getMarkdownPosts } from './markdown'
 import { getCmsPostBySlug, getCmsPosts } from './cms'
+import { getMarkdownPosts } from './markdown'
 
 export const getPostBySlug = cache(async (slug: string, isDraft: boolean) => {
   const cmsPost = await getCmsPostBySlug(slug, isDraft)
@@ -18,13 +15,6 @@ export const getPosts = cache(async () => {
   const cmsPosts = await getCmsPosts()
   const markdownPosts = await getMarkdownPosts()
 
-  const posts = new Map<string, CmsBlog | MarkdownBlog>()
   const mergedBlogposts = [...cmsPosts, ...markdownPosts]
-  mergedBlogposts.forEach((post) => {
-    const { slug } = post
-    if (slug) {
-      posts.set(slug, { ...post, slug })
-    }
-  })
-  return posts
+  return mergedBlogposts
 })

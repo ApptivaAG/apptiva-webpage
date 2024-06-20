@@ -138,20 +138,18 @@ function buildServicesSiteMap(services: ServicesQueryData) {
 }
 
 function buildPostsSiteMap(
-  posts: Map<string, CmsBlog | MarkdownBlog>,
+  posts: Array<CmsBlog | MarkdownBlog>,
   tag: 'blog' | 'apptiva-lernt'
 ) {
-  return Array.from(posts.values())
-    .filter(hasTag(tag))
-    .map(
-      (post) =>
-        ({
-          url: buildFullUrl(`/${tag}/${post.slug}`),
-          lastModified: new Date(post.publishDate),
-          changeFrequency: 'weekly',
-          priority: 0.5,
-        }) as const
-    )
+  return posts.filter(hasTag(tag)).map(
+    (post) =>
+      ({
+        url: buildFullUrl(`/${tag}/${post.slug}`),
+        lastModified: new Date(post.publishDate),
+        changeFrequency: 'weekly',
+        priority: 0.5,
+      }) as const
+  )
 }
 
 function buildFullUrl(absolutUrl: `/${string}`) {

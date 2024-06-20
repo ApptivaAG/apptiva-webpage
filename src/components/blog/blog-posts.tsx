@@ -18,5 +18,5 @@ export default async function BlogPosts(props: {
 
   const posts = await getPosts()
 
-  return <BlogList posts={Array.from(posts.values())} show={props.show} />
+  return <BlogList posts={posts} show={props.show} />
 }

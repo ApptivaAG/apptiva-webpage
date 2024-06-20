@@ -5,6 +5,7 @@ import Button from '@/components/ui/button'
 import { kebabCaseToTitleCase } from '@/utils/format'
 import { CmsBlog, MarkdownBlog } from '@/utils/types'
 import Link from 'next/link'
+import BlogPortableText from '../blog-portable-text'
 
 const kindData = {
   blog: 'Blog',
@@ -15,10 +16,12 @@ export default function CmsBlogPost(props: {
   post: CmsBlog
   previousSlug: string | undefined
   nextSlug: string | undefined
-  PortableText: any
   kind: 'blog' | 'apptiva-lernt'
+  Code: React.ComponentType<{ lang?: string; children: React.ReactNode }>
 }) {
-  const { post, previousSlug, nextSlug, PortableText } = props
+  const { post, previousSlug, nextSlug, kind, Code } = props
+
+  console.log('CmsBlogPost', props.kind)
 
   return (
     <>
@@ -27,10 +30,10 @@ export default function CmsBlogPost(props: {
           <BreadCrumb
             className="pb-6"
             links={[
-              { name: kindData[props.kind], href: `/${props.kind}` },
+              { name: kindData[kind], href: `/${kind}` },
               {
                 name: getBreadcrumb(post),
-                href: `/${props.kind}/${post.slug}`,
+                href: `/${kind}/${post.slug}`,
               },
             ]}
           />
@@ -60,13 +63,12 @@ export default function CmsBlogPost(props: {
 
       <div className="flex gap-16 py-16 max-md:flex-col">
         <div className="prose flex-1">
-          {post.content && <PortableText content={post.content} />}
+          {post.content && (
+            <BlogPortableText Code={Code} content={post.content} />
+          )}
           <div className="flex justify-between gap-4 pt-8">
             {previousSlug ? (
-              <Link
-                href={`/${props.kind}/${previousSlug}`}
-                className="no-underline"
-              >
+              <Link href={`/${kind}/${previousSlug}`} className="no-underline">
                 <Button
                   intent="primary"
                   element="div"
@@ -79,10 +81,7 @@ export default function CmsBlogPost(props: {
               <div />
             )}
             {nextSlug && (
-              <Link
-                href={`/${props.kind}/${nextSlug}`}
-                className="no-underline"
-              >
+              <Link href={`/${kind}/${nextSlug}`} className="no-underline">
                 <Button
                   intent="primary"
                   element="div"

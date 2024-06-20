@@ -16,7 +16,7 @@ export default async function Blogposts(props: {
 }) {
   const posts = await getPosts()
 
-  const last5Posts = Array.from(posts.values())
+  const last5Posts = posts
     .filter(hasTag(props.show))
     .toSorted(
       (a, b) =>
