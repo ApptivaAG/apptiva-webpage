@@ -157,6 +157,7 @@ const Modules = q('modules')
   })
   .nullable()
 
+export type PostsQueryData = NonNullable<InferType<typeof queryPostsFromCms>>
 export const queryPostsFromCms = q('*')
   .filterByType('blog')
   .grab$({

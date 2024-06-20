@@ -27,7 +27,11 @@ export async function generateMetadata(props: {
   params: { slug: string }
 }): Promise<Metadata> {
   const paramsSlug = decodeURIComponent(props.params.slug)
-  const post = (await getPostBySlug(paramsSlug, false)) ?? notFound()
+  const post = await getPostBySlug(paramsSlug, false)
+
+  if (!post) {
+    return {}
+  }
 
   return {
     title: `${post.meta.title} | Blog`,
