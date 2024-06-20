@@ -2,7 +2,8 @@ import BlogPortableText from '@/components/blog-portable-text'
 import BreadCrumb from '@/components/bread-crumb'
 import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
-import { getPostBySlug, getPosts, hasTag } from '@/utils/blog'
+import { getPostBySlug, getPosts } from '@/utils/blog'
+import { hasTag } from '@/utils/blog/helpers'
 import { kebabCaseToTitleCase } from '@/utils/format'
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
@@ -10,10 +11,10 @@ import { notFound } from 'next/navigation'
 export async function generateStaticParams() {
   const posts = await getPosts()
 
-  return Array.from(posts)
+  return Array.from(posts.values())
     .filter(hasTag('apptiva-lernt'))
-    .map(([slug]) => ({
-      slug,
+    .map((post) => ({
+      slug: post.slug,
     }))
 }
 
@@ -21,7 +22,11 @@ export async function generateMetadata(props: {
   params: { slug: string }
 }): Promise<Metadata> {
   const paramsSlug = decodeURIComponent(props.params.slug)
-  const post = (await getPostBySlug(paramsSlug, false)) ?? notFound()
+  const post = await getPostBySlug(paramsSlug, false)
+
+  if (!post) {
+    return {}
+  }
 
   return {
     title: `${post.meta.title} | Apptiva lernt`,

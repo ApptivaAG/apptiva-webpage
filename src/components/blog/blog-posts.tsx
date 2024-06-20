@@ -1,5 +1,4 @@
-import { getPosts, hasTag } from '@/utils/blog'
-import { BlogTeaser } from './blog-teaser'
+import { getPosts } from '@/utils/blog'
 import { queryPostsFromCms } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
 import BlogList from './list'
@@ -14,18 +13,10 @@ export default async function BlogPosts(props: {
       'service-page',
     ])
 
-    return <BlogPostsPreview initial={draft} />
+    return <BlogPostsPreview initial={draft} show={props.show} />
   }
 
   const posts = await getPosts()
 
-  const allPosts = Array.from(posts.entries())
-    .filter(hasTag(props.show))
-    .map(([, post]) => post)
-    .toSorted(
-      (a, b) =>
-        new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
-    )
-
-  return <BlogList posts={allPosts} show={props.show} />
+  return <BlogList posts={Array.from(posts.values())} show={props.show} />
 }

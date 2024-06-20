@@ -1,4 +1,4 @@
-import { getPostBySlug, getPosts, hasTag } from '@/utils/blog'
+import { getPostBySlug, getPosts } from '@/utils/blog'
 import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
@@ -8,18 +8,19 @@ import { load } from '@/sanity/lib/sanityFetch'
 import { queryPostFromCmsBySlug } from '@/sanity/lib/queries'
 import MarkdownBlogPost from './markdown-post'
 import BlogPortableText from '@/components/blog-portable-text'
+import { hasTag } from '@/utils/blog/helpers'
 
 export async function generateStaticParams() {
   const posts = await getPosts()
 
-  return Array.from(posts)
+  return Array.from(posts.values())
     .filter(hasTag('blog'))
     .toSorted(
-      ([, a], [, b]) =>
+      (a, b) =>
         new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
     )
-    .map(([slug]) => ({
-      slug,
+    .map((post) => ({
+      slug: post.slug,
     }))
 }
 

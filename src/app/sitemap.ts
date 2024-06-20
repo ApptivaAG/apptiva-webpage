@@ -6,11 +6,12 @@ import {
   servicesQuery,
 } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
-import { getPosts, hasTag } from '@/utils/blog'
+import { getPosts } from '@/utils/blog'
 import { CmsBlog, MarkdownBlog } from '@/utils/types'
 import { MetadataRoute } from 'next'
 import { ProjectQueryData } from './(website)/projekte/types'
 import { rootUrl } from './env'
+import { hasTag } from '@/utils/blog/helpers'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = await getPosts()
@@ -140,12 +141,12 @@ function buildPostsSiteMap(
   posts: Map<string, CmsBlog | MarkdownBlog>,
   tag: 'blog' | 'apptiva-lernt'
 ) {
-  return Array.from(posts.entries())
+  return Array.from(posts.values())
     .filter(hasTag(tag))
     .map(
-      ([slug, post]) =>
+      (post) =>
         ({
-          url: buildFullUrl(`/${tag}/${slug}`),
+          url: buildFullUrl(`/${tag}/${post.slug}`),
           lastModified: new Date(post.publishDate),
           changeFrequency: 'weekly',
           priority: 0.5,

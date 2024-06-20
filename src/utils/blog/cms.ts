@@ -1,7 +1,7 @@
 import { queryPostFromCmsBySlug, queryPostsFromCms } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
 import { cache } from 'react'
-import { mapCmsPost } from './map-cms-post'
+import { mapCmsPost } from './helpers'
 
 export const getCmsPostBySlug = cache(
   async (slug: string, isDraft: boolean) => {
