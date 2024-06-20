@@ -7,7 +7,7 @@ import {
   CarouselItem,
 } from '@/components/ui/carousel'
 import { getPosts } from '@/domain/blog/repository'
-import { hasTag } from '@/domain/blog/helpers'
+import { hasTag } from '@/domain/blog/mappers'
 import Link from 'next/link'
 
 export default async function Blogposts(props: {

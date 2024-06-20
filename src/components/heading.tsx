@@ -1,4 +1,4 @@
-import { cn } from '@/domain/cn'
+import { cn } from '@/utils/cn'
 import React from 'react'
 
 type Level = 1 | 2 | 3 | 4 | 5 | 6

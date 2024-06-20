@@ -1,4 +1,4 @@
-import { cn } from '@/domain/cn'
+import { cn } from '@/utils/cn'
 import Link from 'next/link'
 import UnderlineForLink from './ui/underline-for-link'
 import React from 'react'

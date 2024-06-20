@@ -11,7 +11,7 @@ import { CmsBlog, MarkdownBlog } from '@/domain/types'
 import { MetadataRoute } from 'next'
 import { ProjectQueryData } from './(website)/projekte/types'
 import { rootUrl } from './env'
-import { hasTag } from '@/domain/blog/helpers'
+import { hasTag } from '@/domain/blog/mappers'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = await getPosts()

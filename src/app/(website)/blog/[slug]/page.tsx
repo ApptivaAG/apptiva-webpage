@@ -8,7 +8,7 @@ import { load } from '@/sanity/lib/sanityFetch'
 import { queryPostFromCmsBySlug } from '@/sanity/lib/queries'
 import MarkdownBlogPost from './markdown-post'
 import BlogPortableText from '@/components/blog-portable-text'
-import { hasTag } from '@/domain/blog/helpers'
+import { hasTag } from '@/domain/blog/mappers'
 import { Code } from 'bright'
 
 export async function generateStaticParams() {

@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '@/domain/cn'
+import { cn } from '@/utils/cn'
 import {
   Accordion as AccordionPrimitive,
   AccordionItem as Item,

@@ -1,6 +1,6 @@
 import Button from './ui/button'
 import { useFormStatus } from 'react-dom'
-import { cn } from '@/domain/cn'
+import { cn } from '@/utils/cn'
 
 export function Submit(props: {
   children: React.ReactNode

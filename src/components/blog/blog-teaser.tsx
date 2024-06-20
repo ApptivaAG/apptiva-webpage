@@ -1,6 +1,6 @@
 import SanityImage from '@/components/sanity-image'
 import { Card } from '@/components/ui/card'
-import { cn } from '@/domain/cn'
+import { cn } from '@/utils/cn'
 import { CmsBlog, MarkdownBlog } from '@/domain/types'
 import Image from 'next/image'
 import Link from 'next/link'

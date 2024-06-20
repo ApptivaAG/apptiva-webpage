@@ -1,5 +1,5 @@
 import { GlossaryQueryData } from '@/sanity/lib/queries'
-import portableTextToString from '@/domain/portable-text-to-string'
+import portableTextToString from '@/utils/portable-text-to-string'
 import Link from 'next/link'
 import StyledPortableText from './styled-portable-text'
 import { Accordion, AccordionContent, AccordionItem } from './ui/accordion'

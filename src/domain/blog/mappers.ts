@@ -1,5 +1,5 @@
 import { PostBySlugQueryData } from '@/sanity/lib/queries'
-import portableTextToString from '../portable-text-to-string'
+import portableTextToString from '../../utils/portable-text-to-string'
 import { CmsBlog, CmsContent } from '../types'
 import { mapTags } from '../tags/map-tags'
 import { vercelStegaCleanAll } from '@sanity/client/stega'

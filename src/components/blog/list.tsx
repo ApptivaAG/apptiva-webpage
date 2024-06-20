@@ -1,6 +1,6 @@
 import { CmsBlog, MarkdownBlog } from '@/domain/types'
 import { BlogTeaser } from './blog-teaser'
-import { hasTag } from '@/domain/blog/helpers'
+import { hasTag } from '@/domain/blog/mappers'
 
 export default async function BlogList(props: {
   posts: (MarkdownBlog | CmsBlog)[]

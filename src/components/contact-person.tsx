@@ -1,6 +1,6 @@
 import SanityImage from '@/components/sanity-image'
 import { PersonData } from '@/sanity/lib/queries'
-import { cn } from '@/domain/cn'
+import { cn } from '@/utils/cn'
 import { PortableText } from '@/domain/types'
 import Image from 'next/image'
 import Link from 'next/link'

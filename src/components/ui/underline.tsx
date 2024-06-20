@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '@/domain/cn'
+import { cn } from '@/utils/cn'
 import { useEffect, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 import style from './underline.module.css'

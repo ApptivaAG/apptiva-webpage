@@ -1,7 +1,7 @@
 import Module from '@/components/module'
 import { PageHeader } from '@/components/page-header'
 import { glossaryBySlugQuery } from '@/sanity/lib/queries'
-import portableTextToString from '@/domain/portable-text-to-string'
+import portableTextToString from '@/utils/portable-text-to-string'
 import { InferType } from 'groqd'
 import GlossaryPortableText from './glossar-portable-text'
 

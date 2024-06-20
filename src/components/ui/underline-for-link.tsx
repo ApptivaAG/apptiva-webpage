@@ -1,4 +1,4 @@
-import { cn } from '@/domain/cn'
+import { cn } from '@/utils/cn'
 
 export default function UnderlineForLink(props: {
   children: React.ReactNode

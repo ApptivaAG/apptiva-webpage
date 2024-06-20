@@ -1,6 +1,6 @@
 import { ModuleData } from '@/sanity/lib/queries'
 
-import { cn } from '@/domain/cn'
+import { cn } from '@/utils/cn'
 import { PortableText } from '@portabletext/react'
 import { TbUserHeart } from 'react-icons/tb'
 import Heading from '../heading'
