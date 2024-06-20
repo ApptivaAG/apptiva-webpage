@@ -24,6 +24,7 @@ export default defineType({
       name: 'modules',
       title: 'Module',
       type: 'array',
+      // @ts-ignore
       of: [{ type: 'module' }],
     }),
   ],

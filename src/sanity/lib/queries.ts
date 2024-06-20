@@ -157,6 +157,7 @@ const Modules = q('modules')
   })
   .nullable()
 
+export type PostsQueryData = NonNullable<InferType<typeof queryPostsFromCms>>
 export const queryPostsFromCms = q('*')
   .filterByType('blog')
   .grab$({
@@ -188,6 +189,9 @@ export const queryPostsFromCms = q('*')
     tags: Tags,
   })
 
+export type PostBySlugQueryData = NonNullable<
+  InferType<typeof queryPostFromCmsBySlug>
+>
 export const queryPostFromCmsBySlug = q('*')
   .filterByType('blog')
   .filter('slug.current == $slug')
@@ -221,7 +225,6 @@ export const queryPostFromCmsBySlug = q('*')
     header: Header,
     tags: Tags,
   })
-  .nullable()
 
 export const projectsQuery = q('*')
   .filterByType('project')

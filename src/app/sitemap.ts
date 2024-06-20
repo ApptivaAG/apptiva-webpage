@@ -6,11 +6,12 @@ import {
   servicesQuery,
 } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
-import { getPosts, hasTag } from '@/utils/blog'
-import { CmsBlog, MarkdownBlog } from '@/utils/types'
+import { getPosts } from '@/domain/blog/repository'
+import { CmsBlog, MarkdownBlog } from '@/domain/types'
 import { MetadataRoute } from 'next'
 import { ProjectQueryData } from './(website)/projekte/types'
 import { rootUrl } from './env'
+import { hasTag } from '@/domain/blog/mappers'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = await getPosts()
@@ -137,20 +138,18 @@ function buildServicesSiteMap(services: ServicesQueryData) {
 }
 
 function buildPostsSiteMap(
-  posts: Map<string, CmsBlog | MarkdownBlog>,
+  posts: Array<CmsBlog | MarkdownBlog>,
   tag: 'blog' | 'apptiva-lernt'
 ) {
-  return Array.from(posts.entries())
-    .filter(hasTag(tag))
-    .map(
-      ([slug, post]) =>
-        ({
-          url: buildFullUrl(`/${tag}/${slug}`),
-          lastModified: new Date(post.publishDate),
-          changeFrequency: 'weekly',
-          priority: 0.5,
-        }) as const
-    )
+  return posts.filter(hasTag(tag)).map(
+    (post) =>
+      ({
+        url: buildFullUrl(`/${tag}/${post.slug}`),
+        lastModified: new Date(post.publishDate),
+        changeFrequency: 'weekly',
+        priority: 0.5,
+      }) as const
+  )
 }
 
 function buildFullUrl(absolutUrl: `/${string}`) {

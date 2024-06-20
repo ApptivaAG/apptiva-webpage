@@ -24,6 +24,7 @@ export default defineType({
       name: 'summary',
       title: 'Zusammenfassung',
       type: 'array',
+      // @ts-ignore
       of: [
         {
           type: 'block',
@@ -35,6 +36,7 @@ export default defineType({
       name: 'content',
       title: 'Inhalt',
       type: 'array',
+      // @ts-ignore
       of: [
         {
           type: 'block',
@@ -57,6 +59,7 @@ export default defineType({
       name: 'tags',
       title: 'Tags',
       type: 'array',
+      // @ts-ignore
       of: [
         {
           type: 'reference',

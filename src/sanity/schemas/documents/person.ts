@@ -1,4 +1,4 @@
-import { defineField, defineType } from 'sanity'
+import { defineArrayMember, defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'person',
@@ -43,10 +43,11 @@ export default defineType({
       name: 'content',
       title: 'Text',
       type: 'array',
+      // @ts-ignore
       of: [
-        {
+        defineArrayMember({
           type: 'block',
-        },
+        }),
       ],
     }),
     defineField({
@@ -68,7 +69,8 @@ export default defineType({
       title: 'Skills',
       name: 'skills',
       type: 'array',
-      of: [{ type: 'skill' }],
+      // @ts-ignore
+      of: [defineArrayMember({ type: 'skill' })],
     }),
   ],
 })

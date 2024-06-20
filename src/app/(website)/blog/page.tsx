@@ -1,6 +1,7 @@
 import BlogPosts from '@/components/blog/blog-posts'
 import { PageHeader } from '@/components/page-header'
 import { Metadata } from 'next'
+import { draftMode } from 'next/headers'
 import { Suspense } from 'react'
 
 const url = '/blog'
@@ -15,7 +16,8 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function Home({ params }: { params: { slug: string } }) {
+export default async function Blog() {
+  const { isEnabled } = draftMode()
   return (
     <>
       <PageHeader
@@ -30,7 +32,7 @@ export default async function Home({ params }: { params: { slug: string } }) {
               <p className="pb-64 pt-8 text-xl font-bold">Lade Blogposts...</p>
             }
           >
-            <BlogPosts show="blog" />
+            <BlogPosts show="blog" isDraft={isEnabled} />
           </Suspense>
         </div>
       </div>

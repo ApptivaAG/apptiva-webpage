@@ -1,30 +1,22 @@
-import { getPosts, hasTag } from '@/utils/blog'
-import { BlogTeaser } from './blog-teaser'
+import { getPosts } from '@/domain/blog/repository'
+import { queryPostsFromCms } from '@/sanity/lib/queries'
+import { load } from '@/sanity/lib/sanityFetch'
+import BlogList from './list'
+import BlogPostsPreview from './preview-list'
 
 export default async function BlogPosts(props: {
   show: 'blog' | 'apptiva-lernt'
+  isDraft: boolean
 }) {
+  if (props.isDraft) {
+    const { draft } = await load(queryPostsFromCms, props.isDraft, undefined, [
+      'service-page',
+    ])
+
+    return <BlogPostsPreview initial={draft} show={props.show} />
+  }
+
   const posts = await getPosts()
 
-  const allPosts = Array.from(posts.entries())
-    .filter(hasTag(props.show))
-    .toSorted(
-      ([, a], [, b]) =>
-        new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
-    )
-
-  return (
-    <ul className="grid gap-4 py-16 lg:grid-cols-3">
-      {allPosts.map(([slug, post]) => (
-        <li key={slug} className="first:lg:col-span-full">
-          <BlogTeaser
-            slug={slug}
-            post={post}
-            intent="light"
-            parentSlug={props.show}
-          />
-        </li>
-      ))}
-    </ul>
-  )
+  return <BlogList posts={posts} show={props.show} />
 }

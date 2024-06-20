@@ -1,5 +1,5 @@
 import SanityImage from '@/components/sanity-image'
-import { PortableText, SanityImageWithAlt } from '@/utils/types'
+import { PortableText, SanityImageWithAlt } from '@/domain/types'
 import { isValidElement } from 'react'
 import BreadCrumb from './bread-crumb'
 import Heading from './heading'

@@ -1,5 +1,5 @@
 'use client'
-import { Tag } from '@/utils/types'
+import { Tag } from '@/domain/types'
 import { useRouter } from 'next/navigation'
 import { ChangeEvent, useCallback, useTransition } from 'react'
 

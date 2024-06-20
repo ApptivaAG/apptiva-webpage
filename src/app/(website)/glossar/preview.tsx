@@ -1,7 +1,7 @@
 'use client'
 
 import { glossaryQuery } from '@/sanity/lib/queries'
-import { orderGlossaryByTitle } from '@/utils/glossary'
+import { orderGlossaryByTitle } from '@/domain/glossary'
 import { QueryResponseInitial, useQuery } from '@sanity/react-loader'
 import { InferType } from 'groqd'
 import { GlossaryList } from './list'

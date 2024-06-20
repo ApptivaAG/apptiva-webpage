@@ -6,7 +6,8 @@ import {
   CarouselContent,
   CarouselItem,
 } from '@/components/ui/carousel'
-import { getPosts, hasTag } from '@/utils/blog'
+import { getPosts } from '@/domain/blog/repository'
+import { hasTag } from '@/domain/blog/mappers'
 import Link from 'next/link'
 
 export default async function Blogposts(props: {
@@ -15,10 +16,10 @@ export default async function Blogposts(props: {
 }) {
   const posts = await getPosts()
 
-  const last5Posts = Array.from(posts.entries())
+  const last5Posts = posts
     .filter(hasTag(props.show))
     .toSorted(
-      ([, a], [, b]) =>
+      (a, b) =>
         new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
     )
     .slice(0, 10)
@@ -33,10 +34,10 @@ export default async function Blogposts(props: {
           loop={false}
         >
           <CarouselContent>
-            {last5Posts.map(([slug, post], index) => (
-              <CarouselItem key={slug} index={index}>
+            {last5Posts.map((post, index) => (
+              <CarouselItem key={post.slug} index={index}>
                 <BlogTeaser
-                  slug={slug}
+                  slug={post.slug}
                   post={post}
                   intent="dark"
                   parentSlug={props.show}

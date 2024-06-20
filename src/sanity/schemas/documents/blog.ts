@@ -37,6 +37,7 @@ export default defineType({
       name: 'content',
       title: 'Inhalt',
       type: 'array',
+      // @ts-ignore
       of: [
         {
           type: 'block',
@@ -79,12 +80,14 @@ export default defineType({
       name: 'author',
       title: 'Autor:in',
       type: 'reference',
+      // @ts-ignore
       to: { type: 'person' },
     }),
     defineField({
       name: 'tags',
       title: 'Tags',
       type: 'array',
+      // @ts-ignore
       of: [
         {
           type: 'reference',

@@ -4,7 +4,6 @@ import { BaseQuery, InferType, makeSafeQueryRunner, z } from 'groqd'
 import { client } from './client'
 import { token } from '../env'
 import { loadQuery } from './store'
-import { SanityDocument } from 'next-sanity'
 
 export const runQuery = makeSafeQueryRunner(
   (query, params: Record<string, number | string> = {}, tags?: string[]) => {

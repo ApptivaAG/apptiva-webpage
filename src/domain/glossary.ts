@@ -1,5 +1,5 @@
 import { GlossaryQueryData } from '@/sanity/lib/queries'
-import portableTextToString from './portable-text-to-string'
+import portableTextToString from '../utils/portable-text-to-string'
 
 export function orderGlossaryByTitle(glossary: GlossaryQueryData) {
   return glossary.sort((a, b) => {
