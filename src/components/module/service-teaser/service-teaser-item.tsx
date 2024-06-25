@@ -26,7 +26,7 @@ const ServiceTeaser = ({
       <div
         className={
           (rowNumber % 2 ? rightContent : leftContent) +
-          ' col-[full] row-start-1 flex flex-col justify-center py-12 align-middle text-primary max-lg:p-12'
+          ' col-[full] row-start-1 flex flex-col justify-center py-12 align-middle text-primary max-lg:p-12 max-sm:p-6'
         }
       >
         <Heading level={2} size={3} className="pb-4 lg:pb-6">
