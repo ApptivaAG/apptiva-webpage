@@ -25,19 +25,21 @@ export default function CardFlow(props: { module: ModuleData }) {
         level={isLevel(1) ? 'one' : 'two'}
       >
         <div className="content">
-          <Heading
-            level={isLevel(2) ? 3 : 2}
-            size={isLevel(2) ? 4 : 3}
-            className="col-left"
-          >
-            {module.title}
-          </Heading>
+          {module.title && (
+            <Heading
+              level={isLevel(2) ? 3 : 2}
+              size={isLevel(2) ? 4 : 3}
+              className="col-left"
+            >
+              {module.title}
+            </Heading>
+          )}
           {module.content && (
-            <div className="col-right max-lg:mt-4">
+            <div className="col-right mb-8 max-lg:mt-4 lg:mb-20">
               <PortableText value={module.content} />
             </div>
           )}
-          <div className={cn('mt-20 grid gap-7', colStyle)}>
+          <div className={cn('grid gap-7', colStyle)}>
             {module.cards?.map((card) => {
               const style = xor(darkBg, card.style !== 'inverted')
                 ? 'dark'
