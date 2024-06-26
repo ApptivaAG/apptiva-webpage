@@ -12,16 +12,20 @@ export default async function ModulesPage() {
   const { published, draft } = await load(homepageQuery, isEnabled, undefined, [
     'homepage',
   ])
-  const customers = (
-    <>
-      <Testimonials />
-      <Customers />
-    </>
-  )
+  const testimonials = <Testimonials />
+  const customers = <Customers />
 
   return isEnabled ? (
-    <ModulesPreview initial={draft} customers={customers} />
+    <ModulesPreview
+      initial={draft}
+      customers={customers}
+      testimonials={testimonials}
+    />
   ) : (
-    <ModuleWrapper data={published} customers={customers} />
+    <ModuleWrapper
+      data={published}
+      customers={customers}
+      testimonials={testimonials}
+    />
   )
 }

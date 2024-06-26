@@ -42,16 +42,16 @@ export default async function AboutPage() {
     ['about-page']
   )
 
-  const customers = (
-    <>
-      <Testimonials />
-      <Customers />
-    </>
-  )
+  const testimonials = <Testimonials />
+  const customers = <Customers />
 
   return isEnabled ? (
-    <AboutPreview initial={draft} customers={customers} />
+    <AboutPreview
+      initial={draft}
+      customers={customers}
+      testimonials={testimonials}
+    />
   ) : (
-    <About data={published} customers={customers} />
+    <About data={published} customers={customers} testimonials={testimonials} />
   )
 }

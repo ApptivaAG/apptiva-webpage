@@ -10,20 +10,21 @@ export default function About(props: {
   customers: React.ReactNode
   testimonials: React.ReactNode
 }) {
-  // console.log('media', window.matchMedia('(min-width: 768px)'))
-
   return (
     <>
       <PageHeader
         title={props.data.header?.title}
         lead={props.data.header?.lead}
         links={[{ name: 'Über uns', href: '/ueber-uns' }]}
-      >
-       
-      </PageHeader>
+      ></PageHeader>
 
       {props.data.modules?.map((module) => (
-        <Module key={module._key} module={module} customers={props.customers} testimonials={props.testimonials} />
+        <Module
+          key={module._key}
+          module={module}
+          customers={props.customers}
+          testimonials={props.testimonials}
+        />
       ))}
     </>
   )
