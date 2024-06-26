@@ -10,6 +10,7 @@ import Link from 'next/link'
 export default function ServiceDetail(props: {
   service: ServiceBySlugQueryData
   customers: React.ReactNode
+  testimonials: React.ReactNode
   isPreview?: boolean
 }) {
   return (
@@ -32,7 +33,7 @@ export default function ServiceDetail(props: {
 
       {props.service.modules?.map((module) => (
         <CatchErrors key={module._key} isPreview={props.isPreview}>
-          <Module module={module} customers={props.customers} />
+          <Module module={module} customers={props.customers} testimonials={props.testimonials} />
         </CatchErrors>
       ))}
     </>

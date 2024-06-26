@@ -31,7 +31,8 @@ export default defineType({
         list: [
           { title: 'Text', value: 'text' },
           { title: 'Karten', value: 'cards' },
-          { title: 'Testimonials & Kunden', value: 'testimonials-customers' },
+          { title: 'Kunden', value: 'customers' },
+          { title: 'Testimonials', value: 'testimonials' },
           { title: 'Projekte', value: 'projects' },
           { title: 'Preise', value: 'prices' },
           { title: 'FAQs', value: 'faqs' },

@@ -3,11 +3,12 @@
 import { AboutPageQueryData } from './types'
 import Module from '@/components/module'
 import { PageHeader } from '../../../components/page-header'
-import SanityImage from '@/components/sanity-image'
+import React from 'react'
 
 export default function About(props: {
   data: AboutPageQueryData
   customers: React.ReactNode
+  testimonials: React.ReactNode
 }) {
   // console.log('media', window.matchMedia('(min-width: 768px)'))
 
@@ -18,30 +19,11 @@ export default function About(props: {
         lead={props.data.header?.lead}
         links={[{ name: 'Über uns', href: '/ueber-uns' }]}
       >
-        {/* {props.data.modules && (
-          <div className="mt-[-20rem]">
-            {props.data.modules[0].persons.map((person, index) => (
-              <div
-                key={person.personName}
-                style={{
-                  margin: window.matchMedia('(min-width: 768px)')
-                    ? randomMargin()
-                    : randomMargin(0.5),
-                }}
-                className="float-left"
-              >
-                <SanityImage
-                  image={person.image}
-                  className="size-[5rem] rounded-full object-cover md:size-[8rem] lg:size-[11.25rem]"
-                />
-              </div>
-            ))}
-          </div>
-        )} */}
+       
       </PageHeader>
 
       {props.data.modules?.map((module) => (
-        <Module key={module._key} module={module} customers={props.customers} />
+        <Module key={module._key} module={module} customers={props.customers} testimonials={props.testimonials} />
       ))}
     </>
   )

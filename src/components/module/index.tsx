@@ -13,6 +13,7 @@ import Text from './text'
 export default function Module(props: {
   module: ModuleData
   customers: React.ReactNode
+  testimonials: React.ReactNode
 }) {
   const { module } = props
 
@@ -20,8 +21,11 @@ export default function Module(props: {
     case 'cards':
       return <Cards module={module} />
 
-    case 'testimonials-customers':
+    case 'customers':
       return props.customers
+
+    case 'testimonials':
+      return props.testimonials
 
     case 'projects':
       return <ProjectModule module={module} />

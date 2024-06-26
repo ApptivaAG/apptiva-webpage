@@ -1,4 +1,3 @@
-import Module from '@/components/module'
 import { PageHeader } from '@/components/page-header'
 import { glossaryBySlugQuery } from '@/sanity/lib/queries'
 import portableTextToString from '@/utils/portable-text-to-string'

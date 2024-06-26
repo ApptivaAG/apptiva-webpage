@@ -78,20 +78,18 @@ export default async function Home(props: { params: { slug: string[] } }) {
     ['service-page']
   )
 
-  const customers = (
-    <>
-      <Testimonials />
-      <Customers groups={mapSlugToGroup(lastParam)} />
-    </>
-  )
+  const customers = <Customers groups={mapSlugToGroup(lastParam)} />
+  const testimonials = <Testimonials />
+
   return isEnabled ? (
     <ServicePreview
       initial={draft}
       params={getLastParam(props.params)}
       customers={customers}
+      testimonials={testimonials}
     />
   ) : (
-    <ServiceDetail service={published} customers={customers} />
+    <ServiceDetail service={published} customers={customers} testimonials={testimonials} />
   )
 }
 
