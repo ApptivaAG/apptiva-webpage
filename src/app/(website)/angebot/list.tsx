@@ -8,7 +8,15 @@ export default function ServiceList(props: { services: ServiceQueryData[] }) {
       {props.services.map((servicePage) =>
         servicePage.header?.title ? (
           <li key={servicePage.slug}>
-            <Link href={'angebot/' + servicePage.slug}>
+            <Link
+              href={
+                'angebot/' +
+                (servicePage.subPageOf?.slug
+                  ? `${servicePage.subPageOf?.slug}/`
+                  : '') +
+                servicePage.slug
+              }
+            >
               {portableTextToString(servicePage.header.title)}
             </Link>
           </li>

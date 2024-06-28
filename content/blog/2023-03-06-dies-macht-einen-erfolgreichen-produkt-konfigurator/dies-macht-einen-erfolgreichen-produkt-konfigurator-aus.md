@@ -49,4 +49,4 @@ Ein Produktkonfigurator bietet sowohl für den Kunden als auch für den Anbieter
 
 Wenn Sie einen guten Produktkonfigurator für Ihr Produkt suchen, sind Sie bei uns an der richtigen Adresse. Gerne schauen wir uns Ihre Situation und Ihre Produkte an und geben Ihnen eine Empfehlung, wie Sie einen optimalen Produktkonfigurator erstellen können. Kontaktieren Sie uns noch heute und profitieren Sie von unserer Erfahrung und unserem Know-how.
 
-Erfahren Sie mehr über das Thema auf unserer Dienstleistungsseite zu [Produkt-Konfiguratoren](/angebot/konfiguratoren).
+Erfahren Sie mehr über das Thema auf unserer Dienstleistungsseite zu [Produkt-Konfiguratoren](/angebot/development/konfiguratoren).

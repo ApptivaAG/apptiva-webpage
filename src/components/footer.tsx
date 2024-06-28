@@ -116,16 +116,22 @@ export default function Footer() {
           </Heading>
           <ul>
             <li>
-              <Link href="/angebot/schnittstellen">Schnittstellen</Link>
+              <Link href="/angebot/development/schnittstellen">
+                Schnittstellen
+              </Link>
             </li>
             <li>
-              <Link href="/angebot/konfiguratoren">Konfiguratoren</Link>
+              <Link href="/angebot/development/konfiguratoren">
+                Konfiguratoren
+              </Link>
             </li>
             <li>
-              <Link href="/angebot/webshops">Webshops</Link>
+              <Link href="/angebot/development/webshops">Webshops</Link>
             </li>
             <li>
-              <Link href="/angebot/weiterentwicklung">Weiterentwicklung</Link>
+              <Link href="/angebot/development/weiterentwicklung">
+                Weiterentwicklung
+              </Link>
             </li>
           </ul>
         </div>
@@ -143,10 +149,14 @@ export default function Footer() {
               <Link href="/angebot/chatbots">Chatbots</Link>
             </li>
             <li>
-              <Link href="/angebot/webentwicklung">Webentwicklung</Link>
+              <Link href="/angebot/development/webentwicklung">
+                Webentwicklung
+              </Link>
             </li>
             <li>
-              <Link href="/angebot/app-entwicklung">App Entwicklung</Link>
+              <Link href="/angebot/development/app-entwicklung">
+                App Entwicklung
+              </Link>
             </li>
           </ul>
         </div>

@@ -29,7 +29,7 @@ Als das Casino uns vor über zwei Jahren kontaktierte, war ihre Hoffnung mit wen
 
 ## Der Angebots-Konfigurator
 
-Kernstück der neuen Lösung ist der [Angebots-Konfigurator](/angebot/konfiguratoren), welcher im Rahmen des Projekts meistens "Package-Konfigurator" genannt wird. Dieser erlaubt es dem Casino selbstständig bestehende Angebote anzupassen oder auch neue zu erfassen.
+Kernstück der neuen Lösung ist der [Angebots-Konfigurator](/angebot/development/konfiguratoren), welcher im Rahmen des Projekts meistens "Package-Konfigurator" genannt wird. Dieser erlaubt es dem Casino selbstständig bestehende Angebote anzupassen oder auch neue zu erfassen.
 
 ![Konfigurator](./konfigurator.png)
 
@@ -89,4 +89,4 @@ Wer bereits einmal ein solches System umgesetzt hat, weiss, dass dies mit teils 
 
 ## Fazit
 
-Mit dem neuen [Konfigurator](/angebot/konfiguratoren) wurde der Verkauf vereinfacht und der administrative Aufwand deutlich reduziert. Zudem ist das Grand Casino Bern nun viel dynamischer in der Angebotserstellung. Gibt es ein temporäres, cooles Event in der Stadt, welches das Casino mit einem Besuch im Casino verknüpfen möchte, so können sie ein solches Angebot innerhalb von wenigen Minuten online schalten. Ob das Casino seine Umsatzziele erreicht hat, kann ich hingegen nicht beantworten.
+Mit dem neuen [Konfigurator](/angebot/development/konfiguratoren) wurde der Verkauf vereinfacht und der administrative Aufwand deutlich reduziert. Zudem ist das Grand Casino Bern nun viel dynamischer in der Angebotserstellung. Gibt es ein temporäres, cooles Event in der Stadt, welches das Casino mit einem Besuch im Casino verknüpfen möchte, so können sie ein solches Angebot innerhalb von wenigen Minuten online schalten. Ob das Casino seine Umsatzziele erreicht hat, kann ich hingegen nicht beantworten.

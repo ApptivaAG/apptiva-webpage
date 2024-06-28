@@ -62,6 +62,6 @@ Ein weiterer Ansatz besteht darin, den Benutzer:innen die Möglichkeit zu geben,
 
 Das Kernstück ist jedoch eine spezialisierte [Wissensdatenbank](/angebot/chatbots), die ausschliesslich die für den jeweiligen Anwendungszweck des Chatbots relevanten Informationen beinhaltet. Diese Datenbank wird sorgfältig erstellt und gepflegt, um sicherzustellen, dass die bereitgestellten Informationen genauestens auf den Zweck und den Anspruch des betreffenden Chatbots abgestimmt sind.
 
-Gibt es eine Frage oder Anforderung, die nicht direkt mit der in der Wissensdatenbank enthaltenen Information abgedeckt werden kann, so generiert der Chatbot keine eigenständige Antwort, sondern leitet an [menschliche Experten](/angebot/funktionen/live-chat) weiter oder zeigt an, dass er die Anforderung nicht verarbeiten kann.
+Gibt es eine Frage oder Anforderung, die nicht direkt mit der in der Wissensdatenbank enthaltenen Information abgedeckt werden kann, so generiert der Chatbot keine eigenständige Antwort, sondern leitet an [menschliche Experten](/angebot/chatbots/live-chat) weiter oder zeigt an, dass er die Anforderung nicht verarbeiten kann.
 
 Dies gewährleistet einerseits, dass die Benutzer nur validierte und sichere Informationen erhalten. Andererseits wird dadurch die Möglichkeit, dass der Chatbot unangemessene oder potenziell gefährliche Informationen generiert, weiter reduziert. Dies ist ein Eckpfeiler unserer Verpflichtung, die von den Large Language Models ausgehenden Risiken zu minimieren und gleichzeitig einen effizienten und hilfreichen Service zu bieten.

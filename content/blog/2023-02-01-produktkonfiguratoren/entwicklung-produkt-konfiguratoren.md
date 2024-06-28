@@ -18,7 +18,7 @@ categories:
   - Variantenkonfigurator
 ---
 
-Bei Apptiva setzen wir eine Vielzahl von unterschiedlichen Softwareprojekten um. Einen wichtigen Teil davon stellen sogenannte [Produktkonfiguratoren](/angebot/konfiguratoren). Was sind Konfiguratoren überhaupt und wieso macht deren Einsatz Sinn? Auf die wichtigsten Punkte gehen wir in diesem Blogpost ein.
+Bei Apptiva setzen wir eine Vielzahl von unterschiedlichen Softwareprojekten um. Einen wichtigen Teil davon stellen sogenannte [Produktkonfiguratoren](/angebot/development/konfiguratoren). Was sind Konfiguratoren überhaupt und wieso macht deren Einsatz Sinn? Auf die wichtigsten Punkte gehen wir in diesem Blogpost ein.
 
 ## Definition von Produkt Konfiguratoren
 
@@ -40,4 +40,4 @@ Darüber hinaus bieten Produkt Konfiguratoren auch eine bessere Übersicht über
 
 Zusammenfassend kann gesagt werden, dass Produkt Konfiguratoren eine hervorragende Möglichkeit offerieren, um den Kunden ein benutzerfreundliches und ansprechendes Tooling zu bieten, ein Produkt nach ihren Wünschen zu gestalten. Es bietet zudem auch einen Mehrwert für das Unternehmen in Bezug auf Effizienz und Kundenanalyse.
 
-Erfahren Sie mehr über das Thema auf unserer Dienstleistungsseite zu [Produkt-Konfiguratoren](/angebot/konfiguratoren).
+Erfahren Sie mehr über das Thema auf unserer Dienstleistungsseite zu [Produkt-Konfiguratoren](/angebot/development/konfiguratoren).
