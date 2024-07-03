@@ -112,6 +112,9 @@ export default defineType({
         defineArrayMember({
           type: 'block',
         }),
+        {
+          type: 'imageWithAlt',
+        },
       ],
       hidden: isNotType('cards', 'faqs', 'text', 'contact', 'prices', 'image'),
     }),

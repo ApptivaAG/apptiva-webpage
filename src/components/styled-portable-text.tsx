@@ -6,6 +6,7 @@ import Heading from './heading'
 import { leadStyle } from './page-header'
 import Underline from './ui/underline'
 import UnderlineForLink from './ui/underline-for-link'
+import SanityImage from './sanity-image'
 
 const StyledPortableText = ({
   content,
@@ -21,6 +22,18 @@ const StyledPortableText = ({
   className?: string
 }) => {
   const components: PortableTextComponents = {
+    types: {
+      imageWithAlt: (props: {
+        value: {
+          asset: { _ref: string; _type: 'reference' }
+          _type: 'imageWithAlt'
+          alt: string
+          _key: string
+        }
+      }) => {
+        return <SanityImage image={props.value} size="content" />
+      },
+    },
     marks: {
       // Ex. 1: custom renderer for the em / italics decorator
       underline: ({ children }) => (
