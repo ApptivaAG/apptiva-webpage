@@ -28,13 +28,13 @@ const AccordionItem = ({
       <>
         {header}
         {icon ?? (
-          <IoChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200 " />
+          <IoChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
         )}
       </>
     )}
     buttonProps={{
       className: cn(
-        'flex justify-between hover:underline items-center w-full py-4 text-left hover:bg-slate-100 [&[aria-expanded=true]>svg]:rotate-180 group',
+        'flex justify-between items-center hover:-translate-y-0.5 w-full transition-transform py-4 text-left [&[aria-expanded=true]>svg]:rotate-180 group',
         className
       ),
     }}

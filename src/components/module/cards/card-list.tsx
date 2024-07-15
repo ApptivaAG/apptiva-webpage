@@ -51,7 +51,7 @@ export default function CardList(props: { module: ModuleData }) {
                       size={4}
                       className="text-start md:text-2xl"
                     >
-                      <UnderlineForLink>{card.title}</UnderlineForLink>
+                      {card.title}
                     </Heading>
                   }
                   icon={
