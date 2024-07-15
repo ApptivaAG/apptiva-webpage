@@ -1,16 +1,17 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Heading from './heading'
+import lbv from './lehrbetrieb-vignette.png'
 import logo from './logo.svg'
 import NewsletterForm from './newsletter/newsletter-form'
 import sms from './swiss-made-software.svg'
-import lbv from './lehrbetrieb-vignette.png'
-import whatsApp from './whatsapp.svg'
 import Underline from './ui/underline'
+import UnderlineForLink from './ui/underline-for-link'
+import whatsApp from './whatsapp.svg'
 
 export default function Footer() {
   return (
-    <div className="bg-gradient-to-br from-primary-light to-primary-dark bg-300% pt-4 [&_a]:underline [&_a]:decoration-from-font [&_a]:underline-offset-2 hover:[&_a]:decoration-2">
+    <div className="bg-gradient-to-br from-primary-light to-primary-dark bg-300% pt-4">
       <div className="mx-4 rounded-md bg-primary text-base-white">
         <div className="flex flex-wrap justify-between gap-x-24 gap-y-12 rounded-md bg-black/40 p-4 sm:p-12">
           <div>
@@ -27,10 +28,14 @@ export default function Footer() {
               6203 Sempach Station
             </address>
             <p className="pt-4">
-              <Link href="tel:+41413222626">041 322 26 26</Link>
+              <Link href="tel:+41413222626">
+                <UnderlineForLink>041 322 26 26</UnderlineForLink>
+              </Link>
             </p>
             <p className="pt-1">
-              <Link href="mailto:info@apptiva.ch">info@apptiva.ch</Link>
+              <Link href="mailto:info@apptiva.ch">
+                <UnderlineForLink>info@apptiva.ch</UnderlineForLink>
+              </Link>
             </p>
             <p className="pt-3">
               <a
@@ -41,7 +46,7 @@ export default function Footer() {
                 className="flex gap-1 rounded bg-base-white px-3 py-2 text-primary !no-underline"
               >
                 <Image height="25" src={whatsApp} alt="WhatsApp Logo" />
-                Chat auf WhatsApp
+                <UnderlineForLink>Chat auf WhatsApp</UnderlineForLink>
               </a>
             </p>
           </div>
@@ -62,12 +67,12 @@ export default function Footer() {
             <ul className="space-y-1">
               <li>
                 <a href="https://www.linkedin.com/company/apptiva-ag">
-                  LinkedIn
+                  <UnderlineForLink>LinkedIn</UnderlineForLink>
                 </a>
               </li>
               <li>
                 <a href="https://www.youtube.com/channel/UCkRetskswz9I4-ohcYuTG3Q">
-                  Youtube
+                  <UnderlineForLink>Youtube</UnderlineForLink>
                 </a>
               </li>
             </ul>
@@ -87,7 +92,7 @@ export default function Footer() {
             <Link href={'https://www.berufsbildungplus.ch/'}>
               <Image
                 src={lbv}
-                className=" w-28 mix-blend-luminosity"
+                className="w-28 mix-blend-luminosity"
                 alt="Lehrbetrieb Vignette"
               ></Image>
             </Link>
@@ -96,13 +101,21 @@ export default function Footer() {
         <div className="flex flex-col justify-center gap-x-12 gap-y-4 p-4 opacity-60 sm:px-12 lg:flex-row">
           <p>© 2015 - 2024 Apptiva AG</p>
           <p>
-            <Link href={'/'}>Softwareentwicklung in der Schweiz</Link>
+            <Link href={'/'}>
+              <UnderlineForLink>
+                Softwareentwicklung in der Schweiz
+              </UnderlineForLink>
+            </Link>
           </p>
           <p>
-            <Link href={'/impressum'}>Impressum</Link>
+            <Link href={'/impressum'}>
+              <UnderlineForLink>Impressum</UnderlineForLink>
+            </Link>
           </p>
           <p>
-            <Link href={'/datenschutzerklaerung'}>Datenschutzerklärung</Link>
+            <Link href={'/datenschutzerklaerung'}>
+              <UnderlineForLink>Datenschutzerklärung</UnderlineForLink>
+            </Link>
           </p>
         </div>
       </div>
@@ -117,20 +130,22 @@ export default function Footer() {
           <ul>
             <li>
               <Link href="/angebot/development/schnittstellen">
-                Schnittstellen
+                <UnderlineForLink>Schnittstellen</UnderlineForLink>
               </Link>
             </li>
             <li>
               <Link href="/angebot/development/konfiguratoren">
-                Konfiguratoren
+                <UnderlineForLink>Konfiguratoren</UnderlineForLink>
               </Link>
             </li>
             <li>
-              <Link href="/angebot/development/webshops">Webshops</Link>
+              <Link href="/angebot/development/webshops">
+                <UnderlineForLink>Webshops</UnderlineForLink>
+              </Link>
             </li>
             <li>
               <Link href="/angebot/development/weiterentwicklung">
-                Weiterentwicklung
+                <UnderlineForLink>Weiterentwicklung</UnderlineForLink>
               </Link>
             </li>
           </ul>
@@ -143,19 +158,23 @@ export default function Footer() {
 
           <ul>
             <li>
-              <Link href="/angebot/development">Development</Link>
+              <Link href="/angebot/development">
+                <UnderlineForLink>Development</UnderlineForLink>
+              </Link>
             </li>
             <li>
-              <Link href="/angebot/chatbots">Chatbots</Link>
+              <Link href="/angebot/chatbots">
+                <UnderlineForLink>Chatbots</UnderlineForLink>
+              </Link>
             </li>
             <li>
               <Link href="/angebot/development/webentwicklung">
-                Webentwicklung
+                <UnderlineForLink>Webentwicklung</UnderlineForLink>
               </Link>
             </li>
             <li>
               <Link href="/angebot/development/app-entwicklung">
-                App Entwicklung
+                <UnderlineForLink>App Entwicklung</UnderlineForLink>
               </Link>
             </li>
           </ul>
@@ -167,14 +186,18 @@ export default function Footer() {
           </Heading>
           <ul>
             <li>
-              <Link href="/angebot/architektur-review">Architektur Review</Link>
+              <Link href="/angebot/architektur-review">
+                <UnderlineForLink>Architektur Review</UnderlineForLink>
+              </Link>
             </li>
             <li>
-              <Link href="/angebot/persona-workshop">Persona Workshop</Link>
+              <Link href="/angebot/persona-workshop">
+                <UnderlineForLink>Persona Workshop</UnderlineForLink>
+              </Link>
             </li>
             <li>
               <Link href="/angebot/user-centered-design-workshop">
-                User-Centered Design
+                <UnderlineForLink>User-Centered Design</UnderlineForLink>
               </Link>
             </li>
           </ul>
@@ -192,7 +215,9 @@ export default function Footer() {
               <Link href="/consulting">Zusammenarbeit</Link>
             </li> */}
             <li>
-              <Link href="/ueber-uns">Über uns</Link>
+              <Link href="/ueber-uns">
+                <UnderlineForLink>Über uns</UnderlineForLink>
+              </Link>
             </li>
             {/* <li>
               <Link href="/jobs">Jobs</Link>
@@ -207,13 +232,19 @@ export default function Footer() {
 
           <ul>
             <li>
-              <Link href="/impressum">Impressum</Link>
+              <Link href="/impressum">
+                <UnderlineForLink>Impressum</UnderlineForLink>
+              </Link>
             </li>
             <li>
-              <Link href="/datenschutzerklaerung">Datenschutz</Link>
+              <Link href="/datenschutzerklaerung">
+                <UnderlineForLink>Datenschutz</UnderlineForLink>
+              </Link>
             </li>
             <li>
-              <Link href="/tracking">Tracking</Link>
+              <Link href="/tracking">
+                <UnderlineForLink>Tracking</UnderlineForLink>
+              </Link>
             </li>
           </ul>
         </div>

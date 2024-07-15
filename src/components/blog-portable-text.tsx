@@ -1,5 +1,6 @@
 import { PortableText as PortableTextType } from '@/domain/types'
 import { PortableText, PortableTextComponents } from '@portabletext/react'
+import Link from 'next/link'
 import SanityImage from './sanity-image'
 import Underline from './ui/underline'
 import UnderlineForLink from './ui/underline-for-link'
@@ -34,17 +35,20 @@ export default function BlogPortableText(props: {
         <Underline className={className}>{children}</Underline>
       ),
       link: ({ value, children }) => {
+        const href = value?.href
         const target = (value?.href || '').startsWith('http')
           ? '_blank'
           : undefined
+        if (target)
+          return (
+            <a href={href} target={target} rel="noindex nofollow">
+              <UnderlineForLink>{children}</UnderlineForLink>
+            </a>
+          )
         return (
-          <a
-            href={value?.href}
-            target={target}
-            rel={target === '_blank' ? 'noindex nofollow' : undefined}
-          >
+          <Link href={href}>
             <UnderlineForLink>{children}</UnderlineForLink>
-          </a>
+          </Link>
         )
       },
     },

@@ -1,16 +1,12 @@
 import { cn } from '@/utils/cn'
+import style from './underline-for-link.module.css'
 
 export default function UnderlineForLink(props: {
   children: React.ReactNode
   className?: string
 }) {
   return (
-    <span
-      className={cn(
-        'underline decoration-from-font underline-offset-2 hover:decoration-2 hover:underline-offset-2',
-        props.className
-      )}
-    >
+    <span className={cn(style['highlighted-text'], props.className)}>
       {props.children}
     </span>
   )

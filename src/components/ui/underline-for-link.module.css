@@ -1,0 +1,32 @@
+@keyframes text-reveal {
+  to {
+    --split-position: 100%;
+  }
+}
+
+@property --split-position {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 1%; /* 0% would be the correct, but is minimized to 0 on build. */
+}
+
+.highlighted-text {
+  --split-position: 0%;
+  text-decoration: underline;
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 2px;
+  background-image: linear-gradient(
+    to right,
+    currentColor,
+    currentColor var(--split-position),
+    rgba(0, 0, 0, 0) var(--split-position),
+    rgba(0, 0, 0, 0)
+  );
+  background-position: 0 calc(1em + 1px);
+  background-size: 100% 3px;
+  background-repeat: repeat-x;
+}
+
+.highlighted-text:hover {
+  animation: text-reveal 180ms ease-in-out forwards;
+}

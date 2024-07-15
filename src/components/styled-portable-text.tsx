@@ -44,9 +44,11 @@ const StyledPortableText = ({
         if (!href) return children
         const target = href.startsWith('http') ? '_blank' : undefined
         if (target)
-          <a href={href} target={target} rel="noindex nofollow">
-            <UnderlineForLink>{children}</UnderlineForLink>
-          </a>
+          return (
+            <a href={href} target={target} rel="noindex nofollow">
+              <UnderlineForLink>{children}</UnderlineForLink>
+            </a>
+          )
         return (
           <Link href={href}>
             <UnderlineForLink>{children}</UnderlineForLink>
@@ -87,7 +89,7 @@ const StyledPortableText = ({
     hardBreak: () => (
       <>
         <br />
-        <span className="block h-1 " />
+        <span className="block h-1" />
       </>
     ),
     ...individualComponents,

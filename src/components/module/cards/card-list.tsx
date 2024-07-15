@@ -7,6 +7,7 @@ import {
   AccordionContent,
   AccordionItem,
 } from '@/components/ui/accordion'
+import UnderlineForLink from '@/components/ui/underline-for-link'
 import { ModuleData } from '@/sanity/lib/queries'
 import { PortableText } from '@portabletext/react'
 import { PiMinusCircle, PiPlusCircle } from 'react-icons/pi'
@@ -45,15 +46,13 @@ export default function CardList(props: { module: ModuleData }) {
                 <AccordionItem
                   className="w-full py-0"
                   header={
-                    <div className="grid auto-cols-auto grid-flow-col items-start justify-between gap-2">
-                      <Heading
-                        level={isLevel(1) ? 3 : 4}
-                        size={4}
-                        className="text-start md:text-2xl"
-                      >
-                        {card.title}
-                      </Heading>
-                    </div>
+                    <Heading
+                      level={isLevel(1) ? 3 : 4}
+                      size={4}
+                      className="text-start md:text-2xl"
+                    >
+                      <UnderlineForLink>{card.title}</UnderlineForLink>
+                    </Heading>
                   }
                   icon={
                     <div
