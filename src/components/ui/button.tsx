@@ -3,7 +3,7 @@ import { VariantProps, cva } from 'class-variance-authority'
 import React from 'react'
 
 const buttonStyle = cva(
-  'rounded px-6 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
+  'rounded px-6 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-colors',
   {
     variants: {
       intent: {

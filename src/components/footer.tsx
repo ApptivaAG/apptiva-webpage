@@ -43,10 +43,10 @@ export default function Footer() {
                 href="https://wa.me/41766012056"
                 rel="noopener noreferrer"
                 target="_blank"
-                className="flex gap-1 rounded bg-base-white px-3 py-2 text-primary !no-underline"
+                className="flex gap-1 rounded bg-base-white px-3 py-2 text-primary !no-underline transition-colors hover:bg-base-white/80"
               >
                 <Image height="25" src={whatsApp} alt="WhatsApp Logo" />
-                <UnderlineForLink>Chat auf WhatsApp</UnderlineForLink>
+                Chat auf WhatsApp
               </a>
             </p>
           </div>
