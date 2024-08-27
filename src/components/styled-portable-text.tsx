@@ -7,6 +7,7 @@ import { leadStyle } from './page-header'
 import Underline from './ui/underline'
 import UnderlineForLink from './ui/underline-for-link'
 import SanityImage from './sanity-image'
+import Button from './ui/button'
 
 const StyledPortableText = ({
   content,
@@ -32,6 +33,20 @@ const StyledPortableText = ({
         }
       }) => {
         return <SanityImage image={props.value} size="content" />
+      },
+      cta: (props: {
+        value: {
+          name: string
+          href: string
+          _type: 'link'
+          _key: string
+        }
+      }) => {
+        return (
+          <Link href={props.value?.href}>
+            <Button intent="secondary">{props.value?.name}</Button>
+          </Link>
+        )
       },
     },
     marks: {

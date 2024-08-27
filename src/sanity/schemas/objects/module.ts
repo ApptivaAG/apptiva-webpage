@@ -115,9 +115,13 @@ export default defineType({
         {
           type: 'imageWithAlt',
         },
+        {
+          type: 'cta',
+        },
       ],
       hidden: isNotType('cards', 'faqs', 'text', 'contact', 'prices', 'image'),
     }),
+
     defineField({
       name: 'cards',
       title: 'Cards',
