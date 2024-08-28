@@ -91,16 +91,7 @@ export default function CmsBlogPost(props: {
             )}
           </div>
         </div>
-        <aside>
-          {post.tags && post.tags.length > 0 && (
-            <>
-              <p>Tags</p>
-              <ul>
-                {post.tags && post.tags.map((tag) => <li key={tag}>{tag}</li>)}
-              </ul>
-            </>
-          )}
-        </aside>
+        <aside></aside>
       </div>
     </>
   )
