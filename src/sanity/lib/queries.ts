@@ -236,6 +236,7 @@ export const projectsQuery = q('*')
     slug: Slug,
     order: q.number().optional(),
     description: q.string().optional(),
+    tags: Tags,
   })
   .order('order asc')
 
