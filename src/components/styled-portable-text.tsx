@@ -43,9 +43,11 @@ const StyledPortableText = ({
         }
       }) => {
         return (
-          <Link href={props.value?.href}>
-            <Button intent="secondary">{props.value?.name}</Button>
-          </Link>
+          <div className="py-4 md:py-8">
+            <Link href={props.value?.href}>
+              <Button intent="secondary">{props.value?.name}</Button>
+            </Link>
+          </div>
         )
       },
     },
