@@ -50,7 +50,7 @@ export function BlogTeaser(props: {
           <p className="line-clamp-5">{post.description}</p>
         </div>
         <Link className="self-end" href={`/${props.parentSlug}/${slug}`}>
-          <UnderlineForLink>→&ensp;Zum Artikel</UnderlineForLink>
+          <UnderlineForLink>Zum Artikel&ensp;→</UnderlineForLink>
         </Link>
       </div>
     </Card>

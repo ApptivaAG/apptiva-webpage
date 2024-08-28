@@ -9,6 +9,7 @@ import {
 import { getPosts } from '@/domain/blog/repository'
 import { hasTag } from '@/domain/blog/mappers'
 import Link from 'next/link'
+import UnderlineForLink from '@/components/ui/underline-for-link'
 
 export default async function Blogposts(props: {
   children: React.ReactNode
@@ -53,18 +54,11 @@ export default async function Blogposts(props: {
                     ? 'Blogposts von der Apptiva'
                     : 'Artikel'}
                 </p>
-                <Link
-                  href={`/${props.show}`}
-                  className="block translate-y-3 text-right"
-                >
-                  <Button
-                    intent="secondary"
-                    element="div"
-                    className="inline-block"
-                  >
-                    → Zu allen{' '}
-                    {props.show === 'blog' ? 'Blogposts' : 'Artikeln'}
-                  </Button>
+                <Link href={`/${props.show}`} className="block text-right">
+                  <UnderlineForLink>
+                    Zu allen {props.show === 'blog' ? 'Blogposts' : 'Artikeln'}
+                    &ensp;→
+                  </UnderlineForLink>
                 </Link>
               </Card>
             </CarouselItem>
