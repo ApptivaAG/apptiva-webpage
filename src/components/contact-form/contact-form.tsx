@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useFormState } from 'react-dom'
 import Heading from '../heading'
 import Section from '../section'
@@ -7,6 +8,7 @@ import { sendMail } from '../server-actions/send-mail'
 import { Submit } from '../submit'
 import { Input } from '../ui/input'
 import { Label } from '../ui/label'
+import UnderlineForLink from '../ui/underline-for-link'
 
 const ContactForm = () => {
   const [state, formAction] = useFormState(sendMail, { state: 'idle' })
@@ -18,11 +20,19 @@ const ContactForm = () => {
           <Heading level={2} size={5}>
             Telefon
           </Heading>
-          <p>041 322 26 26</p>
+          <p>
+            <Link href="tel:+41413222626">
+              <UnderlineForLink>041 322 26 26</UnderlineForLink>
+            </Link>
+          </p>
           <Heading level={2} size={5} className="pt-3">
             Mail
           </Heading>
-          <p>info@apptiva.ch</p>
+          <p>
+            <Link href="mailto:info@apptiva.ch">
+              <UnderlineForLink>info@apptiva.ch</UnderlineForLink>
+            </Link>
+          </p>
           <Heading level={2} size={5} className="pt-3">
             Adresse
           </Heading>
@@ -33,8 +43,8 @@ const ContactForm = () => {
             6203 Sempach Station
           </p>
         </div>
-        <div className=" col-right max-lg:mt-4">
-          <div className="flex flex-col gap-2 pt-6 ">
+        <div className="col-right max-lg:mt-4">
+          <div className="flex flex-col gap-2 pt-6">
             <Heading level={2} size={5}>
               Kontaktformular
             </Heading>
