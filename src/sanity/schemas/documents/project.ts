@@ -102,6 +102,18 @@ export default defineType({
         }),
       ],
     }),
+    defineField({
+      name: 'tags',
+      title: 'Tags',
+      type: 'array',
+      // @ts-ignore
+      of: [
+        {
+          type: 'reference',
+          to: [{ type: 'tag' }],
+        },
+      ],
+    }),
   ],
   orderings: [
     {
