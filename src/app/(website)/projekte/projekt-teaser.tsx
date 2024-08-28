@@ -29,10 +29,10 @@ export function ProjectTeaser(props: {
           dangerouslySetInnerHTML={{ __html: project.projectName ?? '' }}
         />
         <div className="flex-1">
-          <p className="line-clamp-5 ">{project.description}</p>
+          <p className="line-clamp-5">{project.description}</p>
         </div>
         <Link className="mt-6 self-end" href={`/projekte/${project.slug}`}>
-          <UnderlineForLink>→&ensp;Zum Projekt</UnderlineForLink>
+          <UnderlineForLink>Zum Projekt&ensp;→</UnderlineForLink>
         </Link>
       </div>
     </Card>
