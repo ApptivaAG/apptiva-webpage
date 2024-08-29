@@ -18,9 +18,7 @@ export default function Quote(props: { module: ModuleData }) {
               <FaQuoteLeft className="p-2 text-3xl text-primary lg:p-6 lg:text-[100px]" />
             </div>
             <div className="py-2 lg:py-10">
-              <Heading size={4} level={3}>
-                <StyledPortableText content={module.quotetext} />
-              </Heading>
+              <StyledPortableText content={module.quotetext} />
             </div>
           </div>
         </div>
