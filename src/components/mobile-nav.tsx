@@ -22,7 +22,7 @@ const MobileNav = () => {
           priority
           src={navBurger}
           alt="Toggle Menu"
-          className="w-10 md:hidden"
+          className="w-10 lg:hidden"
         />
       </SheetTrigger>
 
@@ -43,10 +43,10 @@ const MobileNav = () => {
           <div className="flex-1 space-y-10 overflow-y-auto overflow-x-clip">
             <div className="text-base-white">
               <div className="flex flex-col">
-                {navbarData.map((item) => (
-                  <div key={item.href}>
+                {navbarData.map((item, index) => (
+                  <div key={index}>
                     <div className="flex flex-col pb-5 pt-4 focus:outline-none">
-                      {item.items ? (
+                      {item.type === 'menu' ? (
                         <Accordion
                           className="w-full"
                           transition
@@ -61,24 +61,38 @@ const MobileNav = () => {
                             className="p-0 outline-none transition-colors duration-700 hover:no-underline aria-expanded:text-secondary"
                           >
                             <AccordionContent className="mt-4 flex flex-col divide-y divide-base-white/40 rounded bg-base-white/5 px-4">
-                              {item.items.map((subitem) => (
-                                <MobileLink
-                                  href={subitem.href}
-                                  onOpenChange={setOpen}
-                                  className="flex items-center gap-5 py-4"
-                                  key={subitem.href}
-                                >
-                                  <Image
-                                    src={subitem.iconPrimary ?? subitem.icon}
-                                    alt={subitem.title}
-                                    className="size-24"
-                                  />
-                                  <div className="">
+                              {item.items
+                                .filter((item) => item.type === 'media-link')
+                                .map((subitem) => (
+                                  <MobileLink
+                                    href={subitem.href}
+                                    onOpenChange={setOpen}
+                                    className="flex items-center gap-5 py-4"
+                                    key={subitem.href}
+                                  >
+                                    <Image
+                                      src={subitem.icon}
+                                      alt={subitem.title}
+                                      className="size-24"
+                                    />
+                                    <div className="">
+                                      <p className="text-lg">{subitem.title}</p>
+                                      <p className="text-xs">{subitem.text}</p>
+                                    </div>
+                                  </MobileLink>
+                                ))}
+                              {item.items
+                                .filter((item) => item.type === 'link')
+                                .map((subitem) => (
+                                  <MobileLink
+                                    href={subitem.href}
+                                    onOpenChange={setOpen}
+                                    className="flex items-center gap-5 py-4"
+                                    key={subitem.href}
+                                  >
                                     <p className="text-lg">{subitem.title}</p>
-                                    <p className="text-xs">{subitem.text}</p>
-                                  </div>
-                                </MobileLink>
-                              ))}
+                                  </MobileLink>
+                                ))}
                             </AccordionContent>
                           </AccordionItem>
                         </Accordion>

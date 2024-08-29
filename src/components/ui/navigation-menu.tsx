@@ -40,6 +40,8 @@ NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName
 
 const NavigationMenuItem = NavigationMenuPrimitive.Item
 
+const NavigationMenuSub = NavigationMenuPrimitive.Sub
+
 const navigationMenuTriggerStyle = cva(
   'group inline-flex w-max items-center justify-center rounded transition-colors disabled:pointer-events-none disabled:opacity-50 data-[state=open]:text-secondary'
 )
@@ -121,6 +123,7 @@ export {
   NavigationMenu,
   NavigationMenuList,
   NavigationMenuItem,
+  NavigationMenuSub,
   NavigationMenuContent,
   NavigationMenuTrigger,
   NavigationMenuLink,

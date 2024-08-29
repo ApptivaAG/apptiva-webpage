@@ -8,47 +8,77 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
+  NavigationMenuSub,
   NavigationMenuTrigger,
+  NavigationMenuViewport,
 } from './ui/navigation-menu'
+import { useEffect, useState } from 'react'
 
-const MainNav = () => (
-  <NavigationMenu className="hidden md:flex">
-    <NavigationMenuList>
-      {navbarData.map((item) => (
-        <NavigationMenuItem key={item.href}>
-          {item.type === 'one' ? (
-            <>
-              <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
-              {item.items && (
-                <NavigationMenuContent className="full left-0 right-0 top-0 flex flex-col bg-primary-dark p-2">
-                  {item.items.map((subitem) => (
-                    <Link
-                      href={subitem.href}
-                      key={subitem.href}
-                      className="rounded-md p-2 align-middle hover:bg-primary-light/10"
-                    >
-                      <Image
-                        src={subitem.icon}
-                        alt={subitem.title}
-                        className="aspect-square size-24 object-contain object-center py-2"
-                      />
-                      <div className="flex flex-col justify-center">
-                        <span className="pb-1">{subitem.title}</span>
-                        <small className="leading-normal">{subitem.text}</small>
-                      </div>
-                    </Link>
-                  ))}
-                </NavigationMenuContent>
-              )}
-            </>
-          ) : (
-            <Link href={item.href}>{item.title}</Link>
-          )}
-        </NavigationMenuItem>
-      ))}
-    </NavigationMenuList>
-  </NavigationMenu>
-)
+const MainNav = () => {
+  const [initialMount, setInitialMount] = useState<true | undefined>(true)
+
+  useEffect(() => {
+    setInitialMount(undefined)
+  }, [])
+  return (
+    <NavigationMenu className="hidden lg:flex">
+      <NavigationMenuList>
+        {navbarData.map((item, index) => (
+          <NavigationMenuItem key={index} className="[&>div]:hidden">
+            {item.type === 'menu' ? (
+              <>
+                <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
+                {item.items && (
+                  <NavigationMenuContent
+                    forceMount={initialMount}
+                    className="full left-0 right-0 top-0 flex flex-col bg-primary-dark p-2"
+                  >
+                    {item.items
+                      .filter((item) => item.type === 'media-link')
+                      .map((subitem) => (
+                        <Link
+                          href={subitem.href}
+                          key={subitem.href}
+                          className="rounded-md p-2 align-middle hover:bg-primary-light/10"
+                        >
+                          <Image
+                            src={subitem.icon}
+                            alt={subitem.title}
+                            className="aspect-square size-24 object-contain object-center py-2"
+                          />
+                          <div className="flex flex-col justify-center">
+                            <span className="pb-1">{subitem.title}</span>
+                            <small className="leading-normal">
+                              {subitem.text}
+                            </small>
+                          </div>
+                        </Link>
+                      ))}
+                    {item.items
+                      .filter((item) => item.type === 'link')
+                      .map((subitem) => (
+                        <Link
+                          href={subitem.href}
+                          key={subitem.href}
+                          className="rounded-md p-2 align-middle hover:bg-primary-light/10"
+                        >
+                          <div className="flex flex-col justify-center">
+                            <span className="pb-1">{subitem.title}</span>
+                          </div>
+                        </Link>
+                      ))}
+                  </NavigationMenuContent>
+                )}
+              </>
+            ) : (
+              <Link href={item.href}>{item.title}</Link>
+            )}
+          </NavigationMenuItem>
+        ))}
+      </NavigationMenuList>
+    </NavigationMenu>
+  )
+}
 
 const Link = (
   props: LinkProps & { children: React.ReactNode; className?: string }

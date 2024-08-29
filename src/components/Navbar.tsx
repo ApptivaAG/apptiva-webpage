@@ -10,30 +10,164 @@ import MainNav from './main-nav'
 import MobileNav from './mobile-nav'
 import Button from './ui/button'
 
-export const navbarData = [
+type NavbarItemSimpleLink = {
+  type: 'link'
+  title: string
+  href: string
+}
+type NavbarItemLinkWithMedia = {
+  type: 'media-link'
+  title: string
+  href: string
+  text: string
+  icon: any
+}
+type NavbarItemLink = NavbarItemSimpleLink | NavbarItemLinkWithMedia
+type NavbarItemMenu = {
+  type: 'menu'
+  title: string
+  items: NavbarItemLink[]
+}
+
+type NavbarItem = NavbarItemLink | NavbarItemMenu
+export const navbarData: NavbarItem[] = [
   {
-    title: 'Angebot',
-    href: '/angebot/',
-    type: 'one',
+    title: 'Entwicklung',
+    type: 'menu',
     items: [
       {
         title: 'Development',
         text: 'Gemeinsam realisieren wir deine individuelle Softwarelösung.',
         href: '/angebot/development',
         icon: developmentIcon,
+        type: 'media-link',
       },
+      //Webentwicklung, App Entwicklung, Schnittstellen, Konfiguratoren, Webshops, Digitalisierung, Weiterentwicklung
+      {
+        title: 'Webentwicklung',
+        text: 'Kundenanfragen mit künstlicher Intelligenz beantworten.',
+        href: '/angebot/chatbots',
+        icon: chatbotsIcon,
+        type: 'media-link',
+      },
+      {
+        title: 'App Entwicklung',
+        text: 'Kundenanfragen mit künstlicher Intelligenz beantworten.',
+        href: '/angebot/chatbots',
+        icon: chatbotsIcon,
+        type: 'media-link',
+      },
+      {
+        title: 'Schnittstellen',
+        href: '/angebot/chatbots',
+        type: 'link',
+      },
+      {
+        title: 'Konfiguratoren',
+        href: '/angebot/chatbots',
+        type: 'link',
+      },
+      {
+        title: 'Webshops',
+        href: '/angebot/chatbots',
+        type: 'link',
+      },
+      {
+        title: 'Digitalisierung',
+        href: '/angebot/chatbots',
+        type: 'link',
+      },
+      {
+        title: 'Weiterentwicklung',
+        href: '/angebot/chatbots',
+        type: 'link',
+      },
+    ],
+  },
+  {
+    title: 'Chatbots',
+    type: 'menu',
+    items: [
       {
         title: 'Chatbots',
         text: 'Kundenanfragen mit künstlicher Intelligenz beantworten.',
         href: '/angebot/chatbots',
         icon: chatbotsIcon,
-        iconPrimary: chatbotsIconPrimary,
+        type: 'media-link',
+      },
+      // Content Management System, Live-Chat, Analytics, Preise, Technologie, grüner Button Kostenlose Demo buchen
+      {
+        title: 'Content Management System',
+        text: 'Kundenanfragen mit künstlicher Intelligenz beantworten.',
+        href: '/angebot/chatbots',
+        icon: chatbotsIcon,
+        type: 'media-link',
+      },
+      {
+        title: 'Live-Chat',
+        text: 'Kundenanfragen mit künstlicher Intelligenz beantworten.',
+        href: '/angebot/chatbots',
+        icon: chatbotsIcon,
+        type: 'media-link',
+      },
+      {
+        title: 'Analytics',
+        href: '/angebot/chatbots',
+        type: 'link',
+      },
+      {
+        title: 'Preise',
+        href: '/angebot/chatbots',
+        type: 'link',
+      },
+      {
+        title: 'Technologie',
+        href: '/angebot/chatbots',
+        type: 'link',
+      },
+      {
+        title: 'Kostenlose Demo buchen',
+        href: '/angebot/chatbots',
+        type: 'link',
       },
     ],
   },
-  { title: 'Projekte', href: '/projekte' },
-  { title: 'Apptiva', href: '/ueber-uns' },
-  { title: 'Wissen', href: '/wissen' },
+  { title: 'Projekte', href: '/projekte', type: 'link' },
+  { title: 'Apptiva', href: '/ueber-uns', type: 'link' },
+  {
+    title: 'Wissen',
+    type: 'menu',
+    items: [
+      // Blog, Apptiva lernt, Glossar, Workshops
+      {
+        title: 'Wissen',
+        text: 'Gemeinsam realisieren wir deine individuelle Softwarelösung.',
+        href: '/angebot/development',
+        icon: developmentIcon,
+        type: 'media-link',
+      },
+      {
+        title: 'Blog',
+        href: '/angebot/development',
+        type: 'link',
+      },
+      {
+        title: 'Apptiva Lernt',
+        href: '/angebot/chatbots',
+        type: 'link',
+      },
+      {
+        title: 'Glossar',
+        href: '/angebot/chatbots',
+        type: 'link',
+      },
+      {
+        title: 'Workshops',
+        href: '/angebot/chatbots',
+        type: 'link',
+      },
+    ],
+  },
 ]
 
 const Navbar = () => (
