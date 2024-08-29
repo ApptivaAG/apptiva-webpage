@@ -42,21 +42,7 @@ export const navbarData: NavbarItem[] = [
         icon: developmentIcon,
         type: 'media-link',
       },
-      //Webentwicklung, App Entwicklung, Schnittstellen, Konfiguratoren, Webshops, Digitalisierung, Weiterentwicklung
-      {
-        title: 'Webentwicklung',
-        text: 'Kundenanfragen mit künstlicher Intelligenz beantworten.',
-        href: '/angebot/chatbots',
-        icon: chatbotsIcon,
-        type: 'media-link',
-      },
-      {
-        title: 'App Entwicklung',
-        text: 'Kundenanfragen mit künstlicher Intelligenz beantworten.',
-        href: '/angebot/chatbots',
-        icon: chatbotsIcon,
-        type: 'media-link',
-      },
+
       {
         title: 'Schnittstellen',
         href: '/angebot/chatbots',
@@ -90,21 +76,6 @@ export const navbarData: NavbarItem[] = [
     items: [
       {
         title: 'Chatbots',
-        text: 'Kundenanfragen mit künstlicher Intelligenz beantworten.',
-        href: '/angebot/chatbots',
-        icon: chatbotsIcon,
-        type: 'media-link',
-      },
-      // Content Management System, Live-Chat, Analytics, Preise, Technologie, grüner Button Kostenlose Demo buchen
-      {
-        title: 'Content Management System',
-        text: 'Kundenanfragen mit künstlicher Intelligenz beantworten.',
-        href: '/angebot/chatbots',
-        icon: chatbotsIcon,
-        type: 'media-link',
-      },
-      {
-        title: 'Live-Chat',
         text: 'Kundenanfragen mit künstlicher Intelligenz beantworten.',
         href: '/angebot/chatbots',
         icon: chatbotsIcon,
