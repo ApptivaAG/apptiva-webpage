@@ -35,7 +35,7 @@ export default function TextWithImageTwoCol(props: { module: ModuleData }) {
         >
           <div className="flex-[1.2]">
             <SanityImage
-              className="aspect-square rounded object-cover"
+              className="rounded"
               image={module.image}
               sizes="(min-width: 1600px) 660px, (min-width: 1024px) 50vw, 100vw"
             />
