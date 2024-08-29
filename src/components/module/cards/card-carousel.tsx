@@ -54,13 +54,6 @@ export default function CardCarousel(props: { module: ModuleData }) {
                             </div>
                           </div>
                         )}
-                        <div className="h-10 lg:hidden">
-                          <SanityImage
-                            image={card.image}
-                            className="h-full w-full"
-                            sizes="40px"
-                          ></SanityImage>
-                        </div>
                       </div>
                     </div>
 
