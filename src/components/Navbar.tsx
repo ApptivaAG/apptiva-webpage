@@ -10,6 +10,13 @@ import MainNav from './main-nav'
 import MobileNav from './mobile-nav'
 import Button from './ui/button'
 
+type NavbarCTALink = {
+  type: 'cta-link'
+  title: string
+  href: string
+  text: string
+}
+
 type NavbarItemSimpleLink = {
   type: 'link'
   title: string
@@ -22,7 +29,10 @@ type NavbarItemLinkWithMedia = {
   text: string
   icon: any
 }
-type NavbarItemLink = NavbarItemSimpleLink | NavbarItemLinkWithMedia
+type NavbarItemLink =
+  | NavbarItemSimpleLink
+  | NavbarItemLinkWithMedia
+  | NavbarCTALink
 type NavbarItemMenu = {
   type: 'menu'
   title: string
@@ -98,8 +108,9 @@ export const navbarData: NavbarItem[] = [
       },
       {
         title: 'Kostenlose Demo buchen',
-        href: '/angebot/chatbots',
-        type: 'link',
+        text: 'Kostenlose Demo buchen',
+        href: '/angebot/chatbots/demo-vereinbaren',
+        type: 'cta-link',
       },
     ],
   },
