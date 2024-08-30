@@ -13,6 +13,7 @@ import {
   NavigationMenuViewport,
 } from './ui/navigation-menu'
 import { useEffect, useState } from 'react'
+import Button from './ui/button'
 
 const MainNav = () => {
   const [initialMount, setInitialMount] = useState<true | undefined>(true)
@@ -31,9 +32,9 @@ const MainNav = () => {
                 {item.items && (
                   <NavigationMenuContent
                     forceMount={initialMount}
-                    className="full flex-r left-0 right-0 top-0 flex bg-primary-dark p-2"
+                    className="full left-0 right-0 top-0 grid grid-cols-2 bg-primary-dark p-2"
                   >
-                    <div className="basis-1/2 p-4 align-middle">
+                    <div className="p-4 align-middle">
                       {item.items
                         .filter((item) => item.type === 'media-link')
                         .map((subitem) => (
@@ -57,7 +58,7 @@ const MainNav = () => {
                           </Link>
                         ))}
                     </div>
-                    <div className="basis-1/2 self-center p-4">
+                    <div className="col-start-2 self-center p-4">
                       {item.items
                         .filter((item) => item.type === 'link')
                         .map((subitem) => (
@@ -72,7 +73,8 @@ const MainNav = () => {
                           </Link>
                         ))}
                     </div>
-                    <div className="basis-1">
+
+                    <div className="col-start-2 justify-end px-4 pb-2">
                       {item.items
                         .filter((item) => item.type === 'cta-link')
                         .map((subitem) => (
@@ -82,7 +84,11 @@ const MainNav = () => {
                             className="rounded-md align-middle hover:bg-primary-light/10"
                           >
                             <div className="flex flex-col justify-end">
-                              <span className="pb-1 pt-1">{subitem.title}</span>
+                              {/* <span className="pb-1 pt-1">{subitem.title}</span> */}
+
+                              <Button intent="secondary">
+                                {subitem.title}
+                              </Button>
                             </div>
                           </Link>
                         ))}
