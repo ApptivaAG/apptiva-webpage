@@ -31,32 +31,33 @@ const MainNav = () => {
                 {item.items && (
                   <NavigationMenuContent
                     forceMount={initialMount}
-                    className="full flex-r left-0 right-0 top-0 flex bg-primary-dark p-2"
+                    className="full left-0 right-0 top-0 flex bg-primary-dark p-2"
                   >
-                    <div className="basis-1/2 content-end">
+                    <div className="basis-1/2 p-4 align-middle">
                       {item.items
                         .filter((item) => item.type === 'media-link')
                         .map((subitem) => (
                           <Link
                             href={subitem.href}
                             key={subitem.href}
-                            className="flex flex-col rounded-md p-2 px-6 align-bottom hover:bg-primary-light/10"
+                            className="flex flex-col items-center rounded-md p-2 align-bottom hover:basis-1/2 hover:bg-primary-light/10"
                           >
                             <Image
                               src={subitem.icon}
                               alt={subitem.title}
-                              className="aspect-square size-32 object-contain object-center py-2"
+                              className="aspect-square size-32 object-contain py-2"
                             />
-                            <div className="flex flex-col justify-center pr-2">
+
+                            <div className="flex flex-col items-center pr-2 text-center">
                               <span className="pb-1">{subitem.title}</span>
-                              <small className="leading-normal">
+                              <small className="items-center leading-normal">
                                 {subitem.text}
                               </small>
                             </div>
                           </Link>
                         ))}
                     </div>
-                    <div className="basis-1/2 self-center">
+                    <div className="basis-1/2 self-center p-4">
                       {item.items
                         .filter((item) => item.type === 'link')
                         .map((subitem) => (
