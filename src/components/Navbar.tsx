@@ -42,7 +42,7 @@ type NavbarItemMenu = {
 type NavbarItem = NavbarItemLink | NavbarItemMenu
 export const navbarData: NavbarItem[] = [
   {
-    title: 'Entwicklung',
+    title: 'Development',
     type: 'menu',
     items: [
       {
