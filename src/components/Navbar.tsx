@@ -52,30 +52,39 @@ export const navbarData: NavbarItem[] = [
         icon: developmentIcon,
         type: 'media-link',
       },
-
+      {
+        title: 'Webentwicklung',
+        href: '/angebot/development/webentwicklung',
+        type: 'link',
+      },
+      {
+        title: 'App Entwicklung',
+        href: '/angebot/development/app-entwicklung',
+        type: 'link',
+      },
       {
         title: 'Schnittstellen',
-        href: '/angebot/chatbots',
+        href: '/angebot/development/schnittstellen',
         type: 'link',
       },
       {
         title: 'Konfiguratoren',
-        href: '/angebot/chatbots',
+        href: '/angebot/development/konfiguratoren',
         type: 'link',
       },
       {
         title: 'Webshops',
-        href: '/angebot/chatbots',
+        href: '/angebot/development/webshops',
         type: 'link',
       },
       {
         title: 'Digitalisierung',
-        href: '/angebot/chatbots',
+        href: '/angebot/development/digitalisierung',
         type: 'link',
       },
       {
         title: 'Weiterentwicklung',
-        href: '/angebot/chatbots',
+        href: '/angebot/development/weiterentwicklung',
         type: 'link',
       },
     ],
@@ -92,8 +101,18 @@ export const navbarData: NavbarItem[] = [
         type: 'media-link',
       },
       {
+        title: 'Content Management System',
+        href: '/angebot/chatbots/chatbot-content-management',
+        type: 'link',
+      },
+      {
+        title: 'Live-Chat',
+        href: '/angebot/chatbots/live-chat',
+        type: 'link',
+      },
+      {
         title: 'Analytics',
-        href: '/angebot/chatbots',
+        href: '/angebot/chatbots/chatbot-analytics',
         type: 'link',
       },
       {
@@ -103,7 +122,7 @@ export const navbarData: NavbarItem[] = [
       },
       {
         title: 'Technologie',
-        href: '/angebot/chatbots',
+        href: '/angebot/chatbots/technologie',
         type: 'link',
       },
       {
@@ -124,28 +143,28 @@ export const navbarData: NavbarItem[] = [
       {
         title: 'Wissen',
         text: 'Gemeinsam realisieren wir deine individuelle Softwarelösung.',
-        href: '/angebot/development',
+        href: '/wissen',
         icon: developmentIcon,
         type: 'media-link',
       },
       {
         title: 'Blog',
-        href: '/angebot/development',
+        href: '/blog',
         type: 'link',
       },
       {
         title: 'Apptiva Lernt',
-        href: '/angebot/chatbots',
+        href: '/apptiva-lernt',
         type: 'link',
       },
       {
         title: 'Glossar',
-        href: '/angebot/chatbots',
+        href: '/glossar',
         type: 'link',
       },
       {
         title: 'Workshops',
-        href: '/angebot/chatbots',
+        href: '/angebot/workshops',
         type: 'link',
       },
     ],

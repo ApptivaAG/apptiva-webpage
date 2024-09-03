@@ -37,10 +37,12 @@ const MainNav = () => {
                     <div className="p-4 align-middle">
                       {item.items
                         .filter((item) => item.type === 'media-link')
-                        .map((subitem) => (
+                        .map((subitem, index) => (
                           <Link
                             href={subitem.href}
-                            key={subitem.href}
+                            key={
+                              subitem.href + ' ' + subitem.title + ' ' + index
+                            }
                             className="flex flex-col items-center rounded-md p-2 align-bottom hover:basis-1/2 hover:bg-primary-light/10"
                           >
                             <Image
@@ -58,13 +60,15 @@ const MainNav = () => {
                           </Link>
                         ))}
                     </div>
-                    <div className="col-start-2 self-center p-4">
+                    <div className="col-start-2 self-center p-2">
                       {item.items
                         .filter((item) => item.type === 'link')
-                        .map((subitem) => (
+                        .map((subitem, index) => (
                           <Link
                             href={subitem.href}
-                            key={subitem.href}
+                            key={
+                              subitem.href + ' ' + subitem.title + ' ' + index
+                            }
                             className="rounded-md align-middle hover:bg-primary-light/10"
                           >
                             <div className="flex flex-col justify-end">
@@ -77,10 +81,12 @@ const MainNav = () => {
                     <div className="col-start-2 justify-end px-4 pb-2">
                       {item.items
                         .filter((item) => item.type === 'cta-link')
-                        .map((subitem) => (
+                        .map((subitem, index) => (
                           <Link
                             href={subitem.href}
-                            key={subitem.href}
+                            key={
+                              subitem.href + ' ' + subitem.title + ' ' + index
+                            }
                             className="rounded-md align-middle hover:bg-primary-light/10"
                           >
                             <div className="flex flex-col justify-end">
