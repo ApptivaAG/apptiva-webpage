@@ -122,7 +122,7 @@ export default function Footer() {
           </div>
         </div>
       </footer>
-      <div className="sticky bottom-0 flex min-h-svh flex-col justify-end">
+      <div className="flex min-h-svh flex-col justify-end md:sticky md:bottom-0">
         <div className="flex flex-1 flex-col justify-end bg-gradient-to-br from-primary-light to-primary-dark bg-300% py-4">
           <p className="mx-auto my-16 max-w-[47rem] px-12 text-3xl font-bold text-base-white md:text-4xl lg:text-6xl">
             <RandomText />
