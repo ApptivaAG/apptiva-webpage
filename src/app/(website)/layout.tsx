@@ -58,7 +58,8 @@ export default function RootLayout({
       </head>
       <body className="text-lg">
         <Navbar />
-        <main className="content">{children}</main>
+        {/* The main content has to be higher in the z-index, so that the content coming after the footer is behind the main content */}
+        <main className="content relative z-10 bg-base-white">{children}</main>
         <Footer />
         {draftMode().isEnabled ? (
           <LiveVisualEditing />
