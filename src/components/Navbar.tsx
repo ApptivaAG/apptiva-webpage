@@ -5,6 +5,7 @@ import NextLink from 'next/link'
 import chatbotsIconPrimary from './chatbots-primary.svg'
 import chatbotsIcon from './chatbots.svg'
 import developmentIcon from './development.svg'
+import wissenIcon from './icon-wissen.svg'
 import apptivaLogo from './logo.svg'
 import MainNav from './main-nav'
 import MobileNav from './mobile-nav'
@@ -141,10 +142,10 @@ export const navbarData: NavbarItem[] = [
     items: [
       // Blog, Apptiva lernt, Glossar, Workshops
       {
-        title: 'Wissen',
-        text: 'Gemeinsam realisieren wir deine individuelle Softwarelösung.',
+        title: 'Know-How',
+        text: 'Wissen wird bei uns gross geschrieben.',
         href: '/wissen',
-        icon: developmentIcon,
+        icon: wissenIcon,
         type: 'media-link',
       },
       {
