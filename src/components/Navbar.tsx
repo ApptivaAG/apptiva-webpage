@@ -163,11 +163,11 @@ export const navbarData: NavbarItem[] = [
         href: '/glossar',
         type: 'link',
       },
-      {
-        title: 'Workshops',
-        href: '/angebot/workshops',
-        type: 'link',
-      },
+      // {
+      //   title: 'Workshops',
+      //   href: '/angebot/workshops',
+      //   type: 'link',
+      // },
     ],
   },
 ]
