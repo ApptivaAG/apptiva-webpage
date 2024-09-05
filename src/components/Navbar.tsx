@@ -46,7 +46,7 @@ const Navbar = () => (
       <MainNav />
       <MobileNav />
 
-      <NextLink href={'/kontakt/'} className="hidden md:block">
+      <NextLink href={'/kontakt'} className="hidden md:block">
         <Button element="div" intent="secondary">
           Kontakt
         </Button>
