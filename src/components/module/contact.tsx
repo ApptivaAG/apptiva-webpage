@@ -21,7 +21,7 @@ export default function Contact(props: { module: ModuleData }) {
   const getContactPersonOfWeekday = () => {
     const contactablePersons = getPersonsExcludingNames({
       persons: module.persons,
-      names: ['brigitte', 'sarah', 'patrik', 'kevin'],
+      names: ['brigitte', 'sarah', 'patrik', 'kevin', 'alondra'],
     })
 
     const getRandomPerson = (persons: typeof module.persons) =>
