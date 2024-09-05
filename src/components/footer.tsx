@@ -137,7 +137,7 @@ export default function Footer() {
           ref={ref}
         ></div>
         <div
-          className={`${!inView ? 'fixed' : 'relative'} left-0 right-0 top-0 z-0 flex min-h-svh flex-col justify-end`}
+          className={`${!inView ? 'fixed' : 'relative'} left-0 right-0 top-0 z-0 flex min-h-lvh flex-col justify-end`}
         >
           <div className="flex flex-1 flex-col justify-end bg-gradient-to-br from-primary-light to-primary-dark bg-300% py-4">
             <p className="mx-auto my-36 max-w-[47rem] px-12 text-3xl font-bold text-base-white md:text-4xl lg:text-6xl">
