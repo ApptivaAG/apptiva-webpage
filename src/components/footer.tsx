@@ -16,7 +16,7 @@ import whatsApp from './whatsapp.svg'
 export default function Footer() {
   const { ref, inView } = useInView({
     rootMargin: '300% 0px 0px 0px',
-    threshold: 1,
+    threshold: 0,
   })
 
   return (
@@ -132,9 +132,9 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="absolute z-20 flex h-svh w-px flex-col">
+        <div className="absolute z-20 ml-[50vw] flex h-svh w-px flex-col">
           <div className="flex-1"></div>
-          <div ref={ref}></div>
+          <div className="h-0.5" ref={ref}></div>
         </div>
         <div
           className={`${!inView ? 'fixed' : 'relative'} left-0 right-0 top-0 z-0 flex min-h-lvh flex-col justify-end`}
