@@ -132,7 +132,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="absolute z-20 ml-[50vw] flex h-svh w-px flex-col">
+        <div className="absolute z-20 ml-[50vw] flex h-lvh w-px flex-col">
           <div className="flex-1"></div>
           <div className="h-0.5" ref={ref}></div>
         </div>
