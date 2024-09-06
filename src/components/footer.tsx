@@ -132,10 +132,10 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div
-          className="absolute z-20 h-svh w-px border-b-4 border-b-base-white bg-secondary"
-          ref={ref}
-        ></div>
+        <div className="absolute z-20 flex h-svh w-px flex-col">
+          <div className="flex-1"></div>
+          <div ref={ref}></div>
+        </div>
         <div
           className={`${!inView ? 'fixed' : 'relative'} left-0 right-0 top-0 z-0 flex min-h-lvh flex-col justify-end`}
         >
