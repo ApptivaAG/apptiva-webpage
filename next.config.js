@@ -16,7 +16,6 @@ const config = {
       },
     ],
   },
-  eslint: { ignoreDuringBuilds: true },
   experimental: {
     outputFileTracingIncludes: {
       '/blog': ['./content/blog/**/*'],
