@@ -121,11 +121,11 @@ export const navbarData: NavbarItem[] = [
         href: '/angebot/chatbots',
         type: 'link',
       },
-      {
-        title: 'Technologie',
-        href: '/angebot/chatbots/technologie',
-        type: 'link',
-      },
+      // {
+      //   title: 'Technologie',
+      //   href: '/angebot/chatbots/technologie',
+      //   type: 'link',
+      // },
       {
         title: 'Kostenlose Demo buchen',
         text: 'Kostenlose Demo buchen',
