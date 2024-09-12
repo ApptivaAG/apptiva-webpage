@@ -18,7 +18,10 @@ export default function CardCarousel(props: { module: ModuleData }) {
 
   return (
     <>
-      <Section intent={moduleStyleToSectionIntent(module.style)}>
+      <Section
+        intent={moduleStyleToSectionIntent(module.style)}
+        id={encodeURIComponent(module.title)}
+      >
         <div className="content space-y-4 lg:space-y-6">
           <Heading level={2} size={3}>
             {module.title}

@@ -16,7 +16,11 @@ export default function Team(props: { module: ModuleData }) {
   ]
 
   return (
-    <section key={module._key} className="full py-8 text-primary lg:py-28">
+    <section
+      key={module._key}
+      id={encodeURIComponent(module.title)}
+      className="full py-8 text-primary lg:py-28"
+    >
       <div className="content">
         <Heading level={3}>{module.title}</Heading>
         {module.introduction && (

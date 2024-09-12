@@ -14,12 +14,13 @@ export default function PricesImproved(props: { module: ModuleData }) {
 
   return (
     <section
+      id={encodeURIComponent(module.title)}
       key={module._key}
       className="full bg-base-grey py-8 text-primary lg:py-28"
     >
       <div className="content">
         <div className="space-y-20">
-          <div className="flex flex-wrap gap-x-32 gap-y-8 ">
+          <div className="flex flex-wrap gap-x-32 gap-y-8">
             <Heading level={3} size={3} className="text-center">
               {module.title}
             </Heading>
@@ -39,7 +40,7 @@ export default function PricesImproved(props: { module: ModuleData }) {
                 {/* upper part: blue or green */}
                 <div
                   className={
-                    'relative row-span-1 row-start-1 flex w-full flex-col items-center justify-center rounded-lg border-secondary p-10   ' +
+                    'relative row-span-1 row-start-1 flex w-full flex-col items-center justify-center rounded-lg border-secondary p-10 ' +
                     (index % 2
                       ? 'border-secondary bg-secondary text-primary'
                       : 'bg-primary text-base-white')
@@ -49,8 +50,8 @@ export default function PricesImproved(props: { module: ModuleData }) {
                   {price.isFavourite && (
                     <div
                       className={cn(
-                        'absolute -top-6 line-clamp-2 flex justify-items-center rounded-full bg-primary  px-7 py-3 text-base-white',
-                        !(index % 2) && ' border bg-primary'
+                        'absolute -top-6 line-clamp-2 flex justify-items-center rounded-full bg-primary px-7 py-3 text-base-white',
+                        !(index % 2) && 'border bg-primary'
                       )}
                     >
                       <TbUserHeart className="h-5 w-5 shrink-0 transition-transform duration-200" />

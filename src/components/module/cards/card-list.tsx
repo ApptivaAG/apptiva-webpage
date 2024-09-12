@@ -22,6 +22,7 @@ export default function CardList(props: { module: ModuleData }) {
     <Section
       intent={moduleStyleToSectionIntent(module.style)}
       level={isLevel(1) ? 'one' : 'two'}
+      id={encodeURIComponent(module.title)}
     >
       <div className="content">
         <div className="col-left">

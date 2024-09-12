@@ -22,11 +22,13 @@ export default function Section(
   props: VariantProps<typeof sectionStyle> & {
     children: React.ReactNode
     className?: string
+    id?: string
   }
 ) {
   return (
     <>
       <section
+        id={props.id}
         className={cn(
           sectionStyle({ intent: props.intent, level: props.level }),
           props.className

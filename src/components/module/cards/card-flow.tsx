@@ -20,6 +20,7 @@ export default function CardFlow(props: { module: ModuleData }) {
       <Section
         intent={moduleStyleToSectionIntent(module.style)}
         level={isLevel(1) ? 'one' : 'two'}
+        id={encodeURIComponent(module.title)}
       >
         <div className="content gap-y-7 lg:gap-y-14">
           {isLevel(2) && (

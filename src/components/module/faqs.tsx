@@ -19,6 +19,7 @@ export default function FAQs(props: { module: ModuleData }) {
       <Section
         intent={moduleStyleToSectionIntent(module.style)}
         level={isLevel(2) ? 'two' : 'one'}
+        id={encodeURIComponent(module.title)}
       >
         <div className="content">
           <Heading
