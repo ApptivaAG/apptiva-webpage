@@ -21,9 +21,9 @@ export default function CardFlow(props: { module: ModuleData }) {
         intent={moduleStyleToSectionIntent(module.style)}
         level={isLevel(1) ? 'one' : 'two'}
       >
-        <div className="content">
+        <div className="content gap-y-7 lg:gap-y-14">
           {isLevel(2) && (
-            <hr className="text-primary max-lg:hidden lg:-translate-y-12 " />
+            <hr className="text-primary max-lg:hidden lg:-translate-y-12" />
           )}
           {module.title && (
             <Heading
@@ -35,7 +35,7 @@ export default function CardFlow(props: { module: ModuleData }) {
             </Heading>
           )}
           {module.content && (
-            <div className="col-right mb-8 max-lg:mt-4 lg:mb-20">
+            <div className="col-right">
               <PortableText value={module.content} />
             </div>
           )}
