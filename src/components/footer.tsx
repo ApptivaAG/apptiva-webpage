@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 import Heading from './heading'
 import lbv from './lehrbetrieb-vignette.png'
@@ -278,6 +278,15 @@ export default function Footer() {
 }
 
 const RandomText = React.memo(() => {
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  if (!isClient) {
+    return null
+  }
   switch (Math.floor(Math.random() * 5) as 0 | 1 | 2 | 3 | 4) {
     case 0:
       return (
