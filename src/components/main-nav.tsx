@@ -43,7 +43,7 @@ const MainNav = () => {
                             key={
                               subitem.href + ' ' + subitem.title + ' ' + index
                             }
-                            className="flex flex-col items-center rounded-md p-2 align-bottom hover:basis-1/2 hover:bg-primary-light/10"
+                            className="flex flex-col items-center rounded-md border border-base-white/10 p-2 py-6 align-bottom hover:basis-1/2 hover:bg-primary-light/10"
                           >
                             <Image
                               src={subitem.icon}
@@ -60,8 +60,7 @@ const MainNav = () => {
                           </Link>
                         ))}
                     </div>
-                    {/* <div className="col-start-2 p-2 py-6"> */}
-                    <div className="col-start-2 self-center p-2">
+                    <div className="col-start-2 p-2 py-2">
                       {item.items
                         .filter((item) => item.type === 'link')
                         .map((subitem, index) => (
