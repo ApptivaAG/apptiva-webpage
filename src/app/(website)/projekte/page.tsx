@@ -6,10 +6,11 @@ import ProjectList from './list'
 import ProjectsPreview from './preview'
 
 const url = '/projekte'
-const title = 'Unsere Referenzprojekte'
+const title = 'Erfolgsprojekte: Softwarelösungen und Chatbots im Einsatz'
 export const metadata: Metadata = {
   title,
-  description: 'Eine Auswahl unserer Projekte der letzten 10 Jahre.',
+  description:
+    'Lass dich von unseren Referenzen inspirieren! Seit über 10 Jahren entwickeln wir Softwarelösungen und Chatbots für Kund:innen aus verschiedensten Branchen.',
   alternates: { canonical: url },
   openGraph: {
     title,

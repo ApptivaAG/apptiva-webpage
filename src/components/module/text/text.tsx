@@ -12,6 +12,7 @@ export default function Text(props: { module: ModuleData }) {
 
   return (
     <Section
+      id={encodeURIComponent(module.title)}
       intent={moduleStyleToSectionIntent(module.style)}
       level={isLevel(2) ? 'two' : 'one'}
     >

@@ -16,6 +16,7 @@ export default function TextWithImageTwoCol(props: { module: ModuleData }) {
 
   return (
     <Section
+      id={encodeURIComponent(module.title)}
       intent={moduleStyleToSectionIntent(module.style)}
       level={module.level === 2 ? 'two' : 'one'}
     >

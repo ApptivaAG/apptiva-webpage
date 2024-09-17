@@ -10,13 +10,12 @@ export default async function Hero() {
     'homepage',
   ])
 
-  // const { claim } = published ?? { claim: undefined }
   return (
     <div className="full mt-[-8rem] min-h-fit animate-gradient items-center bg-gradient-to-br from-primary-light to-primary-dark bg-300% py-44 text-base-white">
       {isEnabled ? (
-        <Content claim={published} />
-      ) : (
         <HeroPreview initial={draft} />
+      ) : (
+        <Content claim={published} />
       )}
     </div>
   )

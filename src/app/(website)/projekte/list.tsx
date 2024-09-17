@@ -6,6 +6,7 @@ import { ProjectTeaser } from './projekt-teaser'
 import { ProjectQueryData } from './types'
 import Button from '@/components/ui/button'
 import { useState } from 'react'
+import Link from 'next/link'
 
 export default function ProjectList(props: { projects: ProjectQueryData[] }) {
   // const topics = ['Alle', 'App Entwicklung', 'Webentwicklung', 'Chatbots']
@@ -30,11 +31,17 @@ export default function ProjectList(props: { projects: ProjectQueryData[] }) {
       <PageHeader
         title={
           <>
-            Unsere <Underline>Referenzprojekte</Underline>
+            Erfolgsprojekte: <Underline>Softwarelösungen</Underline> und{' '}
+            <Underline>Chatbots</Underline> im Einsatz
           </>
         }
-        lead="Eine Auswahl unserer Projekte der letzten 10 Jahre."
+        lead="Lass dich von unseren Referenzen inspirieren! Seit über 10 Jahren entwickeln wir Softwarelösungen und Chatbots für Kund:innen aus verschiedensten Branchen."
         links={[{ name: 'Projekte', href: '/projekte' }]}
+        callToAction={
+          <Link href="/kontakt">
+            <Button intent="secondary">Was ist deine Idee?</Button>
+          </Link>
+        }
       />
       <div className="flex flex-wrap gap-4 pt-8 lg:pt-16">
         {topics.map((topic) => (
