@@ -118,7 +118,7 @@ export const navbarData: NavbarItem[] = [
       },
       {
         title: 'Preise',
-        href: '/angebot/chatbots',
+        href: '/angebot/chatbots#Was%20kostet%20ein%20Chatbot%3F',
         type: 'link',
       },
       // {
@@ -142,8 +142,8 @@ export const navbarData: NavbarItem[] = [
     items: [
       // Blog, Apptiva lernt, Glossar, Workshops
       {
-        title: 'Know-How',
-        text: 'Wissen wird bei uns gross geschrieben.',
+        title: 'Wissen',
+        text: 'Know-how wird bei uns gross geschrieben.',
         href: '/wissen',
         icon: wissenIcon,
         type: 'media-link',

@@ -15,7 +15,7 @@ import Glossar from './glossary'
 import KnowledgePreview from './preview'
 
 const meta = {
-  title: 'Wissen wird bei uns gross geschrieben.',
+  title: 'Know-how wird bei uns gross geschrieben.',
   description:
     'In unseren wöchentlichen Wissensaustausch-Sitzungen vermitteln wir untereinander abwechselnd neues Wissen. Unser Ziel ist es, dieses Wissen zu teilen und nicht für uns zu behalten. Deshalb haben wir es für dich aufgeschrieben.',
 }
@@ -152,7 +152,7 @@ export default async function Knowledge() {
       <PageHeader
         title={
           <>
-            <Underline>Wissen</Underline> wird bei uns{' '}
+            <Underline>Know-how</Underline> wird bei uns{' '}
             <Underline>gross</Underline> geschrieben.
           </>
         }

@@ -60,7 +60,7 @@ const MainNav = () => {
                           </Link>
                         ))}
                     </div>
-                    <div className="col-start-2 p-2 py-2">
+                    <div className="col-start-2 p-2 py-4">
                       {item.items
                         .filter((item) => item.type === 'link')
                         .map((subitem, index) => (
