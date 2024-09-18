@@ -60,7 +60,7 @@ const MainNav = () => {
                           </Link>
                         ))}
                     </div>
-                    <div className="col-start-2 flex flex-col p-2 py-4">
+                    <div className="col-start-2 flex flex-col pb-4 pr-4 pt-2">
                       <>
                         {item.items
                           .filter((item) => item.type === 'link')
@@ -73,7 +73,7 @@ const MainNav = () => {
                               className="rounded-md align-middle hover:bg-primary-light/10"
                             >
                               <div className="flex flex-col justify-end">
-                                <span className="pb-1 pt-1">
+                                <span className="px-2 py-1">
                                   {subitem.title}
                                 </span>
                               </div>
@@ -92,7 +92,7 @@ const MainNav = () => {
                                   ' ' +
                                   index
                                 }
-                                className="mt-auto rounded-md pr-2 hover:bg-primary-light/10"
+                                className="ml-2 mt-auto rounded-md hover:bg-primary-light/10"
                               >
                                 <Button intent="secondary" className="w-full">
                                   {subitem.title}
