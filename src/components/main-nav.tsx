@@ -60,46 +60,52 @@ const MainNav = () => {
                           </Link>
                         ))}
                     </div>
-                    <div className="col-start-2 p-2 py-4">
-                      {item.items
-                        .filter((item) => item.type === 'link')
-                        .map((subitem, index) => (
-                          <Link
-                            href={subitem.href}
-                            key={
-                              subitem.href + ' ' + subitem.title + ' ' + index
-                            }
-                            className="rounded-md align-middle hover:bg-primary-light/10"
-                          >
-                            <div className="flex flex-col justify-end">
-                              <span className="pb-1 pt-1">{subitem.title}</span>
-                            </div>
-                          </Link>
-                        ))}
-                    </div>
-                    {item.items.find((item) => item.type === 'cta-link') && (
-                      <div className="col-start-2 max-w-fit px-2 pb-6">
+                    <div className="col-start-2 flex flex-col p-2 py-4">
+                      <>
                         {item.items
-                          .filter((item) => item.type === 'cta-link')
+                          .filter((item) => item.type === 'link')
                           .map((subitem, index) => (
                             <Link
                               href={subitem.href}
                               key={
                                 subitem.href + ' ' + subitem.title + ' ' + index
                               }
-                              className="rounded-md hover:bg-primary-light/10"
+                              className="rounded-md align-middle hover:bg-primary-light/10"
                             >
-                              <div className="flex flex-col">
-                                {/* <span className="pb-1 pt-1">{subitem.title}</span> */}
-
-                                <Button intent="secondary">
+                              <div className="flex flex-col justify-end">
+                                <span className="pb-1 pt-1">
                                   {subitem.title}
-                                </Button>
+                                </span>
                               </div>
                             </Link>
                           ))}
-                      </div>
-                    )}
+                        {item.items.find(
+                          (item) => item.type === 'cta-link'
+                        ) && (
+                          <div className="col-start-2 max-w-fit">
+                            {item.items
+                              .filter((item) => item.type === 'cta-link')
+                              .map((subitem, index) => (
+                                <Link
+                                  href={subitem.href}
+                                  key={
+                                    subitem.href +
+                                    ' ' +
+                                    subitem.title +
+                                    ' ' +
+                                    index
+                                  }
+                                  className="rounded-md hover:bg-primary-light/10"
+                                >
+                                  <Button intent="secondary">
+                                    {subitem.title}
+                                  </Button>
+                                </Link>
+                              ))}
+                          </div>
+                        )}
+                      </>
+                    </div>
                   </NavigationMenuContent>
                 )}
               </>
