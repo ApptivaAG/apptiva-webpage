@@ -1,9 +1,10 @@
-import Section from '@/components/section'
 import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
+import Section from '@/components/section'
 import StyledPortableText from '@/components/styled-portable-text'
 import { ModuleData } from '@/sanity/lib/queries'
 import { cn } from '@/utils/cn'
+import { formatIds } from '@/utils/format-ids'
 import { PortableText } from '@portabletext/react'
 import { Card } from '../../ui/card'
 import { moduleStyleToSectionIntent } from '../utils'
@@ -20,7 +21,7 @@ export default function CardFlow(props: { module: ModuleData }) {
       <Section
         intent={moduleStyleToSectionIntent(module.style)}
         level={isLevel(1) ? 'one' : 'two'}
-        id={encodeURIComponent(module.title)}
+        id={formatIds(module.title)}
       >
         <div className="content gap-y-7 lg:gap-y-14">
           {isLevel(2) && (

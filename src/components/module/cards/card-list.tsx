@@ -7,8 +7,8 @@ import {
   AccordionContent,
   AccordionItem,
 } from '@/components/ui/accordion'
-import UnderlineForLink from '@/components/ui/underline-for-link'
 import { ModuleData } from '@/sanity/lib/queries'
+import { formatIds } from '@/utils/format-ids'
 import { PortableText } from '@portabletext/react'
 import { PiMinusCircle, PiPlusCircle } from 'react-icons/pi'
 import { Card } from '../../ui/card'
@@ -22,7 +22,7 @@ export default function CardList(props: { module: ModuleData }) {
     <Section
       intent={moduleStyleToSectionIntent(module.style)}
       level={isLevel(1) ? 'one' : 'two'}
-      id={encodeURIComponent(module.title)}
+      id={formatIds(module.title)}
     >
       <div className="content">
         <div className="col-left">

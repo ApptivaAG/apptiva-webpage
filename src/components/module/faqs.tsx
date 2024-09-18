@@ -1,5 +1,6 @@
 import Heading from '@/components/heading'
 import { ModuleData } from '@/sanity/lib/queries'
+import { formatIds } from '@/utils/format-ids'
 import { PortableText } from '@portabletext/react'
 import FAQsComponent from '../faqs'
 import Section from '../section'
@@ -19,7 +20,7 @@ export default function FAQs(props: { module: ModuleData }) {
       <Section
         intent={moduleStyleToSectionIntent(module.style)}
         level={isLevel(2) ? 'two' : 'one'}
-        id={encodeURIComponent(module.title)}
+        id={formatIds(module.title)}
       >
         <div className="content">
           <Heading

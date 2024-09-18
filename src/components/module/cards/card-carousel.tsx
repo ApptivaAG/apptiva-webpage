@@ -8,6 +8,7 @@ import {
   CarouselItem,
 } from '@/components/ui/carousel'
 import { ModuleData } from '@/sanity/lib/queries'
+import { formatIds } from '@/utils/format-ids'
 import { PortableText } from '@portabletext/react'
 import { Card } from '../../ui/card'
 import { moduleStyleToSectionIntent } from '../utils'
@@ -20,7 +21,7 @@ export default function CardCarousel(props: { module: ModuleData }) {
     <>
       <Section
         intent={moduleStyleToSectionIntent(module.style)}
-        id={encodeURIComponent(module.title)}
+        id={formatIds(module.title)}
       >
         <div className="content space-y-4 lg:space-y-6">
           <Heading level={2} size={3}>

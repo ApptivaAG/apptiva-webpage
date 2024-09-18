@@ -1,4 +1,5 @@
 import { ModuleData } from '@/sanity/lib/queries'
+import { formatIds } from '@/utils/format-ids'
 import Link from 'next/link'
 import Heading from '../heading'
 import SanityImage from '../sanity-image'
@@ -18,7 +19,7 @@ export default function Team(props: { module: ModuleData }) {
   return (
     <section
       key={module._key}
-      id={encodeURIComponent(module.title)}
+      id={formatIds(module.title)}
       className="full py-8 text-primary lg:py-28"
     >
       <div className="content">

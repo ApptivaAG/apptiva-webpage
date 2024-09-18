@@ -1,9 +1,10 @@
-import Section from '@/components/section'
 import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
+import Section from '@/components/section'
+import StyledPortableText from '@/components/styled-portable-text'
 import { ModuleData } from '@/sanity/lib/queries'
 import { cn } from '@/utils/cn'
-import StyledPortableText from '@/components/styled-portable-text'
+import { formatIds } from '@/utils/format-ids'
 import { vercelStegaCleanAll } from '@sanity/client/stega'
 import { moduleStyleToSectionIntent } from '../../utils'
 
@@ -16,7 +17,7 @@ export default function TextWithImageTwoCol(props: { module: ModuleData }) {
 
   return (
     <Section
-      id={encodeURIComponent(module.title)}
+      id={formatIds(module.title)}
       intent={moduleStyleToSectionIntent(module.style)}
       level={module.level === 2 ? 'two' : 'one'}
     >

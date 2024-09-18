@@ -118,7 +118,7 @@ export const navbarData: NavbarItem[] = [
       },
       {
         title: 'Preise',
-        href: '/angebot/chatbots#Was%20kostet%20ein%20Chatbot%3F',
+        href: '/angebot/chatbots#Was-kostet-ein-Chatbot',
         type: 'link',
       },
       // {

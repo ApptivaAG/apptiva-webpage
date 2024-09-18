@@ -2,6 +2,7 @@ import Heading from '@/components/heading'
 import Section from '@/components/section'
 import StyledPortableText from '@/components/styled-portable-text'
 import { ModuleData } from '@/sanity/lib/queries'
+import { formatIds } from '@/utils/format-ids'
 import { moduleStyleToSectionIntent } from '../utils'
 
 export default function Text(props: { module: ModuleData }) {
@@ -12,7 +13,7 @@ export default function Text(props: { module: ModuleData }) {
 
   return (
     <Section
-      id={encodeURIComponent(module.title)}
+      id={formatIds(module.title)}
       intent={moduleStyleToSectionIntent(module.style)}
       level={isLevel(2) ? 'two' : 'one'}
     >

@@ -1,20 +1,21 @@
 import { ModuleData } from '@/sanity/lib/queries'
 
 import { cn } from '@/utils/cn'
+import { formatIds } from '@/utils/format-ids'
 import { PortableText } from '@portabletext/react'
+import NextLink from 'next/link'
 import { TbUserHeart } from 'react-icons/tb'
 import Heading from '../heading'
 import SanityImage from '../sanity-image'
 import StyledPortableText from '../styled-portable-text'
 import Button from '../ui/button'
-import NextLink from 'next/link'
 
 export default function PricesImproved(props: { module: ModuleData }) {
   const { module } = props
 
   return (
     <section
-      id={encodeURIComponent(module.title)}
+      id={formatIds(module.title)}
       key={module._key}
       className="full bg-base-grey py-8 text-primary lg:py-28"
     >

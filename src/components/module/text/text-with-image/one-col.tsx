@@ -3,6 +3,7 @@ import SanityImage from '@/components/sanity-image'
 import Section from '@/components/section'
 import StyledPortableText from '@/components/styled-portable-text'
 import { ModuleData } from '@/sanity/lib/queries'
+import { formatIds } from '@/utils/format-ids'
 import { moduleStyleToSectionIntent } from '../../utils'
 
 export default function TextWithImageOneCol(props: { module: ModuleData }) {
@@ -12,7 +13,7 @@ export default function TextWithImageOneCol(props: { module: ModuleData }) {
 
   return (
     <Section
-      id={encodeURIComponent(module.title)}
+      id={formatIds(module.title)}
       intent={moduleStyleToSectionIntent(module.style)}
       level={module.level === 2 ? 'two' : 'one'}
     >
