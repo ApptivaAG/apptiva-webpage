@@ -105,7 +105,9 @@ const MainNav = () => {
                 )}
               </>
             ) : (
-              <Link href={item.href}>{item.title}</Link>
+              <Link className="px-4 py-3" href={item.href}>
+                {item.title}
+              </Link>
             )}
           </NavigationMenuItem>
         ))}
