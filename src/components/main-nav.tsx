@@ -79,31 +79,26 @@ const MainNav = () => {
                               </div>
                             </Link>
                           ))}
-                        {item.items.find(
-                          (item) => item.type === 'cta-link'
-                        ) && (
-                          <div className="col-start-2 max-w-fit">
-                            {item.items
-                              .filter((item) => item.type === 'cta-link')
-                              .map((subitem, index) => (
-                                <Link
-                                  href={subitem.href}
-                                  key={
-                                    subitem.href +
-                                    ' ' +
-                                    subitem.title +
-                                    ' ' +
-                                    index
-                                  }
-                                  className="rounded-md hover:bg-primary-light/10"
-                                >
-                                  <Button intent="secondary">
-                                    {subitem.title}
-                                  </Button>
-                                </Link>
-                              ))}
-                          </div>
-                        )}
+                        {item.items.find((item) => item.type === 'cta-link') &&
+                          item.items
+                            .filter((item) => item.type === 'cta-link')
+                            .map((subitem, index) => (
+                              <Link
+                                href={subitem.href}
+                                key={
+                                  subitem.href +
+                                  ' ' +
+                                  subitem.title +
+                                  ' ' +
+                                  index
+                                }
+                                className="mt-auto rounded-md pr-2 hover:bg-primary-light/10"
+                              >
+                                <Button intent="secondary" className="w-full">
+                                  {subitem.title}
+                                </Button>
+                              </Link>
+                            ))}
                       </>
                     </div>
                   </NavigationMenuContent>
