@@ -22,7 +22,7 @@ const MainNav = () => {
     setInitialMount(undefined)
   }, [])
   return (
-    <NavigationMenu className="hidden lg:flex">
+    <NavigationMenu className="hidden lg:flex" delayDuration={0}>
       <NavigationMenuList>
         {navbarData.map((item, index) => (
           <NavigationMenuItem key={index} className="[&>div]:hidden">
