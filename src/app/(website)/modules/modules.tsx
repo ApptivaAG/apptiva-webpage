@@ -5,6 +5,7 @@ export default function ModuleWrapper(props: {
   data: HomepageDataQueries
   customers: React.ReactNode
   testimonials: React.ReactNode
+  partners: React.ReactNode
 }) {
   return (
     <>
@@ -14,6 +15,7 @@ export default function ModuleWrapper(props: {
           module={module}
           customers={props.customers}
           testimonials={props.testimonials}
+          partners={props.partners}
         />
       ))}
     </>

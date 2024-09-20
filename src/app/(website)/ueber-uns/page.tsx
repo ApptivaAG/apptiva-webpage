@@ -7,6 +7,7 @@ import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import About from './about'
 import AboutPreview from './preview'
+import Partners from '@/components/partners'
 
 const url = '/ueber-uns'
 
@@ -44,14 +45,21 @@ export default async function AboutPage() {
 
   const testimonials = <Testimonials />
   const customers = <Customers />
+  const partners = <Partners />
 
   return isEnabled ? (
     <AboutPreview
       initial={draft}
       customers={customers}
       testimonials={testimonials}
+      partners={partners}
     />
   ) : (
-    <About data={published} customers={customers} testimonials={testimonials} />
+    <About
+      data={published}
+      customers={customers}
+      testimonials={testimonials}
+      partners={partners}
+    />
   )
 }

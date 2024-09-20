@@ -9,6 +9,7 @@ export default function About(props: {
   data: AboutPageQueryData
   customers: React.ReactNode
   testimonials: React.ReactNode
+  partners: React.ReactNode
 }) {
   return (
     <>
@@ -24,6 +25,7 @@ export default function About(props: {
           module={module}
           customers={props.customers}
           testimonials={props.testimonials}
+          partners={props.partners}
         />
       ))}
     </>

@@ -1,5 +1,7 @@
 import Customers from '@/components/customers'
+import Partners from '@/components/partners'
 import Testimonials from '@/components/testimonials'
+
 import { homepageQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
 
@@ -14,18 +16,21 @@ export default async function ModulesPage() {
   ])
   const testimonials = <Testimonials />
   const customers = <Customers />
+  const partners = <Partners />
 
   return isEnabled ? (
     <ModulesPreview
       initial={draft}
       customers={customers}
       testimonials={testimonials}
+      partners={partners}
     />
   ) : (
     <ModuleWrapper
       data={published}
       customers={customers}
       testimonials={testimonials}
+      partners={partners}
     />
   )
 }

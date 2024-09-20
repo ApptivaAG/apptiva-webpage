@@ -32,6 +32,7 @@ export default defineType({
           { title: 'Text', value: 'text' },
           { title: 'Karten', value: 'cards' },
           { title: 'Kunden', value: 'customers' },
+          { title: 'Partner', value: 'partners' },
           { title: 'Testimonials', value: 'testimonials' },
           { title: 'Projekte', value: 'projects' },
           { title: 'Preise', value: 'prices' },

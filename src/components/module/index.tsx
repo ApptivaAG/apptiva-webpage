@@ -14,6 +14,7 @@ export default function Module(props: {
   module: ModuleData
   customers: React.ReactNode
   testimonials: React.ReactNode
+  partners: React.ReactNode
 }) {
   const { module } = props
 
@@ -23,6 +24,9 @@ export default function Module(props: {
 
     case 'customers':
       return props.customers
+
+    case 'partners':
+      return props.partners
 
     case 'testimonials':
       return props.testimonials
