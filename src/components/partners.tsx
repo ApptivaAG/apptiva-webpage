@@ -9,7 +9,7 @@ export default function Partners(props: {}) {
 
   return (
     <div className="content">
-      <Heading level={2} size={3}>
+      <Heading level={2} size={3} className="text-primary">
         Unsere Partner
       </Heading>
       <Carousel>
