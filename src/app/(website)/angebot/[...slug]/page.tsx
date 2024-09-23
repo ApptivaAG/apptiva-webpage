@@ -1,8 +1,9 @@
 import Customers from '@/components/customers'
+import Partners from '@/components/partners'
 import Testimonials from '@/components/testimonials'
+import type { Group } from '@/domain/customers'
 import { serviceBySlugQuery, servicesQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
-import type { Group } from '@/domain/customers'
 import portableTextToString from '@/utils/portable-text-to-string'
 import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
@@ -80,6 +81,8 @@ export default async function Home(props: { params: { slug: string[] } }) {
 
   const customers = <Customers groups={mapSlugToGroup(lastParam)} />
   const testimonials = <Testimonials />
+  const partners = <Partners />
+
 
   return isEnabled ? (
     <ServicePreview
@@ -87,9 +90,10 @@ export default async function Home(props: { params: { slug: string[] } }) {
       params={getLastParam(props.params)}
       customers={customers}
       testimonials={testimonials}
+      partners={partners}
     />
   ) : (
-    <ServiceDetail service={published} customers={customers} testimonials={testimonials} />
+    <ServiceDetail partners={partners} service={published} customers={customers} testimonials={testimonials} />
   )
 }
 

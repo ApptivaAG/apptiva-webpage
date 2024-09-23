@@ -11,6 +11,7 @@ export default function ServiceDetail(props: {
   service: ServiceBySlugQueryData
   customers: React.ReactNode
   testimonials: React.ReactNode
+  partners: React.ReactNode
   isPreview?: boolean
 }) {
   return (
@@ -33,7 +34,7 @@ export default function ServiceDetail(props: {
 
       {props.service.modules?.map((module) => (
         <CatchErrors key={module._key} isPreview={props.isPreview}>
-          <Module module={module} customers={props.customers} testimonials={props.testimonials} />
+          <Module partners={props.partners} module={module} customers={props.customers} testimonials={props.testimonials} />
         </CatchErrors>
       ))}
     </>
