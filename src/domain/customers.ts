@@ -52,6 +52,12 @@ const customerList = [
     group: ['chatbot'],
   },
   {
+    fileName: 'shv-logo.svg',
+    alt: 'Schweizerischer Handball-Verband',
+    height: 50,
+    group: ['chatbot'],
+  },
+  {
     fileName: 'luzerner-kantonsspital-logo.svg',
     alt: 'Luzerner Kantonsspital',
     height: 30,
