@@ -8,27 +8,17 @@ type Logo = {
 
 const partnerList = [
   {
-    fileName: 'post-logo.svg',
+    fileName: 'digital-enterprise-black.svg',
     alt: 'Digital Enterprise',
     height: 120,
   },
   {
-    fileName: 'post-logo.svg',
-    alt: 'dox42',
-    height: 120,
-  },
-  {
-    fileName: 'post-logo.svg',
-    alt: 'swisscom',
-    height: 120,
-  },
-  {
-    fileName: 'post-logo.svg',
+    fileName: 'cash-ctrl-black.png',
     alt: 'cashctrl',
     height: 120,
   },
   {
-    fileName: 'post-logo.svg',
+    fileName: 'flm-black.png',
     alt: 'flm kassen',
     height: 120,
   },
