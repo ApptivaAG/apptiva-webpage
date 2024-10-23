@@ -4,6 +4,7 @@ type Logo = {
   fileName: string
   alt: string
   height: number
+  link?: string
 }
 
 const partnerList = [
@@ -13,14 +14,16 @@ const partnerList = [
     height: 120,
   },
   {
-    fileName: 'cash-ctrl-black.png',
-    alt: 'cashctrl',
-    height: 120,
-  },
-  {
     fileName: 'flm-black.png',
     alt: 'flm kassen',
     height: 120,
+    link: 'https://www.flm.ch/',
+  },
+  {
+    fileName: 'cash-ctrl-black.png',
+    alt: 'cashctrl',
+    height: 120,
+    link: 'https://cashctrl.com/',
   },
 ] satisfies Logo[]
 
@@ -29,7 +32,7 @@ export default function getPartnerLogos() {
     const relativePath = path.join('/img/partners/', partner.fileName)
     const id = partner.fileName.replace(/\.png$/, '')
 
-    return { ...partner, id, path: relativePath }
+    return { ...partner, id, path: relativePath, link: partner.link }
   })
 
   return allPostsData
