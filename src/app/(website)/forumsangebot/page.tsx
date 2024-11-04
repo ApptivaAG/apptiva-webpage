@@ -15,7 +15,8 @@ export default async function Kontakt() {
         <div className="content">
           <div className="">
             <Heading level={2} size={3} className={'pb-5'}>
-              Forumsangebot
+              Entdecke dein Potenzial mit Chatbots: Kostenlose Analyse und
+              Beratung
             </Heading>
           </div>
           <div className="col-left max-w-2xl lg:mt-6">
@@ -31,7 +32,7 @@ export default async function Kontakt() {
             <p className="mb-4">
               Ob Kundenservice, Vertrieb oder interne Kommunikation – wir zeigen
               dir, wie du durch intelligente Automatisierung Zeit und Ressourcen
-              sparen könnt. Und das Beste daran? Die Beratung ist{' '}
+              sparen kannst. Und das Beste daran? Die Beratung ist{' '}
               <b>völlig kostenlos!</b>
             </p>
             <p className="mb-4">
