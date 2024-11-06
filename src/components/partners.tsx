@@ -27,7 +27,7 @@ export default function Partners(props: {}) {
         </Heading>
 
         <Carousel>
-          <div className="content justify-content: space-evenly flex h-[16.4rem] items-center justify-evenly">
+          <div className="content justify-content: space-evenly flex h-[16.4rem] items-center md:justify-evenly">
             {partners.map((partner: any) => {
               return (
                 <div
