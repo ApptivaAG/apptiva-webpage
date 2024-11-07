@@ -31,23 +31,23 @@ export async function generateMetadata(props: {
     ['service-page']
   )
 
-  const url = service.subPageOf
-    ? `/angebot/${service.subPageOf.slug}/${service.slug}`
-    : `/angebot/${service.slug}`
+  const url = service?.subPageOf
+    ? `/angebot/${service?.subPageOf.slug}/${service?.slug}`
+    : `/angebot/${service?.slug}`
 
-  const headerTitle = service.header?.title
-    ? portableTextToString(service.header?.title)
+  const headerTitle = service?.header?.title
+    ? portableTextToString(service?.header?.title)
     : undefined
 
   const currentPageTitle =
-    service.header?.meta?.title ??
-    service.breadcrumb ??
+    service?.header?.meta?.title ??
+    service?.breadcrumb ??
     headerTitle ??
     'Angebot'
 
   const description =
-    service.header?.meta?.description ??
-    service.header?.lead ??
+    service?.header?.meta?.description ??
+    service?.header?.lead ??
     'Ohne Beschreibung'
 
   return {
@@ -55,12 +55,12 @@ export async function generateMetadata(props: {
     description: description,
     alternates: { canonical: url },
     openGraph: {
-      title: service.header?.meta?.title ?? headerTitle ?? 'Angebot',
+      title: service?.header?.meta?.title ?? headerTitle ?? 'Angebot',
       description: description,
       type: 'article',
       url,
-      publishedTime: service._createdAt,
-      modifiedTime: service._updatedAt,
+      publishedTime: service?._createdAt,
+      modifiedTime: service?._updatedAt,
     },
   }
 }
@@ -83,7 +83,6 @@ export default async function Home(props: { params: { slug: string[] } }) {
   const testimonials = <Testimonials />
   const partners = <Partners />
 
-
   return isEnabled ? (
     <ServicePreview
       initial={draft}
@@ -93,7 +92,12 @@ export default async function Home(props: { params: { slug: string[] } }) {
       partners={partners}
     />
   ) : (
-    <ServiceDetail partners={partners} service={published} customers={customers} testimonials={testimonials} />
+    <ServiceDetail
+      partners={partners}
+      service={published}
+      customers={customers}
+      testimonials={testimonials}
+    />
   )
 }
 
