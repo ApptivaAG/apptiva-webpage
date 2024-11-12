@@ -14,16 +14,22 @@ const partnerList = [
     height: 120,
   },
   {
-    fileName: 'flm-black.png',
-    alt: 'flm kassen',
+    fileName: 'kyberna-black.svg',
+    alt: 'kyberna',
     height: 120,
-    link: 'https://www.flm.ch/',
+    link: 'https://www.kyberna.ch/',
   },
   {
     fileName: 'cash-ctrl-black.png',
     alt: 'cashctrl',
     height: 120,
     link: 'https://cashctrl.com/',
+  },
+  {
+    fileName: 'flm-black.png',
+    alt: 'flm kassen',
+    height: 120,
+    link: 'https://www.flm.ch/',
   },
 ] satisfies Logo[]
 
