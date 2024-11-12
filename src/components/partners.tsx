@@ -32,7 +32,7 @@ export default function Partners(props: {}) {
               return (
                 <div
                   key={partner.id}
-                  className="relative mr-4 min-w-0 flex-[0_0_16.4rem] bg-base-white pr-4 md:mr-16"
+                  className="relative mx-4 min-w-0 flex-[0_0_16.4rem] bg-base-white md:mx-16"
                   style={{ height: partner.height + 10 }}
                 >
                   <WithLink link={partner.link}>
