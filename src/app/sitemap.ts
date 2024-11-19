@@ -13,6 +13,8 @@ import { ProjectQueryData } from './(website)/projekte/types'
 import { rootUrl } from './env'
 import { hasTag } from '@/domain/blog/mappers'
 
+export const dynamic = 'force-dynamic'
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = await getPosts()
   const { published: services } = await load(servicesQuery, false, undefined, [
