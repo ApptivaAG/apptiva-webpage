@@ -1,14 +1,14 @@
 import SanityImage from '@/components/sanity-image'
 import { Card } from '@/components/ui/card'
 import { cn } from '@/utils/cn'
-import { CmsBlog, MarkdownBlog } from '@/domain/types'
+import { CmsBlog } from '@/domain/types'
 import Image from 'next/image'
 import Link from 'next/link'
 import UnderlineForLink from '../ui/underline-for-link'
 
 export function BlogTeaser(props: {
   slug: string
-  post: CmsBlog | MarkdownBlog
+  post: CmsBlog
   intent: 'dark' | 'light'
   parentSlug: 'blog' | 'apptiva-lernt'
   className?: string
@@ -22,18 +22,6 @@ export function BlogTeaser(props: {
       className={cn('flex h-full flex-col', props.className)}
     >
       <div className="">
-        {post.kind === 'markdown' && post.image?.src && (
-          <Image
-            className="aspect-video object-cover"
-            src={post.image.src}
-            width={post.image.width}
-            height={post.image.height}
-            placeholder="blur"
-            blurDataURL={post.image.base64}
-            alt=""
-            sizes="300px"
-          />
-        )}
         {post.kind === 'cms' && post.image && (
           <SanityImage
             className="aspect-video object-cover"

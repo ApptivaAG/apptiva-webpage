@@ -24,7 +24,7 @@ export async function generateMetadata(props: {
   const paramsSlug = decodeURIComponent(props.params.slug)
   const post = await getPostBySlug(paramsSlug, false)
 
-  if (!post || post.kind === 'markdown') {
+  if (!post) {
     return {}
   }
 
@@ -68,10 +68,6 @@ export default async function Home(props: { params: { slug: string } }) {
     )
   }
   const post = (await getPostBySlug(paramsSlug, false)) ?? notFound()
-
-  if (post.kind === 'markdown') {
-    return <div>Apptiva lernt unterstützt nur CMS Beiträge</div>
-  }
 
   return (
     <CmsBlogPost

@@ -7,7 +7,7 @@ import {
 } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
 import { getPosts } from '@/domain/blog/repository'
-import { CmsBlog, MarkdownBlog } from '@/domain/types'
+import { CmsBlog } from '@/domain/types'
 import { MetadataRoute } from 'next'
 import { ProjectQueryData } from './(website)/projekte/types'
 import { rootUrl } from './env'
@@ -138,7 +138,7 @@ function buildServicesSiteMap(services: ServicesQueryData) {
 }
 
 function buildPostsSiteMap(
-  posts: Array<CmsBlog | MarkdownBlog>,
+  posts: Array<CmsBlog>,
   tag: 'blog' | 'apptiva-lernt'
 ) {
   return posts.filter(hasTag(tag)).map(

@@ -3,7 +3,7 @@ import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
 import Button from '@/components/ui/button'
 import { kebabCaseToTitleCase } from '@/utils/format'
-import { CmsBlog, MarkdownBlog } from '@/domain/types'
+import { CmsBlog } from '@/domain/types'
 import Link from 'next/link'
 import BlogPortableText from '../blog-portable-text'
 
@@ -97,9 +97,6 @@ export default function CmsBlogPost(props: {
   )
 }
 
-function getBreadcrumb(post: MarkdownBlog | CmsBlog) {
-  if (post?.kind === 'cms') {
-    return post.breadcrumb ?? post.title
-  }
-  return post?.title ?? 'Post'
+function getBreadcrumb(post: CmsBlog) {
+  return post.breadcrumb ?? post.title
 }

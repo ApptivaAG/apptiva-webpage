@@ -17,9 +17,6 @@ const config = {
     ],
   },
   experimental: {
-    outputFileTracingIncludes: {
-      '/blog': ['./content/blog/**/*'],
-    },
     taint: true,
   },
   redirects,

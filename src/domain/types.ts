@@ -15,13 +15,6 @@ export type Author = {
   personName: string
 }
 
-export interface MarkdownBlog extends Blog {
-  kind: 'markdown'
-  content: string
-  blogPostAssetsDirectory: string
-  image: Image | NoImage
-}
-
 export interface CmsBlog extends Blog {
   kind: 'cms'
   content: CmsContent
@@ -40,17 +33,6 @@ export type PortableText = Array<
 
 export type SanityImageWithAlt = (SanityImageSource & { alt: string }) | null
 
-export type Image = {
-  width?: number | undefined
-  height?: number | undefined
-  orientation?: number | undefined
-  type?: string | undefined
-  base64?: string | undefined
-  src: string
-}
-export type NoImage = {
-  src: undefined
-}
 export type BlogFrontmatter = {
   title: string
   slug: string

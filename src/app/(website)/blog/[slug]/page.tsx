@@ -6,8 +6,6 @@ import CmsBlogPost from '../../../../components/blog/cms-post'
 import BlogPostPreview from '../../../../components/blog/preview-post'
 import { load } from '@/sanity/lib/sanityFetch'
 import { queryPostFromCmsBySlug } from '@/sanity/lib/queries'
-import MarkdownBlogPost from './markdown-post'
-import BlogPortableText from '@/components/blog-portable-text'
 import { hasTag } from '@/domain/blog/mappers'
 import { Code } from 'bright'
 
@@ -75,19 +73,11 @@ export default async function Home(props: { params: { slug: string } }) {
   const previousSlug = postSlugs[currentIndex - 1]
   const nextSlug = postSlugs[currentIndex + 1]
 
-  return post.kind === 'cms' ? (
-    <CmsBlogPost
-      post={post}
-      previousSlug={previousSlug}
-      nextSlug={nextSlug}
-      Code={Code}
-      kind="blog"
-    />
-  ) : (
-    <MarkdownBlogPost
-      post={post}
-      previousSlug={previousSlug}
-      nextSlug={nextSlug}
-    />
-  )
+  return <CmsBlogPost
+    post={post}
+    previousSlug={previousSlug}
+    nextSlug={nextSlug}
+    Code={Code}
+    kind="blog"
+  />
 }
