@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import NextLink from 'next/link'
-import chatbotsIconPrimary from './chatbots-primary.svg'
 import chatbotsIcon from './chatbots.svg'
 import developmentIcon from './development.svg'
 import wissenIcon from './icon-wissen.svg'
@@ -11,33 +10,39 @@ import MainNav from './main-nav'
 import MobileNav from './mobile-nav'
 import Button from './ui/button'
 
-type NavbarCTALink = {
+export type NavbarCTALink = {
   type: 'cta-link'
   title: string
   href: string
   text: string
 }
 
-type NavbarItemSimpleLink = {
+export type NavbarItemSimpleLink = {
   type: 'link'
   title: string
   href: string
 }
-type NavbarItemLinkWithMedia = {
+export type NavbarItemLinkWithMedia = {
   type: 'media-link'
   title: string
   href: string
   text: string
   icon: any
 }
-type NavbarItemLink =
+export type NavbarItemSubMenu = {
+  type: 'sub-menu'
+  title: string
+  items: NavbarItemSimpleLink[]
+}
+export type NavbarItemLink =
   | NavbarItemSimpleLink
   | NavbarItemLinkWithMedia
   | NavbarCTALink
-type NavbarItemMenu = {
+
+export type NavbarItemMenu = {
   type: 'menu'
   title: string
-  items: NavbarItemLink[]
+  items: (NavbarItemLink | NavbarItemSubMenu)[]
 }
 
 type NavbarItem = NavbarItemLink | NavbarItemMenu
@@ -102,30 +107,56 @@ export const navbarData: NavbarItem[] = [
         type: 'media-link',
       },
       {
-        title: 'Content Management System',
-        href: '/angebot/chatbots/chatbot-content-management',
-        type: 'link',
-      },
-      {
-        title: 'Live-Chat',
-        href: '/angebot/chatbots/live-chat',
-        type: 'link',
-      },
-      {
-        title: 'Analytics',
-        href: '/angebot/chatbots/chatbot-analytics',
-        type: 'link',
+        title: 'Features',
+        type: 'sub-menu',
+        items: [
+          {
+            title: 'Wissensspeicher',
+            href: '/angebot/chatbots/ki-power',
+            type: 'link',
+          },
+          {
+            title: 'Live-Chat',
+            href: '/angebot/chatbots/live-chat',
+            type: 'link',
+          },
+          {
+            title: 'Analytics',
+            href: '/angebot/chatbots/chatbot-analytics',
+            type: 'link',
+          },
+          {
+            title: 'Integrationen',
+            href: '/angebot/chatbots/integrationen',
+            type: 'link',
+          },
+          {
+            title: 'Content Management & Design',
+            href: '/angebot/chatbots/cms-design',
+            type: 'link',
+          },
+        ],
       },
       {
         title: 'Preise',
         href: '/angebot/chatbots#was-kostet-ein-chatbot',
         type: 'link',
       },
-      // {
-      //   title: 'Technologie',
-      //   href: '/angebot/chatbots/technologie',
-      //   type: 'link',
-      // },
+      {
+        title: 'Dienstleistungen',
+        href: '/angebot/chatbots#dienstleistungen-in-der-chatbot-entwicklung',
+        type: 'link',
+      },
+      {
+        title: 'Technologie',
+        href: '/angebot/chatbots/technologie',
+        type: 'link',
+      },
+      {
+        title: 'Warum Bubble Chat',
+        href: '/angebot/chatbots/dein-partner',
+        type: 'link',
+      },
       {
         title: 'Kostenlose Demo buchen',
         text: 'Kostenlose Demo buchen',
