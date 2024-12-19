@@ -70,7 +70,7 @@ function getLastParam(params: { slug: string[] }) {
 }
 
 export default async function Home(props: { params: { slug: string[] } }) {
-  const lastParam = props.params.slug.at(-1) ?? notFound()
+  const subpageSlug = props.params.slug.at(0) ?? notFound()
   const { isEnabled } = draftMode()
   const { published, draft } = await load(
     serviceBySlugQuery,
@@ -79,7 +79,7 @@ export default async function Home(props: { params: { slug: string[] } }) {
     ['service-page']
   )
 
-  const customers = <Customers groups={mapSlugToGroup(lastParam)} />
+  const customers = <Customers groups={mapSlugToGroup(subpageSlug)} />
   const testimonials = <Testimonials />
   const partners = <Partners />
 

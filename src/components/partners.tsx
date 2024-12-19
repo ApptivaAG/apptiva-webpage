@@ -1,7 +1,6 @@
-import getCustomerLogos, { Group } from '@/domain/customers'
+import getPartnerLogos from '@/domain/partners'
 import Image from 'next/image'
 import Carousel from './carousel'
-import getPartnerLogos from '@/domain/partners'
 import Heading from './heading'
 
 export default function Partners(props: {}) {
