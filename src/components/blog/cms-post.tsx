@@ -35,7 +35,9 @@ export default function CmsBlogPost(props: {
               },
             ]}
           />
-          <Heading level={1}>{post.title}</Heading>
+          <Heading level={1} className="hyphens-auto">
+            {post.title}
+          </Heading>
           <p className="max-w-xl pt-6 text-xl">{post.description}</p>
           <p className="pt-2 text-base-white/60">
             Publiziert am{' '}
