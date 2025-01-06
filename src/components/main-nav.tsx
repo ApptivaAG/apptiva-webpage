@@ -65,16 +65,18 @@ const MainNav = () => {
                             }
                           })}
                       </div>
-                      <div className="ml-2 mt-4">
-                        {item.items
-                          .filter((item) => item.type === 'cta-link')
-                          .map((subitem, index) => (
-                            <CtaLink
-                              subitem={subitem}
-                              key={subitem.title + index}
-                            />
-                          ))}
-                      </div>
+                      {item.items.some((item) => item.type === 'cta-link') && (
+                        <div className="ml-2 mt-4">
+                          {item.items
+                            .filter((item) => item.type === 'cta-link')
+                            .map((subitem, index) => (
+                              <CtaLink
+                                subitem={subitem}
+                                key={subitem.title + index}
+                              />
+                            ))}
+                        </div>
+                      )}
                     </div>
                   </NavigationMenuContent>
                 )}
