@@ -34,13 +34,12 @@ const MainNav = () => {
                         .map((subitem, index) => (
                           <MediaLink
                             subitem={subitem}
-                            index={index}
                             key={subitem.title + index}
                           />
                         ))}
                     </div>
                     <div className="col-start-2 flex flex-col justify-between pb-4 pr-4 pt-2">
-                      <>
+                      <div className="flex flex-col">
                         {item.items
                           .filter(
                             (item) =>
@@ -52,7 +51,6 @@ const MainNav = () => {
                                 return (
                                   <SimpleLink
                                     subitem={subitem}
-                                    index={index}
                                     key={subitem.title + index}
                                   />
                                 )
@@ -66,14 +64,13 @@ const MainNav = () => {
                                 )
                             }
                           })}
-                      </>
+                      </div>
                       <div className="ml-2 mt-4">
                         {item.items
                           .filter((item) => item.type === 'cta-link')
                           .map((subitem, index) => (
                             <CtaLink
                               subitem={subitem}
-                              index={index}
                               key={subitem.title + index}
                             />
                           ))}

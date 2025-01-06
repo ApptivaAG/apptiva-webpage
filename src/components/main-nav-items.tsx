@@ -11,12 +11,12 @@ import { Accordion, AccordionContent, AccordionItem } from './ui/accordion'
 import Button from './ui/button'
 import { NavigationMenuLink } from './ui/navigation-menu'
 
-type MediaLinkProps = { subitem: NavbarItemLinkWithMedia; index: number }
-type SimpleLinkProps = { subitem: NavbarItemSimpleLink; index: number }
+type MediaLinkProps = { subitem: NavbarItemLinkWithMedia }
+type SimpleLinkProps = { subitem: NavbarItemSimpleLink }
 type SubMenuProps = { subMenu: NavbarItemSubMenu; index: number }
-type CtaLinkProps = { subitem: NavbarCTALink; index: number }
+type CtaLinkProps = { subitem: NavbarCTALink }
 
-export const MediaLink = ({ subitem, index }: MediaLinkProps) => (
+export const MediaLink = ({ subitem }: MediaLinkProps) => (
   <Link
     href={subitem.href}
     className="flex flex-col items-center rounded-md border border-base-white/10 p-2 py-6 align-bottom hover:basis-1/2 hover:bg-primary-light/10"
@@ -34,7 +34,7 @@ export const MediaLink = ({ subitem, index }: MediaLinkProps) => (
   </Link>
 )
 
-export const SimpleLink = ({ subitem, index }: SimpleLinkProps) => (
+export const SimpleLink = ({ subitem }: SimpleLinkProps) => (
   <Link
     href={subitem.href}
     className="rounded-md align-middle hover:bg-primary-light/10"
@@ -54,18 +54,14 @@ export const SubMenu = ({ subMenu, index }: SubMenuProps) => (
     >
       <AccordionContent className="mt-2 rounded bg-primary px-3 py-1">
         {subMenu.items.map((subitem) => (
-          <SimpleLink
-            subitem={subitem}
-            index={index}
-            key={subitem.title + index}
-          />
+          <SimpleLink subitem={subitem} key={subitem.title + index} />
         ))}
       </AccordionContent>
     </AccordionItem>
   </Accordion>
 )
 
-export const CtaLink = ({ subitem, index }: CtaLinkProps) => (
+export const CtaLink = ({ subitem }: CtaLinkProps) => (
   <Link href={subitem.href} className="rounded-md hover:bg-primary-light/10">
     <Button intent="secondary" className="w-full">
       {subitem.title}
