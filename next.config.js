@@ -529,11 +529,6 @@ async function redirects() {
       destination: '/ueber-uns',
       permanent: true,
     },
-    {
-      source: '/markus-tanner',
-      destination: '/ueber-uns',
-      permanent: true,
-    },
     { source: '/david-decker', destination: '/ueber-uns', permanent: true },
     { source: '/patrik-stutz', destination: '/ueber-uns', permanent: true },
     {
