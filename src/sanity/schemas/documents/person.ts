@@ -1,3 +1,4 @@
+import StatusSwitch from '@/sanity/components/active-switch'
 import { defineArrayMember, defineField, defineType } from 'sanity'
 
 export default defineType({
@@ -5,6 +6,15 @@ export default defineType({
   title: 'Person',
   type: 'document',
   fields: [
+    defineField({
+      name: 'active',
+      title: 'Status',
+      type: 'boolean',
+      initialValue: true,
+      components: {
+        input: StatusSwitch,
+      },
+    }),
     defineField({
       name: 'personName',
       title: 'Name',
@@ -18,12 +28,6 @@ export default defineType({
         source: 'personName',
         maxLength: 96,
       },
-    }),
-    defineField({
-      name: 'active',
-      title: 'Aktiv',
-      type: 'boolean',
-      initialValue: true,
     }),
     defineField({
       name: 'role',
