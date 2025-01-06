@@ -92,6 +92,7 @@ export type PersonData = NonNullable<InferType<typeof Persons>>[number]
 
 const PersonSelection = {
   personName: q.string().optional(),
+  active: q.boolean().default(true),
   image: sanityImageWithAlt('image'),
   imageWithoutBackground: sanityImageWithAlt('imageWithoutBackground'),
   role: q.string().optional(),
@@ -103,7 +104,10 @@ const PersonSelection = {
     })
     .nullable(),
 }
-export const Persons = q('*').filterByType('person').grab$(PersonSelection)
+export const Persons = q('*')
+  .filterByType('person')
+  .filter('active == true')
+  .grab$(PersonSelection)
 
 const Header = q('header')
   .grab$({

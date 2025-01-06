@@ -20,6 +20,12 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'active',
+      title: 'Aktiv',
+      type: 'boolean',
+      initialValue: true,
+    }),
+    defineField({
       name: 'role',
       title: 'Rolle',
       type: 'string',
