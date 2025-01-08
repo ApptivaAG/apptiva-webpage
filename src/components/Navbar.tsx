@@ -107,11 +107,11 @@ export const navbarData: NavbarItem[] = [
         type: 'media-link',
       },
       {
-        title: 'Features',
+        title: 'Produkt-Highlights',
         type: 'sub-menu',
         items: [
           {
-            title: 'Wissensspeicher',
+            title: 'KI-Power',
             href: '/angebot/chatbots/ki-power',
             type: 'link',
           },
@@ -131,7 +131,7 @@ export const navbarData: NavbarItem[] = [
             type: 'link',
           },
           {
-            title: 'Content Management & Design',
+            title: 'Content Management',
             href: '/angebot/chatbots/cms-design',
             type: 'link',
           },
