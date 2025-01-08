@@ -35,9 +35,11 @@ export default function Footer() {
                   ></Image>
                 </Link>
                 <address className="pt-4 not-italic">
-                  Apptiva AG <br />
-                  Eichweid 1 <br />
-                  6203 Sempach Station
+                  Apptiva AG
+                  <br />
+                  Obergrundstrasse 73
+                  <br />
+                  6003 Luzern
                 </address>
                 <p className="pt-4">
                   <Link href="tel:+41413222626">

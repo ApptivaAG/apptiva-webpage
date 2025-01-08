@@ -39,8 +39,9 @@ const ContactForm = () => {
           <p>
             Apptiva AG
             <br />
-            Eichweid 1 <br />
-            6203 Sempach Station
+            Obergrundstrasse 73
+            <br />
+            6003 Luzern
           </p>
         </div>
         <div className="col-right max-lg:mt-4">
