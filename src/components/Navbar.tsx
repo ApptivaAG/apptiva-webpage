@@ -116,8 +116,8 @@ export const navbarData: NavbarItem[] = [
             type: 'link',
           },
           {
-            title: 'Live-Chat',
-            href: '/angebot/chatbots/live-chat',
+            title: 'Content Management',
+            href: '/angebot/chatbots/cms-design',
             type: 'link',
           },
           {
@@ -131,8 +131,8 @@ export const navbarData: NavbarItem[] = [
             type: 'link',
           },
           {
-            title: 'Content Management',
-            href: '/angebot/chatbots/cms-design',
+            title: 'Live-Chat',
+            href: '/angebot/chatbots/live-chat',
             type: 'link',
           },
         ],
