@@ -27,6 +27,11 @@ module.exports = withPlausibleProxy()(withMDX(config))
 async function redirects() {
   return [
     {
+      source: '/angebot/chatbots/chatbot-content-management',
+      destination: '/angebot/chatbots/cms-design',
+      permanent: true,
+    },
+    {
       source: '/web-app-datenschutz',
       destination: '/blog/web-app-datenschutz',
       permanent: true,
