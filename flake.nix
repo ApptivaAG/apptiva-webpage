@@ -3,7 +3,7 @@
     devShells.default = mkShell {
       buildInputs = [
         nodejs
-        nodePackages.pnpm
+        pnpm
       ];
     };
   });
