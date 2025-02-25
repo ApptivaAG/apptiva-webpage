@@ -96,7 +96,7 @@ const customerList = [
   {
     fileName: 'hflu.svg',
     alt: 'Höhere Fachschule Luzern (HFLU)',
-    height: 45,
+    height: 35,
     group: ['chatbot'],
   },
   {
