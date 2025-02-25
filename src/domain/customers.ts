@@ -94,6 +94,12 @@ const customerList = [
     group: ['chatbot'],
   },
   {
+    fileName: 'hflu.svg',
+    alt: 'Höhere Fachschule Luzern (HFLU)',
+    height: 45,
+    group: ['chatbot'],
+  },
+  {
     fileName: 'grandcasino-bern-logo.svg',
     alt: 'Grandcasino Bern',
     height: 45,
