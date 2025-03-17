@@ -70,10 +70,17 @@ const ContactForm = () => {
                     value="Kontaktformular apptiva.ch"
                     readOnly={true}
                   />
+                  <input type="text" name="circle" value="apptiva" readOnly />
                 </p>
                 <div>
                   <Label htmlFor="name">Name</Label>
-                  <Input intent="default" type="text" name="name" id="name" />
+                  <Input
+                    intent="default"
+                    type="text"
+                    name="name"
+                    id="name"
+                    required
+                  />
                 </div>
                 <div>
                   <Label htmlFor="email">Email-Adresse</Label>
@@ -82,6 +89,7 @@ const ContactForm = () => {
                     id="email"
                     type="email"
                     name="email"
+                    required
                   />
                 </div>
                 <div>
@@ -104,6 +112,7 @@ const ContactForm = () => {
                     className="ring-offset-white file:font-medium bg-white flex h-full w-full rounded border border-primary px-3 py-2 text-base file:border-0 file:bg-transparent file:text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     name="message"
                     rows={5}
+                    required
                   />
                 </div>
                 {state.state === 'error' && (

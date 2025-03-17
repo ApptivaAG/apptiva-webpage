@@ -8,16 +8,9 @@ import {
   Preview,
   Text,
 } from '@react-email/components'
+import { FormInputSchema } from '../server-actions/send-mail'
 
-interface ContactFromMailSenderCopyProps {
-  name: string
-  message: string
-}
-
-export const ContactFromMailSenderCopy = ({
-  name,
-  message,
-}: ContactFromMailSenderCopyProps) => (
+export const ContactFromMailSenderCopy = (props: FormInputSchema) => (
   <Html>
     <Head />
     <Preview>Danke für deine Nachricht!</Preview>
@@ -30,7 +23,7 @@ export const ContactFromMailSenderCopy = ({
         />
         <Text style={title}>
           <Heading style={heading}>
-            Hoi <strong>{name}</strong>, danke für deine Nachricht!
+            Hoi <strong>{props.name}</strong>, danke für deine Nachricht!
           </Heading>
           <Text style={text}>Wir melden uns schon bald bei dir.</Text>
           <Text style={text}>
@@ -38,10 +31,12 @@ export const ContactFromMailSenderCopy = ({
             <br /> Das Apptiva Team
           </Text>
         </Text>
-        <Container style={container}>
-          <Text style={text}>Deine Nachricht:</Text>
-          <Text style={review}>{message}</Text>
-        </Container>
+        {props.message && (
+          <Container style={container}>
+            <Text style={text}>Deine Nachricht:</Text>
+            <Text style={review}>{props.message}</Text>
+          </Container>
+        )}
       </Container>
     </Body>
   </Html>

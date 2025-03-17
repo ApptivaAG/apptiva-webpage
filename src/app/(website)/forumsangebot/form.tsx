@@ -28,6 +28,7 @@ export default function Form() {
           Nicht ausfüllen: <input type="text" name="address" />
         </label>
         <input type="text" name="subject" value="What’s next Forumsangebot" />
+        <input type="text" name="circle" value="bubble" readOnly />
       </p>
       <div>
         <Label>Name</Label>
