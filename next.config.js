@@ -27,6 +27,11 @@ module.exports = withPlausibleProxy()(withMDX(config))
 async function redirects() {
   return [
     {
+      source: '/projekte/restaurant-bestell-app-payflink',
+      destination: '/projekte/restaurant-bestell-app-injoi',
+      permanent: true,
+    },
+    {
       source: '/angebot/chatbots/chatbot-content-management',
       destination: '/angebot/chatbots/cms-design',
       permanent: true,
