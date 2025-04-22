@@ -1,5 +1,4 @@
 // ./app/api/draft/route.ts
-export const runtime = 'edge' // 👈 Enable Edge runtime!
 
 import { validatePreviewUrl } from '@sanity/preview-url-secret'
 import { draftMode } from 'next/headers'
