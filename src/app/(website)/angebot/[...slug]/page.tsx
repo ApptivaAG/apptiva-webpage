@@ -11,14 +11,16 @@ import { notFound } from 'next/navigation'
 import ServiceDetail from './detail'
 import ServicePreview from './preview'
 
+export const dynamicParams = false
+
 export async function generateStaticParams() {
   const { published: services } = await load(servicesQuery, false, undefined, [
     'service-page',
   ])
-
-  return services?.map(({ slug, subPageOf }) => ({
+  const params = services?.map(({ slug, subPageOf }) => ({
     slug: subPageOf ? [subPageOf.slug, slug] : [slug],
   }))
+  return params
 }
 
 export async function generateMetadata(props: {
@@ -70,16 +72,20 @@ function getLastParam(params: { slug: string[] }) {
 }
 
 export default async function Home(props: { params: { slug: string[] } }) {
-  const lastParam = props.params.slug.at(-1) ?? notFound()
+  const subpageSlug = props.params.slug.at(0) ?? notFound()
   const { isEnabled } = draftMode()
-  const { published, draft } = await load(
+  const { published, draft, error } = await load(
     serviceBySlugQuery,
     isEnabled,
     getLastParam(props.params),
     ['service-page']
   )
 
-  const customers = <Customers groups={mapSlugToGroup(lastParam)} />
+  if (!draft.data && !published) {
+    notFound()
+  }
+
+  const customers = <Customers groups={mapSlugToGroup(subpageSlug)} />
   const testimonials = <Testimonials />
   const partners = <Partners />
 

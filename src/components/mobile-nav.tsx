@@ -1,12 +1,10 @@
 'use client'
 
-import { cn } from '@/utils/cn'
 import Image from 'next/image'
-import Link, { LinkProps } from 'next/link'
-import { useRouter } from 'next/navigation'
 import * as React from 'react'
 import { navbarData } from './Navbar'
 import apptivaLogo from './logo.svg'
+import { MediaLink, MobileLink, SimpleLink, SubMenu } from './mobile-nav-items'
 import navBurger from './nav-burger.svg'
 import { Accordion, AccordionContent, AccordionItem } from './ui/accordion'
 import Button from './ui/button'
@@ -64,35 +62,38 @@ const MobileNav = () => {
                               {item.items
                                 .filter((item) => item.type === 'media-link')
                                 .map((subitem) => (
-                                  <MobileLink
-                                    href={subitem.href}
-                                    onOpenChange={setOpen}
-                                    className="flex items-center gap-5 py-4"
-                                    key={subitem.href}
-                                  >
-                                    <Image
-                                      src={subitem.icon}
-                                      alt={subitem.title}
-                                      className="size-24"
-                                    />
-                                    <div className="">
-                                      <p className="text-lg">{subitem.title}</p>
-                                      <p className="text-xs">{subitem.text}</p>
-                                    </div>
-                                  </MobileLink>
+                                  <MediaLink
+                                    subitem={subitem}
+                                    setOpen={setOpen}
+                                    key={subitem.title + index}
+                                  />
                                 ))}
                               {item.items
-                                .filter((item) => item.type === 'link')
-                                .map((subitem) => (
-                                  <MobileLink
-                                    href={subitem.href}
-                                    onOpenChange={setOpen}
-                                    className="flex items-center gap-5 py-4"
-                                    key={subitem.href}
-                                  >
-                                    <p className="text-lg">{subitem.title}</p>
-                                  </MobileLink>
-                                ))}
+                                .filter(
+                                  (item) =>
+                                    item.type === 'link' ||
+                                    item.type === 'sub-menu'
+                                )
+                                .map((subitem) => {
+                                  switch (subitem.type) {
+                                    case 'link':
+                                      return (
+                                        <SimpleLink
+                                          subitem={subitem}
+                                          setOpen={setOpen}
+                                          key={subitem.title + index}
+                                        />
+                                      )
+                                    case 'sub-menu':
+                                      return (
+                                        <SubMenu
+                                          subMenu={subitem}
+                                          setOpen={setOpen}
+                                          key={subitem.title + index}
+                                        />
+                                      )
+                                  }
+                                })}
                             </AccordionContent>
                           </AccordionItem>
                         </Accordion>
@@ -128,35 +129,6 @@ const MobileNav = () => {
         </div>
       </SheetContent>
     </Sheet>
-  )
-}
-
-interface MobileLinkProps extends LinkProps {
-  onOpenChange?: (open: boolean) => void
-  children: React.ReactNode
-  className?: string
-}
-
-function MobileLink({
-  href,
-  onOpenChange,
-  className,
-  children,
-  ...props
-}: MobileLinkProps) {
-  const router = useRouter()
-  return (
-    <Link
-      href={href}
-      onClick={() => {
-        router.push(href.toString())
-        onOpenChange?.(false)
-      }}
-      className={cn(className)}
-      {...props}
-    >
-      {children}
-    </Link>
   )
 }
 

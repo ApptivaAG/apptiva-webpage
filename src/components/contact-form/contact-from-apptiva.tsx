@@ -7,20 +7,9 @@ import {
   Preview,
   Text,
 } from '@react-email/components'
+import { FormInputSchema } from '../server-actions/send-mail'
 
-interface ContactFromMailApptivaCopyProps {
-  name: string
-  message: string
-  email: string
-  company: string | null
-}
-
-export const ContactFromMailApptivaCopy = ({
-  name,
-  message,
-  email: mailAddress,
-  company: companyName = 'Keine Angabe',
-}: ContactFromMailApptivaCopyProps) => (
+export const ContactFromMailApptivaCopy = (props: FormInputSchema) => (
   <Html>
     <Head />
     <Preview>Danke für deine Nachricht!</Preview>
@@ -28,24 +17,30 @@ export const ContactFromMailApptivaCopy = ({
       <Container style={container}>
         <Text style={title}>
           <Heading style={heading}>
-            <strong>{name}</strong> hat uns eine Nachricht hinterlassen:
+            <strong>{props.name}</strong> hat uns eine Nachricht hinterlassen:
           </Heading>
         </Text>
 
         <Container style={container}>
-          <Text style={review}>{message}</Text>
+          <Text style={review}>{props.message}</Text>
           <Text style={{ ...paragraph, marginTop: 40 }}>
             <b>Name: </b>
-            {name}
+            {props.name}
           </Text>
           <Text style={{ ...paragraph, marginTop: -5 }}>
             <b>E-Mail Adresse: </b>
-            {mailAddress}
+            {props.email}
           </Text>
           <Text style={{ ...paragraph, marginTop: -5 }}>
             <b>Unternehmen: </b>
-            {companyName}
+            {props.company ?? 'keine Angabe'}
           </Text>
+          {props.circle === 'bubble' && (
+            <Text style={{ ...paragraph, marginTop: -5 }}>
+              <b>Telefonnummer: </b>
+              {props.phone ?? 'keine Angabe'}
+            </Text>
+          )}
         </Container>
       </Container>
     </Body>

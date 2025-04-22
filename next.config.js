@@ -17,9 +17,6 @@ const config = {
     ],
   },
   experimental: {
-    outputFileTracingIncludes: {
-      '/blog': ['./content/blog/**/*'],
-    },
     taint: true,
   },
   redirects,
@@ -29,6 +26,16 @@ module.exports = withPlausibleProxy()(withMDX(config))
 
 async function redirects() {
   return [
+    {
+      source: '/projekte/restaurant-bestell-app-payflink',
+      destination: '/projekte/restaurant-bestell-app-injoi',
+      permanent: true,
+    },
+    {
+      source: '/angebot/chatbots/chatbot-content-management',
+      destination: '/angebot/chatbots/cms-design',
+      permanent: true,
+    },
     {
       source: '/web-app-datenschutz',
       destination: '/blog/web-app-datenschutz',
@@ -529,11 +536,6 @@ async function redirects() {
     { source: '/carla-iten', destination: '/ueber-uns', permanent: true },
     {
       source: '/kevin-rickenbach',
-      destination: '/ueber-uns',
-      permanent: true,
-    },
-    {
-      source: '/markus-tanner',
       destination: '/ueber-uns',
       permanent: true,
     },

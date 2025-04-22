@@ -37,11 +37,11 @@ export default function Contact(props: { module: ModuleData }) {
 
     switch (weekday) {
       case 3: // wednesday
-        return getRandomPersonExcludingNames(['david', 'markus', 'robin'])
+        return getRandomPersonExcludingNames(['robin'])
       case 4: // thursday
-        return getRandomPersonExcludingNames(['david', 'roman'])
+        return getRandomPersonExcludingNames(['roman'])
       case 5: // friday
-        return getRandomPersonExcludingNames(['david', 'philip', 'robin'])
+        return getRandomPersonExcludingNames(['philip', 'robin', 'carla'])
       case 1: // monday
       case 2: // tuesday
       case 6: // saturday

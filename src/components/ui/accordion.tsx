@@ -15,12 +15,14 @@ const AccordionItem = ({
   children,
   className,
   icon,
+  panelClassName,
   ...rest
 }: {
   header: React.ReactNode
   children: React.ReactNode
   className?: string
   icon?: React.ReactNode
+  panelClassName?: string
 }) => (
   <Item
     {...rest}
@@ -41,7 +43,7 @@ const AccordionItem = ({
     contentProps={{
       className: 'transition-height duration-200 ease-out',
     }}
-    panelProps={{ className: 'pb-4 mt-0 pt-0 text-base' }}
+    panelProps={{ className: cn('pb-4 mt-0 pt-0 text-base', panelClassName) }}
   >
     {children}
   </Item>

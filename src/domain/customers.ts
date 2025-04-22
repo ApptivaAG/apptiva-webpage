@@ -30,7 +30,7 @@ const customerList = [
   {
     fileName: 'vivanco-logo.svg',
     alt: 'Vivanco Gruppe AG',
-    height: 50,
+    height: 60,
     group: ['web'],
   },
   {
@@ -76,6 +76,12 @@ const customerList = [
     group: ['web'],
   },
   {
+    fileName: 'hochschule-luzern-logo.svg',
+    alt: 'Hochschule Luzern',
+    height: 60,
+    group: ['chatbot'],
+  },
+  {
     fileName: 'screenimage-logo.svg',
     alt: 'Screenimage Systems AG',
     height: 40,
@@ -88,9 +94,15 @@ const customerList = [
     group: ['chatbot'],
   },
   {
+    fileName: 'hflu.svg',
+    alt: 'Höhere Fachschule Luzern (HFLU)',
+    height: 35,
+    group: ['chatbot'],
+  },
+  {
     fileName: 'grandcasino-bern-logo.svg',
     alt: 'Grandcasino Bern',
-    height: 35,
+    height: 45,
     group: ['web'],
   },
   {
@@ -126,7 +138,7 @@ const customerList = [
   {
     fileName: 'schurch-logo.svg',
     alt: 'Schürch Getränke AG',
-    height: 45,
+    height: 35,
     group: ['web'],
   },
   {
@@ -150,7 +162,7 @@ const customerList = [
   {
     fileName: 'oekowatt-logo.svg',
     alt: 'OekoWatt AG',
-    height: 40,
+    height: 35,
     group: ['chatbot'],
   },
 ] satisfies Logo[]

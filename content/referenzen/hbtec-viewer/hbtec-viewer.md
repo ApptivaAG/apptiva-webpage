@@ -22,11 +22,11 @@ bulletGroups:
         title: Zeitraum
         text: seit November 2019, fortlaufende Weiterentwicklungen
 contactPerson:
-  name: Markus Tanner
+  name: David Decker
   role: Projektleiter
-  image: ../../data/employees/markus-tanner/markus-tanner-prev.jpg
+  image: ../../data/employees/david-decker/david-decker-prev.jpg
   phone: 041 322 26 26
-  email: markus.tanner@apptiva.ch
+  email: david.decker@apptiva.ch
   text1: Haben wir Ihr Interesse geweckt?
   text2: Kontaktieren Sie uns!
 ---

@@ -27,11 +27,11 @@ bulletGroups:
 apptivaServices:
   - web-apps
 contactPerson:
-  name: Markus Tanner
+  name: Robin Geissmann
   role: Projektleiter
-  image: ../../data/employees/markus-tanner/markus-tanner-prev.jpg
+  image: ../../data/employees/robin-geissmann/robin-geissmann-prev.jpg
   phone: 041 322 26 26
-  email: markus.tanner@apptiva.ch
+  email: robin.geissmann@apptiva.ch
   text1: Haben wir Ihr Interesse geweckt?
   text2: Kontaktieren Sie uns!
 ---
@@ -49,7 +49,7 @@ Den Schüler:innen werden in erster Linie die Aufgaben angezeigt, welche der Kla
 Gleichzeitig können im Content Management System (CMS) weitere Aufgaben aufgeschaltet werden. Beim CMS haben wir bewusst auf eine Eigenentwicklung verzichtet und setzen stattdessen Sanity ein.
 
 Über folgenden Link kann die aktuelle Version von DiLuna erreicht werden:<br/>
-https://diluna-prod.apps.apptiva.ch/
+<https://diluna-prod.apps.apptiva.ch/>
 
 ## Ausblick
 

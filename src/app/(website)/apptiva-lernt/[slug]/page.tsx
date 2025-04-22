@@ -1,10 +1,9 @@
-import BlogPortableText from '@/components/blog-portable-text'
 import CmsBlogPost from '@/components/blog/cms-post'
 import BlogPostPreview from '@/components/blog/preview-post'
+import { hasTag } from '@/domain/blog/mappers'
+import { getPostBySlug, getPosts } from '@/domain/blog/repository'
 import { queryPostFromCmsBySlug } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
-import { getPostBySlug, getPosts } from '@/domain/blog/repository'
-import { hasTag } from '@/domain/blog/mappers'
 import { Code } from 'bright'
 import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
@@ -24,7 +23,7 @@ export async function generateMetadata(props: {
   const paramsSlug = decodeURIComponent(props.params.slug)
   const post = await getPostBySlug(paramsSlug, false)
 
-  if (!post || post.kind === 'markdown') {
+  if (!post) {
     return {}
   }
 
@@ -68,10 +67,6 @@ export default async function Home(props: { params: { slug: string } }) {
     )
   }
   const post = (await getPostBySlug(paramsSlug, false)) ?? notFound()
-
-  if (post.kind === 'markdown') {
-    return <div>Apptiva lernt unterstützt nur CMS Beiträge</div>
-  }
 
   return (
     <CmsBlogPost
