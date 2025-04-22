@@ -12,6 +12,8 @@
 import { NextStudio } from 'next-sanity/studio'
 import config from '../../../../../sanity.config'
 
+export const runtime = 'edge' // Use the Vercel Edge Runtime
+
 export default function StudioPage() {
   return <NextStudio config={config} />
 }
