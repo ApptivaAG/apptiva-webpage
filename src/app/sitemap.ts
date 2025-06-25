@@ -125,9 +125,7 @@ function buildSiteMap(
 
 function buildServicesSiteMap(services: ServicesQueryData) {
   return services.map(({ slug, subPageOf, _updatedAt }) => {
-    const url: `/${string}` = subPageOf
-      ? `/angebot/${subPageOf.slug}/${slug}`
-      : `/angebot/${slug}`
+    const url: `/${string}` = buildServiceUrl(slug, subPageOf)
     return {
       url: buildFullUrl(url),
       lastModified: new Date(_updatedAt),
@@ -135,6 +133,16 @@ function buildServicesSiteMap(services: ServicesQueryData) {
       priority: 0.9,
     } as const
   })
+}
+
+const buildServiceUrl = (
+  slug?: string,
+  subPageOf?: ServicesQueryData[number]['subPageOf']
+): `/${string}` => {
+  if (subPageOf) {
+    return buildServiceUrl(`${subPageOf.slug}/${slug}`, subPageOf.subPageOf)
+  }
+  return `/angebot/${slug}`
 }
 
 function buildPostsSiteMap(
