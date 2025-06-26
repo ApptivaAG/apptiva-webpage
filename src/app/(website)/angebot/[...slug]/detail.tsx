@@ -20,7 +20,7 @@ export default function ServiceDetail(props: {
         title={props.service.header?.title}
         lead={props.service.header?.lead}
         image={props.service.header?.image}
-        links={buildBreadcrumb(props.service, ['angebot'])}
+        links={buildBreadcrumbs(props.service, 'angebot')}
         callToAction={
           props.service.callToAction?.href ? (
             <Link href={props.service.callToAction.href}>
@@ -34,7 +34,12 @@ export default function ServiceDetail(props: {
 
       {props.service.modules?.map((module) => (
         <CatchErrors key={module._key} isPreview={props.isPreview}>
-          <Module partners={props.partners} module={module} customers={props.customers} testimonials={props.testimonials} />
+          <Module
+            partners={props.partners}
+            module={module}
+            customers={props.customers}
+            testimonials={props.testimonials}
+          />
         </CatchErrors>
       ))}
     </>
@@ -72,27 +77,35 @@ function fallbackRender(props: {
   )
 }
 
-type Breadcrumb = Pick<ServiceBySlugQueryData, 'breadcrumb' | 'slug'>
-function buildBreadcrumb(
-  service: Breadcrumb & { subPageOf?: Breadcrumb | null },
-  parentSlugs: string[]
+type Breadcrumb = Pick<
+  ServiceBySlugQueryData,
+  'breadcrumb' | 'slug' | 'subPageOf'
+> & { subPageOf?: Breadcrumb | null }
+
+function buildBreadcrumbs(
+  service: Breadcrumb,
+  parentSlug: string
 ): { name: string; href?: string }[] {
   const { slug: name = 'Angebot' } = service
 
   const currentCrumb = {
     name: service.breadcrumb ?? name.charAt(0).toUpperCase() + name.slice(1),
-    href: `/${parentSlugs.join('/')}/`,
+    href: `/${parentSlug}/${buildBreadcrumbPath(service.slug, service.subPageOf)}`,
   }
 
   if (service.subPageOf?.breadcrumb && service.subPageOf?.slug) {
-    return [
-      ...buildBreadcrumb(service.subPageOf, [
-        ...parentSlugs,
-        service.subPageOf.slug ?? '',
-      ]),
-      currentCrumb,
-    ]
+    return [...buildBreadcrumbs(service.subPageOf, parentSlug), currentCrumb]
   }
 
   return [{ name: 'Angebot' }, currentCrumb]
+}
+
+const buildBreadcrumbPath = (
+  slug?: string,
+  subPageOf?: Breadcrumb
+): string | undefined => {
+  if (subPageOf) {
+    return buildBreadcrumbPath(`${subPageOf.slug}/${slug}`, subPageOf.subPageOf)
+  }
+  return slug
 }
