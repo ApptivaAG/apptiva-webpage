@@ -2,6 +2,7 @@ import Heading from '@/components/heading'
 import Section from '@/components/section'
 import StyledPortableText from '@/components/styled-portable-text'
 import { ModuleData } from '@/sanity/lib/queries'
+import { cn } from '@/utils/cn'
 import { formatIds } from '@/utils/format-ids'
 import { moduleStyleToSectionIntent } from '../utils'
 
@@ -27,9 +28,10 @@ export default function Text(props: { module: ModuleData }) {
         </Heading>
         {module.content && (
           <div
-            className={
+            className={cn(
+              'prose',
               col1 ? 'mt-4 max-w-2xl lg:mt-6' : 'col-right max-lg:mt-4'
-            }
+            )}
           >
             <StyledPortableText content={module.content} />
           </div>
