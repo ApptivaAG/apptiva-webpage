@@ -135,14 +135,22 @@ function buildServicesSiteMap(services: ServicesQueryData) {
   })
 }
 
-const buildServiceUrl = (
+export function buildServicePath(
   slug?: string,
   subPageOf?: ServicesQueryData[number]['subPageOf']
-): `/${string}` => {
+): string | undefined {
   if (subPageOf) {
-    return buildServiceUrl(`${subPageOf.slug}/${slug}`, subPageOf.subPageOf)
+    return buildServicePath(`${subPageOf.slug}/${slug}`, subPageOf.subPageOf)
   }
-  return `/angebot/${slug}`
+  return slug
+}
+
+export function buildServiceUrl(
+  slug?: string,
+  subPageOf?: ServicesQueryData[number]['subPageOf']
+): `/${string}` {
+  const path = buildServicePath(slug, subPageOf)
+  return `/angebot/${path}`
 }
 
 function buildPostsSiteMap(
@@ -160,6 +168,6 @@ function buildPostsSiteMap(
   )
 }
 
-function buildFullUrl(absolutUrl: `/${string}`) {
-  return `${rootUrl}${absolutUrl}`
+function buildFullUrl(absoluteUrl: `/${string}`) {
+  return `${rootUrl}${absoluteUrl}`
 }

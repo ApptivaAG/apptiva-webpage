@@ -307,10 +307,7 @@ export const serviceBySlugQuery = q('*')
     _updatedAt: q.string(),
     slug: Slug,
     breadcrumb: q.string().optional(),
-    subPageOf: q('subPageOf')
-      .deref()
-      .grab$({ slug: Slug, breadcrumb: q.string().optional() })
-      .nullable(),
+    subPageOf: SubPageOf(),
     header: Header,
     modules: Modules,
     callToAction: q('callToAction')

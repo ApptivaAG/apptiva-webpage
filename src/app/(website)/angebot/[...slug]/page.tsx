@@ -1,3 +1,4 @@
+import { buildServicePath, buildServiceUrl } from '@/app/sitemap'
 import Customers from '@/components/customers'
 import Partners from '@/components/partners'
 import Testimonials from '@/components/testimonials'
@@ -18,7 +19,7 @@ export async function generateStaticParams() {
     'service-page',
   ])
   const params = services?.map(({ slug, subPageOf }) => ({
-    slug: subPageOf ? [subPageOf.slug, slug] : [slug],
+    slug: buildServicePath(slug, subPageOf)?.split('/') ?? [],
   }))
   return params
 }
@@ -33,9 +34,7 @@ export async function generateMetadata(props: {
     ['service-page']
   )
 
-  const url = service?.subPageOf
-    ? `/angebot/${service?.subPageOf.slug}/${service?.slug}`
-    : `/angebot/${service?.slug}`
+  const url = buildServiceUrl(service?.slug, service?.subPageOf)
 
   const headerTitle = service?.header?.title
     ? portableTextToString(service?.header?.title)
