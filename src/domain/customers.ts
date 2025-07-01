@@ -100,6 +100,12 @@ const customerList = [
     group: ['chatbot'],
   },
   {
+    fileName: 'simakom.svg',
+    alt: 'Simakom AG',
+    height: 35,
+    group: ['chatbot'],
+  },
+  {
     fileName: 'grandcasino-bern-logo.svg',
     alt: 'Grandcasino Bern',
     height: 45,
