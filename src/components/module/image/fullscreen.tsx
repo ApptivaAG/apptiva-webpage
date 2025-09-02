@@ -1,11 +1,12 @@
+import Heading from '@/components/heading'
 import { ModuleData } from '@/sanity/lib/queries'
+import { formatIds } from '@/utils/format-ids'
 import SanityImage from '../../sanity-image'
 import StyledPortableText from '../../styled-portable-text'
-import Heading from '@/components/heading'
 
 export default function FullscreenImage(props: { module: ModuleData }) {
   return (
-    <div className="full grid items-end">
+    <div className="full grid items-end" id={formatIds(props.module.title)}>
       <SanityImage
         className="col-start-1 row-start-1 h-full w-full object-cover"
         image={props.module.image}
