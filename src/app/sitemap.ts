@@ -53,7 +53,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-
+    {
+      url: buildFullUrl('/zusammenarbeit'),
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
     {
       url: buildFullUrl('/kontakt'),
       lastModified: new Date(),

@@ -523,11 +523,6 @@ async function redirects() {
       permanent: true,
     },
     {
-      source: '/zusammenarbeit',
-      destination: '/ueber-uns',
-      permanent: true,
-    },
-    {
       source: '/weiterentwicklung-apps-produkte',
       destination: '/angebot/development/weiterentwicklung',
       permanent: true,
