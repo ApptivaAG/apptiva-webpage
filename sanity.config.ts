@@ -36,15 +36,32 @@ export default defineConfig({
               )
               .icon(FaHome),
             S.listItem()
-              .title('Über Apptiva Seite')
+              .title('Apptiva: Über Uns Seite')
               .child(
                 S.editor()
                   .schemaType('about-page')
                   .documentId('about-page')
-                  .title('Über Apptiva Seite')
+                  .title('Apptiva: Über Uns Seite')
               )
               .icon(FaAddressCard),
-
+            S.listItem()
+              .title('Apptiva: Jobs Seite')
+              .child(
+                S.editor()
+                  .schemaType('jobs-page')
+                  .documentId('jobs-page')
+                  .title('Jobs')
+              )
+              .icon(FaAddressCard),
+            S.listItem()
+              .title('Apptiva: Zusammenarbeit Seite')
+              .child(
+                S.editor()
+                  .schemaType('zusammenarbeit-page')
+                  .documentId('zusammenarbeit-page')
+                  .title('Zusammenarbeit')
+              )
+              .icon(FaAddressCard),
             // List out the rest of the document types, but filter out the singleton types
             ...S.documentTypeListItems().filter(
               (listItem) =>
