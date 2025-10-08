@@ -664,7 +664,6 @@ async function redirects() {
       destination: '/projekte/konfigurator-schreinerei-holz-art',
       permanent: true,
     },
-    { source: '/jobs', destination: '/ueber-uns', permanent: true },
     { source: '/referenzen', destination: '/projekte', permanent: true },
     {
       source: '/vorgehen',
