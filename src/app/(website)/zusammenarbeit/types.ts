@@ -1,4 +1,6 @@
-import { jobsPageQuery } from '@/sanity/lib/queries'
+import { zusammenarbeitPageQuery } from '@/sanity/lib/queries'
 import { InferType } from 'groqd'
 
-export type JobsPageQueryData = InferType<typeof jobsPageQuery>
+export type ZusammenarbeitPageQueryData = InferType<
+  typeof zusammenarbeitPageQuery
+>
