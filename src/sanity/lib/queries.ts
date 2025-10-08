@@ -294,6 +294,27 @@ export const aboutPageQuery = q('*')
     modules: Modules,
   })
 
+export const jobsPageQuery = q('*')
+  .filterByType('jobs-page')
+  .filter()
+  .slice(0)
+  .grab$({
+    _id: q.string(),
+    slug: Slug,
+    header: Header,
+    modules: Modules,
+  })
+
+export const zusammenarbeitPageQuery = q('*')
+  .filterByType('zusammenarbeit-page')
+  .filter()
+  .slice(0)
+  .grab$({
+    _id: q.string(),
+    slug: Slug,
+    header: Header,
+    modules: Modules,
+  })
 export type ServiceBySlugQueryData = NonNullable<
   InferType<typeof serviceBySlugQuery>
 >

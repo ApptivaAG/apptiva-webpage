@@ -2,8 +2,8 @@ import portableTextToString from '@/utils/portable-text-to-string'
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
-  name: 'about-page',
-  title: 'Apptiva: Über Uns Seite',
+  name: 'jobs-page',
+  title: 'Jobs Seite',
   type: 'document',
   fields: [
     defineField({

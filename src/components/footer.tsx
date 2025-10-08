@@ -244,10 +244,14 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/ueber-uns#arbeiten-bei-apptiva">
+                  <Link href="/jobs">
                     <UnderlineForLink>Jobs</UnderlineForLink>
                   </Link>
                 </li>
+                <li></li>
+                <Link href="/zusammenarbeit">
+                  <UnderlineForLink>Zusammenarbeit</UnderlineForLink>
+                </Link>
               </ul>
             </div>
 

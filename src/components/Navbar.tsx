@@ -9,6 +9,7 @@ import apptivaLogo from './logo.svg'
 import MainNav from './main-nav'
 import MobileNav from './mobile-nav'
 import Button from './ui/button'
+import teamIcon from './team.svg'
 
 export type NavbarCTALink = {
   type: 'cta-link'
@@ -166,7 +167,29 @@ export const navbarData: NavbarItem[] = [
     ],
   },
   { title: 'Projekte', href: '/projekte', type: 'link' },
-  { title: 'Apptiva', href: '/ueber-uns', type: 'link' },
+  {
+    title: 'Apptiva',
+    type: 'menu',
+    items: [
+      {
+        title: 'Apptiva',
+        text: 'Über uns und unsere Mission.',
+        href: '/ueber-uns',
+        icon: teamIcon,
+        type: 'media-link',
+      },
+      {
+        title: 'Jobs',
+        href: '/jobs',
+        type: 'link',
+      },
+      {
+        title: 'Zusammenarbeit',
+        href: '/zusammenarbeit',
+        type: 'link',
+      },
+    ],
+  },
   {
     title: 'Wissen',
     type: 'menu',
