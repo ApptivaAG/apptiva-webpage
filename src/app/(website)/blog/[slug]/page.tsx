@@ -12,9 +12,15 @@ import { Code } from 'bright'
 export async function generateStaticParams() {
   const posts = await getPosts()
 
-  return posts.filter(hasTag('blog')).map((post) => ({
-    slug: post.slug,
-  }))
+  return posts
+    .filter(hasTag('blog'))
+    .toSorted(
+      (a, b) =>
+        new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
+    )
+    .map((post) => ({
+      slug: post.slug,
+    }))
 }
 
 export async function generateMetadata(props: {
@@ -73,11 +79,13 @@ export default async function Home(props: { params: { slug: string } }) {
   const previousSlug = postSlugs[currentIndex - 1]
   const nextSlug = postSlugs[currentIndex + 1]
 
-  return <CmsBlogPost
-    post={post}
-    previousSlug={previousSlug}
-    nextSlug={nextSlug}
-    Code={Code}
-    kind="blog"
-  />
+  return (
+    <CmsBlogPost
+      post={post}
+      previousSlug={previousSlug}
+      nextSlug={nextSlug}
+      Code={Code}
+      kind="blog"
+    />
+  )
 }

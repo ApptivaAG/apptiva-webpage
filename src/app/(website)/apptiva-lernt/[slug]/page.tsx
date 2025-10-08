@@ -12,9 +12,15 @@ import { notFound } from 'next/navigation'
 export async function generateStaticParams() {
   const posts = await getPosts()
 
-  return posts.filter(hasTag('apptiva-lernt')).map((post) => ({
-    slug: post.slug,
-  }))
+  return posts
+    .filter(hasTag('apptiva-lernt'))
+    .toSorted(
+      (a, b) =>
+        new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
+    )
+    .map((post) => ({
+      slug: post.slug,
+    }))
 }
 
 export async function generateMetadata(props: {
@@ -68,13 +74,18 @@ export default async function Home(props: { params: { slug: string } }) {
   }
   const post = (await getPostBySlug(paramsSlug, false)) ?? notFound()
 
+  const postSlugs = (await generateStaticParams()).map(({ slug }) => slug)
+  const currentIndex = postSlugs.indexOf(paramsSlug)
+  const previousSlug = postSlugs[currentIndex - 1]
+  const nextSlug = postSlugs[currentIndex + 1]
+
   return (
     <CmsBlogPost
       post={post}
       Code={Code}
       kind="apptiva-lernt"
-      nextSlug={undefined}
-      previousSlug={undefined}
+      nextSlug={nextSlug}
+      previousSlug={previousSlug}
     />
   )
 }
