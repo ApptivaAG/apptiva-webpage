@@ -142,6 +142,12 @@ const customerList = [
     group: ['web'],
   },
   {
+    fileName: 'sbw-logo.png',
+    alt: 'Stadtbus Winterthur',
+    height: 60,
+    group: ['web'],
+  },
+  {
     fileName: 'schurch-logo.svg',
     alt: 'Schürch Getränke AG',
     height: 35,
