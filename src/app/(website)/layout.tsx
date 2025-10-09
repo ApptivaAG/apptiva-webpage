@@ -1,4 +1,5 @@
 import Footer from '@/components/footer'
+import { NuqsAdapter } from 'nuqs/adapters/next/app'
 import LiveVisualEditing from '@/components/live-visual-editing'
 import type { Metadata } from 'next'
 import PlausibleProvider from 'next-plausible'
@@ -59,7 +60,11 @@ export default function RootLayout({
       <body className="text-lg">
         <Navbar />
         {/* The main content has to be higher in the z-index, so that the content coming after the footer is behind the main content */}
-        <main className="content relative z-10 bg-base-white">{children}</main>
+        <NuqsAdapter>
+          <main className="content relative z-10 bg-base-white">
+            {children}
+          </main>
+        </NuqsAdapter>
         <Footer />
         {draftMode().isEnabled ? (
           <LiveVisualEditing />

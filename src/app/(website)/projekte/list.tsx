@@ -7,19 +7,14 @@ import { ProjectQueryData } from './types'
 import Button from '@/components/ui/button'
 import { useState } from 'react'
 import Link from 'next/link'
+import { topics, Topics } from './search-params'
 
-export default function ProjectList(props: { projects: ProjectQueryData[] }) {
-  // const topics = ['Alle', 'App Entwicklung', 'Webentwicklung', 'Chatbots']
-  const topics = [
-    { name: 'Alle', value: '' },
-    { name: 'App Entwicklung', value: 'App Entwicklung' },
-    { name: 'Webentwicklung', value: 'Webentwicklung' },
-    { name: 'Chatbots', value: 'Chatbots' },
-  ]
-
-  const [topic, setTopic] = useState(topics[0].value)
+export default function ProjectList(props: {
+  projects: ProjectQueryData[]
+  topic: Topics
+}) {
   const getIntent = (name: string) => {
-    if (name === topic) {
+    if (name === props.topic) {
       return 'secondary'
     } else {
       return 'ghost'
@@ -45,27 +40,20 @@ export default function ProjectList(props: { projects: ProjectQueryData[] }) {
       />
       <div className="flex flex-wrap gap-4 pt-8 lg:pt-16">
         {topics.map((topic) => (
-          <Button
-            intent={getIntent(topic.value)}
-            onClick={() => setTopic(topic.value)}
-            key={topic.value}
-          >
-            {topic.name}
-          </Button>
+          <Link href={`?topic=${topic.value}`} replace>
+            <Button intent={getIntent(topic.value)} key={topic.value}>
+              {topic.name}
+            </Button>
+          </Link>
         ))}
       </div>
 
       <ul className="grid gap-4 py-8 lg:grid-cols-3 lg:py-16">
-        {props.projects
-          .filter((project) => {
-            if (topic !== topics[0].value) return project.tags?.includes(topic)
-            else return project
-          })
-          .map((project) => (
-            <li key={project._id}>
-              <ProjectTeaser project={project} intent="dark" />
-            </li>
-          ))}
+        {props.projects.map((project) => (
+          <li key={project._id}>
+            <ProjectTeaser project={project} intent="dark" />
+          </li>
+        ))}
       </ul>
     </>
   )

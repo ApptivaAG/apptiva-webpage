@@ -1,9 +1,11 @@
 import { projectsQuery } from '@/sanity/lib/queries'
+import type { SearchParams } from 'nuqs/server'
 import { load } from '@/sanity/lib/sanityFetch'
 import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import ProjectList from './list'
 import ProjectsPreview from './preview'
+import { loadSearchParams } from './search-params'
 
 const url = '/projekte'
 const title = 'Erfolgsprojekte: Softwarelösungen und Chatbots im Einsatz'
@@ -18,7 +20,12 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function Home() {
+type PageProps = {
+  searchParams: Promise<SearchParams>
+}
+
+export default async function Home({ searchParams }: PageProps) {
+  const { topic } = await loadSearchParams(searchParams)
   const { isEnabled } = draftMode()
   const { draft, published } = await load(projectsQuery, isEnabled, undefined, [
     'project',
@@ -27,6 +34,12 @@ export default async function Home() {
   return isEnabled ? (
     <ProjectsPreview initial={draft} />
   ) : (
-    <ProjectList projects={published} />
+    <ProjectList
+      projects={published.filter((project) => {
+        if (topic !== '') return project.tags?.includes(topic)
+        else return project
+      })}
+      topic={topic}
+    />
   )
 }
