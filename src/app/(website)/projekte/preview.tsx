@@ -15,5 +15,5 @@ export default function ProjectsPreview({
     undefined,
     { initial }
   )
-  return <ProjectList projects={data} />
+  return <ProjectList projects={data} topic="" />
 }
