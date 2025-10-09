@@ -248,6 +248,11 @@ export default function Footer() {
                     <UnderlineForLink>Jobs</UnderlineForLink>
                   </Link>
                 </li>
+                <li>
+                  <Link href="/kontakt">
+                    <UnderlineForLink>Kontakt</UnderlineForLink>
+                  </Link>
+                </li>
               </ul>
             </div>
 
