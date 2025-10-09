@@ -1,11 +1,8 @@
-'use client'
-
 import { PageHeader } from '@/components/page-header'
 import Underline from '@/components/ui/underline'
 import { ProjectTeaser } from './projekt-teaser'
 import { ProjectQueryData } from './types'
 import Button from '@/components/ui/button'
-import { useState } from 'react'
 import Link from 'next/link'
 import { topics, Topics } from './search-params'
 
