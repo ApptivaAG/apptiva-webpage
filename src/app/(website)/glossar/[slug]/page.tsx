@@ -8,12 +8,12 @@ import { Metadata } from 'next'
 import portableTextToString from '@/utils/portable-text-to-string'
 
 export async function generateMetadata(props: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }): Promise<Metadata> {
   const { published: glossary } = await load(
     glossaryBySlugQuery,
     false,
-    props.params,
+    await props.params,
     ['glossary']
   )
 
@@ -38,16 +38,17 @@ export async function generateMetadata(props: {
 }
 
 export default async function GlossaryItem(props: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }) {
+  const isDraft = (await draftMode()).isEnabled
+  const params = await props.params
   const { published, draft } =
-    (await load(glossaryBySlugQuery, draftMode().isEnabled, props.params, [
-      'glossary',
-    ])) ?? notFound()
+    (await load(glossaryBySlugQuery, isDraft, params, ['glossary'])) ??
+    notFound()
   return (
     <>
-      {draftMode().isEnabled ? (
-        <GlossaryItemPreview initial={draft} params={props.params} />
+      {isDraft ? (
+        <GlossaryItemPreview initial={draft} params={params} />
       ) : (
         <Item glossary={published} />
       )}

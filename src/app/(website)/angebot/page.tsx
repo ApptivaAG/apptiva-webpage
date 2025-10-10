@@ -5,7 +5,7 @@ import ServiceList from './list'
 import ServicesPreview from './preview'
 
 export default async function Home() {
-  const { isEnabled } = draftMode()
+  const { isEnabled } = await draftMode()
   const { published, draft } = await load(servicesQuery, isEnabled, undefined, [
     'service-page',
   ])

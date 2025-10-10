@@ -20,13 +20,12 @@ export const metadata: Metadata = {
 }
 
 export default async function Glossary() {
-  const glossary = await load(glossaryQuery, draftMode().isEnabled, undefined, [
-    'glossary',
-  ])
+  const isDraft = (await draftMode()).isEnabled
+  const glossary = await load(glossaryQuery, isDraft, undefined, ['glossary'])
 
   return (
     <>
-      {draftMode().isEnabled ? (
+      {isDraft ? (
         <GlossaryPreview initial={glossary.draft} />
       ) : (
         <GlossaryList data={orderGlossaryByTitle(glossary.published)} />

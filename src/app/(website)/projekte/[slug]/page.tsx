@@ -7,12 +7,12 @@ import ProjectDetail from './detail'
 import ProjectsPreview from './preview'
 
 export async function generateMetadata(props: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }): Promise<Metadata> {
   const { published: project } = await load(
     projectBySlugQuery,
     false,
-    props.params,
+    (await props.params),
     ['project']
   )
 
@@ -37,13 +37,13 @@ export async function generateStaticParams() {
   return projects?.map(({ slug }) => ({ slug }))
 }
 
-export default async function Home(props: { params: { slug: string } }) {
-  const { isEnabled } = draftMode()
+export default async function Home(props: { params: Promise<{ slug: string }> }) {
+  const { isEnabled } = await draftMode()
   const { published, draft } = await load(
     projectBySlugQuery,
     isEnabled,
-    props.params,
-    ['project', props.params.slug]
+    (await props.params),
+    ['project', (await props.params).slug]
   )
 
   if (!draft) {
@@ -51,8 +51,8 @@ export default async function Home(props: { params: { slug: string } }) {
   }
 
   return isEnabled ? (
-    <ProjectsPreview initial={draft} params={props.params} />
+    <ProjectsPreview initial={draft} params={(await props.params)} />
   ) : (
     <ProjectDetail project={published} />
-  )
+  );
 }

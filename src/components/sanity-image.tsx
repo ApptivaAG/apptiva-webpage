@@ -30,7 +30,7 @@ export default function SanityImage({
       className={className}
       key={image.toString()}
       src={urlForImage(image).url()}
-      alt={image.alt}
+      alt={image.alt ?? ''}
       width={width}
       height={height}
       placeholder={buildPlaceholder(image, width, height)}

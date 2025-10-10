@@ -4,10 +4,10 @@ import { sendMail } from '@/components/server-actions/send-mail'
 import { Submit } from '@/components/submit'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { useFormState } from 'react-dom'
+import { useActionState } from 'react'
 
 export default function Form() {
-  const [state, formAction] = useFormState(sendMail, { state: 'idle' })
+  const [state, formAction] = useActionState(sendMail, { state: 'idle' })
 
   if (state.state === 'success') {
     return (

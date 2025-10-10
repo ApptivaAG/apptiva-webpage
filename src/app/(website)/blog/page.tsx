@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 }
 
 export default async function Blog() {
-  const { isEnabled } = draftMode()
+  const { isEnabled } = await draftMode()
   return (
     <>
       <PageHeader

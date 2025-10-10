@@ -10,7 +10,7 @@ import ModuleWrapper from './modules'
 import ModulesPreview from './modules-preview'
 
 export default async function ModulesPage() {
-  const { isEnabled } = draftMode()
+  const { isEnabled } = await draftMode()
   const { published, draft } = await load(homepageQuery, isEnabled, undefined, [
     'homepage',
   ])

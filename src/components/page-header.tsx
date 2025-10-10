@@ -33,7 +33,7 @@ export function PageHeader(props: {
           <BreadCrumb className="pb-2 md:pb-6" links={props.links} />
         )}
         {props.title && <Heading level={1}>{title}</Heading>}
-        <p className={leadStyle}>{lead}</p>
+        <div className={leadStyle}>{lead}</div>
         {props.callToAction && (
           <div className="pt-8 md:pt-12">{props.callToAction}</div>
         )}

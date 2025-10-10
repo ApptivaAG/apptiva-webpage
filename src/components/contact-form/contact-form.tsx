@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { useFormState } from 'react-dom'
 import Heading from '../heading'
 import Section from '../section'
 import { sendMail } from '../server-actions/send-mail'
@@ -9,9 +8,10 @@ import { Submit } from '../submit'
 import { Input } from '../ui/input'
 import { Label } from '../ui/label'
 import UnderlineForLink from '../ui/underline-for-link'
+import { useActionState } from 'react'
 
 const ContactForm = () => {
-  const [state, formAction] = useFormState(sendMail, { state: 'idle' })
+  const [state, formAction] = useActionState(sendMail, { state: 'idle' })
 
   return (
     <Section intent={'light'} level={'one'}>

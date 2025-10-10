@@ -24,9 +24,9 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata(props: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }): Promise<Metadata> {
-  const paramsSlug = decodeURIComponent(props.params.slug)
+  const paramsSlug = decodeURIComponent((await props.params).slug)
   const post = await getPostBySlug(paramsSlug, false)
 
   if (!post) {
@@ -48,9 +48,9 @@ export async function generateMetadata(props: {
   }
 }
 
-export default async function Home(props: { params: { slug: string } }) {
-  const paramsSlug = decodeURIComponent(props.params.slug)
-  const { isEnabled } = draftMode()
+export default async function Home(props: { params: Promise<{ slug: string }> }) {
+  const paramsSlug = decodeURIComponent((await props.params).slug)
+  const { isEnabled } = await draftMode()
 
   if (isEnabled) {
     const data = await load(

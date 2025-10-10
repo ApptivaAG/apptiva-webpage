@@ -1,8 +1,7 @@
 'use client'
 
 import { cn } from '@/utils/cn'
-import { useState } from 'react'
-import { useFormState } from 'react-dom'
+import { useActionState, useState } from 'react'
 import { subscribeToNewsletter } from '../server-actions/subscribe-to-newsletter'
 import { Submit } from '../submit'
 import { Input } from '../ui/input'
@@ -10,7 +9,7 @@ import { Label } from '../ui/label'
 
 export default function NewsletterForm() {
   const [engaged, setEngaged] = useState(false)
-  const [state, formAction] = useFormState(subscribeToNewsletter, {
+  const [state, formAction] = useActionState(subscribeToNewsletter, {
     state: 'idle',
   })
   if (state.state === 'success') {

@@ -47,11 +47,13 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default async function RootLayout(
+  {
+    children,
+  }: {
+    children: React.ReactNode
+  }
+) {
   return (
     <html lang="de" className={gentona.className}>
       <head>
@@ -66,7 +68,7 @@ export default function RootLayout({
           </main>
         </NuqsAdapter>
         <Footer />
-        {draftMode().isEnabled ? (
+        {(await draftMode()).isEnabled ? (
           <LiveVisualEditing />
         ) : (
           <Script
@@ -79,5 +81,5 @@ export default function RootLayout({
         )}
       </body>
     </html>
-  )
+  );
 }

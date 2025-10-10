@@ -24,9 +24,10 @@ type PageProps = {
   searchParams: Promise<SearchParams>
 }
 
-export default async function Home({ searchParams }: PageProps) {
+export default async function Home(props: PageProps) {
+  const searchParams = await props.searchParams;
   const { topic } = await loadSearchParams(searchParams)
-  const { isEnabled } = draftMode()
+  const { isEnabled } = await draftMode()
   const { draft, published } = await load(projectsQuery, isEnabled, undefined, [
     'project',
   ])

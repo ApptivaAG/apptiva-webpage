@@ -22,7 +22,7 @@ export default async function ApptivaLerntList({
 }: {
   params: { slug: string }
 }) {
-  const { isEnabled } = draftMode()
+  const { isEnabled } = await draftMode()
   return (
     <>
       <PageHeader

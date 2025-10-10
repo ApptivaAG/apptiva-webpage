@@ -35,7 +35,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function AboutPage() {
-  const { isEnabled } = draftMode()
+  const { isEnabled } = await draftMode()
   const { published, draft } = await load(
     aboutPageQuery,
     isEnabled,

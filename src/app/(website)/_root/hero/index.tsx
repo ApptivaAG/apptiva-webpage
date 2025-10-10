@@ -5,7 +5,7 @@ import Content from './content'
 import HeroPreview from './preview'
 
 export default async function Hero() {
-  const { isEnabled } = draftMode()
+  const { isEnabled } = await draftMode()
   const { draft, published } = await load(homepageQuery, isEnabled, undefined, [
     'homepage',
   ])

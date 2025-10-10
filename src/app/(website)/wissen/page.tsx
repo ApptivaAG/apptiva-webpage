@@ -135,14 +135,14 @@ const contactModule = {
 export default async function Knowledge() {
   const { published: faqPublished, draft: faqDraft } = await load(
     faqsQuery,
-    draftMode().isEnabled,
+    (await draftMode()).isEnabled,
     undefined,
     ['faq']
   )
 
   const { published: glossaryPublished, draft: glossaryDraft } = await load(
     glossaryQuery,
-    draftMode().isEnabled,
+    (await draftMode()).isEnabled,
     undefined,
     ['glossary']
   )
@@ -177,7 +177,6 @@ export default async function Knowledge() {
           </div>
         </div>
       </Blogposts>
-
       <Blogposts show="apptiva-lernt">
         <div className="content space-y-4">
           <Heading level={2} size={3}>
@@ -196,7 +195,7 @@ export default async function Knowledge() {
           </div>
         </div>
       </Blogposts>
-      {draftMode().isEnabled ? (
+      {(await draftMode()).isEnabled ? (
         <KnowledgePreview
           initialFAQs={faqDraft}
           initialGlossar={glossaryDraft}
@@ -209,5 +208,5 @@ export default async function Knowledge() {
       )}
       <Contact module={contactModule} />
     </>
-  )
+  );
 }

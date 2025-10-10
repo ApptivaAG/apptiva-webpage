@@ -37,7 +37,12 @@ export default function ProjectList(props: {
       />
       <div className="flex flex-wrap gap-4 pt-8 lg:pt-16">
         {topics.map((topic) => (
-          <Link href={`?topic=${topic.value}`} replace scroll={false}>
+          <Link
+            key={topic.value}
+            href={`?topic=${topic.value}`}
+            replace
+            scroll={false}
+          >
             <Button intent={getIntent(topic.value)} key={topic.value}>
               {topic.name}
             </Button>

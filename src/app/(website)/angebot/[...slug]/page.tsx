@@ -25,12 +25,12 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata(props: {
-  params: { slug: string[] }
+  params: Promise<{ slug: string[] }>
 }): Promise<Metadata> {
   const { published: service } = await load(
     serviceBySlugQuery,
     false,
-    getLastParam(props.params),
+    getLastParam((await props.params)),
     ['service-page']
   )
 
@@ -70,13 +70,13 @@ function getLastParam(params: { slug: string[] }) {
   return { slug: params.slug[params.slug.length - 1] }
 }
 
-export default async function Home(props: { params: { slug: string[] } }) {
-  const subpageSlug = props.params.slug.at(0) ?? notFound()
-  const { isEnabled } = draftMode()
+export default async function Home(props: { params: Promise<{ slug: string[] }> }) {
+  const subpageSlug = (await props.params).slug.at(0) ?? notFound()
+  const { isEnabled } = await draftMode()
   const { published, draft, error } = await load(
     serviceBySlugQuery,
     isEnabled,
-    getLastParam(props.params),
+    getLastParam((await props.params)),
     ['service-page']
   )
 
@@ -91,7 +91,7 @@ export default async function Home(props: { params: { slug: string[] } }) {
   return isEnabled ? (
     <ServicePreview
       initial={draft}
-      params={getLastParam(props.params)}
+      params={getLastParam((await props.params))}
       customers={customers}
       testimonials={testimonials}
       partners={partners}
@@ -103,7 +103,7 @@ export default async function Home(props: { params: { slug: string[] } }) {
       customers={customers}
       testimonials={testimonials}
     />
-  )
+  );
 }
 
 function mapSlugToGroup(slug: string): Group[] | undefined {
