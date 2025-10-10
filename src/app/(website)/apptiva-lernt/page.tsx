@@ -17,11 +17,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function ApptivaLerntList({
-  params,
-}: {
-  params: { slug: string }
-}) {
+export default async function ApptivaLerntList() {
   const { isEnabled } = await draftMode()
   return (
     <>
@@ -31,7 +27,7 @@ export default async function ApptivaLerntList({
         links={[{ name: 'Apptiva lernt', href: '/apptiva-lernt' }]}
       />
       <div className="full bg-primary">
-        <div className="content ">
+        <div className="content">
           <Suspense
             fallback={
               <p className="pb-64 pt-8 text-xl font-bold">Lade Artikel...</p>

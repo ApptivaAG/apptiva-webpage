@@ -286,7 +286,7 @@ export default function Footer() {
   )
 }
 
-const RandomText = React.memo(() => {
+const RandomText = React.memo(function RandomEngagementText() {
   const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
