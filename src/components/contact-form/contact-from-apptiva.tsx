@@ -35,6 +35,10 @@ export const ContactFromMailApptivaCopy = (props: FormInputSchema) => (
             <b>Unternehmen: </b>
             {props.company ?? 'keine Angabe'}
           </Text>
+          <Text style={{ ...paragraph, marginTop: -5 }}>
+            <b>Referenz (Wie hast du uns gefunden): </b>
+            {props.referrer ?? 'keine Angabe'}
+          </Text>
           {props.circle === 'bubble' && (
             <Text style={{ ...paragraph, marginTop: -5 }}>
               <b>Telefonnummer: </b>

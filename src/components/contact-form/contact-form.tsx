@@ -115,6 +115,17 @@ const ContactForm = () => {
                     required
                   />
                 </div>
+                <div>
+                  <Label htmlFor="referrer">
+                    Wie hast du uns gefunden? <small>optional</small>
+                  </Label>
+                  <Input
+                    intent="default"
+                    type="text"
+                    name="referrer"
+                    id="referrer"
+                  />
+                </div>
                 {state.state === 'error' && (
                   <div className="pt-2">
                     <em className="">{state.error}</em>
