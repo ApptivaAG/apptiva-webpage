@@ -1,6 +1,6 @@
 import Footer from '@/components/footer'
+import { VisualEditing } from 'next-sanity/visual-editing'
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
-import LiveVisualEditing from '@/components/live-visual-editing'
 import type { Metadata } from 'next'
 import PlausibleProvider from 'next-plausible'
 import localFont from 'next/font/local'
@@ -9,6 +9,7 @@ import Script from 'next/script'
 import { description, rootUrl, title } from '../env'
 import Navbar from './../../components/Navbar'
 import './globals.css'
+import { DisableDraftMode } from '@/components/disable-draft-mode'
 
 const gentona = localFont({
   src: [
@@ -47,13 +48,11 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function RootLayout(
-  {
-    children,
-  }: {
-    children: React.ReactNode
-  }
-) {
+export default async function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="de" className={gentona.className}>
       <head>
@@ -61,15 +60,18 @@ export default async function RootLayout(
       </head>
       <body className="text-lg">
         <Navbar />
-        {/* The main content has to be higher in the z-index, so that the content coming after the footer is behind the main content */}
         <NuqsAdapter>
+          {/* The main content has to be higher in the z-index, so that the content coming after the footer is behind the main content */}
           <main className="content relative z-10 bg-base-white">
             {children}
           </main>
         </NuqsAdapter>
         <Footer />
         {(await draftMode()).isEnabled ? (
-          <LiveVisualEditing />
+          <>
+            <VisualEditing />
+            <DisableDraftMode />
+          </>
         ) : (
           <Script
             id="chatbot"
@@ -81,5 +83,5 @@ export default async function RootLayout(
         )}
       </body>
     </html>
-  );
+  )
 }

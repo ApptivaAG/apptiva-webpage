@@ -37,10 +37,20 @@ export async function load<T extends GroqdQuery>(
   params: Record<string, number | string> = {},
   cacheTags?: string[]
 ) {
-  const result = await loadQuery<InferType<T>>(query.query, params, {
-    perspective: isDraftMode ? 'previewDrafts' : 'published',
-    next: { tags: cacheTags },
-  })
+  const result = await loadQuery<InferType<T>>(
+    query.query,
+    params,
+    isDraftMode
+      ? {
+          perspective: 'drafts',
+          useCdn: false,
+          stega: true,
+          next: { tags: cacheTags },
+        }
+      : {
+          next: { tags: cacheTags },
+        }
+  )
 
   const parsed = query.schema.safeParse(result.data) as z.SafeParseReturnType<
     InferType<T>,

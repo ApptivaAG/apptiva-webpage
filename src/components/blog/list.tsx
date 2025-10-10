@@ -2,8 +2,8 @@ import { CmsBlog } from '@/domain/types'
 import { BlogTeaser } from './blog-teaser'
 import { hasTag } from '@/domain/blog/mappers'
 
-export default async function BlogList(props: {
-  posts: (CmsBlog)[]
+export default function BlogList(props: {
+  posts: CmsBlog[]
   show: 'blog' | 'apptiva-lernt'
 }) {
   const sortedFilteredPosts = props.posts
