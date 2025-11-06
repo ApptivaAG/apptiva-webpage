@@ -1,7 +1,7 @@
 import SanityImage from '@/components/sanity-image'
+import { PortableText } from '@/domain/types'
 import { PersonData } from '@/sanity/lib/queries'
 import { cn } from '@/utils/cn'
-import { PortableText } from '@/domain/types'
 import Image from 'next/image'
 import Link from 'next/link'
 import LogoIcon from './logo-icon.svg'
@@ -15,7 +15,9 @@ export default function ContactPerson(props: {
 }) {
   return (
     <section
-      className={cn('full bg-primary pb-8 pt-12 text-base-white md:py-36')}
+      className={cn(
+        'contact-person full bg-primary pb-8 pt-12 text-base-white md:py-36'
+      )}
     >
       {props.person ? (
         <div className="content middle-grid gap-y-8">
