@@ -9,11 +9,6 @@ type Logo = {
 
 const partnerList = [
   {
-    fileName: 'digital-enterprise-black.svg',
-    alt: 'Digital Enterprise',
-    height: 120,
-  },
-  {
     fileName: 'kyberna-black.svg',
     alt: 'kyberna',
     height: 120,
