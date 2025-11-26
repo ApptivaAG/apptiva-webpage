@@ -1,4 +1,5 @@
 import Customers from '@/components/customers'
+import Partners from '@/components/partners'
 import Testimonials from '@/components/testimonials'
 import { aboutPageQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
@@ -7,13 +8,13 @@ import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import About from './about'
 import AboutPreview from './preview'
-import Partners from '@/components/partners'
 
 const url = '/ueber-uns'
 
 export async function generateMetadata(): Promise<Metadata> {
   const { published: about } = await load(aboutPageQuery, false, undefined, [
     'about-page',
+    'person',
   ])
 
   const meta = {
@@ -40,7 +41,7 @@ export default async function AboutPage() {
     aboutPageQuery,
     isEnabled,
     undefined,
-    ['about-page']
+    ['about-page', 'person']
   )
 
   const testimonials = <Testimonials />
