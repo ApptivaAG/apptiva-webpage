@@ -10,6 +10,9 @@ export async function POST(req: NextRequest) {
       process.env.SANITY_REVALIDATE_SECRET
     )
 
+    console.log('isValidSignature', isValidSignature)
+    console.log('type', body?._type)
+
     if (!isValidSignature) {
       const message = 'Invalid signature'
       return new Response(JSON.stringify({ message, isValidSignature, body }), {
