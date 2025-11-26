@@ -145,21 +145,6 @@ export default defineType({
       hidden: isNotType('projects'),
     }),
     defineField({
-      title: 'Team',
-      name: 'team',
-
-      type: 'array',
-      // @ts-ignore
-      of: [
-        defineArrayMember({
-          type: 'reference',
-          to: { type: 'person' },
-        }),
-      ],
-      hidden: isNotType('team'),
-    }),
-
-    defineField({
       name: 'priceCards',
       title: 'Preis Karten',
       type: 'array',
