@@ -33,7 +33,7 @@ export default function PricesImproved(props: { module: ModuleData }) {
             )}
           </div>
           <div className="grid gap-7 gap-y-14 lg:grid-cols-3">
-            {props.module.prices?.map((price, index) => (
+            {props.module.prices?.map((price) => (
               <div
                 key={price._key}
                 className="grid grid-rows-3 rounded-lg bg-base-white"
@@ -42,7 +42,7 @@ export default function PricesImproved(props: { module: ModuleData }) {
                 <div
                   className={
                     'relative row-span-1 row-start-1 flex w-full flex-col items-center justify-center rounded-lg border-secondary p-10 ' +
-                    (index % 2
+                    (price.isFavourite
                       ? 'border-secondary bg-secondary text-primary'
                       : 'bg-primary text-base-white')
                   }
@@ -51,8 +51,7 @@ export default function PricesImproved(props: { module: ModuleData }) {
                   {price.isFavourite && (
                     <div
                       className={cn(
-                        'absolute -top-6 line-clamp-2 flex justify-items-center rounded-full bg-primary px-7 py-3 text-base-white',
-                        !(index % 2) && 'border bg-primary'
+                        'absolute -top-6 line-clamp-2 flex justify-items-center rounded-full bg-primary px-7 py-3 text-base-white'
                       )}
                     >
                       <TbUserHeart className="h-5 w-5 shrink-0 transition-transform duration-200" />
@@ -85,7 +84,7 @@ export default function PricesImproved(props: { module: ModuleData }) {
                     <NextLink href={price.link}>
                       <Button
                         element="div"
-                        intent={index % 2 ? 'secondary' : 'primary'}
+                        intent={price.isFavourite ? 'secondary' : 'primary'}
                         href={price.link}
                       >
                         <p>{price.linktext}</p>
