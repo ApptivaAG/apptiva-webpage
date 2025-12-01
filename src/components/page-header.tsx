@@ -3,6 +3,7 @@ import { PortableText, SanityImageWithAlt } from '@/domain/types'
 import { isValidElement } from 'react'
 import BreadCrumb from './bread-crumb'
 import Heading from './heading'
+import PromoButton from './promo-button'
 import StyledPortableText from './styled-portable-text'
 
 export const leadStyle = 'max-w-xl pt-4 text-xl md:pt-8'
@@ -44,6 +45,7 @@ export function PageHeader(props: {
         )}
       </div>
       {props.children}
+      <PromoButton />
     </header>
   )
 }

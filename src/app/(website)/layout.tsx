@@ -1,15 +1,16 @@
+import { DisableDraftMode } from '@/components/disable-draft-mode'
 import Footer from '@/components/footer'
-import { VisualEditing } from 'next-sanity/visual-editing'
-import { NuqsAdapter } from 'nuqs/adapters/next/app'
+import PromoDialog from '@/components/promo-dialog'
 import type { Metadata } from 'next'
 import PlausibleProvider from 'next-plausible'
+import { VisualEditing } from 'next-sanity/visual-editing'
 import localFont from 'next/font/local'
 import { draftMode } from 'next/headers'
 import Script from 'next/script'
+import { NuqsAdapter } from 'nuqs/adapters/next/app'
 import { description, rootUrl, title } from '../env'
 import Navbar from './../../components/Navbar'
 import './globals.css'
-import { DisableDraftMode } from '@/components/disable-draft-mode'
 
 const gentona = localFont({
   src: [
@@ -60,6 +61,7 @@ export default async function RootLayout({
       </head>
       <body className="text-lg">
         <Navbar />
+        <PromoDialog />
         <NuqsAdapter>
           {/* The main content has to be higher in the z-index, so that the content coming after the footer is behind the main content */}
           <main className="content relative z-10 bg-base-white">

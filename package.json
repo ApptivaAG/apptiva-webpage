@@ -18,7 +18,7 @@
     "@next/mdx": "15.5.4",
     "@portabletext/react": "^4.0.3",
     "@portabletext/to-html": "^3.0.0",
-    "@radix-ui/react-dialog": "^1.1.0",
+    "@radix-ui/react-dialog": "^1.1.6",
     "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-navigation-menu": "^1.2.0",
     "@radix-ui/react-slot": "^1.1.0",
