@@ -30,12 +30,15 @@ const PromoDialog = () => {
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogContent className="border-secondary bg-primary text-base-white">
+      <DialogContent
+        className="bg-primary text-base-white outline outline-1 outline-secondary"
+        aria-describedby={undefined}
+      >
         <DialogHeader className="hidden">
           <DialogTitle />
         </DialogHeader>
 
-        <Image priority src={popup} alt="Close Menu" className="border-none" />
+        <Image priority src={popup} alt="Close Menu" className="w-full" />
 
         <DialogFooter>
           <DialogClose asChild>
