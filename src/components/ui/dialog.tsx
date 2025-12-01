@@ -44,7 +44,7 @@ const DialogContent = React.forwardRef<
       {...props}
     >
       {children}
-      <DialogPrimitive.Close className="rounded-sm ring-offset-white focus:ring-slate-950 data-[state=open]:bg-slate-100 data-[state=open]:text-slate-500 dark:ring-offset-slate-950 dark:focus:ring-slate-300 dark:data-[state=open]:bg-slate-800 dark:data-[state=open]:text-slate-400 absolute right-4 top-4 opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none">
+      <DialogPrimitive.Close className="rounded-sm absolute right-4 top-4 opacity-70 outline-none hover:opacity-100 disabled:pointer-events-none">
         <Image priority src={close} alt="Close Menu" className="w-10" />
         <span className="sr-only">Close</span>
       </DialogPrimitive.Close>
