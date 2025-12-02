@@ -18,14 +18,16 @@ const PromoDialog = () => {
 
   useEffect(() => {
     const referrer = document.referrer
-    const currentHost =
-      (typeof window !== 'undefined' && window.location.host) || undefined
+    const location = typeof window !== 'undefined' ? window.location : undefined
+    const currentHost = location?.host
+    const path = location?.pathname
 
     // Check if referrer is empty (direct access) or from external site
     const isExternal =
       !referrer || (!!currentHost && !referrer.includes(currentHost))
+    const isPromoPage = location?.pathname.includes('weihnachtsaktion')
 
-    setIsOpen(isExternal)
+    setIsOpen(isExternal && !isPromoPage)
   }, [])
 
   return (
