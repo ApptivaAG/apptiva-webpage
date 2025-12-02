@@ -26,7 +26,7 @@ const PromoButton = () => {
   return (
     <Link
       href="/angebot/chatbots/weihnachtsaktion"
-      className="absolute bottom-4 right-4 z-50 animate-[bounce_1s_ease-in-out_3.5] md:bottom-16 md:right-16"
+      className="bottom-4 right-4 z-50 float-right mr-8 mt-4 animate-[bounce_1s_ease-in-out_3.5] md:absolute md:bottom-16 md:right-16 md:mr-0 md:mt-0"
     >
       <Image
         priority
