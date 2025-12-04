@@ -77,7 +77,8 @@ export default function PricesImproved(props: { module: ModuleData }) {
                     {/* Promo price */}
                     {price.isFavourite ? (
                       <span>
-                        CHF <Strikethrough>490.–</Strikethrough> <b>249.–</b>
+                        CHF <Strikethrough>490.–</Strikethrough>{' '}
+                        <b className="text-[1.5rem]">249.–</b>
                         /Monat
                       </span>
                     ) : (
