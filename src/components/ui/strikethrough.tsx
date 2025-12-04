@@ -1,0 +1,28 @@
+'use client'
+
+import { cn } from '@/utils/cn'
+import { useInView } from 'react-intersection-observer'
+import style from './strikethrough.module.css'
+
+export default function Strikethrough(props: {
+  children?: React.ReactNode
+  className?: string
+}) {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    rootMargin: '0px 0px -20% 0px',
+    threshold: 1,
+  })
+  return (
+    <span
+      ref={ref}
+      className={cn(
+        style['strikethrough-text'],
+        inView && style.animate,
+        props.className
+      )}
+    >
+      {props.children}
+    </span>
+  )
+}

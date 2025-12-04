@@ -1,0 +1,37 @@
+@keyframes text-reveal {
+  0% {
+    --split-position: 0%;
+  }
+  30% {
+    --split-position: 100%;
+  }
+  100% {
+    --split-position: 100%;
+  }
+}
+
+@property --split-position {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 1%; /* 0% would be the correct, but is minimized to 0 on build. */
+}
+
+.strikethrough-text {
+  --split-position: 0%;
+  text-decoration: none;
+  background-image: linear-gradient(
+    to right,
+    rgb(239 68 68),
+    rgb(239 68 68) var(--split-position),
+    rgba(0, 0, 0, 0) var(--split-position),
+    rgba(0, 0, 0, 0)
+  );
+  background-position: 0 0.5em;
+  background-size: 100% 0.15em;
+  background-repeat: repeat-x;
+  text-shadow: 0 0.01em 0.05em rgb(var(--base-black) / 0.13);
+}
+
+.animate {
+  animation: text-reveal 2.5s ease-in-out infinite;
+}

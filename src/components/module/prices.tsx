@@ -1,14 +1,13 @@
 import { ModuleData } from '@/sanity/lib/queries'
-
 import { cn } from '@/utils/cn'
 import { formatIds } from '@/utils/format-ids'
 import { PortableText } from '@portabletext/react'
 import NextLink from 'next/link'
-import { TbUserHeart } from 'react-icons/tb'
 import Heading from '../heading'
 import SanityImage from '../sanity-image'
 import StyledPortableText from '../styled-portable-text'
 import Button from '../ui/button'
+import Strikethrough from '../ui/strikethrough'
 
 export default function PricesImproved(props: { module: ModuleData }) {
   const { module } = props
@@ -36,8 +35,16 @@ export default function PricesImproved(props: { module: ModuleData }) {
             {props.module.prices?.map((price) => (
               <div
                 key={price._key}
-                className="grid grid-rows-3 rounded-lg bg-base-white"
+                className="relative grid grid-rows-3 rounded-lg bg-base-white"
               >
+                {/* Promo ribbon */}
+                {price.isFavourite && (
+                  <div className="absolute right-0 top-0 h-40 w-40 overflow-hidden">
+                    <div className="font-semibold absolute -right-9 top-8 z-10 w-40 rotate-45 transform bg-[crimson] py-1 text-center text-sm text-base-white shadow-md">
+                      Nur für kurze Zeit!
+                    </div>
+                  </div>
+                )}
                 {/* upper part: blue or green */}
                 <div
                   className={
@@ -54,8 +61,11 @@ export default function PricesImproved(props: { module: ModuleData }) {
                         'absolute -top-6 line-clamp-2 flex justify-items-center rounded-full bg-primary px-7 py-3 text-base-white'
                       )}
                     >
-                      <TbUserHeart className="h-5 w-5 shrink-0 transition-transform duration-200" />
-                      <div className="pl-2">Favorit</div>
+                      {/* <TbUserHeart className="h-5 w-5 shrink-0 transition-transform duration-200" />
+                      <div className="pl-2">Favorit</div> */}
+                      {/* Promo badge */}
+                      🎄
+                      <div className="pl-2">Aktion</div>
                     </div>
                   )}
                   <Heading level={4} size={4} className="gap-6 pb-2">
@@ -64,7 +74,15 @@ export default function PricesImproved(props: { module: ModuleData }) {
                   <p className="text-center">{price.subtitle}</p>
                   {/* pill part */}
                   <div className="absolute -bottom-6 line-clamp-2 rounded-full bg-base-grey px-7 py-3 text-primary">
-                    {price.pillText}
+                    {/* Promo price */}
+                    {price.isFavourite ? (
+                      <span>
+                        CHF <Strikethrough>490.–</Strikethrough> <b>249.–</b>
+                        /Monat
+                      </span>
+                    ) : (
+                      price.pillText
+                    )}
                   </div>
                 </div>
 
