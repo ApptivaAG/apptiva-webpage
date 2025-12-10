@@ -2,7 +2,7 @@ import 'server-only'
 
 import { BaseQuery, InferType, makeSafeQueryRunner, z } from 'groqd'
 import { client } from './client'
-import { token } from '../env'
+import { stegaEnabled, token } from '../env'
 import { loadQuery } from './store'
 
 export const runQuery = makeSafeQueryRunner(
@@ -44,7 +44,8 @@ export async function load<T extends GroqdQuery>(
       ? {
           perspective: 'drafts',
           useCdn: false,
-          stega: true,
+          // Stega can corrupt strings used in styles/classNames; keep it opt-in.
+          stega: stegaEnabled,
           next: { tags: cacheTags },
         }
       : {
