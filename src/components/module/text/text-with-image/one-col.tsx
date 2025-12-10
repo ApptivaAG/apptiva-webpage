@@ -2,12 +2,14 @@ import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
 import Section from '@/components/section'
 import StyledPortableText from '@/components/styled-portable-text'
+import { cn } from '@/utils/cn'
 import { ModuleData } from '@/sanity/lib/queries'
 import { formatIds } from '@/utils/format-ids'
 import { moduleStyleToSectionIntent } from '../../utils'
 
 export default function TextWithImageOneCol(props: { module: ModuleData }) {
   const { module } = props
+  const darkBg = module.style === 'dark-bg'
 
   const isLevel = (level: 1 | 2) => (module.level ?? 1) == level
 
@@ -26,7 +28,7 @@ export default function TextWithImageOneCol(props: { module: ModuleData }) {
           {module.title}
         </Heading>
         {module.content && (
-          <div className="pb-8">
+          <div className={cn('pb-8 prose-inherit', darkBg && 'prose-invert')}>
             <StyledPortableText content={module.content} />
           </div>
         )}

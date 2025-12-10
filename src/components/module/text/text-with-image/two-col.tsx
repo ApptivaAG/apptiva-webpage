@@ -10,6 +10,7 @@ import { moduleStyleToSectionIntent } from '../../utils'
 
 export default function TextWithImageTwoCol(props: { module: ModuleData }) {
   const { module } = props
+  const darkBg = module.style === 'dark-bg'
 
   const isLevel = (level: 1 | 2) => (module.level ?? 1) == level
   const isOrientation = (orientation: 'left' | 'right') =>
@@ -47,7 +48,12 @@ export default function TextWithImageTwoCol(props: { module: ModuleData }) {
               {module.title}
             </Heading>
             {module.content && (
-              <div className="flex-1">
+              <div
+                className={cn(
+                  'flex-1 prose-inherit',
+                  darkBg && 'prose-invert'
+                )}
+              >
                 <StyledPortableText content={module.content} />
               </div>
             )}

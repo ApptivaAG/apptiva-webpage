@@ -9,6 +9,7 @@ import { moduleStyleToSectionIntent } from '../utils'
 export default function Text(props: { module: ModuleData }) {
   const { module } = props
   const col1 = module.layout === '1-column'
+  const darkBg = module.style === 'dark-bg'
 
   const isLevel = (level: 1 | 2) => (module.level ?? 1) == level
 
@@ -29,7 +30,8 @@ export default function Text(props: { module: ModuleData }) {
         {module.content && (
           <div
             className={cn(
-              'prose text-inherit',
+              'prose-inherit',
+              darkBg && 'prose-invert',
               col1 ? 'mt-4 max-w-2xl lg:mt-6' : 'col-right max-lg:mt-4'
             )}
           >
