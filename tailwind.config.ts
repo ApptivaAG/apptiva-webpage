@@ -21,6 +21,8 @@ const config: Config = {
       sm: ['0.875rem', { lineHeight: '1.25rem' }],
       base: ['1rem', { lineHeight: '1.5rem' }],
       lg: ['1.125rem', { lineHeight: '1.75rem' }],
+      // Fluid default text size: 16px on small screens -> 20px on very large screens.
+      'fluid-base': ['clamp(1rem, 0.95rem + 0.25vw, 1.25rem)', { lineHeight: '1.6' }],
       xl: ['1.25rem', { lineHeight: '1.75rem' }],
       '2xl': ['1.5rem', { lineHeight: '2rem' }],
       '3xl': ['2rem', { lineHeight: '2.25rem' }],
@@ -121,8 +123,8 @@ const config: Config = {
             '--tw-prose-pre-bg': 'rgb(var(--primary))',
             '--tw-prose-th-borders': 'rgb(var(--primary) / 0.3)',
             '--tw-prose-td-borders': 'rgb(var(--primary) / 0.2)',
-            fontSize: rem(18),
-            lineHeight: round(28 / 18),
+            fontSize: 'clamp(1rem, 0.95rem + 0.25vw, 1.25rem)',
+            lineHeight: '1.6',
             'h1,h2,h3,h4,h5,h6': {
               fontWeight: '600',
               marginBottom: '0.5em',
