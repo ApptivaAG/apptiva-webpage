@@ -80,12 +80,12 @@ export default function Footer() {
                 </Heading>
                 <ul className="space-y-1">
                   <li>
-                    <a href="https://www.linkedin.com/company/apptiva-ag">
+                    <a href="https://www.linkedin.com/company/apptiva-ag" target="_blank" rel="noopener noreferrer">
                       <UnderlineForLink>LinkedIn</UnderlineForLink>
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.youtube.com/channel/UCkRetskswz9I4-ohcYuTG3Q">
+                    <a href="https://www.youtube.com/channel/UCkRetskswz9I4-ohcYuTG3Q" target="_blank" rel="noopener noreferrer">
                       <UnderlineForLink>Youtube</UnderlineForLink>
                     </a>
                   </li>
