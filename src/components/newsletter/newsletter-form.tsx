@@ -59,7 +59,7 @@ export default function NewsletterForm() {
       </form>
       {state.state === 'error' && (
         <div className="pt-2">
-          <em className="text-secondary">{state.error}</em>
+          <em className="text-destructive">{state.error}</em>
         </div>
       )}
     </>

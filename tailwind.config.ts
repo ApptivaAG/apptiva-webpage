@@ -41,6 +41,7 @@ const config: Config = {
         DEFAULT: 'rgb(var(--secondary) / <alpha-value>)',
         dark: 'rgb(var(--secondary-dark) / <alpha-value>)',
       },
+      destructive: 'rgb(var(--destructive) / <alpha-value>)',
       base: {
         black: 'rgb(var(--base-black) / <alpha-value>)',
         grey: {
