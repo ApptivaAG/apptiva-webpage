@@ -113,7 +113,7 @@ export default function Footer() {
               </div>
             </div>
             <div className="flex flex-col justify-center gap-x-12 gap-y-4 p-4 opacity-60 sm:px-12 lg:flex-row">
-              <p>© 2015 - 2024 Apptiva AG</p>
+              <p>© 2015 - 2025 Apptiva AG</p>
               <p>
                 <Link href={'/'}>
                   <UnderlineForLink>
