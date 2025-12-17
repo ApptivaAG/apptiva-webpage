@@ -42,7 +42,7 @@ export async function load<T extends GroqdQuery>(
     params,
     isDraftMode
       ? {
-          perspective: 'drafts',
+          perspective: 'previewDrafts',
           useCdn: false,
           // Stega can corrupt strings used in styles/classNames; keep it opt-in.
           stega: stegaEnabled,
