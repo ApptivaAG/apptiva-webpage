@@ -128,7 +128,7 @@ const ContactForm = () => {
                 </div>
                 {state.state === 'error' && (
                   <div className="pt-2">
-                    <em className="">{state.error}</em>
+                    <em className="text-destructive">{state.error}</em>
                   </div>
                 )}
                 {state.state === 'spam' && (

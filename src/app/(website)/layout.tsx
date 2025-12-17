@@ -59,7 +59,7 @@ export default async function RootLayout({
       <head>
         <PlausibleProvider domain="apptiva.ch" />
       </head>
-      <body className="text-lg">
+      <body className="text-fluid-base">
         <Navbar />
         <PromoDialog />
         <NuqsAdapter>
