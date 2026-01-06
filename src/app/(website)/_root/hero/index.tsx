@@ -1,4 +1,3 @@
-import PromoButton from '@/components/promo-button'
 import { homepageQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
 import { draftMode } from 'next/headers'
@@ -18,7 +17,6 @@ export default async function Hero() {
       ) : (
         <Content claim={published} />
       )}
-      <PromoButton />
     </div>
   )
 }

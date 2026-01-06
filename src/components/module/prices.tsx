@@ -64,8 +64,7 @@ export default function PricesImproved(props: { module: ModuleData }) {
                       {/* <TbUserHeart className="h-5 w-5 shrink-0 transition-transform duration-200" />
                       <div className="pl-2">Favorit</div> */}
                       {/* Promo badge */}
-                      🎄
-                      <div className="pl-2">Aktion</div>
+                      <div className="pl-2">Aktion %</div>
                     </div>
                   )}
                   <Heading level={4} size={4} className="gap-6 pb-2">

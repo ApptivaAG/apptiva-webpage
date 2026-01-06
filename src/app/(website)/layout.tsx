@@ -1,6 +1,5 @@
 import { DisableDraftMode } from '@/components/disable-draft-mode'
 import Footer from '@/components/footer'
-import PromoDialog from '@/components/promo-dialog'
 import type { Metadata } from 'next'
 import PlausibleProvider from 'next-plausible'
 import { VisualEditing } from 'next-sanity/visual-editing'
@@ -61,7 +60,6 @@ export default async function RootLayout({
       </head>
       <body className="text-fluid-base">
         <Navbar />
-        <PromoDialog />
         <NuqsAdapter>
           {/* The main content has to be higher in the z-index, so that the content coming after the footer is behind the main content */}
           <main className="content relative z-10 bg-base-white">
