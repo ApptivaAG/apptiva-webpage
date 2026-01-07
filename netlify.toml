@@ -26,3 +26,7 @@ to = "/payflink/"
 [[redirects]]
 from = "/app-entwickeln-schweiz"
 to = "/app-erstellen-schweiz/"
+
+[[redirects]]
+from = "/angebot/chatbots/weihnachtsaktion"
+to = "/angebot/chatbots#was-kostet-ein-chatbot"
