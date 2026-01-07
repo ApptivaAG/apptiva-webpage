@@ -682,5 +682,10 @@ async function redirects() {
       permanent: true,
     },
     { source: '/newsletter', destination: '/', permanent: true },
+    {
+      source: '/angebot/chatbots/weihnachtsaktion',
+      destination: '/angebot/chatbots#was-kostet-ein-chatbot',
+      permanent: true
+    },
   ]
 }
