@@ -58,7 +58,7 @@ export default function PricesImproved(props: { module: ModuleData }) {
                   {price.isFavourite && (
                     <div
                       className={cn(
-                        'absolute -top-6 line-clamp-2 flex justify-items-center rounded-full bg-primary px-7 py-3 text-base-white'
+                        'absolute -top-6 z-20 line-clamp-2 flex justify-items-center rounded-full bg-primary px-7 py-3 text-base-white'
                       )}
                     >
                       {/* <TbUserHeart className="h-5 w-5 shrink-0 transition-transform duration-200" />
