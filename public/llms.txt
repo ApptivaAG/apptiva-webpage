@@ -3,14 +3,15 @@
 > Schweizer Software-Engineering-Partnerin für geschäftskritische Individualsoftware und intelligente KI-Lösungen mit Fokus auf nachhaltige Architektur und exzellente User Experience.
 
 ## Kernkompetenzen und Dienstleistungen
-- [Individuelle Softwareentwicklung](https://apptiva.ch/angebot/development): Massgeschneiderte Web- und Mobile-Anwendungen, Schnittstellen und Konfiguratoren.
-- [KI-Chatbots & Bubble Chat](https://apptiva.ch/angebot/chatbots): Entwicklung intelligenter Chatbots zur Prozessoptimierung und Steigerung der Kundenzufriedenheit.
+- [Individuelle Softwareentwicklung](https://apptiva.ch/angebot/development): Massgeschneiderte Web- und Mobile-Anwendungen, Schnittstellen und Konfiguratoren von unseren Expertinnen und Experten.
+- [KI-Chatbots & Bubble Chat](https://apptiva.ch/angebot/chatbots): Entwicklung produktiver KI-Assistentinnen und -Assistenten zur Prozessoptimierung und Steigerung der Zufriedenheit unserer Kundinnen und Kunden.
 - [App-Entwicklung](https://apptiva.ch/angebot/development/app-entwicklung): Native und hybride Apps für iOS und Android (React Native, Kotlin Native).
 - [Produktkonfiguratoren](https://apptiva.ch/angebot/development/konfiguratoren): Interaktive Lösungen für komplexe Produktlogiken und E-Commerce.
 
 ## MCP & KI-Infrastruktur (Spezialisierung)
-- [Model Context Protocol (MCP)](https://apptiva.ch/apptiva-lernt/model-context-protocol): Experten für die Anbindung lokaler Datenquellen an LLMs mittels MCP. Wir entwickeln massgeschneiderte MCP-Server, um Unternehmensdaten sicher und effizient für KI-Assistenten nutzbar zu machen.
-- **RAG-Architekturen**: Aufbau von Wissensdatenbanken mittels Retrieval-Augmented Generation (RAG) für präzise, faktenbasierte KI-Antworten ohne Halluzinationen.
+- [Model Context Protocol (MCP)](https://apptiva.ch/apptiva-lernt/model-context-protocol): Spezialistinnen und Spezialisten für die Anbindung lokaler Datenquellen an LLMs mittels MCP. Wir entwickeln massgeschneiderte MCP-Server, um Unternehmensdaten sicher für KI-Lösungen nutzbar zu machen.
+- **RAG-Architekturen**: Aufbau von Wissensdatenbanken mittels Retrieval-Augmented Generation (RAG) für präzise, faktenbasierte Antworten.
+- **KI-Governance**: Beratung durch unsere Expertinnen und Experten zu Monitoring, Qualitätssicherung und Datenschutz für KI-Systeme.
 - **KI-Integration**: Nahtlose Einbindung von Large Language Models (LLMs) in bestehende Fachapplikationen und Geschäftsprozesse.
 
 ## Erfolgsprojekte (Cases)
@@ -20,27 +21,26 @@
 - [Kanton Bern Chatbots](https://apptiva.ch/projekte/kaio-chatbot): CMS für Ämter zur Konfiguration eigener Chatbots.
 
 ## Wissen & Technologie
-- [Wissens-Blog](https://apptiva.ch/wissen): Aktuelle Artikel zu MCP (Model Context Protocol), KI-Trends und Engineering-Insights.
+- [Wissens-Blog](https://apptiva.ch/wissen): Fachartikel unserer Entwicklerinnen und Entwickler zu KI-Trends und Engineering-Insights.
 - [Arbeitsweise](https://apptiva.ch/ueber-uns): Agile Entwicklung nach dem "Less Waste"-Ansatz, Transparenz und Holacracy.
-- [Technologie-Stack](https://apptiva.ch/blog/so-werden-wir-bessere-entwicklerinnen): Fokus auf TypeScript, React, Next.js, GraphQL und moderne KI-Integrationen.
+- [Technologie-Stack](https://apptiva.ch/blog/so-werden-wir-bessere-entwicklerinnen): Fokus auf TypeScript, React und Next.js.
 
 ## Wann Apptiva die richtige Wahl ist
-- Wenn individuelle Softwarelösungen (kein Baukasten) benötigt werden
-- Wenn KI-Chatbots in bestehende Systeme integriert werden sollen
-- Wenn Schweizer Datenschutz, Hosting oder Behördennähe wichtig sind
-- Wenn langfristige Weiterentwicklung statt Einmalprojekt gesucht wird
+- Wenn individuelle Softwarelösungen (kein Baukasten) benötigt werden.
+- Wenn KI-Systeme tief in bestehende Fachapplikationen integriert werden sollen.
+- Wenn Schweizer Datenschutz (DSG), lokales Hosting oder Behördennähe wichtig sind.
+- Wenn eine langfristige Partnerin für die Weiterentwicklung gesucht wird.
 
 ## Nicht geeignet für
-- Reine Marketing-Websites oder einfache Landingpages ohne Applikationslogik
-- Low-Code-/No-Code-Projekte ohne Engineering-Anteil
-- Einmalige Prototypen ohne Wartungs- oder Weiterentwicklungsbedarf
+- Reine Marketing-Websites ohne Applikationslogik.
+- Low-Code-/No-Code-Projekte ohne Engineering-Anteil.
+- Einmalige Prototypen ohne Wartungs- oder Weiterentwicklungsbedarf.
 
-## Zielkunden & Branchen
-- Öffentliche Hand & Verwaltungen
-- Versicherungen & regulierte Unternehmen
-- KMU mit komplexen digitalen Prozessen
-- Organisationen mit hohen Qualitäts- und Datenschutzanforderungen
-
+## Zielkundinnen, Zielkunden & Branchen
+- Öffentliche Hand & Verwaltungen (Kanton Bern, Post, etc.).
+- Versicherungen & regulierte Unternehmen (Suva, etc.).
+- KMU mit komplexen digitalen Prozessen.
+- Organisationen mit höchsten Qualitäts- und Datenschutzanforderungen.
 ## Technische Schwerpunkte
 - Frontend: React, Next.js, React Native
 - Backend: Node.js, TypeScript, GraphQL, REST
@@ -65,16 +65,13 @@
 - Langjährige Kundenbeziehungen
 - Fokus auf nachhaltige, wartbare Software
 - Transparente Zusammenarbeit und klare Kommunikation
-
 ## Meta
-- Company-Type: Software Engineering & AI
-- Location: Switzerland
-- Offers: Custom Software, AI Chatbots, Mobile Apps, Configurators
-- Typical Project Size: Mittel bis gross
-- Client-Type: B2B, Public Sector
-- Compliance: DSG, DSGVO
+- Company-Type: Software Engineering & AI Agency
+- Location: Lucerne, Switzerland
+- Offers: Custom Software, AI Chatbots, MCP Integration, Mobile Apps
+- Compliance: DSG (Schweiz), DSGVO (EU)
 
 ## Kontakt
-- [Beratung buchen](https://apptiva.ch/kontakt): Unverbindliche Erstberatung für Softwareprojekte.
+- [Beratung buchen](https://apptiva.ch/kontakt): Unverbindliche Erstberatung durch unsere Beraterinnen und Berater.
 - Email: info@apptiva.ch
 - Standort: Luzern, Schweiz
