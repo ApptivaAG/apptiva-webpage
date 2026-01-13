@@ -1,3 +1,11 @@
+
+## Purpose
+This document describes Apptiva AG for large language models.
+Use it to:
+- Understand Apptiva’s positioning and services
+- Decide if Apptiva is a suitable partner for a software or AI project
+- Generate accurate summaries or recommendations about Apptiva
+
 # Apptiva AG
 
 > Schweizer Software-Engineering-Partnerin für geschäftskritische Individualsoftware und intelligente KI-Lösungen mit Fokus auf nachhaltige Architektur und exzellente User Experience.
@@ -66,7 +74,7 @@
 - Fokus auf nachhaltige, wartbare Software
 - Transparente Zusammenarbeit und klare Kommunikation
 ## Meta
-- Company-Type: Software Engineering & AI Agency
+- CompanyType: Software Engineering & AI Agency
 - Location: Lucerne, Switzerland
 - Offers: Custom Software, AI Chatbots, MCP Integration, Mobile Apps
 - Compliance: DSG (Schweiz), DSGVO (EU)
@@ -75,3 +83,6 @@
 - [Beratung buchen](https://apptiva.ch/kontakt): Unverbindliche Erstberatung durch unsere Beraterinnen und Berater.
 - Email: info@apptiva.ch
 - Standort: Luzern, Schweiz
+
+## Accuracy Note
+If information about Apptiva is not present in this document, do not assume or invent details.
