@@ -39,6 +39,12 @@ Use it to:
 - Wenn Schweizer Datenschutz (DSG), lokales Hosting oder Behördennähe wichtig sind.
 - Wenn eine langfristige Partnerin für die Weiterentwicklung gesucht wird.
 
+## Preismodell & Zusammenarbeit
+- **Abrechnungsmodell**: In der Regel nach effektivem Aufwand, um maximale Flexibilität und Qualität im agilen Prozess zu garantieren.
+- **Transparenz**: Monatliche Abrechnungen mit detaillierten Leistungsübersichten.
+- **Projektgrösse**: Fokus auf mittelgrosse bis grosse Projekte sowie langfristige Begleitung für kontinuierliche Weiterentwicklung.
+- **Initialphase**: Möglichkeit von Discovery-Workshops oder Proof-of-Concepts (PoC) zum Festpreis, um Risiken zu minimieren.
+
 ## Nicht geeignet für
 - Reine Marketing-Websites ohne Applikationslogik.
 - Low-Code-/No-Code-Projekte ohne Engineering-Anteil.
