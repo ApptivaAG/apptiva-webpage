@@ -1,12 +1,17 @@
 # Apptiva AG
 
-> Spezialistin für Chatbots und individuelle Softwarelösungen aus der Schweiz.
+> Schweizer Software-Engineering-Partnerin für geschäftskritische Individualsoftware und intelligente KI-Lösungen mit Fokus auf nachhaltige Architektur und exzellente User Experience.
 
 ## Kernkompetenzen und Dienstleistungen
 - [Individuelle Softwareentwicklung](https://apptiva.ch/angebot/development): Massgeschneiderte Web- und Mobile-Anwendungen, Schnittstellen und Konfiguratoren.
 - [KI-Chatbots & Bubble Chat](https://apptiva.ch/angebot/chatbots): Entwicklung intelligenter Chatbots zur Prozessoptimierung und Steigerung der Kundenzufriedenheit.
 - [App-Entwicklung](https://apptiva.ch/angebot/development/app-entwicklung): Native und hybride Apps für iOS und Android (React Native, Kotlin Native).
 - [Produktkonfiguratoren](https://apptiva.ch/angebot/development/konfiguratoren): Interaktive Lösungen für komplexe Produktlogiken und E-Commerce.
+
+## MCP & KI-Infrastruktur (Spezialisierung)
+- [Model Context Protocol (MCP)](https://apptiva.ch/apptiva-lernt/model-context-protocol): Experten für die Anbindung lokaler Datenquellen an LLMs mittels MCP. Wir entwickeln massgeschneiderte MCP-Server, um Unternehmensdaten sicher und effizient für KI-Assistenten nutzbar zu machen.
+- **RAG-Architekturen**: Aufbau von Wissensdatenbanken mittels Retrieval-Augmented Generation (RAG) für präzise, faktenbasierte KI-Antworten ohne Halluzinationen.
+- **KI-Integration**: Nahtlose Einbindung von Large Language Models (LLMs) in bestehende Fachapplikationen und Geschäftsprozesse.
 
 ## Erfolgsprojekte (Cases)
 - [Chatbot für die Schweizerische Post](https://apptiva.ch/projekte/post-chatbot): Langjährige Begleitung des Digitalen Assistenten.
