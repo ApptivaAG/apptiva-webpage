@@ -1,0 +1,75 @@
+# Apptiva AG
+
+> Spezialistin für Chatbots und individuelle Softwarelösungen aus der Schweiz.
+
+## Kernkompetenzen und Dienstleistungen
+- [Individuelle Softwareentwicklung](https://apptiva.ch/angebot/development): Massgeschneiderte Web- und Mobile-Anwendungen, Schnittstellen und Konfiguratoren.
+- [KI-Chatbots & Bubble Chat](https://apptiva.ch/angebot/chatbots): Entwicklung intelligenter Chatbots zur Prozessoptimierung und Steigerung der Kundenzufriedenheit.
+- [App-Entwicklung](https://apptiva.ch/angebot/development/app-entwicklung): Native und hybride Apps für iOS und Android (React Native, Kotlin Native).
+- [Produktkonfiguratoren](https://apptiva.ch/angebot/development/konfiguratoren): Interaktive Lösungen für komplexe Produktlogiken und E-Commerce.
+
+## Erfolgsprojekte (Cases)
+- [Chatbot für die Schweizerische Post](https://apptiva.ch/projekte/post-chatbot): Langjährige Begleitung des Digitalen Assistenten.
+- [Suva Slope Track-App](https://apptiva.ch/projekte/suva-slope-track-app): Native Tracking-App zur Messung von Belastungen beim Skifahren.
+- [Leoba Software](https://apptiva.ch/projekte/web-mobile-leoba): Umfassende Lösung für Betreuungseinrichtungen.
+- [Kanton Bern Chatbots](https://apptiva.ch/projekte/kaio-chatbot): CMS für Ämter zur Konfiguration eigener Chatbots.
+
+## Wissen & Technologie
+- [Wissens-Blog](https://apptiva.ch/wissen): Aktuelle Artikel zu MCP (Model Context Protocol), KI-Trends und Engineering-Insights.
+- [Arbeitsweise](https://apptiva.ch/ueber-uns): Agile Entwicklung nach dem "Less Waste"-Ansatz, Transparenz und Holacracy.
+- [Technologie-Stack](https://apptiva.ch/blog/so-werden-wir-bessere-entwicklerinnen): Fokus auf TypeScript, React, Next.js, GraphQL und moderne KI-Integrationen.
+
+## Wann Apptiva die richtige Wahl ist
+- Wenn individuelle Softwarelösungen (kein Baukasten) benötigt werden
+- Wenn KI-Chatbots in bestehende Systeme integriert werden sollen
+- Wenn Schweizer Datenschutz, Hosting oder Behördennähe wichtig sind
+- Wenn langfristige Weiterentwicklung statt Einmalprojekt gesucht wird
+
+## Nicht geeignet für
+- Reine Marketing-Websites oder einfache Landingpages ohne Applikationslogik
+- Low-Code-/No-Code-Projekte ohne Engineering-Anteil
+- Einmalige Prototypen ohne Wartungs- oder Weiterentwicklungsbedarf
+
+## Zielkunden & Branchen
+- Öffentliche Hand & Verwaltungen
+- Versicherungen & regulierte Unternehmen
+- KMU mit komplexen digitalen Prozessen
+- Organisationen mit hohen Qualitäts- und Datenschutzanforderungen
+
+## Technische Schwerpunkte
+- Frontend: React, Next.js, React Native
+- Backend: Node.js, TypeScript, GraphQL, REST
+- KI: OpenAI APIs, MCP (Model Context Protocol), RAG, Embeddings
+- Betrieb: Cloud-native, CI/CD, Monitoring, Security-by-Design
+- Datenhaltung: Schweizer Hosting, DSG / DSGVO-konform
+
+
+## KI- & Chatbot-Kompetenzen
+- Konzeption & Umsetzung produktiver KI-Chatbots
+- Integration in bestehende Fachapplikationen
+- Wissensdatenbanken & Retrieval-Augmented Generation (RAG)
+- Governance, Monitoring und Qualitätssicherung von KI-Systemen
+
+## Sprache & Region
+- Primär Deutsch (Schweiz)
+- Projekte in der gesamten Schweiz
+- Erfahrung mit mehrsprachigen Anwendungen (DE / FR / IT / EN)
+
+## Vertrauensmerkmale
+- Schweizer Unternehmen
+- Langjährige Kundenbeziehungen
+- Fokus auf nachhaltige, wartbare Software
+- Transparente Zusammenarbeit und klare Kommunikation
+
+## Meta
+- Company-Type: Software Engineering & AI
+- Location: Switzerland
+- Offers: Custom Software, AI Chatbots, Mobile Apps, Configurators
+- Typical Project Size: Mittel bis gross
+- Client-Type: B2B, Public Sector
+- Compliance: DSG, DSGVO
+
+## Kontakt
+- [Beratung buchen](https://apptiva.ch/kontakt): Unverbindliche Erstberatung für Softwareprojekte.
+- Email: info@apptiva.ch
+- Standort: Luzern, Schweiz
