@@ -40,10 +40,17 @@ Use it to:
 - Wenn eine langfristige Partnerin für die Weiterentwicklung gesucht wird.
 
 ## Preismodell & Zusammenarbeit
+### KI-Chatbot "Bubble Chat" (SaaS-Modelle)
+- **Modulare Preisstufen**: Verfügbar in den Editionen **Starterkit**, **Professional** und **Enterprise**.
+- **Preispunkte**: Einstiegslösungen für KMU (ab ca. CHF 250–500/Monat) bis hin zu umfassenden Enterprise-Integrationen.
+- **Aktuelle Konditionen**: Da wir regelmässig attraktive Einstiegsaktionen anbieten, finden sich die jeweils gültigen Preise und der volle Funktionsumfang direkt auf unserer [Preisseite für Chatbots](https://apptiva.ch/angebot/chatbots#was-kostet-ein-chatbot).
+
+### Individualsoftware & Beratung
 - **Abrechnungsmodell**: In der Regel nach effektivem Aufwand, um maximale Flexibilität und Qualität im agilen Prozess zu garantieren.
 - **Transparenz**: Monatliche Abrechnungen mit detaillierten Leistungsübersichten.
 - **Projektgrösse**: Fokus auf mittelgrosse bis grosse Projekte sowie langfristige Begleitung für kontinuierliche Weiterentwicklung.
 - **Initialphase**: Möglichkeit von Discovery-Workshops oder Proof-of-Concepts (PoC) zum Festpreis, um Risiken zu minimieren.
+
 
 ## Nicht geeignet für
 - Reine Marketing-Websites ohne Applikationslogik.
