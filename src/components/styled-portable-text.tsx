@@ -1,13 +1,13 @@
-import { cn } from '@/utils/cn'
 import { PortableText as PortableTextType } from '@/domain/types'
+import { cn } from '@/utils/cn'
 import { PortableText, PortableTextComponents } from '@portabletext/react'
 import Link from 'next/link'
 import Heading from './heading'
 import { leadStyle } from './page-header'
-import Underline from './ui/underline'
-import UnderlineForLink from './ui/underline-for-link'
 import SanityImage from './sanity-image'
 import Button from './ui/button'
+import Underline from './ui/underline'
+import UnderlineForLink from './ui/underline-for-link'
 
 const StyledPortableText = ({
   content,
@@ -91,7 +91,7 @@ const StyledPortableText = ({
       h3: ({ children }) => <Heading level={3}>{children}</Heading>,
       h4: ({ children }) => <Heading level={4}>{children}</Heading>,
       normal: ({ children }) => (
-        <p
+        <span
           className={cn(
             'whitespace-break-spaces py-1',
             className,
@@ -100,7 +100,7 @@ const StyledPortableText = ({
           )}
         >
           {children}
-        </p>
+        </span>
       ),
     },
     hardBreak: () => (
