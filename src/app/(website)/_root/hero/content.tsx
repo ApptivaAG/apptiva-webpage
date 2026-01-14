@@ -1,7 +1,7 @@
 import { HomepageDataQueries } from '@/sanity/lib/queries'
 import StyledPortableText from '../../../../components/styled-portable-text'
 
-export default async function Content(props: {
+export default function Content(props: {
   claim: NonNullable<HomepageDataQueries>
 }) {
   if (!props.claim.claim) {
