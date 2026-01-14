@@ -3,3 +3,4 @@ Allow: /
 Disallow: /studio/
 
 Sitemap: https://apptiva.ch/sitemap.xml
+LLMs-txt: https://apptiva.ch/llms.txt
