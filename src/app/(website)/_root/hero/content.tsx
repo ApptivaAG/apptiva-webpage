@@ -1,16 +1,16 @@
 import { HomepageDataQueries } from '@/sanity/lib/queries'
 import StyledPortableText from '../../../../components/styled-portable-text'
 
-export default async function Content(props: {
+export default function Content(props: {
   claim: NonNullable<HomepageDataQueries>
 }) {
-  if (!props.claim.claim) {
+  const content = Array.isArray(props.claim.claim) ? props.claim.claim : []
+  if (!content.length) {
     return <p>No Claim</p>
   }
-
   return (
     <div className="content">
-      <StyledPortableText content={props.claim.claim} isHero />
+      <StyledPortableText content={content} isHero />
     </div>
   )
 }

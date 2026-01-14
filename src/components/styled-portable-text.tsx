@@ -22,6 +22,9 @@ const StyledPortableText = ({
   isHero?: boolean
   className?: string
 }) => {
+  if (!Array.isArray(content) || content.length === 0) {
+    return null
+  }
   const components: PortableTextComponents = {
     types: {
       imageWithAlt: (props: {
