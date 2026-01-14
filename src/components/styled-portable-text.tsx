@@ -22,7 +22,7 @@ const StyledPortableText = ({
   isHero?: boolean
   className?: string
 }) => {
-  if (!Array.isArray(content) || content.length === 0) {
+  if (!content) {
     return null
   }
   const components: PortableTextComponents = {
@@ -94,7 +94,7 @@ const StyledPortableText = ({
       h3: ({ children }) => <Heading level={3}>{children}</Heading>,
       h4: ({ children }) => <Heading level={4}>{children}</Heading>,
       normal: ({ children }) => (
-        <span
+        <div
           className={cn(
             'whitespace-break-spaces py-1',
             className,
@@ -103,7 +103,7 @@ const StyledPortableText = ({
           )}
         >
           {children}
-        </span>
+        </div>
       ),
     },
     hardBreak: () => (
