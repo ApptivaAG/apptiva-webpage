@@ -4,10 +4,15 @@ import { BaseQuery, InferType, makeSafeQueryRunner, z } from 'groqd'
 import { client } from './client'
 import { stegaEnabled, token } from '../env'
 import { loadQuery } from './store'
+import { draftMode } from 'next/headers'
 
 export const runQuery = makeSafeQueryRunner(
-  (query, params: Record<string, number | string> = {}, tags?: string[]) => {
-    const isDraftMode = false
+  async (
+    query,
+    params: Record<string, number | string> = {},
+    tags?: string[]
+  ) => {
+    const { isEnabled: isDraftMode } = await draftMode()
 
     if (isDraftMode && !token) {
       throw new Error(
@@ -18,10 +23,10 @@ export const runQuery = makeSafeQueryRunner(
     return client
       .withConfig({
         token: token,
-        perspective: isDraftMode ? 'previewDrafts' : 'published',
+        perspective: isDraftMode ? 'drafts' : 'published',
         useCdn: isDraftMode ? false : true,
         stega: {
-          enabled: false,
+          enabled: isDraftMode && stegaEnabled,
           studioUrl: '/studio',
         },
       })
@@ -42,10 +47,10 @@ export async function load<T extends GroqdQuery>(
     params,
     isDraftMode
       ? {
-          perspective: 'previewDrafts', // Should eventually be changed to drafts again, since previewDrafts is deprecated and will be removed in the future.
+          perspective: 'drafts', // Should eventually be changed to drafts again, since previewDrafts is deprecated and will be removed in the future.
           useCdn: false,
           // Stega can corrupt strings used in styles/classNames; keep it opt-in.
-          stega: stegaEnabled,
+          stega: isDraftMode && stegaEnabled,
           next: { tags: cacheTags },
         }
       : {
