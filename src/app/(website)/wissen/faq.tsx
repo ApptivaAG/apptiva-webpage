@@ -1,3 +1,4 @@
+import FAQSchema from '@/components/faq-schema'
 import FAQsComponent from '@/components/faqs'
 import Heading from '@/components/heading'
 import Section from '@/components/section'
@@ -8,6 +9,7 @@ export default function FAQ(props: { data: FAQQueryData }) {
 
   return (
     <>
+      <FAQSchema faqs={faqs} />
       <Section intent="dark">
         <div className="content">
           <Heading level={2} size={3} className="col-left">

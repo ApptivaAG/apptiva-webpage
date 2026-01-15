@@ -1,5 +1,6 @@
 // ./nextjs-app/app/page.tsx
 
+import FAQSchema from '@/components/faq-schema'
 import Heading from '@/components/heading'
 import StyledPortableText from '@/components/styled-portable-text'
 import { faqsQuery } from '@/sanity/lib/queries'
@@ -23,16 +24,19 @@ export default async function Home() {
   const faqs = await runQuery(faqsQuery, undefined, ['faq'])
 
   return (
-    <div className="container mx-auto px-4">
-      <Heading level={2}>FAQ</Heading>
-      {faqs.map((faq) => (
-        <>
-          <b>{faq.question}</b>
-          {faq.answerStyled && (
-            <StyledPortableText content={faq.answerStyled} />
-          )}
-        </>
-      ))}
-    </div>
+    <>
+      <FAQSchema faqs={faqs} />
+      <div className="container mx-auto px-4">
+        <Heading level={2}>FAQ</Heading>
+        {faqs.map((faq) => (
+          <>
+            <b>{faq.question}</b>
+            {faq.answerStyled && (
+              <StyledPortableText content={faq.answerStyled} />
+            )}
+          </>
+        ))}
+      </div>
+    </>
   )
 }

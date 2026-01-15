@@ -1,3 +1,4 @@
+import FAQSchema from '@/components/faq-schema'
 import Heading from '@/components/heading'
 import { ModuleData } from '@/sanity/lib/queries'
 import { formatIds } from '@/utils/format-ids'
@@ -13,6 +14,7 @@ export default function FAQs(props: { module: ModuleData }) {
 
   return (
     <>
+      {module.faqs && <FAQSchema faqs={module.faqs} />}
       {isLevel(2) && (
         <hr className="text-primary max-lg:hidden lg:-translate-y-12" />
       )}
@@ -40,8 +42,4 @@ export default function FAQs(props: { module: ModuleData }) {
       </Section>
     </>
   )
-}
-
-function xor(a: boolean, b: boolean) {
-  return (a || b) && !(a && b)
 }
