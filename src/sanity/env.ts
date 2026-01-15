@@ -1,5 +1,5 @@
 export const apiVersion =
-  process.env.NEXT_PUBLIC_SANITY_API_VERSION || '2024-01-08'
+  process.env.NEXT_PUBLIC_SANITY_API_VERSION || '2026-01-15'
 
 export const stegaEnabled =
   (process.env.NEXT_PUBLIC_SANITY_STEGA ?? 'false') === 'true'
