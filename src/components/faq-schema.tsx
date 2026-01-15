@@ -1,6 +1,5 @@
 import { FAQQueryModuleData } from '@/sanity/lib/queries'
 import portableTextToString from '@/utils/portable-text-to-string'
-import Head from 'next/head'
 import Script from 'next/script'
 
 interface FAQSchemaProps {
@@ -25,15 +24,19 @@ const FAQSchema = ({ faqs }: FAQSchemaProps) => {
     })),
   }
 
-  return (
-    <Head>
+  try {
+    return (
       <Script
         id="faq-schema"
         type="application/ld+json"
+        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-    </Head>
-  )
+    )
+  } catch (error) {
+    console.warn('Failed to serialize FAQ schema:', error)
+    return null
+  }
 }
 
 export default FAQSchema
