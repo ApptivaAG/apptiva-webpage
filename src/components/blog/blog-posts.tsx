@@ -1,6 +1,8 @@
 import { getPosts } from '@/domain/blog/repository'
+import { buildItemList } from '@/lib/schema/itemList/item-list'
 import { queryPostsFromCms } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
+import { Schema } from '../schema'
 import BlogList from './list'
 import BlogPostsPreview from './preview-list'
 
@@ -17,6 +19,16 @@ export default async function BlogPosts(props: {
   }
 
   const posts = await getPosts()
+  const itemList = buildItemList(
+    posts,
+    props.show,
+    props.show === 'blog' ? 'Alle Blogartikel' : 'Alle Apptiva Lernt Artikel'
+  )
 
-  return <BlogList posts={posts} show={props.show} />
+  return (
+    <>
+      <Schema data={itemList} />
+      <BlogList posts={posts} show={props.show} />
+    </>
+  )
 }
