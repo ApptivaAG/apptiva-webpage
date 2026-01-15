@@ -10,6 +10,7 @@ import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 import CmsBlogPost from '../../../../components/blog/cms-post'
 import BlogPostPreview from '../../../../components/blog/preview-post'
+import { buildArticleSchema } from '@/lib/schema/article/build-article-schema'
 
 export async function generateStaticParams() {
   const posts = await getPosts()
@@ -82,14 +83,25 @@ export default async function Home(props: {
     slug: { current: post.slug },
   })
 
+  const articleSchema = buildArticleSchema({
+    name: post.title,
+    slug: post.slug,
+    publishDate: post.publishDate,
+    modifiedDate: post.modifiedDate,
+    author: post.author,
+    articleType: 'blog',
+  })
+  const schemaArray = [articleSchema, breadcrumbs]
+
   const postSlugs = (await generateStaticParams()).map(({ slug }) => slug)
+
   const currentIndex = postSlugs.indexOf(paramsSlug)
   const previousSlug = postSlugs[currentIndex - 1]
   const nextSlug = postSlugs[currentIndex + 1]
 
   return (
     <>
-      <Schema data={breadcrumbs} />
+      <Schema data={schemaArray} />
       <CmsBlogPost
         post={post}
         previousSlug={previousSlug}
