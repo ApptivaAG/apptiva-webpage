@@ -299,7 +299,7 @@ export type ServiceBySlugQueryData = NonNullable<
 >
 export const serviceBySlugQuery = q('*')
   .filterByType('service-page')
-  .filter('slug.current == $slug')
+  .filter('slug.current == $slug || _id == $slug')
   .slice(0)
   .grab$({
     _id: q.string(),

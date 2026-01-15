@@ -19,7 +19,7 @@ export const runQuery = makeSafeQueryRunner(
     return client
       .withConfig({
         token: token,
-        perspective: isDraftMode ? 'previewDrafts' : 'published',
+        perspective: isDraftMode ? 'drafts' : 'published',
         useCdn: isDraftMode ? false : true,
         stega: {
           enabled: false,
@@ -49,7 +49,7 @@ export async function load<T extends GroqdQuery>(
     params,
     isDraftMode
       ? {
-          perspective: 'previewDrafts', // Should eventually be changed to drafts again, since previewDrafts is deprecated and will be removed in the future.
+          perspective: 'drafts', // Should eventually be changed to drafts again, since previewDrafts is deprecated and will be removed in the future.
           useCdn: false,
           // Stega can corrupt strings used in styles/classNames; keep it opt-in.
           stega: stegaEnabled,

@@ -80,6 +80,11 @@ export default async function Home(props: { params: Promise<{ slug: string[] }> 
     ['service-page']
   )
 
+  console.log('Draft mode enabled:', isEnabled)
+  console.log('Draft data exists:', !!draft.data)
+  console.log('Published data exists:', !!published)
+  console.log('Error:', error)
+
   if (!draft.data && !published) {
     notFound()
   }
