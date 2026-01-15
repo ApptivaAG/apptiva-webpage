@@ -1,5 +1,6 @@
 import { DisableDraftMode } from '@/components/disable-draft-mode'
 import Footer from '@/components/footer'
+import { organizationSchema } from '@/lib/schema/organization'
 import type { Metadata } from 'next'
 import PlausibleProvider from 'next-plausible'
 import { VisualEditing } from 'next-sanity/visual-editing'
@@ -7,10 +8,10 @@ import localFont from 'next/font/local'
 import { draftMode } from 'next/headers'
 import Script from 'next/script'
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
+import { JsonLd } from 'react-schemaorg'
 import { description, rootUrl, title } from '../env'
 import Navbar from './../../components/Navbar'
 import './globals.css'
-import { Organization, WithContext } from 'schema-dts'
 
 const gentona = localFont({
   src: [
@@ -54,29 +55,13 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const jsonLd: WithContext<Organization> = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Apptiva AG',
-    url: 'https://apptiva.ch',
-    logo: 'https://apptiva.ch/img/Logo-symbol.png',
-    sameAs: [
-      'https://linkedin.com/company/apptiva-ag/',
-      'https://github.com/apptiva',
-    ],
-  }
-
   return (
     <html lang="de" className={gentona.className}>
       <head>
         <PlausibleProvider domain="apptiva.ch" />
       </head>
       <body className="text-fluid-base">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-
+        <JsonLd item={organizationSchema} />
         <Navbar />
         <NuqsAdapter>
           {/* The main content has to be higher in the z-index, so that the content coming after the footer is behind the main content */}
