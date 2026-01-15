@@ -3,6 +3,7 @@ import BlogPostPreview from '@/components/blog/preview-post'
 import { Schema } from '@/components/schema'
 import { hasTag } from '@/domain/blog/mappers'
 import { getPostBySlug, getPosts } from '@/domain/blog/repository'
+import { buildArticleSchema } from '@/lib/schema/article/build-article-schema'
 import { apptivaLerntBreadcrumbs } from '@/lib/schema/breadcrumbs/apptiva-lernt'
 import { queryPostFromCmsBySlug } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
@@ -81,6 +82,15 @@ export default async function Home(props: {
     slug: { current: post.slug },
     name: post.title,
   })
+  const articleSchema = buildArticleSchema({
+    name: post.title,
+    slug: post.slug,
+    publishDate: post.publishDate,
+    modifiedDate: post.modifiedDate,
+    author: post.author,
+    articleType: 'apptiva-lernt',
+  })
+  const schemaArray = [articleSchema, breadcrumbs]
 
   const postSlugs = (await generateStaticParams()).map(({ slug }) => slug)
   const currentIndex = postSlugs.indexOf(paramsSlug)
@@ -89,7 +99,7 @@ export default async function Home(props: {
 
   return (
     <>
-      <Schema data={breadcrumbs} />
+      <Schema data={schemaArray} />
       <CmsBlogPost
         post={post}
         Code={Code}
