@@ -12,6 +12,7 @@ import { JsonLd } from 'react-schemaorg'
 import { description, rootUrl, title } from '../env'
 import Navbar from './../../components/Navbar'
 import './globals.css'
+import { Schema } from '@/components/schema'
 
 const gentona = localFont({
   src: [
@@ -61,7 +62,7 @@ export default async function RootLayout({
         <PlausibleProvider domain="apptiva.ch" />
       </head>
       <body className="text-fluid-base">
-        <JsonLd item={organizationSchema} />
+        <Schema data={organizationSchema} />
         <Navbar />
         <NuqsAdapter>
           {/* The main content has to be higher in the z-index, so that the content coming after the footer is behind the main content */}

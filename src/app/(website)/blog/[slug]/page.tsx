@@ -1,13 +1,15 @@
+import { Schema } from '@/components/schema'
+import { hasTag } from '@/domain/blog/mappers'
 import { getPostBySlug, getPosts } from '@/domain/blog/repository'
+import { blogBreadcrumbs } from '@/lib/schema/breadcrumbs/blog'
+import { queryPostFromCmsBySlug } from '@/sanity/lib/queries'
+import { load } from '@/sanity/lib/sanityFetch'
+import { Code } from 'bright'
 import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 import CmsBlogPost from '../../../../components/blog/cms-post'
 import BlogPostPreview from '../../../../components/blog/preview-post'
-import { load } from '@/sanity/lib/sanityFetch'
-import { queryPostFromCmsBySlug } from '@/sanity/lib/queries'
-import { hasTag } from '@/domain/blog/mappers'
-import { Code } from 'bright'
 
 export async function generateStaticParams() {
   const posts = await getPosts()
@@ -48,7 +50,9 @@ export async function generateMetadata(props: {
   }
 }
 
-export default async function Home(props: { params: Promise<{ slug: string }> }) {
+export default async function Home(props: {
+  params: Promise<{ slug: string }>
+}) {
   const paramsSlug = decodeURIComponent((await props.params).slug)
   const { isEnabled } = await draftMode()
 
@@ -73,6 +77,10 @@ export default async function Home(props: { params: Promise<{ slug: string }> })
     )
   }
   const post = (await getPostBySlug(paramsSlug, isEnabled)) ?? notFound()
+  const breadcrumbs = blogBreadcrumbs({
+    name: post.title,
+    slug: { current: post.slug },
+  })
 
   const postSlugs = (await generateStaticParams()).map(({ slug }) => slug)
   const currentIndex = postSlugs.indexOf(paramsSlug)
@@ -80,12 +88,15 @@ export default async function Home(props: { params: Promise<{ slug: string }> })
   const nextSlug = postSlugs[currentIndex + 1]
 
   return (
-    <CmsBlogPost
-      post={post}
-      previousSlug={previousSlug}
-      nextSlug={nextSlug}
-      Code={Code}
-      kind="blog"
-    />
+    <>
+      <Schema data={breadcrumbs} />
+      <CmsBlogPost
+        post={post}
+        previousSlug={previousSlug}
+        nextSlug={nextSlug}
+        Code={Code}
+        kind="blog"
+      />
+    </>
   )
 }
