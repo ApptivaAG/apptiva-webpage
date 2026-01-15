@@ -4,10 +4,11 @@ import { BaseQuery, InferType, makeSafeQueryRunner, z } from 'groqd'
 import { client } from './client'
 import { stegaEnabled, token } from '../env'
 import { loadQuery } from './store'
+import { draftMode } from 'next/headers'
 
 export const runQuery = makeSafeQueryRunner(
-  (query, params: Record<string, number | string> = {}, tags?: string[]) => {
-    const isDraftMode = false
+  async (query, params: Record<string, number | string> = {}, tags?: string[]) => {
+    const isDraftMode = await draftMode()
 
     if (isDraftMode && !token) {
       throw new Error(
