@@ -46,7 +46,6 @@ export async function load<T extends GroqdQuery>(
           useCdn: false,
           // Stega can corrupt strings used in styles/classNames; keep it opt-in.
           stega: stegaEnabled,
-          cache: 'no-store',
           next: { 
             revalidate: 0,
             tags: cacheTags 
