@@ -25,12 +25,6 @@ export const runQuery = makeSafeQueryRunner(
           enabled: false,
           studioUrl: '/studio',
         },
-        ...(isDraftMode
-          ? {
-              cache: 'no-store',
-              next: { revalidate: 0 },
-            }
-          : {}),
       })
       .fetch(query, params, { next: { tags } })
   }
