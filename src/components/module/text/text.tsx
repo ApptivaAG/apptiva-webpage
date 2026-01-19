@@ -5,18 +5,20 @@ import { ModuleData } from '@/sanity/lib/queries'
 import { cn } from '@/utils/cn'
 import { formatIds } from '@/utils/format-ids'
 import { moduleStyleToSectionIntent } from '../utils'
+import { vercelStegaCleanAll } from '@sanity/client/stega'
 
 export default function Text(props: { module: ModuleData }) {
   const { module } = props
-  const col1 = module.layout === '1-column'
-  const darkBg = module.style === 'dark-bg'
+  const col1 = vercelStegaCleanAll(module.layout) === '1-column'
+  const style = vercelStegaCleanAll(module.style)
+  const darkBg = style === 'dark-bg'
 
   const isLevel = (level: 1 | 2) => (module.level ?? 1) == level
 
   return (
     <Section
-      id={formatIds(module.title)}
-      intent={moduleStyleToSectionIntent(module.style)}
+      id={formatIds(vercelStegaCleanAll(module.title))}
+      intent={moduleStyleToSectionIntent(style)}
       level={isLevel(2) ? 'two' : 'one'}
     >
       <div className="content">

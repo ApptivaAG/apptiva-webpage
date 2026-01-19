@@ -3,11 +3,12 @@ import 'server-only'
 import { BaseQuery, InferType, makeSafeQueryRunner, z } from 'groqd'
 import { client } from './client'
 import { stegaEnabled, token } from '../env.server'
+import { draftMode } from 'next/headers'
 import { loadQuery } from './store'
 
 export const runQuery = makeSafeQueryRunner(
-  (query, params: Record<string, number | string> = {}, tags?: string[]) => {
-    const isDraftMode = false
+  async (query, params: Record<string, number | string> = {}, tags?: string[]) => {
+    const isDraftMode = (await draftMode()).isEnabled
 
     if (isDraftMode && !token) {
       throw new Error(
@@ -19,9 +20,9 @@ export const runQuery = makeSafeQueryRunner(
       .withConfig({
         token: token,
         perspective: isDraftMode ? 'previewDrafts' : 'published',
-        useCdn: isDraftMode ? false : true,
+        useCdn: isDraftMode,
         stega: {
-          enabled: false,
+          enabled: isDraftMode,
           studioUrl: '/studio',
         },
       })
@@ -45,7 +46,7 @@ export async function load<T extends GroqdQuery>(
           perspective: 'previewDrafts', // Should eventually be changed to drafts again, since previewDrafts is deprecated and will be removed in the future.
           useCdn: false,
           // Stega can corrupt strings used in styles/classNames; keep it opt-in.
-          stega: stegaEnabled,
+          stega: true,
           next: { tags: cacheTags },
         }
       : {
