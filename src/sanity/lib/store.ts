@@ -3,7 +3,7 @@
 import * as queryStore from '@sanity/react-loader'
 
 import { client } from '@/sanity/lib/client'
-import { token } from '../env'
+import { token } from '../env.server'
 
 queryStore.setServerClient(client.withConfig({ token }))
 
