@@ -7,6 +7,9 @@ export function buildArticleSchema(post: {
   modifiedDate?: string
   author?: string
   articleType: 'blog' | 'apptiva-lernt'
+  description?: string
+  image?: string
+  tags?: string[]
 }) {
   return {
     '@context': 'https://schema.org',
@@ -27,6 +30,14 @@ export function buildArticleSchema(post: {
     publisher: {
       '@type': 'Organization',
       '@id': 'https://apptiva.ch/#organization',
+    },
+    image: post.image,
+    keywords: post.tags,
+    inLanguage: 'de-CH',
+    isPartOf: {
+      '@type': 'CollectionPage',
+      '@id': `https://apptiva.ch/${post.articleType}`,
+      name: post.articleType === 'blog' ? 'Blog' : 'Apptiva lernt',
     },
   } as WithContext<Article>
 }

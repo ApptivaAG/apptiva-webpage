@@ -90,6 +90,9 @@ export default async function Home(props: {
     modifiedDate: post.modifiedDate,
     author: post.author,
     articleType: 'blog',
+    description: post.meta.description,
+    image: post.image?.asset.url,
+    tags: post.tags,
   })
   const schemaArray = [articleSchema, breadcrumbs]
 
