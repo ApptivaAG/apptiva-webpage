@@ -20,7 +20,7 @@ export const runQuery = makeSafeQueryRunner(
       .withConfig({
         token: token,
         perspective: isDraftMode ? 'previewDrafts' : 'published',
-        useCdn: isDraftMode,
+        useCdn: !isDraftMode,
         stega: {
           enabled: isDraftMode,
           studioUrl: '/studio',
