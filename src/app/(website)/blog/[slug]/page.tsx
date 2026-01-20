@@ -1,13 +1,16 @@
+import { Schema } from '@/components/schema'
+import { hasTag } from '@/domain/blog/mappers'
 import { getPostBySlug, getPosts } from '@/domain/blog/repository'
+import { blogBreadcrumbs } from '@/lib/schema/breadcrumbs/blog'
+import { queryPostFromCmsBySlug } from '@/sanity/lib/queries'
+import { load } from '@/sanity/lib/sanityFetch'
+import { Code } from 'bright'
 import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 import CmsBlogPost from '../../../../components/blog/cms-post'
 import BlogPostPreview from '../../../../components/blog/preview-post'
-import { load } from '@/sanity/lib/sanityFetch'
-import { queryPostFromCmsBySlug } from '@/sanity/lib/queries'
-import { hasTag } from '@/domain/blog/mappers'
-import { Code } from 'bright'
+import { buildArticleSchema } from '@/lib/schema/article/build-article-schema'
 
 export async function generateStaticParams() {
   const posts = await getPosts()
@@ -48,7 +51,9 @@ export async function generateMetadata(props: {
   }
 }
 
-export default async function Home(props: { params: Promise<{ slug: string }> }) {
+export default async function Home(props: {
+  params: Promise<{ slug: string }>
+}) {
   const paramsSlug = decodeURIComponent((await props.params).slug)
   const { isEnabled } = await draftMode()
 
@@ -73,19 +78,40 @@ export default async function Home(props: { params: Promise<{ slug: string }> })
     )
   }
   const post = (await getPostBySlug(paramsSlug, isEnabled)) ?? notFound()
+  const breadcrumbs = blogBreadcrumbs({
+    name: post.title,
+    slug: { current: post.slug },
+  })
+
+  const articleSchema = buildArticleSchema({
+    name: post.title,
+    slug: post.slug,
+    publishDate: post.publishDate,
+    modifiedDate: post.modifiedDate,
+    author: post.author,
+    articleType: 'blog',
+    description: post.meta.description,
+    image: post.image?.asset.url,
+    tags: post.tags,
+  })
+  const schemaArray = [articleSchema, breadcrumbs]
 
   const postSlugs = (await generateStaticParams()).map(({ slug }) => slug)
+
   const currentIndex = postSlugs.indexOf(paramsSlug)
   const previousSlug = postSlugs[currentIndex - 1]
   const nextSlug = postSlugs[currentIndex + 1]
 
   return (
-    <CmsBlogPost
-      post={post}
-      previousSlug={previousSlug}
-      nextSlug={nextSlug}
-      Code={Code}
-      kind="blog"
-    />
+    <>
+      <Schema data={schemaArray} />
+      <CmsBlogPost
+        post={post}
+        previousSlug={previousSlug}
+        nextSlug={nextSlug}
+        Code={Code}
+        kind="blog"
+      />
+    </>
   )
 }

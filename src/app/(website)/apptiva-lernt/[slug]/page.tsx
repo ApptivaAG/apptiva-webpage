@@ -1,7 +1,10 @@
 import CmsBlogPost from '@/components/blog/cms-post'
 import BlogPostPreview from '@/components/blog/preview-post'
+import { Schema } from '@/components/schema'
 import { hasTag } from '@/domain/blog/mappers'
 import { getPostBySlug, getPosts } from '@/domain/blog/repository'
+import { buildArticleSchema } from '@/lib/schema/article/build-article-schema'
+import { apptivaLerntBreadcrumbs } from '@/lib/schema/breadcrumbs/apptiva-lernt'
 import { queryPostFromCmsBySlug } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
 import { Code } from 'bright'
@@ -48,7 +51,9 @@ export async function generateMetadata(props: {
   }
 }
 
-export default async function Home(props: { params: Promise<{ slug: string }> }) {
+export default async function Home(props: {
+  params: Promise<{ slug: string }>
+}) {
   const paramsSlug = decodeURIComponent((await props.params).slug)
   const { isEnabled } = await draftMode()
 
@@ -73,6 +78,22 @@ export default async function Home(props: { params: Promise<{ slug: string }> })
     )
   }
   const post = (await getPostBySlug(paramsSlug, false)) ?? notFound()
+  const breadcrumbs = apptivaLerntBreadcrumbs({
+    slug: { current: post.slug },
+    name: post.title,
+  })
+  const articleSchema = buildArticleSchema({
+    name: post.title,
+    slug: post.slug,
+    publishDate: post.publishDate,
+    modifiedDate: post.modifiedDate,
+    author: post.author,
+    articleType: 'apptiva-lernt',
+    description: post.meta.description,
+    image: post.image?.asset.url,
+    tags: post.tags,
+  })
+  const schemaArray = [articleSchema, breadcrumbs]
 
   const postSlugs = (await generateStaticParams()).map(({ slug }) => slug)
   const currentIndex = postSlugs.indexOf(paramsSlug)
@@ -80,12 +101,15 @@ export default async function Home(props: { params: Promise<{ slug: string }> })
   const nextSlug = postSlugs[currentIndex + 1]
 
   return (
-    <CmsBlogPost
-      post={post}
-      Code={Code}
-      kind="apptiva-lernt"
-      nextSlug={nextSlug}
-      previousSlug={previousSlug}
-    />
+    <>
+      <Schema data={schemaArray} />
+      <CmsBlogPost
+        post={post}
+        Code={Code}
+        kind="apptiva-lernt"
+        nextSlug={nextSlug}
+        previousSlug={previousSlug}
+      />
+    </>
   )
 }
