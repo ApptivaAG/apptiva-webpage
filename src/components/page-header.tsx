@@ -1,4 +1,6 @@
 import SanityImage from '@/components/sanity-image'
+import Image from 'next/image'
+import Sticker from './sticker.svg'
 import { PortableText, SanityImageWithAlt } from '@/domain/types'
 import { isValidElement } from 'react'
 import BreadCrumb from './bread-crumb'
@@ -26,6 +28,7 @@ export function PageHeader(props: {
   ) : (
     <StyledPortableText content={props.lead} />
   )
+
   return (
     <header className="full relative mt-[-8rem] min-h-fit animate-gradient items-center bg-gradient-to-br from-primary-light to-primary-dark bg-300% pb-8 pt-32 text-base-white md:pb-16 md:pt-44">
       <div className="content">
@@ -33,7 +36,16 @@ export function PageHeader(props: {
           <BreadCrumb className="pb-2 md:pb-6" links={props.links} />
         )}
         {props.title && <Heading level={1}>{title}</Heading>}
-        <div className={leadStyle}>{lead}</div>
+        <div className="lg:flex">
+          <div className={leadStyle}>{lead}</div>
+          {props.links?.some((link) => link.name === 'Chatbots') && (
+            <Image
+              className="mx-auto w-52 max-lg:hidden lg:rotate-12"
+              src={Sticker}
+              alt="10 Jahre Apptiva Chatbots"
+            />
+          )}
+        </div>
         {props.callToAction && (
           <div className="pt-8 md:pt-12">{props.callToAction}</div>
         )}
