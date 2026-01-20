@@ -2,7 +2,7 @@ import { PostBySlugQueryData } from '@/sanity/lib/queries'
 import portableTextToString from '../../utils/portable-text-to-string'
 import { CmsBlog, CmsContent } from '../types'
 import { mapTags } from '../tags/map-tags'
-import { vercelStegaCleanAll } from '@sanity/client/stega'
+import { cleanStega } from '@/utils/clean-stega'
 
 export function mapCmsPost(post: PostBySlugQueryData | null) {
   if (!post || !post.slug) {
@@ -36,7 +36,7 @@ export function mapCmsPost(post: PostBySlugQueryData | null) {
 
 export function hasTag(kind: 'blog' | 'apptiva-lernt') {
   return (post: { tags?: string[] }) => {
-    const cleanTags = post.tags?.map((tag) => vercelStegaCleanAll(tag)) ?? []
+    const cleanTags = post.tags?.map((tag) => cleanStega(tag)) ?? []
 
     return kind === 'apptiva-lernt'
       ? cleanTags.includes('Apptiva lernt')

@@ -5,7 +5,7 @@ import StyledPortableText from '@/components/styled-portable-text'
 import { ModuleData } from '@/sanity/lib/queries'
 import { cn } from '@/utils/cn'
 import { formatIds } from '@/utils/format-ids'
-import { vercelStegaCleanAll } from '@sanity/client/stega'
+import { cleanStega } from '@/utils/clean-stega'
 import { moduleStyleToSectionIntent } from '../../utils'
 
 export default function TextWithImageTwoCol(props: { module: ModuleData }) {
@@ -13,12 +13,12 @@ export default function TextWithImageTwoCol(props: { module: ModuleData }) {
 
   const isLevel = (level: 1 | 2) => (module.level ?? 1) == level
   const isOrientation = (orientation: 'left' | 'right') =>
-    vercelStegaCleanAll(module.orientation) === orientation
+    cleanStega(module.orientation) === orientation
 
   return (
     <Section
       id={formatIds(module.title)}
-      intent={moduleStyleToSectionIntent(module.style)}
+      intent={moduleStyleToSectionIntent(cleanStega(module.style))}
       level={module.level === 2 ? 'two' : 'one'}
     >
       <div
