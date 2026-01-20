@@ -80,7 +80,7 @@ export default async function Home(props: { params: Promise<{ slug: string[] }> 
     ['service-page']
   )
 
-  if (!draft.data && !published && !isEnabled) {
+  if (!draft.data && !published) {
     notFound()
   }
 
