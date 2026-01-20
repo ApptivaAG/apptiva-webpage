@@ -82,12 +82,20 @@ export default function Footer() {
                 </Heading>
                 <ul className="space-y-1">
                   <li>
-                    <a href="https://www.linkedin.com/company/apptiva-ag" target="_blank" rel="noopener noreferrer">
+                    <a
+                      href="https://www.linkedin.com/company/apptiva-ag"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <UnderlineForLink>LinkedIn</UnderlineForLink>
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.youtube.com/channel/UCkRetskswz9I4-ohcYuTG3Q" target="_blank" rel="noopener noreferrer">
+                    <a
+                      href="https://www.youtube.com/channel/UCkRetskswz9I4-ohcYuTG3Q"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <UnderlineForLink>Youtube</UnderlineForLink>
                     </a>
                   </li>
@@ -184,13 +192,13 @@ export default function Footer() {
 
               <ul>
                 <li>
-                  <Link href="/angebot/development">
-                    <UnderlineForLink>Development</UnderlineForLink>
+                  <Link href="/angebot/chatbots">
+                    <UnderlineForLink>Chatbots</UnderlineForLink>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/angebot/chatbots">
-                    <UnderlineForLink>Chatbots</UnderlineForLink>
+                  <Link href="/angebot/development">
+                    <UnderlineForLink>Development</UnderlineForLink>
                   </Link>
                 </li>
                 <li>
