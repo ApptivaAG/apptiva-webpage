@@ -5,6 +5,7 @@ import StyledPortableText from '@/components/styled-portable-text'
 import { ModuleData } from '@/sanity/lib/queries'
 import { formatIds } from '@/utils/format-ids'
 import { moduleStyleToSectionIntent } from '../../utils'
+import { cleanStega } from '@/utils/clean-stega'
 
 export default function TextWithImageOneCol(props: { module: ModuleData }) {
   const { module } = props
@@ -14,7 +15,7 @@ export default function TextWithImageOneCol(props: { module: ModuleData }) {
   return (
     <Section
       id={formatIds(module.title)}
-      intent={moduleStyleToSectionIntent(module.style)}
+      intent={moduleStyleToSectionIntent(cleanStega(module.style))}
       level={module.level === 2 ? 'two' : 'one'}
     >
       <div className="content">

@@ -8,10 +8,12 @@ import { formatIds } from '@/utils/format-ids'
 import { PortableText } from '@portabletext/react'
 import { Card } from '../../ui/card'
 import { moduleStyleToSectionIntent } from '../utils'
+import { cleanStega } from '@/utils/clean-stega'
 
 export default function CardFlow(props: { module: ModuleData }) {
   const { module } = props
-  const darkBg = module.style === 'dark-bg'
+  const style = cleanStega(module.style)
+  const darkBg = style === 'dark-bg'
   const isLevel = (level: 1 | 2) => (module.level ?? 1) == level
 
   const colStyle =
@@ -19,7 +21,7 @@ export default function CardFlow(props: { module: ModuleData }) {
   return (
     <>
       <Section
-        intent={moduleStyleToSectionIntent(module.style)}
+        intent={moduleStyleToSectionIntent(style)}
         level={isLevel(1) ? 'one' : 'two'}
         id={formatIds(module.title)}
       >
@@ -43,7 +45,7 @@ export default function CardFlow(props: { module: ModuleData }) {
           )}
           <div className={cn('grid gap-7', colStyle)}>
             {module.cards?.map((card) => {
-              const style = xor(darkBg, card.style !== 'inverted')
+              const style = xor(darkBg, cleanStega(card.style) !== 'inverted')
                 ? 'dark'
                 : 'light'
               return (
