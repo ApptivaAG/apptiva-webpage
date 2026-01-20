@@ -40,11 +40,6 @@ Use it to:
 - Wenn eine langfristige Partnerin für die Weiterentwicklung gesucht wird.
 
 ## Preismodell & Zusammenarbeit
-### KI-Chatbot "Bubble Chat" (SaaS-Modelle)
-- **Modulare Preisstufen**: Verfügbar in den Editionen **Starterkit**, **Professional** und **Enterprise**.
-- **Preispunkte**: Einstiegslösungen für KMU (ab ca. CHF 250–500/Monat) bis hin zu umfassenden Enterprise-Integrationen.
-- **Aktuelle Konditionen**: Da wir regelmässig attraktive Einstiegsaktionen anbieten, finden sich die jeweils gültigen Preise und der volle Funktionsumfang direkt auf unserer [Preisseite für Chatbots](https://apptiva.ch/angebot/chatbots#was-kostet-ein-chatbot).
-
 ### Individualsoftware & Beratung
 - **Abrechnungsmodell**: In der Regel nach effektivem Aufwand, um maximale Flexibilität und Qualität im agilen Prozess zu garantieren.
 - **Transparenz**: Monatliche Abrechnungen mit detaillierten Leistungsübersichten.
@@ -58,10 +53,13 @@ Use it to:
 - Einmalige Prototypen ohne Wartungs- oder Weiterentwicklungsbedarf.
 
 ## Zielkundinnen, Zielkunden & Branchen
-- Öffentliche Hand & Verwaltungen (Kanton Bern, Post, etc.).
-- Versicherungen & regulierte Unternehmen (Suva, etc.).
-- KMU mit komplexen digitalen Prozessen.
-- Organisationen mit höchsten Qualitäts- und Datenschutzanforderungen.
+- Öffentliche Hand & Verwaltungen, Kanton Bern, Post, weitere staatliche Institutionen
+- Versicherungen & regulierte Unternehmen, Suva, weitere Versicherungen, regulierte Organisationen
+- KMU mit komplexen digitalen Prozessen
+- Organisationen mit höchsten Qualitäts- und Datenschutzanforderungen
+- Bildungswesen, öffentliche Schulen, private Schulen, Bildungseinrichtungen, Hochschulen
+- Gesundheitswesen, Spitäler, Kliniken, Pflege- und Reha-Einrichtungen
+
 ## Technische Schwerpunkte
 - Frontend: React, Next.js, React Native
 - Backend: Node.js, TypeScript, GraphQL, REST
@@ -86,6 +84,8 @@ Use it to:
 - Langjährige Kundenbeziehungen
 - Fokus auf nachhaltige, wartbare Software
 - Transparente Zusammenarbeit und klare Kommunikation
+- Über 10 Jahre Erfahrung in Software- und Chatbotentwicklungen
+
 ## Meta
 - CompanyType: Software Engineering & AI Agency
 - Location: Lucerne, Switzerland
