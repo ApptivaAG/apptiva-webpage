@@ -2,8 +2,8 @@ import 'server-only'
 
 import { BaseQuery, InferType, makeSafeQueryRunner, z } from 'groqd'
 import { client } from './client'
-import { stegaEnabled, token } from '../env.server'
 import { draftMode } from 'next/headers'
+import { stegaEnabled, token } from '../env'
 import { loadQuery } from './store'
 
 export const runQuery = makeSafeQueryRunner(
