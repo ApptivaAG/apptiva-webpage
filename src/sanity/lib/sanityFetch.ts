@@ -45,8 +45,7 @@ export async function load<T extends GroqdQuery>(
       ? {
           perspective: 'previewDrafts', // Should eventually be changed to drafts again, since previewDrafts is deprecated and will be removed in the future.
           useCdn: false,
-          // Stega can corrupt strings used in styles/classNames; keep it opt-in.
-          stega: true,
+          stega: true, // keep stega true for draft mode to enable direct editing on preview. Clean stega in styles where necessary.
           next: { tags: cacheTags },
         }
       : {
