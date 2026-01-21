@@ -283,6 +283,19 @@ export const queryTags = q('*').filterByType('tag').grab$({
   _id: q.string(),
 })
 
+export const mediaPageQuery = q('*')
+  .filterByType('media-page')
+  .filter()
+  .slice(0)
+  .grab$({
+    _id: q.string(),
+    slug: Slug,
+    header: Header,
+    modules: Modules,
+  })
+
+
+
 export const aboutPageQuery = q('*')
   .filterByType('about-page')
   .filter()
