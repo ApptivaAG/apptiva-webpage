@@ -48,54 +48,6 @@ export type NavbarItemMenu = {
 type NavbarItem = NavbarItemLink | NavbarItemMenu
 export const navbarData: NavbarItem[] = [
   {
-    title: 'Development',
-    type: 'menu',
-    items: [
-      {
-        title: 'Development',
-        text: 'Gemeinsam realisieren wir deine individuelle Softwarelösung.',
-        href: '/angebot/development',
-        icon: developmentIcon,
-        type: 'media-link',
-      },
-      {
-        title: 'Webentwicklung',
-        href: '/angebot/development/webentwicklung',
-        type: 'link',
-      },
-      {
-        title: 'App Entwicklung',
-        href: '/angebot/development/app-entwicklung',
-        type: 'link',
-      },
-      {
-        title: 'Schnittstellen',
-        href: '/angebot/development/schnittstellen',
-        type: 'link',
-      },
-      {
-        title: 'Konfiguratoren',
-        href: '/angebot/development/konfiguratoren',
-        type: 'link',
-      },
-      {
-        title: 'Webshops',
-        href: '/angebot/development/webshops',
-        type: 'link',
-      },
-      {
-        title: 'Digitalisierung',
-        href: '/angebot/development/digitalisierung',
-        type: 'link',
-      },
-      {
-        title: 'Weiterentwicklung',
-        href: '/angebot/development/weiterentwicklung',
-        type: 'link',
-      },
-    ],
-  },
-  {
     title: 'Chatbots',
     type: 'menu',
     items: [
@@ -165,6 +117,55 @@ export const navbarData: NavbarItem[] = [
       },
     ],
   },
+  {
+    title: 'Development',
+    type: 'menu',
+    items: [
+      {
+        title: 'Development',
+        text: 'Gemeinsam realisieren wir deine individuelle Softwarelösung.',
+        href: '/angebot/development',
+        icon: developmentIcon,
+        type: 'media-link',
+      },
+      {
+        title: 'Webentwicklung',
+        href: '/angebot/development/webentwicklung',
+        type: 'link',
+      },
+      {
+        title: 'App Entwicklung',
+        href: '/angebot/development/app-entwicklung',
+        type: 'link',
+      },
+      {
+        title: 'Schnittstellen',
+        href: '/angebot/development/schnittstellen',
+        type: 'link',
+      },
+      {
+        title: 'Konfiguratoren',
+        href: '/angebot/development/konfiguratoren',
+        type: 'link',
+      },
+      {
+        title: 'Webshops',
+        href: '/angebot/development/webshops',
+        type: 'link',
+      },
+      {
+        title: 'Digitalisierung',
+        href: '/angebot/development/digitalisierung',
+        type: 'link',
+      },
+      {
+        title: 'Weiterentwicklung',
+        href: '/angebot/development/weiterentwicklung',
+        type: 'link',
+      },
+    ],
+  },
+
   { title: 'Projekte', href: '/projekte', type: 'link' },
   { title: 'Apptiva', href: '/ueber-uns', type: 'link' },
   {
