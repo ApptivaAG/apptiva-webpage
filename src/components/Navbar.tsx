@@ -90,16 +90,6 @@ export const navbarData: NavbarItem[] = [
         ],
       },
       {
-        title: 'Preise',
-        href: '/angebot/chatbots#was-kostet-ein-chatbot',
-        type: 'link',
-      },
-      {
-        title: 'Dienstleistungen',
-        href: '/angebot/chatbots#dienstleistungen-in-der-chatbot-entwicklung',
-        type: 'link',
-      },
-      {
         title: 'Technologie',
         href: '/angebot/chatbots/technologie',
         type: 'link',
