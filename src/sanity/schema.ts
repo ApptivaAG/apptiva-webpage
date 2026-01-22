@@ -21,6 +21,7 @@ import skillItem from './schemas/objects/skill-item'
 import social from './schemas/objects/social'
 import cta from './schemas/objects/cta'
 import mediaPage from './schemas/documents/media-page'
+import doc from './schemas/objects/doc'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -46,5 +47,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     priceCard,
     aboutPage,
     mediaPage,
+    doc,
   ],
 }

@@ -1,8 +1,13 @@
+import Customers from '@/components/customers'
+import Partners from '@/components/partners'
+import Testimonials from '@/components/testimonials'
 import { mediaPageQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
 import portableTextToString from '@/utils/portable-text-to-string'
 import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
+import Media from './media'
+import MediaPreview from './preview'
 
 const url = '/media'
 
@@ -29,7 +34,7 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-export default async function Media() {
+export default async function MediaPage() {
   const { isEnabled } = await draftMode()
   const { published, draft } = await load(
     mediaPageQuery,
@@ -38,21 +43,30 @@ export default async function Media() {
     ['media-page', 'person']
   )
 
+  const testimonials = <Testimonials />
+  const customers = <Customers />
+  const partners = <Partners />
+
+  /**
+   * todo: Implement Media Page
+   * - render header
+   * - render media items
+   * - render modules
+   */
+
   return isEnabled ? (
-    // <AboutPreview
-    //   initial={draft}
-    //   customers={customers}
-    //   testimonials={testimonials}
-    //   partners={partners}
-    // />
-    <p>Media draft Mode {draft.data.modules?.length}</p>
+    <MediaPreview
+      initial={draft}
+      customers={customers}
+      testimonials={testimonials}
+      partners={partners}
+    />
   ) : (
-    // <About
-    //   data={published}
-    //   customers={customers}
-    //   testimonials={testimonials}
-    //   partners={partners}
-    // />
-    <p>Media Published {published?.modules?.length}</p>
+    <Media
+      data={published}
+      customers={customers}
+      testimonials={testimonials}
+      partners={partners}
+    />
   )
 }

@@ -42,9 +42,19 @@ export default defineType({
           { title: 'Teaser Angebot', value: 'teaser-servicepage' },
           { title: 'Bild', value: 'image' },
           { title: 'Team', value: 'team' },
+          { title: 'Dokumente', value: 'documents' },
         ],
       },
     }),
+    defineField({
+      name: 'documents',
+      title: 'Dokumente',
+      type: 'array',
+      // @ts-ignore
+      of: [defineArrayMember({ type: 'doc' })],
+      hidden: isNotType('documents'),
+    }),
+
     defineField({
       name: 'level',
       title: 'Modul Ebene',
@@ -150,7 +160,7 @@ export default defineType({
       type: 'array',
       // @ts-ignore
       of: [defineArrayMember({ type: 'priceCard' })],
-      hidden: ({ parent }) => parent?.type !== 'prices',
+      hidden: isNotType('prices'),
     }),
     defineField({
       title: 'FAQs',
