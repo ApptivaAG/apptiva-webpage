@@ -1,4 +1,5 @@
 import { InferType, nullToUndefined, q, sanityImage } from 'groqd'
+import doc from '../schemas/objects/doc'
 
 const Slug = ['slug.current', q.string().optional()] satisfies [string, any]
 
@@ -28,8 +29,25 @@ const Cards = q('cards')
   })
   .nullable()
 
-export type ProjectsData = NonNullable<InferType<typeof Projects>>[number]
+export const Documents = q('documents')
+  .filter()
+  .grab$({
+    _key: q.string(),
+    title: q.string().optional(),
+    description: q.string().optional(),
+    file: q('file')
+      .grab$({
+        asset: q('asset').grab$({
+          _ref: q.string(),
+        }),
+      })
+      .nullable(),
+    externalLink: q.string().optional(),
+    image: sanityImageWithAlt('image'),
+  })
+  .nullable()
 
+export type ProjectsData = NonNullable<InferType<typeof Projects>>[number]
 export const Projects = q('projects')
   .filter()
   .deref()
@@ -172,6 +190,7 @@ const Modules = q('modules')
     persons: Persons,
     quotetext: q.contentBlocks().optional(),
     servicePageTeaser: ServicePageTeasers,
+    documents: Documents,
   })
   .nullable()
 
@@ -293,8 +312,6 @@ export const mediaPageQuery = q('*')
     header: Header,
     modules: Modules,
   })
-
-
 
 export const aboutPageQuery = q('*')
   .filterByType('about-page')

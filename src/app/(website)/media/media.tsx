@@ -11,8 +11,6 @@ export default function Media(props: {
   testimonials: React.ReactNode
   partners: React.ReactNode
 }) {
-  console.log('Media Page Data:', props.data)
-
   return (
     <>
       <PageHeader
