@@ -9,7 +9,7 @@ import Quote from './quote'
 import ServiceTeaserList from './service-teaser/service-teaser-list'
 import Team from './team'
 import Text from './text'
-import Docs from './docs'
+import Docs from './docs/docs'
 
 export default function Module(props: {
   module: ModuleData
