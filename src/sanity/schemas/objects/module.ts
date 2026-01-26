@@ -46,14 +46,6 @@ export default defineType({
         ],
       },
     }),
-    defineField({
-      name: 'documents',
-      title: 'Dokumente',
-      type: 'array',
-      // @ts-ignore
-      of: [defineArrayMember({ type: 'doc' })],
-      hidden: isNotType('documents'),
-    }),
 
     defineField({
       name: 'level',
@@ -94,7 +86,7 @@ export default defineType({
           { title: 'Grauer Hintergrund', value: 'light-gray-bg' },
         ],
       },
-      hidden: isNotType('cards', 'text'),
+      hidden: isNotType('cards', 'text', 'documents'),
     }),
     defineField({
       name: 'image',
@@ -113,6 +105,14 @@ export default defineType({
         ],
       },
       hidden: isNotType('text'),
+    }),
+    defineField({
+      name: 'documents',
+      title: 'Dokumente',
+      type: 'array',
+      // @ts-ignore
+      of: [defineArrayMember({ type: 'doc' })],
+      hidden: isNotType('documents'),
     }),
     defineField({
       name: 'content',

@@ -2,15 +2,10 @@ import Heading from '@/components/heading'
 import Section from '@/components/section'
 import { ModuleData } from '@/sanity/lib/queries'
 import { cleanStega } from '@/utils/clean-stega'
+import { cn } from '@/utils/cn'
 import { formatIds } from '@/utils/format-ids'
 import { PortableText } from '@portabletext/react'
 import { moduleStyleToSectionIntent } from '../utils'
-import { cn } from '@/utils/cn'
-import { Card } from '../../ui/card'
-import SanityImage from '../../sanity-image'
-import { FaArrowRight, FaFilePdf, FaLink } from 'react-icons/fa'
-import Link from 'next/link'
-import UnderlineForLink from '../../ui/underline-for-link'
 import Doc from './doc'
 
 export default function Docs(props: { module: ModuleData }) {
@@ -27,7 +22,6 @@ export default function Docs(props: { module: ModuleData }) {
       id={formatIds(module.title)}
     >
       <div className="content gap-y-10 lg:gap-y-16">
-        {/* Header-Bereich */}
         <div className="flex max-w-3xl flex-col gap-6">
           {module.title && (
             <Heading level={isLevel(2) ? 3 : 2} size={isLevel(2) ? 4 : 2}>
