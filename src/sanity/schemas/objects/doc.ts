@@ -50,14 +50,5 @@ export default defineType({
       description:
         'Optionaler Link zur Originalquelle oder weiterführenden Infos.',
     }),
-    defineField({
-      name: 'image',
-      title: 'Bild',
-      type: 'image',
-      description: 'Optional: Vorschaubild oder Logo zum Dokument.',
-      options: {
-        hotspot: true,
-      },
-    }),
   ],
 })

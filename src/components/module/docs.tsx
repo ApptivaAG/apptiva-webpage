@@ -62,9 +62,9 @@ export default function Docs(props: { module: ModuleData }) {
                   {/* Bild / Icon Area */}
                   <div className="flex items-center justify-between">
                     <div className="rounded-xl flex h-14 w-14 items-center justify-center overflow-hidden">
-                      {doc.image ? (
+                      {doc.previewImage ? (
                         <SanityImage
-                          image={doc.image}
+                          image={doc.previewImage}
                           className="h-full w-full object-cover"
                         />
                       ) : (

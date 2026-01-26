@@ -47,7 +47,7 @@ export const Documents = q('documents')
       })
       .nullable(),
     externalLink: q.string().optional(),
-    image: sanityImageWithAlt('image'),
+    previewImage: sanityImageWithAlt('previewImage'),
   })
   .nullable()
 
