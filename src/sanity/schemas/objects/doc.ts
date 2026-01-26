@@ -27,6 +27,23 @@ export default defineType({
       description: 'Das eigentliche PDF-Dokument.',
     }),
     defineField({
+      name: 'previewImage',
+      title: 'Vorschaubild',
+      type: 'image',
+      description:
+        'Wird als Vorschaubild angezeigt. Tipp: Screenshot der ersten PDF-Seite hochladen.',
+      options: {
+        hotspot: true,
+      },
+      validation: (Rule: any) =>
+        Rule.custom((value: any, context: any) => {
+          if (context.document.file && !value) {
+            return 'Ein Vorschaubild wird für die Kachel-Darstellung empfohlen.'
+          }
+          return true
+        }),
+    }),
+    defineField({
       name: 'externalLink',
       title: 'Externer Link',
       type: 'url',
