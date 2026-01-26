@@ -33,13 +33,17 @@ export const Documents = q('documents')
   .filter()
   .grab$({
     _key: q.string(),
-    title: q.string().optional(),
+    title: q.string().optional().default('Dokument ohne Titel'),
     description: q.string().optional(),
     file: q('file')
       .grab$({
-        asset: q('asset').grab$({
-          _ref: q.string(),
-        }),
+        asset: q('asset')
+          .deref()
+          .grab$({
+            url: q.string(),
+            size: q.number().optional(),
+          })
+          .nullable(),
       })
       .nullable(),
     externalLink: q.string().optional(),

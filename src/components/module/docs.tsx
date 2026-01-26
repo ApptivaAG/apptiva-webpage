@@ -8,75 +8,91 @@ import { moduleStyleToSectionIntent } from './utils'
 import { cn } from '@/utils/cn'
 import { Card } from '../ui/card'
 import SanityImage from '../sanity-image'
-import StyledPortableText from '../styled-portable-text'
+import { FaArrowRight, FaFilePdf, FaLink } from 'react-icons/fa'
+import Link from 'next/link'
 
 export default function Docs(props: { module: ModuleData }) {
   const { module } = props
   const style = cleanStega(module.style)
-  const darkBg = false
   const isLevel = (level: 1 | 2) => (module.level ?? 1) == level
 
-  const colStyle = 'lg:grid-cols-3'
-  console.log(' docs: ', props.module.documents)
+  // Grid-Steuerung: aiaibot nutzt oft 3 Spalten für Ressourcen
+  const colStyle = 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+
   return (
-    <>
-      <Section
-        intent={moduleStyleToSectionIntent(style)}
-        level={isLevel(1) ? 'one' : 'two'}
-        id={formatIds(module.title)}
-      >
-        <div className="content gap-y-7 lg:gap-y-14">
-          {isLevel(2) && (
-            <hr className="text-primary max-lg:hidden lg:-translate-y-12" />
-          )}
+    <Section
+      intent={moduleStyleToSectionIntent(style)}
+      level={isLevel(1) ? 'one' : 'two'}
+      id={formatIds(module.title)}
+    >
+      <div className="content gap-y-10 lg:gap-y-16">
+        {/* Header-Bereich */}
+        <div className="flex max-w-3xl flex-col gap-6">
           {module.title && (
-            <Heading
-              level={isLevel(2) ? 3 : 2}
-              size={isLevel(2) ? 4 : 3}
-              className="col-left"
-            >
+            <Heading level={isLevel(2) ? 3 : 2} size={isLevel(2) ? 4 : 2}>
               {module.title}
             </Heading>
           )}
           {module.content && (
-            <div className="col-right">
+            <div className="text-lg leading-relaxed opacity-80">
               <PortableText value={module.content} />
             </div>
           )}
+        </div>
 
-          <div className={cn('grid gap-7', colStyle)}>
-            {module.documents?.map((doc) => {
-              // const style = xor(darkBg, cleanStega(doc.style) !== 'inverted')
-              //   ? 'dark'
-              //   : 'light'
-              const style = 'light'
-              return (
+        {/* Dokumenten-Grid */}
+        <div className={cn('grid gap-6 lg:gap-8', colStyle)}>
+          {module.documents?.map((doc) => {
+            // Bestimme das Ziel des Links (PDF-Asset oder externer Link)
+            const fileUrl = (doc.file as any)?.asset?.url
+            const linkHref = fileUrl || doc.externalLink
+
+            return (
+              <Link
+                key={doc._key}
+                href={linkHref}
+                target="_blank"
+                rel="noreferrer"
+                className="group h-full"
+              >
                 <Card
-                  key={doc._key}
-                  className="relative flex flex-col gap-6 overflow-visible"
-                  intent={style}
+                  className="border-slate-100 bg-white flex h-full flex-col gap-5 p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                  intent="light"
                 >
-                  <div className="flex items-start gap-4">
-                    <SanityImage image={doc.image} className="flex-none" />
-                    <Heading level={isLevel(2) ? 4 : 3} size={5}>
+                  {/* Bild / Icon Area */}
+                  <div className="flex items-center justify-between">
+                    <div className="rounded-xl flex h-14 w-14 items-center justify-center overflow-hidden">
+                      {doc.image ? (
+                        <SanityImage
+                          image={doc.image}
+                          className="h-full w-full object-cover"
+                        />
+                      ) : (
+                        <></>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col gap-3">
+                    <Heading
+                      level={4}
+                      size={5}
+                      className="transition-colors group-hover:text-primary"
+                    >
                       {doc.title}
                     </Heading>
+                    {doc.description && (
+                      <p className="text-slate-500 line-clamp-3 text-sm leading-relaxed">
+                        {doc.description}
+                      </p>
+                    )}
                   </div>
-                  <p>{doc.description}</p>
-
-                  {/* {doc.description && (
-                    <StyledPortableText content={doc.description} />
-                  )} */}
                 </Card>
-              )
-            })}
-          </div>
+              </Link>
+            )
+          })}
         </div>
-      </Section>
-    </>
+      </div>
+    </Section>
   )
-}
-
-function xor(a: boolean, b: boolean) {
-  return (a || b) && !(a && b)
 }
