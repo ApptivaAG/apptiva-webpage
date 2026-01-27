@@ -30,14 +30,16 @@ export default function Doc(props: { doc: any }) {
         </Heading>
         {doc.description && <p>{doc.description}</p>}
       </div>
-      <Link
-        className="self-end"
-        href={linkHref}
-        target="_blank"
-        rel="noreferrer"
-      >
-        <UnderlineForLink>Zum Artikel&ensp;→</UnderlineForLink>
-      </Link>
+      {linkHref && (
+        <Link
+          className="self-end"
+          href={linkHref}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <UnderlineForLink>Zum Artikel&ensp;→</UnderlineForLink>
+        </Link>
+      )}
     </Card>
   )
 }
