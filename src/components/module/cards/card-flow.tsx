@@ -43,7 +43,7 @@ export default function CardFlow(props: { module: ModuleData }) {
               <PortableText value={module.content} />
             </div>
           )}
-          <div className={cn('grid gap-7', colStyle)}>
+          <div className={cn('grid gap-8', colStyle)}>
             {module.cards?.map((card) => {
               const style = xor(darkBg, cleanStega(card.style) !== 'inverted')
                 ? 'dark'
@@ -73,10 +73,10 @@ export default function CardFlow(props: { module: ModuleData }) {
                   {card.pill && (
                     <div
                       className={cn(
-                        'absolute -bottom-5 left-9 mr-9 line-clamp-2 rounded-full px-7 py-3',
+                        'absolute -bottom-6 left-9 mr-9 line-clamp-2 rounded-full px-7 py-3',
                         style === 'light' &&
                           'border bg-primary text-base-white',
-                        style === 'dark' && 'bg-base-white text-primary'
+                        style === 'dark' && 'border bg-base-white text-primary'
                       )}
                     >
                       {card.pill}
