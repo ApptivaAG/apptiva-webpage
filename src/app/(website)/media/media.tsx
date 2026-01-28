@@ -4,6 +4,19 @@ import Module from '@/components/module'
 import React from 'react'
 import { PageHeader } from '../../../components/page-header'
 import { MediaPageQueryData } from './types'
+import { Metadata } from 'next/dist/lib/metadata/types/metadata-interface'
+
+const url = '/media'
+const title = 'Media'
+export const metadata: Metadata = {
+  title,
+  description: 'Pressemitteilungen, Artikel und mehr über Apptiva',
+  alternates: { canonical: url },
+  openGraph: {
+    title,
+    url,
+  },
+}
 
 export default function Media(props: {
   data: MediaPageQueryData
