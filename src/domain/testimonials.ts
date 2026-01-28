@@ -8,6 +8,7 @@ type TestimonialFrontmatter = {
   name: string
   position: string
   company: string
+  order: number
 }
 
 export type Testimonial = {
@@ -42,5 +43,10 @@ export async function getTestimonialsData() {
       }
     })
 
-  return Promise.all(allPostsData)
+  const testimonials = await Promise.all(allPostsData)
+  return testimonials.sort((a, b) => {
+    const orderA = a.frontmatter.order ?? 999
+    const orderB = b.frontmatter.order ?? 999
+    return orderA - orderB
+  })
 }
