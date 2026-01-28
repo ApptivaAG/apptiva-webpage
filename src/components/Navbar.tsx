@@ -185,11 +185,12 @@ export const navbarData: NavbarItem[] = [
         href: '/glossar',
         type: 'link',
       },
-      {
-        title: 'Media',
-        href: '/media',
-        type: 'link',
-      },
+      // todo: as soon as media page content is ready, uncomment these lines
+      // {
+      //   title: 'Media',
+      //   href: '/media',
+      //   type: 'link',
+      // },
       // {
       //   title: 'Workshops',
       //   href: '/angebot/workshops',
