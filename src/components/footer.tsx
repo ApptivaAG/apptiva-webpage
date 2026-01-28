@@ -263,6 +263,11 @@ export default function Footer() {
                     <UnderlineForLink>Kontakt</UnderlineForLink>
                   </Link>
                 </li>
+                <li>
+                  <Link href="/media">
+                    <UnderlineForLink>Media</UnderlineForLink>
+                  </Link>
+                </li>
               </ul>
             </div>
 

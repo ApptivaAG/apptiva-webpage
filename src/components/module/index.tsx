@@ -9,6 +9,7 @@ import Quote from './quote'
 import ServiceTeaserList from './service-teaser/service-teaser-list'
 import Team from './team'
 import Text from './text'
+import Docs from './docs/docs'
 
 export default function Module(props: {
   module: ModuleData
@@ -57,6 +58,9 @@ export default function Module(props: {
       return <Image module={module} />
     case 'team':
       return <Team module={module} />
+
+    case 'documents':
+      return <Docs module={module} />
 
     default:
       return <div>Modultyp wählen</div>

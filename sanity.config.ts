@@ -6,7 +6,7 @@ import { StreamLanguage } from '@codemirror/language'
 import { codeInput } from '@sanity/code-input'
 import { visionTool } from '@sanity/vision'
 import { groqdPlaygroundTool } from 'groqd-playground'
-import { FaAddressCard, FaHome } from 'react-icons/fa'
+import { FaAddressCard, FaHome, FaNewspaper } from 'react-icons/fa'
 import { defineConfig } from 'sanity'
 import { media } from 'sanity-plugin-media'
 import { presentationTool } from 'sanity/presentation'
@@ -44,11 +44,22 @@ export default defineConfig({
                   .title('Über Apptiva Seite')
               )
               .icon(FaAddressCard),
+            S.listItem()
+              .title('Media Page')
+              .child(
+                S.editor()
+                  .schemaType('media-page')
+                  .documentId('media-page')
+                  .title('Media Page')
+              )
+              .icon(FaNewspaper),
 
             // List out the rest of the document types, but filter out the singleton types
             ...S.documentTypeListItems().filter(
               (listItem) =>
-                !['homepage', 'about-page'].includes(String(listItem.getId()))
+                !['homepage', 'about-page', 'media-page'].includes(
+                  String(listItem.getId())
+                )
             ),
           ]),
     }),

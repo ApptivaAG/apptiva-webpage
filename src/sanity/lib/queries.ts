@@ -1,4 +1,5 @@
 import { InferType, nullToUndefined, q, sanityImage } from 'groqd'
+import doc from '../schemas/objects/doc'
 
 const Slug = ['slug.current', q.string().optional()] satisfies [string, any]
 
@@ -28,8 +29,29 @@ const Cards = q('cards')
   })
   .nullable()
 
-export type ProjectsData = NonNullable<InferType<typeof Projects>>[number]
+export const Documents = q('documents')
+  .filter()
+  .grab$({
+    _key: q.string(),
+    title: q.string().optional().default('Dokument ohne Titel'),
+    description: q.string().optional(),
+    file: q('file')
+      .grab$({
+        asset: q('asset')
+          .deref()
+          .grab$({
+            url: q.string(),
+            size: q.number().optional(),
+          })
+          .nullable(),
+      })
+      .nullable(),
+    externalLink: q.string().optional(),
+    previewImage: sanityImageWithAlt('previewImage'),
+  })
+  .nullable()
 
+export type ProjectsData = NonNullable<InferType<typeof Projects>>[number]
 export const Projects = q('projects')
   .filter()
   .deref()
@@ -172,6 +194,7 @@ const Modules = q('modules')
     persons: Persons,
     quotetext: q.contentBlocks().optional(),
     servicePageTeaser: ServicePageTeasers,
+    documents: Documents,
   })
   .nullable()
 
@@ -282,6 +305,17 @@ export const queryTags = q('*').filterByType('tag').grab$({
   name: q.string(),
   _id: q.string(),
 })
+
+export const mediaPageQuery = q('*')
+  .filterByType('media-page')
+  .filter()
+  .slice(0)
+  .grab$({
+    _id: q.string(),
+    slug: Slug,
+    header: Header,
+    modules: Modules,
+  })
 
 export const aboutPageQuery = q('*')
   .filterByType('about-page')
