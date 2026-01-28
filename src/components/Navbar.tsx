@@ -195,6 +195,11 @@ export const navbarData: NavbarItem[] = [
         href: '/glossar',
         type: 'link',
       },
+      {
+        title: 'Media',
+        href: '/media',
+        type: 'link',
+      },
       // {
       //   title: 'Workshops',
       //   href: '/angebot/workshops',
