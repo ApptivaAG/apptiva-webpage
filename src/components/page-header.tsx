@@ -37,7 +37,14 @@ export function PageHeader(props: {
         )}
         {props.title && <Heading level={1}>{title}</Heading>}
         <div className="lg:flex">
-          <div className={leadStyle}>{lead}</div>
+          <div className="items-center gap-8 lg:flex">
+            <div className={leadStyle}>{lead}</div>
+            {props.image && (
+              <div className="flex h-full w-full justify-center p-8 lg:p-0">
+                <SanityImage image={props.image} />
+              </div>
+            )}
+          </div>
           {props.links?.some((link) => link.name === 'Chatbots') && (
             <Image
               className="mx-auto w-52 max-lg:hidden lg:rotate-12"
@@ -46,13 +53,9 @@ export function PageHeader(props: {
             />
           )}
         </div>
+
         {props.callToAction && (
           <div className="pt-8 md:pt-12">{props.callToAction}</div>
-        )}
-        {props.image && (
-          <div className="flex justify-center pb-4 pt-16">
-            <SanityImage image={props.image} />
-          </div>
         )}
       </div>
       {props.children}
