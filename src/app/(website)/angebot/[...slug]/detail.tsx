@@ -27,6 +27,9 @@ export default function ServiceDetail(props: {
             products={props.service.products}
             image={props.service.header?.image?.asset?.url}
             url={serviceUrl}
+            productType={
+              props.service.productType as 'Product' | 'Service' | undefined
+            }
           />
         )}
 

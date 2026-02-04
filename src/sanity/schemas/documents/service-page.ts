@@ -80,15 +80,32 @@ export default defineType({
     }),
     defineField({
       name: 'isProduct',
-      title: 'Als Produkt markieren',
+      title: 'Als Produkt / Service markieren',
       type: 'boolean',
-      description: 'Aktivieren um Product Schema Markup hinzuzufügen',
+      description: 'Aktivieren um Product/Service Schema Markup hinzuzufügen',
       group: 'product',
       initialValue: false,
     }),
     defineField({
+      name: 'productType',
+      title: 'Schema-Typ',
+      type: 'string',
+      description:
+        'Wähle Product für verkaufbare Produkte oder Service für Dienstleistungen',
+      group: 'product',
+      hidden: ({ document }) => !document?.isProduct,
+      options: {
+        list: [
+          { title: 'Product', value: 'Product' },
+          { title: 'Service', value: 'Service' },
+        ],
+        layout: 'radio',
+      },
+      initialValue: 'Product',
+    }),
+    defineField({
       name: 'products',
-      title: 'Produkte',
+      title: 'Produkte/Services',
       type: 'array',
       description: 'Liste der Produkt-Varianten (z.B. verschiedene Pakete)',
       group: 'product',
@@ -115,8 +132,9 @@ export default defineType({
               name: 'price',
               title: 'Preis',
               type: 'number',
-              description: 'Preis in der angegebenen Währung',
-              validation: (Rule) => Rule.required().positive(),
+              description:
+                'Preis in der angegebenen Währung (optional für Services ohne festen Preis)',
+              validation: (Rule) => Rule.positive(),
             },
             {
               name: 'priceCurrency',

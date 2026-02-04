@@ -351,6 +351,7 @@ export const serviceBySlugQuery = q('*')
       })
       .nullable(),
     isProduct: q.boolean().optional(),
+    productType: q.string().optional(),
     products: q('products')
       .filter()
       .grab$({
