@@ -2,6 +2,7 @@ import { PortableText as PortableTextType } from '@/domain/types'
 import { PortableText, PortableTextComponents } from '@portabletext/react'
 import Link from 'next/link'
 import SanityImage from './sanity-image'
+import Button from './ui/button'
 import Underline from './ui/underline'
 import UnderlineForLink from './ui/underline-for-link'
 
@@ -16,6 +17,22 @@ const ProjectPortableText = ({
     types: {
       image: ({ value }) => {
         return <SanityImage image={value} />
+      },
+      cta: (props: {
+        value: {
+          name: string
+          href: string
+          _type: 'link'
+          _key: string
+        }
+      }) => {
+        return (
+          <div className="py-4 md:py-8">
+            <Link href={props.value?.href}>
+              <Button intent="secondary">{props.value?.name}</Button>
+            </Link>
+          </div>
+        )
       },
     },
     marks: {
