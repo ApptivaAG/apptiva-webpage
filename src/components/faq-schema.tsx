@@ -1,6 +1,7 @@
 import { FAQQueryModuleData } from '@/sanity/lib/queries'
 import portableTextToString from '@/utils/portable-text-to-string'
-import Script from 'next/script'
+import { Schema } from './schema'
+import type { WithContext, FAQPage } from 'schema-dts'
 
 interface FAQSchemaProps {
   faqs: FAQQueryModuleData
@@ -11,7 +12,7 @@ const FAQSchema = ({ faqs }: FAQSchemaProps) => {
     return null
   }
 
-  const faqSchema = {
+  const faqSchema: WithContext<FAQPage> = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: faqs.map((faq) => ({
@@ -24,19 +25,7 @@ const FAQSchema = ({ faqs }: FAQSchemaProps) => {
     })),
   }
 
-  try {
-    return (
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        strategy="beforeInteractive"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-    )
-  } catch (error) {
-    console.warn('Failed to serialize FAQ schema:', error)
-    return null
-  }
+  return <Schema data={faqSchema} />
 }
 
 export default FAQSchema
