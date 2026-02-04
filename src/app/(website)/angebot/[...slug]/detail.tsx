@@ -1,11 +1,13 @@
 import Module from '@/components/module'
 import { PageHeader } from '@/components/page-header'
+import ProductSchema from '@/components/product-schema'
 
 import { ErrorBoundary } from 'react-error-boundary'
 import Button from '@/components/ui/button'
 import Heading from '@/components/heading'
 import { ServiceBySlugQueryData } from '@/sanity/lib/queries'
 import Link from 'next/link'
+import portableTextToString from '@/utils/portable-text-to-string'
 
 export default function ServiceDetail(props: {
   service: ServiceBySlugQueryData
@@ -14,8 +16,23 @@ export default function ServiceDetail(props: {
   partners: React.ReactNode
   isPreview?: boolean
 }) {
+  const serviceUrl = `/angebot/${buildBreadcrumbPath(props.service.slug, props.service.subPageOf)}`
+
   return (
     <>
+      {props.service.isProduct &&
+        props.service.products &&
+        props.service.products.length > 0 && (
+          <ProductSchema
+            products={props.service.products}
+            image={props.service.header?.image?.asset?.url}
+            url={serviceUrl}
+            productType={
+              props.service.productType as 'Product' | 'Service' | undefined
+            }
+          />
+        )}
+
       <PageHeader
         title={props.service.header?.title}
         lead={props.service.header?.lead}

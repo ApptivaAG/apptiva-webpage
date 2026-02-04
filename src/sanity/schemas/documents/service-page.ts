@@ -10,6 +10,10 @@ export default defineType({
       name: 'teaser',
       title: 'Teaser',
     },
+    {
+      name: 'product',
+      title: 'Product Schema',
+    },
   ],
   fields: [
     defineField({
@@ -73,6 +77,97 @@ export default defineType({
       name: 'callToAction',
       title: 'Call To Action',
       type: 'link',
+    }),
+    defineField({
+      name: 'isProduct',
+      title: 'Als Produkt / Service markieren',
+      type: 'boolean',
+      description: 'Aktivieren um Product/Service Schema Markup hinzuzufügen',
+      group: 'product',
+      initialValue: false,
+    }),
+    defineField({
+      name: 'productType',
+      title: 'Schema-Typ',
+      type: 'string',
+      description:
+        'Wähle Product für verkaufbare Produkte oder Service für Dienstleistungen',
+      group: 'product',
+      hidden: ({ document }) => !document?.isProduct,
+      options: {
+        list: [
+          { title: 'Product', value: 'Product' },
+          { title: 'Service', value: 'Service' },
+        ],
+        layout: 'radio',
+      },
+      initialValue: 'Product',
+    }),
+    defineField({
+      name: 'products',
+      title: 'Produkte/Services',
+      type: 'array',
+      description: 'Liste der Produkt-Varianten (z.B. verschiedene Pakete)',
+      group: 'product',
+      hidden: ({ document }) => !document?.isProduct,
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'name',
+              title: 'Produktname',
+              type: 'string',
+              description: 'Name des Produkts/Pakets',
+              validation: (Rule) => Rule.required(),
+            },
+            {
+              name: 'description',
+              title: 'Produktbeschreibung',
+              type: 'text',
+              rows: 3,
+              description: 'Kurze Beschreibung des Produkts',
+            },
+            {
+              name: 'price',
+              title: 'Preis',
+              type: 'number',
+              description:
+                'Preis in der angegebenen Währung (optional für Services ohne festen Preis)',
+              validation: (Rule) => Rule.positive(),
+            },
+            {
+              name: 'priceCurrency',
+              title: 'Währung',
+              type: 'string',
+              description: 'ISO 4217 Währungscode',
+              initialValue: 'CHF',
+            },
+            {
+              name: 'priceValidUntil',
+              title: 'Preis gültig bis',
+              type: 'date',
+              description: 'Optionales Datum bis wann der Preis gültig ist',
+              options: {
+                dateFormat: 'DD.MM.YYYY',
+              },
+            },
+          ],
+          preview: {
+            select: {
+              title: 'name',
+              price: 'price',
+              currency: 'priceCurrency',
+            },
+            prepare({ title, price, currency }) {
+              return {
+                title: title || 'Unbenanntes Produkt',
+                subtitle: price ? `${currency} ${price}` : 'Kein Preis',
+              }
+            },
+          },
+        },
+      ],
     }),
   ],
   orderings: [

@@ -350,6 +350,18 @@ export const serviceBySlugQuery = q('*')
         href: q.string().optional(),
       })
       .nullable(),
+    isProduct: q.boolean().optional(),
+    productType: q.string().optional(),
+    products: q('products')
+      .filter()
+      .grab$({
+        name: q.string(),
+        description: q.string().optional(),
+        price: q.number(),
+        priceCurrency: q.string().optional(),
+        priceValidUntil: q.string().optional(),
+      })
+      .nullable(),
   })
 
 export type GlossaryQueryData = NonNullable<InferType<typeof glossaryQuery>>
