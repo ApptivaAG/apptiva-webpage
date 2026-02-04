@@ -18,6 +18,11 @@ interface ProductSchemaProps {
 }
 
 const ProductSchema = ({ products, image, url }: ProductSchemaProps) => {
+  // Fallback to Apptiva logo if no image provided
+  const productImage = image
+    ? `${rootUrl}${image}`
+    : `${rootUrl}/img/Logo-symbol.png`
+
   return (
     <>
       {products.map((product, index) => {
@@ -26,12 +31,9 @@ const ProductSchema = ({ products, image, url }: ProductSchemaProps) => {
           '@type': 'Product',
           name: sanitizeString(product.name) || 'Product',
           description: sanitizeString(product.description),
-          image: image ? `${rootUrl}${image}` : undefined,
+          image: productImage,
           url: `${rootUrl}${url}`,
-          brand: {
-            '@type': 'Organization',
-            name: 'Apptiva AG',
-          },
+          brand: 'Apptiva AG',
           offers: {
             '@type': 'Offer',
             price: product.price.toString(),
