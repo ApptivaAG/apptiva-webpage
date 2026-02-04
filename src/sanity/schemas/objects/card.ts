@@ -37,6 +37,9 @@ export default defineType({
         defineArrayMember({
           type: 'block',
         }),
+        {
+          type: 'cta',
+        },
       ],
     }),
   ],
