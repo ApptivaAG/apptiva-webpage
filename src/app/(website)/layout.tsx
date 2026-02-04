@@ -60,6 +60,8 @@ export default async function RootLayout({
     <html lang="de" className={gentona.className}>
       <head>
         <PlausibleProvider domain="apptiva.ch" />
+        <link rel="llms" href="/llms.txt" type="text/markdown" />
+        <link rel="llms-full" href="/llms.txt" type="text/markdown" />
       </head>
       <body className="text-fluid-base">
         <Schema data={organizationSchema} />
