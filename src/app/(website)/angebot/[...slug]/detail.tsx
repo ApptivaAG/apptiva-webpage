@@ -17,31 +17,19 @@ export default function ServiceDetail(props: {
   isPreview?: boolean
 }) {
   const serviceUrl = `/angebot/${buildBreadcrumbPath(props.service.slug, props.service.subPageOf)}`
-  
+
   return (
     <>
-      {props.service.isProduct && (
-        <ProductSchema
-          name={
-            props.service.productName ||
-            (props.service.header?.title
-              ? portableTextToString(props.service.header.title)
-              : 'Produkt')
-          }
-          description={
-            props.service.productDescription ||
-            props.service.header?.lead ||
-            undefined
-          }
-          price={props.service.price}
-          priceCurrency={props.service.priceCurrency}
-          priceValidUntil={props.service.priceValidUntil}
-          availability={props.service.availability}
-          image={props.service.header?.image?.asset?.url}
-          url={serviceUrl}
-        />
-      )}
-      
+      {props.service.isProduct &&
+        props.service.products &&
+        props.service.products.length > 0 && (
+          <ProductSchema
+            products={props.service.products}
+            image={props.service.header?.image?.asset?.url}
+            url={serviceUrl}
+          />
+        )}
+
       <PageHeader
         title={props.service.header?.title}
         lead={props.service.header?.lead}
