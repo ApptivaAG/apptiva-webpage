@@ -1,11 +1,13 @@
 import Module from '@/components/module'
 import { PageHeader } from '@/components/page-header'
+import ProductSchema from '@/components/product-schema'
 
 import { ErrorBoundary } from 'react-error-boundary'
 import Button from '@/components/ui/button'
 import Heading from '@/components/heading'
 import { ServiceBySlugQueryData } from '@/sanity/lib/queries'
 import Link from 'next/link'
+import portableTextToString from '@/utils/portable-text-to-string'
 
 export default function ServiceDetail(props: {
   service: ServiceBySlugQueryData
@@ -14,8 +16,32 @@ export default function ServiceDetail(props: {
   partners: React.ReactNode
   isPreview?: boolean
 }) {
+  const serviceUrl = `/angebot/${buildBreadcrumbPath(props.service.slug, props.service.subPageOf)}`
+  
   return (
     <>
+      {props.service.isProduct && (
+        <ProductSchema
+          name={
+            props.service.productName ||
+            (props.service.header?.title
+              ? portableTextToString(props.service.header.title)
+              : 'Produkt')
+          }
+          description={
+            props.service.productDescription ||
+            props.service.header?.lead ||
+            undefined
+          }
+          price={props.service.price}
+          priceCurrency={props.service.priceCurrency}
+          priceValidUntil={props.service.priceValidUntil}
+          availability={props.service.availability}
+          image={props.service.header?.image?.asset?.url}
+          url={serviceUrl}
+        />
+      )}
+      
       <PageHeader
         title={props.service.header?.title}
         lead={props.service.header?.lead}
