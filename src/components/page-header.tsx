@@ -39,11 +39,12 @@ export function PageHeader(props: {
         <div className="lg:flex">
           <div className="items-center gap-8 lg:flex">
             <div className={leadStyle}>{lead}</div>
-            {props.image && (
-              <div className="flex h-full w-full justify-center p-8 lg:p-0">
-                <SanityImage image={props.image} />
-              </div>
-            )}
+            {props.image &&
+              !props.links?.some((link) => link.name === 'Chatbots') && (
+                <div className="flex h-full w-full justify-center p-8 lg:p-0">
+                  <SanityImage image={props.image} />
+                </div>
+              )}
           </div>
           {props.links?.some((link) => link.name === 'Chatbots') && (
             <Image
