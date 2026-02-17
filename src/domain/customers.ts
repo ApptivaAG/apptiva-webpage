@@ -177,6 +177,12 @@ const customerList = [
     height: 35,
     group: ['chatbot'],
   },
+  {
+    fileName: 'bwz-obwalden-logo.svg',
+    alt: 'Berufs- und Weiterbildungszentrum BWZ Obwalden',
+    height: 35,
+    group: ['chatbot'],
+  },
 ] satisfies Logo[]
 
 export default function getCustomerLogos(group?: Group[] | undefined) {
