@@ -90,6 +90,27 @@ export const navbarData: NavbarItem[] = [
         ],
       },
       {
+        title: 'Branchen',
+        type: 'sub-menu',
+        items: [
+          {
+            title: 'Verwaltung & Public Sector',
+            href: '/angebot/chatbots/verwaltung',
+            type: 'link',
+          },
+          {
+            title: 'Gesundheitswesen',
+            href: '/angebot/chatbots/gesundheitswesen',
+            type: 'link',
+          },
+          {
+            title: 'Bildungswesen',
+            href: '/angebot/chatbots/bildungswesen',
+            type: 'link',
+          },
+        ],
+      },
+      {
         title: 'Technologie',
         href: '/angebot/chatbots/technologie',
         type: 'link',
