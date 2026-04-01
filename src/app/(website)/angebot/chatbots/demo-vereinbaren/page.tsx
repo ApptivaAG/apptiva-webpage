@@ -7,8 +7,8 @@ export default async function Kontakt() {
   return (
     <>
       <PageHeader
-        title="Du willst deinen Kundendialog effizienter gestalten?"
-        lead="In der ca. einstündigen Online-Präsentation zeigen wir dir, wie das mit Hilfe eines Chatbots geht. Dabei gehen wir gezielt auf deine Fragen ein."
+        title="Erlebe Bubble Chat live auf deiner Website"
+        lead="Wir sparen uns die PowerPoint-Folien. Statt einer theoretischen Demo zeigen wir dir direkt an deiner eigenen Website, wie Bubble Chat funktioniert und wo er deine Besucher:innen konkret unterstützen kann."
         links={[
           { name: 'Angebot' },
           { name: 'Chatbots', href: '/angebot/chatbots' },
@@ -23,20 +23,34 @@ export default async function Kontakt() {
             </Heading>
           </div>
           <div className="col-left max-w-2xl lg:mt-6">
-            <p>Folgendes wartet auf dich:</p>
+            <p>Das erwartet dich in der 30-minütigen Demo:</p>
             <ul className="ml-4 mt-4 list-arrow *:pl-2">
-              <li>Einführung ins Thema Chatbot</li>
-              <li>Beispiele von Chatbots</li>
-              <li>Wie funktionieren KI-basierte Chatbots?</li>
-              <li>Funktionsumfang von Bubble Chat</li>
-              <li>Erstellen von einfachen Frage-Antworte-Absichten</li>
-              <li>Einsatz von GPT Features</li>
-              <li>Trainieren eines Chatbots</li>
-              <li>Die wichtigsten Chatbot Metriken</li>
+              <li>
+                <b>Live-Vorschau:</b> Wir projizieren den Chatbot auf deine
+                Seite, damit du ein echtes Gefühl für die User Experience
+                bekommst.
+              </li>
+              <li>
+                <b>KI-Check:</b> Du siehst live, wie GPT deine Webinhalte nutzt,
+                um Fragen sofort und präzise zu beantworten.
+              </li>
+              <li>
+                <b>Praxis-Training:</b> Wir zeigen dir, wie du dem Bot im
+                Handumdrehen neues Wissen beibringst.
+              </li>
+              <li>
+                <b>Zahlen & Fakten:</b> Wir besprechen die Metriken, die deinen
+                Support entlasten und die Lead-Generierung automatisieren.
+              </li>
+              <li>
+                <b>KI-Beratung:</b> Wir klären deine Fragen rund um KI und
+                Chatbots und räumen eventuelle Unsicherheiten gemeinsam aus dem
+                Weg.
+              </li>
             </ul>
           </div>
-          <div className=" col-right max-lg:mt-4">
-            <div className="flex flex-col gap-2 pt-6 ">
+          <div className="col-right max-lg:mt-4">
+            <div className="flex flex-col gap-2 pt-6">
               <Heading level={3} size={5} className={''}>
                 Kostenlose Produkt-Demo anfordern
               </Heading>
