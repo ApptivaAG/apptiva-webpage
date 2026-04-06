@@ -41,6 +41,9 @@ export const metadata: Metadata = {
     default: title,
   },
   description: description,
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: title,
     description: description,
@@ -48,6 +51,30 @@ export const metadata: Metadata = {
     siteName: title,
     locale: 'de_CH',
     type: 'website',
+    images: [
+      {
+        url: '/img/logo-1200x630.png',
+        width: 1198,
+        height: 630,
+        alt: title,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: title,
+    description: description,
+    images: ['/img/logo-1200x630.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 }
 
