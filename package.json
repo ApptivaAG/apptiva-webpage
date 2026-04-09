@@ -43,7 +43,7 @@
     "groqd": "^0.15.13",
     "groqd-playground": "^0.0.19",
     "image-size": "^1.2.1",
-    "next": "^15.5.14",
+    "next": "^15.5.15",
     "next-mdx-remote": "^6.0.0",
     "next-plausible": "^3.12.5",
     "next-sanity": "^11.6.12",
