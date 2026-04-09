@@ -26,8 +26,10 @@ export async function POST(req: NextRequest) {
     }
 
     // If the `_type` is `page`, then all `client.fetch` calls with
-    // `{next: {tags: ['page']}}` will be revalidated
-    revalidateTag(body._type)
+    // `{next: {tags: ['page']}}` will be revalidated.
+    // The second argument specifies the cache life profile to revalidate
+    // (Next.js 16 requires this; 'default' covers standard fetch caches).
+    revalidateTag(body._type, 'default')
 
     return NextResponse.json({ body })
   } catch (err: any) {
