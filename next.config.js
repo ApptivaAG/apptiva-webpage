@@ -6,6 +6,7 @@ const { withPlausibleProxy } = require('next-plausible')
  */
 const config = {
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+  trailingSlash: false,
   images: {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     remotePatterns: [
@@ -685,7 +686,7 @@ async function redirects() {
     {
       source: '/angebot/chatbots/weihnachtsaktion',
       destination: '/angebot/chatbots#was-kostet-ein-chatbot',
-      permanent: true
+      permanent: true,
     },
   ]
 }
