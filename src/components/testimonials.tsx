@@ -2,9 +2,9 @@ import {
   getTestimonialsData,
   Testimonial as TestimonialData,
 } from '@/domain/testimonials'
+import { Schema } from './schema'
 import Testimonial from './testimonial'
 import { Carousel, CarouselContent, CarouselItem } from './ui/carousel'
-import { Schema } from './schema'
 
 const Testimonials = async () => {
   const testimonials = await getTestimonialsData()
@@ -46,7 +46,11 @@ const TestimonialsSchema = ({
         '@type': 'ItemList',
         itemListElement: testimonials.map((testimonial) => ({
           '@type': 'Review',
-          reviewBody: '',
+          itemReviewed: {
+            '@type': 'Organization',
+            name: 'Apptiva AG',
+            url: 'https://apptiva.ch',
+          },
           author: {
             '@type': 'Person',
             name: testimonial.frontmatter.name,
