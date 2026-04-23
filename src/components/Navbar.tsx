@@ -48,46 +48,20 @@ export type NavbarItemMenu = {
 type NavbarItem = NavbarItemLink | NavbarItemMenu
 export const navbarData: NavbarItem[] = [
   {
-    title: 'Chatbots',
+    title: 'Chatbotlösung',
     type: 'menu',
     items: [
       {
-        title: 'Chatbots',
-        text: 'Kundenanfragen mit künstlicher Intelligenz beantworten.',
+        title: 'Unternehmens-Chatbot',
+        text: 'Schweizer KI-Chatbot mit Branchenverständnis',
         href: '/angebot/chatbots',
         icon: chatbotsIcon,
         type: 'media-link',
       },
       {
-        title: 'Produkt-Highlights',
-        type: 'sub-menu',
-        items: [
-          {
-            title: 'KI-Power',
-            href: '/angebot/chatbots/ki-power',
-            type: 'link',
-          },
-          {
-            title: 'Content Management',
-            href: '/angebot/chatbots/cms-design',
-            type: 'link',
-          },
-          {
-            title: 'Analytics',
-            href: '/angebot/chatbots/chatbot-analytics',
-            type: 'link',
-          },
-          {
-            title: 'Integrationen',
-            href: '/angebot/chatbots/integrationen',
-            type: 'link',
-          },
-          {
-            title: 'Live-Chat',
-            href: '/angebot/chatbots/live-chat',
-            type: 'link',
-          },
-        ],
+        title: 'Übersicht',
+        href: '/angebot/chatbots',
+        type: 'link',
       },
       {
         title: 'Branchen',
@@ -111,13 +85,8 @@ export const navbarData: NavbarItem[] = [
         ],
       },
       {
-        title: 'Technologie',
-        href: '/angebot/chatbots/technologie',
-        type: 'link',
-      },
-      {
-        title: 'Warum Bubble Chat',
-        href: '/angebot/chatbots/dein-partner',
+        title: 'Referenzen',
+        href: '/projekte?topic=Chatbots',
         type: 'link',
       },
       {
@@ -129,15 +98,20 @@ export const navbarData: NavbarItem[] = [
     ],
   },
   {
-    title: 'Development',
+    title: 'Softwareentwicklung',
     type: 'menu',
     items: [
       {
-        title: 'Development',
+        title: 'Softwareentwicklung',
         text: 'Gemeinsam realisieren wir deine individuelle Softwarelösung.',
         href: '/angebot/development',
         icon: developmentIcon,
         type: 'media-link',
+      },
+      {
+        title: 'Übersicht',
+        href: '/angebot/development',
+        type: 'link',
       },
       {
         title: 'Webentwicklung',
@@ -150,35 +124,14 @@ export const navbarData: NavbarItem[] = [
         type: 'link',
       },
       {
-        title: 'Schnittstellen',
-        href: '/angebot/development/schnittstellen',
-        type: 'link',
-      },
-      {
-        title: 'Konfiguratoren',
-        href: '/angebot/development/konfiguratoren',
-        type: 'link',
-      },
-      {
-        title: 'Webshops',
-        href: '/angebot/development/webshops',
-        type: 'link',
-      },
-      {
-        title: 'Digitalisierung',
-        href: '/angebot/development/digitalisierung',
-        type: 'link',
-      },
-      {
-        title: 'Weiterentwicklung',
-        href: '/angebot/development/weiterentwicklung',
+        title: 'Referenzen',
+        href: '/projekte',
         type: 'link',
       },
     ],
   },
 
-  { title: 'Projekte', href: '/projekte', type: 'link' },
-  { title: 'Apptiva', href: '/ueber-uns', type: 'link' },
+  { title: 'Über uns', href: '/ueber-uns', type: 'link' },
   {
     title: 'Wissen',
     type: 'menu',
