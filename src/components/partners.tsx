@@ -30,34 +30,36 @@ export default function Partners(props: {}) {
           <Carousel>
             <div className="flex h-[16.4rem] flex-nowrap items-center gap-6 md:gap-32">
               {/* Render partners 3 times to ensure enough content for infinite loop */}
-              {[...partners, ...partners, ...partners].map((partner: any, index: number) => {
-                const isDuplicate = index >= partners.length
-                return (
-                  <div
-                    key={`${partner.id}-${index}`}
-                    className="relative min-w-0 flex-[0_0_16.4rem] bg-base-white"
-                    style={{ height: partner.height + 10 }}
-                    aria-hidden={isDuplicate}
-                  >
-                    <WithLink link={partner.link}>
-                      <Image
-                        alt={partner.alt}
-                        src={partner.path}
-                        fill
-                        className="object-contain opacity-80"
-                      />
+              {[...partners, ...partners, ...partners].map(
+                (partner: any, index: number) => {
+                  const isDuplicate = index >= partners.length
+                  return (
+                    <div
+                      key={`${partner.id}-${index}`}
+                      className="relative min-w-0 flex-[0_0_16.4rem] bg-base-white"
+                      style={{ height: partner.height + 10 }}
+                      aria-hidden={isDuplicate}
+                    >
+                      <WithLink link={partner.link}>
+                        <Image
+                          alt={partner.alt}
+                          src={partner.path}
+                          fill
+                          className="object-contain opacity-80"
+                        />
 
-                      <div className="absolute inset-[1px] bg-primary bg-blend-lighten mix-blend-color [filter:brightness(120%)]"></div>
-                    </WithLink>
-                  </div>
-                )
-              })}
+                        <div className="absolute inset-[1px] bg-primary bg-blend-lighten mix-blend-color [filter:brightness(120%)]"></div>
+                      </WithLink>
+                    </div>
+                  )
+                }
+              )}
             </div>
           </Carousel>
         </div>
 
         {/* Large screens: static row (no repetition) */}
-        <div className="hidden h-[16.4rem] items-center justify-evenly gap-32 lg:flex">
+        <div className="hidden h-[16.4rem] items-center justify-evenly gap-24 lg:flex">
           {partners.map((partner: any) => {
             return (
               <div
