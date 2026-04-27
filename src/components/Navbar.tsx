@@ -48,7 +48,7 @@ export type NavbarItemMenu = {
 type NavbarItem = NavbarItemLink | NavbarItemMenu
 export const navbarData: NavbarItem[] = [
   {
-    title: 'Chatbotlösung',
+    title: 'KI-Chatbot',
     type: 'menu',
     items: [
       {
@@ -59,7 +59,7 @@ export const navbarData: NavbarItem[] = [
         type: 'media-link',
       },
       {
-        title: 'Übersicht',
+        title: 'Angebot',
         href: '/angebot/chatbots',
         type: 'link',
       },
@@ -109,7 +109,7 @@ export const navbarData: NavbarItem[] = [
         type: 'media-link',
       },
       {
-        title: 'Übersicht',
+        title: 'Angebot',
         href: '/angebot/development',
         type: 'link',
       },
