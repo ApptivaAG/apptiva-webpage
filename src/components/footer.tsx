@@ -203,7 +203,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link href="/angebot/development/ki-agenten">
-                    <UnderlineForLink>ki-Agenten</UnderlineForLink>
+                    <UnderlineForLink>KI-Agenten</UnderlineForLink>
                   </Link>
                 </li>
                 <li>
