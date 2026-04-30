@@ -207,6 +207,11 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/angebot/development/ki-integration">
+                    <UnderlineForLink>KI-Integration</UnderlineForLink>
+                  </Link>
+                </li>
+                <li>
                   <Link href="/angebot/development/webentwicklung">
                     <UnderlineForLink>Webentwicklung</UnderlineForLink>
                   </Link>

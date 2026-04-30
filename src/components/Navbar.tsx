@@ -119,6 +119,11 @@ export const navbarData: NavbarItem[] = [
         type: 'link',
       },
       {
+        title: 'KI-Integration',
+        href: '/angebot/development/ki-integration',
+        type: 'link',
+      },
+      {
         title: 'Webentwicklung',
         href: '/angebot/development/webentwicklung',
         type: 'link',
