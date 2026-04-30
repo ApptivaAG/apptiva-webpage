@@ -25,8 +25,8 @@ type PageProps = {
 }
 
 export default async function Home(props: PageProps) {
-  const searchParams = await props.searchParams;
-  const { topic } = await loadSearchParams(searchParams)
+  const searchParams = await props.searchParams
+  const { category } = loadSearchParams(searchParams)
   const { isEnabled } = await draftMode()
   const { draft, published } = await load(projectsQuery, isEnabled, undefined, [
     'project',
@@ -37,10 +37,13 @@ export default async function Home(props: PageProps) {
   ) : (
     <ProjectList
       projects={published.filter((project) => {
-        if (topic !== '') return project.tags?.includes(topic)
-        else return project
+        if (category === 'chatbots') {
+          return project.tags?.includes('Chatbots')
+        } else if (category === 'dev') {
+          return !project.tags?.includes('Chatbots')
+        } else return project
       })}
-      topic={topic}
+      category={category}
     />
   )
 }

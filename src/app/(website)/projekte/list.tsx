@@ -4,52 +4,77 @@ import { ProjectTeaser } from './projekt-teaser'
 import { ProjectQueryData } from './types'
 import Button from '@/components/ui/button'
 import Link from 'next/link'
-import { topics, Topics } from './search-params'
+import { Category } from './search-params'
 
 export default function ProjectList(props: {
   projects: ProjectQueryData[]
-  topic: Topics
+  category: Category
 }) {
-  const getIntent = (name: string) => {
-    if (name === props.topic) {
-      return 'secondary'
-    } else {
-      return 'ghost'
-    }
-  }
+  const devContent = (
+    <PageHeader
+      title={
+        <>
+          Erfolgsprojekte: <Underline>Softwarelösungen</Underline> im Einsatz
+        </>
+      }
+      lead="Lass dich von unseren Referenzen inspirieren! Seit über 10 Jahren entwickeln wir Softwarelösungen für Kund:innen aus verschiedensten Branchen."
+      links={[
+        { name: 'Angebot' },
+        { name: 'Development', href: '/development' },
+        { name: 'Projekte', href: '/projekte' },
+      ]}
+      callToAction={
+        <Link href="/kontakt">
+          <Button intent="secondary">Was ist deine Idee?</Button>
+        </Link>
+      }
+    />
+  )
+  const chatContent = (
+    <PageHeader
+      title={
+        <>
+          Erfolgsprojekte: <Underline>Chatbots</Underline> im Einsatz
+        </>
+      }
+      lead="Lass dich von unseren Referenzen inspirieren! Seit über 10 Jahren liefern wir Chatbots für Kund:innen aus verschiedensten Branchen."
+      links={[
+        { name: 'Angebot' },
+        { name: 'Chatbots', href: '/chatbots' },
+        { name: 'Projekte', href: '/projekte' },
+      ]}
+      callToAction={
+        <Link href="/kontakt">
+          <Button intent="secondary">Was ist deine Idee?</Button>
+        </Link>
+      }
+    />
+  )
+  const defaultContent = (
+    <PageHeader
+      title={
+        <>
+          Erfolgsprojekte: <Underline>Softwarelösungen</Underline> und{' '}
+          <Underline>Chatbots</Underline> im Einsatz
+        </>
+      }
+      lead="Lass dich von unseren Referenzen inspirieren! Seit über 10 Jahren entwickeln wir Softwarelösungen und Chatbots für Kund:innen aus verschiedensten Branchen."
+      links={[{ name: 'Projekte', href: '/projekte' }]}
+      callToAction={
+        <Link href="/kontakt">
+          <Button intent="secondary">Was ist deine Idee?</Button>
+        </Link>
+      }
+    />
+  )
 
   return (
     <>
-      <PageHeader
-        title={
-          <>
-            Erfolgsprojekte: <Underline>Softwarelösungen</Underline> und{' '}
-            <Underline>Chatbots</Underline> im Einsatz
-          </>
-        }
-        lead="Lass dich von unseren Referenzen inspirieren! Seit über 10 Jahren entwickeln wir Softwarelösungen und Chatbots für Kund:innen aus verschiedensten Branchen."
-        links={[{ name: 'Projekte', href: '/projekte' }]}
-        callToAction={
-          <Link href="/kontakt">
-            <Button intent="secondary">Was ist deine Idee?</Button>
-          </Link>
-        }
-      />
-      <div className="flex flex-wrap gap-4 pt-8 lg:pt-16">
-        {topics.map((topic) => (
-          <Link
-            key={topic.value}
-            href={`?topic=${topic.value}`}
-            replace
-            scroll={false}
-          >
-            <Button intent={getIntent(topic.value)} key={topic.value}>
-              {topic.name}
-            </Button>
-          </Link>
-        ))}
-      </div>
-
+      {props.category === 'chatbots'
+        ? chatContent
+        : props.category === 'dev'
+          ? devContent
+          : defaultContent}
       <ul className="grid gap-4 py-8 lg:grid-cols-3 lg:py-16">
         {props.projects.map((project) => (
           <li key={project._id}>

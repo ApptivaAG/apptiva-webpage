@@ -86,7 +86,7 @@ export const navbarData: NavbarItem[] = [
       },
       {
         title: 'Referenzen',
-        href: '/projekte?topic=Chatbots',
+        href: '/projekte?category=chatbots',
         type: 'link',
       },
       {
@@ -130,7 +130,7 @@ export const navbarData: NavbarItem[] = [
       },
       {
         title: 'Referenzen',
-        href: '/projekte',
+        href: '/projekte?category=dev',
         type: 'link',
       },
     ],
