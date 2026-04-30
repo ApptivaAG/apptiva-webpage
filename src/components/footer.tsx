@@ -198,7 +198,12 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link href="/angebot/development">
-                    <UnderlineForLink>Development</UnderlineForLink>
+                    <UnderlineForLink>Softwareentwicklung</UnderlineForLink>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/angebot/development/ki-agenten">
+                    <UnderlineForLink>ki-Agenten</UnderlineForLink>
                   </Link>
                 </li>
                 <li>
