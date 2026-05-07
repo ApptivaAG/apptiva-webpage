@@ -27,11 +27,11 @@ export const MediaLink = ({ subitem }: MediaLinkProps) => (
       className="aspect-square size-32 object-contain py-2"
     />
 
-    <div className="flex flex-col items-center pr-2 text-center">
-      <span className="whitespace-pre-line pb-1 leading-5">
-        {subitem.title}
-      </span>
-      <small className="items-center leading-normal">{subitem.text}</small>
+    <div className="space-y-1 text-center">
+      <p className="whitespace-pre-line pb-1 leading-5">{subitem.title}</p>
+      <p className="items-center leading-4">
+        <small>{subitem.text}</small>
+      </p>
     </div>
   </Link>
 )

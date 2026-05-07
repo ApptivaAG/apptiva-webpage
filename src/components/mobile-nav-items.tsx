@@ -29,8 +29,8 @@ export const MediaLink = ({ subitem, setOpen }: MediaLinkProps) => (
     className="flex items-center gap-5 py-4"
   >
     <Image src={subitem.icon} alt={subitem.title} className="size-24" />
-    <div className="">
-      <p className="text-lg">{subitem.title}</p>
+    <div className="space-y-2">
+      <p className="text-lg leading-5">{subitem.title}</p>
       <p className="text-xs">{subitem.text}</p>
     </div>
   </MobileLink>
