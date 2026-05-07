@@ -688,5 +688,15 @@ async function redirects() {
       destination: '/angebot/chatbots#was-kostet-ein-chatbot',
       permanent: true,
     },
+    {
+      source: '/angebot/development/webentwicklung',
+      destination: '/angebot/development/web-app-entwicklung',
+      permanent: true,
+    },
+    {
+      source: '/angebot/development/app-entwicklung',
+      destination: '/angebot/development/web-app-entwicklung',
+      permanent: true,
+    },
   ]
 }

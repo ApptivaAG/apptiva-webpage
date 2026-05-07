@@ -98,12 +98,12 @@ export const navbarData: NavbarItem[] = [
     ],
   },
   {
-    title: 'Softwareentwicklung',
+    title: 'KI- & Softwareentwicklung',
     type: 'menu',
     items: [
       {
-        title: 'Softwareentwicklung',
-        text: 'Gemeinsam realisieren wir deine individuelle Softwarelösung.',
+        title: 'Software\u00ADentwicklung',
+        text: 'Gemeinsam entwickeln wir deine individuelle Lösung.',
         href: '/angebot/development',
         icon: developmentIcon,
         type: 'media-link',
@@ -124,13 +124,8 @@ export const navbarData: NavbarItem[] = [
         type: 'link',
       },
       {
-        title: 'Webentwicklung',
-        href: '/angebot/development/webentwicklung',
-        type: 'link',
-      },
-      {
-        title: 'App Entwicklung',
-        href: '/angebot/development/app-entwicklung',
+        title: 'Web- und App-Entwicklung',
+        href: '/angebot/development/web-app-entwicklung',
         type: 'link',
       },
       {
