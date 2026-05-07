@@ -98,7 +98,7 @@ export const navbarData: NavbarItem[] = [
     ],
   },
   {
-    title: 'KI- & Softwareentwicklung',
+    title: 'Business-KI & Apps',
     type: 'menu',
     items: [
       {
