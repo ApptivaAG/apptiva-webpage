@@ -102,8 +102,8 @@ export const navbarData: NavbarItem[] = [
     type: 'menu',
     items: [
       {
-        title: 'Software\u00ADentwicklung',
-        text: 'Gemeinsam entwickeln wir deine individuelle Lösung.',
+        title: 'Individuelle\nSoftware\u00ADentwicklung',
+        text: 'Gemeinsam optimieren wir dein Unternehmen mit KI und Apps.',
         href: '/angebot/development',
         icon: developmentIcon,
         type: 'media-link',

@@ -28,7 +28,9 @@ export const MediaLink = ({ subitem }: MediaLinkProps) => (
     />
 
     <div className="flex flex-col items-center pr-2 text-center">
-      <span className="pb-1">{subitem.title}</span>
+      <span className="whitespace-pre-line pb-1 leading-5">
+        {subitem.title}
+      </span>
       <small className="items-center leading-normal">{subitem.text}</small>
     </div>
   </Link>
