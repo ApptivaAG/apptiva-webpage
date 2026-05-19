@@ -4,6 +4,8 @@ import Heading from '@/components/heading'
 import ProjectPortableText from '@/components/project-portable-text'
 import SanityImage from '@/components/sanity-image'
 import { ProjectBySlugQueryData } from '../types'
+import Image from 'next/image'
+import { urlForImage } from '@/sanity/lib/image'
 
 export default function ProjectDetail(props: {
   project: ProjectBySlugQueryData
@@ -66,10 +68,23 @@ export default function ProjectDetail(props: {
               <div>{project.technologies}</div>
             </>
           )}
-          {project.customer && (
+          {project.customer && !project.customerRef && (
             <>
               <p>Kunde</p>
               <div>{project.customer}</div>
+            </>
+          )}
+          {project.customerRef?.logo && (
+            <>
+              <p>Kunde</p>
+              <div
+                className={`mt-2 bg-primary [mask-mode:alpha]`}
+                style={{
+                  height: 20,
+                  mask: `url(${urlForImage(project.customerRef.logo).url()}) no-repeat `,
+                }}
+                title={project.customerRef.customerName}
+              />
             </>
           )}
           {project.contactPerson && (

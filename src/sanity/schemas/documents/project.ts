@@ -56,6 +56,13 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'customerRef',
+      title: 'Kunde',
+      type: 'reference',
+      // @ts-ignore
+      to: { type: 'customer' },
+    }),
+    defineField({
       name: 'tasks',
       title: 'Aufgaben',
       type: 'string',

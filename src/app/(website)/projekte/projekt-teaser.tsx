@@ -1,9 +1,9 @@
 import SanityImage from '@/components/sanity-image'
-import Button from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import Link from 'next/link'
 import { ProjectQueryData } from './types'
 import UnderlineForLink from '@/components/ui/underline-for-link'
+import { urlForImage } from '@/sanity/lib/image'
 
 export function ProjectTeaser(props: {
   project: ProjectQueryData
@@ -17,11 +17,24 @@ export function ProjectTeaser(props: {
       padding="none"
       className="flex h-full max-w-md flex-col shadow"
     >
-      <div className="">
-        <SanityImage
-          className="aspect-video object-cover"
-          image={project.image}
-        />
+      <div className="aspect-video flex-col items-center justify-center bg-base-grey">
+        {project.customerRef?.logo ? (
+          <div className="size-full p-16">
+            <div
+              className={`size-full bg-primary [mask-mode:alpha]`}
+              style={{
+                mask: `url(${urlForImage(project.customerRef.logo).url()}) no-repeat`,
+                maskPosition: 'center',
+              }}
+              title={project.customerRef.customerName}
+            />
+          </div>
+        ) : (
+          <SanityImage
+            className="aspect-video object-center"
+            image={project.image}
+          />
+        )}
       </div>
       <div className="flex flex-1 flex-col items-start gap-4 p-9">
         <p

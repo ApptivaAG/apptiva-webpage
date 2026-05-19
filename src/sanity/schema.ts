@@ -22,6 +22,7 @@ import social from './schemas/objects/social'
 import cta from './schemas/objects/cta'
 import mediaPage from './schemas/documents/media-page'
 import doc from './schemas/objects/doc'
+import customer from './schemas/documents/customer'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -29,6 +30,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     faq,
     glossary,
     project,
+    customer,
     header,
     module,
     tag,

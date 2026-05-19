@@ -60,6 +60,13 @@ export const Projects = q('projects')
     projectName: q.string().optional(),
     image: sanityImageWithAlt(),
     slug: Slug,
+    customerRef: q('customerRef')
+      .deref()
+      .grab$({
+        customerName: q.string().optional(),
+        logo: sanityImageWithAlt('logo'),
+      })
+      .nullable(),
     order: q.number().optional().nullable(),
     description: q.string().optional().nullable(),
   })
@@ -274,6 +281,13 @@ export const projectsQuery = q('*')
     _updatedAt: q.string(),
     projectName: q.string().optional(),
     image: sanityImageWithAlt(),
+    customerRef: q('customerRef')
+      .deref()
+      .grab$({
+        customerName: q.string().optional(),
+        logo: sanityImageWithAlt('logo'),
+      })
+      .nullable(),
     slug: Slug,
     order: q.number().optional(),
     description: q.string().optional(),
@@ -296,6 +310,14 @@ export const projectBySlugQuery = q('*')
     time: q.string().optional(),
     technologies: q.string().optional(),
     customer: q.string().optional(),
+    customerRef: q('customerRef')
+      .deref()
+      .grab$({
+        customerName: q.string().optional(),
+        logo: sanityImageWithAlt('logo'),
+        logoHeight: q.number().optional(),
+      })
+      .nullable(),
     contactPerson: q('contactPerson').deref().grab$(PersonSelection).nullable(),
     content: q.contentBlocks().optional(),
     callToAction: q.contentBlocks().optional(),
