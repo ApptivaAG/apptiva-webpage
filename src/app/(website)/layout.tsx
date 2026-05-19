@@ -15,6 +15,7 @@ import './globals.css'
 import { Schema } from '@/components/schema'
 import CookieConsentProvider from '@/components/cookie-consent-provider'
 import FloatingChatInput from '@/components/floating-chat-input'
+import CookieConsentProvider from '@/components/cookie-consent-provider'
 
 const gentona = localFont({
   src: [
