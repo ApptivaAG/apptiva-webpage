@@ -1,9 +1,12 @@
 import { InferType, nullToUndefined, q, sanityImage } from 'groqd'
 import doc from '../schemas/objects/doc'
 
-const Slug = ['slug.current', q.string().optional()] satisfies [string, any]
+export const Slug = ['slug.current', q.string().optional()] satisfies [
+  string,
+  any,
+]
 
-const sanityImageWithAlt = (fieldName = 'image') =>
+export const sanityImageWithAlt = (fieldName = 'image') =>
   sanityImage(fieldName, {
     withAsset: ['base', 'lqip'],
     additionalFields: nullToUndefined({
@@ -11,7 +14,7 @@ const sanityImageWithAlt = (fieldName = 'image') =>
     }),
   }).nullable()
 
-const Tags = q('tags')
+export const Tags = q('tags')
   .filter()
   .deref()
   .grabOne$('name', q.string().optional())

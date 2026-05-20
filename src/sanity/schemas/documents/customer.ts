@@ -21,6 +21,12 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'priority',
+      title: 'Priorität',
+      description: 'Höhere Nummer kommt früher im Kundenband',
+      type: 'number',
+    }),
+    defineField({
       name: 'logo',
       description: 'Bevorzugt SVG, sonst PNG.',
       title: 'Logo',

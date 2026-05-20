@@ -112,9 +112,9 @@ export default async function Home(props: {
 function mapSlugToGroup(slug: string): Group[] | undefined {
   switch (slug) {
     case 'chatbots':
-      return ['chatbot']
+      return ['Chatbots']
     case 'development':
-      return ['web', 'mobile']
+      return ['App Entwicklung', 'Softwareentwicklung', 'Webentwicklung']
     default:
       return undefined
   }
