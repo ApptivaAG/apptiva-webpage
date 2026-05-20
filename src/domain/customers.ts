@@ -12,7 +12,7 @@ const customerList = [
   {
     fileName: 'post-logo.svg',
     alt: 'Die Schweizerische Post AG',
-    height: 120,
+    height: 80,
     group: ['chatbot'],
   },
   {
