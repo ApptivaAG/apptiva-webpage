@@ -19,12 +19,13 @@ export function ProjectTeaser(props: {
     >
       <div className="aspect-video flex-col items-center justify-center bg-base-grey">
         {project.customerRef?.logo ? (
-          <div className="size-full p-16">
+          <div className="size-full px-16 py-12">
             <div
               className={`size-full bg-primary [mask-mode:alpha]`}
               style={{
                 mask: `url(${urlForImage(project.customerRef.logo).url()}) no-repeat`,
                 maskPosition: 'center',
+                maskSize: 'contain',
               }}
               title={project.customerRef.customerName}
             />
