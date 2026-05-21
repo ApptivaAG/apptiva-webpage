@@ -21,12 +21,6 @@ export default defineType({
       },
     }),
     defineField({
-      name: 'priority',
-      title: 'Priorität',
-      description: 'Höhere Nummer kommt früher im Kundenband',
-      type: 'number',
-    }),
-    defineField({
       name: 'logo',
       description: 'Bevorzugt SVG, sonst PNG.',
       title: 'Logo',
@@ -36,7 +30,7 @@ export default defineType({
       name: 'logoHeight',
       title: 'Darstellungsgrösse in Pixel',
       description:
-        'Wie hoch soll das Logo im Logoband angezeigt werden. Normalerweise zwischen 30 bis 140.',
+        'Wie hoch soll das Logo im Logoband angezeigt werden. Default ist 40px.',
       type: 'number',
     }),
     defineField({
@@ -56,6 +50,12 @@ export default defineType({
           type: 'block',
         }),
       ],
+    }),
+    defineField({
+      name: 'priority',
+      title: 'Priorität',
+      description: 'Höhere Nummer kommt früher im Kundenband',
+      type: 'number',
     }),
     defineField({
       name: 'tags',
