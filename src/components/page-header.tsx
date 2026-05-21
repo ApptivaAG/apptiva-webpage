@@ -47,9 +47,17 @@ export function PageHeader(props: {
             />
           )}
         </div>
-        <ChatInput className="my-12" />
-        {props.callToAction && (
-          <div className="pt-8 md:pt-12">{props.callToAction}</div>
+        {props.callToAction ? (
+          <div className="flex items-center gap-x-16 pt-8 md:pt-12">
+            <div className="text-3xl">{props.callToAction}</div>
+            <ChatInput
+              className="fixed bottom-8 left-1 right-1 z-20 mx-auto"
+              bgBlue
+              hideChatFAB
+            />
+          </div>
+        ) : (
+          <ChatInput className="mb-12 mt-16" />
         )}
         {props.image && (
           <div className="flex justify-center pb-4 pt-16">
