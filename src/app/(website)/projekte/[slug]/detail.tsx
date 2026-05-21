@@ -82,6 +82,7 @@ export default function ProjectDetail(props: {
                 style={{
                   height: 20,
                   mask: `url(${urlForImage(project.customerRef.logo).url()}) no-repeat `,
+                  maskSize: 'contain',
                 }}
                 title={project.customerRef.customerName}
               />
