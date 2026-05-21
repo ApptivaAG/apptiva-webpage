@@ -8,6 +8,7 @@ import LogoIcon from './logo-icon.svg'
 import StyledPortableText from './styled-portable-text'
 import Button from './ui/button'
 import UnderlineForLink from './ui/underline-for-link'
+import ChatInput from './chat-input'
 
 export default function ContactPerson(props: {
   person: PersonData | null
@@ -54,6 +55,7 @@ export default function ContactPerson(props: {
               </Link>
             </p>
           </div>
+          <ChatInput />
         </div>
       ) : (
         <p>no person found</p>

@@ -1,7 +1,8 @@
 import { HomepageDataQueries } from '@/sanity/lib/queries'
-import StyledPortableText from '../../../../components/styled-portable-text'
+import StyledPortableText from '@/components/styled-portable-text'
 import Image from 'next/image'
 import Sticker from './sticker.svg'
+import ChatInput from '@/components/chat-input'
 
 export default function Content(props: {
   claim: NonNullable<HomepageDataQueries>
@@ -18,6 +19,7 @@ export default function Content(props: {
         src={Sticker}
         alt="10 Jahre Apptiva Chatbots"
       />
+      <ChatInput />
     </div>
   )
 }

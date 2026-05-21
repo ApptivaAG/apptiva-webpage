@@ -6,6 +6,7 @@ import { isValidElement } from 'react'
 import BreadCrumb from './bread-crumb'
 import Heading from './heading'
 import StyledPortableText from './styled-portable-text'
+import ChatInput from '@/components/chat-input'
 
 export const leadStyle = 'max-w-xl pt-4 text-xl md:pt-8'
 
@@ -46,6 +47,7 @@ export function PageHeader(props: {
             />
           )}
         </div>
+        <ChatInput className="my-12" />
         {props.callToAction && (
           <div className="pt-8 md:pt-12">{props.callToAction}</div>
         )}
