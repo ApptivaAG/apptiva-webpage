@@ -8,6 +8,7 @@ type CustomerData = NonNullable<InferType<typeof Customers>>[number]
 const Customers = q('*')
   .filterByType('customer')
   .filter()
+  .order('coalesce(priority, -999999) desc')
   .grab$({
     _id: q.string(),
     customerName: q.string(),
@@ -15,6 +16,7 @@ const Customers = q('*')
     logo: sanityImageWithAlt('logo'),
     logoHeight: q.number().optional(),
     tags: Tags,
+    priority: q.number().optional(),
   })
 
 export type Group =
