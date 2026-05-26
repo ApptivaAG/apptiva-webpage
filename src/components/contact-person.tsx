@@ -37,6 +37,7 @@ export default function ContactPerson(props: {
             {props.content && (
               <StyledPortableText content={props.content} className="py-0" />
             )}
+            <ChatInput className="mt-4" />
             <Link href={'/kontakt/'} className="mb-2 mt-8 md:mt-16">
               <Button intent="secondary" element="div">
                 Kontakt aufnehmen
@@ -55,7 +56,6 @@ export default function ContactPerson(props: {
               </Link>
             </p>
           </div>
-          <ChatInput />
         </div>
       ) : (
         <p>no person found</p>

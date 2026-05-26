@@ -53,7 +53,7 @@ export function PageHeader(props: {
               <div className="text-3xl">{props.callToAction}</div>
             </div>
           ) : (
-            <ChatInput className="mb-12 mt-16" />
+            <ChatInput className="mb-12 mt-4" />
           )}
           {props.image && (
             <div className="flex justify-center pb-4 pt-16">
