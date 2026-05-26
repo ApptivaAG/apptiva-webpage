@@ -49,7 +49,7 @@ export default function ProjectDetail(props: {
         <div className="prose max-lg:order-2">
           {project.content && <ProjectPortableText content={project.content} />}
         </div>
-        <aside className="flex-shrink-0 basis-80 rounded bg-base-grey p-4 text-primary max-lg:order-1 lg:p-8 [&>div]:mb-4 [&>div]:text-xl [&>p]:text-sm [&>p]:font-bold">
+        <aside className="flex-shrink-0 basis-80 rounded bg-base-grey p-4 text-primary max-lg:order-1 lg:p-8 [&>div]:mb-4 [&>div]:text-xl [&>div]:leading-tight [&>p]:text-sm [&>p]:font-bold">
           {project.tasks && (
             <>
               <p>Aufgaben</p>
@@ -68,30 +68,31 @@ export default function ProjectDetail(props: {
               <div>{project.technologies}</div>
             </>
           )}
-          {project.customer && !project.customerRef && (
-            <>
-              <p>Kunde</p>
-              <div>{project.customer}</div>
-            </>
-          )}
-          {project.customerRef?.logo && (
-            <>
-              <p>Kunde</p>
-              <div
-                className={`mt-2 bg-primary [mask-mode:alpha]`}
-                style={{
-                  height: 20,
-                  mask: `url(${urlForImage(project.customerRef.logo).url()}) no-repeat `,
-                  maskSize: 'contain',
-                }}
-                title={project.customerRef.customerName}
-              />
-            </>
-          )}
           {project.contactPerson && (
             <>
               <p>Kontaktperson</p>
               <div>{project.contactPerson.personName}</div>
+            </>
+          )}
+          {(project.customerRef?.customerName || project.customer) && (
+            <>
+              <p>Kunde</p>
+              <div>{project.customerRef?.customerName ?? project.customer}</div>
+            </>
+          )}
+          {project.customerRef?.logo && (
+            <>
+              <div
+                className={`mb-0 bg-primary [mask-mode:alpha]`}
+                style={{
+                  height: 80,
+                  mask: `url(${urlForImage(project.customerRef.logo).url()}) no-repeat `,
+                  maskSize: 'contain',
+                  maskPosition: '0 center',
+                  marginBottom: 0,
+                }}
+                title={project.customerRef.customerName}
+              />
             </>
           )}
         </aside>
