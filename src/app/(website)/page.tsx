@@ -25,6 +25,11 @@ export default async function Home() {
   return (
     <>
       <Hero />
+      <section className="full bg-base-grey pb-16 pt-8">
+        <div className="content">
+          <ChatInput />
+        </div>
+      </section>
       <ModulesPage />
     </>
   )
