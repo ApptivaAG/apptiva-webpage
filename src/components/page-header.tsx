@@ -31,42 +31,44 @@ export function PageHeader(props: {
   )
 
   return (
-    <header className="full relative mt-[-8rem] min-h-fit animate-gradient items-center bg-gradient-to-br from-primary-light to-primary-dark bg-300% pb-8 pt-32 text-base-white md:pb-16 md:pt-44">
-      <div className="content">
-        {props.links && (
-          <BreadCrumb className="pb-2 md:pb-6" links={props.links} />
-        )}
-        {props.title && <Heading level={1}>{title}</Heading>}
-        <div className="lg:flex">
-          <div className={leadStyle}>{lead}</div>
-          {props.links?.some((link) => link.name === 'Chatbots') && (
-            <Image
-              className="mx-auto w-52 max-lg:hidden lg:rotate-12"
-              src={Sticker}
-              alt="10 Jahre Apptiva Chatbots"
-            />
+    <>
+      <header className="full mt-[-8rem] min-h-fit animate-gradient items-center bg-gradient-to-br from-primary-light to-primary-dark bg-300% pb-8 pt-32 text-base-white md:pb-16 md:pt-44">
+        <div className="content">
+          {props.links && (
+            <BreadCrumb className="pb-2 md:pb-6" links={props.links} />
+          )}
+          {props.title && <Heading level={1}>{title}</Heading>}
+          <div className="lg:flex">
+            <div className={leadStyle}>{lead}</div>
+            {props.links?.some((link) => link.name === 'Chatbots') && (
+              <Image
+                className="mx-auto w-52 max-lg:hidden lg:rotate-12"
+                src={Sticker}
+                alt="10 Jahre Apptiva Chatbots"
+              />
+            )}
+          </div>
+          {props.callToAction ? (
+            <div className="flex items-baseline justify-between gap-8 pt-16">
+              <div className="text-3xl">{props.callToAction}</div>
+            </div>
+          ) : (
+            <ChatInput className="mb-12 mt-16" />
+          )}
+          {props.image && (
+            <div className="flex justify-center pb-4 pt-16">
+              <SanityImage image={props.image} />
+            </div>
           )}
         </div>
-        {props.callToAction ? (
-          <div className="flex items-center gap-x-16 pt-8 md:pt-12">
-            <div className="text-3xl">{props.callToAction}</div>
-            <ChatInput
-              className="fixed bottom-8 left-1 right-1 z-20 mx-auto"
-              bgBlue
-              hideChatFAB
-            />
-          </div>
-        ) : (
-          <ChatInput className="mb-12 mt-16" />
-        )}
-        {props.image && (
-          <div className="flex justify-center pb-4 pt-16">
-            <SanityImage image={props.image} />
-          </div>
-        )}
-      </div>
-      {props.children}
-    </header>
+        {props.children}
+      </header>
+      <section className="full bg-base-grey py-16">
+        <div className="content">
+          <ChatInput className="sticky bottom-8 mx-auto text-primary" bgBlue />
+        </div>
+      </section>
+    </>
   )
 }
 
