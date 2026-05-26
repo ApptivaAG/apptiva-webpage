@@ -25,7 +25,7 @@ export type Group =
   | 'Softwareentwicklung'
   | 'Webentwicklung'
 export const getCustomerLogos = cache(async (group?: Group[] | undefined) => {
-  const customers = await runQuery(Customers, undefined, ['customers'])
+  const customers = await runQuery(Customers, undefined, ['customer'])
 
   if (!group || group.length === 0) return customers
   return customers.filter((customer) =>
