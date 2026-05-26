@@ -20,6 +20,7 @@ export default function Content(props: {
           src={Sticker}
           alt="10 Jahre Apptiva Chatbots"
         />
+        <ChatInput />
       </div>
     </>
   )

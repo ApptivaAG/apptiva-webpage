@@ -1,6 +1,7 @@
 'use client'
 
 import { usePlausible } from 'next-plausible'
+import { HiSparkles } from 'react-icons/hi2'
 import { useEffect, useState, type FormEvent } from 'react'
 
 export default function ChatInput(props: {
@@ -54,12 +55,13 @@ export default function ChatInput(props: {
         {props.bgBlue && (
           <div className="absolute inset-0 h-full w-full overflow-clip rounded bg-primary/50" />
         )}
+        <HiSparkles className="absolute left-6 top-1/2 z-10 size-8 -translate-y-1/2 text-base-white/80" />
         <input
           type="text"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           placeholder="Frage unsere KI..."
-          className="w-full overflow-clip rounded border-2 border-primary-dark/80 bg-base-white/20 px-8 py-5 pr-14 text-xl text-base-white backdrop-blur-lg placeholder:text-base-white/80 focus:outline-none focus:ring-2 focus:ring-primary-light"
+          className="w-full overflow-clip rounded border-2 border-primary-dark/80 bg-base-white/20 py-5 pl-16 pr-14 text-xl text-base-white backdrop-blur-lg placeholder:text-base-white/80 focus:outline-none focus:ring-2 focus:ring-primary-light"
         />
         <button
           type="submit"

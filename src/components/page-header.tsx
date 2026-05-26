@@ -32,7 +32,7 @@ export function PageHeader(props: {
 
   return (
     <>
-      <header className="full mt-[-8rem] min-h-fit animate-gradient items-center bg-gradient-to-br from-primary-light to-primary-dark bg-300% pb-8 pt-32 text-base-white md:pb-16 md:pt-44">
+      <header className="full -mb-16 mt-[-8rem] min-h-fit animate-gradient items-center bg-gradient-to-br from-primary-light to-primary-dark bg-300% pb-8 pt-32 text-base-white md:pb-16 md:pt-44">
         <div className="content">
           {props.links && (
             <BreadCrumb className="pb-2 md:pb-6" links={props.links} />
@@ -63,11 +63,11 @@ export function PageHeader(props: {
         </div>
         {props.children}
       </header>
-      <section className="full bg-base-grey py-16">
-        <div className="content">
-          <ChatInput className="sticky bottom-8 mx-auto text-primary" bgBlue />
-        </div>
-      </section>
+      <ChatInput
+        className="sticky top-[calc(100%-6rem)] z-30 mx-auto -mb-32 mt-32 text-primary"
+        bgBlue
+        hideChatFAB
+      />
     </>
   )
 }
