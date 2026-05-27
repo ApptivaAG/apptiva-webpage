@@ -21,7 +21,9 @@ export default function Content(props: {
           src={Sticker}
           alt="10 Jahre Apptiva Chatbots"
         />
-        <StickyOnExit fixedChildren={<ChatInput bgBlue />}><ChatInput /></StickyOnExit>
+        <StickyOnExit floatingChildren={<ChatInput mode="floating-input" />}>
+          <ChatInput mode="inline-input" />
+        </StickyOnExit>
       </div>
     </>
   )

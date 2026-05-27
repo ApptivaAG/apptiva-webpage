@@ -54,8 +54,10 @@ export function PageHeader(props: {
               <div className="text-3xl">{props.callToAction}</div>
             </div>
           ) : (
-            <StickyOnExit fixedChildren={<ChatInput bgBlue />}>
-              <ChatInput />
+            <StickyOnExit
+              floatingChildren={<ChatInput mode="floating-input" />}
+            >
+              <ChatInput mode="inline-input" />
             </StickyOnExit>
           )}
           {props.image && (
@@ -69,8 +71,7 @@ export function PageHeader(props: {
       {props.callToAction && (
         <ChatInput
           className="sticky top-[calc(100%-6rem)] z-30 mx-auto -mb-32 mt-32 text-primary"
-          bgBlue
-          hideChatFAB
+          mode="floating-input"
         />
       )}
     </>

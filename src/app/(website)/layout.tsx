@@ -6,6 +6,7 @@ import PlausibleProvider from 'next-plausible'
 import { VisualEditing } from 'next-sanity/visual-editing'
 import localFont from 'next/font/local'
 import { draftMode } from 'next/headers'
+import ChatbotScript from '@/components/chatbot-script'
 import Script from 'next/script'
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
 import { description, rootUrl, title } from '../env'
@@ -96,13 +97,7 @@ export default async function RootLayout({
             <DisableDraftMode />
           </>
         ) : (
-          <Script
-            id="chatbot"
-            data-server="https://chatbot.apptiva.ch/chatbot"
-            strategy="lazyOnload"
-            defer
-            src="https://chatbot.apptiva.ch/chatbot/embed/bundle.js"
-          />
+          <ChatbotScript />
         )}
       </body>
     </html>

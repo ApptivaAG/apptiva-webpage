@@ -5,30 +5,11 @@ import { HiSparkles } from 'react-icons/hi2'
 import { useEffect, useState, type FormEvent } from 'react'
 
 export default function ChatInput(props: {
+  mode: 'inline-input' | 'floating-input'
   className?: string
-  bgBlue?: boolean
-  hideChatFAB?: boolean
 }) {
   const plausible = usePlausible()
   const [message, setMessage] = useState('')
-
-  useEffect(() => {
-    if (props.hideChatFAB) {
-      const wrapper = document.querySelector(
-        '.chat-button-wrapper'
-      ) as HTMLElement
-      if (wrapper) {
-        wrapper.style.display = 'none'
-      }
-    } else {
-      const wrapper = document.querySelector(
-        '.chat-button-wrapper'
-      ) as HTMLElement
-      if (wrapper) {
-        wrapper.style.display = ''
-      }
-    }
-  }, [props.hideChatFAB])
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -37,7 +18,7 @@ export default function ChatInput(props: {
 
     plausible('open-chat', {
       props: {
-        origin: props.hideChatFAB ? 'floating-input' : 'inline-input',
+        origin: props.mode,
       },
     })
 
@@ -52,7 +33,7 @@ export default function ChatInput(props: {
   return (
     <div className={`w-full max-w-xl ${props.className ?? 'mt-32 md:mt-4'}`}>
       <form onSubmit={handleSubmit} className="relative">
-        {props.bgBlue && (
+        {props.mode === 'floating-input' && (
           <div className="absolute inset-0 h-full w-full overflow-clip rounded bg-primary/50" />
         )}
         <HiSparkles className="absolute left-5 top-1/2 z-10 size-8 -translate-y-1/2 text-base-white" />
@@ -61,7 +42,7 @@ export default function ChatInput(props: {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           placeholder="Frage unsere KI..."
-          className={`w-full overflow-clip rounded border-2 bg-base-white/20 py-5 pl-16 pr-14 text-xl text-base-white backdrop-blur-lg placeholder:text-base-white/80 focus:outline-none focus:ring-2 focus:ring-primary-light ${props.bgBlue ? 'border-primary/80' : 'border-base-white'}`}
+          className={`w-full overflow-clip rounded border-2 bg-base-white/20 py-5 pl-16 pr-14 text-xl text-base-white backdrop-blur-lg placeholder:text-base-white/80 focus:outline-none focus:ring-2 focus:ring-primary-light ${props.mode === 'floating-input' ? 'border-primary/80' : 'border-base-white'}`}
         />
         <button
           type="submit"
