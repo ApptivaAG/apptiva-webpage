@@ -94,6 +94,12 @@ const config: Config = {
           from: { height: 'var(--radix-collapsible-content-height)' },
           to: { height: '0' },
         },
+        'bounce-in': {
+          '0%': { transform: 'translateY(100%)' },
+          '60%': { transform: 'translateY(-8%)' },
+          '80%': { transform: 'translateY(4%)' },
+          '100%': { transform: 'translateY(0)' },
+        },
       },
       backgroundSize: {
         '300%': '300%',
@@ -104,6 +110,7 @@ const config: Config = {
         'accordion-up': 'accordion-up 0.2s ease-out',
         'collapsible-down': 'collapsible-down 0.2s ease-out',
         'collapsible-up': 'collapsible-up 0.2s ease-out',
+        'bounce-in': 'bounce-in 0.5s ease-out forwards',
       },
       typography: {
         DEFAULT: {

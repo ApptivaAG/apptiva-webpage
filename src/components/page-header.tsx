@@ -7,6 +7,7 @@ import BreadCrumb from './bread-crumb'
 import Heading from './heading'
 import StyledPortableText from './styled-portable-text'
 import ChatInput from '@/components/chat-input'
+import StickyOnExit from '@/app/(website)/_root/hero/sticky-on-exit'
 
 export const leadStyle = 'max-w-xl pt-4 text-xl md:pt-8'
 
@@ -53,7 +54,9 @@ export function PageHeader(props: {
               <div className="text-3xl">{props.callToAction}</div>
             </div>
           ) : (
-            <ChatInput className="mb-12 mt-4" />
+            <StickyOnExit fixedChildren={<ChatInput bgBlue />}>
+              <ChatInput />
+            </StickyOnExit>
           )}
           {props.image && (
             <div className="flex justify-center pb-4 pt-16">
@@ -63,11 +66,13 @@ export function PageHeader(props: {
         </div>
         {props.children}
       </header>
-      <ChatInput
-        className="sticky top-[calc(100%-6rem)] z-30 mx-auto -mb-32 mt-32 text-primary"
-        bgBlue
-        hideChatFAB
-      />
+      {props.callToAction && (
+        <ChatInput
+          className="sticky top-[calc(100%-6rem)] z-30 mx-auto -mb-32 mt-32 text-primary"
+          bgBlue
+          hideChatFAB
+        />
+      )}
     </>
   )
 }
