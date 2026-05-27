@@ -20,7 +20,7 @@ export default function ProjectList(props: {
       lead="Lass dich von unseren Referenzen inspirieren! Seit über 10 Jahren entwickeln wir Softwarelösungen für Kund:innen aus verschiedensten Branchen."
       links={[
         { name: 'Angebot' },
-        { name: 'Development', href: '/development' },
+        { name: 'Development', href: '/angebot/development' },
         { name: 'Projekte', href: '/projekte' },
       ]}
       callToAction={
@@ -40,7 +40,7 @@ export default function ProjectList(props: {
       lead="Lass dich von unseren Referenzen inspirieren! Seit über 10 Jahren liefern wir Chatbots für Kund:innen aus verschiedensten Branchen."
       links={[
         { name: 'Angebot' },
-        { name: 'Chatbots', href: '/chatbots' },
+        { name: 'Chatbots', href: '/angebot/chatbots' },
         { name: 'Projekte', href: '/projekte' },
       ]}
       callToAction={
@@ -78,7 +78,11 @@ export default function ProjectList(props: {
       <ul className="grid gap-4 py-8 lg:grid-cols-3 lg:py-16">
         {props.projects.map((project) => (
           <li key={project._id}>
-            <ProjectTeaser project={project} intent="dark" />
+            <ProjectTeaser
+              project={project}
+              intent="dark"
+              category={props.category}
+            />
           </li>
         ))}
       </ul>

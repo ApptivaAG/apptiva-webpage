@@ -5,6 +5,8 @@ import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 import ProjectDetail from './detail'
 import ProjectsPreview from './preview'
+import type { SearchParams } from 'nuqs/server'
+import { loadSearchParams } from '../search-params'
 
 export async function generateMetadata(props: {
   params: Promise<{ slug: string }>
@@ -37,12 +39,17 @@ export async function generateStaticParams() {
   return projects?.map(({ slug }) => ({ slug }))
 }
 
-export default async function Home(props: { params: Promise<{ slug: string }> }) {
+export default async function Home(props: {
+  params: Promise<{ slug: string }>
+  searchParams: Promise<SearchParams>
+}) {
+  const searchParams = await props.searchParams
+  const { category } = loadSearchParams(searchParams)
   const { isEnabled } = await draftMode()
   const { published, draft } = await load(
     projectBySlugQuery,
     isEnabled,
-    (await props.params),
+    await props.params,
     ['project', (await props.params).slug]
   )
 
@@ -51,8 +58,8 @@ export default async function Home(props: { params: Promise<{ slug: string }> })
   }
 
   return isEnabled ? (
-    <ProjectsPreview initial={draft} params={(await props.params)} />
+    <ProjectsPreview initial={draft} params={await props.params} />
   ) : (
-    <ProjectDetail project={published} />
-  );
+    <ProjectDetail project={published} category={category} />
+  )
 }

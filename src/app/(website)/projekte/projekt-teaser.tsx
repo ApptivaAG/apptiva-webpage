@@ -4,12 +4,17 @@ import Link from 'next/link'
 import { ProjectQueryData } from './types'
 import UnderlineForLink from '@/components/ui/underline-for-link'
 import { urlForImage } from '@/sanity/lib/image'
+import { Category } from './search-params'
 
 export function ProjectTeaser(props: {
   project: ProjectQueryData
   intent: 'dark' | 'light'
+  category?: Category
 }) {
-  const { project } = props
+  const { project, category } = props
+  const projectUrl = category
+    ? `/projekte/${project.slug}?category=${category}`
+    : `/projekte/${project.slug}`
   return (
     <Card
       key={project._id}
@@ -45,7 +50,7 @@ export function ProjectTeaser(props: {
         <div className="flex-1">
           <p className="line-clamp-5">{project.description}</p>
         </div>
-        <Link className="mt-6 self-end" href={`/projekte/${project.slug}`}>
+        <Link className="mt-6 self-end" href={projectUrl}>
           <UnderlineForLink>Zum Projekt&ensp;→</UnderlineForLink>
         </Link>
       </div>

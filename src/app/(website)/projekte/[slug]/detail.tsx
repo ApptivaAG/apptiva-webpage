@@ -6,26 +6,49 @@ import SanityImage from '@/components/sanity-image'
 import { ProjectBySlugQueryData } from '../types'
 import Image from 'next/image'
 import { urlForImage } from '@/sanity/lib/image'
+import { Category } from '../search-params'
 
 export default function ProjectDetail(props: {
   project: ProjectBySlugQueryData
+  category?: Category
 }) {
-  const { project } = props
+  const { project, category } = props
+
+  // Build breadcrumb based on category
+  const breadcrumbLinks =
+    category === 'chatbots'
+      ? [
+          { name: 'Angebot' },
+          { name: 'Chatbots', href: '/angebot/chatbots' },
+          { name: 'Projekte', href: '/projekte?category=chatbots' },
+          {
+            name: project.projectName ?? 'Projekt',
+            href: `/projekte/${project.slug}?category=chatbots`,
+          },
+        ]
+      : category === 'dev'
+        ? [
+            { name: 'Angebot' },
+            { name: 'Development', href: '/angebot/development' },
+            { name: 'Projekte', href: '/projekte?category=dev' },
+            {
+              name: project.projectName ?? 'Projekt',
+              href: `/projekte/${project.slug}?category=dev`,
+            },
+          ]
+        : [
+            { name: 'Projekte', href: '/projekte' },
+            {
+              name: project.projectName ?? 'Projekt',
+              href: `/projekte/${project.slug}`,
+            },
+          ]
 
   return (
     <>
       <header className="full relative mt-[-8rem] min-h-fit animate-gradient items-center bg-gradient-to-br from-primary-light to-primary-dark bg-300% pb-8 pt-32 text-base-white md:pb-16 md:pt-44">
         <div className="content">
-          <BreadCrumb
-            className="pb-6"
-            links={[
-              { name: 'Projekte', href: '/projekte' },
-              {
-                name: project.projectName ?? 'Projekt',
-                href: `/projekte/${project.slug}`,
-              },
-            ]}
-          />
+          <BreadCrumb className="pb-6" links={breadcrumbLinks} />
           <Heading level={1}>
             <span
               dangerouslySetInnerHTML={{
