@@ -2,7 +2,7 @@
 
 import { usePlausible } from 'next-plausible'
 import { HiSparkles } from 'react-icons/hi2'
-import { useEffect, useState, type FormEvent } from 'react'
+import { useState, type FormEvent } from 'react'
 
 export default function ChatInput(props: {
   mode: 'inline-input' | 'floating-input'
@@ -31,7 +31,10 @@ export default function ChatInput(props: {
   }
 
   return (
-    <div className={`w-full max-w-xl ${props.className ?? 'mt-32 md:mt-4'}`}>
+    <div
+      {...(props.mode === 'inline-input' && { 'data-chat-input': 'inline' })}
+      className={`w-full max-w-xl ${props.className ?? 'mt-32 md:mt-4'}`}
+    >
       <form onSubmit={handleSubmit} className="relative">
         {props.mode === 'floating-input' && (
           <div className="absolute inset-0 h-full w-full overflow-clip rounded bg-primary/50" />

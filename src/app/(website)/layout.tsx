@@ -14,6 +14,7 @@ import Navbar from './../../components/Navbar'
 import './globals.css'
 import { Schema } from '@/components/schema'
 import CookieConsentProvider from '@/components/cookie-consent-provider'
+import FloatingChatInput from '@/components/floating-chat-input'
 
 const gentona = localFont({
   src: [
@@ -91,6 +92,7 @@ export default async function RootLayout({
           </main>
         </NuqsAdapter>
         <Footer />
+        <FloatingChatInput />
         {(await draftMode()).isEnabled ? (
           <>
             <VisualEditing />

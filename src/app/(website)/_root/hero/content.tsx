@@ -3,7 +3,6 @@ import StyledPortableText from '@/components/styled-portable-text'
 import Image from 'next/image'
 import Sticker from './sticker.svg'
 import ChatInput from '@/components/chat-input'
-import StickyOnExit from './sticky-on-exit'
 
 export default function Content(props: {
   claim: NonNullable<HomepageDataQueries>
@@ -21,9 +20,7 @@ export default function Content(props: {
           src={Sticker}
           alt="10 Jahre Apptiva Chatbots"
         />
-        <StickyOnExit floatingChildren={<ChatInput mode="floating-input" />}>
-          <ChatInput mode="inline-input" />
-        </StickyOnExit>
+        <ChatInput mode="inline-input" />
       </div>
     </>
   )
