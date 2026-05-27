@@ -100,6 +100,10 @@ const config: Config = {
           '80%': { transform: 'translateY(4%)' },
           '100%': { transform: 'translateY(0)' },
         },
+        shine: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
       },
       backgroundSize: {
         '300%': '300%',
@@ -111,6 +115,7 @@ const config: Config = {
         'collapsible-down': 'collapsible-down 0.2s ease-out',
         'collapsible-up': 'collapsible-up 0.2s ease-out',
         'bounce-in': 'bounce-in 0.5s ease-out forwards',
+        shine: 'shine 1.2s ease-in-out 0.6s both',
       },
       typography: {
         DEFAULT: {

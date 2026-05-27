@@ -40,13 +40,16 @@ export default function ChatInput(props: {
           <div className="absolute inset-0 h-full w-full overflow-clip rounded bg-primary/50" />
         )}
         <HiSparkles className="absolute left-5 top-1/2 z-10 size-8 -translate-y-1/2 text-base-white" />
-        <input
-          type="text"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          placeholder="Frage unsere KI ..."
-          className={`w-full overflow-clip rounded border-2 bg-base-white/20 py-5 pl-16 pr-14 text-xl text-base-white backdrop-blur-lg placeholder:text-base-white/80 focus:outline-none focus:ring-2 focus:ring-primary-light ${props.mode === 'floating-input' ? 'border-primary/80' : 'border-base-white'}`}
-        />
+        <div className="relative overflow-hidden rounded">
+          <input
+            type="text"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            placeholder="Frage unsere KI ..."
+            className={`w-full overflow-clip rounded border-2 bg-base-white/20 py-5 pl-16 pr-14 text-xl text-base-white backdrop-blur-lg placeholder:text-base-white/80 focus:outline-none focus:ring-2 focus:ring-primary-light ${props.mode === 'floating-input' ? 'border-primary/80' : 'border-base-white'}`}
+          />
+          <div className="pointer-events-none absolute inset-0 overflow-hidden rounded after:absolute after:inset-0 after:h-full after:w-full after:animate-shine after:bg-gradient-to-r after:from-transparent after:via-base-white/40 after:to-transparent after:content-['']" />
+        </div>
         <button
           type="submit"
           className="absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer rounded-full bg-primary/90 p-4 text-base-white transition-colors hover:bg-primary/60"
