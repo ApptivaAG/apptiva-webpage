@@ -15,11 +15,10 @@ export const ContactFromMailApptivaCopy = (props: FormInputSchema) => (
     <Preview>Danke für deine Nachricht!</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Text style={title}>
-          <Heading style={heading}>
-            <strong>{String(props.name)}</strong> hat uns eine Nachricht hinterlassen:
-          </Heading>
-        </Text>
+        <Heading style={heading}>
+          <strong>{String(props.name)}</strong> hat uns eine Nachricht
+          hinterlassen:
+        </Heading>
 
         <Container style={container}>
           <Text style={review}>{String(props.message)}</Text>
@@ -53,6 +52,17 @@ export const ContactFromMailApptivaCopy = (props: FormInputSchema) => (
 
 export default ContactFromMailApptivaCopy
 
+ContactFromMailApptivaCopy.PreviewProps = {
+  name: 'Tamara Tester',
+  email: 'tamara.tester@example.com',
+  message:
+    'Hallo Apptiva Team, ich habe von euch gehört und würde gerne mehr über eure Dienstleistungen erfahren. Besonders interessiert mich die App-Entwicklung für kleine und mittlere Unternehmen. Können wir einen Termin vereinbaren?',
+  company: 'Test GmbH',
+  referrer: 'Empfehlung',
+  subject: 'Kontaktformular apptiva.ch',
+  circle: 'apptiva',
+} satisfies FormInputSchema
+
 const main = {
   backgroundColor: '#ffffff',
   fontFamily:
@@ -68,7 +78,7 @@ const container = {
 const heading = {
   fontSize: '24px',
   letterSpacing: '-0.5px',
-  lineHeight: '1.3',
+  lineHeight: 1.25,
   fontWeight: '400',
   color: '#484848',
   padding: '17px 0 0',

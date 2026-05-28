@@ -34,3 +34,23 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 This project is deployed on [Vercel](https://vercel.com), the platform from the creators of Next.js.
 
 For more information about Next.js deployment, check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment).
+
+## Email Testing (React-Email v6 + Resend)
+
+### Run Tests
+
+```bash
+pnpm test              # Run all tests (57 tests)
+pnpm test:watch        # Watch mode
+pnpm email:dev         # Preview emails (localhost:3001)
+```
+
+### Manual Testing
+
+Test all 3 contact forms with production Resend API:
+
+1. **Main contact** → `info@apptiva.ch`
+2. **Forum** (`/forumsangebot`) → `bubble-chat@apptiva.ch`
+3. **Chatbot demo** (`/angebot/chatbots/demo-vereinbaren`) → `bubble-chat@apptiva.ch`
+
+**Verify**: Sender copy + internal copy both arrive, check [Resend dashboard](https://resend.com/emails)

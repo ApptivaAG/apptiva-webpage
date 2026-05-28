@@ -21,15 +21,13 @@ export const ContactFromMailSenderCopy = (props: FormInputSchema) => (
           alt="Apptiva Logo"
           style={logo}
         />
-        <Text style={title}>
-          <Heading style={heading}>
-            Hoi <strong>{String(props.name)}</strong>, danke für deine Nachricht!
-          </Heading>
-          <Text style={text}>Wir melden uns schon bald bei dir.</Text>
-          <Text style={text}>
-            Mit einem Schwung von Nullen und Einsen 🤓.
-            <br /> Das Apptiva Team
-          </Text>
+        <Heading style={heading}>
+          Hoi <strong>{String(props.name)}</strong>, danke für deine Nachricht!
+        </Heading>
+        <Text style={text}>Wir melden uns schon bald bei dir.</Text>
+        <Text style={text}>
+          Mit einem Schwung von Nullen und Einsen 🤓.
+          <br /> Das Apptiva Team
         </Text>
         {Boolean(props.message) && (
           <Container style={container}>
@@ -43,6 +41,17 @@ export const ContactFromMailSenderCopy = (props: FormInputSchema) => (
 )
 
 export default ContactFromMailSenderCopy
+
+ContactFromMailSenderCopy.PreviewProps = {
+  name: 'Tamara Tester',
+  email: 'tamara@gmail.com',
+  message:
+    'Guten Tag, ich interessiere mich für eine Beratung zu einer neuen App für unser Unternehmen. Wir möchten unsere internen Prozesse digitalisieren. Wann wäre ein erstes Gespräch möglich?',
+  company: 'Beispiel AG',
+  referrer: 'Google Suche',
+  subject: 'Kontaktformular apptiva.ch',
+  circle: 'apptiva',
+} satisfies FormInputSchema
 
 const logo = {
   borderRadius: 21,
@@ -65,7 +74,7 @@ const container = {
 const heading = {
   fontSize: '24px',
   letterSpacing: '-0.5px',
-  lineHeight: '1.3',
+  lineHeight: 1.25,
   fontWeight: '400',
   color: '#484848',
   padding: '17px 0 0',
