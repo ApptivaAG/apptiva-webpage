@@ -23,7 +23,7 @@ export const ContactFromMailSenderCopy = (props: FormInputSchema) => (
         />
         <Text style={title}>
           <Heading style={heading}>
-            Hoi <strong>{props.name}</strong>, danke für deine Nachricht!
+            Hoi <strong>{String(props.name)}</strong>, danke für deine Nachricht!
           </Heading>
           <Text style={text}>Wir melden uns schon bald bei dir.</Text>
           <Text style={text}>
@@ -31,10 +31,10 @@ export const ContactFromMailSenderCopy = (props: FormInputSchema) => (
             <br /> Das Apptiva Team
           </Text>
         </Text>
-        {props.message && (
+        {Boolean(props.message) && (
           <Container style={container}>
             <Text style={text}>Deine Nachricht:</Text>
-            <Text style={review}>{props.message}</Text>
+            <Text style={review}>{String(props.message)}</Text>
           </Container>
         )}
       </Container>

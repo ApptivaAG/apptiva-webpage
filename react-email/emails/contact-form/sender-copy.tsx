@@ -30,7 +30,7 @@ export const ContactFromMailSenderCopy = ({
         />
         <Text style={title}>
           <Heading style={heading}>
-            Hoi <strong>{name}</strong>, danke für deine Nachricht!
+            Hoi <strong>{String(name)}</strong>, danke für deine Nachricht!
           </Heading>
           <Text style={text}>Wir melden uns schon bald bei dir.</Text>
           <Text style={text}>
@@ -40,7 +40,7 @@ export const ContactFromMailSenderCopy = ({
         </Text>
         <Container style={container}>
           <Text style={text}>Deine Nachricht:</Text>
-          <Text style={review}>{message}</Text>
+          <Text style={review}>{String(message)}</Text>
         </Container>
       </Container>
     </Body>

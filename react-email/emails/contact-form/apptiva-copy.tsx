@@ -28,23 +28,23 @@ export const ContactFromMailApptivaCopy = ({
       <Container style={container}>
         <Text style={title}>
           <Heading style={heading}>
-            <strong>{name}</strong> hat uns eine Nachricht hinterlassen:
+            <strong>{String(name)}</strong> hat uns eine Nachricht hinterlassen:
           </Heading>
         </Text>
 
         <Container style={container}>
-          <Text style={review}>{message}</Text>
+          <Text style={review}>{String(message)}</Text>
           <Text style={{ ...paragraph, marginTop: 40 }}>
             <b>Name: </b>
-            {name}
+            {String(name)}
           </Text>
           <Text style={{ ...paragraph, marginTop: -5 }}>
             <b>E-Mail Adresse: </b>
-            {mailAddress}
+            {String(mailAddress)}
           </Text>
           <Text style={{ ...paragraph, marginTop: -5 }}>
             <b>Unternehmen: </b>
-            {companyName}
+            {String(companyName)}
           </Text>
         </Container>
       </Container>

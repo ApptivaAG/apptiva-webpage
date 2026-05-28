@@ -17,32 +17,32 @@ export const ContactFromMailApptivaCopy = (props: FormInputSchema) => (
       <Container style={container}>
         <Text style={title}>
           <Heading style={heading}>
-            <strong>{props.name}</strong> hat uns eine Nachricht hinterlassen:
+            <strong>{String(props.name)}</strong> hat uns eine Nachricht hinterlassen:
           </Heading>
         </Text>
 
         <Container style={container}>
-          <Text style={review}>{props.message}</Text>
+          <Text style={review}>{String(props.message)}</Text>
           <Text style={{ ...paragraph, marginTop: 40 }}>
             <b>Name: </b>
-            {props.name}
+            {String(props.name)}
           </Text>
           <Text style={{ ...paragraph, marginTop: -5 }}>
             <b>E-Mail Adresse: </b>
-            {props.email}
+            {String(props.email)}
           </Text>
           <Text style={{ ...paragraph, marginTop: -5 }}>
             <b>Unternehmen: </b>
-            {props.company ?? 'keine Angabe'}
+            {props.company ? String(props.company) : 'keine Angabe'}
           </Text>
           <Text style={{ ...paragraph, marginTop: -5 }}>
             <b>Referenz (Wie hast du uns gefunden): </b>
-            {props.referrer ?? 'keine Angabe'}
+            {props.referrer ? String(props.referrer) : 'keine Angabe'}
           </Text>
           {props.circle === 'bubble' && (
             <Text style={{ ...paragraph, marginTop: -5 }}>
               <b>Telefonnummer: </b>
-              {props.phone ?? 'keine Angabe'}
+              {props.phone ? String(props.phone) : 'keine Angabe'}
             </Text>
           )}
         </Container>
