@@ -8,11 +8,11 @@ import localFont from 'next/font/local'
 import { draftMode } from 'next/headers'
 import Script from 'next/script'
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
-import { JsonLd } from 'react-schemaorg'
 import { description, rootUrl, title } from '../env'
 import Navbar from './../../components/Navbar'
 import './globals.css'
 import { Schema } from '@/components/schema'
+import CookieConsentProvider from '@/components/cookie-consent-provider'
 
 const gentona = localFont({
   src: [
@@ -62,8 +62,25 @@ export default async function RootLayout({
         <PlausibleProvider domain="apptiva.ch" />
         <link rel="llms" href="/llms.txt" type="text/markdown" />
         <link rel="llms-full" href="/llms.txt" type="text/markdown" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', {
+                ad_storage: 'denied',
+                analytics_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied',
+                wait_for_update: 500
+              });
+              gtag('js', new Date());
+            `,
+          }}
+        />
       </head>
       <body className="text-fluid-base">
+        <CookieConsentProvider />
         <Schema data={organizationSchema} />
         <Navbar />
         <NuqsAdapter>
