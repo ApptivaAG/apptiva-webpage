@@ -58,7 +58,6 @@ export default function ChatInput(props: {
         <button
           type="submit"
           className={`absolute ${size === 'sm' ? 'right-2' : 'right-2.5'} top-1/2 -translate-y-1/2 cursor-pointer rounded-full bg-primary/90 ${size === 'sm' ? 'p-2' : 'p-[12px]'} text-base-white transition-colors hover:bg-primary/60`}
-          disabled={!message.trim()}
         >
           <svg
             viewBox="64 64 896 896"
