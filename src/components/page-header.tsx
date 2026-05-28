@@ -65,7 +65,7 @@ export function PageHeader(props: {
         {props.children}
       </header>
       {props.callToAction && (
-        <Section intent="lightGray">
+        <Section intent="lightGray" className="py-16 lg:pb-20 lg:pt-14">
           <div className="content">
             <div className="flex flex-col items-center gap-8">
               <Heading level={3}>Willst du Antworten?</Heading>
