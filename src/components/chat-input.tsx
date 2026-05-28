@@ -8,8 +8,10 @@ export default function ChatInput(props: {
   mode: 'inline-input' | 'floating-input'
   className?: string
   size?: 'default' | 'sm'
+  variant?: 'default' | 'blue'
 }) {
   const size = props.size ?? 'default'
+  const variant = props.variant ?? 'default'
   const plausible = usePlausible()
   const [message, setMessage] = useState('')
 
@@ -38,7 +40,7 @@ export default function ChatInput(props: {
       className={`w-full max-w-xl ${props.className}`}
     >
       <form onSubmit={handleSubmit} className="relative">
-        {props.mode === 'floating-input' && (
+        {variant === 'blue' && (
           <div className="absolute inset-0 h-full w-full overflow-clip rounded bg-primary/50" />
         )}
         <HiSparkles
@@ -50,7 +52,7 @@ export default function ChatInput(props: {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             placeholder="Frage unsere KI ..."
-            className={`w-full overflow-clip rounded border-2 bg-base-white/20 ${size === 'sm' ? 'h-[54px] py-0 text-lg' : 'py-5 text-xl'} ${size === 'sm' ? 'pl-12' : 'pl-16'} pr-14 text-base-white backdrop-blur-lg placeholder:text-base-white/80 focus:outline-none focus:ring-2 focus:ring-primary-light ${props.mode === 'floating-input' ? 'border-primary/80' : 'border-base-white'}`}
+            className={`w-full overflow-clip rounded border-2 bg-base-white/20 ${size === 'sm' ? 'h-[54px] py-0 text-lg' : 'py-5 text-xl'} ${size === 'sm' ? 'pl-12' : 'pl-16'} pr-14 text-base-white backdrop-blur-lg placeholder:text-base-white/80 focus:outline-none focus:ring-2 focus:ring-primary-light ${variant === 'blue' ? 'border-primary/80' : 'border-base-white'}`}
           />
           <div className="pointer-events-none absolute inset-0 overflow-hidden rounded after:absolute after:inset-0 after:h-full after:w-full after:animate-shine after:bg-gradient-to-r after:from-transparent after:via-base-white/40 after:to-transparent after:content-['']" />
         </div>

@@ -7,6 +7,7 @@ import BreadCrumb from './bread-crumb'
 import Heading from './heading'
 import StyledPortableText from './styled-portable-text'
 import ChatInput from '@/components/chat-input'
+import Section from './section'
 
 export const leadStyle = 'max-w-xl pt-4 text-xl md:pt-8 pb-8'
 
@@ -63,6 +64,16 @@ export function PageHeader(props: {
         </div>
         {props.children}
       </header>
+      {props.callToAction && (
+        <Section intent="lightGray">
+          <div className="content">
+            <div className="flex flex-col items-center gap-8">
+              <Heading level={3}>Willst du Antworten?</Heading>
+              <ChatInput mode="inline-input" variant="blue" />
+            </div>
+          </div>
+        </Section>
+      )}
     </>
   )
 }
