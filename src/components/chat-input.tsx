@@ -7,7 +7,9 @@ import { useState, type FormEvent } from 'react'
 export default function ChatInput(props: {
   mode: 'inline-input' | 'floating-input'
   className?: string
+  size?: 'default' | 'sm'
 }) {
+  const size = props.size ?? 'default'
   const plausible = usePlausible()
   const [message, setMessage] = useState('')
 
@@ -33,33 +35,35 @@ export default function ChatInput(props: {
   return (
     <div
       {...(props.mode === 'inline-input' && { 'data-chat-input': 'inline' })}
-      className={`w-full max-w-xl ${props.className ?? 'mt-32 md:mt-4'}`}
+      className={`w-full max-w-xl ${props.className}`}
     >
       <form onSubmit={handleSubmit} className="relative">
         {props.mode === 'floating-input' && (
           <div className="absolute inset-0 h-full w-full overflow-clip rounded bg-primary/50" />
         )}
-        <HiSparkles className="absolute left-5 top-1/2 z-10 size-8 -translate-y-1/2 text-base-white" />
+        <HiSparkles
+          className={`absolute ${size === 'sm' ? 'left-4' : 'left-5'} top-1/2 z-10 -translate-y-1/2 text-base-white ${size === 'sm' ? 'size-6' : 'size-8'}`}
+        />
         <div className="relative overflow-hidden rounded">
           <input
             type="text"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             placeholder="Frage unsere KI ..."
-            className={`w-full overflow-clip rounded border-2 bg-base-white/20 py-5 pl-16 pr-14 text-xl text-base-white backdrop-blur-lg placeholder:text-base-white/80 focus:outline-none focus:ring-2 focus:ring-primary-light ${props.mode === 'floating-input' ? 'border-primary/80' : 'border-base-white'}`}
+            className={`w-full overflow-clip rounded border-2 bg-base-white/20 ${size === 'sm' ? 'h-[54px] py-0 text-lg' : 'py-5 text-xl'} ${size === 'sm' ? 'pl-12' : 'pl-16'} pr-14 text-base-white backdrop-blur-lg placeholder:text-base-white/80 focus:outline-none focus:ring-2 focus:ring-primary-light ${props.mode === 'floating-input' ? 'border-primary/80' : 'border-base-white'}`}
           />
           <div className="pointer-events-none absolute inset-0 overflow-hidden rounded after:absolute after:inset-0 after:h-full after:w-full after:animate-shine after:bg-gradient-to-r after:from-transparent after:via-base-white/40 after:to-transparent after:content-['']" />
         </div>
         <button
           type="submit"
-          className="absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer rounded-full bg-primary/90 p-4 text-base-white transition-colors hover:bg-primary/60"
+          className={`absolute ${size === 'sm' ? 'right-1.5' : 'right-2'} top-1/2 -translate-y-1/2 cursor-pointer rounded-full bg-primary/90 ${size === 'sm' ? 'p-2.5' : 'p-4'} text-base-white transition-colors hover:bg-primary/60`}
           disabled={!message.trim()}
         >
           <svg
             viewBox="64 64 896 896"
             focusable="false"
-            width="1.4em"
-            height="1.4em"
+            width={size === 'sm' ? '1.1em' : '1.4em'}
+            height={size === 'sm' ? '1.1em' : '1.4em'}
             fill="currentColor"
             aria-hidden="true"
           >

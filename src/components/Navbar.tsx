@@ -8,7 +8,7 @@ import wissenIcon from './icon-wissen.svg'
 import apptivaLogo from './logo.svg'
 import MainNav from './main-nav'
 import MobileNav from './mobile-nav'
-import Button from './ui/button'
+import ChatInput from './chat-input'
 
 export type NavbarCTALink = {
   type: 'cta-link'
@@ -188,12 +188,9 @@ const Navbar = () => (
 
       <MainNav />
       <MobileNav />
-
-      <NextLink href={'/kontakt'} className="hidden md:block">
-        <Button element="div" intent="secondary">
-          Kontakt
-        </Button>
-      </NextLink>
+      <div className="max-2xl:hidden">
+        <ChatInput mode="inline-input" size="sm" />
+      </div>
     </div>
   </div>
 )

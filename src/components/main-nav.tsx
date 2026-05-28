@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import NextLink from 'next/link'
 import { CtaLink, Link, MediaLink, SimpleLink, SubMenu } from './main-nav-items'
 import { navbarData } from './Navbar'
 import {
@@ -8,6 +9,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from './ui/navigation-menu'
+import Button from './ui/button'
 
 const MainNav = () => {
   const [initialMount, setInitialMount] = useState<true | undefined>(true)
@@ -86,6 +88,11 @@ const MainNav = () => {
             )}
           </NavigationMenuItem>
         ))}
+        <NextLink href={'/kontakt'}>
+          <Button element="div" intent="secondary" size="medium-small">
+            Kontakt
+          </Button>
+        </NextLink>
       </NavigationMenuList>
     </NavigationMenu>
   )

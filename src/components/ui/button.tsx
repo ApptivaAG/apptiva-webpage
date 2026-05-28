@@ -13,6 +13,7 @@ const buttonStyle = cva(
       },
       size: {
         small: ['text-sm', 'py-1', 'px-2'],
+        'medium-small': ['text-base', 'py-1.5', 'px-4'],
         medium: ['text-base', 'py-3', 'px-6'],
       },
     },
