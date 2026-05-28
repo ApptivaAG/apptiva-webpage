@@ -18,8 +18,6 @@ export default function ChatInput(props: {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
-    if (!message.trim()) return
-
     plausible('open-chat', {
       props: {
         origin: props.mode,
@@ -29,6 +27,7 @@ export default function ChatInput(props: {
     const chatbot = (window as any).chatbot
     if (chatbot) {
       chatbot.openChatWindow()
+      if (!message.trim()) return
       chatbot.enterGuestMessage(message)
       setMessage('')
     }
