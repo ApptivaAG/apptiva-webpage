@@ -8,7 +8,7 @@ import Heading from './heading'
 import StyledPortableText from './styled-portable-text'
 import ChatInput from '@/components/chat-input'
 
-export const leadStyle = 'max-w-xl pt-4 text-xl md:pt-8'
+export const leadStyle = 'max-w-xl pt-4 text-xl md:pt-8 pb-8'
 
 export function PageHeader(props: {
   title: React.ReactNode | PortableText | undefined
@@ -32,7 +32,7 @@ export function PageHeader(props: {
 
   return (
     <>
-      <header className="full -mb-16 mt-[-8rem] min-h-fit animate-gradient items-center bg-gradient-to-br from-primary-light to-primary-dark bg-300% pb-8 pt-32 text-base-white md:pb-16 md:pt-44">
+      <header className="full mt-[-8rem] min-h-fit animate-gradient items-center bg-gradient-to-br from-primary-light to-primary-dark bg-300% pb-8 pt-32 text-base-white md:pb-16 md:pt-44">
         <div className="content">
           {props.links && (
             <BreadCrumb className="pb-2 md:pb-6" links={props.links} />
@@ -49,8 +49,8 @@ export function PageHeader(props: {
             )}
           </div>
           {props.callToAction ? (
-            <div className="flex items-baseline justify-between gap-8 pt-16">
-              <div className="text-3xl">{props.callToAction}</div>
+            <div className="flex items-baseline justify-between gap-8 max-lg:pt-16">
+              {props.callToAction}
             </div>
           ) : (
             <ChatInput mode="inline-input" />

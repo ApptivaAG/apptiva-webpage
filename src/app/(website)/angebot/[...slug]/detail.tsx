@@ -41,7 +41,7 @@ export default function ServiceDetail(props: {
         callToAction={
           props.service.callToAction?.href ? (
             <Link href={props.service.callToAction.href}>
-              <Button className="px-10 py-5 text-xl" intent="secondary">
+              <Button size="large" intent="secondary">
                 {props.service.callToAction.name}
               </Button>
             </Link>

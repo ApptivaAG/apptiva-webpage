@@ -25,7 +25,9 @@ export default function ProjectList(props: {
       ]}
       callToAction={
         <Link href="/kontakt">
-          <Button intent="secondary">Was ist deine Idee?</Button>
+          <Button size="large" intent="secondary">
+            Was ist deine Idee?
+          </Button>
         </Link>
       }
     />
@@ -45,7 +47,9 @@ export default function ProjectList(props: {
       ]}
       callToAction={
         <Link href="/kontakt">
-          <Button intent="secondary">Was ist deine Idee?</Button>
+          <Button size="large" intent="secondary">
+            Was ist deine Idee?
+          </Button>
         </Link>
       }
     />
@@ -62,7 +66,9 @@ export default function ProjectList(props: {
       links={[{ name: 'Projekte', href: '/projekte' }]}
       callToAction={
         <Link href="/kontakt">
-          <Button intent="secondary">Was ist deine Idee?</Button>
+          <Button size="large" intent="secondary">
+            Was ist deine Idee?
+          </Button>
         </Link>
       }
     />
