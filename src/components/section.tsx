@@ -11,6 +11,7 @@ const sectionStyle = cva('full', {
     level: {
       one: 'py-8 lg:py-28',
       two: 'pb-8 lg:pb-28',
+      tight: 'pt-8 pb-14',
     },
   },
   defaultVariants: {

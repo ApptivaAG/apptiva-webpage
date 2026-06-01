@@ -54,7 +54,7 @@ export function PageHeader(props: {
               {props.callToAction}
             </div>
           ) : (
-            <ChatInput mode="inline-input" />
+            <ChatInput mode="inline-input" variant="white" />
           )}
           {props.image && (
             <div className="flex justify-center pb-4 pt-16">
@@ -65,10 +65,12 @@ export function PageHeader(props: {
         {props.children}
       </header>
       {props.callToAction && (
-        <Section intent="lightGray" className="py-16 lg:pb-20 lg:pt-14">
+        <Section intent="lightGray" level="tight">
           <div className="content">
-            <div className="flex flex-col items-center gap-8">
-              <Heading level={3}>Willst du Antworten?</Heading>
+            <div className="flex flex-col items-center gap-4">
+              <Heading size={4} level={3}>
+                Willst du Antworten?
+              </Heading>
               <ChatInput mode="inline-input" variant="blue" />
             </div>
           </div>

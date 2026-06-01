@@ -8,7 +8,7 @@ export default function ChatInput(props: {
   mode: 'inline-input' | 'floating-input'
   className?: string
   size?: 'default' | 'sm'
-  variant?: 'default' | 'blue'
+  variant?: 'default' | 'blue' | 'blue-transparent' | 'white'
 }) {
   const size = props.size ?? 'default'
   const variant = props.variant ?? 'default'
@@ -39,11 +39,17 @@ export default function ChatInput(props: {
       className={`w-full max-w-xl ${props.className}`}
     >
       <form onSubmit={handleSubmit} className="relative">
+        {variant === 'white' && (
+          <div className="absolute inset-0 h-full w-full overflow-clip rounded bg-base-white shadow-2xl" />
+        )}
+        {variant === 'blue-transparent' && (
+          <div className="absolute inset-0 h-full w-full overflow-clip rounded bg-primary/50 shadow-2xl" />
+        )}
         {variant === 'blue' && (
-          <div className="absolute inset-0 h-full w-full overflow-clip rounded bg-primary/50" />
+          <div className="absolute inset-0 h-full w-full overflow-clip rounded bg-primary" />
         )}
         <HiSparkles
-          className={`absolute ${size === 'sm' ? 'left-4' : 'left-5'} top-1/2 z-10 -translate-y-1/2 text-secondary ${size === 'sm' ? 'size-6' : 'size-8'}`}
+          className={`absolute ${size === 'sm' ? 'left-3' : 'left-4'} top-1/2 z-10 -translate-y-1/2 text-secondary ${size === 'sm' ? 'size-8' : 'size-10'}`}
         />
         <div className="relative overflow-hidden rounded">
           <input
@@ -51,9 +57,11 @@ export default function ChatInput(props: {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             placeholder="Frage unsere KI ..."
-            className={`w-full overflow-clip rounded border-2 bg-base-white/20 ${size === 'sm' ? 'h-[54px] py-0 text-lg' : 'py-5 text-xl'} ${size === 'sm' ? 'pl-12' : 'pl-16'} pr-14 text-base-white backdrop-blur-lg placeholder:text-base-white/80 focus:outline-none focus:ring-2 focus:ring-primary-light ${variant === 'blue' ? 'border-primary/80' : 'border-base-white'}`}
+            className={`w-full overflow-clip rounded border-2 bg-base-white/20 ${size === 'sm' ? 'h-[54px] py-0 text-lg' : 'py-5 text-xl'} ${size === 'sm' ? 'pl-12' : 'pl-16'} pr-14 ${variant === 'white' ? 'text-primary' : 'text-base-white'} backdrop-blur-lg ${variant === 'white' ? 'placeholder:text-primary/80' : 'placeholder:text-base-white/80'} focus:outline-none focus:ring-2 focus:ring-primary-light ${variant === 'blue' ? 'border-primary/80' : 'border-base-white'}`}
           />
-          <div className="pointer-events-none absolute inset-0 overflow-hidden rounded after:absolute after:inset-0 after:h-full after:w-full after:animate-shine after:bg-gradient-to-r after:from-transparent after:via-base-white/40 after:to-transparent after:content-['']" />
+          <div
+            className={`pointer-events-none absolute inset-0 overflow-hidden rounded after:absolute after:inset-0 after:h-full after:w-full after:animate-shine after:bg-gradient-to-r after:from-transparent ${variant === 'white' ? 'after:via-secondary/60' : 'after:via-base-white/40'} after:to-transparent after:content-['']`}
+          />
         </div>
         <button
           type="submit"

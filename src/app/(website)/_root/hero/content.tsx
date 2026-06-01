@@ -15,13 +15,17 @@ export default function Content(props: {
     <>
       <div className="content relative">
         <StyledPortableText content={content} isHero />
-        <div className="flex-row-reverse items-end lg:-mt-16 lg:flex">
+        <div className="flex-row-reverse items-end lg:-mt-24 lg:flex">
           <Image
             className="mx-auto w-52 lg:rotate-12"
             src={Sticker}
             alt="10 Jahre Apptiva Chatbots"
           />
-          <ChatInput mode="inline-input" className="mt-8 max-lg:max-w-full" />
+          <ChatInput
+            mode="inline-input"
+            variant="white"
+            className="mt-8 max-lg:max-w-full"
+          />
         </div>
       </div>
     </>

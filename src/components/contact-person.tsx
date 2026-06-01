@@ -18,10 +18,12 @@ export default function ContactPerson(props: {
 }) {
   return (
     <>
-      <Section intent="lightGray" className="py-16 lg:pb-20 lg:pt-14">
+      <Section intent="lightGray" level="tight">
         <div className="content">
-          <div className="flex flex-col items-center gap-8">
-            <Heading level={3}>Noch Fragen?</Heading>
+          <div className="flex flex-col items-center gap-4">
+            <Heading size={4} level={3}>
+              Noch Fragen?
+            </Heading>
             <ChatInput mode="inline-input" variant="blue" />
           </div>
         </div>
