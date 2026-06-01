@@ -43,7 +43,7 @@ export default function ChatInput(props: {
           <div className="absolute inset-0 h-full w-full overflow-clip rounded bg-primary/50" />
         )}
         <HiSparkles
-          className={`absolute ${size === 'sm' ? 'left-4' : 'left-5'} top-1/2 z-10 -translate-y-1/2 text-base-white ${size === 'sm' ? 'size-6' : 'size-8'}`}
+          className={`absolute ${size === 'sm' ? 'left-4' : 'left-5'} top-1/2 z-10 -translate-y-1/2 text-secondary ${size === 'sm' ? 'size-6' : 'size-8'}`}
         />
         <div className="relative overflow-hidden rounded">
           <input
