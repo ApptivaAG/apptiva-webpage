@@ -15,7 +15,7 @@ export default function Form() {
         <div className="pb-2 text-5xl">👍</div>
         <p>
           Vielen Dank{state.name && ` ${state.name}`}! Deine Anfrage wurde
-          erfolgreich versendet. 😁
+          erfolgreich an {state.email} versendet. 😁
         </p>
         <p>Wir werden uns so schnell wie möglich bei dir melden.</p>
       </div>

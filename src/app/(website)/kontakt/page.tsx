@@ -1,7 +1,7 @@
-import ContactForm from '@/components/contact-form/contact-form'
 import { PageHeader } from '@/components/page-header'
 import Underline from '@/components/ui/underline'
 import { Metadata } from 'next'
+import ContactForm from './contact-form'
 
 const meta = {
   title: 'Kontakt',

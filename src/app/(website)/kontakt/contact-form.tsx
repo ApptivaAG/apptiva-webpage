@@ -1,13 +1,13 @@
 'use client'
 
+import Heading from '@/components/heading'
+import Section from '@/components/section'
+import { sendMail } from '@/components/server-actions/send-mail'
+import { Submit } from '@/components/submit'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import UnderlineForLink from '@/components/ui/underline-for-link'
 import Link from 'next/link'
-import Heading from '../heading'
-import Section from '../section'
-import { sendMail } from '../server-actions/send-mail'
-import { Submit } from '../submit'
-import { Input } from '../ui/input'
-import { Label } from '../ui/label'
-import UnderlineForLink from '../ui/underline-for-link'
 import { useActionState } from 'react'
 
 const ContactForm = () => {
@@ -54,7 +54,7 @@ const ContactForm = () => {
                 <div className="pb-2 text-5xl">👍</div>
                 <p>
                   Vielen Dank{state.name && ` ${state.name}`}! Deine Nachricht
-                  wurde erfolgreich versendet. 😁
+                  wurde erfolgreich an {state.email} versendet. 😁
                 </p>
                 <p>Wir werden uns so schnell wie möglich bei dir melden.</p>
               </div>
