@@ -35,6 +35,7 @@ describe('sendMail Server Action', () => {
       mockBatchSend.mockResolvedValue({ error: null })
 
       const formData = new FormData()
+      formData.append('kind', 'apptiva')
       formData.append('name', 'Max Mustermann')
       formData.append('email', 'max@example.com')
       formData.append('message', 'Test message')
@@ -52,6 +53,7 @@ describe('sendMail Server Action', () => {
       mockBatchSend.mockResolvedValue({ error: null })
 
       const formData = new FormData()
+      formData.append('kind', 'bubble')
       formData.append('name', 'Max Mustermann')
       formData.append('email', 'max@example.com')
       formData.append('message', 'Test message')
@@ -63,6 +65,21 @@ describe('sendMail Server Action', () => {
       const result = await sendMail({ state: 'idle' }, formData)
 
       expect(result.state).toBe('success')
+    })
+
+    it('should accept valid testChatbot form data', async () => {
+      mockBatchSend.mockResolvedValue({ error: null })
+
+      const formData = new FormData()
+      formData.append('kind', 'testChatbot')
+      formData.append('email', 'test@example.com')
+      formData.append('subject', 'Test Chatbot Request')
+      formData.append('circle', 'bubble')
+
+      const result = await sendMail({ state: 'idle' }, formData)
+
+      expect(result.state).toBe('success')
+      expect(result).toHaveProperty('email', 'test@example.com')
     })
 
     it('should reject when required fields are missing', async () => {
@@ -80,6 +97,7 @@ describe('sendMail Server Action', () => {
       mockBatchSend.mockResolvedValue({ error: null })
 
       const formData = new FormData()
+      formData.append('kind', 'apptiva')
       formData.append('name', 'Max Mustermann')
       formData.append('email', 'max@example.com')
       formData.append('message', 'Test message')
@@ -96,10 +114,32 @@ describe('sendMail Server Action', () => {
       mockBatchSend.mockResolvedValue({ error: null })
 
       const formData = new FormData()
+      formData.append('kind', 'apptiva')
       formData.append('name', 'Max Mustermann')
       formData.append('email', 'max@example.com')
       formData.append('message', 'Test message')
       formData.append('circle', 'apptiva')
+      // No subject provided
+
+      const result = await sendMail({ state: 'idle' }, formData)
+
+      expect(result.state).toBe('success')
+      expect(mockBatchSend).toHaveBeenCalledWith(
+        expect.arrayContaining([
+          expect.objectContaining({
+            subject: 'Kontaktformular apptiva.ch',
+          }),
+        ])
+      )
+    })
+
+    it('should use default subject for testChatbot if not provided', async () => {
+      mockBatchSend.mockResolvedValue({ error: null })
+
+      const formData = new FormData()
+      formData.append('kind', 'testChatbot')
+      formData.append('email', 'test@example.com')
+      formData.append('circle', 'bubble')
       // No subject provided
 
       const result = await sendMail({ state: 'idle' }, formData)
@@ -118,6 +158,7 @@ describe('sendMail Server Action', () => {
   describe('Spam Detection', () => {
     it('should detect spam via honeypot field', async () => {
       const formData = new FormData()
+      formData.append('kind', 'apptiva')
       formData.append('name', 'Spammer')
       formData.append('email', 'spam@example.com')
       formData.append('message', 'Buy my product!')
@@ -136,6 +177,7 @@ describe('sendMail Server Action', () => {
       mockBatchSend.mockResolvedValue({ error: null })
 
       const formData = new FormData()
+      formData.append('kind', 'apptiva')
       formData.append('name', 'Real User')
       formData.append('email', 'real@example.com')
       formData.append('message', 'Real message')
@@ -147,6 +189,21 @@ describe('sendMail Server Action', () => {
 
       expect(result.state).toBe('success')
     })
+
+    it('should detect spam via honeypot for testChatbot', async () => {
+      const formData = new FormData()
+      formData.append('kind', 'testChatbot')
+      formData.append('email', 'spam@example.com')
+      formData.append('circle', 'bubble')
+      formData.append('subject', 'Spam')
+      formData.append('address', 'filled-by-bot') // Honeypot field
+
+      const result = await sendMail({ state: 'idle' }, formData)
+
+      expect(result.state).toBe('spam')
+      expect(mockBatchSend).not.toHaveBeenCalled()
+      expect(console.warn).toHaveBeenCalledWith('Spam detected')
+    })
   })
 
   describe('Resend API Integration', () => {
@@ -154,6 +211,7 @@ describe('sendMail Server Action', () => {
       mockBatchSend.mockResolvedValue({ error: null })
 
       const formData = new FormData()
+      formData.append('kind', 'apptiva')
       formData.append('name', 'Max Mustermann')
       formData.append('email', 'max@example.com')
       formData.append('message', 'Test message')
@@ -183,6 +241,7 @@ describe('sendMail Server Action', () => {
       mockBatchSend.mockResolvedValue({ error: null })
 
       const formData = new FormData()
+      formData.append('kind', 'apptiva')
       formData.append('name', 'Max Mustermann')
       formData.append('email', 'max@example.com')
       formData.append('message', 'Test')
@@ -199,6 +258,7 @@ describe('sendMail Server Action', () => {
       mockBatchSend.mockResolvedValue({ error: null })
 
       const formData = new FormData()
+      formData.append('kind', 'apptiva')
       formData.append('name', 'Max')
       formData.append('email', 'max@example.com')
       formData.append('message', 'Test')
@@ -220,12 +280,33 @@ describe('sendMail Server Action', () => {
       mockBatchSend.mockResolvedValue({ error: null })
 
       const formData = new FormData()
+      formData.append('kind', 'bubble')
       formData.append('name', 'Max')
       formData.append('email', 'max@example.com')
       formData.append('message', 'Test')
       formData.append('company', 'ACME')
       formData.append('circle', 'bubble')
       formData.append('subject', 'Test')
+
+      await sendMail({ state: 'idle' }, formData)
+
+      expect(mockBatchSend).toHaveBeenCalledWith(
+        expect.arrayContaining([
+          expect.objectContaining({
+            to: 'bubble-chat@apptiva.ch',
+          }),
+        ])
+      )
+    })
+
+    it('should route to bubble-chat@apptiva.ch for "testChatbot" (uses bubble circle)', async () => {
+      mockBatchSend.mockResolvedValue({ error: null })
+
+      const formData = new FormData()
+      formData.append('kind', 'testChatbot')
+      formData.append('email', 'test@example.com')
+      formData.append('circle', 'bubble')
+      formData.append('subject', 'Test Chatbot')
 
       await sendMail({ state: 'idle' }, formData)
 
@@ -246,6 +327,7 @@ describe('sendMail Server Action', () => {
       })
 
       const formData = new FormData()
+      formData.append('kind', 'apptiva')
       formData.append('name', 'Max')
       formData.append('email', 'max@example.com')
       formData.append('message', 'Test')
@@ -263,6 +345,7 @@ describe('sendMail Server Action', () => {
       mockBatchSend.mockRejectedValue(new Error('Network error'))
 
       const formData = new FormData()
+      formData.append('kind', 'apptiva')
       formData.append('name', 'Max')
       formData.append('email', 'max@example.com')
       formData.append('message', 'Test')
@@ -280,6 +363,7 @@ describe('sendMail Server Action', () => {
       mockBatchSend.mockResolvedValue({ error: { message: 'API Error' } })
 
       const formData = new FormData()
+      formData.append('kind', 'apptiva')
       formData.append('name', 'Max')
       formData.append('email', 'max@example.com')
       formData.append('message', 'Test')
@@ -299,6 +383,7 @@ describe('sendMail Server Action', () => {
       mockBatchSend.mockResolvedValue({ error: null })
 
       const formData = new FormData()
+      formData.append('kind', 'apptiva')
       formData.append('name', 'Max')
       formData.append('email', 'max@example.com')
       formData.append('message', 'Test')
@@ -314,6 +399,7 @@ describe('sendMail Server Action', () => {
       mockBatchSend.mockResolvedValue({ error: null })
 
       const formData = new FormData()
+      formData.append('kind', 'apptiva')
       formData.append('name', 'Max')
       formData.append('email', 'max@example.com')
       formData.append('message', 'Test')
@@ -334,6 +420,7 @@ describe('sendMail Server Action', () => {
       mockBatchSend.mockResolvedValue({ error: null })
 
       const formData = new FormData()
+      formData.append('kind', 'apptiva')
       formData.append('name', 'Max Mustermann')
       formData.append('email', 'max@example.com')
       formData.append('message', 'Test')
@@ -346,6 +433,10 @@ describe('sendMail Server Action', () => {
         state: 'success',
         email: 'max@example.com',
         name: 'Max Mustermann',
+        message: 'Test',
+        company: undefined,
+        phone: undefined,
+        referrer: undefined,
       })
     })
 
@@ -353,6 +444,7 @@ describe('sendMail Server Action', () => {
       mockBatchSend.mockResolvedValue({ error: { message: 'Error' } })
 
       const formData = new FormData()
+      formData.append('kind', 'apptiva')
       formData.append('name', 'Max')
       formData.append('email', 'max@example.com')
       formData.append('message', 'Test')
@@ -369,6 +461,7 @@ describe('sendMail Server Action', () => {
 
     it('should return correct state structure on spam', async () => {
       const formData = new FormData()
+      formData.append('kind', 'apptiva')
       formData.append('name', 'Spammer')
       formData.append('email', 'spam@example.com')
       formData.append('message', 'Spam')
