@@ -1,18 +1,10 @@
-'use client'
-
 import Heading from '@/components/heading'
 import Section from '@/components/section'
-import { sendMail } from '@/components/server-actions/send-mail'
-import { Submit } from '@/components/submit'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
 import UnderlineForLink from '@/components/ui/underline-for-link'
 import Link from 'next/link'
-import { useActionState } from 'react'
+import { ContactFormContent } from './contact-form-content'
 
 const ContactForm = () => {
-  const [state, formAction] = useActionState(sendMail, { state: 'idle' })
-
   return (
     <Section intent={'light'} level={'one'}>
       <div className="content">
@@ -49,100 +41,7 @@ const ContactForm = () => {
             <Heading level={2} size={5}>
               Kontaktformular
             </Heading>
-            {state.state === 'success' ? (
-              <div className="pt-4">
-                <div className="pb-2 text-5xl">👍</div>
-                <p>
-                  Vielen Dank{state.name && ` ${state.name}`}! Deine Nachricht
-                  wurde erfolgreich an {state.email} versendet. 😁
-                </p>
-                <p>Wir werden uns so schnell wie möglich bei dir melden.</p>
-              </div>
-            ) : (
-              <form action={formAction}>
-                <p hidden>
-                  <label htmlFor="address">
-                    Nicht ausfüllen: <input type="text" name="address" />
-                  </label>
-                  <input
-                    type="text"
-                    name="subject"
-                    value="Kontaktformular apptiva.ch"
-                    readOnly={true}
-                  />
-                  <input type="text" name="circle" value="apptiva" readOnly />
-                  <input type="text" name="kind" value="apptiva" readOnly />
-                </p>
-                <div>
-                  <Label htmlFor="name">Name</Label>
-                  <Input
-                    intent="default"
-                    type="text"
-                    name="name"
-                    id="name"
-                    required
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="email">Email-Adresse</Label>
-                  <Input
-                    intent="default"
-                    id="email"
-                    type="email"
-                    name="email"
-                    required
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="company">
-                    Unternehmen <small>optional</small>
-                  </Label>
-                  <Input
-                    intent="default"
-                    type="text"
-                    name="company"
-                    id="company"
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="message">Nachricht</Label>
-                  <textarea
-                    id="message"
-                    title="Nachricht"
-                    className="ring-offset-white file:font-medium bg-white flex h-full w-full rounded border border-primary px-3 py-2 text-base file:border-0 file:bg-transparent file:text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                    name="message"
-                    rows={5}
-                    required
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="referrer">
-                    Wie hast du uns gefunden? <small>optional</small>
-                  </Label>
-                  <Input
-                    intent="default"
-                    type="text"
-                    name="referrer"
-                    id="referrer"
-                  />
-                </div>
-                {state.state === 'error' && (
-                  <div className="pt-2">
-                    <em className="text-destructive">{state.error}</em>
-                  </div>
-                )}
-                {state.state === 'spam' && (
-                  <div className="pt-2">
-                    <em className="">
-                      Ups, es scheint als ob du ein Roboter bist. Bitte versuche
-                      es erneut.
-                    </em>
-                  </div>
-                )}
-                <Submit className="mt-4">Senden</Submit>
-              </form>
-            )}
+            <ContactFormContent />
           </div>
         </div>
       </div>

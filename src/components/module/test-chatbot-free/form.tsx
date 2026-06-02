@@ -1,28 +1,33 @@
 'use client'
 
+import { FormSuccessMessage } from '@/components/form-success-message'
 import { sendMail } from '@/components/server-actions/send-mail'
 import { Submit } from '@/components/submit'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+import { useState } from 'react'
 import { useFormState } from 'react-dom'
 
 export default function TestChatbotForm() {
   const [state, formAction] = useFormState(sendMail, { state: 'idle' })
+  const [correcting, setCorrecting] = useState(false)
 
-  if (state.state === 'success') {
+  const handleAction = (formData: FormData) => {
+    setCorrecting(false)
+    formAction(formData)
+  }
+
+  if (state.state === 'success' && !correcting) {
     return (
-      <div className="pt-4">
-        <div className="pb-2 text-5xl">👍</div>
-        <p>
-          Vielen Dank{state.name && ` ${state.name}`}! Deine Anfrage wurde
-          erfolgreich an {state.email} versendet. 😁
-        </p>
-        <p>Wir werden uns so schnell wie möglich bei dir melden.</p>
-      </div>
+      <FormSuccessMessage
+        name={state.name}
+        email={state.email}
+        onCorrect={() => setCorrecting(true)}
+      />
     )
   }
   return (
-    <form action={formAction}>
+    <form action={handleAction}>
       <p hidden>
         <label htmlFor="address">
           Nicht ausfüllen: <input type="text" name="address" />
@@ -38,7 +43,11 @@ export default function TestChatbotForm() {
       </p>
       <div>
         <Label>Email-Adresse</Label>
-        <Input type="email" name="email" />
+        <Input
+          type="email"
+          name="email"
+          defaultValue={state.state === 'success' ? state.email : ''}
+        />
       </div>
 
       {state.state === 'error' && (

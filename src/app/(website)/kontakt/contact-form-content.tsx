@@ -8,7 +8,7 @@ import { Label } from '@/components/ui/label'
 import { useState } from 'react'
 import { useActionState } from 'react'
 
-export default function Form() {
+export const ContactFormContent = () => {
   const [state, formAction] = useActionState(sendMail, { state: 'idle' })
   const [correcting, setCorrecting] = useState(false)
 
@@ -26,6 +26,7 @@ export default function Form() {
       />
     )
   }
+
   return (
     <form action={handleAction}>
       <p hidden>
@@ -35,23 +36,28 @@ export default function Form() {
         <input
           type="text"
           name="subject"
-          value="Bubble Chat Demo vereinbaren"
+          value="Kontaktformular apptiva.ch"
+          readOnly={true}
         />
-        <input type="text" name="circle" value="bubble" readOnly />
-        <input type="text" name="kind" value="bubble" readOnly />
+        <input type="text" name="circle" value="apptiva" readOnly />
+        <input type="text" name="kind" value="apptiva" readOnly />
       </p>
       <div>
-        <Label>Name</Label>
+        <Label htmlFor="name">Name</Label>
         <Input
+          intent="default"
           type="text"
           name="name"
+          id="name"
           required
           defaultValue={state.state === 'success' ? state.name : ''}
         />
       </div>
       <div>
-        <Label>Email-Adresse</Label>
+        <Label htmlFor="email">Email-Adresse</Label>
         <Input
+          intent="default"
+          id="email"
           type="email"
           name="email"
           required
@@ -59,52 +65,45 @@ export default function Form() {
         />
       </div>
       <div>
-        <Label>Unternehmen</Label>
+        <Label htmlFor="company">
+          Unternehmen <small>optional</small>
+        </Label>
         <Input
+          intent="default"
           type="text"
           name="company"
-          required
+          id="company"
           defaultValue={state.state === 'success' ? state.company : ''}
         />
       </div>
+
       <div>
-        <Label>
-          Telefonnummer <small>optional</small>
-        </Label>
-        <Input
-          type="text"
-          name="phone"
-          defaultValue={state.state === 'success' ? state.phone : ''}
+        <Label htmlFor="message">Nachricht</Label>
+        <textarea
+          id="message"
+          title="Nachricht"
+          className="ring-offset-white file:font-medium bg-white flex h-full w-full rounded border border-primary px-3 py-2 text-base file:border-0 file:bg-transparent file:text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          name="message"
+          rows={5}
+          required
+          defaultValue={state.state === 'success' ? state.message : ''}
         />
       </div>
-
       <div>
         <Label htmlFor="referrer">
           Wie hast du uns gefunden? <small>optional</small>
         </Label>
         <Input
+          intent="default"
           type="text"
           name="referrer"
           id="referrer"
           defaultValue={state.state === 'success' ? state.referrer : ''}
         />
       </div>
-
-      <div>
-        <Label>
-          Nachricht <small>optional</small>
-        </Label>
-        <textarea
-          title="Nachricht"
-          className="ring-offset-white file:font-medium bg-white flex h-full w-full rounded border border-primary px-3 py-2 text-base file:border-0 file:bg-transparent file:text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-          name="message"
-          rows={5}
-          defaultValue={state.state === 'success' ? state.message : ''}
-        />
-      </div>
       {state.state === 'error' && (
         <div className="pt-2">
-          <em className="">{state.error}</em>
+          <em className="text-destructive">{state.error}</em>
         </div>
       )}
       {state.state === 'spam' && (
@@ -115,7 +114,7 @@ export default function Form() {
           </em>
         </div>
       )}
-      <Submit className="mt-4">Demo anfordern</Submit>
+      <Submit className="mt-4">Senden</Submit>
     </form>
   )
 }

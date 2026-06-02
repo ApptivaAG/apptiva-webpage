@@ -1,28 +1,33 @@
 'use client'
 
+import { FormSuccessMessage } from '@/components/form-success-message'
 import { sendMail } from '@/components/server-actions/send-mail'
 import { Submit } from '@/components/submit'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+import { useState } from 'react'
 import { useFormState } from 'react-dom'
 
 export default function Form() {
   const [state, formAction] = useFormState(sendMail, { state: 'idle' })
+  const [correcting, setCorrecting] = useState(false)
 
-  if (state.state === 'success') {
+  const handleAction = (formData: FormData) => {
+    setCorrecting(false)
+    formAction(formData)
+  }
+
+  if (state.state === 'success' && !correcting) {
     return (
-      <div className="pt-4">
-        <div className="pb-2 text-5xl">👍</div>
-        <p>
-          Vielen Dank{state.name && ` ${state.name}`}! Deine Anfrage wurde
-          erfolgreich an {state.email} versendet. 😁
-        </p>
-        <p>Wir werden uns so schnell wie möglich bei dir melden.</p>
-      </div>
+      <FormSuccessMessage
+        name={state.name}
+        email={state.email}
+        onCorrect={() => setCorrecting(true)}
+      />
     )
   }
   return (
-    <form action={formAction}>
+    <form action={handleAction}>
       <p hidden>
         <label htmlFor="address">
           Nicht ausfüllen: <input type="text" name="address" />
@@ -33,21 +38,37 @@ export default function Form() {
       </p>
       <div>
         <Label>Name</Label>
-        <Input type="text" name="name" />
+        <Input
+          type="text"
+          name="name"
+          defaultValue={state.state === 'success' ? state.name : ''}
+        />
       </div>
       <div>
         <Label>Email-Adresse</Label>
-        <Input type="email" name="email" />
+        <Input
+          type="email"
+          name="email"
+          defaultValue={state.state === 'success' ? state.email : ''}
+        />
       </div>
       <div>
         <Label>Unternehmen</Label>
-        <Input type="text" name="company" />
+        <Input
+          type="text"
+          name="company"
+          defaultValue={state.state === 'success' ? state.company : ''}
+        />
       </div>
       <div>
         <Label>
           Telefonnummer <small>optional</small>
         </Label>
-        <Input type="text" name="phone" />
+        <Input
+          type="text"
+          name="phone"
+          defaultValue={state.state === 'success' ? state.phone : ''}
+        />
       </div>
 
       <div>
@@ -59,6 +80,7 @@ export default function Form() {
           className="ring-offset-white file:font-medium bg-white flex h-full w-full rounded border border-primary px-3 py-2 text-base file:border-0 file:bg-transparent file:text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
           name="message"
           rows={5}
+          defaultValue={state.state === 'success' ? state.message : ''}
         />
       </div>
       {state.state === 'error' && (

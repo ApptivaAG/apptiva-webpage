@@ -16,6 +16,10 @@ type FormState =
       state: 'success'
       email: string
       name?: string
+      company?: string
+      message?: string
+      phone?: string
+      referrer?: string
     }
   | {
       state: 'error'
@@ -114,6 +118,10 @@ export async function sendMail(
       state: 'success',
       email,
       name: 'name' in parsedData ? parsedData.name : undefined,
+      company: 'company' in parsedData ? parsedData.company : undefined,
+      message: 'message' in parsedData ? parsedData.message : undefined,
+      phone: 'phone' in parsedData ? parsedData.phone : undefined,
+      referrer: 'referrer' in parsedData ? parsedData.referrer : undefined,
     }
   } catch (error) {
     console.error('Error sending mail', error)
