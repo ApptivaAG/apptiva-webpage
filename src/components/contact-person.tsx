@@ -20,7 +20,7 @@ export default function ContactPerson(props: {
     <>
       <Section intent="lightGray" level="tight">
         <div className="content">
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center gap-4 lg:gap-8">
             <Heading size={3} level={3}>
               Noch Fragen?
             </Heading>
