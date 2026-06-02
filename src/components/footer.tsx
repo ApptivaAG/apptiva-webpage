@@ -156,7 +156,7 @@ export default function Footer() {
               <RandomText />
             </p>
           </div>
-          <div className="grid gap-x-24 gap-y-8 text-nowrap bg-primary px-4 pb-32 pt-8 text-base-white [grid-template-columns:repeat(auto-fit,minmax(150px,1fr));] sm:p-12 lg:px-32 lg:pb-32 lg:pt-24 max-sm:[&_li]:py-1">
+          <div className="grid gap-x-24 gap-y-8 text-nowrap bg-primary px-4 pb-32 pt-8 text-base-white [grid-template-columns:repeat(auto-fit,minmax(150px,1fr));] sm:p-12 sm:pb-32 lg:px-32 lg:pb-32 lg:pt-24 max-sm:[&_li]:py-1">
             <div>
               <Heading level={2} size={4} className="pb-4">
                 Fokusthemen

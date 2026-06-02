@@ -57,12 +57,12 @@ export default function FloatingChatInput() {
   }
 
   return (
-    <div className="pointer-events-none fixed bottom-0 left-0 right-0 z-50 flex animate-bounce-in justify-center p-4">
+    <div className="content pointer-events-none fixed bottom-0 left-0 right-0 z-50 animate-bounce-in pb-4">
       <ChatInput
         mode="floating-input"
         origin="floating-bottom"
         variant="blue-transparent"
-        className="pointer-events-auto"
+        className="pointer-events-auto col-[content]"
       />
     </div>
   )
