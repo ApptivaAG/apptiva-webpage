@@ -21,7 +21,7 @@ export default function ContactPerson(props: {
       <Section intent="lightGray" level="tight">
         <div className="content">
           <div className="flex flex-col items-center gap-4">
-            <Heading size={4} level={3}>
+            <Heading size={3} level={3}>
               Noch Fragen?
             </Heading>
             <ChatInput mode="inline-input" variant="blue" />

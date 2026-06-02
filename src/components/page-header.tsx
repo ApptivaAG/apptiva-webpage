@@ -28,35 +28,40 @@ export function PageHeader(props: {
   const lead = isReactNode(props.lead) ? (
     props.lead
   ) : (
-    <StyledPortableText content={props.lead} />
+    <StyledPortableText spreadParagraphs={false} content={props.lead} />
   )
 
   return (
     <>
-      <header className="full mt-[-8rem] min-h-fit animate-gradient items-center bg-gradient-to-br from-primary-light to-primary-dark bg-300% pb-8 pt-32 text-base-white md:pb-16 md:pt-44">
+      <header className="full mt-[-8rem] min-h-fit animate-gradient items-center bg-gradient-to-br from-primary-light to-primary-dark bg-300% pb-20 pt-32 text-base-white md:pb-24 md:pt-44">
         <div className="content">
           {props.links && (
             <BreadCrumb className="pb-2 md:pb-6" links={props.links} />
           )}
           {props.title && <Heading level={1}>{title}</Heading>}
-          <div className="lg:flex">
+          <div className="grid-cols-2 gap-8 lg:grid">
             <div className={leadStyle}>{lead}</div>
             {props.links?.some((link) => link.name === 'Chatbots') && (
               <Image
-                className="mx-auto w-52 max-lg:hidden lg:rotate-12"
+                className="row-span-2 mx-auto w-52 place-self-center pt-4 max-lg:hidden lg:rotate-12"
                 src={Sticker}
                 alt="10 Jahre Apptiva Chatbots"
               />
             )}
+            {props.callToAction ? (
+              <div className="row-start-2 flex flex-col gap-4">
+                <ChatInput mode="inline-input" variant="white" />
+                {props.callToAction}
+              </div>
+            ) : (
+              <ChatInput
+                mode="inline-input"
+                variant="white"
+                className="row-start-2"
+              />
+            )}
           </div>
-          {props.callToAction ? (
-            <div className="flex items-baseline justify-between gap-8 max-lg:pt-16">
-              {props.callToAction}
-            </div>
-          ) : (
-            <ChatInput mode="inline-input" variant="white" />
-          )}
-          {props.image && (
+          {props.image && typeof props.image === 'object' && (
             <div className="flex justify-center pb-4 pt-16">
               <SanityImage image={props.image} />
             </div>
@@ -64,18 +69,6 @@ export function PageHeader(props: {
         </div>
         {props.children}
       </header>
-      {props.callToAction && (
-        <Section intent="lightGray" level="tight">
-          <div className="content">
-            <div className="flex flex-col items-center gap-4">
-              <Heading size={4} level={3}>
-                Willst du Antworten?
-              </Heading>
-              <ChatInput mode="inline-input" variant="blue" />
-            </div>
-          </div>
-        </Section>
-      )}
     </>
   )
 }

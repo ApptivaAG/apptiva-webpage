@@ -40,16 +40,16 @@ export default function ChatInput(props: {
     >
       <form onSubmit={handleSubmit} className="relative">
         {variant === 'white' && (
-          <div className="absolute inset-0 h-full w-full overflow-clip rounded bg-base-white shadow-2xl" />
+          <div className="absolute inset-0 h-full w-full overflow-clip rounded bg-base-white shadow-xl" />
         )}
         {variant === 'blue-transparent' && (
-          <div className="absolute inset-0 h-full w-full overflow-clip rounded bg-primary/50 shadow-2xl" />
+          <div className="absolute inset-0 h-full w-full overflow-clip rounded bg-primary/50 shadow-xl" />
         )}
         {variant === 'blue' && (
           <div className="absolute inset-0 h-full w-full overflow-clip rounded bg-primary" />
         )}
         <HiSparkles
-          className={`absolute ${size === 'sm' ? 'left-3' : 'left-4'} top-1/2 z-10 -translate-y-1/2 text-secondary ${size === 'sm' ? 'size-8' : 'size-10'}`}
+          className={`absolute ${size === 'sm' ? 'left-3' : 'left-4'} top-1/2 z-10 -translate-y-1/2 text-secondary drop-shadow-[1px_1px_0px_rgba(0,0,0,0.40)] ${size === 'sm' ? 'size-8' : 'size-10'}`}
         />
         <div className="relative overflow-hidden rounded">
           <input
