@@ -5,7 +5,7 @@ import { Metadata } from 'next'
 import { rootUrl } from '../env'
 
 const title =
-  'Apptiva AG | Chatbots und individuelle Softwarelösungen aus der Schweiz'
+  'Apptiva AG | KI-Chatbots & individuelle Softwareentwicklung aus Luzern'
 const ogImage = new URL('/img/Logo-symbol.png', rootUrl).toString()
 export const metadata: Metadata = {
   title: {
@@ -13,6 +13,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title,
+    description:
+      'Digitale Lösungen mit Mehrwert: Die Apptiva entwickelt KI-gestützte Software, Kundenportale und Automatisierungen für Schweizer Unternehmen.',
     url: rootUrl,
     images: [ogImage],
   },
