@@ -1,10 +1,10 @@
 'use server'
 
-import { ContactFromMailSenderCopy } from '@/components/contact-form/contact-from-mail-sender'
+import { ContactFromMailSenderCopy } from '@/components/contact-form/sender-email/contact-from'
 import { Resend } from 'resend'
 import { z } from 'zod'
 import { zfd } from 'zod-form-data'
-import ContactFromMailApptivaCopy from '../contact-form/contact-from-apptiva'
+import ContactFromMailApptivaCopy from '../contact-form/apptiva-email/contact-from'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
@@ -26,6 +26,7 @@ type FormState =
     }
 
 const bubble = z.object({
+  kind: zfd.text(z.literal('bubble')),
   name: zfd.text(),
   email: zfd.text(),
   message: zfd.text(z.string().optional()),
@@ -37,7 +38,16 @@ const bubble = z.object({
   address: zfd.text(z.string().optional()),
 })
 
+const testChatbot = z.object({
+  kind: zfd.text(z.literal('testChatbot')),
+  email: zfd.text(),
+  subject: zfd.text(z.string().default('Kontaktformular apptiva.ch')),
+  circle: zfd.text(z.enum(['bubble'])),
+  address: zfd.text(z.string().optional()),
+})
+
 const apptiva = z.object({
+  kind: zfd.text(z.literal('apptiva')),
   name: zfd.text(),
   email: zfd.text(),
   message: zfd.text(),
@@ -48,7 +58,7 @@ const apptiva = z.object({
   address: zfd.text(z.string().optional()),
 })
 
-const schema = zfd.formData(z.union([bubble, apptiva]))
+const schema = zfd.formData(z.union([bubble, apptiva, testChatbot]))
 
 export type FormInputSchema = z.infer<typeof schema>
 
@@ -73,7 +83,7 @@ export async function sendMail(
   }
 
   try {
-    const { name, email, message, subject, company, circle } = parsedData
+    const { email, subject, circle } = parsedData
 
     const { error } = await resend.batch.send([
       {
@@ -100,7 +110,11 @@ export async function sendMail(
     }
 
     console.log('Mail sent', JSON.stringify(parsedData, null, 2))
-    return { state: 'success', email, name }
+    return {
+      state: 'success',
+      email,
+      name: 'name' in parsedData ? parsedData.name : undefined,
+    }
   } catch (error) {
     console.error('Error sending mail', error)
 

@@ -71,6 +71,7 @@ const ContactForm = () => {
                     readOnly={true}
                   />
                   <input type="text" name="circle" value="apptiva" readOnly />
+                  <input type="text" name="kind" value="apptiva" readOnly />
                 </p>
                 <div>
                   <Label htmlFor="name">Name</Label>

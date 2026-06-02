@@ -10,6 +10,7 @@ import ServiceTeaserList from './service-teaser/service-teaser-list'
 import Team from './team'
 import Text from './text'
 import Docs from './docs/docs'
+import TestChatbotFree from './test-chatbot-free'
 
 export default function Module(props: {
   module: ModuleData
@@ -52,6 +53,9 @@ export default function Module(props: {
 
     case 'teaser-servicepage':
       return <ServiceTeaserList module={module} />
+
+    case 'test-chatbot':
+      return <TestChatbotFree module={module} />
 
     case 'image':
       // eslint-disable-next-line jsx-a11y/alt-text

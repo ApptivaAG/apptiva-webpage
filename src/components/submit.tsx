@@ -5,8 +5,10 @@ import { cn } from '@/utils/cn'
 export function Submit(props: {
   children: React.ReactNode
   className?: string
+  intent?: 'secondary' | 'primary'
 }) {
   const { pending } = useFormStatus()
+  const intent = props.intent ?? 'secondary'
   return (
     <Button
       className={cn(
@@ -14,7 +16,7 @@ export function Submit(props: {
         props.className,
         pending && 'pointer-events-none opacity-40'
       )}
-      intent="secondary"
+      intent={intent}
       type="submit"
     >
       {pending ? `${props.children}...` : props.children}

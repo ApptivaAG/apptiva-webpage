@@ -43,6 +43,7 @@ export default defineType({
           { title: 'Bild', value: 'image' },
           { title: 'Team', value: 'team' },
           { title: 'Dokumente', value: 'documents' },
+          { title: 'Chatbot kostenlos testen', value: 'test-chatbot' },
         ],
       },
     }),
@@ -92,7 +93,7 @@ export default defineType({
       name: 'image',
       title: 'Bild',
       type: 'imageWithAlt',
-      hidden: isNotType('cards', 'prices', 'text', 'image'),
+      hidden: isNotType('cards', 'prices', 'text', 'image', 'test-chatbot'),
     }),
     defineField({
       name: 'orientation',
@@ -130,7 +131,15 @@ export default defineType({
           type: 'cta',
         },
       ],
-      hidden: isNotType('cards', 'faqs', 'text', 'contact', 'prices', 'image'),
+      hidden: isNotType(
+        'cards',
+        'faqs',
+        'text',
+        'contact',
+        'prices',
+        'image',
+        'test-chatbot'
+      ),
     }),
 
     defineField({

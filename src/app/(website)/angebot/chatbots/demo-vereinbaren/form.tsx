@@ -33,6 +33,7 @@ export default function Form() {
           value="Bubble Chat Demo vereinbaren"
         />
         <input type="text" name="circle" value="bubble" readOnly />
+        <input type="text" name="kind" value="bubble" readOnly />
       </p>
       <div>
         <Label>Name</Label>

@@ -1,10 +1,11 @@
 import { describe, it, expect } from 'vitest'
 import { render } from '@react-email/components'
-import { ContactFromMailApptivaCopy } from '../contact-from-apptiva'
+import { ContactFromMailApptivaCopy } from '../apptiva-email/contact-from'
 import type { FormInputSchema } from '@/components/server-actions/send-mail'
 
 describe('ContactFromMailApptivaCopy', async () => {
   const baseProps: FormInputSchema = {
+    kind: 'apptiva',
     name: 'Max Mustermann',
     email: 'max@example.com',
     message: 'Test message from customer',
@@ -48,7 +49,7 @@ describe('ContactFromMailApptivaCopy', async () => {
   describe('Form Field Display', async () => {
     it('should display all form fields', async () => {
       const html = await render(<ContactFromMailApptivaCopy {...baseProps} />)
-      
+
       expect(html).toContain('Name:')
       expect(html).toContain('Max Mustermann')
       expect(html).toContain('E-Mail Adresse:')
@@ -64,8 +65,10 @@ describe('ContactFromMailApptivaCopy', async () => {
         ...baseProps,
         company: undefined,
       }
-      const html = await render(<ContactFromMailApptivaCopy {...propsWithoutCompany} />)
-      
+      const html = await render(
+        <ContactFromMailApptivaCopy {...propsWithoutCompany} />
+      )
+
       expect(html).toContain('keine Angabe')
     })
 
@@ -74,8 +77,10 @@ describe('ContactFromMailApptivaCopy', async () => {
         ...baseProps,
         referrer: undefined,
       }
-      const html = await render(<ContactFromMailApptivaCopy {...propsWithoutReferrer} />)
-      
+      const html = await render(
+        <ContactFromMailApptivaCopy {...propsWithoutReferrer} />
+      )
+
       expect(html).toContain('keine Angabe')
     })
 
@@ -84,8 +89,10 @@ describe('ContactFromMailApptivaCopy', async () => {
         ...baseProps,
         company: '',
       }
-      const html = await render(<ContactFromMailApptivaCopy {...propsEmptyCompany} />)
-      
+      const html = await render(
+        <ContactFromMailApptivaCopy {...propsEmptyCompany} />
+      )
+
       expect(html).toContain('keine Angabe')
     })
   })
@@ -96,20 +103,23 @@ describe('ContactFromMailApptivaCopy', async () => {
         ...baseProps,
         circle: 'apptiva' as const,
       }
-      const html = await render(<ContactFromMailApptivaCopy {...apptivaProps} />)
-      
+      const html = await render(
+        <ContactFromMailApptivaCopy {...apptivaProps} />
+      )
+
       expect(html).not.toContain('Telefonnummer:')
     })
 
     it('should display phone field for "bubble" circle when phone provided', async () => {
       const bubbleProps = {
         ...baseProps,
+        kind: 'bubble' as const,
         circle: 'bubble' as const,
         phone: '+41 79 123 45 67',
         company: 'Test Corp',
       }
       const html = await render(<ContactFromMailApptivaCopy {...bubbleProps} />)
-      
+
       expect(html).toContain('Telefonnummer:')
       expect(html).toContain('+41 79 123 45 67')
     })
@@ -117,12 +127,15 @@ describe('ContactFromMailApptivaCopy', async () => {
     it('should display phone field for "bubble" circle with "keine Angabe" when phone not provided', async () => {
       const bubblePropsNoPhone = {
         ...baseProps,
+        kind: 'bubble' as const,
         circle: 'bubble' as const,
         phone: undefined,
         company: 'Test Corp',
       }
-      const html = await render(<ContactFromMailApptivaCopy {...bubblePropsNoPhone} />)
-      
+      const html = await render(
+        <ContactFromMailApptivaCopy {...bubblePropsNoPhone} />
+      )
+
       expect(html).toContain('Telefonnummer:')
       expect(html).toContain('keine Angabe')
     })
@@ -138,8 +151,10 @@ describe('ContactFromMailApptivaCopy', async () => {
         message: 'Hällo! We need "support"',
         referrer: 'Google "Suche"',
       }
-      const html = await render(<ContactFromMailApptivaCopy {...specialProps} />)
-      
+      const html = await render(
+        <ContactFromMailApptivaCopy {...specialProps} />
+      )
+
       expect(html).toContain('Müller')
       expect(html).toContain('Söhne')
       expect(html).toContain('Café')
@@ -153,7 +168,7 @@ describe('ContactFromMailApptivaCopy', async () => {
         message: 'Great product! 🚀👍 Looking forward to working together 🎉',
       }
       const html = await render(<ContactFromMailApptivaCopy {...emojiProps} />)
-      
+
       expect(html).toContain('🚀')
       expect(html).toContain('👍')
       expect(html).toContain('🎉')
@@ -166,7 +181,7 @@ describe('ContactFromMailApptivaCopy', async () => {
         message: longMessage,
       }
       const html = await render(<ContactFromMailApptivaCopy {...longProps} />)
-      
+
       expect(html).toContain('Lorem ipsum')
       expect(html.length).toBeGreaterThan(1000)
     })
@@ -175,14 +190,17 @@ describe('ContactFromMailApptivaCopy', async () => {
   describe('Edge Cases', async () => {
     it('should handle minimal required fields only', async () => {
       const minimalProps: FormInputSchema = {
+        kind: 'apptiva',
         name: 'John Doe',
         email: 'john@example.com',
         message: 'Hello',
         subject: 'Contact',
         circle: 'apptiva',
       }
-      const html = await render(<ContactFromMailApptivaCopy {...minimalProps} />)
-      
+      const html = await render(
+        <ContactFromMailApptivaCopy {...minimalProps} />
+      )
+
       expect(html).toContain('John Doe')
       expect(html).toContain('john@example.com')
       expect(html).toContain('Hello')
@@ -190,7 +208,7 @@ describe('ContactFromMailApptivaCopy', async () => {
 
     it('should not contain [object Object] or undefined strings', async () => {
       const html = await render(<ContactFromMailApptivaCopy {...baseProps} />)
-      
+
       expect(html).not.toContain('[object Object]')
       expect(html).not.toContain('undefined')
     })
@@ -199,7 +217,7 @@ describe('ContactFromMailApptivaCopy', async () => {
   describe('Preview Text', async () => {
     it('should include preview text', async () => {
       const html = await render(<ContactFromMailApptivaCopy {...baseProps} />)
-      
+
       expect(html).toContain('Danke für deine Nachricht!')
     })
   })
@@ -207,14 +225,14 @@ describe('ContactFromMailApptivaCopy', async () => {
   describe('Styling', async () => {
     it('should include background color', async () => {
       const html = await render(<ContactFromMailApptivaCopy {...baseProps} />)
-      
+
       expect(html).toContain('background-color')
       expect(html).toContain('#ffffff')
     })
 
     it('should have container max-width', async () => {
       const html = await render(<ContactFromMailApptivaCopy {...baseProps} />)
-      
+
       expect(html).toContain('max-width')
       expect(html).toContain('480px')
     })

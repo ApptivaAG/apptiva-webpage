@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { useFormState } from 'react-dom'
 
-export default function Form() {
+export default function TestChatbotForm() {
   const [state, formAction] = useFormState(sendMail, { state: 'idle' })
 
   if (state.state === 'success') {
@@ -27,40 +27,20 @@ export default function Form() {
         <label htmlFor="address">
           Nicht ausfüllen: <input type="text" name="address" />
         </label>
-        <input type="text" name="subject" value="What's next Forumsangebot" />
+        <input
+          type="text"
+          name="subject"
+          value="Bubble Chat 30 Tage kostenlos testen"
+          readOnly
+        />
         <input type="text" name="circle" value="bubble" readOnly />
-        <input type="text" name="kind" value="bubble" readOnly />
+        <input type="text" name="kind" value="testChatbot" readOnly />
       </p>
-      <div>
-        <Label>Name</Label>
-        <Input type="text" name="name" />
-      </div>
       <div>
         <Label>Email-Adresse</Label>
         <Input type="email" name="email" />
       </div>
-      <div>
-        <Label>Unternehmen</Label>
-        <Input type="text" name="company" />
-      </div>
-      <div>
-        <Label>
-          Telefonnummer <small>optional</small>
-        </Label>
-        <Input type="text" name="phone" />
-      </div>
 
-      <div>
-        <Label>
-          Nachricht <small>optional</small>
-        </Label>
-        <textarea
-          title="Nachricht"
-          className="ring-offset-white file:font-medium bg-white flex h-full w-full rounded border border-primary px-3 py-2 text-base file:border-0 file:bg-transparent file:text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-          name="message"
-          rows={5}
-        />
-      </div>
       {state.state === 'error' && (
         <div className="pt-2">
           <em className="">{state.error}</em>
@@ -74,7 +54,11 @@ export default function Form() {
           </em>
         </div>
       )}
-      <Submit className="mt-4">Kostenlos anmelden</Submit>
+      <div className="text-right">
+        <Submit intent="primary" className="mt-4">
+          Jetzt Testzugang sichern!
+        </Submit>
+      </div>
     </form>
   )
 }
