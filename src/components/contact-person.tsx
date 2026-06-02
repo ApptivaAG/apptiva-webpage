@@ -24,7 +24,11 @@ export default function ContactPerson(props: {
             <Heading size={3} level={3}>
               Noch Fragen?
             </Heading>
-            <ChatInput mode="inline-input" variant="blue" />
+            <ChatInput
+              mode="inline-input"
+              origin="contact-person"
+              variant="blue"
+            />
           </div>
         </div>
       </Section>

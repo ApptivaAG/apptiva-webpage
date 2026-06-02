@@ -189,7 +189,7 @@ const Navbar = () => (
       <MainNav />
       <MobileNav />
       <div className="max-2xl:hidden">
-        <ChatInput mode="inline-input" size="sm" />
+        <ChatInput mode="inline-input" origin="navbar" size="sm" />
       </div>
     </div>
   </div>

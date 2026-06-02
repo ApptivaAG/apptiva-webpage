@@ -6,6 +6,7 @@ import { useState, type FormEvent } from 'react'
 
 export default function ChatInput(props: {
   mode: 'inline-input' | 'floating-input'
+  origin: 'page-header' | 'contact-person' | 'floating-bottom' | 'navbar'
   className?: string
   size?: 'default' | 'sm'
   variant?: 'default' | 'blue' | 'blue-transparent' | 'white'
@@ -20,7 +21,7 @@ export default function ChatInput(props: {
 
     plausible('open-chat', {
       props: {
-        origin: props.mode,
+        origin: props.origin,
       },
     })
 

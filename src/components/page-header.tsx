@@ -50,12 +50,17 @@ export function PageHeader(props: {
             )}
             {props.callToAction ? (
               <div className="row-start-2 flex flex-col gap-4">
-                <ChatInput mode="inline-input" variant="white" />
+                <ChatInput
+                  mode="inline-input"
+                  origin="page-header"
+                  variant="white"
+                />
                 {props.callToAction}
               </div>
             ) : (
               <ChatInput
                 mode="inline-input"
+                origin="page-header"
                 variant="white"
                 className="row-start-2"
               />

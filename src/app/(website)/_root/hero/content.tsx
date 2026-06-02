@@ -23,6 +23,7 @@ export default function Content(props: {
           />
           <ChatInput
             mode="inline-input"
+            origin="page-header"
             variant="white"
             className="mt-8 max-lg:max-w-full"
           />
