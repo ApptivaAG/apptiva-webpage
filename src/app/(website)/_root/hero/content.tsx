@@ -14,20 +14,20 @@ export default function Content(props: {
   return (
     <>
       <div className="content relative">
-        <StyledPortableText content={content} isHero />
-        <div className="flex-row-reverse items-end lg:-mt-24 lg:flex">
+        <div className="grid-cols-4 lg:grid [&>div]:col-span-3 [&>div]:row-start-2 [&>h1]:col-span-3">
+          <StyledPortableText content={content} isHero className="" />
           <Image
-            className="mx-auto w-52 lg:rotate-12"
+            className="row-span-2 w-52 place-self-center lg:rotate-12"
             src={Sticker}
             alt="10 Jahre Apptiva Chatbots"
           />
-          <ChatInput
-            mode="inline-input"
-            origin="page-header"
-            variant="white"
-            className="mt-8 max-lg:max-w-full"
-          />
         </div>
+        <ChatInput
+          mode="inline-input"
+          origin="page-header"
+          variant="white"
+          className="mt-8 max-lg:max-w-full"
+        />
       </div>
     </>
   )

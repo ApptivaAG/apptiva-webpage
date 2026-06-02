@@ -38,18 +38,22 @@ export function PageHeader(props: {
           {props.links && (
             <BreadCrumb className="pb-2 md:pb-6" links={props.links} />
           )}
-          {props.title && <Heading level={1}>{title}</Heading>}
-          <div className="grid-cols-2 gap-4 lg:grid">
-            <div className={leadStyle}>{lead}</div>
+          <div className="grid-cols-5 gap-4 lg:grid">
+            {props.title && (
+              <Heading className="col-span-4" level={1}>
+                {title}
+              </Heading>
+            )}
+            <div className={leadStyle + ' col-span-4 row-start-2'}>{lead}</div>
             {props.links?.some((link) => link.name === 'Chatbots') && (
               <Image
-                className="row-span-2 mx-auto w-52 place-self-center pt-4 max-lg:hidden lg:rotate-12"
+                className="row-span-2 mx-auto w-52 place-self-end pb-24 max-lg:hidden lg:rotate-12"
                 src={Sticker}
                 alt="10 Jahre Apptiva Chatbots"
               />
             )}
             {props.callToAction ? (
-              <div className="row-start-2 flex flex-col gap-4">
+              <div className="col-span-5 flex flex-col gap-4">
                 <ChatInput
                   mode="inline-input"
                   origin="page-header"
@@ -62,7 +66,7 @@ export function PageHeader(props: {
                 mode="inline-input"
                 origin="page-header"
                 variant="white"
-                className="row-start-2"
+                className="col-span-5"
               />
             )}
           </div>
