@@ -21,12 +21,12 @@ export default async function Blog() {
   return (
     <>
       <PageHeader
-        title="Blog"
-        lead="Aktuelles rund um die Apptiva"
+        title="Insights zu KI, Software & Apptiva"
+        lead="Aktuelle Beiträge zu KI, Softwareentwicklung, digitalen Lösungen und Einblicken aus dem Alltag der Apptiva."
         links={[{ name: 'Blog', href: '/blog' }]}
       />
       <div className="full bg-primary">
-        <div className="content ">
+        <div className="content">
           <Suspense
             fallback={
               <p className="pb-64 pt-8 text-xl font-bold">Lade Blogposts...</p>
