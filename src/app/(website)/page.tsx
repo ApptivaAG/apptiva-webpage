@@ -3,7 +3,6 @@ import Hero from '@/app/(website)/_root/hero'
 import ModulesPage from './modules/page'
 import { Metadata } from 'next'
 import { rootUrl } from '../env'
-import ChatInput from '@/components/chat-input'
 
 const title =
   'Apptiva AG | KI-Chatbots & individuelle Softwareentwicklung aus Luzern'
@@ -25,11 +24,6 @@ export default async function Home() {
   return (
     <>
       <Hero />
-      <section className="full bg-base-grey pb-16 pt-8">
-        <div className="content">
-          <ChatInput />
-        </div>
-      </section>
       <ModulesPage />
     </>
   )

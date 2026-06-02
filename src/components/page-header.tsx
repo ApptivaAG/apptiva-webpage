@@ -39,7 +39,7 @@ export function PageHeader(props: {
             <BreadCrumb className="pb-2 md:pb-6" links={props.links} />
           )}
           {props.title && <Heading level={1}>{title}</Heading>}
-          <div className="grid-cols-2 gap-8 lg:grid">
+          <div className="grid-cols-2 gap-4 lg:grid">
             <div className={leadStyle}>{lead}</div>
             {props.links?.some((link) => link.name === 'Chatbots') && (
               <Image
