@@ -31,7 +31,7 @@ export async function subscribeToNewsletter(
   if (!email) {
     return {
       state: 'error',
-      error: 'Bitte die Email-Adresse eintragen.',
+      error: 'Bitte die E-Mail-Adresse eintragen.',
     } as const
   }
 

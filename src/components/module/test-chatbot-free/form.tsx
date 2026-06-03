@@ -42,7 +42,7 @@ export default function TestChatbotForm() {
         <input type="text" name="kind" value="testChatbot" readOnly />
       </p>
       <div>
-        <Label>Email-Adresse</Label>
+        <Label>E-Mail-Adresse</Label>
         <Input
           type="email"
           name="email"

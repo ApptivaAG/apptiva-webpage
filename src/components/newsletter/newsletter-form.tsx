@@ -33,7 +33,7 @@ export default function NewsletterForm() {
         action={formAction}
       >
         <div>
-          <Label htmlFor="newsletter-email">Deine Email-Adresse</Label>
+          <Label htmlFor="newsletter-email">Deine E-Mail-Adresse</Label>
           <Input
             onFocus={() => setEngaged(true)}
             intent="outline"

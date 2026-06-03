@@ -50,7 +50,7 @@ export default function Form() {
         />
       </div>
       <div>
-        <Label>Email-Adresse</Label>
+        <Label>E-Mail-Adresse</Label>
         <Input
           type="email"
           name="email"

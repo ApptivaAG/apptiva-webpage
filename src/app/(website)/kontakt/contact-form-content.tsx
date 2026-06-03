@@ -54,7 +54,7 @@ export const ContactFormContent = () => {
         />
       </div>
       <div>
-        <Label htmlFor="email">Email-Adresse</Label>
+        <Label htmlFor="email">E-Mail-Adresse</Label>
         <Input
           intent="default"
           id="email"
