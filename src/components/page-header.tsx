@@ -31,6 +31,8 @@ export function PageHeader(props: {
     <StyledPortableText spreadParagraphs={false} content={props.lead} />
   )
 
+  const isChatbotOffer = props.links?.some((link) => link.name === 'Chatbots')
+
   return (
     <>
       <header className="full mt-[-8rem] min-h-fit animate-gradient items-center bg-gradient-to-br from-primary-light to-primary-dark bg-300% pb-20 pt-32 text-base-white md:pb-24 md:pt-44">
@@ -40,12 +42,15 @@ export function PageHeader(props: {
           )}
           <div className="grid-cols-5 gap-4 lg:grid">
             {props.title && (
-              <Heading className="col-span-4" level={1}>
+              <Heading
+                className={isChatbotOffer ? `col-span-4` : 'col-span-5'}
+                level={1}
+              >
                 {title}
               </Heading>
             )}
             <div className={leadStyle + ' col-span-4 row-start-2'}>{lead}</div>
-            {props.links?.some((link) => link.name === 'Chatbots') && (
+            {isChatbotOffer && (
               <Image
                 className="row-span-2 mx-auto w-52 place-self-end pb-24 max-lg:hidden lg:rotate-12"
                 src={Sticker}
