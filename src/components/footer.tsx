@@ -202,6 +202,11 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/angebot/development/prozesse-automatisieren">
+                    <UnderlineForLink>Prozesse automatisieren</UnderlineForLink>
+                  </Link>
+                </li>
+                <li>
                   <Link href="/angebot/development/ki-agenten">
                     <UnderlineForLink>KI-Agenten</UnderlineForLink>
                   </Link>
