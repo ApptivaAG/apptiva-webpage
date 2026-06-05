@@ -197,6 +197,17 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
+                  <a
+                    href="https://docs.bubble-chat.ch/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <UnderlineForLink>
+                      Bubble-Chat Dokumentation
+                    </UnderlineForLink>
+                  </a>
+                </li>
+                <li>
                   <Link href="/angebot/development">
                     <UnderlineForLink>Softwareentwicklung</UnderlineForLink>
                   </Link>
