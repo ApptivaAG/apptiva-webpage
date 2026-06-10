@@ -5,6 +5,7 @@ const { withPlausibleProxy } = require('next-plausible')
  * @type {import('next').NextConfig}
  */
 const config = {
+  output: 'standalone',
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   trailingSlash: false,
   images: {
