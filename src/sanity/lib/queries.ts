@@ -131,7 +131,7 @@ const PersonSelection = {
   slogan: q.string().optional(),
   contact: q('contact')
     .grab$({
-      mail: q.string().optional().default('Keine Email-Adresse'),
+      mail: q.string().optional().default('Keine E-Mail-Adresse'),
       phone: q.string().optional().default('Keine Telefonnummer'),
     })
     .nullable(),
