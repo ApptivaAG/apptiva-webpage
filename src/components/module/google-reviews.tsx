@@ -46,7 +46,7 @@ export default async function GoogleReviews(props: { module?: ModuleData }) {
         level={isLevel(1) ? 'one' : 'two'}
         id={formatIds(title)}
       >
-        <div className="content space-y-6 md:space-y-8">
+        <div className="content">
           <div className="max-w-3xl space-y-3">
             <Heading level={isLevel(1) ? 2 : 3} size={isLevel(1) ? 3 : 4}>
               {title}
@@ -70,55 +70,55 @@ export default async function GoogleReviews(props: { module?: ModuleData }) {
               )}
             </div>
           </div>
+        </div>
 
-          <Carousel
-            numberOfSlides={reviewsData.reviews.length}
-            align="start"
-            loop={false}
-            className="pb-12 md:pb-16"
-          >
-            <CarouselContent className="gap-6 md:gap-8">
-              {reviewsData.reviews.map((review, index) => (
-                <CarouselItem
-                  key={review.id}
-                  index={index}
-                  className="basis-full md:basis-1/3"
-                >
-                  <Card className="flex h-full flex-col gap-4 border-primary/10 bg-base-white p-6 shadow-sm md:p-8">
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="flex items-center gap-3">
-                        <ReviewerAvatar
-                          name={review.authorName}
-                          imageUrl={review.authorPhotoUrl}
-                        />
-                        <div>
-                          <div className="font-semibold text-primary">
-                            {review.authorName}
-                          </div>
-                          <div className="mt-1">
-                            <RatingStars rating={review.rating} />
-                            <div className="mt-1 text-sm text-primary/60">
-                              {review.relativeTimeDescription ??
-                                formatPublishTime(review.publishTime)}
-                            </div>
+        <Carousel
+          numberOfSlides={reviewsData.reviews.length}
+          align="start"
+          loop={false}
+          className="full pb-20"
+        >
+          <CarouselContent className="gap-6 md:gap-8">
+            {reviewsData.reviews.map((review, index) => (
+              <CarouselItem
+                key={review.id}
+                index={index}
+                className="basis-full md:basis-1/3"
+              >
+                <Card className="flex h-full flex-col gap-4 border-primary/10 bg-base-white p-6 shadow-sm md:p-8">
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="flex items-center gap-3">
+                      <ReviewerAvatar
+                        name={review.authorName}
+                        imageUrl={review.authorPhotoUrl}
+                      />
+                      <div>
+                        <div className="font-semibold text-primary">
+                          {review.authorName}
+                        </div>
+                        <div className="mt-1">
+                          <RatingStars rating={review.rating} />
+                          <div className="mt-1 text-sm text-primary/60">
+                            {review.relativeTimeDescription ??
+                              formatPublishTime(review.publishTime)}
                           </div>
                         </div>
                       </div>
-                      <FaGoogle
-                        className="mt-1 shrink-0 text-lg text-primary/50"
-                        aria-label="Google Bewertung"
-                      />
                     </div>
+                    <FaGoogle
+                      className="mt-1 shrink-0 text-lg text-primary/50"
+                      aria-label="Google Bewertung"
+                    />
+                  </div>
 
-                    <p className="line-clamp-6 text-base leading-relaxed text-primary/90">
-                      {review.text}
-                    </p>
-                  </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
-        </div>
+                  <p className="line-clamp-6 text-base leading-relaxed text-primary/90">
+                    {review.text}
+                  </p>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
       </Section>
     </>
   )
