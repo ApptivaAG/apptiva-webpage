@@ -1,4 +1,5 @@
 import Customers from '@/components/customers'
+import GoogleReviews from '@/components/module/google-reviews'
 import Partners from '@/components/partners'
 import Testimonials from '@/components/testimonials'
 import { mediaPageQuery } from '@/sanity/lib/queries'
@@ -46,6 +47,7 @@ export default async function MediaPage() {
   const testimonials = <Testimonials />
   const customers = <Customers />
   const partners = <Partners />
+  const googleReviews = <GoogleReviews />
 
   /**
    * todo: Implement Media Page
@@ -60,6 +62,7 @@ export default async function MediaPage() {
       customers={customers}
       testimonials={testimonials}
       partners={partners}
+      googleReviews={googleReviews}
     />
   ) : (
     <Media
@@ -67,6 +70,7 @@ export default async function MediaPage() {
       customers={customers}
       testimonials={testimonials}
       partners={partners}
+      googleReviews={googleReviews}
     />
   )
 }

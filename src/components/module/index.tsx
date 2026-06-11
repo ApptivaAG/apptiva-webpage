@@ -17,6 +17,7 @@ export default function Module(props: {
   customers: React.ReactNode
   testimonials: React.ReactNode
   partners: React.ReactNode
+  googleReviews: React.ReactNode
 }) {
   const { module } = props
 
@@ -65,6 +66,9 @@ export default function Module(props: {
 
     case 'documents':
       return <Docs module={module} />
+
+    case 'google-reviews':
+      return props.googleReviews
 
     default:
       return <div>Modultyp wählen</div>
