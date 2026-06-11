@@ -54,3 +54,14 @@ Test all 3 contact forms with production Resend API:
 3. **Chatbot demo** (`/angebot/chatbots/demo-vereinbaren`) → `bubble-chat@apptiva.ch`
 
 **Verify**: Sender copy + internal copy both arrive, check [Resend dashboard](https://resend.com/emails)
+
+## Google Reviews Module
+
+The Google Reviews module fetches review data server-side from the Google Places API.
+
+Required environment variables:
+
+- `GOOGLE_REVIEWS_API_KEY`
+- `GOOGLE_REVIEWS_PLACE_ID`
+
+If either value is missing or the request fails, the module renders nothing.

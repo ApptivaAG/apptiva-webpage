@@ -20,7 +20,7 @@ export default defineType({
           type: 'block',
         }),
       ],
-      hidden: isNotType('projects', 'team'),
+      hidden: isNotType('projects', 'team', 'google-reviews'),
     }),
 
     defineField({
@@ -34,6 +34,7 @@ export default defineType({
           { title: 'Kunden', value: 'customers' },
           { title: 'Partner', value: 'partners' },
           { title: 'Testimonials', value: 'testimonials' },
+          { title: 'Google Bewertungen', value: 'google-reviews' },
           { title: 'Projekte', value: 'projects' },
           { title: 'Preise', value: 'prices' },
           { title: 'FAQs', value: 'faqs' },
@@ -58,7 +59,7 @@ export default defineType({
           { title: 'Submodul', value: 2 },
         ],
       },
-      hidden: isNotType('cards', 'faqs', 'text'),
+      hidden: isNotType('cards', 'faqs', 'text', 'google-reviews'),
     }),
     defineField({
       name: 'layout',
@@ -74,7 +75,7 @@ export default defineType({
           { title: 'Bild: Breite Text', value: 'popout' },
         ],
       },
-      hidden: isNotType('cards', 'text', 'image'),
+      hidden: isNotType('cards', 'text', 'image', 'google-reviews'),
     }),
     defineField({
       name: 'style',
@@ -87,7 +88,7 @@ export default defineType({
           { title: 'Grauer Hintergrund', value: 'light-gray-bg' },
         ],
       },
-      hidden: isNotType('cards', 'text', 'documents'),
+      hidden: isNotType('cards', 'text', 'documents', 'google-reviews'),
     }),
     defineField({
       name: 'image',
@@ -105,7 +106,7 @@ export default defineType({
           { title: 'Bild Rechts', value: 'right' },
         ],
       },
-      hidden: isNotType('text'),
+      hidden: isNotType('text', 'google-reviews'),
     }),
     defineField({
       name: 'documents',
@@ -138,7 +139,8 @@ export default defineType({
         'contact',
         'prices',
         'image',
-        'test-chatbot'
+        'test-chatbot',
+        'google-reviews'
       ),
     }),
 

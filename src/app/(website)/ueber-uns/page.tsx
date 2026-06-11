@@ -1,4 +1,5 @@
 import Customers from '@/components/customers'
+import GoogleReviews from '@/components/module/google-reviews'
 import Partners from '@/components/partners'
 import Testimonials from '@/components/testimonials'
 import { aboutPageQuery } from '@/sanity/lib/queries'
@@ -47,6 +48,7 @@ export default async function AboutPage() {
   const testimonials = <Testimonials />
   const customers = <Customers />
   const partners = <Partners />
+  const googleReviews = <GoogleReviews />
 
   return isEnabled ? (
     <AboutPreview
@@ -54,6 +56,7 @@ export default async function AboutPage() {
       customers={customers}
       testimonials={testimonials}
       partners={partners}
+      googleReviews={googleReviews}
     />
   ) : (
     <About
@@ -61,6 +64,7 @@ export default async function AboutPage() {
       customers={customers}
       testimonials={testimonials}
       partners={partners}
+      googleReviews={googleReviews}
     />
   )
 }

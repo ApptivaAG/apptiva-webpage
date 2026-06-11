@@ -10,6 +10,7 @@ export default function MediaPreview(props: {
   customers: React.ReactNode
   testimonials: React.ReactNode
   partners: React.ReactNode
+  googleReviews: React.ReactNode
 }) {
   const { data } = useQuery<MediaPageQueryData>(
     mediaPageQuery.query,
@@ -22,6 +23,7 @@ export default function MediaPreview(props: {
       customers={props.customers}
       testimonials={props.testimonials}
       partners={props.partners}
+      googleReviews={props.googleReviews}
     />
   )
 }
