@@ -82,6 +82,13 @@
   .content > * {
     grid-column: content;
   }
+
+  strong,
+  b,
+  .font-bold {
+    letter-spacing: 0.04em;
+  }
+
   .popout {
     grid-column: popout;
   }
