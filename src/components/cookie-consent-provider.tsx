@@ -6,6 +6,9 @@ import { cookieConsentConfig } from './cookie-consent.config'
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void
+    Snitcher?: {
+      giveCookieConsent?: () => void
+    }
   }
 }
 
@@ -18,18 +21,24 @@ async function initCookieConsent() {
 
     /** Fires on every page load when valid consent already exists. */
     onConsent: () => {
-      if (CookieConsent.acceptedCategory('analytics')) enableGoogleTag()
+      if (CookieConsent.acceptedCategory('analytics')) enableAnalyticsTools()
     },
 
     /** Fires when the user actively changes their preferences. */
     onChange: () => {
       if (CookieConsent.acceptedCategory('analytics')) {
-        enableGoogleTag()
+        enableAnalyticsTools()
       } else {
         disableGoogleTag()
       }
     },
   })
+}
+
+/** Enables all analytics tools that require the analytics consent category. */
+function enableAnalyticsTools() {
+  enableGoogleTag()
+  enableSnitcherConsent()
 }
 
 /** Injects gtag.js and updates Google Consent Mode to granted. */
@@ -55,6 +64,11 @@ function enableGoogleTag() {
   }
 }
 
+/** Grants Snitcher cookie consent after the visitor accepts analytics cookies. */
+function enableSnitcherConsent() {
+  window.Snitcher?.giveCookieConsent?.()
+}
+
 /** Updates Consent Mode to denied and removes all Google cookies. */
 function disableGoogleTag() {
   window.gtag?.('consent', 'update', {
@@ -63,7 +77,6 @@ function disableGoogleTag() {
     ad_user_data: 'denied',
     ad_personalization: 'denied',
   })
-
   ;['_ga', '_gid', '_gcl_au'].forEach((name) => {
     document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.${window.location.hostname}`
   })

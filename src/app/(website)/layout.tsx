@@ -4,6 +4,7 @@ import { DisableDraftMode } from '@/components/disable-draft-mode'
 import FloatingChatInput from '@/components/floating-chat-input'
 import Footer from '@/components/footer'
 import { Schema } from '@/components/schema'
+import SnitcherScript from '@/components/snitcher-script'
 import { organizationSchema } from '@/lib/schema/organization'
 import type { Metadata } from 'next'
 import PlausibleProvider from 'next-plausible'
@@ -61,6 +62,7 @@ export default async function RootLayout({
     <html lang="de" className={gentona.className}>
       <head>
         <PlausibleProvider domain="apptiva.ch" />
+        <SnitcherScript />
         <link rel="llms" href="/llms.txt" type="text/markdown" />
         <link rel="llms-full" href="/llms.txt" type="text/markdown" />
         <script
