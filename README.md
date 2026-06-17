@@ -29,11 +29,17 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Deployment
 
-This project is deployed on [Vercel](https://vercel.com), the platform from the creators of Next.js.
+### Production (Coolify)
 
-For more information about Next.js deployment, check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment).
+The production site is hosted on our Coolify server at [https://apptiva.ch](https://apptiva.ch).
+
+On every push to the `master` branch, a Docker image is built via [GitHub Actions](.github/workflows/) and pushed to GitHub Container Registry. A webhook on Coolify then pulls the latest image and redeploys the service.
+
+### Preview (Vercel)
+
+Non-master branches are automatically deployed as preview environments on [Vercel](https://vercel.com), the platform from the creators of Next.js. Each pull request gets a unique preview URL.
 
 ## Email Testing (React-Email v6 + Resend)
 
@@ -54,6 +60,27 @@ Test all 3 contact forms with production Resend API:
 3. **Chatbot demo** (`/angebot/chatbots/demo-vereinbaren`) → `bubble-chat@apptiva.ch`
 
 **Verify**: Sender copy + internal copy both arrive, check [Resend dashboard](https://resend.com/emails)
+
+### Local Request Capture (Resend)
+
+To inspect the exact request payload sent to Resend (without actually sending), run the local catcher:
+
+```bash
+pnpm resend:catch
+```
+
+This starts a server on `http://localhost:3999` that accepts `POST /emails` and `POST /emails/batch`, logs the full request (from, to, subject, rendered html, auth header), and writes the captured data to `captured/{kind}/`:
+
+- **`captured/{kind}/request.json`** — full request snapshot (auth token redacted)
+- **`captured/{kind}/email-{N}.html`** — rendered HTML of each email in the batch
+
+The `{kind}` is inferred from the recipient email address (`bubble-chat@apptiva.ch` → `bubble`, `info@apptiva.ch` → `apptiva`).
+
+These files are tracked in git — when the email templates change, `git diff` on `captured/bubble/email-1.html` shows exactly what changed.
+
+The catcher returns a mock success response so the server action completes normally. No real emails are sent.
+
+To enable, `RESEND_BASE_URL=http://localhost:3999` is already set in `.env.local` (gitignored). Comment it out to send real emails again.
 
 ## Google Reviews Module
 
