@@ -12,6 +12,9 @@ export function ProjectTeaser(props: {
   category?: Category
 }) {
   const { project, category } = props
+  const logoUrl = project.customerRef?.logo
+    ? urlForImage(project.customerRef.logo).url()
+    : undefined
   const projectUrl = category
     ? `/projekte/${project.slug}?category=${category}`
     : `/projekte/${project.slug}`
@@ -28,9 +31,14 @@ export function ProjectTeaser(props: {
             <div
               className={`size-full bg-primary [mask-mode:alpha]`}
               style={{
-                mask: `url(${urlForImage(project.customerRef.logo).url()}) no-repeat`,
+                maskImage: `url("${logoUrl}")`,
+                maskRepeat: 'no-repeat',
                 maskPosition: 'center',
                 maskSize: 'contain',
+                WebkitMaskImage: `url("${logoUrl}")`,
+                WebkitMaskRepeat: 'no-repeat',
+                WebkitMaskPosition: 'center',
+                WebkitMaskSize: 'contain',
               }}
               title={project.customerRef.customerName}
             />
