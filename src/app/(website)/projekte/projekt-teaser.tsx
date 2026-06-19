@@ -13,7 +13,10 @@ export function ProjectTeaser(props: {
 }) {
   const { project, category } = props
   const logoUrl = project.customerRef?.logo
-    ? urlForImage(project.customerRef.logo).url()
+    ? urlForImage(project.customerRef.logo)
+        .format('png')
+        .width(1200)
+        .url()
     : undefined
   const projectUrl = category
     ? `/projekte/${project.slug}?category=${category}`
