@@ -187,26 +187,43 @@ export default function Footer() {
 
             <div>
               <Heading level={2} size={4} className="pb-4">
-                Angebot
+                KI-Chatbot
               </Heading>
 
               <ul>
-                <li>
+                <li className="leading-10">
                   <Link href="/angebot/chatbots">
                     <UnderlineForLink>Chatbots</UnderlineForLink>
                   </Link>
                 </li>
-                <li>
+                <li className="leading-10">
+                  <Link href="/angebot/chatbots/ki-assistent-website">
+                    <UnderlineForLink className="inline-block leading-[1.1]">
+                      Kundenanfragen <br />
+                      automatisch beantworten
+                    </UnderlineForLink>
+                  </Link>
+                </li>
+                <li className="leading-7">
                   <a
                     href="https://docs.bubble-chat.ch/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <UnderlineForLink>
-                      Bubble-Chat Dokumentation
+                    <UnderlineForLink className="inline-block leading-[1.1]">
+                      Bubble-Chat <br />
+                      Dokumentation
                     </UnderlineForLink>
                   </a>
                 </li>
+              </ul>
+            </div>
+
+            <div>
+              <Heading level={2} size={4} className="pb-4">
+                KI &amp; Apps
+              </Heading>
+              <ul>
                 <li>
                   <Link href="/angebot/development">
                     <UnderlineForLink>Softwareentwicklung</UnderlineForLink>
@@ -235,29 +252,6 @@ export default function Footer() {
                 <li>
                   <Link href="/angebot/development/app-entwicklung">
                     <UnderlineForLink>App Entwicklung</UnderlineForLink>
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <Heading level={2} size={4} className="pb-4">
-                Workshops
-              </Heading>
-              <ul>
-                <li>
-                  <Link href="/angebot/architektur-review">
-                    <UnderlineForLink>Architektur Review</UnderlineForLink>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/angebot/persona-workshop">
-                    <UnderlineForLink>Persona Workshop</UnderlineForLink>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/angebot/user-centered-design-workshop">
-                    <UnderlineForLink>User-Centered Design</UnderlineForLink>
                   </Link>
                 </li>
               </ul>
