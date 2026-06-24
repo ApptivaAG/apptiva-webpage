@@ -190,13 +190,13 @@ export default function Footer() {
                 KI-Chatbot
               </Heading>
 
-              <ul>
-                <li className="leading-10">
+              <ul className="*:pb-1.5">
+                <li>
                   <Link href="/angebot/chatbots">
                     <UnderlineForLink>Chatbots</UnderlineForLink>
                   </Link>
                 </li>
-                <li className="leading-10">
+                <li>
                   <Link href="/angebot/chatbots/ki-assistent-website">
                     <UnderlineForLink className="inline-block leading-[1.1]">
                       Kundenanfragen <br />
@@ -204,7 +204,7 @@ export default function Footer() {
                     </UnderlineForLink>
                   </Link>
                 </li>
-                <li className="leading-7">
+                <li>
                   <a
                     href="https://docs.bubble-chat.ch/"
                     target="_blank"
