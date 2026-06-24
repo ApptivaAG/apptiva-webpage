@@ -197,8 +197,11 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/angebot/chatbots/ki-assistent-website">
-                    <UnderlineForLink className="inline-block leading-[1.1]">
+                  <Link
+                    className="inline-block leading-[1.1]"
+                    href="/angebot/chatbots/ki-assistent-website"
+                  >
+                    <UnderlineForLink>
                       Kundenanfragen <br />
                       automatisch beantworten
                     </UnderlineForLink>
@@ -209,8 +212,9 @@ export default function Footer() {
                     href="https://docs.bubble-chat.ch/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="inline-block leading-[1.1]"
                   >
-                    <UnderlineForLink className="inline-block leading-[1.1]">
+                    <UnderlineForLink>
                       Bubble-Chat <br />
                       Dokumentation
                     </UnderlineForLink>
