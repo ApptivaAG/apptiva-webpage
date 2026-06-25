@@ -3,10 +3,10 @@ import { load } from '@/sanity/lib/sanityFetch'
 import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
-import ProjectDetail from './detail'
-import ProjectsPreview from './preview'
 import type { SearchParams } from 'nuqs/server'
 import { loadSearchParams } from '../search-params'
+import ProjectDetail from './detail'
+import ProjectsPreview from './preview'
 
 export async function generateMetadata(props: {
   params: Promise<{ slug: string }>
@@ -14,18 +14,22 @@ export async function generateMetadata(props: {
   const { published: project } = await load(
     projectBySlugQuery,
     false,
-    (await props.params),
+    await props.params,
     ['project']
   )
 
   const url = `/projekte/${project.slug}`
 
+  const metaTitle = project.meta?.title || project.projectName || 'Projekt'
+  const metaDescription =
+    project.meta?.description || project.description || 'Ohne Beschreibung'
+
   return {
-    title: `${project.projectName ?? 'Projekt'} | Projekte`,
-    description: project.description ?? 'Ohne Beschreibung',
+    title: `${metaTitle} | Projekte`,
+    description: metaDescription,
     alternates: { canonical: url },
     openGraph: {
-      title: project.projectName ?? 'Projekt',
+      title: metaTitle,
       url,
     },
   }

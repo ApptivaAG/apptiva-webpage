@@ -46,6 +46,13 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'meta',
+      title: 'SEO Metadata',
+      type: 'meta',
+      description:
+        'Meta-Titel und -Beschreibung für Suchmaschinen. Falls leer, werden Name und Beschreibung verwendet.',
+    }),
+    defineField({
       name: 'link',
       title: 'Link zum Projekt',
       type: 'string',

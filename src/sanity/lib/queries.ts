@@ -1,5 +1,4 @@
 import { InferType, nullToUndefined, q, sanityImage } from 'groqd'
-import doc from '../schemas/objects/doc'
 
 export const Slug = ['slug.current', q.string().optional()] satisfies [
   string,
@@ -72,6 +71,12 @@ export const Projects = q('projects')
       .nullable(),
     order: q.number().optional().nullable(),
     description: q.string().optional().nullable(),
+    meta: q('meta')
+      .grab$({
+        title: q.string().optional(),
+        description: q.string().optional(),
+      })
+      .nullable(),
   })
   .order('order asc')
   .nullable()
@@ -294,6 +299,12 @@ export const projectsQuery = q('*')
     slug: Slug,
     order: q.number().optional(),
     description: q.string().optional(),
+    meta: q('meta')
+      .grab$({
+        title: q.string().optional(),
+        description: q.string().optional(),
+      })
+      .nullable(),
     tags: Tags,
   })
   .order('order asc')
@@ -309,6 +320,12 @@ export const projectBySlugQuery = q('*')
     image: sanityImageWithAlt(),
     imageHeader: sanityImageWithAlt('imageHeader'),
     description: q.string().optional(),
+    meta: q('meta')
+      .grab$({
+        title: q.string().optional(),
+        description: q.string().optional(),
+      })
+      .nullable(),
     tasks: q.string().optional(),
     time: q.string().optional(),
     technologies: q.string().optional(),
