@@ -1,18 +1,24 @@
 import BreadCrumb from '@/components/bread-crumb'
 import ContactPerson from '@/components/contact-person'
 import Heading from '@/components/heading'
+import ProjectArticleSchema from '@/components/project-article-schema'
 import ProjectPortableText from '@/components/project-portable-text'
 import SanityImage from '@/components/sanity-image'
-import { ProjectBySlugQueryData } from '../types'
-import Image from 'next/image'
 import { urlForImage } from '@/sanity/lib/image'
 import { Category } from '../search-params'
+import { ProjectBySlugQueryData } from '../types'
 
 export default function ProjectDetail(props: {
   project: ProjectBySlugQueryData
   category?: Category
 }) {
   const { project, category } = props
+
+  // Prepare image URL for schema
+  const imageUrl = project.imageHeader || project.image
+  const schemaImageUrl = imageUrl
+    ? urlForImage(imageUrl)?.width(1200).height(630).url()
+    : undefined
 
   // Build breadcrumb based on category
   const breadcrumbLinks =
@@ -46,6 +52,19 @@ export default function ProjectDetail(props: {
 
   return (
     <>
+      <ProjectArticleSchema
+        projectName={project.projectName ?? 'Projekt'}
+        slug={project.slug ?? ''}
+        description={project.description ?? undefined}
+        imageUrl={schemaImageUrl}
+        customerName={
+          project.customerRef?.customerName ?? project.customer ?? undefined
+        }
+        technologies={project.technologies ?? undefined}
+        tags={project.tags ?? undefined}
+        dateCreated={project._createdAt}
+        dateModified={project._updatedAt}
+      />
       <header className="full relative mt-[-8rem] min-h-fit animate-gradient items-center bg-gradient-to-br from-primary-light to-primary-dark bg-300% pb-8 pt-32 text-base-white md:pb-16 md:pt-44">
         <div className="content">
           <BreadCrumb className="pb-6" links={breadcrumbLinks} />

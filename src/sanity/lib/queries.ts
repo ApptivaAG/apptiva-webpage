@@ -315,6 +315,8 @@ export const projectBySlugQuery = q('*')
   .slice(0)
   .grab$({
     _id: q.string(),
+    _createdAt: q.string(),
+    _updatedAt: q.string(),
     projectName: q.string().optional(),
     slug: Slug,
     image: sanityImageWithAlt(),
@@ -326,6 +328,7 @@ export const projectBySlugQuery = q('*')
         description: q.string().optional(),
       })
       .nullable(),
+    tags: Tags,
     tasks: q.string().optional(),
     time: q.string().optional(),
     technologies: q.string().optional(),
