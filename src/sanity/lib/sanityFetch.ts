@@ -12,7 +12,6 @@ export const runQuery = makeSafeQueryRunner(
     params: Record<string, number | string> = {},
     tags?: string[]
   ) => {
-    console.log('sanity runQuery: ', query, params, tags)
     return client
       .withConfig({
         token: token,
@@ -31,7 +30,6 @@ export async function load<T extends GroqdQuery>(
   params: Record<string, number | string> = {},
   cacheTags?: string[]
 ) {
-  console.log('sanity load: ', query, params, cacheTags)
   const result = await loadQuery<InferType<T>>(query.query, params, {
     next: { tags: cacheTags },
   })
