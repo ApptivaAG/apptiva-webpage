@@ -9,7 +9,14 @@ const config = {
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   trailingSlash: false,
   images: {
-    unoptimized: true,
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+        pathname: '**',
+      },
+    ],
   },
   experimental: {
     taint: true,
