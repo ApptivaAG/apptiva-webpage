@@ -7,16 +7,24 @@ import { stegaEnabled, token } from '../env'
 import { loadQuery } from './store'
 
 export const runQuery = makeSafeQueryRunner(
-  async (
-    query,
-    params: Record<string, number | string> = {},
-    tags?: string[]
-  ) => {
+  async (query, params: Record<string, number | string> = {}, tags?: string[]) => {
+    const isDraftMode = (await draftMode()).isEnabled
+
+    if (isDraftMode && !token) {
+      throw new Error(
+        'The `SANITY_API_READ_TOKEN` environment variable is required.'
+      )
+    }
+
     return client
       .withConfig({
         token: token,
-        perspective: 'published',
-        useCdn: true,
+        perspective: isDraftMode ? 'previewDrafts' : 'published',
+        useCdn: !isDraftMode,
+        stega: {
+          enabled: isDraftMode,
+          studioUrl: '/studio',
+        },
       })
       .fetch(query, params, { next: { tags } })
   }
@@ -30,9 +38,20 @@ export async function load<T extends GroqdQuery>(
   params: Record<string, number | string> = {},
   cacheTags?: string[]
 ) {
-  const result = await loadQuery<InferType<T>>(query.query, params, {
-    next: { tags: cacheTags },
-  })
+  const result = await loadQuery<InferType<T>>(
+    query.query,
+    params,
+    isDraftMode
+      ? {
+          perspective: 'previewDrafts', // Should eventually be changed to drafts again, since previewDrafts is deprecated and will be removed in the future.
+          useCdn: false,
+          stega: true, // keep stega true for draft mode to enable direct editing on preview. Clean stega in styles where necessary.
+          next: { tags: cacheTags },
+        }
+      : {
+          next: { tags: cacheTags },
+        }
+  )
 
   const parsed = query.schema.safeParse(result.data) as z.SafeParseReturnType<
     InferType<T>,
