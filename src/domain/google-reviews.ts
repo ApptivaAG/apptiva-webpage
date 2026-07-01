@@ -73,11 +73,9 @@ export async function getGoogleReviews(): Promise<GoogleReviewsData | null> {
     const response = await fetch(
       `https://places.googleapis.com/v1/places/${encodeURIComponent(placeId)}?${searchParams.toString()}`,
       {
+        cache: 'no-store',
         headers: {
           'X-Goog-Api-Key': apiKey,
-        },
-        next: {
-          revalidate: 60 * 60 * 6,
         },
       }
     )
