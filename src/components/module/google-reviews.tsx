@@ -19,10 +19,6 @@ export default async function GoogleReviews(props: { module?: ModuleData }) {
   const reviewsData = await getGoogleReviews()
 
   if (!reviewsData?.reviews.length) {
-    if (process.env.NODE_ENV !== 'production') {
-      console.warn('[Google Reviews]', 'Module rendered nothing because no reviews were available')
-    }
-
     return null
   }
 
