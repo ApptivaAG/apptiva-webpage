@@ -106,7 +106,8 @@ export async function getGoogleReviews(): Promise<GoogleReviewsData | null> {
     const response = await fetch(
       `https://places.googleapis.com/v1/places/${encodeURIComponent(placeId)}?${searchParams.toString()}`,
       {
-        cache: 'no-store',
+        cache: 'force-cache',
+        next: { revalidate: false },
         signal: AbortSignal.timeout(GOOGLE_REVIEWS_TIMEOUT_MS),
         headers: {
           'X-Goog-Api-Key': apiKey,

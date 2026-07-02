@@ -23,6 +23,8 @@ docker build \
   --build-arg NEXT_PUBLIC_SANITY_DATASET="${NEXT_PUBLIC_SANITY_DATASET}" \
   --build-arg NEXT_PUBLIC_SANITY_API_READ_TOKEN="${NEXT_PUBLIC_SANITY_API_READ_TOKEN}" \
   --build-arg NEXT_PUBLIC_GTAG_ID="${NEXT_PUBLIC_GTAG_ID}" \
+  --build-arg GOOGLE_REVIEWS_API_KEY="${GOOGLE_REVIEWS_API_KEY}" \
+  --build-arg GOOGLE_REVIEWS_PLACE_ID="${GOOGLE_REVIEWS_PLACE_ID}" \
   -t apptiva-webpage:test \
   .
 
@@ -43,6 +45,8 @@ if [ $? -eq 0 ]; then
   echo ""
   
   docker run -p 3000:3000 \
+    -e GOOGLE_REVIEWS_API_KEY="${GOOGLE_REVIEWS_API_KEY}" \
+    -e GOOGLE_REVIEWS_PLACE_ID="${GOOGLE_REVIEWS_PLACE_ID}" \
     -e RESEND_API_KEY="${RESEND_API_KEY}" \
     -e NOTION_API_TOKEN="${NOTION_API_TOKEN}" \
     -e NOTION_DB_ID="${NOTION_DB_ID}" \
