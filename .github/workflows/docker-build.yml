@@ -53,6 +53,8 @@ jobs:
             NEXT_PUBLIC_SANITY_DATASET=${{ secrets.NEXT_PUBLIC_SANITY_DATASET }}
             NEXT_PUBLIC_SANITY_API_READ_TOKEN=${{ secrets.NEXT_PUBLIC_SANITY_API_READ_TOKEN }}
             NEXT_PUBLIC_GTAG_ID=${{ secrets.NEXT_PUBLIC_GTAG_ID }}
+            GOOGLE_REVIEWS_API_KEY=${{ secrets.GOOGLE_REVIEWS_API_KEY }}
+            GOOGLE_REVIEWS_PLACE_ID=${{ secrets.GOOGLE_REVIEWS_PLACE_ID }}
 
       - name: Trigger Coolify deployment
         if: success()
