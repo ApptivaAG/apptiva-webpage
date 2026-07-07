@@ -23,7 +23,6 @@ export default function Media(props: {
   customers: React.ReactNode
   testimonials: React.ReactNode
   partners: React.ReactNode
-  googleReviews: React.ReactNode
 }) {
   return (
     <>
@@ -40,7 +39,6 @@ export default function Media(props: {
           customers={props.customers}
           testimonials={props.testimonials}
           partners={props.partners}
-          googleReviews={props.googleReviews}
         />
       ))}
     </>

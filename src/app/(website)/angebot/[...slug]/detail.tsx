@@ -14,7 +14,6 @@ export default function ServiceDetail(props: {
   customers: React.ReactNode
   testimonials: React.ReactNode
   partners: React.ReactNode
-  googleReviews: React.ReactNode
   isPreview?: boolean
 }) {
   const serviceUrl = `/angebot/${buildBreadcrumbPath(props.service.slug, props.service.subPageOf)}`
@@ -57,7 +56,6 @@ export default function ServiceDetail(props: {
             module={module}
             customers={props.customers}
             testimonials={props.testimonials}
-            googleReviews={props.googleReviews}
           />
         </CatchErrors>
       ))}

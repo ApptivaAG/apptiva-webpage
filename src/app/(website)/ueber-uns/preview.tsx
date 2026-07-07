@@ -10,7 +10,6 @@ export default function AboutPreview(props: {
   customers: React.ReactNode
   testimonials: React.ReactNode
   partners: React.ReactNode
-  googleReviews: React.ReactNode
 }) {
   const { data } = useQuery<AboutPageQueryData>(
     aboutPageQuery.query,
@@ -23,7 +22,6 @@ export default function AboutPreview(props: {
       customers={props.customers}
       testimonials={props.testimonials}
       partners={props.partners}
-      googleReviews={props.googleReviews}
     />
   )
 }

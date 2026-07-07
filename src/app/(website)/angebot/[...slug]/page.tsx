@@ -1,6 +1,5 @@
 import { buildServicePath, buildServiceUrl } from '@/app/sitemap'
 import Customers from '@/components/customers'
-import GoogleReviews from '@/components/module/google-reviews'
 import Partners from '@/components/partners'
 import Testimonials from '@/components/testimonials'
 import type { Group } from '@/domain/customers'
@@ -91,7 +90,6 @@ export default async function Home(props: {
   const customers = <Customers groups={mapSlugToGroup(subpageSlug)} />
   const testimonials = <Testimonials />
   const partners = <Partners />
-  const googleReviews = <GoogleReviews />
 
   return isEnabled ? (
     <ServicePreview
@@ -100,7 +98,6 @@ export default async function Home(props: {
       customers={customers}
       testimonials={testimonials}
       partners={partners}
-      googleReviews={googleReviews}
     />
   ) : (
     <ServiceDetail
@@ -108,7 +105,6 @@ export default async function Home(props: {
       service={published}
       customers={customers}
       testimonials={testimonials}
-      googleReviews={googleReviews}
     />
   )
 }

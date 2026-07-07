@@ -1,5 +1,4 @@
 import Customers from '@/components/customers'
-import GoogleReviews from '@/components/module/google-reviews'
 import Partners from '@/components/partners'
 import Testimonials from '@/components/testimonials'
 
@@ -18,7 +17,6 @@ export default async function ModulesPage() {
   const testimonials = <Testimonials />
   const customers = <Customers />
   const partners = <Partners />
-  const googleReviews = <GoogleReviews />
 
   return isEnabled ? (
     <ModulesPreview
@@ -26,7 +24,6 @@ export default async function ModulesPage() {
       customers={customers}
       testimonials={testimonials}
       partners={partners}
-      googleReviews={googleReviews}
     />
   ) : (
     <ModuleWrapper
@@ -34,7 +31,6 @@ export default async function ModulesPage() {
       customers={customers}
       testimonials={testimonials}
       partners={partners}
-      googleReviews={googleReviews}
     />
   )
 }

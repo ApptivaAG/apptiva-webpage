@@ -10,7 +10,6 @@ export default function ModulesPreview(props: {
   customers: React.ReactNode
   testimonials: React.ReactNode
   partners: React.ReactNode
-  googleReviews: React.ReactNode
 }) {
   const { data } = useQuery<HomepageDataQueries>(
     homepageQuery.query,
@@ -26,7 +25,6 @@ export default function ModulesPreview(props: {
       customers={props.customers}
       testimonials={props.testimonials}
       partners={props.partners}
-      googleReviews={props.googleReviews}
     />
   )
 }

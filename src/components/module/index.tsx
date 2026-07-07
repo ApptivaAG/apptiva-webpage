@@ -11,13 +11,13 @@ import Team from './team'
 import Text from './text'
 import Docs from './docs/docs'
 import TestChatbotFree from './test-chatbot-free'
+import GoogleReviews from './google-reviews'
 
 export default function Module(props: {
   module: ModuleData
   customers: React.ReactNode
   testimonials: React.ReactNode
   partners: React.ReactNode
-  googleReviews: React.ReactNode
 }) {
   const { module } = props
 
@@ -68,7 +68,7 @@ export default function Module(props: {
       return <Docs module={module} />
 
     case 'google-reviews':
-      return props.googleReviews
+      return <GoogleReviews module={module} />
 
     default:
       return <div>Modultyp wählen</div>

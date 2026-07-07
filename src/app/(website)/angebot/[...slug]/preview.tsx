@@ -16,7 +16,6 @@ export default function ServicePreview(props: {
   customers: React.ReactNode
   testimonials: React.ReactNode
   partners: React.ReactNode
-  googleReviews: React.ReactNode
 }) {
   const { data } = useQuery<ServiceBySlugQueryData>(
     serviceBySlugQuery.query,
@@ -30,7 +29,6 @@ export default function ServicePreview(props: {
       partners={props.partners}
       customers={props.customers}
       testimonials={props.testimonials}
-      googleReviews={props.googleReviews}
       isPreview
     />
   )
