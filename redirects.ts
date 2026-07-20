@@ -79,8 +79,7 @@ export default [
   },
   {
     source: '/produktkonfiguratoren-bestehende-webshops-integrieren',
-    destination:
-      '/blog/produktkonfiguratoren-bestehende-webshops-integrieren',
+    destination: '/blog/produktkonfiguratoren-bestehende-webshops-integrieren',
     permanent: true,
   },
   {
@@ -408,12 +407,52 @@ export default [
     permanent: true,
   },
   {
+    source: '/angebot/chatbots/cms-design',
+    destination: '/angebot/chatbots',
+    permanent: true,
+  },
+  {
     source: '/architektur-review',
-    destination: '/angebot/architektur-review',
+    destination: '/angebot/development',
+    permanent: true,
+  },
+  {
+    source: '/angebot/architektur-review',
+    destination: '/angebot/development',
+    permanent: true,
+  },
+  {
+    source: '/angebot/chatbots/chatbot-analytics',
+    destination: '/angebot/chatbots',
     permanent: true,
   },
   {
     source: '/chatbots',
+    destination: '/angebot/chatbots',
+    permanent: true,
+  },
+  {
+    source: '/angebot/chatbots/chatbot-check',
+    destination: '/angebot/chatbots',
+    permanent: true,
+  },
+  {
+    source: '/angebot/chatbots/ki-power',
+    destination: '/angebot/chatbots',
+    permanent: true,
+  },
+  {
+    source: '/angebot/chatbots/live-chat',
+    destination: '/angebot/chatbots',
+    permanent: true,
+  },
+  {
+    source: '/angebot/chatbots/kennenlern-angebot',
+    destination: '/angebot/chatbots',
+    permanent: true,
+  },
+  {
+    source: '/angebot/chatbots/technologie',
     destination: '/angebot/chatbots',
     permanent: true,
   },
@@ -449,7 +488,12 @@ export default [
   },
   {
     source: '/persona-workshop',
-    destination: '/angebot/persona-workshop',
+    destination: '/kontakt',
+    permanent: true,
+  },
+  {
+    source: '/angebot/persona-workshop',
+    destination: '/kontakt',
     permanent: true,
   },
   {
@@ -483,8 +527,8 @@ export default [
     permanent: true,
   },
   {
-    source: '/user-centered-design',
-    destination: '/angebot/user-centered-design-workshop',
+    source: '/angebot/user-centered-design-workshop',
+    destination: '/kontakt',
     permanent: true,
   },
   {
