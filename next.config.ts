@@ -21,7 +21,7 @@ const config: NextConfig = {
   experimental: {
     taint: true,
   },
-  redirects: async () => redirects,
+  redirects,
 }
 
 export default withPlausibleProxy()(withMDX()(config))
