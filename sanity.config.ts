@@ -5,7 +5,6 @@
 import { StreamLanguage } from '@codemirror/language'
 import { codeInput } from '@sanity/code-input'
 import { visionTool } from '@sanity/vision'
-import { groqdPlaygroundTool } from 'groqd-playground'
 import { FaAddressCard, FaHome, FaNewspaper } from 'react-icons/fa'
 import { defineConfig } from 'sanity'
 import { media } from 'sanity-plugin-media'
@@ -66,7 +65,6 @@ export default defineConfig({
     // Vision is a tool that lets you query your content with GROQ in the studio
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({ defaultApiVersion: apiVersion }),
-    groqdPlaygroundTool(),
     media(),
     presentationTool({
       previewUrl: {
