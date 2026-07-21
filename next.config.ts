@@ -22,6 +22,17 @@ const config: NextConfig = {
     taint: true,
   },
   redirects,
+  headers: async () => [
+    {
+      source: '/assets/font/:path*',
+      headers: [
+        {
+          key: 'Access-Control-Allow-Origin',
+          value: 'https://chatbot.apptiva.ch',
+        },
+      ],
+    },
+  ],
 }
 
 export default withPlausibleProxy()(withMDX()(config))
