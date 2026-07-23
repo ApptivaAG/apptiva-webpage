@@ -1,7 +1,7 @@
+import typography from '@tailwindcss/typography'
 import type { Config } from 'tailwindcss'
 import colors from 'tailwindcss/colors'
 import animate from 'tailwindcss-animate'
-import typography from '@tailwindcss/typography'
 
 const config: Config = {
   darkMode: 'selector',
@@ -22,7 +22,10 @@ const config: Config = {
       base: ['1rem', { lineHeight: '1.5rem' }],
       lg: ['1.125rem', { lineHeight: '1.75rem' }],
       // Fluid default text size: 16px on small screens -> 20px on very large screens.
-      'fluid-base': ['clamp(1rem, 0.95rem + 0.25vw, 1.25rem)', { lineHeight: '1.6' }],
+      'fluid-base': [
+        'clamp(1rem, 0.95rem + 0.25vw, 1.25rem)',
+        { lineHeight: '1.6' },
+      ],
       xl: ['1.25rem', { lineHeight: '1.75rem' }],
       '2xl': ['1.5rem', { lineHeight: '2rem' }],
       '3xl': ['2rem', { lineHeight: '2.25rem' }],
@@ -126,7 +129,9 @@ const config: Config = {
             '--tw-prose-links': 'rgb(var(--primary))',
             '--tw-prose-bold': 'rgb(var(--primary))',
             '--tw-prose-counters': 'rgb(var(--primary) / 0.8)',
+            '--tw-prose-invert-counters': 'rgb(var(--base-white) / 0.8)',
             '--tw-prose-bullets': 'rgb(var(--primary) / 0.4)',
+            '--tw-prose-invert-bullets': 'rgb(var(--base-white) / 0.8)',
             '--tw-prose-hr': 'rgb(var(--primary) / 0.3)',
             '--tw-prose-quotes': 'rgb(var(--primary))',
             '--tw-prose-quote-borders': 'rgb(var(--primary) / 0.2)',

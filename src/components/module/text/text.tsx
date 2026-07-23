@@ -1,7 +1,7 @@
 import Heading from '@/components/heading'
 import Section from '@/components/section'
 import StyledPortableText from '@/components/styled-portable-text'
-import { ModuleData } from '@/sanity/lib/queries'
+import type { ModuleData } from '@/sanity/lib/queries'
 import { cleanStega } from '@/utils/clean-stega'
 import { cn } from '@/utils/cn'
 import { formatIds } from '@/utils/format-ids'
@@ -13,7 +13,7 @@ export default function Text(props: { module: ModuleData }) {
   const style = cleanStega(module.style)
   const darkBg = style === 'dark-bg'
 
-  const isLevel = (level: 1 | 2) => (module.level ?? 1) == level
+  const isLevel = (level: 1 | 2) => (module.level ?? 1) === level
 
   return (
     <Section

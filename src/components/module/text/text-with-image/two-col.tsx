@@ -2,7 +2,7 @@ import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
 import Section from '@/components/section'
 import StyledPortableText from '@/components/styled-portable-text'
-import { ModuleData } from '@/sanity/lib/queries'
+import type { ModuleData } from '@/sanity/lib/queries'
 import { cleanStega } from '@/utils/clean-stega'
 import { cn } from '@/utils/cn'
 import { formatIds } from '@/utils/format-ids'
@@ -11,9 +11,11 @@ import { moduleStyleToSectionIntent } from '../../utils'
 export default function TextWithImageTwoCol(props: { module: ModuleData }) {
   const { module } = props
 
-  const isLevel = (level: 1 | 2) => (module.level ?? 1) == level
+  const isLevel = (level: 1 | 2) => (module.level ?? 1) === level
   const isOrientation = (orientation: 'left' | 'right') =>
     cleanStega(module.orientation) === orientation
+  const style = cleanStega(module.style)
+  const darkBg = style === 'dark-bg'
 
   return (
     <Section
@@ -47,7 +49,12 @@ export default function TextWithImageTwoCol(props: { module: ModuleData }) {
               {module.title}
             </Heading>
             {module.content && (
-              <div className="flex-1">
+              <div
+                className={cn(
+                  'flex-1 prose text-inherit',
+                  darkBg && 'prose-invert'
+                )}
+              >
                 <StyledPortableText content={module.content} />
               </div>
             )}
