@@ -2,9 +2,9 @@
 
 import Image from 'next/image'
 import * as React from 'react'
-import { navbarData } from './Navbar'
 import apptivaLogo from './logo.svg'
 import { MediaLink, MobileLink, SimpleLink, SubMenu } from './mobile-nav-items'
+import { navbarData } from './Navbar'
 import navBurger from './nav-burger.svg'
 import { Accordion, AccordionContent, AccordionItem } from './ui/accordion'
 import Button from './ui/button'

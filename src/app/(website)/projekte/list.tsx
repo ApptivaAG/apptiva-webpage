@@ -1,10 +1,10 @@
+import Link from 'next/link'
 import { PageHeader } from '@/components/page-header'
+import Button from '@/components/ui/button'
 import Underline from '@/components/ui/underline'
 import { ProjectTeaser } from './projekt-teaser'
-import { ProjectQueryData } from './types'
-import Button from '@/components/ui/button'
-import Link from 'next/link'
 import { Category } from './search-params'
+import { ProjectQueryData } from './types'
 
 export default function ProjectList(props: {
   projects: ProjectQueryData[]

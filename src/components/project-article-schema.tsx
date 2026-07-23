@@ -1,5 +1,5 @@
-import { rootUrl } from '@/app/env'
 import type { Article, WithContext } from 'schema-dts'
+import { rootUrl } from '@/app/env'
 import { Schema } from './schema'
 
 interface ProjectArticleSchemaProps {

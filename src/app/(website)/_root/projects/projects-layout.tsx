@@ -6,8 +6,8 @@ import {
   CarouselContent,
   CarouselItem,
 } from '@/components/ui/carousel'
-import { ModuleData } from '@/sanity/lib/queries'
 import { PortableText } from '@/domain/types'
+import { ModuleData } from '@/sanity/lib/queries'
 
 export default function ProjectsLayout(props: {
   projects: ModuleData['projects']

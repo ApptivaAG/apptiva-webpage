@@ -1,8 +1,8 @@
-import { sanityImageWithAlt, Slug, Tags } from '@/sanity/lib/queries'
-import { runQuery } from '@/sanity/lib/sanityFetch'
 import { InferType, q } from 'groqd'
 import path from 'path'
 import { cache } from 'react'
+import { Slug, sanityImageWithAlt, Tags } from '@/sanity/lib/queries'
+import { runQuery } from '@/sanity/lib/sanityFetch'
 
 type CustomerData = NonNullable<InferType<typeof Customers>>[number]
 const Customers = q('*')

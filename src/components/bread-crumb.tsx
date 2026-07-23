@@ -1,7 +1,7 @@
-import { cn } from '@/utils/cn'
 import Link from 'next/link'
-import UnderlineForLink from './ui/underline-for-link'
 import React from 'react'
+import { cn } from '@/utils/cn'
+import UnderlineForLink from './ui/underline-for-link'
 
 export default function BreadCrumb(props: {
   links: { name: string; href?: string | undefined }[]

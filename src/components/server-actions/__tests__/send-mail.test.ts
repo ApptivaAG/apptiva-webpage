@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 // Mock Resend before importing sendMail
 const mockBatchSend = vi.fn()
@@ -19,7 +19,7 @@ const { sendMail } = await import('../send-mail')
 describe('sendMail Server Action', () => {
   beforeEach(() => {
     mockBatchSend.mockReset()
-    
+
     // Setup console spies
     vi.spyOn(console, 'log').mockImplementation(() => {})
     vi.spyOn(console, 'error').mockImplementation(() => {})
@@ -338,7 +338,10 @@ describe('sendMail Server Action', () => {
 
       expect(result.state).toBe('error')
       expect(result).toHaveProperty('error')
-      expect(console.error).toHaveBeenCalledWith('Error sending mail', expect.any(Object))
+      expect(console.error).toHaveBeenCalledWith(
+        'Error sending mail',
+        expect.any(Object)
+      )
     })
 
     it('should handle exceptions during send', async () => {

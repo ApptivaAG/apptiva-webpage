@@ -3,11 +3,12 @@ import { EmblaOptionsType } from 'embla-carousel'
 import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
 import { useCallback, useEffect, useState } from 'react'
+import carouselNavigationLeftIcon from './../../../public/icons/arrow-left-circle.svg'
+import carouselNavigationRightIcon from './../../../public/icons/arrow-right-circle.svg'
 import ProjectOverview from '../project-overview'
 import Testimonial from '../testimonial'
 import Button from '../ui/button'
-import carouselNavigationLeftIcon from './../../../public/icons/arrow-left-circle.svg'
-import carouselNavigationRightIcon from './../../../public/icons/arrow-right-circle.svg'
+
 const TWEEN_FACTOR = 2.5
 const SIZE_FACTOR = 1
 const MIN_SIZE = 600

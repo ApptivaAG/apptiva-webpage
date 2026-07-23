@@ -1,8 +1,8 @@
-import { HomepageDataQueries } from '@/sanity/lib/queries'
-import StyledPortableText from '@/components/styled-portable-text'
 import Image from 'next/image'
-import Sticker from './sticker.svg'
 import ChatInput from '@/components/chat-input'
+import StyledPortableText from '@/components/styled-portable-text'
+import { HomepageDataQueries } from '@/sanity/lib/queries'
+import Sticker from './sticker.svg'
 
 export default function Content(props: {
   claim: NonNullable<HomepageDataQueries>

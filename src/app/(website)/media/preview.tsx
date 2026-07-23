@@ -1,7 +1,7 @@
 'use client'
 
-import { mediaPageQuery } from '@/sanity/lib/queries'
 import { QueryResponseInitial, useQuery } from '@sanity/react-loader'
+import { mediaPageQuery } from '@/sanity/lib/queries'
 import Media from './media'
 import { MediaPageQueryData } from './types'
 

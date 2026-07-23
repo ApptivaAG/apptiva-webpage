@@ -1,6 +1,6 @@
 'use client'
-import EmblaCarousel from '@/components/emblaCarousel/emblaCarousel'
 import { EmblaOptionsType } from 'embla-carousel'
+import EmblaCarousel from '@/components/emblaCarousel/emblaCarousel'
 import { ProjectsQueryData } from '../../projekte/types'
 
 const OPTIONS: EmblaOptionsType = { loop: true }

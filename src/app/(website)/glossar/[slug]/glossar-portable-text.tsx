@@ -1,8 +1,8 @@
+import { PortableText, PortableTextComponents } from '@portabletext/react'
 import SanityImage from '@/components/sanity-image'
 import Underline from '@/components/ui/underline'
 import UnderlineForLink from '@/components/ui/underline-for-link'
 import { PortableText as PortableTextType } from '@/domain/types'
-import { PortableText, PortableTextComponents } from '@portabletext/react'
 
 export default function GlossaryPortableText({
   content,

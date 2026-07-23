@@ -1,9 +1,9 @@
 'use server'
 
-import { ContactFromMailSenderCopy } from '@/components/contact-form/sender-email/contact-from'
 import { Resend } from 'resend'
 import { z } from 'zod'
 import { zfd } from 'zod-form-data'
+import { ContactFromMailSenderCopy } from '@/components/contact-form/sender-email/contact-from'
 import ContactFromMailApptivaCopy from '../contact-form/apptiva-email/contact-from'
 
 const resend = new Resend(process.env.RESEND_API_KEY)

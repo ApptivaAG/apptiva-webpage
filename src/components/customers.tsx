@@ -1,7 +1,7 @@
-import { getCustomerLogos, Group } from '@/domain/customers'
 import Image from 'next/image'
-import Carousel from './carousel'
+import { Group, getCustomerLogos } from '@/domain/customers'
 import { urlForImage } from '@/sanity/lib/image'
+import Carousel from './carousel'
 
 export default async function Customers(props: { groups?: Group[] }) {
   const customers = await getCustomerLogos(props.groups)

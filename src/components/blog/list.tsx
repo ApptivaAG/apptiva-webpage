@@ -1,6 +1,6 @@
+import { hasTag } from '@/domain/blog/mappers'
 import { CmsBlog } from '@/domain/types'
 import { BlogTeaser } from './blog-teaser'
-import { hasTag } from '@/domain/blog/mappers'
 
 export default function BlogList(props: {
   posts: CmsBlog[]

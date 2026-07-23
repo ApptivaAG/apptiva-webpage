@@ -1,10 +1,10 @@
 'use client'
 
+import { QueryResponseInitial, useQuery } from '@sanity/react-loader'
 import {
   ServiceBySlugQueryData,
   serviceBySlugQuery,
 } from '@/sanity/lib/queries'
-import { QueryResponseInitial, useQuery } from '@sanity/react-loader'
 
 import ServiceDetail from './detail'
 

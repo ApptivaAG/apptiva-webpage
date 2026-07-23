@@ -1,8 +1,8 @@
+import Link from 'next/link'
 import GlossaryComponent from '@/components/glossary-entries'
 import Heading from '@/components/heading'
 import UnderlineForLink from '@/components/ui/underline-for-link'
 import { GlossaryQueryData } from '@/sanity/lib/queries'
-import Link from 'next/link'
 
 export default function Glossar(props: { data: GlossaryQueryData }) {
   const glossaryEntries = props.data

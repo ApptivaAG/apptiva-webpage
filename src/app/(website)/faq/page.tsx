@@ -1,11 +1,11 @@
 // ./nextjs-app/app/page.tsx
 
+import { Metadata } from 'next'
 import FAQSchema from '@/components/faq-schema'
 import Heading from '@/components/heading'
 import StyledPortableText from '@/components/styled-portable-text'
 import { faqsQuery } from '@/sanity/lib/queries'
 import { runQuery } from '@/sanity/lib/sanityFetch'
-import { Metadata } from 'next'
 
 const url = '/faq'
 const title = 'FAQ'

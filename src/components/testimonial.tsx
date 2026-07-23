@@ -1,5 +1,5 @@
-import type { Testimonial as TestimonialType } from '@/domain/testimonials'
 import { FaQuoteLeft } from 'react-icons/fa'
+import type { Testimonial as TestimonialType } from '@/domain/testimonials'
 import Heading from './heading'
 
 const Testimonial = ({ testimonial }: { testimonial: TestimonialType }) => {

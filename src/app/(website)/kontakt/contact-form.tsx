@@ -1,7 +1,7 @@
+import Link from 'next/link'
 import Heading from '@/components/heading'
 import Section from '@/components/section'
 import UnderlineForLink from '@/components/ui/underline-for-link'
-import Link from 'next/link'
 import { ContactFormContent } from './contact-form-content'
 
 const ContactForm = () => {

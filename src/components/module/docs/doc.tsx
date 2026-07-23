@@ -1,5 +1,5 @@
-import Heading from '@/components/heading'
 import Link from 'next/link'
+import Heading from '@/components/heading'
 import SanityImage from '../../sanity-image'
 import { Card } from '../../ui/card'
 import UnderlineForLink from '../../ui/underline-for-link'

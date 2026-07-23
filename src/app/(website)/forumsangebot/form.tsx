@@ -1,12 +1,12 @@
 'use client'
 
+import { useState } from 'react'
+import { useFormState } from 'react-dom'
 import { FormSuccessMessage } from '@/components/form-success-message'
 import { sendMail } from '@/components/server-actions/send-mail'
 import { Submit } from '@/components/submit'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { useState } from 'react'
-import { useFormState } from 'react-dom'
 
 export default function Form() {
   const [state, formAction] = useFormState(sendMail, { state: 'idle' })

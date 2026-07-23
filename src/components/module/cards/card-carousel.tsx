@@ -1,3 +1,4 @@
+import { PortableText } from '@portabletext/react'
 import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
 import Section from '@/components/section'
@@ -9,7 +10,6 @@ import {
 } from '@/components/ui/carousel'
 import { ModuleData } from '@/sanity/lib/queries'
 import { formatIds } from '@/utils/format-ids'
-import { PortableText } from '@portabletext/react'
 import { Card } from '../../ui/card'
 import { moduleStyleToSectionIntent } from '../utils'
 

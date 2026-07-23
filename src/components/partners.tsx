@@ -1,5 +1,5 @@
-import getPartnerLogos from '@/domain/partners'
 import Image from 'next/image'
+import getPartnerLogos from '@/domain/partners'
 import Carousel from './carousel'
 import Heading from './heading'
 

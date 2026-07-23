@@ -1,9 +1,9 @@
+import { InferType } from 'groqd'
 import {
   Projects,
   projectBySlugQuery,
   projectsQuery,
 } from '@/sanity/lib/queries'
-import { InferType } from 'groqd'
 
 export type ProjectQueryData = InferType<typeof projectsQuery>[number]
 

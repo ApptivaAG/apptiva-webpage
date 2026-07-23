@@ -1,7 +1,7 @@
-import { ModuleData } from '@/sanity/lib/queries'
-import StyledPortableText from '../styled-portable-text'
 import { FaQuoteLeft } from 'react-icons/fa'
+import { ModuleData } from '@/sanity/lib/queries'
 import Heading from '../heading'
+import StyledPortableText from '../styled-portable-text'
 
 export default function Quote(props: { module: ModuleData }) {
   const { module } = props

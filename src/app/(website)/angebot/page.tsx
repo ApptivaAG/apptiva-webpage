@@ -1,6 +1,6 @@
+import { draftMode } from 'next/headers'
 import { servicesQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
-import { draftMode } from 'next/headers'
 import ServiceList from './list'
 import ServicesPreview from './preview'
 

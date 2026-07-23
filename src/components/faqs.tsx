@@ -1,5 +1,5 @@
-import { FAQQueryModuleData } from '@/sanity/lib/queries'
 import { PortableTextComponents } from '@portabletext/react'
+import { FAQQueryModuleData } from '@/sanity/lib/queries'
 import Heading from './heading'
 import StyledPortableText from './styled-portable-text'
 import { Accordion, AccordionContent, AccordionItem } from './ui/accordion'

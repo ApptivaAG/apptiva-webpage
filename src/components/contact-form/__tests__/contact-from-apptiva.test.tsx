@@ -1,7 +1,7 @@
-import { describe, it, expect } from 'vitest'
 import { render } from '@react-email/components'
-import { ContactFromMailApptivaCopy } from '../apptiva-email/contact-from'
+import { describe, expect, it } from 'vitest'
 import type { FormInputSchema } from '@/components/server-actions/send-mail'
+import { ContactFromMailApptivaCopy } from '../apptiva-email/contact-from'
 
 describe('ContactFromMailApptivaCopy', async () => {
   const baseProps: FormInputSchema = {

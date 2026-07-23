@@ -1,6 +1,6 @@
-import { PortableText as PortableTextType } from '@/domain/types'
 import { PortableText, PortableTextComponents } from '@portabletext/react'
 import Link from 'next/link'
+import { PortableText as PortableTextType } from '@/domain/types'
 import SanityImage from './sanity-image'
 import Button from './ui/button'
 import Underline from './ui/underline'

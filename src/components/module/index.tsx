@@ -1,17 +1,17 @@
 import { ModuleData } from '@/sanity/lib/queries'
 import Cards from './cards'
 import Contact from './contact'
+import Docs from './docs/docs'
 import FAQs from './faqs'
+import GoogleReviews from './google-reviews'
 import Image from './image'
 import Prices from './prices'
 import ProjectModule from './project-module'
 import Quote from './quote'
 import ServiceTeaserList from './service-teaser/service-teaser-list'
 import Team from './team'
-import Text from './text'
-import Docs from './docs/docs'
 import TestChatbotFree from './test-chatbot-free'
-import GoogleReviews from './google-reviews'
+import Text from './text'
 
 export default function Module(props: {
   module: ModuleData

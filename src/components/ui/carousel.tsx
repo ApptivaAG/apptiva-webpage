@@ -380,4 +380,4 @@ function ProgressBar() {
   )
 }
 
-export { Carousel, CarouselContent, CarouselItem, type CarouselApi }
+export { Carousel, type CarouselApi, CarouselContent, CarouselItem }

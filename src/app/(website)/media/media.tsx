@@ -1,10 +1,10 @@
 'use client'
 
-import Module from '@/components/module'
+import { Metadata } from 'next/dist/lib/metadata/types/metadata-interface'
 import React from 'react'
+import Module from '@/components/module'
 import { PageHeader } from '../../../components/page-header'
 import { MediaPageQueryData } from './types'
-import { Metadata } from 'next/dist/lib/metadata/types/metadata-interface'
 
 const url = '/media'
 const title = 'Media'

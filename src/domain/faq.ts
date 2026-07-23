@@ -1,6 +1,6 @@
+import { cache } from 'react'
 import { faqsQuery } from '@/sanity/lib/queries'
 import { runQuery } from '@/sanity/lib/sanityFetch'
-import { cache } from 'react'
 
 export const getFAQs = cache(async () => {
   const faqsFromCMS = await runQuery(faqsQuery)

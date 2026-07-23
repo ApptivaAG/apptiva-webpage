@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react'
 import NextLink from 'next/link'
+import { useEffect, useState } from 'react'
 import { CtaLink, Link, MediaLink, SimpleLink, SubMenu } from './main-nav-items'
 import { navbarData } from './Navbar'
+import Button from './ui/button'
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -9,7 +10,6 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from './ui/navigation-menu'
-import Button from './ui/button'
 
 const MainNav = () => {
   const [initialMount, setInitialMount] = useState<true | undefined>(true)

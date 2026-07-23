@@ -5,7 +5,7 @@
 }
 
 @property --split-position {
-  syntax: '<percentage>';
+  syntax: "<percentage>";
   inherits: false;
   initial-value: 1%; /* 0% would be the correct, but is minimized to 0 on build. */
 }

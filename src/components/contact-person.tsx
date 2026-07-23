@@ -1,16 +1,16 @@
+import Image from 'next/image'
+import Link from 'next/link'
 import SanityImage from '@/components/sanity-image'
 import { PortableText } from '@/domain/types'
 import { PersonData } from '@/sanity/lib/queries'
 import { cn } from '@/utils/cn'
-import Image from 'next/image'
-import Link from 'next/link'
+import ChatInput from './chat-input'
+import Heading from './heading'
 import LogoIcon from './logo-icon.svg'
+import Section from './section'
 import StyledPortableText from './styled-portable-text'
 import Button from './ui/button'
 import UnderlineForLink from './ui/underline-for-link'
-import ChatInput from './chat-input'
-import Section from './section'
-import Heading from './heading'
 
 export default function ContactPerson(props: {
   person: PersonData | null

@@ -1,5 +1,5 @@
-import { PageHeader } from '@/components/page-header'
 import { Metadata } from 'next'
+import { PageHeader } from '@/components/page-header'
 
 export default function Wrapper(props: {
   children: React.ReactNode

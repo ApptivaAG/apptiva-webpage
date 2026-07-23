@@ -1,3 +1,6 @@
+import { Metadata } from 'next'
+import { draftMode } from 'next/headers'
+import Link from 'next/link'
 import Heading from '@/components/heading'
 import Contact from '@/components/module/contact'
 import { PageHeader } from '@/components/page-header'
@@ -6,9 +9,6 @@ import Underline from '@/components/ui/underline'
 import { orderGlossaryByTitle } from '@/domain/glossary'
 import { faqsQuery, glossaryQuery, ModuleData } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
-import { Metadata } from 'next'
-import { draftMode } from 'next/headers'
-import Link from 'next/link'
 import Blogposts from './blogposts'
 import FAQ from './faq'
 import Glossar from './glossary'
@@ -208,5 +208,5 @@ export default async function Knowledge() {
       )}
       <Contact module={contactModule} />
     </>
-  );
+  )
 }

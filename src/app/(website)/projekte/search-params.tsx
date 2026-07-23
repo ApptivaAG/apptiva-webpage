@@ -1,4 +1,4 @@
-import { parseAsStringLiteral, createLoader } from 'nuqs/server'
+import { createLoader, parseAsStringLiteral } from 'nuqs/server'
 
 export const categories = ['dev', 'chatbots', ''] as const
 export type Category = (typeof categories)[number]

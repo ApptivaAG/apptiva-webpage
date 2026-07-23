@@ -1,5 +1,5 @@
+import { cva, VariantProps } from 'class-variance-authority'
 import { cn } from '@/utils/cn'
-import { VariantProps, cva } from 'class-variance-authority'
 
 const sectionStyle = cva('full', {
   variants: {

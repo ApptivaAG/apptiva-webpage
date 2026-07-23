@@ -1,9 +1,9 @@
 'use client'
 
-import { PostsQueryData, queryPostsFromCms } from '@/sanity/lib/queries'
 import { QueryResponseInitial, useQuery } from '@sanity/react-loader'
-import BlogList from './list'
 import { mapCmsPost } from '@/domain/blog/mappers'
+import { PostsQueryData, queryPostsFromCms } from '@/sanity/lib/queries'
+import BlogList from './list'
 
 export default function BlogPostsPreview(props: {
   initial: QueryResponseInitial<PostsQueryData>

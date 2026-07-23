@@ -1,6 +1,6 @@
+import { cache } from 'react'
 import { personBySlugQuery } from '@/sanity/lib/queries'
 import { runQuery } from '@/sanity/lib/sanityFetch'
-import { cache } from 'react'
 import { Person } from './types'
 
 export const getPersonBySlug = cache(async (slug: string) => {

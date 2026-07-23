@@ -1,13 +1,13 @@
-import SanityImage from '@/components/sanity-image'
 import Image from 'next/image'
-import Sticker from './sticker.svg'
-import { PortableText, SanityImageWithAlt } from '@/domain/types'
 import { isValidElement } from 'react'
+import ChatInput from '@/components/chat-input'
+import SanityImage from '@/components/sanity-image'
+import { PortableText, SanityImageWithAlt } from '@/domain/types'
 import BreadCrumb from './bread-crumb'
 import Heading from './heading'
-import StyledPortableText from './styled-portable-text'
-import ChatInput from '@/components/chat-input'
 import Section from './section'
+import Sticker from './sticker.svg'
+import StyledPortableText from './styled-portable-text'
 
 export const leadStyle = 'max-w-xl pt-4 text-xl md:pt-8 pb-8'
 

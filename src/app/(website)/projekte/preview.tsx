@@ -1,7 +1,7 @@
 'use client'
 
-import { projectsQuery } from '@/sanity/lib/queries'
 import { QueryResponseInitial, useQuery } from '@sanity/react-loader'
+import { projectsQuery } from '@/sanity/lib/queries'
 import ProjectList from './list'
 import { ProjectQueryData } from './types'
 

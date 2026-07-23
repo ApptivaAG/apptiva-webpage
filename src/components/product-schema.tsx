@@ -1,7 +1,7 @@
-import { Schema } from './schema'
-import type { WithContext, Product, Service } from 'schema-dts'
+import type { Product, Service, WithContext } from 'schema-dts'
 import { rootUrl } from '@/app/env'
 import { sanitizeString } from '@/utils/sanitize-string'
+import { Schema } from './schema'
 
 interface ProductData {
   name: string

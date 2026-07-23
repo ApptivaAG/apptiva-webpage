@@ -3,9 +3,9 @@ import SanityImage from '@/components/sanity-image'
 import Section from '@/components/section'
 import StyledPortableText from '@/components/styled-portable-text'
 import { ModuleData } from '@/sanity/lib/queries'
+import { cleanStega } from '@/utils/clean-stega'
 import { cn } from '@/utils/cn'
 import { formatIds } from '@/utils/format-ids'
-import { cleanStega } from '@/utils/clean-stega'
 import { moduleStyleToSectionIntent } from '../../utils'
 
 export default function TextWithImageTwoCol(props: { module: ModuleData }) {

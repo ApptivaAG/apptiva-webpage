@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Heading from '@/components/heading'
 import Section from '@/components/section'
 import Button from '@/components/ui/button'
@@ -5,7 +6,6 @@ import UnderlineForLink from '@/components/ui/underline-for-link'
 import { servicesQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
 import portableTextToString from '@/utils/portable-text-to-string'
-import Link from 'next/link'
 import RootLayout from './(website)/layout'
 
 export default async function NotFound() {

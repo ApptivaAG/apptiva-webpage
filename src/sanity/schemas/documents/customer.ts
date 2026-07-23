@@ -1,5 +1,5 @@
-import StatusSwitch from '@/sanity/components/active-switch'
 import { defineArrayMember, defineField, defineType } from 'sanity'
+import StatusSwitch from '@/sanity/components/active-switch'
 
 export default defineType({
   name: 'customer',

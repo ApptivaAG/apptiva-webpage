@@ -1,6 +1,6 @@
+import { Metadata } from 'next'
 import { PageHeader } from '@/components/page-header'
 import Underline from '@/components/ui/underline'
-import { Metadata } from 'next'
 import ContactForm from './contact-form'
 
 const meta = {

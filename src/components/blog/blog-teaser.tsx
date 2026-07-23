@@ -1,9 +1,9 @@
-import SanityImage from '@/components/sanity-image'
-import { Card } from '@/components/ui/card'
-import { cn } from '@/utils/cn'
-import { CmsBlog } from '@/domain/types'
 import Image from 'next/image'
 import Link from 'next/link'
+import SanityImage from '@/components/sanity-image'
+import { Card } from '@/components/ui/card'
+import { CmsBlog } from '@/domain/types'
+import { cn } from '@/utils/cn'
 import UnderlineForLink from '../ui/underline-for-link'
 
 export function BlogTeaser(props: {

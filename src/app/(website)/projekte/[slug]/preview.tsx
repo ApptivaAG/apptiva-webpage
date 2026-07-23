@@ -1,11 +1,11 @@
 'use client'
 
-import { projectBySlugQuery } from '@/sanity/lib/queries'
 import { QueryResponseInitial, useQuery } from '@sanity/react-loader'
+import { useSearchParams } from 'next/navigation'
+import { projectBySlugQuery } from '@/sanity/lib/queries'
+import { Category } from '../search-params'
 import { ProjectBySlugQueryData } from '../types'
 import ProjectDetail from './detail'
-import { useSearchParams } from 'next/navigation'
-import { Category } from '../search-params'
 
 export default function ProjectsPreview(props: {
   initial: QueryResponseInitial<ProjectBySlugQueryData>

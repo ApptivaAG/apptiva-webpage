@@ -1,9 +1,9 @@
 'use client'
 
-import { AboutPageQueryData } from './types'
+import React from 'react'
 import Module from '@/components/module'
 import { PageHeader } from '../../../components/page-header'
-import React from 'react'
+import { AboutPageQueryData } from './types'
 
 export default function About(props: {
   data: AboutPageQueryData

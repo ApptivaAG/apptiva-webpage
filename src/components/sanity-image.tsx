@@ -1,13 +1,13 @@
-import { dataset, projectId } from '@/sanity/env'
-import { urlForImage } from '@/sanity/lib/image'
-import { SanityImageWithAlt } from '@/domain/types'
 import {
-  SanityImageSource,
   getImageAsset,
   getImageDimensions,
+  SanityImageSource,
 } from '@sanity/asset-utils'
 import type { PlaceholderValue } from 'next/dist/shared/lib/get-img-props'
 import Image from 'next/image'
+import { SanityImageWithAlt } from '@/domain/types'
+import { dataset, projectId } from '@/sanity/env'
+import { urlForImage } from '@/sanity/lib/image'
 
 export default function SanityImage({
   image,

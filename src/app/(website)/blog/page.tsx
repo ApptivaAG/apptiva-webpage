@@ -1,8 +1,8 @@
-import BlogPosts from '@/components/blog/blog-posts'
-import { PageHeader } from '@/components/page-header'
 import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import { Suspense } from 'react'
+import BlogPosts from '@/components/blog/blog-posts'
+import { PageHeader } from '@/components/page-header'
 
 const url = '/blog'
 const title = 'Blog'

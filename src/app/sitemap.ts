@@ -1,17 +1,17 @@
+import { MetadataRoute } from 'next'
+import { hasTag } from '@/domain/blog/mappers'
+import { getPosts } from '@/domain/blog/repository'
+import { CmsBlog } from '@/domain/types'
 import {
   GlossaryQueryData,
-  ServicesQueryData,
   glossaryQuery,
   projectsQuery,
+  ServicesQueryData,
   servicesQuery,
 } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
-import { getPosts } from '@/domain/blog/repository'
-import { CmsBlog } from '@/domain/types'
-import { MetadataRoute } from 'next'
 import { ProjectQueryData } from './(website)/projekte/types'
 import { rootUrl } from './env'
-import { hasTag } from '@/domain/blog/mappers'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = await getPosts()

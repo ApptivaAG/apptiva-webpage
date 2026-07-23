@@ -1,7 +1,7 @@
 'use client'
 
-import { aboutPageQuery } from '@/sanity/lib/queries'
 import { QueryResponseInitial, useQuery } from '@sanity/react-loader'
+import { aboutPageQuery } from '@/sanity/lib/queries'
 import About from './about'
 import { AboutPageQueryData } from './types'
 

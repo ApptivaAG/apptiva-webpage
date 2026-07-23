@@ -1,10 +1,10 @@
+import Link from 'next/link'
 import SanityImage from '@/components/sanity-image'
 import { Card } from '@/components/ui/card'
-import Link from 'next/link'
-import { ProjectQueryData } from './types'
 import UnderlineForLink from '@/components/ui/underline-for-link'
 import { urlForImage } from '@/sanity/lib/image'
 import { Category } from './search-params'
+import { ProjectQueryData } from './types'
 
 export function ProjectTeaser(props: {
   project: ProjectQueryData
@@ -13,10 +13,7 @@ export function ProjectTeaser(props: {
 }) {
   const { project, category } = props
   const logoUrl = project.customerRef?.logo
-    ? urlForImage(project.customerRef.logo)
-        .format('png')
-        .width(1200)
-        .url()
+    ? urlForImage(project.customerRef.logo).format('png').width(1200).url()
     : undefined
   const projectUrl = category
     ? `/projekte/${project.slug}?category=${category}`

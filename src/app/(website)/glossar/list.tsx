@@ -1,8 +1,8 @@
+import { InferType } from 'groqd'
 import GlossaryComponent from '@/components/glossary-entries'
 import Heading from '@/components/heading'
 import { PageHeader } from '@/components/page-header'
 import { glossaryQuery } from '@/sanity/lib/queries'
-import { InferType } from 'groqd'
 
 export function GlossaryList(props: {
   data?: InferType<typeof glossaryQuery>

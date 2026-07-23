@@ -1,6 +1,6 @@
-import { getGoogleReviews } from '@/domain/google-reviews'
-import { Schema } from '@/components/schema'
+import { FaGoogle, FaStar } from 'react-icons/fa'
 import Heading from '@/components/heading'
+import { Schema } from '@/components/schema'
 import Section from '@/components/section'
 import { Card } from '@/components/ui/card'
 import {
@@ -8,11 +8,11 @@ import {
   CarouselContent,
   CarouselItem,
 } from '@/components/ui/carousel'
+import { getGoogleReviews } from '@/domain/google-reviews'
 import { ModuleData } from '@/sanity/lib/queries'
 import { cn } from '@/utils/cn'
 import { formatIds } from '@/utils/format-ids'
 import { moduleStyleToSectionIntent } from './utils'
-import { FaGoogle, FaStar } from 'react-icons/fa'
 
 export default async function GoogleReviews(props: { module?: ModuleData }) {
   const { module } = props
@@ -49,7 +49,9 @@ export default async function GoogleReviews(props: { module?: ModuleData }) {
             </Heading>
             <div className="flex flex-wrap items-center gap-3 text-sm md:text-base">
               <RatingStars rating={averageRating} />
-              <span className="font-semibold">{averageRating.toFixed(1)}/5</span>
+              <span className="font-semibold">
+                {averageRating.toFixed(1)}/5
+              </span>
               <span>
                 Basierend auf {reviewCount} Google-Bewertung
                 {reviewCount === 1 ? '' : 'en'}

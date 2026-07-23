@@ -1,12 +1,10 @@
+import { draftMode } from 'next/headers'
 import Customers from '@/components/customers'
 import Partners from '@/components/partners'
 import Testimonials from '@/components/testimonials'
-
 import { homepageQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
 import { extractTestimonialTags } from '@/utils/extract-testimonial-tags'
-
-import { draftMode } from 'next/headers'
 import ModuleWrapper from './modules'
 import ModulesPreview from './modules-preview'
 

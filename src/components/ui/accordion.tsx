@@ -1,12 +1,12 @@
 'use client'
 
-import { cn } from '@/utils/cn'
 import {
   Accordion as AccordionPrimitive,
   AccordionItem as Item,
 } from '@szhsin/react-accordion'
 import * as React from 'react'
 import { IoChevronDown } from 'react-icons/io5'
+import { cn } from '@/utils/cn'
 
 const Accordion = AccordionPrimitive
 

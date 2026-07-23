@@ -1,8 +1,8 @@
 import { PostBySlugQueryData } from '@/sanity/lib/queries'
-import portableTextToString from '../../utils/portable-text-to-string'
-import { CmsBlog, CmsContent } from '../types'
-import { mapTags } from '../tags/map-tags'
 import { cleanStega } from '@/utils/clean-stega'
+import portableTextToString from '../../utils/portable-text-to-string'
+import { mapTags } from '../tags/map-tags'
+import { CmsBlog, CmsContent } from '../types'
 
 export function mapCmsPost(post: PostBySlugQueryData | null) {
   if (!post || !post.slug) {

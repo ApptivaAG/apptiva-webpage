@@ -1,7 +1,7 @@
 'use client'
 
-import { HomepageDataQueries, homepageQuery } from '@/sanity/lib/queries'
 import { QueryResponseInitial, useQuery } from '@sanity/react-loader'
+import { HomepageDataQueries, homepageQuery } from '@/sanity/lib/queries'
 import Content from './content'
 
 export default function HeroPreview({

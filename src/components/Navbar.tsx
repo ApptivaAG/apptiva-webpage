@@ -2,13 +2,13 @@
 
 import Image from 'next/image'
 import NextLink from 'next/link'
+import ChatInput from './chat-input'
 import chatbotsIcon from './chatbots.svg'
 import developmentIcon from './development.svg'
 import wissenIcon from './icon-wissen.svg'
 import apptivaLogo from './logo.svg'
 import MainNav from './main-nav'
 import MobileNav from './mobile-nav'
-import ChatInput from './chat-input'
 
 export type NavbarCTALink = {
   type: 'cta-link'

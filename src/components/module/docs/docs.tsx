@@ -1,10 +1,10 @@
+import { PortableText } from '@portabletext/react'
 import Heading from '@/components/heading'
 import Section from '@/components/section'
 import { ModuleData } from '@/sanity/lib/queries'
 import { cleanStega } from '@/utils/clean-stega'
 import { cn } from '@/utils/cn'
 import { formatIds } from '@/utils/format-ids'
-import { PortableText } from '@portabletext/react'
 import { moduleStyleToSectionIntent } from '../utils'
 import Doc from './doc'
 
@@ -36,7 +36,9 @@ export default function Docs(props: { module: ModuleData }) {
         </div>
 
         <div className={cn('grid gap-6 lg:gap-8', colStyle)}>
-          {module.documents?.map((doc) => <Doc key={doc._key} doc={doc}></Doc>)}
+          {module.documents?.map((doc) => (
+            <Doc key={doc._key} doc={doc}></Doc>
+          ))}
         </div>
       </div>
     </Section>

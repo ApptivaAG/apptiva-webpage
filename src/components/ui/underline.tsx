@@ -1,7 +1,7 @@
 'use client'
 
-import { cn } from '@/utils/cn'
 import { useInView } from 'react-intersection-observer'
+import { cn } from '@/utils/cn'
 import style from './underline.module.css'
 
 export default function Underline(props: {

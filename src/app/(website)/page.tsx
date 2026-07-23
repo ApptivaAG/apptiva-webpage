@@ -1,8 +1,7 @@
-import Hero from '@/app/(website)/_root/hero'
-
-import ModulesPage from './modules/page'
 import { Metadata } from 'next'
+import Hero from '@/app/(website)/_root/hero'
 import { rootUrl } from '../env'
+import ModulesPage from './modules/page'
 
 const title =
   'Apptiva AG | KI-Chatbots & individuelle Softwareentwicklung aus Luzern'

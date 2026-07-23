@@ -1,6 +1,6 @@
+import { draftMode } from 'next/headers'
 import { homepageQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
-import { draftMode } from 'next/headers'
 import Content from './content'
 import HeroPreview from './preview'
 

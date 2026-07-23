@@ -1,11 +1,11 @@
-import { glossaryBySlugQuery } from '@/sanity/lib/queries'
-import { load } from '@/sanity/lib/sanityFetch'
+import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
+import { glossaryBySlugQuery } from '@/sanity/lib/queries'
+import { load } from '@/sanity/lib/sanityFetch'
+import portableTextToString from '@/utils/portable-text-to-string'
 import Item from './item'
 import GlossaryItemPreview from './preview'
-import { Metadata } from 'next'
-import portableTextToString from '@/utils/portable-text-to-string'
 
 export async function generateMetadata(props: {
   params: Promise<{ slug: string }>

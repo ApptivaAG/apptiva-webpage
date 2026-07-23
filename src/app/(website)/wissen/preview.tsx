@@ -1,13 +1,13 @@
 'use client'
 
+import { QueryResponseInitial, useQuery } from '@sanity/react-loader'
+import { orderGlossaryByTitle } from '@/domain/glossary'
 import {
   FAQQueryData,
-  GlossaryQueryData,
   faqsQuery,
+  GlossaryQueryData,
   glossaryQuery,
 } from '@/sanity/lib/queries'
-import { orderGlossaryByTitle } from '@/domain/glossary'
-import { QueryResponseInitial, useQuery } from '@sanity/react-loader'
 import FAQ from './faq'
 import Glossar from './glossary'
 

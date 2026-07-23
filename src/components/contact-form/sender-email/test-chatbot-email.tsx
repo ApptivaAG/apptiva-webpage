@@ -21,7 +21,9 @@ export default function TestChatbotEmail() {
             alt="Apptiva Logo"
             style={logo}
           />
-          <Heading style={heading}>Dein Test-Chatbot wird eingerichtet!</Heading>
+          <Heading style={heading}>
+            Dein Test-Chatbot wird eingerichtet!
+          </Heading>
           <Text style={text}>
             Wir richten gerade deinen Test-Chatbot ein und melden uns in ein bis
             zwei Tagen bei dir.

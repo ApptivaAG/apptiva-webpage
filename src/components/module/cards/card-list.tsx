@@ -1,3 +1,5 @@
+import { PortableText } from '@portabletext/react'
+import { PiMinusCircle, PiPlusCircle } from 'react-icons/pi'
 import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
 import Section from '@/components/section'
@@ -9,8 +11,6 @@ import {
 } from '@/components/ui/accordion'
 import { ModuleData } from '@/sanity/lib/queries'
 import { formatIds } from '@/utils/format-ids'
-import { PortableText } from '@portabletext/react'
-import { PiMinusCircle, PiPlusCircle } from 'react-icons/pi'
 import { Card } from '../../ui/card'
 import { moduleStyleToSectionIntent } from '../utils'
 

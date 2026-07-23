@@ -1,8 +1,8 @@
 'use client'
 
 import { usePlausible } from 'next-plausible'
+import { type FormEvent, useState } from 'react'
 import { HiSparkles } from 'react-icons/hi2'
-import { useState, type FormEvent } from 'react'
 
 export default function ChatInput(props: {
   mode: 'inline-input' | 'floating-input'

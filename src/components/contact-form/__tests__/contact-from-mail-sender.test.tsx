@@ -1,7 +1,7 @@
-import { describe, it, expect } from 'vitest'
 import { render } from '@react-email/components'
-import { ContactFromMailSenderCopy } from '../sender-email/contact-from'
+import { describe, expect, it } from 'vitest'
 import type { FormInputSchema } from '@/components/server-actions/send-mail'
+import { ContactFromMailSenderCopy } from '../sender-email/contact-from'
 
 describe('ContactFromMailSenderCopy', () => {
   const baseProps: FormInputSchema = {
@@ -55,8 +55,10 @@ describe('ContactFromMailSenderCopy', () => {
         ...baseProps,
         message: 'This is my custom message',
       }
-      const html = await render(<ContactFromMailSenderCopy {...propsWithMessage} />)
-      
+      const html = await render(
+        <ContactFromMailSenderCopy {...propsWithMessage} />
+      )
+
       expect(html).toContain('Deine Nachricht:')
       expect(html).toContain('This is my custom message')
     })
@@ -66,8 +68,10 @@ describe('ContactFromMailSenderCopy', () => {
         ...baseProps,
         message: '',
       }
-      const html = await render(<ContactFromMailSenderCopy {...propsWithoutMessage} />)
-      
+      const html = await render(
+        <ContactFromMailSenderCopy {...propsWithoutMessage} />
+      )
+
       expect(html).not.toContain('Deine Nachricht:')
     })
 
@@ -78,8 +82,10 @@ describe('ContactFromMailSenderCopy', () => {
         company: 'Test Company',
         message: undefined,
       }
-      const html = await render(<ContactFromMailSenderCopy {...propsWithoutMessage} />)
-      
+      const html = await render(
+        <ContactFromMailSenderCopy {...propsWithoutMessage} />
+      )
+
       expect(html).not.toContain('Deine Nachricht:')
     })
 
@@ -89,8 +95,10 @@ describe('ContactFromMailSenderCopy', () => {
         ...baseProps,
         message: longMessage,
       }
-      const html = await render(<ContactFromMailSenderCopy {...propsWithLongMessage} />)
-      
+      const html = await render(
+        <ContactFromMailSenderCopy {...propsWithLongMessage} />
+      )
+
       expect(html).toContain(longMessage)
     })
   })
@@ -102,7 +110,7 @@ describe('ContactFromMailSenderCopy', () => {
         name: 'Müller & Söhne',
       }
       const html = await render(<ContactFromMailSenderCopy {...specialProps} />)
-      
+
       expect(html).toContain('Müller')
       expect(html).toContain('Söhne')
     })
@@ -113,7 +121,7 @@ describe('ContactFromMailSenderCopy', () => {
         message: 'Test with äöü and "quotes"',
       }
       const html = await render(<ContactFromMailSenderCopy {...specialProps} />)
-      
+
       expect(html).toContain('äöü')
       expect(html).toContain('quotes')
     })
@@ -125,7 +133,7 @@ describe('ContactFromMailSenderCopy', () => {
         message: 'Great service! 🚀👍',
       }
       const html = await render(<ContactFromMailSenderCopy {...emojiProps} />)
-      
+
       expect(html).toContain('🎉')
       expect(html).toContain('🚀')
     })
@@ -138,7 +146,7 @@ describe('ContactFromMailSenderCopy', () => {
         circle: 'apptiva' as const,
       }
       const html = await render(<ContactFromMailSenderCopy {...apptivaProps} />)
-      
+
       expect(html).toContain('Max Mustermann')
     })
 
@@ -150,7 +158,7 @@ describe('ContactFromMailSenderCopy', () => {
         company: 'Test Corp',
       }
       const html = await render(<ContactFromMailSenderCopy {...bubbleProps} />)
-      
+
       expect(html).toContain('Max Mustermann')
     })
   })
@@ -158,7 +166,7 @@ describe('ContactFromMailSenderCopy', () => {
   describe('Preview Text', () => {
     it('should include preview text', async () => {
       const html = await render(<ContactFromMailSenderCopy {...baseProps} />)
-      
+
       expect(html).toContain('Danke für deine Nachricht!')
     })
   })
@@ -166,14 +174,14 @@ describe('ContactFromMailSenderCopy', () => {
   describe('Styling', () => {
     it('should include background color', async () => {
       const html = await render(<ContactFromMailSenderCopy {...baseProps} />)
-      
+
       expect(html).toContain('background-color')
       expect(html).toContain('#ffffff')
     })
 
     it('should have container max-width', async () => {
       const html = await render(<ContactFromMailSenderCopy {...baseProps} />)
-      
+
       expect(html).toContain('max-width')
       expect(html).toContain('480px')
     })
@@ -188,41 +196,53 @@ describe('ContactFromMailSenderCopy', () => {
     }
 
     it('should render testChatbot email template', async () => {
-      const html = await render(<ContactFromMailSenderCopy {...testChatbotProps} />)
-      
+      const html = await render(
+        <ContactFromMailSenderCopy {...testChatbotProps} />
+      )
+
       expect(html).toBeTruthy()
       expect(typeof html).toBe('string')
     })
 
     it('should contain testChatbot specific heading', async () => {
-      const html = await render(<ContactFromMailSenderCopy {...testChatbotProps} />)
-      
+      const html = await render(
+        <ContactFromMailSenderCopy {...testChatbotProps} />
+      )
+
       expect(html).toContain('Dein Test-Chatbot wird eingerichtet!')
     })
 
     it('should contain confirmation message', async () => {
-      const html = await render(<ContactFromMailSenderCopy {...testChatbotProps} />)
-      
+      const html = await render(
+        <ContactFromMailSenderCopy {...testChatbotProps} />
+      )
+
       expect(html).toContain('Wir richten gerade deinen Test-Chatbot ein')
       expect(html).toContain('melden uns in ein bis zwei Tagen bei dir')
     })
 
     it('should contain Apptiva branding', async () => {
-      const html = await render(<ContactFromMailSenderCopy {...testChatbotProps} />)
-      
+      const html = await render(
+        <ContactFromMailSenderCopy {...testChatbotProps} />
+      )
+
       expect(html).toContain('Das Apptiva Team')
     })
 
     it('should include logo', async () => {
-      const html = await render(<ContactFromMailSenderCopy {...testChatbotProps} />)
-      
+      const html = await render(
+        <ContactFromMailSenderCopy {...testChatbotProps} />
+      )
+
       expect(html).toContain('cdn.sanity.io')
       expect(html).toContain('Apptiva Logo')
     })
 
     it('should contain HTML structure', async () => {
-      const html = await render(<ContactFromMailSenderCopy {...testChatbotProps} />)
-      
+      const html = await render(
+        <ContactFromMailSenderCopy {...testChatbotProps} />
+      )
+
       expect(html).toContain('<!DOCTYPE html')
       expect(html).toContain('<html')
       expect(html).toContain('<head')
@@ -230,35 +250,45 @@ describe('ContactFromMailSenderCopy', () => {
     })
 
     it('should include preview text for testChatbot', async () => {
-      const html = await render(<ContactFromMailSenderCopy {...testChatbotProps} />)
-      
+      const html = await render(
+        <ContactFromMailSenderCopy {...testChatbotProps} />
+      )
+
       expect(html).toContain('Dein Test-Chatbot wird eingerichtet!')
     })
 
     it('should include background color', async () => {
-      const html = await render(<ContactFromMailSenderCopy {...testChatbotProps} />)
-      
+      const html = await render(
+        <ContactFromMailSenderCopy {...testChatbotProps} />
+      )
+
       expect(html).toContain('background-color')
       expect(html).toContain('#ffffff')
     })
 
     it('should have container max-width', async () => {
-      const html = await render(<ContactFromMailSenderCopy {...testChatbotProps} />)
-      
+      const html = await render(
+        <ContactFromMailSenderCopy {...testChatbotProps} />
+      )
+
       expect(html).toContain('max-width')
       expect(html).toContain('480px')
     })
 
     it('should not contain [object Object] or undefined strings', async () => {
-      const html = await render(<ContactFromMailSenderCopy {...testChatbotProps} />)
-      
+      const html = await render(
+        <ContactFromMailSenderCopy {...testChatbotProps} />
+      )
+
       expect(html).not.toContain('[object Object]')
       expect(html).not.toContain('undefined')
     })
 
     it('should contain emoji', async () => {
-      const html = await render(<ContactFromMailSenderCopy {...testChatbotProps} />)
-      
+      const html = await render(
+        <ContactFromMailSenderCopy {...testChatbotProps} />
+      )
+
       expect(html).toContain('🤓')
     })
   })

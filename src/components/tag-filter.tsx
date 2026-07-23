@@ -1,7 +1,7 @@
 'use client'
-import { Tag } from '@/domain/types'
 import { useRouter } from 'next/navigation'
 import { ChangeEvent, useCallback, useTransition } from 'react'
+import { Tag } from '@/domain/types'
 
 interface Props {
   tags: Tag[]

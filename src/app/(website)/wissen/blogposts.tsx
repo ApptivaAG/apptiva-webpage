@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { BlogTeaser } from '@/components/blog/blog-teaser'
 import Button from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
@@ -6,10 +7,9 @@ import {
   CarouselContent,
   CarouselItem,
 } from '@/components/ui/carousel'
-import { getPosts } from '@/domain/blog/repository'
-import { hasTag } from '@/domain/blog/mappers'
-import Link from 'next/link'
 import UnderlineForLink from '@/components/ui/underline-for-link'
+import { hasTag } from '@/domain/blog/mappers'
+import { getPosts } from '@/domain/blog/repository'
 
 export default async function Blogposts(props: {
   children: React.ReactNode

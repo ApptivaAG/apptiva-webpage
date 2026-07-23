@@ -1,6 +1,6 @@
-import { cn } from '@/utils/cn'
-import { VariantProps, cva } from 'class-variance-authority'
+import { cva, VariantProps } from 'class-variance-authority'
 import React from 'react'
+import { cn } from '@/utils/cn'
 
 const cardStyle = cva('rounded-lg border overflow-clip bg-clip-padding', {
   variants: {

@@ -1,7 +1,7 @@
+import type { FAQPage, WithContext } from 'schema-dts'
 import { FAQQueryModuleData } from '@/sanity/lib/queries'
 import portableTextToString from '@/utils/portable-text-to-string'
 import { Schema } from './schema'
-import type { WithContext, FAQPage } from 'schema-dts'
 
 interface FAQSchemaProps {
   faqs: FAQQueryModuleData

@@ -66,7 +66,10 @@ type GoogleReviewsLogDetails = {
   errorMessage?: string
 }
 
-function logGoogleReviewsIssue(message: string, details?: GoogleReviewsLogDetails) {
+function logGoogleReviewsIssue(
+  message: string,
+  details?: GoogleReviewsLogDetails
+) {
   console.warn('[Google Reviews]', message, details ?? '')
 }
 
@@ -132,7 +135,7 @@ export async function getGoogleReviews(): Promise<GoogleReviewsData | null> {
         const text =
           typeof review.text === 'string'
             ? review.text
-            : review.text?.text ?? ''
+            : (review.text?.text ?? '')
 
         if (!text || rating === 1) {
           return null

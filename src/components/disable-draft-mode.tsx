@@ -1,9 +1,9 @@
 'use client'
 
-import { useTransition } from 'react'
 import { useRouter } from 'next/navigation'
-import { disableDraftMode } from '@/app/(cms)/actions'
 import { useIsPresentationTool } from 'next-sanity/hooks'
+import { useTransition } from 'react'
+import { disableDraftMode } from '@/app/(cms)/actions'
 
 export function DisableDraftMode() {
   const isPresentationTool = useIsPresentationTool()

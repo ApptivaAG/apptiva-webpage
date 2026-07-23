@@ -1,14 +1,14 @@
+import { PortableText } from '@portabletext/react'
 import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
 import Section from '@/components/section'
 import StyledPortableText from '@/components/styled-portable-text'
 import { ModuleData } from '@/sanity/lib/queries'
+import { cleanStega } from '@/utils/clean-stega'
 import { cn } from '@/utils/cn'
 import { formatIds } from '@/utils/format-ids'
-import { PortableText } from '@portabletext/react'
 import { Card } from '../../ui/card'
 import { moduleStyleToSectionIntent } from '../utils'
-import { cleanStega } from '@/utils/clean-stega'
 
 export default function CardFlow(props: { module: ModuleData }) {
   const { module } = props

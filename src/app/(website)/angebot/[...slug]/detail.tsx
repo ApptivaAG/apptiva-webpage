@@ -1,12 +1,11 @@
+import Link from 'next/link'
+import { ErrorBoundary } from 'react-error-boundary'
+import Heading from '@/components/heading'
 import Module from '@/components/module'
 import { PageHeader } from '@/components/page-header'
 import ProductSchema from '@/components/product-schema'
-
-import { ErrorBoundary } from 'react-error-boundary'
 import Button from '@/components/ui/button'
-import Heading from '@/components/heading'
 import { ServiceBySlugQueryData } from '@/sanity/lib/queries'
-import Link from 'next/link'
 import portableTextToString from '@/utils/portable-text-to-string'
 
 export default function ServiceDetail(props: {

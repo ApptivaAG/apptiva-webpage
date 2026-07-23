@@ -1,10 +1,10 @@
+import Link from 'next/link'
 import BreadCrumb from '@/components/bread-crumb'
 import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
 import Button from '@/components/ui/button'
-import { kebabCaseToTitleCase } from '@/utils/format'
 import { CmsBlog } from '@/domain/types'
-import Link from 'next/link'
+import { kebabCaseToTitleCase } from '@/utils/format'
 import BlogPortableText from '../blog-portable-text'
 
 const kindData = {

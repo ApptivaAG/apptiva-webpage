@@ -1,7 +1,7 @@
 'use client'
 
-import { cn } from '@/utils/cn'
 import { useActionState, useState } from 'react'
+import { cn } from '@/utils/cn'
 import { subscribeToNewsletter } from '../server-actions/subscribe-to-newsletter'
 import { Submit } from '../submit'
 import { Input } from '../ui/input'
