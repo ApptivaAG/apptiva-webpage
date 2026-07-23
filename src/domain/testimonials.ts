@@ -1,4 +1,5 @@
 import Underline from '@/components/ui/underline'
+import { cleanStega } from '@/utils/clean-stega'
 import fs from 'fs'
 import { CompileMDXResult, compileMDX } from 'next-mdx-remote/rsc'
 import path from 'path'
@@ -58,6 +59,7 @@ export async function getTestimonialsData(tags?: ('chatbot' | 'sw-dev')[]) {
 
   return sorted.filter((testimonial) => {
     const testimonialTags = testimonial.frontmatter.tags || []
-    return tags.some((tag) => testimonialTags.includes(tag))
+    const cleanedTags = cleanStega(tags)
+    return cleanedTags.some((tag) => testimonialTags.includes(tag))
   })
 }

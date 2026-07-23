@@ -210,6 +210,7 @@ const Modules = q('modules')
     quotetext: q.contentBlocks().optional(),
     servicePageTeaser: ServicePageTeasers,
     documents: Documents,
+    tags: q.array(q.string()).optional(),
   })
   .nullable()
 

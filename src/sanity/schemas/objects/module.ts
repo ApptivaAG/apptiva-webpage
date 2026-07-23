@@ -211,6 +211,20 @@ export default defineType({
       ],
       hidden: isNotType('teaser-servicepage'),
     }),
+    defineField({
+      name: 'tags',
+      title: 'Tags',
+      type: 'array',
+      // @ts-ignore
+      of: [defineArrayMember({ type: 'string' })],
+      options: {
+        list: [
+          { title: 'Chatbot', value: 'chatbot' },
+          { title: 'Softwareentwicklung', value: 'sw-dev' },
+        ],
+      },
+      hidden: isNotType('testimonials'),
+    }),
   ],
 })
 

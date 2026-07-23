@@ -3,6 +3,7 @@ import Partners from '@/components/partners'
 import Testimonials from '@/components/testimonials'
 import { mediaPageQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
+import { extractTestimonialTags } from '@/utils/extract-testimonial-tags'
 import portableTextToString from '@/utils/portable-text-to-string'
 import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
@@ -43,7 +44,10 @@ export default async function MediaPage() {
     ['media-page', 'person']
   )
 
-  const testimonials = <Testimonials />
+  const media = isEnabled ? draft.data : published
+  const testimonialTags = extractTestimonialTags(media)
+
+  const testimonials = <Testimonials tags={testimonialTags} />
   const customers = <Customers />
   const partners = <Partners />
 

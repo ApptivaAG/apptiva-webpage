@@ -4,6 +4,7 @@ import Testimonials from '@/components/testimonials'
 
 import { homepageQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
+import { extractTestimonialTags } from '@/utils/extract-testimonial-tags'
 
 import { draftMode } from 'next/headers'
 import ModuleWrapper from './modules'
@@ -14,7 +15,11 @@ export default async function ModulesPage() {
   const { published, draft } = await load(homepageQuery, isEnabled, undefined, [
     'homepage',
   ])
-  const testimonials = <Testimonials />
+
+  const homepage = isEnabled ? draft.data : published
+  const testimonialTags = extractTestimonialTags(homepage)
+
+  const testimonials = <Testimonials tags={testimonialTags} />
   const customers = <Customers />
   const partners = <Partners />
 

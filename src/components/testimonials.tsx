@@ -7,10 +7,10 @@ import Testimonial from './testimonial'
 import { Carousel, CarouselContent, CarouselItem } from './ui/carousel'
 
 type TestimonialsProps = {
-  tags?: ('chatbot' | 'sw-dev')[]
+  tags: ('chatbot' | 'sw-dev')[]
 }
 
-const Testimonials = async ({ tags }: TestimonialsProps = {}) => {
+const Testimonials = async ({ tags }: TestimonialsProps) => {
   const testimonials = await getTestimonialsData(tags)
 
   // Handle empty state

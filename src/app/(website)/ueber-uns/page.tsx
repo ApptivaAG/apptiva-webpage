@@ -3,6 +3,7 @@ import Partners from '@/components/partners'
 import Testimonials from '@/components/testimonials'
 import { aboutPageQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
+import { extractTestimonialTags } from '@/utils/extract-testimonial-tags'
 import portableTextToString from '@/utils/portable-text-to-string'
 import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
@@ -44,7 +45,10 @@ export default async function AboutPage() {
     ['about-page', 'person']
   )
 
-  const testimonials = <Testimonials />
+  const about = isEnabled ? draft.data : published
+  const testimonialTags = extractTestimonialTags(about)
+
+  const testimonials = <Testimonials tags={testimonialTags} />
   const customers = <Customers />
   const partners = <Partners />
 
