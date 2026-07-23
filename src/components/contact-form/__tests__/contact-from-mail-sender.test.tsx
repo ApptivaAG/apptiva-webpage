@@ -5,6 +5,7 @@ import { ContactFromMailSenderCopy } from '../sender-email/contact-from'
 
 describe('ContactFromMailSenderCopy', () => {
   const baseProps: FormInputSchema = {
+    kind: 'apptiva',
     name: 'Max Mustermann',
     email: 'max@example.com',
     message: 'Test message',
@@ -77,9 +78,12 @@ describe('ContactFromMailSenderCopy', () => {
 
     it('should NOT display message section when message is undefined', async () => {
       const propsWithoutMessage: FormInputSchema = {
-        ...baseProps,
+        kind: 'bubble',
+        name: 'Max Mustermann',
+        email: 'max@example.com',
         circle: 'bubble',
         company: 'Test Company',
+        subject: 'Test Subject',
         message: undefined,
       }
       const html = await render(
@@ -151,9 +155,13 @@ describe('ContactFromMailSenderCopy', () => {
     })
 
     it('should render correctly for "bubble" circle', async () => {
-      const bubbleProps = {
-        ...baseProps,
-        circle: 'bubble' as const,
+      const bubbleProps: FormInputSchema = {
+        kind: 'bubble',
+        name: 'Max Mustermann',
+        email: 'max@example.com',
+        message: 'Test message',
+        subject: 'Test Subject',
+        circle: 'bubble',
         phone: '+41 79 123 45 67',
         company: 'Test Corp',
       }

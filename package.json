@@ -6,7 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "node .next/standalone/server.js",
-    "lint": "biome check src",
+    "lint": "tsc --noEmit && biome check src",
     "format": "biome format src --write",
     "vulns": "snyk test --severity-threshold=high --file=package.json",
     "test": "vitest",
