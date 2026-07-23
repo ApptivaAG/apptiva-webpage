@@ -90,8 +90,6 @@
     "@types/react-dom": "19.2.1",
     "@vitejs/plugin-react": "^6.0.2",
     "autoprefixer": "^10.5.0",
-    "eslint": "^9.39.4",
-    "eslint-config-next": "^16.2.9",
     "happy-dom": "^20.10.4",
     "jsdom": "27.3.0",
     "postcss": "^8.5.15",
