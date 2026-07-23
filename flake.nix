@@ -13,6 +13,9 @@
             pnpm
             snyk
           ];
+          shellHook = ''
+            export BIOME_BINARY=${biome}/bin/biome
+          '';
         };
       }
     );
