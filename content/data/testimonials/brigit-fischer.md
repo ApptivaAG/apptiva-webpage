@@ -5,6 +5,7 @@ name: Brigit Fischer
 position: Leiterin Kommunikation & Events
 company: Genilem Zentralschweiz
 order: 99
+tags: [sw-dev]
 ---
 
 Die *unkomplizierte* und *effiziente* Softwareentwicklung mit Apptiva hat mich begeistert. Kreativ, effizient, hilfsbereit, schnell, unkompliziert – das ist für mich Apptiva!

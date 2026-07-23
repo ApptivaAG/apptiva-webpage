@@ -6,8 +6,17 @@ import { Schema } from './schema'
 import Testimonial from './testimonial'
 import { Carousel, CarouselContent, CarouselItem } from './ui/carousel'
 
-const Testimonials = async () => {
-  const testimonials = await getTestimonialsData()
+type TestimonialsProps = {
+  tags?: ('chatbot' | 'sw-dev')[]
+}
+
+const Testimonials = async ({ tags }: TestimonialsProps = {}) => {
+  const testimonials = await getTestimonialsData(tags)
+
+  // Handle empty state
+  if (testimonials.length === 0) {
+    return null
+  }
 
   return (
     <>

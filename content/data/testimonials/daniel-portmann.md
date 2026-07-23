@@ -5,6 +5,7 @@ name: Daniel Portmann
 position: Innovations-Coach
 company: ITZ InnovationsTransfer
 order: 99
+tags: [sw-dev]
 ---
 
 Die Apptiva hat unsere Ideen nicht nur hochkompetent umgesetzt, sondern hat sich mit Lösungsvorschlägen eingebracht und damit *massgeblich zum Projekterfolg beigetragen!*

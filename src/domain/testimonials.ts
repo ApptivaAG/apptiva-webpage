@@ -9,6 +9,7 @@ type TestimonialFrontmatter = {
   position: string
   company: string
   order: number
+  tags?: ('chatbot' | 'sw-dev')[]
 }
 
 export type Testimonial = {
@@ -16,7 +17,7 @@ export type Testimonial = {
 } & CompileMDXResult<TestimonialFrontmatter>
 
 const postsDirectory = path.join(process.cwd(), './content/data/testimonials/')
-export async function getTestimonialsData() {
+export async function getTestimonialsData(tags?: ('chatbot' | 'sw-dev')[]) {
   const fileNames = fs.readdirSync(postsDirectory)
   const allPostsData = fileNames
     .filter(
@@ -44,9 +45,19 @@ export async function getTestimonialsData() {
     })
 
   const testimonials = await Promise.all(allPostsData)
-  return testimonials.sort((a, b) => {
+  const sorted = testimonials.sort((a, b) => {
     const orderA = a.frontmatter.order ?? 999
     const orderB = b.frontmatter.order ?? 999
     return orderA - orderB
+  })
+
+  // Filter by tags if provided
+  if (!tags || tags.length === 0) {
+    return sorted
+  }
+
+  return sorted.filter((testimonial) => {
+    const testimonialTags = testimonial.frontmatter.tags || []
+    return tags.some((tag) => testimonialTags.includes(tag))
   })
 }
