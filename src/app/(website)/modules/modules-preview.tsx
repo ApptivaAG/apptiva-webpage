@@ -25,6 +25,7 @@ export default function ModulesPreview(props: {
       customers={props.customers}
       testimonials={props.testimonials}
       partners={props.partners}
+      isDraftMode
     />
   )
 }

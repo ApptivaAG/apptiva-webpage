@@ -4,6 +4,7 @@ import Contact from './contact'
 import Docs from './docs/docs'
 import FAQs from './faqs'
 import GoogleReviews from './google-reviews'
+import GoogleReviewsPreview from './google-reviews-preview'
 import Image from './image'
 import Prices from './prices'
 import ProjectModule from './project-module'
@@ -18,6 +19,7 @@ export default function Module(props: {
   customers: React.ReactNode
   testimonials: React.ReactNode
   partners: React.ReactNode
+  isDraftMode?: boolean
 }) {
   const { module } = props
 
@@ -68,7 +70,11 @@ export default function Module(props: {
       return <Docs module={module} />
 
     case 'google-reviews':
-      return <GoogleReviews module={module} />
+      return props.isDraftMode ? (
+        <GoogleReviewsPreview module={module} />
+      ) : (
+        <GoogleReviews module={module} />
+      )
 
     default:
       return <div>Modultyp wählen</div>

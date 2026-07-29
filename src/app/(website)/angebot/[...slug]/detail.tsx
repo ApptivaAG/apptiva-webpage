@@ -55,6 +55,7 @@ export default function ServiceDetail(props: {
             module={module}
             customers={props.customers}
             testimonials={props.testimonials}
+            isDraftMode={props.isPreview}
           />
         </CatchErrors>
       ))}
