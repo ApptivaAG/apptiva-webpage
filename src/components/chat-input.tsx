@@ -37,7 +37,7 @@ export default function ChatInput(props: {
   return (
     <div
       {...(props.mode === 'inline-input' && { 'data-chat-input': 'inline' })}
-      className={`w-full ${props.className}`}
+      className={`w-full max-w-xl lg:max-w-3xl ${props.className}`}
     >
       <form onSubmit={handleSubmit} className="relative">
         {variant === 'white' && (
