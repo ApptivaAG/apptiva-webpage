@@ -21,6 +21,13 @@ export default function ChatbotAnalytics() {
           },
         })
       })
+      chatbot.subscribe('ON_FAB_CLICK', function onFabClick() {
+        plausible('open-chat', {
+          props: {
+            origin: 'fab',
+          },
+        })
+      })
     }
 
     subscribe()
