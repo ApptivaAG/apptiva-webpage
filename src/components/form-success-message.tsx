@@ -8,7 +8,7 @@ export function FormSuccessMessage(props: {
       <p>Vielen Dank{props.name && ` ${props.name}`}! </p>
       <p className="leading-4">
         Deine Anfrage wurde erfolgreich an uns versendet. Eine Kopie haben wir
-        an <strong>{props.email}</strong>{' '}geschickt.&ensp;
+        an <strong>{props.email}</strong> geschickt.&ensp;
         <button onClick={props.onCorrect} className="mt-2 text-sm underline">
           Angaben korrigieren
         </button>

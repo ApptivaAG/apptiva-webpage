@@ -45,9 +45,7 @@ const MOCK_REVIEWS = [
 const MOCK_AVERAGE_RATING = 5
 const MOCK_REVIEW_COUNT = 42
 
-export default function GoogleReviewsPreview(props: {
-  module?: ModuleData
-}) {
+export default function GoogleReviewsPreview(props: { module?: ModuleData }) {
   const { module } = props
   const isLevel = (level: 1 | 2) => (module?.level ?? 1) == level
   const title = module?.title || 'Google Bewertungen'
@@ -68,9 +66,7 @@ export default function GoogleReviewsPreview(props: {
             <span className="font-semibold">
               {MOCK_AVERAGE_RATING.toFixed(1)}/5
             </span>
-            <span>
-              Basierend auf {MOCK_REVIEW_COUNT} Google-Bewertungen
-            </span>
+            <span>Basierend auf {MOCK_REVIEW_COUNT} Google-Bewertungen</span>
           </div>
           <p className="text-xs text-primary/40 italic">
             Vorschau – echte Bewertungen werden im Live-Modus geladen
