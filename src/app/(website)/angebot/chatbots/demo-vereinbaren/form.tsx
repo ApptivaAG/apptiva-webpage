@@ -32,6 +32,7 @@ export default function Form() {
           Nicht ausfüllen: <input type="text" name="address" />
         </label>
         <input
+          readOnly
           type="text"
           name="subject"
           value="Bubble Chat Demo vereinbaren"

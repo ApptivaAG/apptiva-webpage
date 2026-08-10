@@ -1,7 +1,6 @@
 'use client'
 
-import { useState } from 'react'
-import { useFormState } from 'react-dom'
+import { useActionState, useState } from 'react'
 import { FormSuccessMessage } from '@/components/form-success-message'
 import { sendMail } from '@/components/server-actions/send-mail'
 import { Submit } from '@/components/submit'
@@ -9,7 +8,7 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 
 export default function Form() {
-  const [state, formAction] = useFormState(sendMail, { state: 'idle' })
+  const [state, formAction] = useActionState(sendMail, { state: 'idle' })
   const [correcting, setCorrecting] = useState(false)
 
   const handleAction = (formData: FormData) => {
