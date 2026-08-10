@@ -160,21 +160,15 @@ export const navbarData: NavbarItem[] = [
         type: 'link',
       },
       {
+        title: 'Media',
+        href: '/media',
+        type: 'link',
+      },
+      {
         title: 'Glossar',
         href: '/glossar',
         type: 'link',
       },
-      // todo: as soon as media page content is ready, uncomment these lines
-      // {
-      //   title: 'Media',
-      //   href: '/media',
-      //   type: 'link',
-      // },
-      // {
-      //   title: 'Workshops',
-      //   href: '/angebot/workshops',
-      //   type: 'link',
-      // },
     ],
   },
 ]
