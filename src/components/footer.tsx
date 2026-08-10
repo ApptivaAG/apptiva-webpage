@@ -182,6 +182,11 @@ export default function Footer() {
                     <UnderlineForLink>Weiterentwicklung</UnderlineForLink>
                   </Link>
                 </li>
+                <li>
+                  <Link href="/angebot/development/digitalisierung">
+                    <UnderlineForLink>Digitalisierung</UnderlineForLink>
+                  </Link>
+                </li>
               </ul>
             </div>
 
