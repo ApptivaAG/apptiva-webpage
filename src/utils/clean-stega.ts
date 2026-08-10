@@ -1,4 +1,4 @@
-import { vercelStegaCleanAll } from '@sanity/client/stega'
+import { stegaClean } from '@sanity/client/stega'
 
 /**
  * Removes Vercel Stega encoding from data.
@@ -9,5 +9,5 @@ import { vercelStegaCleanAll } from '@sanity/client/stega'
  * @returns The cleaned data without Stega encoding
  */
 export function cleanStega<T>(data: T): T {
-  return vercelStegaCleanAll(data)
+  return stegaClean(data) as T
 }
