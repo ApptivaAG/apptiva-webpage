@@ -292,13 +292,11 @@ export default function Footer() {
                     <UnderlineForLink>Kontakt</UnderlineForLink>
                   </Link>
                 </li>
-                {/* todo: as soon as media page content is ready, uncomment these
-                lines */}
-                {/* <li>
+                <li>
                   <Link href="/media">
                     <UnderlineForLink>Media</UnderlineForLink>
                   </Link>
-                </li> */}
+                </li>
               </ul>
             </div>
 
