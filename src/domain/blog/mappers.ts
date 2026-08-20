@@ -31,6 +31,7 @@ export function mapCmsPost(post: PostBySlugQueryData | null) {
     modifiedDate: post._updatedAt,
     breadcrumb: post.breadcrumb,
     tags: mapTags(post.tags),
+    faqs: post.faqs,
   } satisfies CmsBlog
 }
 

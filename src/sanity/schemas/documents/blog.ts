@@ -95,6 +95,18 @@ export default defineType({
         },
       ],
     }),
+    defineField({
+      name: 'faqs',
+      title: 'FAQs',
+      type: 'array',
+      // @ts-ignore
+      of: [
+        {
+          type: 'reference',
+          to: [{ type: 'faq' }],
+        },
+      ],
+    }),
   ],
   preview: {
     select: {

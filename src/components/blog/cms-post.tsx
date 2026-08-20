@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import BreadCrumb from '@/components/bread-crumb'
+import FAQsComponent from '@/components/faqs'
 import Heading from '@/components/heading'
 import SanityImage from '@/components/sanity-image'
 import Button from '@/components/ui/button'
@@ -65,6 +66,14 @@ export default function CmsBlogPost(props: {
         <div className="prose flex-1">
           {post.content && (
             <BlogPortableText Code={Code} content={post.content} />
+          )}
+          {post.faqs && post.faqs.length > 0 && (
+            <div className="my-12 px-4 sm:px-12 py-4 sm:py-8 rounded-lg bg-base-grey-light">
+              <Heading size={4} level={2} className="mt-0">
+                Häufige Fragen
+              </Heading>
+              <FAQsComponent faqs={post.faqs} />
+            </div>
           )}
           <div className="flex justify-between gap-4 pt-8">
             {previousSlug ? (

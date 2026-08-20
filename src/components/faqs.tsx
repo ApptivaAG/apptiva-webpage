@@ -31,7 +31,7 @@ const FAQsComponent = (props: { faqs: FAQQueryModuleData }) => {
                 header={faq.question ?? 'no-question'}
               >
                 {faq.answerStyled && (
-                  <AccordionContent>
+                  <AccordionContent className="*:mt-0">
                     <StyledPortableText
                       content={faq.answerStyled}
                       individualComponents={portableTextComponents}

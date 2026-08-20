@@ -244,6 +244,7 @@ export const queryPostsFromCms = q('*')
       .grab$({ _id: q.string(), personName: q.string().optional() }),
     header: Header,
     tags: Tags,
+    faqs: FAQs,
   })
 
 export type PostBySlugQueryData = NonNullable<
@@ -281,6 +282,7 @@ export const queryPostFromCmsBySlug = q('*')
       .grab$({ _id: q.string(), personName: q.string().optional() }),
     header: Header,
     tags: Tags,
+    faqs: FAQs,
   })
 
 export const projectsQuery = q('*')
