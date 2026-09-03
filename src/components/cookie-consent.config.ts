@@ -44,7 +44,7 @@ export const cookieConsentConfig: CookieConsentConfig = {
             {
               title: 'Analyse & Werbung',
               description:
-                'Diese Cookies erlauben es uns, die Nutzung der Website zu analysieren, wiederkehrende Besucher zu erkennen und personalisierte Werbung über Google Ads zu schalten. Die Daten werden an Google LLC in den USA und an Snitcher B.V. in den Niederlanden übertragen. Rechtsgrundlage ist Ihre Einwilligung gemäss Art. 6 Abs. 1 lit. a DSGVO.',
+                'Diese Cookies und ähnlichen Technologien erlauben es uns, die Nutzung der Website zu analysieren, wiederkehrende Besucher zu erkennen, personalisierte Werbung über Google Ads zu schalten und Conversions über OpenAI zu messen. Die Daten werden an Google LLC in den USA, an Snitcher B.V. in den Niederlanden und an OpenAI übertragen. Rechtsgrundlage ist Ihre Einwilligung gemäss Art. 6 Abs. 1 lit. a DSGVO.',
               linkedCategory: 'analytics',
               cookieTable: {
                 headers: {
@@ -67,6 +67,11 @@ export const cookieConsentConfig: CookieConsentConfig = {
                     name: 'Snitcher',
                     domain: 'snitcher.com',
                     desc: 'Snitcher – Wiedererkennung von Besuchern und Attribution nach Einwilligung',
+                  },
+                  {
+                    name: 'oaiq',
+                    domain: 'openai.com',
+                    desc: 'OpenAI – Conversion-Tracking auf Angebotsseiten nach Einwilligung',
                   },
                 ],
               },

@@ -1,4 +1,5 @@
 'use client'
+import { usePathname } from 'next/navigation'
 import { useEffect } from 'react'
 import { cookieConsentConfig } from './cookie-consent.config'
 
@@ -6,11 +7,14 @@ import { cookieConsentConfig } from './cookie-consent.config'
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void
+    oaiq?: (...args: unknown[]) => void
     Snitcher?: {
       giveCookieConsent?: () => void
     }
   }
 }
+
+let measuredOpenAIPathname: string | undefined
 
 async function initCookieConsent() {
   const CookieConsent = await import('vanilla-cookieconsent')
@@ -39,6 +43,7 @@ async function initCookieConsent() {
 function enableAnalyticsTools() {
   enableGoogleTag()
   enableSnitcherConsent()
+  enableOpenAIPixel()
 }
 
 /** Injects gtag.js and updates Google Consent Mode to granted. */
@@ -82,15 +87,46 @@ function disableGoogleTag() {
   })
 }
 
+/** Loads OpenAI conversion tracking only on chatbot offer pages after consent. */
+function enableOpenAIPixel() {
+  const pathname = window.location.pathname
+  if (!pathname.startsWith('/angebot/chatbots')) {
+    return
+  }
+
+  if (!document.getElementById('openai-pixel-loader')) {
+    const script = document.createElement('script')
+    script.id = 'openai-pixel-loader'
+    script.async = true
+    script.textContent = `!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"VEMsqn6FnqzMFALeUWVSH8",debug:${process.env.NODE_ENV !== 'production'}});`
+    document.head.appendChild(script)
+  }
+
+  if (measuredOpenAIPathname === pathname) return
+  measuredOpenAIPathname = pathname
+  window.oaiq?.('measure', 'page_viewed', { type: 'contents' })
+}
+
 /**
  * Renders nothing visible itself — the consent banner is injected into the DOM
  * by vanilla-cookieconsent. The style tag overrides its CSS variables with
  * Apptiva brand colors.
  */
 export default function CookieConsentProvider() {
+  const pathname = usePathname()
+
   useEffect(() => {
     initCookieConsent()
   }, [])
+
+  useEffect(() => {
+    const enablePixelForCurrentRoute = async () => {
+      const CookieConsent = await import('vanilla-cookieconsent')
+      if (CookieConsent.acceptedCategory('analytics')) enableOpenAIPixel()
+    }
+
+    enablePixelForCurrentRoute()
+  }, [pathname])
 
   return (
     // Override vanilla-cookieconsent CSS variables with Apptiva brand colors
