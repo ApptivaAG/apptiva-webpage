@@ -1,11 +1,11 @@
 'use client'
 
-import { useActionState, useState } from 'react'
 import { FormSuccessMessage } from '@/components/form-success-message'
 import { sendMail } from '@/components/server-actions/send-mail'
 import { Submit } from '@/components/submit'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+import { useActionState, useState } from 'react'
 
 export default function Form() {
   const [state, formAction] = useActionState(sendMail, { state: 'idle' })
@@ -35,10 +35,10 @@ export default function Form() {
           readOnly
           type="text"
           name="subject"
-          value="Bubble Chat Demo vereinbaren"
+          value="Apptiva Klar Demo vereinbaren"
         />
-        <input type="text" name="circle" value="bubble" readOnly />
-        <input type="text" name="kind" value="bubble" readOnly />
+        <input type="text" name="circle" value="klar" readOnly />
+        <input type="text" name="kind" value="klar" readOnly />
       </p>
       <div>
         <Label>Name</Label>

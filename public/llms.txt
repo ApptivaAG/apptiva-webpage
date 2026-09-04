@@ -12,7 +12,7 @@ Use it to:
 
 ## Kernkompetenzen und Dienstleistungen
 - [Individuelle Softwareentwicklung](https://apptiva.ch/angebot/development): Massgeschneiderte Web- und Mobile-Anwendungen, Schnittstellen und Konfiguratoren von unseren Expertinnen und Experten.
-- [KI-Chatbots & Bubble Chat](https://apptiva.ch/angebot/chatbots): Entwicklung produktiver KI-Assistentinnen und -Assistenten zur Prozessoptimierung und Steigerung der Zufriedenheit unserer Kundinnen und Kunden.
+- [KI-Chatbots & Apptiva Klar](https://apptiva.ch/angebot/chatbots): Entwicklung produktiver KI-Assistentinnen und -Assistenten zur Prozessoptimierung und Steigerung der Zufriedenheit unserer Kundinnen und Kunden.
 - [App-Entwicklung](https://apptiva.ch/angebot/development/app-entwicklung): Native und hybride Apps für iOS und Android (React Native, Kotlin Native).
 - [Produktkonfiguratoren](https://apptiva.ch/angebot/development/konfiguratoren): Interaktive Lösungen für komplexe Produktlogiken und E-Commerce.
 
@@ -87,7 +87,13 @@ Use it to:
 - Über 10 Jahre Erfahrung in Software- und Chatbotentwicklungen
 
 ## Meta
+- Company: Apptiva AG
 - CompanyType: Software Engineering & AI Agency
+- Product: Apptiva Klar
+- FormerProductName: Bubble Chat
+- Brand: Apptiva
+- ApplicationCategory: BusinessApplication
+- Description: Apptiva Klar ist das Produkt der Firma Apptiva AG und die Weiterentwicklung der ehemaligen Bubble-Chat-Plattform.
 - Location: Lucerne, Switzerland
 - Offers: Custom Software, AI Chatbots, MCP Integration, Mobile Apps
 - Compliance: DSG (Schweiz), DSGVO (EU)

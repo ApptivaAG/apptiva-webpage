@@ -1,3 +1,4 @@
+import { FormInputSchema } from '@/components/server-actions/send-mail'
 import {
   Body,
   Container,
@@ -7,7 +8,6 @@ import {
   Preview,
   Text,
 } from '@react-email/components'
-import { FormInputSchema } from '@/components/server-actions/send-mail'
 
 export default function StandardContactEmail(
   props: Exclude<FormInputSchema, { kind: 'testChatbot' }>
@@ -41,7 +41,7 @@ export default function StandardContactEmail(
               <b>Referenz (Wie hast du uns gefunden): </b>
               {props.referrer ? String(props.referrer) : 'keine Angabe'}
             </Text>
-            {props.circle === 'bubble' && (
+            {props.circle === 'klar' && (
               <Text style={{ ...paragraph, marginTop: -5 }}>
                 <b>Telefonnummer: </b>
                 {props.phone ? String(props.phone) : 'keine Angabe'}

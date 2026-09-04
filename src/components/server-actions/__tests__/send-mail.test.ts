@@ -49,18 +49,18 @@ describe('sendMail Server Action', () => {
       expect(result).toHaveProperty('name', 'Max Mustermann')
     })
 
-    it('should accept valid bubble form data', async () => {
+    it('should accept valid klar form data', async () => {
       mockBatchSend.mockResolvedValue({ error: null })
 
       const formData = new FormData()
-      formData.append('kind', 'bubble')
+      formData.append('kind', 'klar')
       formData.append('name', 'Max Mustermann')
       formData.append('email', 'max@example.com')
       formData.append('message', 'Test message')
       formData.append('company', 'ACME Corp')
       formData.append('phone', '+41 79 123 45 67')
-      formData.append('subject', 'Bubble Demo')
-      formData.append('circle', 'bubble')
+      formData.append('subject', 'Apptiva Klar Demo')
+      formData.append('circle', 'klar')
 
       const result = await sendMail({ state: 'idle' }, formData)
 
@@ -74,7 +74,7 @@ describe('sendMail Server Action', () => {
       formData.append('kind', 'testChatbot')
       formData.append('email', 'test@example.com')
       formData.append('subject', 'Test Chatbot Request')
-      formData.append('circle', 'bubble')
+      formData.append('circle', 'klar')
 
       const result = await sendMail({ state: 'idle' }, formData)
 
@@ -139,7 +139,7 @@ describe('sendMail Server Action', () => {
       const formData = new FormData()
       formData.append('kind', 'testChatbot')
       formData.append('email', 'test@example.com')
-      formData.append('circle', 'bubble')
+      formData.append('circle', 'klar')
       // No subject provided
 
       const result = await sendMail({ state: 'idle' }, formData)
@@ -194,7 +194,7 @@ describe('sendMail Server Action', () => {
       const formData = new FormData()
       formData.append('kind', 'testChatbot')
       formData.append('email', 'spam@example.com')
-      formData.append('circle', 'bubble')
+      formData.append('circle', 'klar')
       formData.append('subject', 'Spam')
       formData.append('address', 'filled-by-bot') // Honeypot field
 
@@ -276,16 +276,16 @@ describe('sendMail Server Action', () => {
       )
     })
 
-    it('should route to bubble-chat@apptiva.ch for "bubble" circle', async () => {
+    it('should route to klar@apptiva.ch for "klar" circle', async () => {
       mockBatchSend.mockResolvedValue({ error: null })
 
       const formData = new FormData()
-      formData.append('kind', 'bubble')
+      formData.append('kind', 'klar')
       formData.append('name', 'Max')
       formData.append('email', 'max@example.com')
       formData.append('message', 'Test')
       formData.append('company', 'ACME')
-      formData.append('circle', 'bubble')
+      formData.append('circle', 'klar')
       formData.append('subject', 'Test')
 
       await sendMail({ state: 'idle' }, formData)
@@ -293,19 +293,19 @@ describe('sendMail Server Action', () => {
       expect(mockBatchSend).toHaveBeenCalledWith(
         expect.arrayContaining([
           expect.objectContaining({
-            to: 'bubble-chat@apptiva.ch',
+            to: 'klar@apptiva.ch',
           }),
         ])
       )
     })
 
-    it('should route to bubble-chat@apptiva.ch for "testChatbot" (uses bubble circle)', async () => {
+    it('should route to klar@apptiva.ch for "testChatbot" (uses klar circle)', async () => {
       mockBatchSend.mockResolvedValue({ error: null })
 
       const formData = new FormData()
       formData.append('kind', 'testChatbot')
       formData.append('email', 'test@example.com')
-      formData.append('circle', 'bubble')
+      formData.append('circle', 'klar')
       formData.append('subject', 'Test Chatbot')
 
       await sendMail({ state: 'idle' }, formData)
@@ -313,7 +313,7 @@ describe('sendMail Server Action', () => {
       expect(mockBatchSend).toHaveBeenCalledWith(
         expect.arrayContaining([
           expect.objectContaining({
-            to: 'bubble-chat@apptiva.ch',
+            to: 'klar@apptiva.ch',
           }),
         ])
       )

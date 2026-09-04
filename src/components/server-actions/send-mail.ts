@@ -1,9 +1,9 @@
 'use server'
 
+import { ContactFromMailSenderCopy } from '@/components/contact-form/sender-email/contact-from'
 import { Resend } from 'resend'
 import { z } from 'zod'
 import { zfd } from 'zod-form-data'
-import { ContactFromMailSenderCopy } from '@/components/contact-form/sender-email/contact-from'
 import ContactFromMailApptivaCopy from '../contact-form/apptiva-email/contact-from'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
@@ -29,8 +29,8 @@ type FormState =
       state: 'spam'
     }
 
-const bubble = z.object({
-  kind: zfd.text(z.literal('bubble')),
+const klar = z.object({
+  kind: zfd.text(z.literal('klar')),
   name: zfd.text(),
   email: zfd.text(),
   message: zfd.text(z.string().optional()),
@@ -38,7 +38,7 @@ const bubble = z.object({
   referrer: zfd.text(z.string().optional()),
   subject: zfd.text(z.string().default('Kontaktformular apptiva.ch')),
   phone: zfd.text(z.string().optional()),
-  circle: zfd.text(z.enum(['bubble'])),
+  circle: zfd.text(z.enum(['klar'])),
   address: zfd.text(z.string().optional()),
 })
 
@@ -46,7 +46,7 @@ const testChatbot = z.object({
   kind: zfd.text(z.literal('testChatbot')),
   email: zfd.text(),
   subject: zfd.text(z.string().default('Kontaktformular apptiva.ch')),
-  circle: zfd.text(z.enum(['bubble'])),
+  circle: zfd.text(z.enum(['klar'])),
   address: zfd.text(z.string().optional()),
 })
 
@@ -62,7 +62,7 @@ const apptiva = z.object({
   address: zfd.text(z.string().optional()),
 })
 
-const schema = zfd.formData(z.union([bubble, apptiva, testChatbot]))
+const schema = zfd.formData(z.union([klar, apptiva, testChatbot]))
 
 export type FormInputSchema = z.infer<typeof schema>
 
@@ -135,8 +135,8 @@ export async function sendMail(
 
 function mapCircleToEmail(circle: FormInputSchema['circle']) {
   switch (circle) {
-    case 'bubble': {
-      return 'bubble-chat@apptiva.ch'
+    case 'klar': {
+      return 'klar@apptiva.ch'
     }
     case 'apptiva': {
       return 'info@apptiva.ch'

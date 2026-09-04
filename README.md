@@ -56,8 +56,8 @@ pnpm email:dev         # Preview emails (localhost:3001)
 Test all 3 contact forms with production Resend API:
 
 1. **Main contact** → `info@apptiva.ch`
-2. **Forum** (`/forumsangebot`) → `bubble-chat@apptiva.ch`
-3. **Chatbot demo** (`/angebot/chatbots/demo-vereinbaren`) → `bubble-chat@apptiva.ch`
+2. **Forum** (`/forumsangebot`) → `klar@apptiva.ch`
+3. **Chatbot demo** (`/angebot/chatbots/demo-vereinbaren`) → `klar@apptiva.ch`
 
 **Verify**: Sender copy + internal copy both arrive, check [Resend dashboard](https://resend.com/emails)
 
@@ -74,9 +74,9 @@ This starts a server on `http://localhost:3999` that accepts `POST /emails` and 
 - **`captured/{kind}/request.json`** — full request snapshot (auth token redacted)
 - **`captured/{kind}/email-{N}.html`** — rendered HTML of each email in the batch
 
-The `{kind}` is inferred from the recipient email address (`bubble-chat@apptiva.ch` → `bubble`, `info@apptiva.ch` → `apptiva`).
+The `{kind}` is inferred from the recipient email address (`klar@apptiva.ch` → `klar`, `info@apptiva.ch` → `apptiva`).
 
-These files are tracked in git — when the email templates change, `git diff` on `captured/bubble/email-1.html` shows exactly what changed.
+These files are tracked in git — when the email templates change, `git diff` on `captured/klar/email-1.html` shows exactly what changed.
 
 The catcher returns a mock success response so the server action completes normally. No real emails are sent.
 

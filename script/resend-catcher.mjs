@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-import { createServer } from 'node:http'
-import { writeFileSync, existsSync, mkdirSync } from 'node:fs'
 import { randomUUID } from 'node:crypto'
-import { resolve, dirname } from 'node:path'
+import { existsSync, mkdirSync, writeFileSync } from 'node:fs'
+import { createServer } from 'node:http'
+import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -46,7 +46,8 @@ function formatJson(obj) {
 
 function inferKind(emails) {
   for (const email of emails) {
-    if (email.to === 'bubble-chat@apptiva.ch') return 'bubble'
+    if (email.to === 'bubble-chat@apptiva.ch') return 'klar'
+    if (email.to === 'klar@apptiva.ch') return 'klar'
     if (email.to === 'info@apptiva.ch') return 'apptiva'
   }
   const subject = emails[0]?.subject || 'unknown'

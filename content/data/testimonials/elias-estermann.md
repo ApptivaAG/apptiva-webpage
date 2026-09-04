@@ -8,4 +8,4 @@ order: 99
 tags: [chatbot]
 ---
 
-Mit Hilfe von _Bubble Chat_ können wir oft gestellte Energieberatungsfragen mehr und mehr _automatisiert beantworten_. Das gibt uns Zeit, uns vertieft mit komplexen Fragestellungen auseinander zu setzen.
+Mit Hilfe von _Apptiva Klar_ können wir oft gestellte Energieberatungsfragen mehr und mehr _automatisiert beantworten_. Das gibt uns Zeit, uns vertieft mit komplexen Fragestellungen auseinander zu setzen.

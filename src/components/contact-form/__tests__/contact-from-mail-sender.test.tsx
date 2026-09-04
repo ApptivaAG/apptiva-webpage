@@ -1,6 +1,6 @@
+import type { FormInputSchema } from '@/components/server-actions/send-mail'
 import { render } from '@react-email/components'
 import { describe, expect, it } from 'vitest'
-import type { FormInputSchema } from '@/components/server-actions/send-mail'
 import { ContactFromMailSenderCopy } from '../sender-email/contact-from'
 
 describe('ContactFromMailSenderCopy', () => {
@@ -78,10 +78,10 @@ describe('ContactFromMailSenderCopy', () => {
 
     it('should NOT display message section when message is undefined', async () => {
       const propsWithoutMessage: FormInputSchema = {
-        kind: 'bubble',
+        kind: 'klar',
         name: 'Max Mustermann',
         email: 'max@example.com',
-        circle: 'bubble',
+        circle: 'klar',
         company: 'Test Company',
         subject: 'Test Subject',
         message: undefined,
@@ -154,18 +154,18 @@ describe('ContactFromMailSenderCopy', () => {
       expect(html).toContain('Max Mustermann')
     })
 
-    it('should render correctly for "bubble" circle', async () => {
-      const bubbleProps: FormInputSchema = {
-        kind: 'bubble',
+    it('should render correctly for "klar" circle', async () => {
+      const klarProps: FormInputSchema = {
+        kind: 'klar',
         name: 'Max Mustermann',
         email: 'max@example.com',
         message: 'Test message',
         subject: 'Test Subject',
-        circle: 'bubble',
+        circle: 'klar',
         phone: '+41 79 123 45 67',
         company: 'Test Corp',
       }
-      const html = await render(<ContactFromMailSenderCopy {...bubbleProps} />)
+      const html = await render(<ContactFromMailSenderCopy {...klarProps} />)
 
       expect(html).toContain('Max Mustermann')
     })
@@ -200,7 +200,7 @@ describe('ContactFromMailSenderCopy', () => {
       kind: 'testChatbot',
       email: 'test@example.com',
       subject: 'Chatbot Test Request',
-      circle: 'bubble',
+      circle: 'klar',
     }
 
     it('should render testChatbot email template', async () => {

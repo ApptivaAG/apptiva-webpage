@@ -110,30 +110,30 @@ describe('ContactFromMailApptivaCopy', async () => {
       expect(html).not.toContain('Telefonnummer:')
     })
 
-    it('should display phone field for "bubble" circle when phone provided', async () => {
-      const bubbleProps = {
+    it('should display phone field for "klar" circle when phone provided', async () => {
+      const klarProps = {
         ...baseProps,
-        kind: 'bubble' as const,
-        circle: 'bubble' as const,
+        kind: 'klar' as const,
+        circle: 'klar' as const,
         phone: '+41 79 123 45 67',
         company: 'Test Corp',
       }
-      const html = await render(<ContactFromMailApptivaCopy {...bubbleProps} />)
+      const html = await render(<ContactFromMailApptivaCopy {...klarProps} />)
 
       expect(html).toContain('Telefonnummer:')
       expect(html).toContain('+41 79 123 45 67')
     })
 
-    it('should display phone field for "bubble" circle with "keine Angabe" when phone not provided', async () => {
-      const bubblePropsNoPhone = {
+    it('should display phone field for "klar" circle with "keine Angabe" when phone not provided', async () => {
+      const klarPropsNoPhone = {
         ...baseProps,
-        kind: 'bubble' as const,
-        circle: 'bubble' as const,
+        kind: 'klar' as const,
+        circle: 'klar' as const,
         phone: undefined,
         company: 'Test Corp',
       }
       const html = await render(
-        <ContactFromMailApptivaCopy {...bubblePropsNoPhone} />
+        <ContactFromMailApptivaCopy {...klarPropsNoPhone} />
       )
 
       expect(html).toContain('Telefonnummer:')
@@ -219,7 +219,7 @@ describe('ContactFromMailApptivaCopy', async () => {
       kind: 'testChatbot',
       email: 'test@example.com',
       subject: 'Chatbot Test Request',
-      circle: 'bubble',
+      circle: 'klar',
     }
 
     it('should render testChatbot email template', async () => {

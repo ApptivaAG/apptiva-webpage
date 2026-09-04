@@ -1,24 +1,24 @@
-import Heading from '@/components/heading'
-import { PageHeader } from '@/components/page-header'
-import Section from '@/components/section'
-import Form from './form'
+import Heading from "@/components/heading";
+import { PageHeader } from "@/components/page-header";
+import Section from "@/components/section";
+import Form from "./form";
 
 export default async function Kontakt() {
   return (
     <>
       <PageHeader
-        title="Erlebe Bubble Chat live auf deiner Website"
-        lead="Wir sparen uns die PowerPoint-Folien. Statt einer theoretischen Demo zeigen wir dir direkt an deiner eigenen Website, wie Bubble Chat funktioniert und wo er deine Besucher:innen konkret unterstützen kann."
+        title="Erlebe Apptiva Klar live auf deiner Website"
+        lead="Wir sparen uns die PowerPoint-Folien. Statt einer theoretischen Demo zeigen wir dir direkt an deiner eigenen Website, wie Apptiva Klar funktioniert und wo deine Besucher:innen konkret unterstützt werden können."
         links={[
-          { name: 'Angebot' },
-          { name: 'Chatbots', href: '/angebot/chatbots' },
-          { name: 'Demo vereinbaren' },
+          { name: "Angebot" },
+          { name: "Chatbots", href: "/angebot/chatbots" },
+          { name: "Demo vereinbaren" },
         ]}
       />
-      <Section intent={'light'} level={'one'}>
+      <Section intent={"light"} level={"one"}>
         <div className="content">
           <div className="">
-            <Heading level={2} size={3} className={'pb-5'}>
+            <Heading level={2} size={3} className={"pb-5"}>
               Demo vereinbaren
             </Heading>
           </div>
@@ -51,7 +51,7 @@ export default async function Kontakt() {
           </div>
           <div className="col-right max-lg:mt-4">
             <div className="flex flex-col gap-2 pt-6">
-              <Heading level={3} size={5} className={''}>
+              <Heading level={3} size={5} className={""}>
                 Kostenlose Produkt-Demo anfordern
               </Heading>
               <Form />
@@ -60,5 +60,5 @@ export default async function Kontakt() {
         </div>
       </Section>
     </>
-  )
+  );
 }

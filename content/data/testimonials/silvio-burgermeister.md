@@ -8,4 +8,4 @@ order: 30
 tags: [chatbot]
 ---
 
-Durch die _Automatisierung von simplen Anfragen mit Bubble Chat_ können sich die Mitarbeitenden im Support mehr auf die Tätigkeiten des First-Level-Supports konzentrieren.
+Durch die _Automatisierung von simplen Anfragen mit Apptiva Klar_ können sich die Mitarbeitenden im Support mehr auf die Tätigkeiten des First-Level-Supports konzentrieren.
