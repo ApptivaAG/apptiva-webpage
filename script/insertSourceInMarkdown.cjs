@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const { getPlaiceholder } = require('plaiceholder')
-const imageSize = require('image-size')
+const sharp = require('sharp')
 
 const source = 'apptiva'
 const directory = 'content/blog'
@@ -44,7 +44,7 @@ fs.readdir(directory, { recursive: true }, (err, files) => {
             console.log('imagePath', imagePath)
 
             const imageInfo = imageSrc
-              ? imageSize(path.join('./public', imagePath))
+              ? await sharp(path.join('./public', imagePath)).metadata()
               : undefined
             const { base64 } = imageSrc
               ? await getPlaiceholder(imagePath, { size: 8 })

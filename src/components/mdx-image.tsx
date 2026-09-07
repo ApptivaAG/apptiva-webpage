@@ -1,9 +1,9 @@
-import imageSize from 'image-size'
 import Image from 'next/image'
 import path from 'path'
+import sharp from 'sharp'
 
 function MdxImage(contentPath: string) {
-  return function MdxImageInline(props: {
+  return async function MdxImageInline(props: {
     src?: string
     alt?: string
     title?: string
@@ -13,7 +13,7 @@ function MdxImage(contentPath: string) {
     }
 
     const src = path.join(contentPath, props.src)
-    const { height, width } = getImageInfo(src)
+    const { height, width } = await getImageInfo(src)
     return (
       <figure className="feature">
         <Image
@@ -31,9 +31,15 @@ function MdxImage(contentPath: string) {
 
 export default MdxImage
 
-function getImageInfo(imageSrc: string) {
+async function getImageInfo(imageSrc: string) {
   try {
-    return imageSize(path.join(process.cwd(), './public', imageSrc))
+    const { height, width } = await sharp(
+      path.join(process.cwd(), './public', imageSrc)
+    ).metadata()
+
+    if (height && width) {
+      return { height, width }
+    }
   } catch (error) {
     console.error('Error getting image size', error)
     console.error(
