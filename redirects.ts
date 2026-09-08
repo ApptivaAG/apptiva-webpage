@@ -718,5 +718,11 @@ export default function redirects() {
       destination: '/angebot/development/web-app-entwicklung',
       permanent: true,
     },
+    {
+      source:
+        '/projekte/chatbot-fuer-das-amt-fuer-gesundheit-und-soziales-des-kantons-schwyz',
+      destination: '/projekte/ki-chatbots-fuer-den-kanton-schwyz',
+      permanent: true,
+    },
   ] satisfies Redirect[]
 }
