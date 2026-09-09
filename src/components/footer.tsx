@@ -214,7 +214,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://docs.bubble-chat.ch/"
+                    href="https://klar.apptiva.ch"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block leading-[1.1]"
