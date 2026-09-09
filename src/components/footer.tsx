@@ -1,25 +1,25 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
-import { useInView } from 'react-intersection-observer'
-import Heading from './heading'
-import lbv from './lehrbetrieb-vignette.png'
-import logo from './logo.svg'
-import NewsletterForm from './newsletter/newsletter-form'
-import sms from './swiss-made-software.svg'
-import Underline from './ui/underline'
-import UnderlineForLink from './ui/underline-for-link'
-import whatsApp from './whatsapp.svg'
+import Image from "next/image";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
+import Heading from "./heading";
+import lbv from "./lehrbetrieb-vignette.png";
+import logo from "./logo.svg";
+import NewsletterForm from "./newsletter/newsletter-form";
+import sms from "./swiss-made-software.svg";
+import Underline from "./ui/underline";
+import UnderlineForLink from "./ui/underline-for-link";
+import whatsApp from "./whatsapp.svg";
 
 export default function Footer() {
   const { ref, inView } = useInView({
-    rootMargin: '300% 0px 0px 0px',
+    rootMargin: "300% 0px 0px 0px",
     threshold: 0,
-  })
+  });
 
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   return (
     <>
@@ -29,7 +29,7 @@ export default function Footer() {
           <div className="mx-4 rounded-md bg-primary text-base-white">
             <div className="flex flex-wrap justify-between gap-x-24 gap-y-12 rounded-md bg-black/40 p-4 sm:p-12">
               <div>
-                <Link href={'/'}>
+                <Link href={"/"}>
                   <Image
                     src={logo}
                     className="mt-2 h-7 w-auto"
@@ -104,7 +104,7 @@ export default function Footer() {
               <div className="gap4 flex items-end space-y-5 lg:flex-col lg:items-center">
                 <Link
                   href={
-                    'https://www.swissmadesoftware.org/companies/apptiva-ag/home.html'
+                    "https://www.swissmadesoftware.org/companies/apptiva-ag/home.html"
                   }
                 >
                   <Image
@@ -113,7 +113,7 @@ export default function Footer() {
                     alt="Swiss Made Software"
                   ></Image>
                 </Link>
-                <Link href={'https://www.berufsbildungplus.ch/'}>
+                <Link href={"https://www.berufsbildungplus.ch/"}>
                   <Image
                     src={lbv}
                     className="w-28 mix-blend-luminosity"
@@ -125,19 +125,19 @@ export default function Footer() {
             <div className="flex flex-col justify-center gap-x-12 gap-y-4 p-4 opacity-60 sm:px-12 lg:flex-row">
               <p>© 2015 - {currentYear} Apptiva AG</p>
               <p>
-                <Link href={'/'}>
+                <Link href={"/"}>
                   <UnderlineForLink>
                     Softwareentwicklung in der Schweiz
                   </UnderlineForLink>
                 </Link>
               </p>
               <p>
-                <Link href={'/impressum'}>
+                <Link href={"/impressum"}>
                   <UnderlineForLink>Impressum</UnderlineForLink>
                 </Link>
               </p>
               <p>
-                <Link href={'/datenschutzerklaerung'}>
+                <Link href={"/datenschutzerklaerung"}>
                   <UnderlineForLink>Datenschutzerklärung</UnderlineForLink>
                 </Link>
               </p>
@@ -149,7 +149,7 @@ export default function Footer() {
           <div className="h-0.5" ref={ref}></div>
         </div>
         <div
-          className={`${!inView ? 'fixed' : 'relative'} left-0 right-0 top-0 z-0 flex min-h-lvh flex-col justify-end`}
+          className={`${!inView ? "fixed" : "relative"} left-0 right-0 top-0 z-0 flex min-h-lvh flex-col justify-end`}
         >
           <div className="flex flex-1 flex-col justify-end bg-gradient-to-br from-primary-light to-primary-dark bg-300% py-4">
             <p className="mx-auto my-36 max-w-[47rem] px-12 text-3xl font-bold text-base-white md:text-4xl lg:text-6xl">
@@ -214,7 +214,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://docs.klar.apptiva.ch/"
+                    href="https://docs.bubble-chat.ch/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block leading-[1.1]"
@@ -332,55 +332,55 @@ export default function Footer() {
         </div>
       </footer>
     </>
-  )
+  );
 }
 
 const RandomText = React.memo(function RandomEngagementText() {
-  const [isClient, setIsClient] = useState(false)
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setIsClient(true)
-  }, [])
+    setIsClient(true);
+  }, []);
 
   if (!isClient) {
-    return null
+    return null;
   }
   switch (Math.floor(Math.random() * 5) as 0 | 1 | 2 | 3 | 4) {
     case 0:
       return (
         <span>
-          Du hast es geschafft! Zur Belohnung gibt&apos;s unser{' '}
+          Du hast es geschafft! Zur Belohnung gibt&apos;s unser{" "}
           <Underline>Sahnehäubchen.</Underline>
         </span>
-      )
+      );
     case 1:
       return (
         <span>
-          Deine Neugier hat dich hierher geführt. Tauche jetzt tiefer in unsere{' '}
+          Deine Neugier hat dich hierher geführt. Tauche jetzt tiefer in unsere{" "}
           <Underline>vielfältigen Inhalte</Underline> ein.
         </span>
-      )
+      );
     case 2:
       return (
         <span>
-          Du bist noch hier? Klasse! Wir haben noch ein paar{' '}
+          Du bist noch hier? Klasse! Wir haben noch ein paar{" "}
           <Underline>Dinge für dich:</Underline>
         </span>
-      )
+      );
     case 3:
       return (
         <span>
           <Underline>Deine Entdeckungsreise</Underline> ist noch nicht vorbei.
           Schau, was es noch zu erkunden gibt!
         </span>
-      )
+      );
     case 4:
       return (
         <span>
           Finde heraus, was noch auf <Underline>dich wartet:</Underline>
         </span>
-      )
+      );
     default:
-      return null
+      return null;
   }
-})
+});
