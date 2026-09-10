@@ -7,7 +7,7 @@ import {
   Img,
   Preview,
   Text,
-} from '@react-email/components'
+} from 'react-email'
 import { FormInputSchema } from '@/components/server-actions/send-mail'
 
 export default function StandardContactEmail(

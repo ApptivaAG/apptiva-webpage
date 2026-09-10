@@ -1,6 +1,6 @@
-import type { FormInputSchema } from '@/components/server-actions/send-mail'
-import { render } from '@react-email/components'
+import { render } from 'react-email'
 import { describe, expect, it } from 'vitest'
+import type { FormInputSchema } from '@/components/server-actions/send-mail'
 import { ContactFromMailSenderCopy } from '../sender-email/contact-from'
 
 describe('ContactFromMailSenderCopy', () => {

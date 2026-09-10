@@ -6,7 +6,7 @@ import {
   Html,
   Preview,
   Text,
-} from '@react-email/components'
+} from 'react-email'
 
 export default function TestChatbotEmail(props: { email: string }) {
   return (
