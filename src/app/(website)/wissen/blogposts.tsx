@@ -43,6 +43,7 @@ export default async function Blogposts(props: {
                   intent="dark"
                   parentSlug={props.show}
                   className="max-w-md"
+                  imageSizes="(min-width: 448px) 448px, 100vw"
                 />
               </CarouselItem>
             ))}

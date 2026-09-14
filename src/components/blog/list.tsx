@@ -15,13 +15,18 @@ export default function BlogList(props: {
 
   return (
     <ul className="grid gap-4 py-16 lg:grid-cols-3">
-      {sortedFilteredPosts.map((post) => (
+      {sortedFilteredPosts.map((post, index) => (
         <li key={post.slug} className="first:lg:col-span-full">
           <BlogTeaser
             slug={post.slug}
             post={post}
             intent="light"
             parentSlug={props.show}
+            imageSizes={
+              index === 0
+                ? '(min-width: 1024px) min(1024px, 100vw), 100vw'
+                : '(min-width: 1024px) min(33.333vw, 448px), 100vw'
+            }
           />
         </li>
       ))}

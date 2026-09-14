@@ -12,6 +12,7 @@ const ProjectOverview = ({ project }: { project: ProjectsData }) => {
             <SanityImage
               image={project.image}
               className="h-full object-cover object-center"
+              sizes="(max-width: 400px) 300px, (max-width: 600px) 500px, 600px"
             />
             <div className="absolute bottom-0 h-full w-full bg-gradient-to-b from-transparent via-transparent to-primary-dark/80"></div>
             <Heading className="absolute bottom-5 left-5" level={3}>

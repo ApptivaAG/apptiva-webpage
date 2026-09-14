@@ -6,16 +6,22 @@ import Heading from './heading'
 export default function Partners(props: {}) {
   const partners = getPartnerLogos()
 
-  const WithLink: React.FC<{ link?: string; children: React.ReactNode }> = ({
-    link,
-    children,
-  }) =>
+  const WithLink: React.FC<{
+    link?: string
+    className?: string
+    children: React.ReactNode
+  }> = ({ link, className, children }) =>
     link ? (
-      <a href={link} target="_blank" rel="noopener noreferrer">
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={className}
+      >
         {children}
       </a>
     ) : (
-      children
+      <div className={className}>{children}</div>
     )
 
   return (
@@ -40,12 +46,16 @@ export default function Partners(props: {}) {
                       style={{ height: partner.height + 10 }}
                       aria-hidden={isDuplicate}
                     >
-                      <WithLink link={partner.link}>
+                      <WithLink
+                        link={partner.link}
+                        className="relative block size-full"
+                      >
                         <Image
                           alt={partner.alt}
                           src={partner.path}
                           fill
                           className="object-contain opacity-80"
+                          sizes="16.4rem"
                         />
 
                         <div className="absolute inset-[1px] bg-primary bg-blend-lighten mix-blend-color [filter:brightness(120%)]"></div>
@@ -67,12 +77,16 @@ export default function Partners(props: {}) {
                 className="relative min-w-0 flex-[0_0_16.4rem] bg-base-white"
                 style={{ height: partner.height + 10 }}
               >
-                <WithLink link={partner.link}>
+                <WithLink
+                  link={partner.link}
+                  className="relative block size-full"
+                >
                   <Image
                     alt={partner.alt}
                     src={partner.path}
                     fill
                     className="object-contain opacity-80"
+                    sizes="16.4rem"
                   />
 
                   <div className="absolute inset-[1px] bg-primary bg-blend-lighten mix-blend-color [filter:brightness(120%)]"></div>

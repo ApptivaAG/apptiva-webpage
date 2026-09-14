@@ -1,13 +1,17 @@
 import {
   getImageAsset,
   getImageDimensions,
-  SanityImageSource,
+  type SanityImageSource,
 } from '@sanity/asset-utils'
 import type { PlaceholderValue } from 'next/dist/shared/lib/get-img-props'
-import Image from 'next/image'
-import { SanityImageWithAlt } from '@/domain/types'
+import { Image } from 'next-sanity/image'
+import type { SanityImageWithAlt } from '@/domain/types'
 import { dataset, projectId } from '@/sanity/env'
 import { urlForImage } from '@/sanity/lib/image'
+
+type SanityImageWithAsset = Exclude<SanityImageWithAlt, null> & {
+  asset: SanityImageSource
+}
 
 export default function SanityImage({
   image,
@@ -15,20 +19,18 @@ export default function SanityImage({
   size,
   sizes,
 }: {
-  image: (SanityImageWithAlt & { asset?: any }) | null
+  image: SanityImageWithAlt
   className?: string
   size?: 'content' | 'popout' | 'full' | 'default'
   sizes?: string
 }) {
-  if (!image) return null
-  const { width = 0, height = 0 } = image?.asset
-    ? getImageDimensions(image)
-    : {}
+  if (!hasImageAsset(image)) return null
 
-  return image.asset ? (
+  const { width, height } = getImageDimensions(image)
+
+  return (
     <Image
       className={className}
-      key={image.toString()}
       src={urlForImage(image).url()}
       alt={image.alt ?? ''}
       width={width}
@@ -36,7 +38,18 @@ export default function SanityImage({
       placeholder={buildPlaceholder(image, width, height)}
       sizes={getSizes(sizes, size)}
     />
-  ) : null
+  )
+}
+
+function hasImageAsset(
+  image: SanityImageWithAlt
+): image is SanityImageWithAsset {
+  return (
+    typeof image === 'object' &&
+    image !== null &&
+    'asset' in image &&
+    Boolean(image.asset)
+  )
 }
 
 function getSizes(sizes: string | undefined, size: string | undefined) {
@@ -53,7 +66,7 @@ function getSizes(sizes: string | undefined, size: string | undefined) {
       return '(min-width: 1200px) 100vw, 100vw'
 
     default:
-      return '(min-width: 768px) 50vw, (min-width: 1200px) 40vw, 100vw'
+      return '(min-width: 1200px) 600px, (min-width: 768px) 300px, 100vw'
   }
 }
 

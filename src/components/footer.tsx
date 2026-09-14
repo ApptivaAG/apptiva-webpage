@@ -61,7 +61,12 @@ export default function Footer() {
                     target="_blank"
                     className="flex gap-1 rounded bg-base-white px-3 py-2 text-primary !no-underline transition-colors hover:bg-base-white/80"
                   >
-                    <Image height="25" src={whatsApp} alt="WhatsApp Logo" />
+                    <Image
+                      height={25}
+                      src={whatsApp}
+                      alt="WhatsApp Logo"
+                      style={{ width: 'auto' }}
+                    />
                     Chat auf WhatsApp
                   </a>
                 </p>

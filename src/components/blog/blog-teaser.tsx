@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import SanityImage from '@/components/sanity-image'
 import { Card } from '@/components/ui/card'
@@ -12,6 +11,7 @@ export function BlogTeaser(props: {
   intent: 'dark' | 'light'
   parentSlug: 'blog' | 'apptiva-lernt'
   className?: string
+  imageSizes?: string
 }) {
   const { slug, post } = props
   return (
@@ -26,6 +26,7 @@ export function BlogTeaser(props: {
           <SanityImage
             className="aspect-video object-cover"
             image={post.image}
+            sizes={props.imageSizes}
           />
         )}
       </div>

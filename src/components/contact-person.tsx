@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import SanityImage from '@/components/sanity-image'
+import { Image as SanityImage } from 'next-sanity/image'
 import { PortableText } from '@/domain/types'
+import { urlForImage } from '@/sanity/lib/image'
 import { PersonData } from '@/sanity/lib/queries'
 import { cn } from '@/utils/cn'
 import ChatInput from './chat-input'
@@ -45,10 +46,16 @@ export default function ContactPerson(props: {
                 alt="Apptiva Logo Icon"
                 className="absolute inset-y-0 size-[20rem] object-cover md:size-[26rem]"
               />
-              <SanityImage
-                image={props.person.imageWithoutBackground}
-                className="absolute left-7 top-[-2.7rem] h-[21rem] w-[16.5rem] rounded-b-[2.1rem] object-cover md:left-9 md:top-[-3.25rem] md:h-[27rem] md:w-[21.5rem] md:rounded-b-[2.75rem]"
-              />
+              {props.person.imageWithoutBackground && (
+                <SanityImage
+                  src={urlForImage(props.person.imageWithoutBackground).url()}
+                  alt="Kontakt"
+                  className="absolute left-7 top-[-2.7rem] h-[21rem] w-[16.5rem] rounded-b-[2.1rem] object-cover md:left-9 md:top-[-3.25rem] md:h-[27rem] md:w-[21.5rem] md:rounded-b-[2.75rem]"
+                  sizes="360px"
+                  width={360}
+                  height={360}
+                />
+              )}
             </div>
             <div className="col-right flex flex-col items-start justify-center gap-3">
               {props.content && (

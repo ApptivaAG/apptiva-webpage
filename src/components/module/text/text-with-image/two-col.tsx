@@ -41,7 +41,7 @@ export default function TextWithImageTwoCol(props: { module: ModuleData }) {
             <SanityImage
               className="rounded"
               image={module.image}
-              sizes="(min-width: 1600px) 660px, (min-width: 1024px) 50vw, 100vw"
+              sizes="(max-width: 600px) 100vw, 600px"
             />
           </div>
           <div className="flex-1 space-y-4 lg:space-y-8 lg:py-16">

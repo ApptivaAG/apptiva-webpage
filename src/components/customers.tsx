@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import { Image } from 'next-sanity/image'
 import { Group, getCustomerLogos } from '@/domain/customers'
 import { urlForImage } from '@/sanity/lib/image'
 import Carousel from './carousel'
@@ -21,6 +21,7 @@ export default async function Customers(props: { groups?: Group[] }) {
                 src={urlForImage(customer.logo).url()}
                 fill
                 className="object-contain opacity-80"
+                sizes="16.4rem"
               />
               <div className="absolute inset-[1px] bg-primary bg-blend-lighten mix-blend-color [filter:brightness(120%)]"></div>
             </div>
