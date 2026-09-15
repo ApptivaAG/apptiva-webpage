@@ -1,5 +1,4 @@
-import { SanityImageSource } from '@sanity/asset-utils'
-import { createImageUrlBuilder } from '@sanity/image-url'
+import { createImageUrlBuilder, SanityImageSource } from '@sanity/image-url'
 import { dataset, projectId } from '../env'
 
 const imageBuilder = createImageUrlBuilder({
