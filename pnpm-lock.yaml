@@ -11,6 +11,7 @@ overrides:
   brace-expansion: '>=5.0.6'
   jsdom: 27.3.0
   next@>=16.0.0 <16.3.3: ^16.3.3
+  smol-toml@<=1.7.0: ^1.7.1
 
 importers:
 
@@ -6364,10 +6365,6 @@ packages:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
 
-  smol-toml@1.5.2:
-    resolution: {integrity: sha512-QlaZEqcAH3/RtNyet1IPIYPsEWAaYyXXv1Krsi+1L/QHppjX4Ifm8MQsBISz9vE8cHicIq3clogsheili5vhaQ==}
-    engines: {node: '>= 18'}
-
   smol-toml@1.8.0:
     resolution: {integrity: sha512-kCZr2V3ch9i00x8zXRhjUNVcjG9ijES5dDudkXvUVCT5QlJNQWElSJdZqyPemffHoLNUYwOcou0Fy+ojN0uHSQ==}
     engines: {node: '>= 18'}
@@ -10966,7 +10963,7 @@ snapshots:
     dependencies:
       '@vercel/error-utils': 2.2.0
       js-yaml: 5.4.2
-      smol-toml: 1.5.2
+      smol-toml: 1.8.0
 
   '@vercel/stega@1.1.0': {}
 
@@ -14397,8 +14394,6 @@ snapshots:
       yaml: 2.9.1
 
   slash@3.0.0: {}
-
-  smol-toml@1.5.2: {}
 
   smol-toml@1.8.0: {}
 
