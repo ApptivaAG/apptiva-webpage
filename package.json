@@ -16,6 +16,7 @@
     "email:dev": "email dev --dir src/components/contact-form --port 3001",
     "resend:catch": "node script/resend-catcher.mjs"
   },
+  "packageManager": "pnpm@11.4.0",
   "dependencies": {
     "@codemirror/language": "^6.12.4",
     "@codemirror/legacy-modes": "^6.5.3",
