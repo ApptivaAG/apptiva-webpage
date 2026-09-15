@@ -22,6 +22,7 @@ export default function Content(props: {
             alt="10 Jahre Apptiva Chatbots"
           />
         </div>
+        <p>Hello</p>
         <ChatInput
           mode="inline-input"
           origin="page-header"
