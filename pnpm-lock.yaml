@@ -13,6 +13,7 @@ overrides:
   next@>=16.0.0 <16.3.3: ^16.3.3
   smol-toml@<=1.7.0: ^1.7.1
   undici: '>=7.29.1'
+  adm-zip: '>=0.6.1'
 
 importers:
 
@@ -3522,10 +3523,6 @@ packages:
     resolution: {integrity: sha512-lGq+9yr1/GuAWaVYIHRjvvySG5/4VfKIvC8EWxStPdcDh/Ka7FG3twP6v4d5BkravUilhIAsG4Qj83t02LWUPQ==}
     engines: {node: '>=0.4.0'}
     hasBin: true
-
-  adm-zip@0.6.0:
-    resolution: {integrity: sha512-XleryMhbuksdKtofnWZ9Sk+4CUTbms4Mb/EU32SZwToAyZ5RgVos/ki8n+yr0LWHOGKuakbXTuuYNHLQjhddgg==}
-    engines: {node: '>=14.0'}
 
   adm-zip@0.6.1:
     resolution: {integrity: sha512-Xwrja8nx9e5o2N1my4DsKCeKpdrnACyr1wtbPxBDgGzKzKyE9kRtBFA8mWldI+RVlD7CBZNWY/wQ2+ydwOR6kQ==}
@@ -8967,7 +8964,7 @@ snapshots:
       '@module-federation/managers': 2.9.0
       '@module-federation/sdk': 2.9.0
       '@module-federation/third-party-dts-extractor': 2.9.0
-      adm-zip: 0.6.0
+      adm-zip: 0.6.1
       isomorphic-ws: 5.0.0(ws@8.21.0)
       typescript: 7.0.2
       undici: 7.29.1
@@ -11043,8 +11040,6 @@ snapshots:
       acorn: 8.18.0
 
   acorn@8.18.0: {}
-
-  adm-zip@0.6.0: {}
 
   adm-zip@0.6.1: {}
 
