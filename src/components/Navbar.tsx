@@ -59,8 +59,23 @@ export const navbarData: NavbarItem[] = [
         type: 'media-link',
       },
       {
-        title: 'Angebot',
+        title: 'Übersicht',
         href: '/angebot/chatbots',
+        type: 'link',
+      },
+      {
+        title: 'Funktionen & Möglichkeiten',
+        href: '/angebot/chatbots/funktionen',
+        type: 'link',
+      },
+      {
+        title: 'Integrationen',
+        href: '/angebot/chatbots/integrationen',
+        type: 'link',
+      },
+      {
+        title: 'Sicherheit & Datenschutz',
+        href: '/angebot/chatbots/sicherheit-und-datenschutz',
         type: 'link',
       },
       {
