@@ -1,12 +1,15 @@
 'use server'
 
-import { ContactFromMailSenderCopy } from '@/components/contact-form/sender-email/contact-from'
 import { Resend } from 'resend'
 import { z } from 'zod'
 import { zfd } from 'zod-form-data'
+import { ContactFromMailSenderCopy } from '@/components/contact-form/sender-email/contact-from'
+import { checkSpam } from '@/domain/spam-check'
 import ContactFromMailApptivaCopy from '../contact-form/apptiva-email/contact-from'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
+
+const SPAM_EMAIL = 'spam@apptiva.ch'
 
 type FormState =
   | {
@@ -86,6 +89,36 @@ export async function sendMail(
     return { state: 'spam' }
   }
 
+  const successState = {
+    state: 'success' as const,
+    email: parsedData.email,
+    name: 'name' in parsedData ? parsedData.name : undefined,
+    company: 'company' in parsedData ? parsedData.company : undefined,
+    message: 'message' in parsedData ? parsedData.message : undefined,
+    phone: 'phone' in parsedData ? parsedData.phone : undefined,
+    referrer: 'referrer' in parsedData ? parsedData.referrer : undefined,
+  }
+
+  const spamCheck = await checkSpam(successState)
+
+  if (spamCheck.spam) {
+    // Silent drop: the bot sees a success, we only get a copy in the spam inbox.
+    // No sender copy, so we don't mail addresses entered by bots.
+    console.warn('Spam detected by Jev', JSON.stringify(spamCheck.scores))
+    try {
+      const { error } = await resend.emails.send({
+        from: 'Kontaktformular apptiva.ch <kontaktformular@apptiva-mailer.ch>',
+        to: SPAM_EMAIL,
+        subject: `[SPAM?] ${parsedData.subject}`,
+        react: ContactFromMailApptivaCopy(parsedData, spamCheck),
+      })
+      if (error) console.error('Error sending spam mail', error)
+    } catch (error) {
+      console.error('Error sending spam mail', error)
+    }
+    return successState
+  }
+
   try {
     const { email, subject, circle } = parsedData
 
@@ -100,7 +133,7 @@ export async function sendMail(
         from: 'Kontaktformular apptiva.ch <kontaktformular@apptiva-mailer.ch>',
         to: mapCircleToEmail(circle),
         subject: subject,
-        react: ContactFromMailApptivaCopy(parsedData),
+        react: ContactFromMailApptivaCopy(parsedData, spamCheck),
       },
     ])
 
@@ -114,15 +147,7 @@ export async function sendMail(
     }
 
     console.log('Mail sent', JSON.stringify(parsedData, null, 2))
-    return {
-      state: 'success',
-      email,
-      name: 'name' in parsedData ? parsedData.name : undefined,
-      company: 'company' in parsedData ? parsedData.company : undefined,
-      message: 'message' in parsedData ? parsedData.message : undefined,
-      phone: 'phone' in parsedData ? parsedData.phone : undefined,
-      referrer: 'referrer' in parsedData ? parsedData.referrer : undefined,
-    }
+    return successState
   } catch (error) {
     console.error('Error sending mail', error)
 

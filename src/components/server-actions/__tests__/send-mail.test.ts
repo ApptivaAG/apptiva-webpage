@@ -2,12 +2,21 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 // Mock Resend before importing sendMail
 const mockBatchSend = vi.fn()
+const mockEmailsSend = vi.fn()
+const mockCheckSpam = vi.fn()
+
+vi.mock('@/domain/spam-check', () => ({
+  checkSpam: (...args: unknown[]) => mockCheckSpam(...args),
+}))
 
 vi.mock('resend', () => {
   return {
     Resend: class MockResend {
       batch = {
         send: mockBatchSend,
+      }
+      emails = {
+        send: mockEmailsSend,
       }
     },
   }
@@ -19,6 +28,9 @@ const { sendMail } = await import('../send-mail')
 describe('sendMail Server Action', () => {
   beforeEach(() => {
     mockBatchSend.mockReset()
+    mockEmailsSend.mockReset()
+    mockCheckSpam.mockReset()
+    mockCheckSpam.mockResolvedValue({ spam: false })
 
     // Setup console spies
     vi.spyOn(console, 'log').mockImplementation(() => {})
@@ -203,6 +215,65 @@ describe('sendMail Server Action', () => {
       expect(result.state).toBe('spam')
       expect(mockBatchSend).not.toHaveBeenCalled()
       expect(console.warn).toHaveBeenCalledWith('Spam detected')
+    })
+
+    it('should silently drop Jev spam and forward it to the spam inbox', async () => {
+      mockCheckSpam.mockResolvedValue({
+        spam: true,
+        scores: { gibberish: 0.97, bot: 0.9 },
+      })
+      mockEmailsSend.mockResolvedValue({ error: null })
+
+      const formData = new FormData()
+      formData.append('kind', 'klar')
+      formData.append('name', 'EDWlxOunnWqzznaMtPmoU')
+      formData.append('email', 'fu.m.u.goto.ye9.2.1@gmail.com')
+      formData.append('company', 'Xextpru LLC')
+      formData.append('referrer', 'blbEGGqlfxmcLxvtqNoeTe')
+      formData.append('message', 'WPTvweaCKgsgBdHSBemRtCi')
+      formData.append('circle', 'klar')
+      formData.append('subject', 'Demo')
+
+      const result = await sendMail({ state: 'idle' }, formData)
+
+      expect(result.state).toBe('success')
+      expect(mockBatchSend).not.toHaveBeenCalled()
+      expect(mockEmailsSend).toHaveBeenCalledWith(
+        expect.objectContaining({
+          to: 'spam@apptiva.ch',
+          subject: '[SPAM?] Demo',
+        })
+      )
+      expect(mockCheckSpam).toHaveBeenCalledWith(
+        expect.objectContaining({ name: 'EDWlxOunnWqzznaMtPmoU' })
+      )
+    })
+
+    it('should still return success if forwarding spam fails', async () => {
+      mockCheckSpam.mockResolvedValue({ spam: true })
+      mockEmailsSend.mockRejectedValue(new Error('down'))
+
+      const formData = new FormData()
+      formData.append('kind', 'testChatbot')
+      formData.append('email', 'bot@example.com')
+      formData.append('circle', 'klar')
+
+      const result = await sendMail({ state: 'idle' }, formData)
+
+      expect(result.state).toBe('success')
+      expect(mockBatchSend).not.toHaveBeenCalled()
+    })
+
+    it('should not call Jev when honeypot is filled', async () => {
+      const formData = new FormData()
+      formData.append('kind', 'testChatbot')
+      formData.append('email', 'spam@example.com')
+      formData.append('circle', 'klar')
+      formData.append('address', 'filled-by-bot')
+
+      await sendMail({ state: 'idle' }, formData)
+
+      expect(mockCheckSpam).not.toHaveBeenCalled()
     })
   })
 

@@ -1,11 +1,11 @@
 'use client'
 
+import { useActionState, useState } from 'react'
 import { FormSuccessMessage } from '@/components/form-success-message'
 import { sendMail } from '@/components/server-actions/send-mail'
 import { Submit } from '@/components/submit'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { useActionState, useState } from 'react'
 
 export default function TestChatbotForm() {
   const [state, formAction] = useActionState(sendMail, { state: 'idle' })

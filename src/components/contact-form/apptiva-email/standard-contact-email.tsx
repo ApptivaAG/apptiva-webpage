@@ -8,9 +8,13 @@ import {
   Text,
 } from 'react-email'
 import { FormInputSchema } from '@/components/server-actions/send-mail'
+import type { SpamResult } from '@/domain/spam-check'
+import { SpamCheckInfo } from './spam-check-info'
 
 export default function StandardContactEmail(
-  props: Exclude<FormInputSchema, { kind: 'testChatbot' }>
+  props: Exclude<FormInputSchema, { kind: 'testChatbot' }> & {
+    spamCheck?: SpamResult
+  }
 ) {
   return (
     <Html>
@@ -47,6 +51,7 @@ export default function StandardContactEmail(
                 {props.phone ? String(props.phone) : 'keine Angabe'}
               </Text>
             )}
+            <SpamCheckInfo spamCheck={props.spamCheck} />
           </Container>
         </Container>
       </Body>

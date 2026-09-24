@@ -7,8 +7,13 @@ import {
   Preview,
   Text,
 } from 'react-email'
+import type { SpamResult } from '@/domain/spam-check'
+import { SpamCheckInfo } from './spam-check-info'
 
-export default function TestChatbotEmail(props: { email: string }) {
+export default function TestChatbotEmail(props: {
+  email: string
+  spamCheck?: SpamResult
+}) {
   return (
     <Html>
       <Head />
@@ -28,6 +33,7 @@ export default function TestChatbotEmail(props: { email: string }) {
               <b>E-Mail Adresse: </b>
               {String(props.email)}
             </Text>
+            <SpamCheckInfo spamCheck={props.spamCheck} />
           </Container>
         </Container>
       </Body>

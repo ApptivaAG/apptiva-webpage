@@ -1,13 +1,17 @@
 import { FormInputSchema } from '@/components/server-actions/send-mail'
+import type { SpamResult } from '@/domain/spam-check'
 import StandardContactEmail from './standard-contact-email'
 import TestChatbotEmail from './test-chatbot-email'
 
-export const ContactFromMailApptivaCopy = (props: FormInputSchema) => {
+export const ContactFromMailApptivaCopy = (
+  props: FormInputSchema,
+  spamCheck?: SpamResult
+) => {
   if (props.kind === 'testChatbot') {
-    return <TestChatbotEmail email={props.email} />
+    return <TestChatbotEmail email={props.email} spamCheck={spamCheck} />
   }
 
-  return <StandardContactEmail {...props} />
+  return <StandardContactEmail {...props} spamCheck={spamCheck} />
 }
 
 export default ContactFromMailApptivaCopy
