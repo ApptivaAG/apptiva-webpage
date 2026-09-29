@@ -1,9 +1,8 @@
-import Link from 'next/link'
 import BreadCrumb from '@/components/bread-crumb'
 import FAQsComponent from '@/components/faqs'
 import Heading from '@/components/heading'
+import PrevNextNavigation from '@/components/prev-next-navigation'
 import SanityImage from '@/components/sanity-image'
-import Button from '@/components/ui/button'
 import { CmsBlog } from '@/domain/types'
 import { kebabCaseToTitleCase } from '@/utils/format'
 import BlogPortableText from '../blog-portable-text'
@@ -75,32 +74,13 @@ export default function CmsBlogPost(props: {
               <FAQsComponent faqs={post.faqs} />
             </div>
           )}
-          <div className="flex justify-between gap-4 pt-8">
-            {previousSlug ? (
-              <Link href={`/${kind}/${previousSlug}`} className="no-underline">
-                <Button
-                  intent="primary"
-                  element="div"
-                  className="flex items-center gap-4"
-                >
-                  <span className="text-l">←</span>Zum vorherigen Artikel
-                </Button>
-              </Link>
-            ) : (
-              <div />
-            )}
-            {nextSlug && (
-              <Link href={`/${kind}/${nextSlug}`} className="no-underline">
-                <Button
-                  intent="primary"
-                  element="div"
-                  className="flex items-center gap-4"
-                >
-                  Zum nächsten Artikel<span className="text-l">→</span>
-                </Button>
-              </Link>
-            )}
-          </div>
+          <PrevNextNavigation
+            basePath={`/${kind}`}
+            previousSlug={previousSlug}
+            nextSlug={nextSlug}
+            previousLabel="Zum vorherigen Artikel"
+            nextLabel="Zum nächsten Artikel"
+          />
         </div>
         <aside></aside>
       </div>

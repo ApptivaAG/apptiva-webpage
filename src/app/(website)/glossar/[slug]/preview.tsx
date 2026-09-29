@@ -9,12 +9,18 @@ type Data = InferType<typeof glossaryBySlugQuery>
 export default function GlossaryItemPreview({
   initial,
   params,
+  previousSlug,
+  nextSlug,
 }: {
   initial: QueryResponseInitial<Data>
   params: { slug: string }
+  previousSlug?: string
+  nextSlug?: string
 }) {
   const { data } = useQuery<Data>(glossaryBySlugQuery.query, params, {
     initial,
   })
-  return <Item glossary={data} />
+  return (
+    <Item glossary={data} previousSlug={previousSlug} nextSlug={nextSlug} />
+  )
 }

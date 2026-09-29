@@ -1,11 +1,14 @@
 import { InferType } from 'groqd'
 import { PageHeader } from '@/components/page-header'
+import PrevNextNavigation from '@/components/prev-next-navigation'
 import { glossaryBySlugQuery } from '@/sanity/lib/queries'
 import portableTextToString from '@/utils/portable-text-to-string'
 import GlossaryPortableText from './glossar-portable-text'
 
 export default function Item(props: {
   glossary: InferType<typeof glossaryBySlugQuery>
+  previousSlug?: string
+  nextSlug?: string
 }) {
   if (!props.glossary) return <div>Empty</div>
 
@@ -36,6 +39,15 @@ export default function Item(props: {
           </div>
         </div>
       )}
+
+      <PrevNextNavigation
+        basePath="/glossar"
+        previousSlug={props.previousSlug}
+        nextSlug={props.nextSlug}
+        previousLabel="Zum vorherigen Begriff"
+        nextLabel="Zum nächsten Begriff"
+        className="pb-16"
+      />
     </>
   )
 }

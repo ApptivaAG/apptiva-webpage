@@ -1,7 +1,8 @@
 import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
-import { glossaryBySlugQuery } from '@/sanity/lib/queries'
+import { orderGlossaryByTitle } from '@/domain/glossary'
+import { glossaryBySlugQuery, glossaryQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
 import portableTextToString from '@/utils/portable-text-to-string'
 import Item from './item'
@@ -16,6 +17,8 @@ export async function generateMetadata(props: {
     await props.params,
     ['glossary']
   )
+
+  if (!glossary) notFound()
 
   const url = `/glossar/${glossary.slug}`
   const title = glossary.header?.title
@@ -42,15 +45,43 @@ export default async function GlossaryItem(props: {
 }) {
   const isDraft = (await draftMode()).isEnabled
   const params = await props.params
-  const { published, draft } =
-    (await load(glossaryBySlugQuery, isDraft, params, ['glossary'])) ??
-    notFound()
+  const { published, draft } = await load(
+    glossaryBySlugQuery,
+    isDraft,
+    params,
+    ['glossary']
+  )
+  if (!isDraft && !published) notFound()
+
+  const { published: allGlossary } = await load(
+    glossaryQuery,
+    false,
+    undefined,
+    ['glossary']
+  )
+  const slugs = orderGlossaryByTitle(allGlossary ?? [])
+    .map((entry) => entry.slug)
+    .filter((slug): slug is string => Boolean(slug))
+  const currentIndex = slugs.indexOf(params.slug)
+  const previousSlug = currentIndex > 0 ? slugs[currentIndex - 1] : undefined
+  const nextSlug =
+    currentIndex >= 0 ? (slugs[currentIndex + 1] ?? undefined) : undefined
+
   return (
     <>
       {isDraft ? (
-        <GlossaryItemPreview initial={draft} params={params} />
+        <GlossaryItemPreview
+          initial={draft}
+          params={params}
+          previousSlug={previousSlug}
+          nextSlug={nextSlug}
+        />
       ) : (
-        <Item glossary={published} />
+        <Item
+          glossary={published}
+          previousSlug={previousSlug}
+          nextSlug={nextSlug}
+        />
       )}
     </>
   )
