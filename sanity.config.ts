@@ -12,6 +12,7 @@ import { presentationTool } from 'sanity/presentation'
 import { structureTool } from 'sanity/structure'
 import { apiVersion, dataset, projectId } from './src/sanity/env'
 import { schema } from './src/sanity/schema'
+import { blogStatsTool } from './src/sanity/tools/blog-stats'
 
 export default defineConfig({
   basePath: '/studio',
@@ -86,4 +87,5 @@ export default defineConfig({
       ],
     }),
   ],
+  tools: [blogStatsTool()],
 })
