@@ -8,7 +8,7 @@ import {
   Preview,
   Text,
 } from 'react-email'
-import { FormInputSchema } from '@/components/server-actions/send-mail'
+import { FormInputSchema } from '@/domain/contact-form/schema'
 
 export default function StandardContactEmail(
   props: Exclude<FormInputSchema, { kind: 'testChatbot' }>

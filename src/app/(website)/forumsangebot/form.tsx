@@ -3,13 +3,13 @@
 import { usePathname } from 'next/navigation'
 import { useActionState, useState } from 'react'
 import { FormSuccessMessage } from '@/components/form-success-message'
-import { sendMail } from '@/components/server-actions/send-mail'
+import { submitContactForm } from '@/components/server-actions/submit-contact-form'
 import { Submit } from '@/components/submit'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 
 export default function Form() {
-  const [state, formAction] = useActionState(sendMail, { state: 'idle' })
+  const [state, formAction] = useActionState(submitContactForm, { state: 'idle' })
   const [correcting, setCorrecting] = useState(false)
   const pathname = usePathname()
 

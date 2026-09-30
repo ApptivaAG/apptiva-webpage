@@ -1,4 +1,4 @@
-import { FormInputSchema } from '@/components/server-actions/send-mail'
+import { FormInputSchema } from '@/domain/contact-form/schema'
 import type { SpamResult } from '@/domain/spam-check'
 import StandardContactEmail from './standard-contact-email'
 import TestChatbotEmail from './test-chatbot-email'

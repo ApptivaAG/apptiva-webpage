@@ -1,6 +1,6 @@
 import { render } from 'react-email'
 import { describe, expect, it } from 'vitest'
-import type { FormInputSchema } from '@/components/server-actions/send-mail'
+import type { FormInputSchema } from '@/domain/contact-form/schema'
 import { ContactFromMailApptivaCopy } from '../apptiva-email/contact-from'
 
 describe('ContactFromMailApptivaCopy', async () => {

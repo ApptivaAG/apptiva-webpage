@@ -7,7 +7,7 @@ import {
   Preview,
   Text,
 } from 'react-email'
-import { FormInputSchema } from '@/components/server-actions/send-mail'
+import { FormInputSchema } from '@/domain/contact-form/schema'
 import type { SpamResult } from '@/domain/spam-check'
 import { SpamCheckInfo } from './spam-check-info'
 

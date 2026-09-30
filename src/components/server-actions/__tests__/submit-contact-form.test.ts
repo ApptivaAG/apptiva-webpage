@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
-// Mock Resend before importing sendMail
+// Mock Resend before importing submitContactForm
 const mockBatchSend = vi.fn()
 const mockEmailsSend = vi.fn()
 const mockCheckSpam = vi.fn()
@@ -43,9 +43,9 @@ async function flushAfter() {
 }
 
 // Import after mock is set up
-const { sendMail } = await import('../send-mail')
+const { submitContactForm } = await import('../submit-contact-form')
 
-describe('sendMail Server Action', () => {
+describe('submitContactForm Server Action', () => {
   beforeEach(() => {
     mockBatchSend.mockReset()
     mockEmailsSend.mockReset()
@@ -80,7 +80,7 @@ describe('sendMail Server Action', () => {
     it('sends Kontaktanfrage event with kind and page on success', async () => {
       mockBatchSend.mockResolvedValue({ error: null })
 
-      await sendMail({ state: 'idle' }, buildFormData('/kontakt'))
+      await submitContactForm({ state: 'idle' }, buildFormData('/kontakt'))
       await flushAfter()
 
       expect(fetch).toHaveBeenCalledTimes(1)
@@ -101,7 +101,7 @@ describe('sendMail Server Action', () => {
     it('falls back to "unbekannt" when page is missing', async () => {
       mockBatchSend.mockResolvedValue({ error: null })
 
-      await sendMail({ state: 'idle' }, buildFormData())
+      await submitContactForm({ state: 'idle' }, buildFormData())
       await flushAfter()
 
       const body = JSON.parse(String(vi.mocked(fetch).mock.calls[0][1]?.body))
@@ -112,7 +112,7 @@ describe('sendMail Server Action', () => {
     it('does not track when Resend returns an error', async () => {
       mockBatchSend.mockResolvedValue({ error: { message: 'fail' } })
 
-      await sendMail({ state: 'idle' }, buildFormData('/kontakt'))
+      await submitContactForm({ state: 'idle' }, buildFormData('/kontakt'))
       await flushAfter()
 
       expect(fetch).not.toHaveBeenCalled()
@@ -122,7 +122,7 @@ describe('sendMail Server Action', () => {
       const formData = buildFormData('/kontakt')
       formData.append('address', 'bot')
 
-      await sendMail({ state: 'idle' }, formData)
+      await submitContactForm({ state: 'idle' }, formData)
       await flushAfter()
 
       expect(fetch).not.toHaveBeenCalled()
@@ -132,7 +132,7 @@ describe('sendMail Server Action', () => {
       mockCheckSpam.mockResolvedValue({ spam: true, scores: {} })
       mockEmailsSend.mockResolvedValue({ error: null })
 
-      await sendMail({ state: 'idle' }, buildFormData('/kontakt'))
+      await submitContactForm({ state: 'idle' }, buildFormData('/kontakt'))
       await flushAfter()
 
       expect(fetch).not.toHaveBeenCalled()
@@ -142,7 +142,7 @@ describe('sendMail Server Action', () => {
       mockBatchSend.mockResolvedValue({ error: null })
       vi.mocked(fetch).mockRejectedValue(new Error('network'))
 
-      const result = await sendMail(
+      const result = await submitContactForm(
         { state: 'idle' },
         buildFormData('/kontakt')
       )
@@ -168,7 +168,7 @@ describe('sendMail Server Action', () => {
       formData.append('subject', 'Test Subject')
       formData.append('circle', 'apptiva')
 
-      const result = await sendMail({ state: 'idle' }, formData)
+      const result = await submitContactForm({ state: 'idle' }, formData)
 
       expect(result.state).toBe('success')
       expect(result).toHaveProperty('email', 'max@example.com')
@@ -188,7 +188,7 @@ describe('sendMail Server Action', () => {
       formData.append('subject', 'Apptiva Klar Demo')
       formData.append('circle', 'klar')
 
-      const result = await sendMail({ state: 'idle' }, formData)
+      const result = await submitContactForm({ state: 'idle' }, formData)
 
       expect(result.state).toBe('success')
     })
@@ -202,7 +202,7 @@ describe('sendMail Server Action', () => {
       formData.append('subject', 'Test Chatbot Request')
       formData.append('circle', 'klar')
 
-      const result = await sendMail({ state: 'idle' }, formData)
+      const result = await submitContactForm({ state: 'idle' }, formData)
 
       expect(result.state).toBe('success')
       expect(result).toHaveProperty('email', 'test@example.com')
@@ -213,7 +213,7 @@ describe('sendMail Server Action', () => {
       formData.append('name', 'Max Mustermann')
       // Missing email, message, circle
 
-      const result = await sendMail({ state: 'idle' }, formData)
+      const result = await submitContactForm({ state: 'idle' }, formData)
 
       expect(result.state).toBe('error')
       expect(result).toHaveProperty('error')
@@ -231,7 +231,7 @@ describe('sendMail Server Action', () => {
       formData.append('subject', 'Test')
       // company and referrer are optional and not provided
 
-      const result = await sendMail({ state: 'idle' }, formData)
+      const result = await submitContactForm({ state: 'idle' }, formData)
 
       expect(result.state).toBe('success')
     })
@@ -247,7 +247,7 @@ describe('sendMail Server Action', () => {
       formData.append('circle', 'apptiva')
       // No subject provided
 
-      const result = await sendMail({ state: 'idle' }, formData)
+      const result = await submitContactForm({ state: 'idle' }, formData)
 
       expect(result.state).toBe('success')
       expect(mockBatchSend).toHaveBeenCalledWith(
@@ -268,7 +268,7 @@ describe('sendMail Server Action', () => {
       formData.append('circle', 'klar')
       // No subject provided
 
-      const result = await sendMail({ state: 'idle' }, formData)
+      const result = await submitContactForm({ state: 'idle' }, formData)
 
       expect(result.state).toBe('success')
       expect(mockBatchSend).toHaveBeenCalledWith(
@@ -292,7 +292,7 @@ describe('sendMail Server Action', () => {
       formData.append('subject', 'Spam')
       formData.append('address', 'filled-by-bot') // Honeypot field
 
-      const result = await sendMail({ state: 'idle' }, formData)
+      const result = await submitContactForm({ state: 'idle' }, formData)
 
       expect(result.state).toBe('spam')
       expect(mockBatchSend).not.toHaveBeenCalled()
@@ -311,7 +311,7 @@ describe('sendMail Server Action', () => {
       formData.append('subject', 'Real')
       // address field not set (undefined)
 
-      const result = await sendMail({ state: 'idle' }, formData)
+      const result = await submitContactForm({ state: 'idle' }, formData)
 
       expect(result.state).toBe('success')
     })
@@ -324,7 +324,7 @@ describe('sendMail Server Action', () => {
       formData.append('subject', 'Spam')
       formData.append('address', 'filled-by-bot') // Honeypot field
 
-      const result = await sendMail({ state: 'idle' }, formData)
+      const result = await submitContactForm({ state: 'idle' }, formData)
 
       expect(result.state).toBe('spam')
       expect(mockBatchSend).not.toHaveBeenCalled()
@@ -348,7 +348,7 @@ describe('sendMail Server Action', () => {
       formData.append('circle', 'klar')
       formData.append('subject', 'Demo')
 
-      const result = await sendMail({ state: 'idle' }, formData)
+      const result = await submitContactForm({ state: 'idle' }, formData)
 
       expect(result.state).toBe('success')
       expect(mockBatchSend).not.toHaveBeenCalled()
@@ -372,7 +372,7 @@ describe('sendMail Server Action', () => {
       formData.append('email', 'bot@example.com')
       formData.append('circle', 'klar')
 
-      const result = await sendMail({ state: 'idle' }, formData)
+      const result = await submitContactForm({ state: 'idle' }, formData)
 
       expect(result.state).toBe('success')
       expect(mockBatchSend).not.toHaveBeenCalled()
@@ -385,7 +385,7 @@ describe('sendMail Server Action', () => {
       formData.append('circle', 'klar')
       formData.append('address', 'filled-by-bot')
 
-      await sendMail({ state: 'idle' }, formData)
+      await submitContactForm({ state: 'idle' }, formData)
 
       expect(mockCheckSpam).not.toHaveBeenCalled()
     })
@@ -403,7 +403,7 @@ describe('sendMail Server Action', () => {
       formData.append('subject', 'Custom Subject')
       formData.append('circle', 'apptiva')
 
-      await sendMail({ state: 'idle' }, formData)
+      await submitContactForm({ state: 'idle' }, formData)
 
       expect(mockBatchSend).toHaveBeenCalledTimes(1)
       expect(mockBatchSend).toHaveBeenCalledWith(
@@ -433,7 +433,7 @@ describe('sendMail Server Action', () => {
       formData.append('circle', 'apptiva')
       formData.append('subject', 'Test')
 
-      await sendMail({ state: 'idle' }, formData)
+      await submitContactForm({ state: 'idle' }, formData)
 
       const calls = mockBatchSend.mock.calls[0][0]
       expect(calls).toHaveLength(2)
@@ -450,7 +450,7 @@ describe('sendMail Server Action', () => {
       formData.append('circle', 'apptiva')
       formData.append('subject', 'Test')
 
-      await sendMail({ state: 'idle' }, formData)
+      await submitContactForm({ state: 'idle' }, formData)
 
       expect(mockBatchSend).toHaveBeenCalledWith(
         expect.arrayContaining([
@@ -473,7 +473,7 @@ describe('sendMail Server Action', () => {
       formData.append('circle', 'klar')
       formData.append('subject', 'Test')
 
-      await sendMail({ state: 'idle' }, formData)
+      await submitContactForm({ state: 'idle' }, formData)
 
       expect(mockBatchSend).toHaveBeenCalledWith(
         expect.arrayContaining([
@@ -493,7 +493,7 @@ describe('sendMail Server Action', () => {
       formData.append('circle', 'klar')
       formData.append('subject', 'Test Chatbot')
 
-      await sendMail({ state: 'idle' }, formData)
+      await submitContactForm({ state: 'idle' }, formData)
 
       expect(mockBatchSend).toHaveBeenCalledWith(
         expect.arrayContaining([
@@ -519,7 +519,7 @@ describe('sendMail Server Action', () => {
       formData.append('circle', 'apptiva')
       formData.append('subject', 'Test')
 
-      const result = await sendMail({ state: 'idle' }, formData)
+      const result = await submitContactForm({ state: 'idle' }, formData)
 
       expect(result.state).toBe('error')
       expect(result).toHaveProperty('error')
@@ -540,7 +540,7 @@ describe('sendMail Server Action', () => {
       formData.append('circle', 'apptiva')
       formData.append('subject', 'Test')
 
-      const result = await sendMail({ state: 'idle' }, formData)
+      const result = await submitContactForm({ state: 'idle' }, formData)
 
       expect(result.state).toBe('error')
       expect(result).toHaveProperty('error')
@@ -558,7 +558,7 @@ describe('sendMail Server Action', () => {
       formData.append('circle', 'apptiva')
       formData.append('subject', 'Test')
 
-      const result = await sendMail({ state: 'idle' }, formData)
+      const result = await submitContactForm({ state: 'idle' }, formData)
 
       if (result.state === 'error') {
         expect(result.error).toMatch(/Leider ist ein Fehler aufgetreten/)
@@ -578,7 +578,7 @@ describe('sendMail Server Action', () => {
       formData.append('circle', 'apptiva')
       formData.append('subject', 'Test')
 
-      await sendMail({ state: 'idle' }, formData)
+      await submitContactForm({ state: 'idle' }, formData)
 
       expect(console.log).toHaveBeenCalledWith('sending mail')
     })
@@ -594,7 +594,7 @@ describe('sendMail Server Action', () => {
       formData.append('circle', 'apptiva')
       formData.append('subject', 'Test')
 
-      await sendMail({ state: 'idle' }, formData)
+      await submitContactForm({ state: 'idle' }, formData)
 
       expect(console.log).toHaveBeenCalledWith(
         'Mail sent',
@@ -615,7 +615,7 @@ describe('sendMail Server Action', () => {
       formData.append('circle', 'apptiva')
       formData.append('subject', 'Test')
 
-      const result = await sendMail({ state: 'idle' }, formData)
+      const result = await submitContactForm({ state: 'idle' }, formData)
 
       expect(result).toEqual({
         state: 'success',
@@ -639,7 +639,7 @@ describe('sendMail Server Action', () => {
       formData.append('circle', 'apptiva')
       formData.append('subject', 'Test')
 
-      const result = await sendMail({ state: 'idle' }, formData)
+      const result = await submitContactForm({ state: 'idle' }, formData)
 
       expect(result).toEqual({
         state: 'error',
@@ -657,7 +657,7 @@ describe('sendMail Server Action', () => {
       formData.append('subject', 'Spam')
       formData.append('address', 'filled')
 
-      const result = await sendMail({ state: 'idle' }, formData)
+      const result = await submitContactForm({ state: 'idle' }, formData)
 
       expect(result).toEqual({ state: 'spam' })
     })
