@@ -1,6 +1,8 @@
 'use client'
 
-import { useActionState, useState } from 'react'
+import { usePathname } from 'next/navigation'
+import { usePlausible } from 'next-plausible'
+import { useActionState, useEffect, useRef, useState } from 'react'
 import { cn } from '@/utils/cn'
 import { subscribeToNewsletter } from '../server-actions/subscribe-to-newsletter'
 import { Submit } from '../submit'
@@ -12,6 +14,17 @@ export default function NewsletterForm() {
   const [state, formAction] = useActionState(subscribeToNewsletter, {
     state: 'idle',
   })
+  const plausible = usePlausible()
+  const pathname = usePathname()
+  const trackedState = useRef<typeof state | null>(null)
+
+  useEffect(() => {
+    if (state.state === 'success' && trackedState.current !== state) {
+      trackedState.current = state
+      plausible('Newsletter-Anmeldung', { props: { page: pathname } })
+    }
+  }, [state, plausible, pathname])
+
   if (state.state === 'success') {
     return (
       <div className="pt-4">
