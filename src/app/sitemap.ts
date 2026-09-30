@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import redirects from '../../redirects'
 import { hasTag } from '@/domain/blog/mappers'
 import { getPosts } from '@/domain/blog/repository'
 import { CmsBlog } from '@/domain/types'
@@ -27,7 +28,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'glossary',
   ])
 
-  return [
+  const entries: MetadataRoute.Sitemap = [
     {
       url: rootUrl,
       lastModified: new Date(),
@@ -103,6 +104,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.3,
     },
   ]
+
+  return entries.filter((entry) => !isRedirected(entry.url))
+}
+
+const redirectSources = new Set(
+  redirects().map(({ source }) => normalizePath(source))
+)
+
+function normalizePath(path: string) {
+  return path.length > 1 ? path.replace(/\/+$/, '') : path
+}
+
+function isRedirected(url: string) {
+  const path = url.startsWith(rootUrl) ? url.slice(rootUrl.length) || '/' : url
+  return redirectSources.has(normalizePath(path))
 }
 
 function buildSiteMap(
