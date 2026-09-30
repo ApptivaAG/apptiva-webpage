@@ -1,5 +1,6 @@
 'use client'
 
+import { usePathname } from 'next/navigation'
 import { useActionState, useState } from 'react'
 import { FormSuccessMessage } from '@/components/form-success-message'
 import { sendMail } from '@/components/server-actions/send-mail'
@@ -10,6 +11,7 @@ import { Label } from '@/components/ui/label'
 export default function Form() {
   const [state, formAction] = useActionState(sendMail, { state: 'idle' })
   const [correcting, setCorrecting] = useState(false)
+  const pathname = usePathname()
 
   const handleAction = (formData: FormData) => {
     setCorrecting(false)
@@ -39,6 +41,7 @@ export default function Form() {
         />
         <input type="text" name="circle" value="klar" readOnly />
         <input type="text" name="kind" value="klar" readOnly />
+        <input type="text" name="page" value={pathname} readOnly />
       </p>
       <div>
         <Label>Name</Label>

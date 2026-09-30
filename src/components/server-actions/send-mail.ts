@@ -1,5 +1,7 @@
 'use server'
 
+import { headers } from 'next/headers'
+import { after } from 'next/server'
 import { Resend } from 'resend'
 import { z } from 'zod'
 import { zfd } from 'zod-form-data'
@@ -43,6 +45,7 @@ const klar = z.object({
   phone: zfd.text(z.string().optional()),
   circle: zfd.text(z.enum(['klar'])),
   address: zfd.text(z.string().optional()),
+  page: zfd.text(z.string().optional()),
 })
 
 const testChatbot = z.object({
@@ -51,6 +54,7 @@ const testChatbot = z.object({
   subject: zfd.text(z.string().default('Kontaktformular apptiva.ch')),
   circle: zfd.text(z.enum(['klar'])),
   address: zfd.text(z.string().optional()),
+  page: zfd.text(z.string().optional()),
 })
 
 const apptiva = z.object({
@@ -63,6 +67,7 @@ const apptiva = z.object({
   subject: zfd.text(z.string().default('Kontaktformular apptiva.ch')),
   circle: zfd.text(z.enum(['apptiva'])),
   address: zfd.text(z.string().optional()),
+  page: zfd.text(z.string().optional()),
 })
 
 const schema = zfd.formData(z.union([klar, apptiva, testChatbot]))
@@ -147,6 +152,18 @@ export async function sendMail(
     }
 
     console.log('Mail sent', JSON.stringify(parsedData, null, 2))
+
+    try {
+      const requestHeaders = await headers()
+      const userAgent = requestHeaders.get('user-agent') ?? ''
+      const forwardedFor = requestHeaders.get('x-forwarded-for') ?? ''
+      const kind = String(formData.get('kind') ?? 'unbekannt')
+      const page = parsedData.page || 'unbekannt'
+      after(() => trackKontaktanfrage({ kind, page, userAgent, forwardedFor }))
+    } catch (error) {
+      console.error('Error scheduling Plausible event', error)
+    }
+
     return successState
   } catch (error) {
     console.error('Error sending mail', error)
@@ -155,6 +172,42 @@ export async function sendMail(
       state: 'error',
       error: 'Leider ist ein Fehler aufgetreten. Versuche es später wieder.',
     }
+  }
+}
+
+async function trackKontaktanfrage({
+  kind,
+  page,
+  userAgent,
+  forwardedFor,
+}: {
+  kind: string
+  page: string
+  userAgent: string
+  forwardedFor: string
+}) {
+  console.log('trackKontaktanfrage', kind, page, userAgent, forwardedFor)
+  try {
+    const path = page.startsWith('/') ? page : '/'
+    const response = await fetch('https://plausible.io/api/event', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'User-Agent': userAgent,
+        'X-Forwarded-For': forwardedFor,
+      },
+      body: JSON.stringify({
+        domain: 'apptiva.ch',
+        name: 'Kontaktanfrage',
+        url: `https://apptiva.ch${path}`,
+        props: { kind, page },
+      }),
+    })
+    if (!response.ok) {
+      console.error('Plausible event failed', response.status)
+    }
+  } catch (error) {
+    console.error('Error sending Plausible event', error)
   }
 }
 

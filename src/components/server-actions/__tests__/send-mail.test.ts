@@ -22,6 +22,26 @@ vi.mock('resend', () => {
   }
 })
 
+vi.mock('next/headers', () => ({
+  headers: async () =>
+    new Headers({
+      'user-agent': 'TestAgent/1.0',
+      'x-forwarded-for': '203.0.113.7',
+    }),
+}))
+
+const afterCallbacks: Array<() => unknown> = []
+vi.mock('next/server', () => ({
+  after: (cb: () => unknown) => {
+    afterCallbacks.push(cb)
+  },
+}))
+
+async function flushAfter() {
+  const callbacks = afterCallbacks.splice(0)
+  for (const cb of callbacks) await cb()
+}
+
 // Import after mock is set up
 const { sendMail } = await import('../send-mail')
 
@@ -31,6 +51,8 @@ describe('sendMail Server Action', () => {
     mockEmailsSend.mockReset()
     mockCheckSpam.mockReset()
     mockCheckSpam.mockResolvedValue({ spam: false })
+    afterCallbacks.length = 0
+    vi.stubGlobal('fetch', vi.fn().mockResolvedValue({ ok: true }))
 
     // Setup console spies
     vi.spyOn(console, 'log').mockImplementation(() => {})
@@ -40,6 +62,98 @@ describe('sendMail Server Action', () => {
 
   afterEach(() => {
     vi.restoreAllMocks()
+    vi.unstubAllGlobals()
+  })
+
+  describe('Plausible Tracking', () => {
+    const buildFormData = (page?: string) => {
+      const formData = new FormData()
+      formData.append('kind', 'apptiva')
+      formData.append('name', 'Max Mustermann')
+      formData.append('email', 'max@example.com')
+      formData.append('message', 'Test message')
+      formData.append('circle', 'apptiva')
+      if (page !== undefined) formData.append('page', page)
+      return formData
+    }
+
+    it('sends Kontaktanfrage event with kind and page on success', async () => {
+      mockBatchSend.mockResolvedValue({ error: null })
+
+      await sendMail({ state: 'idle' }, buildFormData('/kontakt'))
+      await flushAfter()
+
+      expect(fetch).toHaveBeenCalledTimes(1)
+      const [url, init] = vi.mocked(fetch).mock.calls[0]
+      expect(url).toBe('https://plausible.io/api/event')
+      expect(init?.headers).toMatchObject({
+        'User-Agent': 'TestAgent/1.0',
+        'X-Forwarded-For': '203.0.113.7',
+      })
+      expect(JSON.parse(String(init?.body))).toEqual({
+        domain: 'apptiva.ch',
+        name: 'Kontaktanfrage',
+        url: 'https://apptiva.ch/kontakt',
+        props: { kind: 'apptiva', page: '/kontakt' },
+      })
+    })
+
+    it('falls back to "unbekannt" when page is missing', async () => {
+      mockBatchSend.mockResolvedValue({ error: null })
+
+      await sendMail({ state: 'idle' }, buildFormData())
+      await flushAfter()
+
+      const body = JSON.parse(String(vi.mocked(fetch).mock.calls[0][1]?.body))
+      expect(body.props).toEqual({ kind: 'apptiva', page: 'unbekannt' })
+      expect(body.url).toBe('https://apptiva.ch/')
+    })
+
+    it('does not track when Resend returns an error', async () => {
+      mockBatchSend.mockResolvedValue({ error: { message: 'fail' } })
+
+      await sendMail({ state: 'idle' }, buildFormData('/kontakt'))
+      await flushAfter()
+
+      expect(fetch).not.toHaveBeenCalled()
+    })
+
+    it('does not track honeypot spam', async () => {
+      const formData = buildFormData('/kontakt')
+      formData.append('address', 'bot')
+
+      await sendMail({ state: 'idle' }, formData)
+      await flushAfter()
+
+      expect(fetch).not.toHaveBeenCalled()
+    })
+
+    it('does not track spam detected by the spam check', async () => {
+      mockCheckSpam.mockResolvedValue({ spam: true, scores: {} })
+      mockEmailsSend.mockResolvedValue({ error: null })
+
+      await sendMail({ state: 'idle' }, buildFormData('/kontakt'))
+      await flushAfter()
+
+      expect(fetch).not.toHaveBeenCalled()
+    })
+
+    it('keeps success state when Plausible fails', async () => {
+      mockBatchSend.mockResolvedValue({ error: null })
+      vi.mocked(fetch).mockRejectedValue(new Error('network'))
+
+      const result = await sendMail(
+        { state: 'idle' },
+        buildFormData('/kontakt')
+      )
+      await flushAfter()
+
+      expect(result.state).toBe('success')
+      expect(console.error).toHaveBeenCalledWith(
+        'Error sending Plausible event',
+        expect.any(Error)
+      )
+    })
   })
 
   describe('Form Validation', () => {

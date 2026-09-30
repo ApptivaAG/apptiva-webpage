@@ -45,6 +45,10 @@ export default function StandardContactEmail(
               <b>Referenz (Wie hast du uns gefunden): </b>
               {props.referrer ? String(props.referrer) : 'keine Angabe'}
             </Text>
+            <Text style={{ ...paragraph, marginTop: -5 }}>
+              <b>Seite: </b>
+              {props.page ? String(props.page) : 'unbekannt'}
+            </Text>
             {props.circle === 'klar' && (
               <Text style={{ ...paragraph, marginTop: -5 }}>
                 <b>Telefonnummer: </b>

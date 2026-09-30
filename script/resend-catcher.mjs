@@ -54,6 +54,31 @@ function inferKind(emails) {
   return subject.replace(/[^a-zA-Z0-9_-]/g, '_').substring(0, 40)
 }
 
+const VOID_TAGS = new Set(['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'source', 'track', 'wbr'])
+const INVISIBLE_RUN = /[\u200B-\u200F\u2060\uFEFF\u00AD\u034F\s]{20,}/g
+
+function formatHtml(html) {
+  const tokens = html.match(/<!--[\s\S]*?-->|<![^>]*>|<[^>]+>|[^<]+/g) || []
+  const lines = []
+  let depth = 0
+  for (const token of tokens) {
+    if (token.startsWith('<!--') || token.startsWith('<!')) {
+      lines.push('  '.repeat(depth) + token)
+    } else if (token.startsWith('</')) {
+      depth = Math.max(0, depth - 1)
+      lines.push('  '.repeat(depth) + token)
+    } else if (token.startsWith('<')) {
+      const name = /^<([a-zA-Z0-9-]+)/.exec(token)?.[1]?.toLowerCase()
+      lines.push('  '.repeat(depth) + token)
+      if (name && !VOID_TAGS.has(name) && !token.endsWith('/>')) depth++
+    } else {
+      const text = token.replace(INVISIBLE_RUN, ' [invisible padding] ').replace(/\s+/g, ' ').trim()
+      if (text) lines.push('  '.repeat(depth) + text)
+    }
+  }
+  return lines.join('\n') + '\n'
+}
+
 function captureRequest(method, url, headers, body, kind) {
   const snapshot = {
     receivedAt: new Date().toISOString(),
@@ -72,7 +97,7 @@ function captureRequest(method, url, headers, body, kind) {
     body.forEach((item, i) => {
       const html = item.html
       if (html) {
-        writeFileSync(resolve(dir, `email-${i + 1}.html`), html)
+        writeFileSync(resolve(dir, `email-${i + 1}.html`), formatHtml(html))
       }
     })
   }

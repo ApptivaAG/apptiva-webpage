@@ -8,7 +8,13 @@ export const ContactFromMailApptivaCopy = (
   spamCheck?: SpamResult
 ) => {
   if (props.kind === 'testChatbot') {
-    return <TestChatbotEmail email={props.email} spamCheck={spamCheck} />
+    return (
+      <TestChatbotEmail
+        email={props.email}
+        page={props.page}
+        spamCheck={spamCheck}
+      />
+    )
   }
 
   return <StandardContactEmail {...props} spamCheck={spamCheck} />

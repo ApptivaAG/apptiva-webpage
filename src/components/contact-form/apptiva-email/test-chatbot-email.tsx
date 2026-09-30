@@ -12,6 +12,7 @@ import { SpamCheckInfo } from './spam-check-info'
 
 export default function TestChatbotEmail(props: {
   email: string
+  page?: string
   spamCheck?: SpamResult
 }) {
   return (
@@ -32,6 +33,10 @@ export default function TestChatbotEmail(props: {
             <Text style={{ ...paragraph, marginTop: 20 }}>
               <b>E-Mail Adresse: </b>
               {String(props.email)}
+            </Text>
+            <Text style={{ ...paragraph, marginTop: -5 }}>
+              <b>Seite: </b>
+              {props.page ? String(props.page) : 'unbekannt'}
             </Text>
             <SpamCheckInfo spamCheck={props.spamCheck} />
           </Container>
