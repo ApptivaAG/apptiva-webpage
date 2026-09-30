@@ -6,6 +6,7 @@ import { VisualEditing } from 'next-sanity/visual-editing'
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
 import ChatbotAnalytics from '@/components/chatbot-analytics'
 import ChatbotScript from '@/components/chatbot-script'
+import ContactLinkAnalytics from '@/components/contact-link-analytics'
 import CookieConsentProvider from '@/components/cookie-consent-provider'
 import { DisableDraftMode } from '@/components/disable-draft-mode'
 import FloatingChatInput from '@/components/floating-chat-input'
@@ -96,6 +97,7 @@ export default async function RootLayout({
         <Footer />
         <FloatingChatInput />
         <ChatbotAnalytics />
+        <ContactLinkAnalytics />
         {(await draftMode()).isEnabled ? (
           <>
             <VisualEditing />
