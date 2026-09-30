@@ -87,7 +87,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.5,
     },
     ...buildSiteMap(
-      glossary.filter((g) => g.content),
+      glossary.filter((g) => g.content && g.slug),
       { parentSlug: 'glossar' }
     ),
     {

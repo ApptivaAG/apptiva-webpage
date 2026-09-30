@@ -28,7 +28,7 @@ const GlossaryComponent = (props: { glossaryEntries: GlossaryQueryData }) => {
               >
                 <AccordionContent>
                   {ge.summary && <StyledPortableText content={ge.summary} />}
-                  {ge.content && (
+                  {ge.content && ge.slug && (
                     <div className="pt-4">
                       <Link href={`/glossar/${ge.slug}`}>
                         <UnderlineForLink>mehr erfahren →</UnderlineForLink>
