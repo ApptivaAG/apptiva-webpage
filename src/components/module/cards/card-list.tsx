@@ -39,6 +39,13 @@ export default function CardList(props: { module: ModuleData }) {
         <div className="col-right space-y-4 max-lg:mt-10">
           {module.cards?.map((card) => (
             <Card key={card._key} padding="small">
+              {card.coverImage?.asset && (
+                <SanityImage
+                  image={card.coverImage}
+                  className="-mx-4 -mt-4 mb-4 aspect-video w-[calc(100%+2rem)] max-w-none object-cover md:-mx-6 md:-mt-6 md:mb-6 md:w-[calc(100%+3rem)]"
+                  sizes="(min-width: 1024px) 700px, 100vw"
+                />
+              )}
               <Accordion
                 className="w-full divide-y"
                 transition

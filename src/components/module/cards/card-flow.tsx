@@ -54,6 +54,17 @@ export default function CardFlow(props: { module: ModuleData }) {
                   className="relative flex flex-col gap-6 overflow-visible"
                   intent={style}
                 >
+                  {card.coverImage?.asset && (
+                    <SanityImage
+                      image={card.coverImage}
+                      className="-mx-6 -mt-6 aspect-video w-[calc(100%+3rem)] max-w-none rounded-t-lg object-cover md:-mx-9 md:-mt-9 md:w-[calc(100%+4.5rem)]"
+                      sizes={
+                        module.layout === '2-column'
+                          ? '(min-width: 1024px) 600px, 100vw'
+                          : '(min-width: 1024px) 400px, 100vw'
+                      }
+                    />
+                  )}
                   <div className="flex items-start gap-4">
                     <SanityImage image={card.image} className="flex-none" />
                     <Heading level={isLevel(2) ? 4 : 3} size={5}>

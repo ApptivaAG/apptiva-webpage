@@ -24,8 +24,14 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'coverImage',
+      title: 'Titelbild',
+      description: 'Grosses Bild im oberen Bereich der Card',
+      type: 'imageWithAlt',
+    }),
+    defineField({
       name: 'image',
-      title: 'Bild',
+      title: 'Icon / Nebenbild',
       type: 'imageWithAlt',
     }),
     defineField({

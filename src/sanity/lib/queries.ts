@@ -27,6 +27,7 @@ const Cards = q('cards')
     pill: q.string().optional(),
     style: q.string().optional(),
     image: sanityImageWithAlt(),
+    coverImage: sanityImageWithAlt('coverImage'),
     content: q.contentBlocks().optional(),
   })
   .nullable()
