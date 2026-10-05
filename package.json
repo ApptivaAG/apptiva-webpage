@@ -50,7 +50,7 @@
     "embla-carousel-auto-scroll": "8.6.0",
     "embla-carousel-react": "8.6.0",
     "groqd": "^0.15.13",
-    "next": "^16.3.3",
+    "next": "^16.3.8",
     "next-mdx-remote": "^6.0.0",
     "next-plausible": "^3.12.5",
     "next-sanity": "^13.3.4",
