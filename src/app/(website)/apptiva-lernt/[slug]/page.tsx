@@ -1,7 +1,3 @@
-import { Code } from 'bright'
-import { Metadata } from 'next'
-import { draftMode } from 'next/headers'
-import { notFound } from 'next/navigation'
 import CmsBlogPost from '@/components/blog/cms-post'
 import BlogPostPreview from '@/components/blog/preview-post'
 import { Schema } from '@/components/schema'
@@ -11,6 +7,10 @@ import { buildArticleSchema } from '@/lib/schema/article/build-article-schema'
 import { apptivaLerntBreadcrumbs } from '@/lib/schema/breadcrumbs/apptiva-lernt'
 import { queryPostFromCmsBySlug } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
+import { Code } from 'bright'
+import { Metadata } from 'next'
+import { draftMode } from 'next/headers'
+import { notFound } from 'next/navigation'
 
 export async function generateStaticParams() {
   const posts = await getPosts()
@@ -38,7 +38,7 @@ export async function generateMetadata(props: {
 
   const url = `/apptiva-lernt/${post.slug}`
   return {
-    title: `${post.meta.title} | Apptiva lernt`,
+    title: post.meta.title,
     description: post.meta.description,
     alternates: { canonical: url },
     openGraph: {
