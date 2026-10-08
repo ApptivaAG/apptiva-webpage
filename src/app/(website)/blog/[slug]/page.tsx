@@ -12,6 +12,8 @@ import { load } from '@/sanity/lib/sanityFetch'
 import CmsBlogPost from '../../../../components/blog/cms-post'
 import BlogPostPreview from '../../../../components/blog/preview-post'
 
+export const instant = false
+
 export async function generateStaticParams() {
   const posts = await getPosts()
 

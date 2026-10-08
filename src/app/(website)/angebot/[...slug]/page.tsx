@@ -13,6 +13,8 @@ import portableTextToString from '@/utils/portable-text-to-string'
 import ServiceDetail from './detail'
 import ServicePreview from './preview'
 
+export const instant = false
+
 export async function generateStaticParams() {
   const { published: services } = await load(servicesQuery, false, undefined, [
     'service-page',

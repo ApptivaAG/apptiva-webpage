@@ -7,6 +7,8 @@ import { ProjectPage, projectMetadata } from '../detail-page'
 import { categoryMetadata, ProjectListing } from '../listing-page'
 import { parseProjectRoute } from '../project-route'
 
+export const instant = false
+
 type Props = { params: Promise<{ slug: string[] }> }
 
 export async function generateStaticParams() {
