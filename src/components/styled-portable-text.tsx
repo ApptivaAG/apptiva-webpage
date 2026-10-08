@@ -77,11 +77,19 @@ const StyledPortableText = ({
       },
     },
     list: {
+      number: ({ children }) => (
+        <ol className={cn('mt-xl list-decimal space-y-5 pl-8', className)}>
+          {children}
+        </ol>
+      ),
       bullet: ({ children }) => (
         <ul className={cn('mt-xl space-y-5 pl-4', className)}>{children}</ul>
       ),
     },
     listItem: {
+      number: ({ children }) => (
+        <li className={cn('pl-4', className)}>{children}</li>
+      ),
       bullet: ({ children }) => (
         <li className={cn('list-arrow pl-8 marker:text-xl', className)}>
           {children}

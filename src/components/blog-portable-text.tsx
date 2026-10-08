@@ -13,6 +13,12 @@ export default function BlogPortableText(props: {
   const { content, className, Code } = props
   const components: PortableTextComponents = {
     types: {
+      img: ({ value }) => (
+        <img src={value.asset.src} alt={value.asset.alt ?? ''} />
+      ),
+      __block: ({ value }) => (
+        <SanityImage image={value.block} size="content" />
+      ),
       imageWithAlt: (props: {
         value: {
           asset: { _ref: string; _type: 'reference' }
