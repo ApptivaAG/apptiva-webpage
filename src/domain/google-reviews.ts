@@ -1,3 +1,7 @@
+'use cache'
+
+import { cacheLife } from 'next/cache'
+
 export type GoogleReview = {
   id: string
   authorName: string
@@ -88,6 +92,7 @@ function sanitizeError(error: unknown) {
 }
 
 export async function getGoogleReviews(): Promise<GoogleReviewsData | null> {
+  cacheLife('max')
   const apiKey = process.env.GOOGLE_REVIEWS_API_KEY
   const placeId = process.env.GOOGLE_REVIEWS_PLACE_ID
 

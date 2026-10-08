@@ -13,9 +13,6 @@ import portableTextToString from '@/utils/portable-text-to-string'
 import ServiceDetail from './detail'
 import ServicePreview from './preview'
 
-// 'force-static': Force static rendering and cache the data of a layout or page by forcing cookies, headers() and useSearchParams() to return empty values. It is possible to revalidate, revalidatePath, or revalidateTag, in pages or layouts rendered with force-static.
-export const dynamic = 'force-static'
-
 export async function generateStaticParams() {
   const { published: services } = await load(servicesQuery, false, undefined, [
     'service-page',

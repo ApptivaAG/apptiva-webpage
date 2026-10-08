@@ -3,7 +3,7 @@ import SanityImage from '@/components/sanity-image'
 import { Card } from '@/components/ui/card'
 import UnderlineForLink from '@/components/ui/underline-for-link'
 import { urlForImage } from '@/sanity/lib/image'
-import { Category } from './search-params'
+import { type Category, projectPath } from './category'
 import { ProjectQueryData } from './types'
 
 export function ProjectTeaser(props: {
@@ -15,9 +15,7 @@ export function ProjectTeaser(props: {
   const logoUrl = project.customerRef?.logo
     ? urlForImage(project.customerRef.logo).format('png').width(1200).url()
     : undefined
-  const projectUrl = category
-    ? `/projekte/${project.slug}?category=${category}`
-    : `/projekte/${project.slug}`
+  const projectUrl = projectPath(category, project.slug ?? undefined)
   return (
     <Card
       key={project._id}

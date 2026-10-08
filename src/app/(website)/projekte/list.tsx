@@ -2,8 +2,8 @@ import Link from 'next/link'
 import { PageHeader } from '@/components/page-header'
 import Button from '@/components/ui/button'
 import Underline from '@/components/ui/underline'
+import { type Category, matchesCategory, projectPath } from './category'
 import { ProjectTeaser } from './projekt-teaser'
-import { Category } from './search-params'
 import { ProjectQueryData } from './types'
 
 export default function ProjectList(props: {
@@ -21,7 +21,7 @@ export default function ProjectList(props: {
       links={[
         { name: 'Angebot' },
         { name: 'Development', href: '/angebot/development' },
-        { name: 'Projekte', href: '/projekte' },
+        { name: 'Projekte', href: projectPath('dev') },
       ]}
       callToAction={
         <Link href="/kontakt">
@@ -43,7 +43,7 @@ export default function ProjectList(props: {
       links={[
         { name: 'Angebot' },
         { name: 'Chatbots', href: '/angebot/chatbots' },
-        { name: 'Projekte', href: '/projekte' },
+        { name: 'Projekte', href: projectPath('chatbots') },
       ]}
       callToAction={
         <Link href="/kontakt">
@@ -82,15 +82,17 @@ export default function ProjectList(props: {
           ? devContent
           : defaultContent}
       <ul className="grid gap-4 py-8 lg:grid-cols-3 lg:py-16">
-        {props.projects.map((project) => (
-          <li key={project._id}>
-            <ProjectTeaser
-              project={project}
-              intent="dark"
-              category={props.category}
-            />
-          </li>
-        ))}
+        {props.projects
+          .filter((project) => matchesCategory(project, props.category))
+          .map((project) => (
+            <li key={project._id}>
+              <ProjectTeaser
+                project={project}
+                intent="dark"
+                category={props.category}
+              />
+            </li>
+          ))}
       </ul>
     </>
   )

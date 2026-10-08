@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { cacheLife } from 'next/cache'
 import localFont from 'next/font/local'
 import { draftMode } from 'next/headers'
 import PlausibleProvider from 'next-plausible'
@@ -17,6 +18,8 @@ import { organizationSchema } from '@/lib/schema/organization'
 import Navbar from './../../components/Navbar'
 import { description, rootUrl, title } from '../env'
 import './globals.css'
+
+export const ensureStatic = 'navigation'
 
 const gentona = localFont({
   src: [
@@ -94,7 +97,7 @@ export default async function RootLayout({
             {children}
           </main>
         </NuqsAdapter>
-        <Footer />
+        <WebsiteFooter />
         <FloatingChatInput />
         <ChatbotAnalytics />
         <ContactLinkAnalytics />
@@ -109,4 +112,10 @@ export default async function RootLayout({
       </body>
     </html>
   )
+}
+
+async function WebsiteFooter() {
+  'use cache'
+  cacheLife('days')
+  return <Footer initialYear={new Date().getFullYear()} />
 }

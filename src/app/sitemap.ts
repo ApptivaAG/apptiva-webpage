@@ -1,5 +1,4 @@
 import { MetadataRoute } from 'next'
-import redirects from '../../redirects'
 import { hasTag } from '@/domain/blog/mappers'
 import { getPosts } from '@/domain/blog/repository'
 import { CmsBlog } from '@/domain/types'
@@ -11,6 +10,7 @@ import {
   servicesQuery,
 } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
+import redirects from '../../redirects'
 import { ProjectQueryData } from './(website)/projekte/types'
 import { rootUrl } from './env'
 
@@ -61,6 +61,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     },
     ...buildSiteMap(projects, { parentSlug: 'projekte' }),
+    ...['chatbots', 'development'].map((category) => ({
+      url: buildFullUrl(`/projekte/${category}`),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    })),
     {
       url: buildFullUrl('/wissen'),
       lastModified: new Date(),

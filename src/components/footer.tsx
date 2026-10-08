@@ -13,13 +13,16 @@ import Underline from "./ui/underline";
 import UnderlineForLink from "./ui/underline-for-link";
 import whatsApp from "./whatsapp.svg";
 
-export default function Footer() {
+export default function Footer({ initialYear }: { initialYear: number }) {
   const { ref, inView } = useInView({
     rootMargin: "300% 0px 0px 0px",
     threshold: 0,
   });
 
-  const currentYear = new Date().getFullYear();
+  const [currentYear, setCurrentYear] = useState(initialYear);
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
 
   return (
     <>

@@ -40,6 +40,13 @@ export async function generateMetadata(props: {
   }
 }
 
+export async function generateStaticParams() {
+  const { published: glossary } = await load(glossaryQuery, false, undefined, [
+    'glossary',
+  ])
+  return glossary.filter((entry) => entry.slug).map(({ slug }) => ({ slug }))
+}
+
 export default async function GlossaryItem(props: {
   params: Promise<{ slug: string }>
 }) {

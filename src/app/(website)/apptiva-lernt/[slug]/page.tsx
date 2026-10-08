@@ -1,5 +1,9 @@
+import { Metadata } from 'next'
+import { draftMode } from 'next/headers'
+import { notFound } from 'next/navigation'
 import CmsBlogPost from '@/components/blog/cms-post'
 import BlogPostPreview from '@/components/blog/preview-post'
+import Code from '@/components/cached-code'
 import { Schema } from '@/components/schema'
 import { hasTag } from '@/domain/blog/mappers'
 import { getPostBySlug, getPosts } from '@/domain/blog/repository'
@@ -7,10 +11,6 @@ import { buildArticleSchema } from '@/lib/schema/article/build-article-schema'
 import { apptivaLerntBreadcrumbs } from '@/lib/schema/breadcrumbs/apptiva-lernt'
 import { queryPostFromCmsBySlug } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
-import { Code } from 'bright'
-import { Metadata } from 'next'
-import { draftMode } from 'next/headers'
-import { notFound } from 'next/navigation'
 
 export async function generateStaticParams() {
   const posts = await getPosts()

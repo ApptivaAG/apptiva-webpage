@@ -1,8 +1,9 @@
 import 'server-only'
 
 import { BaseQuery, InferType, makeSafeQueryRunner, z } from 'groqd'
+import { cacheLife, cacheTag } from 'next/cache'
 import { draftMode } from 'next/headers'
-import { stegaEnabled, token } from '../env'
+import { token } from '../env'
 import { client } from './client'
 import { loadQuery } from './store'
 
@@ -12,6 +13,9 @@ export const runQuery = makeSafeQueryRunner(
     params: Record<string, number | string> = {},
     tags?: string[]
   ) => {
+    'use cache'
+    cacheLife('max')
+    if (tags?.length) cacheTag(...tags)
     const isDraftMode = (await draftMode()).isEnabled
 
     if (isDraftMode && !token) {
@@ -42,19 +46,11 @@ export async function load<T extends GroqdQuery>(
   params: Record<string, number | string> = {},
   cacheTags?: string[]
 ) {
-  const result = await loadQuery<InferType<T>>(
+  const result = await loadCachedQuery<InferType<T>>(
     query.query,
+    isDraftMode,
     params,
-    isDraftMode
-      ? {
-          perspective: 'previewDrafts', // Should eventually be changed to drafts again, since previewDrafts is deprecated and will be removed in the future.
-          useCdn: false,
-          stega: true, // keep stega true for draft mode to enable direct editing on preview. Clean stega in styles where necessary.
-          next: { tags: cacheTags },
-        }
-      : {
-          next: { tags: cacheTags },
-        }
+    cacheTags
   )
 
   const parsed = query.schema.safeParse(result.data) as z.SafeParseReturnType<
@@ -67,4 +63,22 @@ export async function load<T extends GroqdQuery>(
     published: result.data as InferType<T>,
     error: !parsed.success ? parsed.error : undefined,
   }
+}
+
+async function loadCachedQuery<T>(
+  query: string,
+  isDraftMode: boolean,
+  params: Record<string, number | string>,
+  tags?: string[]
+) {
+  'use cache'
+  cacheLife('max')
+  if (tags?.length) cacheTag(...tags)
+  return loadQuery<T>(
+    query,
+    params,
+    isDraftMode
+      ? { perspective: 'previewDrafts', useCdn: false, stega: true }
+      : {}
+  )
 }

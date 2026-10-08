@@ -1,56 +1,65 @@
+'use client'
+
+import { useEffect, useState } from 'react'
 import { ModuleData } from '@/sanity/lib/queries'
 import ContactPerson from '../contact-person'
 
 export default function Contact(props: { module: ModuleData }) {
   const { module } = props
 
-  const weekday = new Date().getDay()
+  const [contactPerson, setContactPerson] = useState<
+    ModuleData['persons'][number] | undefined
+  >(module.persons[0])
 
-  const getPersonsExcludingNames = ({
-    persons,
-    names,
-  }: {
-    persons: typeof module.persons
-    names: string[]
-  }) =>
-    persons.filter(
-      (person) =>
-        !names.some((name) => person.personName?.toLowerCase().includes(name))
-    )
+  useEffect(() => {
+    const weekday = new Date().getDay()
 
-  const getContactPersonOfWeekday = () => {
-    const contactablePersons = getPersonsExcludingNames({
-      persons: module.persons,
-      names: ['brigitte', 'sarah', 'patrik', 'kevin', 'alondra'],
-    })
+    const getPersonsExcludingNames = ({
+      persons,
+      names,
+    }: {
+      persons: typeof module.persons
+      names: string[]
+    }) =>
+      persons.filter(
+        (person) =>
+          !names.some((name) => person.personName?.toLowerCase().includes(name))
+      )
 
-    const getRandomPerson = (persons: typeof module.persons) =>
-      persons[Math.floor(Math.random() * persons.length)]
-
-    const getRandomPersonExcludingNames = (names: string[]) => {
-      const contactablePersonsOfWeekday = getPersonsExcludingNames({
-        persons: contactablePersons,
-        names,
+    const getContactPersonOfWeekday = () => {
+      const contactablePersons = getPersonsExcludingNames({
+        persons: module.persons,
+        names: ['brigitte', 'sarah', 'patrik', 'kevin', 'alondra'],
       })
-      return getRandomPerson(contactablePersonsOfWeekday)
+
+      const getRandomPerson = (persons: typeof module.persons) =>
+        persons[Math.floor(Math.random() * persons.length)]
+
+      const getRandomPersonExcludingNames = (names: string[]) => {
+        const contactablePersonsOfWeekday = getPersonsExcludingNames({
+          persons: contactablePersons,
+          names,
+        })
+        return getRandomPerson(contactablePersonsOfWeekday)
+      }
+
+      switch (weekday) {
+        case 3: // wednesday
+          return getRandomPersonExcludingNames(['robin'])
+        case 4: // thursday
+          return getRandomPersonExcludingNames(['roman'])
+        case 5: // friday
+          return getRandomPersonExcludingNames(['philip', 'robin', 'carla'])
+        case 1: // monday
+        case 2: // tuesday
+        case 6: // saturday
+        case 0: // sunday
+          return getRandomPerson(contactablePersons)
+      }
     }
 
-    switch (weekday) {
-      case 3: // wednesday
-        return getRandomPersonExcludingNames(['robin'])
-      case 4: // thursday
-        return getRandomPersonExcludingNames(['roman'])
-      case 5: // friday
-        return getRandomPersonExcludingNames(['philip', 'robin', 'carla'])
-      case 1: // monday
-      case 2: // tuesday
-      case 6: // saturday
-      case 0: // sunday
-        return getRandomPerson(contactablePersons)
-    }
-  }
-
-  const contactPerson = getContactPersonOfWeekday()
+    setContactPerson(getContactPersonOfWeekday())
+  }, [module.persons])
 
   if (!contactPerson) return null
 

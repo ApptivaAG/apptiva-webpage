@@ -1,22 +1,24 @@
 import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
-import type { SearchParams } from 'nuqs/server'
-import { projectBySlugQuery, projectsQuery } from '@/sanity/lib/queries'
+import { projectBySlugQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
-import { loadSearchParams } from '../search-params'
+import { type Category, matchesCategory } from './category'
 import ProjectDetail from './detail'
-import ProjectsPreview from './preview'
+import ProjectsPreview from './detail-preview'
 
-export async function generateMetadata(props: {
-  params: Promise<{ slug: string }>
-}): Promise<Metadata> {
+export async function projectMetadata(
+  slug: string,
+  category: Category
+): Promise<Metadata> {
   const { published: project } = await load(
     projectBySlugQuery,
     false,
-    await props.params,
+    { slug },
     ['project']
   )
+
+  if (!project || !matchesCategory(project, category)) notFound()
 
   const url = `/projekte/${project.slug}`
 
@@ -34,35 +36,27 @@ export async function generateMetadata(props: {
     },
   }
 }
-
-export async function generateStaticParams() {
-  const { published: projects } = await load(projectsQuery, false, undefined, [
-    'project',
-  ])
-
-  return projects?.map(({ slug }) => ({ slug }))
-}
-
-export default async function Home(props: {
-  params: Promise<{ slug: string }>
-  searchParams: Promise<SearchParams>
+export async function ProjectPage({
+  params,
+  category = '',
+}: {
+  params: { slug: string }
+  category?: Category
 }) {
-  const searchParams = await props.searchParams
-  const { category } = loadSearchParams(searchParams)
   const { isEnabled } = await draftMode()
   const { published, draft } = await load(
     projectBySlugQuery,
     isEnabled,
-    await props.params,
-    ['project', (await props.params).slug]
+    params,
+    ['project', params.slug]
   )
 
-  if (!draft) {
+  if (!isEnabled && (!published || !matchesCategory(published, category))) {
     notFound()
   }
 
   return isEnabled ? (
-    <ProjectsPreview initial={draft} params={await props.params} />
+    <ProjectsPreview initial={draft} params={params} category={category} />
   ) : (
     <ProjectDetail project={published} category={category} />
   )

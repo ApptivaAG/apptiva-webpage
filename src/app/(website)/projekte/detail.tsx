@@ -5,8 +5,8 @@ import ProjectArticleSchema from '@/components/project-article-schema'
 import ProjectPortableText from '@/components/project-portable-text'
 import SanityImage from '@/components/sanity-image'
 import { urlForImage } from '@/sanity/lib/image'
-import { Category } from '../search-params'
-import { ProjectBySlugQueryData } from '../types'
+import { type Category, projectPath } from './category'
+import { ProjectBySlugQueryData } from './types'
 
 export default function ProjectDetail(props: {
   project: ProjectBySlugQueryData
@@ -26,20 +26,20 @@ export default function ProjectDetail(props: {
       ? [
           { name: 'Angebot' },
           { name: 'Chatbots', href: '/angebot/chatbots' },
-          { name: 'Projekte', href: '/projekte?category=chatbots' },
+          { name: 'Projekte', href: projectPath('chatbots') },
           {
             name: project.projectName ?? 'Projekt',
-            href: `/projekte/${project.slug}?category=chatbots`,
+            href: projectPath('chatbots', project.slug ?? undefined),
           },
         ]
       : category === 'dev'
         ? [
             { name: 'Angebot' },
             { name: 'Development', href: '/angebot/development' },
-            { name: 'Projekte', href: '/projekte?category=dev' },
+            { name: 'Projekte', href: projectPath('dev') },
             {
               name: project.projectName ?? 'Projekt',
-              href: `/projekte/${project.slug}?category=dev`,
+              href: projectPath('dev', project.slug ?? undefined),
             },
           ]
         : [
