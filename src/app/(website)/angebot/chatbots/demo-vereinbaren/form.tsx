@@ -9,7 +9,9 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 
 export default function Form() {
-  const [state, formAction] = useActionState(submitContactForm, { state: 'idle' })
+  const [state, formAction] = useActionState(submitContactForm, {
+    state: 'idle',
+  })
   const [correcting, setCorrecting] = useState(false)
   const pathname = usePathname()
 
