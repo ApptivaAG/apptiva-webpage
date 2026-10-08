@@ -10,10 +10,12 @@ import {
 import UnderlineForLink from '@/components/ui/underline-for-link'
 import { hasTag } from '@/domain/blog/mappers'
 import { getPosts } from '@/domain/blog/repository'
+import { cn } from '@/utils/cn'
 
 export default async function Blogposts(props: {
   children: React.ReactNode
   show: 'blog' | 'apptiva-lernt'
+  className?: string
 }) {
   const posts = await getPosts()
 
@@ -27,7 +29,7 @@ export default async function Blogposts(props: {
 
   return (
     <>
-      <section className="full py-16 text-primary">
+      <section className={cn('full py-16 text-primary', props.className)}>
         {props.children}
         <Carousel
           darkTheme={false}

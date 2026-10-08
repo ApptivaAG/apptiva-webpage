@@ -177,7 +177,7 @@ export default async function Knowledge() {
           </div>
         </div>
       </Blogposts>
-      <Blogposts show="apptiva-lernt">
+      <Blogposts show="apptiva-lernt" className="bg-base-grey">
         <div className="content space-y-4">
           <Heading level={2} size={3}>
             Apptiva lernt
