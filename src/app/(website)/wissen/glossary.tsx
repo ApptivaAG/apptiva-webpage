@@ -18,16 +18,16 @@ export default function Glossar(props: { data: GlossaryQueryData }) {
             <p>
               Tauche ein in unser Glossar und erweitere dein Verständnis über
               Begriffe wie Chatbots, KI, und mehr.
-              <br />
-              <br />
-              <Link className="self-end" href={`/glossar`}>
-                <UnderlineForLink>Alle Begriffe →</UnderlineForLink>
-              </Link>
             </p>
           </div>
           {glossaryEntries && (
             <GlossaryComponent glossaryEntries={glossaryEntries.slice(0, 5)} />
           )}
+          <div className="col-right mt-4">
+            <Link className="self-end" href={`/glossar`}>
+              <UnderlineForLink>Alle Begriffe →</UnderlineForLink>
+            </Link>
+          </div>
         </div>
       </section>
     </>
