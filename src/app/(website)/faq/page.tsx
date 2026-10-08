@@ -1,18 +1,18 @@
-// ./nextjs-app/app/page.tsx
-
 import { Metadata } from 'next'
 import FAQSchema from '@/components/faq-schema'
+import FAQsComponent from '@/components/faqs'
 import Heading from '@/components/heading'
-import StyledPortableText from '@/components/styled-portable-text'
+import { PageHeader } from '@/components/page-header'
 import { faqsQuery } from '@/sanity/lib/queries'
 import { runQuery } from '@/sanity/lib/sanityFetch'
 
 const url = '/faq'
 const title = 'FAQ'
+const description =
+  'Häufig gestellte Fragen und Antworten rund um die Themen Chatbot und Softwareentwicklung.'
 export const metadata: Metadata = {
   title,
-  description:
-    'Häufig gestellte Fragen und Antworten rund um die Themen Chatbot und Softwareentwicklung.',
+  description,
   alternates: { canonical: url },
   openGraph: {
     title,
@@ -20,22 +20,28 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function Home() {
+export default async function FAQPage() {
   const faqs = await runQuery(faqsQuery, undefined, ['faq'])
 
   return (
     <>
       <FAQSchema faqs={faqs} />
-      <div className="container mx-auto px-4">
-        <Heading level={2}>FAQ</Heading>
-        {faqs.map((faq) => (
-          <>
-            <b>{faq.question}</b>
-            {faq.answerStyled && (
-              <StyledPortableText content={faq.answerStyled} />
-            )}
-          </>
-        ))}
+      <PageHeader
+        title={title}
+        lead={description}
+        links={[{ name: title, href: url }]}
+      />
+      <div className="full text-primary">
+        <div className="content">
+          <section className="full py-16 text-primary">
+            <div className="content">
+              <Heading level={2} size={3} className="col-left">
+                FAQ
+              </Heading>
+              <FAQsComponent faqs={faqs} />
+            </div>
+          </section>
+        </div>
       </div>
     </>
   )
