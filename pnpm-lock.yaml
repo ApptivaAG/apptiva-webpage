@@ -186,11 +186,11 @@ importers:
         specifier: ^3.1.0
         version: 3.1.0
       zod:
-        specifier: ^3.25.76
-        version: 3.25.76
+        specifier: ^4.6.6
+        version: 4.6.6
       zod-form-data:
-        specifier: ^2.0.10
-        version: 2.0.10(zod@3.25.76)
+        specifier: ^3.0.3
+        version: 3.0.3(zod@4.6.6)
     devDependencies:
       '@biomejs/biome':
         specifier: 2.5.5
@@ -235,7 +235,7 @@ importers:
         specifier: 27.3.0
         version: 27.3.0
       postcss:
-        specifier: ^8.5.26
+        specifier: ^8.5.15
         version: 8.5.26
       tailwindcss:
         specifier: ^3.4.19
@@ -7221,10 +7221,10 @@ packages:
     resolution: {integrity: sha512-xYqdZFUK/VYazNl/oCDYN+3WloWQwMfZxBoiNt6qNyk+xfOdi598muWE42rNZFp1kNOiqW936q5RhUdnpqElSg==}
     engines: {node: '>=18'}
 
-  zod-form-data@2.0.10:
-    resolution: {integrity: sha512-as5OobWbFarl7eHY9dzvS68Cp4/mLSKue+t8kfm1CfsIz9J4R7mCtZ1LisIBPNAqA6SlD3w4ge8azWXeDNjJcg==}
+  zod-form-data@3.0.3:
+    resolution: {integrity: sha512-1qXJ6hayyUr3TqxfXqmm5qwCa8f/mnG/o8Itcny03iFyrwX/dZkCwfCcYoJDyQP8RxEkycw0c/ldCJXBeaCstg==}
     peerDependencies:
-      zod: '>= 3.11.0'
+      zod: '>= 3.25.0'
 
   zod@3.22.4:
     resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
@@ -7234,6 +7234,9 @@ packages:
 
   zod@4.6.5:
     resolution: {integrity: sha512-v5l/aFXZQeai4awLbOpSoHecE9UiMrnfx75tEXLjNonXVARxQ5mOeipTjROUchszUNCqnE+hqAMujRsRHsut2Q==}
+
+  zod@4.6.6:
+    resolution: {integrity: sha512-4UmzQUF5fxvfcYHlbjBmejU+w+hbDnWFx4aS8kBx7nPBHcO2SqPbpAG8snbdg+Xse4pRefR98hgjFgIMCI/UhA==}
 
   zustand@5.0.15:
     resolution: {integrity: sha512-MpSEjRiBkA9crSYeOUH32rJC7SVqAbm0Fqcqge/bUi2PPoLcBWKOsG+C8mevmpr8TwXHBVkChbbJiyvkE+i/3A==}
@@ -15335,16 +15338,18 @@ snapshots:
 
   yoctocolors@2.2.0: {}
 
-  zod-form-data@2.0.10(zod@3.25.76):
+  zod-form-data@3.0.3(zod@4.6.6):
     dependencies:
       '@rvf/set-get': 7.0.3
-      zod: 3.25.76
+      zod: 4.6.6
 
   zod@3.22.4: {}
 
   zod@3.25.76: {}
 
   zod@4.6.5: {}
+
+  zod@4.6.6: {}
 
   zustand@5.0.15(@types/react@19.2.2)(immer@11.1.18)(react@19.2.6)(use-sync-external-store@1.7.0(react@19.2.6)):
     optionalDependencies:

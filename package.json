@@ -73,8 +73,8 @@
     "tailwind-merge": "^2.6.1",
     "tailwindcss-animate": "^1.0.7",
     "vanilla-cookieconsent": "^3.1.0",
-    "zod": "^3.25.76",
-    "zod-form-data": "^2.0.10"
+    "zod": "^4.6.6",
+    "zod-form-data": "^3.0.3"
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.5",
