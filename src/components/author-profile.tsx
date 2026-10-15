@@ -96,15 +96,15 @@ export default function AuthorProfile({
       {sections.length > 0 && (
         <nav
           aria-label="Profilabschnitte"
-          className="full border-b border-primary/10 bg-base-grey-light"
+          className="full border-b border-primary/10 bg-base-grey-light py-5"
         >
-          <div className="content py-5">
-            <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-primary">
+          <div className="content">
+            <div className="flex flex-wrap gap-3 text-sm text-primary">
               {sections.map((section) => (
                 <a
                   key={section._key}
                   href={`#profil-${section._key}`}
-                  className="underline-offset-4 hover:underline"
+                  className="inline-flex min-h-11 items-center rounded-lg border border-primary/15 bg-base-white px-4 py-2 transition-colors hover:border-primary hover:bg-primary hover:text-base-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                 >
                   {section.label}
                 </a>
@@ -165,26 +165,26 @@ export default function AuthorProfile({
                 </Link>
               ))}
             </div>
+            {person.articles.length > 6 && (
+              <details className="mt-8">
+                <summary className="cursor-pointer font-bold underline underline-offset-4">
+                  Weitere Fachbeiträge von {person.personName}
+                </summary>
+                <ul className="mt-6 space-y-4">
+                  {person.articles.slice(6).map((article) => (
+                    <li key={article._id}>
+                      <Link
+                        className="underline underline-offset-4"
+                        href={`/${article.isLearning ? 'apptiva-lernt' : 'blog'}/${article.slug}`}
+                      >
+                        {article.title || article.name} →
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            )}
           </div>
-          {person.articles.length > 6 && (
-            <details className="mt-8">
-              <summary className="cursor-pointer font-bold underline underline-offset-4">
-                Weitere Fachbeiträge von {person.personName}
-              </summary>
-              <ul className="mt-6 space-y-4">
-                {person.articles.slice(6).map((article) => (
-                  <li key={article._id}>
-                    <Link
-                      className="underline underline-offset-4"
-                      href={`/${article.isLearning ? 'apptiva-lernt' : 'blog'}/${article.slug}`}
-                    >
-                      {article.title || article.name} →
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </details>
-          )}
         </Section>
       )}
 
@@ -342,7 +342,11 @@ function ProfileSectionView({
                   <Heading
                     level={3}
                     size={layout === 'stats' ? 2 : 4}
-                    className={dark ? 'text-secondary' : undefined}
+                    className={
+                      dark
+                        ? 'hyphens-auto text-secondary [overflow-wrap:anywhere] md:text-4xl'
+                        : undefined
+                    }
                   >
                     {entry.title}
                   </Heading>
