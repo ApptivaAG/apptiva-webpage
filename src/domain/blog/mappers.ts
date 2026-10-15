@@ -26,8 +26,15 @@ export function mapCmsPost(post: PostBySlugQueryData | null) {
       description: post.header?.meta?.description ?? description,
     },
     slug: post.slug,
-    author: post.author ?? 'Anonymous',
-    authorProfileSlug: post.authorProfileSlug,
+    author: post.authors?.length
+      ? post.authors.map((author) => author.personName).join(', ')
+      : (post.author ?? 'Anonymous'),
+    authorProfileSlug: post.authors?.length
+      ? post.authors[0].hasAuthorProfile
+        ? post.authors[0].slug
+        : undefined
+      : post.authorProfileSlug,
+    authors: post.authors,
     publishDate: post.publishedAt ?? post._createdAt,
     modifiedDate: post._updatedAt,
     breadcrumb: post.breadcrumb,

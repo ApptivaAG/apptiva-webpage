@@ -6,6 +6,7 @@ export function buildArticleSchema(post: {
   publishDate: string
   modifiedDate?: string
   author?: string
+  authors?: { personName: string; slug?: string; hasAuthorProfile: boolean }[]
   articleType: 'blog' | 'apptiva-lernt'
   description?: string
   image?: string
@@ -21,12 +22,21 @@ export function buildArticleSchema(post: {
       '@type': 'WebPage',
       '@id': `https://apptiva.ch/${post.articleType}/${post.slug}`,
     },
-    author: post.author
-      ? {
-          '@type': 'Person',
-          name: post.author,
-        }
-      : undefined,
+    author: post.authors?.length
+      ? post.authors.map((author) => ({
+          '@type': 'Person' as const,
+          name: author.personName,
+          url:
+            author.hasAuthorProfile && author.slug
+              ? `https://apptiva.ch/autoren/${author.slug}`
+              : undefined,
+        }))
+      : post.author
+        ? {
+            '@type': 'Person',
+            name: post.author,
+          }
+        : undefined,
     publisher: {
       '@type': 'Organization',
       '@id': 'https://apptiva.ch/#organization',

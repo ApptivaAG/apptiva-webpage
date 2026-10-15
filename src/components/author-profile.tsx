@@ -317,7 +317,7 @@ function ProfileSectionView({
                 className={cn(
                   'min-w-0',
                   ['cards', 'quotes', 'principles'].includes(layout) &&
-                    'rounded-lg bg-base-white p-6 md:p-8',
+                    'rounded-lg border border-primary/15 bg-base-white p-6 md:p-8',
                   layout === 'timeline' && 'relative py-2 pl-6 md:pl-10',
                   layout === 'features' &&
                     'border-t border-primary/20 py-8 md:grid md:grid-cols-[1fr_1.4fr] md:gap-16',
@@ -342,7 +342,7 @@ function ProfileSectionView({
                   {layout === 'principles' && (
                     <p
                       aria-hidden="true"
-                      className="mb-6 text-4xl font-bold text-primary-light"
+                      className="mb-6 text-4xl font-bold text-primary"
                     >
                       {String(entryIndex + 1).padStart(2, '0')}
                     </p>

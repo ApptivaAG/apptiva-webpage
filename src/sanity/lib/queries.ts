@@ -152,6 +152,28 @@ export const Persons = q('*')
   .filter('active == true')
   .grab$(PersonSelection)
 
+export const ContentAuthors = q(
+  '(select(count(authors) > 0 => authors, defined(author) => [author], [])[]->)'
+)
+  .filter('defined(_id) && defined(personName) && active == true')
+  .grab$({
+    _id: q.string(),
+    personName: q.string(),
+    slug: Slug,
+    image: sanityImageWithAlt(),
+    role: ['coalesce(authorProfile.headline, role)', q.string().nullable()],
+    summary: [
+      'coalesce(authorProfile.summary, authorProfile.introduction)',
+      q.string().nullable(),
+    ],
+    hasAuthorProfile: [
+      'authorProfile.enabled == true && defined(slug.current)',
+      q.boolean(),
+    ],
+  })
+
+export type ContentAuthorData = InferType<typeof ContentAuthors>[number]
+
 const Header = q('header')
   .grab$({
     title: q.contentBlocks().optional(),
@@ -248,10 +270,7 @@ export const queryPostsFromCms = q('*')
       'select(author->active == true && author->authorProfile.enabled == true => author->slug.current)',
       q.string().nullable(),
     ],
-    authors: q('*')
-      .filterByType('person')
-      .filter('references(^._id)')
-      .grab$({ _id: q.string(), personName: q.string().optional() }),
+    authors: ContentAuthors,
     header: Header,
     tags: Tags,
     faqs: FAQs,
@@ -290,10 +309,7 @@ export const queryPostFromCmsBySlug = q('*')
       'select(author->active == true && author->authorProfile.enabled == true => author->slug.current)',
       q.string().nullable(),
     ],
-    authors: q('*')
-      .filterByType('person')
-      .filter('references(^._id)')
-      .grab$({ _id: q.string(), personName: q.string().optional() }),
+    authors: ContentAuthors,
     header: Header,
     tags: Tags,
     faqs: FAQs,
@@ -406,6 +422,7 @@ export const serviceBySlugQuery = q('*')
     subPageOf: SubPageOf(),
     header: Header,
     modules: Modules,
+    authors: ContentAuthors,
     callToAction: q('callToAction')
       .grab$({
         name: q.string().optional(),

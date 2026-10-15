@@ -63,7 +63,9 @@ export const authorProfileQuery = q('*')
     }),
     articles: q('*')
       .filterByType('blog')
-      .filter('author._ref == ^._id && defined(slug.current)')
+      .filter(
+        'select(count(authors) > 0 => ^._id in authors[]._ref, author._ref == ^._id) && defined(slug.current)'
+      )
       .order('publishedAt desc')
       .grab$({
         _id: q.string(),

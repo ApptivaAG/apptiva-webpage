@@ -24,6 +24,14 @@ export default defineType({
       type: 'text',
       rows: 5,
     }),
+    defineField({
+      name: 'summary',
+      title: 'Kurztext für die Autorenbox',
+      description:
+        'Erscheint unter Blogposts und Service Pages. Ohne eigenen Kurztext wird die Kurzvorstellung verwendet.',
+      type: 'text',
+      rows: 4,
+    }),
     defineField({ name: 'meta', title: 'Suchmaschinen', type: 'meta' }),
     defineField({
       name: 'sections',
