@@ -1,6 +1,6 @@
 import { SanityImageSource } from '@sanity/asset-utils'
 import { PortableTextTextBlock } from 'sanity'
-import { FAQQueryModuleData } from '@/sanity/lib/queries'
+import { ContentAuthorData, FAQQueryModuleData } from '@/sanity/lib/queries'
 
 export interface Blog {
   title: string
@@ -22,6 +22,8 @@ export interface CmsBlog extends Blog {
   breadcrumb?: string | undefined
   modifiedDate: string
   image: SanityImageWithAlt | undefined
+  authorProfileSlug?: string | null
+  authors?: ContentAuthorData[]
   faqs?: FAQQueryModuleData | null
 }
 

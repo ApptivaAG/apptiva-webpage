@@ -32,7 +32,7 @@ export async function generateMetadata(props: {
     serviceBySlugQuery,
     false,
     getLastParam(await props.params),
-    ['service-page']
+    ['service-page', 'person']
   )
 
   const url = buildServiceUrl(service?.slug, service?.subPageOf)
@@ -80,7 +80,7 @@ export default async function Home(props: {
     serviceBySlugQuery,
     isEnabled,
     getLastParam(await props.params),
-    ['service-page']
+    ['service-page', 'person']
   )
 
   if (!draft.data && !published) {

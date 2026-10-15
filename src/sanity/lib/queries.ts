@@ -129,6 +129,11 @@ export const Prices = q('priceCards')
 export type PersonData = NonNullable<InferType<typeof Persons>>[number]
 
 const PersonSelection = {
+  slug: Slug,
+  hasAuthorProfile: [
+    'authorProfile.enabled == true && active == true',
+    q.boolean(),
+  ] as [string, ReturnType<typeof q.boolean>],
   personName: q.string().optional(),
   active: q.boolean().default(true),
   image: sanityImageWithAlt('image'),
@@ -146,6 +151,28 @@ export const Persons = q('*')
   .filterByType('person')
   .filter('active == true')
   .grab$(PersonSelection)
+
+export const ContentAuthors = q(
+  '(select(count(authors) > 0 => authors, defined(author) => [author], [])[]->)'
+)
+  .filter('defined(_id) && defined(personName) && active == true')
+  .grab$({
+    _id: q.string(),
+    personName: q.string(),
+    slug: Slug,
+    image: sanityImageWithAlt(),
+    role: ['coalesce(authorProfile.headline, role)', q.string().nullable()],
+    summary: [
+      'coalesce(authorProfile.summary, authorProfile.introduction)',
+      q.string().nullable(),
+    ],
+    hasAuthorProfile: [
+      'authorProfile.enabled == true && defined(slug.current)',
+      q.boolean(),
+    ],
+  })
+
+export type ContentAuthorData = InferType<typeof ContentAuthors>[number]
 
 const Header = q('header')
   .grab$({
@@ -239,10 +266,11 @@ export const queryPostsFromCms = q('*')
       .deref()
       .grabOne$('personName', q.string().optional())
       .nullable(),
-    authors: q('*')
-      .filterByType('person')
-      .filter('references(^._id)')
-      .grab$({ _id: q.string(), personName: q.string().optional() }),
+    authorProfileSlug: [
+      'select(author->active == true && author->authorProfile.enabled == true => author->slug.current)',
+      q.string().nullable(),
+    ],
+    authors: ContentAuthors,
     header: Header,
     tags: Tags,
     faqs: FAQs,
@@ -277,10 +305,11 @@ export const queryPostFromCmsBySlug = q('*')
       .deref()
       .grabOne$('personName', q.string().optional())
       .nullable(),
-    authors: q('*')
-      .filterByType('person')
-      .filter('references(^._id)')
-      .grab$({ _id: q.string(), personName: q.string().optional() }),
+    authorProfileSlug: [
+      'select(author->active == true && author->authorProfile.enabled == true => author->slug.current)',
+      q.string().nullable(),
+    ],
+    authors: ContentAuthors,
     header: Header,
     tags: Tags,
     faqs: FAQs,
@@ -393,6 +422,7 @@ export const serviceBySlugQuery = q('*')
     subPageOf: SubPageOf(),
     header: Header,
     modules: Modules,
+    authors: ContentAuthors,
     callToAction: q('callToAction')
       .grab$({
         name: q.string().optional(),

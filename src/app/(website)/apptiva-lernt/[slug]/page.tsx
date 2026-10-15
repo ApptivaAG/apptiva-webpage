@@ -64,7 +64,7 @@ export default async function Home(props: {
       {
         slug: paramsSlug,
       },
-      ['blog']
+      ['blog', 'person']
     )
     if (!data || !data.draft || !data.draft.data) {
       return <p>No preview data.</p>
@@ -88,6 +88,7 @@ export default async function Home(props: {
     publishDate: post.publishDate,
     modifiedDate: post.modifiedDate,
     author: post.author,
+    authors: post.authors,
     articleType: 'apptiva-lernt',
     description: post.meta.description,
     image: post.image?.asset.url,

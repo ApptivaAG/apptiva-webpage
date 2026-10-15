@@ -1,5 +1,6 @@
 import { defineField, defineType } from 'sanity'
 import portableTextToString from '@/utils/portable-text-to-string'
+import { authorsField } from '../fields/authors'
 
 export default defineType({
   name: 'blog',
@@ -79,10 +80,13 @@ export default defineType({
     defineField({
       name: 'author',
       title: 'Autor:in',
+      description:
+        'Bisherige Autorenzuordnung. Wird verwendet, solange unter Autor:innen keine Personen ausgewählt sind.',
       type: 'reference',
       // @ts-ignore
       to: { type: 'person' },
     }),
+    authorsField,
     defineField({
       name: 'tags',
       title: 'Tags',

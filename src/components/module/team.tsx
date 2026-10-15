@@ -53,6 +53,14 @@ export default function Team(props: { module: ModuleData }) {
                   <div className="flex-1 pt-6 md:mx-0">
                     <Heading level={4}>{person.personName}</Heading>
                     <Heading level={5}>{person.role}</Heading>
+                    {person.hasAuthorProfile && person.slug && (
+                      <Link
+                        href={`/autoren/${person.slug}`}
+                        className="mt-4 inline-block font-bold underline underline-offset-4"
+                      >
+                        Autorenprofil ansehen →
+                      </Link>
+                    )}
                   </div>
                   <div className="mt-auto pt-4 md:mx-0">
                     <div>

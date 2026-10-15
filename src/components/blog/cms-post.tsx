@@ -1,4 +1,6 @@
+import Link from 'next/link'
 import BreadCrumb from '@/components/bread-crumb'
+import ContentAuthors from '@/components/content-authors'
 import FAQsComponent from '@/components/faqs'
 import Heading from '@/components/heading'
 import PrevNextNavigation from '@/components/prev-next-navigation'
@@ -46,7 +48,32 @@ export default function CmsBlogPost(props: {
             </time>{' '}
             von{' '}
             <strong className="font-bold">
-              {kebabCaseToTitleCase(post.author.toString())}
+              {post.authors?.length ? (
+                post.authors.map((author, index) => (
+                  <span key={author._id}>
+                    {index > 0 && ', '}
+                    {author.hasAuthorProfile && author.slug ? (
+                      <Link
+                        href={`/autoren/${author.slug}`}
+                        className="underline underline-offset-4"
+                      >
+                        {author.personName}
+                      </Link>
+                    ) : (
+                      author.personName
+                    )}
+                  </span>
+                ))
+              ) : post.authorProfileSlug ? (
+                <Link
+                  href={`/autoren/${post.authorProfileSlug}`}
+                  className="underline underline-offset-4"
+                >
+                  {kebabCaseToTitleCase(post.author.toString())}
+                </Link>
+              ) : (
+                kebabCaseToTitleCase(post.author.toString())
+              )}
             </strong>
           </p>
           <div className="popout justify-center pt-8 md:pt-16">
@@ -74,16 +101,18 @@ export default function CmsBlogPost(props: {
               <FAQsComponent faqs={post.faqs} />
             </div>
           )}
-          <PrevNextNavigation
-            basePath={`/${kind}`}
-            previousSlug={previousSlug}
-            nextSlug={nextSlug}
-            previousLabel="Zum vorherigen Artikel"
-            nextLabel="Zum nächsten Artikel"
-          />
         </div>
         <aside></aside>
       </div>
+      <ContentAuthors authors={post.authors} />
+      <PrevNextNavigation
+        basePath={`/${kind}`}
+        previousSlug={previousSlug}
+        nextSlug={nextSlug}
+        previousLabel="Zum vorherigen Artikel"
+        nextLabel="Zum nächsten Artikel"
+        className="pb-16"
+      />
     </>
   )
 }

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { ErrorBoundary } from 'react-error-boundary'
+import ContentAuthors from '@/components/content-authors'
 import Heading from '@/components/heading'
 import Module from '@/components/module'
 import { PageHeader } from '@/components/page-header'
@@ -59,6 +60,7 @@ export default function ServiceDetail(props: {
           />
         </CatchErrors>
       ))}
+      <ContentAuthors authors={props.service.authors} />
     </>
   )
 }

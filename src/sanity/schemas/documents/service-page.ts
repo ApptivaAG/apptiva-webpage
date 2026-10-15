@@ -1,5 +1,6 @@
 import { defineArrayMember, defineField, defineType } from 'sanity'
 import portableTextToString from '@/utils/portable-text-to-string'
+import { authorsField } from '../fields/authors'
 
 export default defineType({
   name: 'service-page',
@@ -73,6 +74,7 @@ export default defineType({
       // @ts-ignore
       of: [defineArrayMember({ type: 'module' })],
     }),
+    authorsField,
     defineField({
       name: 'callToAction',
       title: 'Call To Action',
