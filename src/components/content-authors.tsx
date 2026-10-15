@@ -13,7 +13,7 @@ export default function ContentAuthors({
   if (!authors?.length) return null
 
   return (
-    <Section id="autoren" className="border-t border-primary/10">
+    <Section id="autoren" level={'author'}>
       <div className="content">
         <Heading level={2} size={2} className="text-center">
           {authors.length === 1 ? 'Über den Autor' : 'Über die Autoren'}

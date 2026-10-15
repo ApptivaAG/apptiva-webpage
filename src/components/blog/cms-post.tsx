@@ -101,17 +101,18 @@ export default function CmsBlogPost(props: {
               <FAQsComponent faqs={post.faqs} />
             </div>
           )}
-          <PrevNextNavigation
-            basePath={`/${kind}`}
-            previousSlug={previousSlug}
-            nextSlug={nextSlug}
-            previousLabel="Zum vorherigen Artikel"
-            nextLabel="Zum nächsten Artikel"
-          />
         </div>
         <aside></aside>
       </div>
       <ContentAuthors authors={post.authors} />
+      <PrevNextNavigation
+        basePath={`/${kind}`}
+        previousSlug={previousSlug}
+        nextSlug={nextSlug}
+        previousLabel="Zum vorherigen Artikel"
+        nextLabel="Zum nächsten Artikel"
+        className="pb-16"
+      />
     </>
   )
 }
