@@ -318,13 +318,26 @@ function ProfileSectionView({
                   'min-w-0',
                   ['cards', 'quotes', 'principles'].includes(layout) &&
                     'rounded-lg bg-base-white p-6 md:p-8',
-                  layout === 'timeline' &&
-                    'border-l-2 border-primary/20 py-2 pl-6 md:pl-10',
+                  layout === 'timeline' && 'relative py-2 pl-6 md:pl-10',
                   layout === 'features' &&
                     'border-t border-primary/20 py-8 md:grid md:grid-cols-[1fr_1.4fr] md:gap-16',
                   layout === 'stats' && 'border-t border-base-white/25 py-6'
                 )}
               >
+                {layout === 'timeline' && (
+                  <>
+                    {entryIndex < entries.length - 1 && (
+                      <span
+                        aria-hidden="true"
+                        className="absolute left-0 top-[22px] h-[calc(100%+1.5rem)] w-0.5 bg-primary/20 md:top-[26px]"
+                      />
+                    )}
+                    <span
+                      aria-hidden="true"
+                      className="absolute -left-[5px] top-4 h-3 w-3 rounded-full bg-primary md:top-5"
+                    />
+                  </>
+                )}
                 <div>
                   {layout === 'principles' && (
                     <p
