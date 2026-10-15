@@ -10,6 +10,7 @@ import person from './schemas/documents/person'
 import project from './schemas/documents/project'
 import servicePage from './schemas/documents/service-page'
 import tag from './schemas/documents/tag'
+import authorProfile from './schemas/objects/author-profile'
 import card from './schemas/objects/card'
 import contact from './schemas/objects/contact'
 import cta from './schemas/objects/cta'
@@ -36,6 +37,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     tag,
     blog,
     person,
+    authorProfile,
     social,
     contact,
     skill,

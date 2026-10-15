@@ -11,7 +11,7 @@ export const getCmsPostBySlug = cache(
       {
         slug,
       },
-      ['blog']
+      ['blog', 'person']
     )
     return mapCmsPost(post)
   }
@@ -22,7 +22,7 @@ export const getCmsPosts = cache(async () => {
     queryPostsFromCms,
     false,
     undefined,
-    ['blog']
+    ['blog', 'person']
   )
 
   return postsFromCMS.map(mapCmsPost).filter((post) => post !== undefined)

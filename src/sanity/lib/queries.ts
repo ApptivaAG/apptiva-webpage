@@ -129,6 +129,11 @@ export const Prices = q('priceCards')
 export type PersonData = NonNullable<InferType<typeof Persons>>[number]
 
 const PersonSelection = {
+  slug: Slug,
+  hasAuthorProfile: [
+    'authorProfile.enabled == true && active == true',
+    q.boolean(),
+  ] as [string, ReturnType<typeof q.boolean>],
   personName: q.string().optional(),
   active: q.boolean().default(true),
   image: sanityImageWithAlt('image'),
@@ -239,6 +244,10 @@ export const queryPostsFromCms = q('*')
       .deref()
       .grabOne$('personName', q.string().optional())
       .nullable(),
+    authorProfileSlug: [
+      'select(author->active == true && author->authorProfile.enabled == true => author->slug.current)',
+      q.string().nullable(),
+    ],
     authors: q('*')
       .filterByType('person')
       .filter('references(^._id)')
@@ -277,6 +286,10 @@ export const queryPostFromCmsBySlug = q('*')
       .deref()
       .grabOne$('personName', q.string().optional())
       .nullable(),
+    authorProfileSlug: [
+      'select(author->active == true && author->authorProfile.enabled == true => author->slug.current)',
+      q.string().nullable(),
+    ],
     authors: q('*')
       .filterByType('person')
       .filter('references(^._id)')

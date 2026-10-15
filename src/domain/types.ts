@@ -22,6 +22,7 @@ export interface CmsBlog extends Blog {
   breadcrumb?: string | undefined
   modifiedDate: string
   image: SanityImageWithAlt | undefined
+  authorProfileSlug?: string | null
   faqs?: FAQQueryModuleData | null
 }
 

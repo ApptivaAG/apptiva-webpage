@@ -64,7 +64,7 @@ export default async function Home(props: {
       {
         slug: paramsSlug,
       },
-      ['blog']
+      ['blog', 'person']
     )
     if (!data || !data.draft || !data.draft.data) {
       return <p>No preview data.</p>

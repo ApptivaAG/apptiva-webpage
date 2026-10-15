@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { authorProfilesQuery } from '@/domain/author-profile'
 import { hasTag } from '@/domain/blog/mappers'
 import { getPosts } from '@/domain/blog/repository'
 import { CmsBlog } from '@/domain/types'
@@ -16,6 +17,9 @@ import { rootUrl } from './env'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = await getPosts()
+  const { published: authors } = await load(authorProfilesQuery, false, {}, [
+    'person',
+  ])
   const { published: services } = await load(servicesQuery, false, undefined, [
     'service-page',
   ])
@@ -36,6 +40,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 1,
     },
     ...buildServicesSiteMap(services),
+    ...authors.map(({ slug, _updatedAt }) => ({
+      url: buildFullUrl(`/autoren/${slug}`),
+      lastModified: new Date(_updatedAt),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    })),
     {
       url: buildFullUrl('/angebot/chatbots/demo-vereinbaren'),
       lastModified: new Date(),

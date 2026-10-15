@@ -27,6 +27,7 @@ export function mapCmsPost(post: PostBySlugQueryData | null) {
     },
     slug: post.slug,
     author: post.author ?? 'Anonymous',
+    authorProfileSlug: post.authorProfileSlug,
     publishDate: post.publishedAt ?? post._createdAt,
     modifiedDate: post._updatedAt,
     breadcrumb: post.breadcrumb,

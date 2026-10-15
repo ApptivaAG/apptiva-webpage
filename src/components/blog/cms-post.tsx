@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import BreadCrumb from '@/components/bread-crumb'
 import FAQsComponent from '@/components/faqs'
 import Heading from '@/components/heading'
@@ -46,7 +47,16 @@ export default function CmsBlogPost(props: {
             </time>{' '}
             von{' '}
             <strong className="font-bold">
-              {kebabCaseToTitleCase(post.author.toString())}
+              {post.authorProfileSlug ? (
+                <Link
+                  href={`/autoren/${post.authorProfileSlug}`}
+                  className="underline underline-offset-4"
+                >
+                  {kebabCaseToTitleCase(post.author.toString())}
+                </Link>
+              ) : (
+                kebabCaseToTitleCase(post.author.toString())
+              )}
             </strong>
           </p>
           <div className="popout justify-center pt-8 md:pt-16">

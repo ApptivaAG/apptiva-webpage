@@ -5,6 +5,10 @@ export default defineType({
   name: 'person',
   title: 'Person',
   type: 'document',
+  groups: [
+    { name: 'person', title: 'Person', default: true },
+    { name: 'profile', title: 'Autorenprofil' },
+  ],
   fields: [
     defineField({
       name: 'active',
@@ -28,6 +32,15 @@ export default defineType({
         source: 'personName',
         maxLength: 96,
       },
+      validation: (rule) =>
+        rule.custom((value, context) => {
+          const profile = context.document?.authorProfile as
+            | { enabled?: boolean }
+            | undefined
+          return !profile?.enabled || value?.current
+            ? true
+            : 'Ein Autorenprofil benötigt einen Slug.'
+        }),
     }),
     defineField({
       name: 'role',
@@ -76,11 +89,20 @@ export default defineType({
       type: 'imageWithAlt',
     }),
     defineField({
+      name: 'authorProfile',
+      title: 'Autorenprofil',
+      type: 'authorProfile',
+      group: 'profile',
+    }),
+    defineField({
       title: 'Skills',
       name: 'skills',
       type: 'array',
       // @ts-ignore
       of: [defineArrayMember({ type: 'skill' })],
     }),
-  ],
+  ].map((field) => ({
+    ...field,
+    group: field.name === 'authorProfile' ? 'profile' : 'person',
+  })),
 })
