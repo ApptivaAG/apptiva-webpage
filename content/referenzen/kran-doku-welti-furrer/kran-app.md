@@ -40,6 +40,10 @@ contactPerson:
 
 Mit der PWA (Progressive Web App) von [Welti-Furrer](https://www.welti-furrer.ch/) kann die Dokumentation aller Einsatzmittel der Schwergutlogistik schnell und einfach gefunden werden.
 
+## Dokumentation, die mit dem Maschinenpark Schritt hält
+
+Früher wurde die Dokumentation als physisches Kran-Buch einmal jährlich gedruckt und verteilt. Mit der App kann Welti-Furrer deutlich schneller auf Änderungen reagieren: Neue Maschinen lassen sich dokumentieren, sobald sie zur Verfügung stehen. So ist die aktuelle Dokumentation zeitnah verfügbar, ohne auf die nächste Ausgabe des gedruckten Buchs warten zu müssen.
+
 ## Offline-Fähigkeit
 
 Nicht alle Tablets haben eine SIM-Karte integriert und nicht alle Keller haben ein gutes WLAN. Darum ist die App dank der PWA-Technologie auch offline nutzbar.
