@@ -53,20 +53,25 @@ const TestimonialsSchema = ({
       data={{
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        itemListElement: testimonials.map((testimonial) => ({
-          '@type': 'Review',
-          itemReviewed: {
-            '@type': 'Organization',
-            name: 'Apptiva AG',
-            url: 'https://apptiva.ch',
-          },
-          author: {
-            '@type': 'Person',
-            name: testimonial.frontmatter.name,
-            jobTitle: testimonial.frontmatter.position,
-            worksFor: {
+        itemListElement: testimonials.map((testimonial, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          item: {
+            '@type': 'Quotation',
+            text: testimonial.quoteText,
+            about: {
               '@type': 'Organization',
-              name: testimonial.frontmatter.company,
+              name: 'Apptiva AG',
+              url: 'https://apptiva.ch',
+            },
+            author: {
+              '@type': 'Person',
+              name: testimonial.frontmatter.name,
+              jobTitle: testimonial.frontmatter.position,
+              worksFor: {
+                '@type': 'Organization',
+                name: testimonial.frontmatter.company,
+              },
             },
           },
         })),

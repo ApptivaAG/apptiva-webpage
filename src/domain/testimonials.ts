@@ -1,8 +1,8 @@
+import Underline from '@/components/ui/underline'
+import { cleanStega } from '@/utils/clean-stega'
 import fs from 'fs'
 import { CompileMDXResult, compileMDX } from 'next-mdx-remote/rsc'
 import path from 'path'
-import Underline from '@/components/ui/underline'
-import { cleanStega } from '@/utils/clean-stega'
 
 type TestimonialFrontmatter = {
   avatar: string
@@ -15,7 +15,27 @@ type TestimonialFrontmatter = {
 
 export type Testimonial = {
   id: string
+  quoteText: string
 } & CompileMDXResult<TestimonialFrontmatter>
+
+type MarkdownNode = {
+  type?: string
+  value?: string
+  alt?: string
+  children?: MarkdownNode[]
+}
+
+function markdownText(node: MarkdownNode): string {
+  if (node.type === 'text' || node.type === 'inlineCode') {
+    return node.value ?? ''
+  }
+
+  if (node.type === 'image') {
+    return node.alt ?? ''
+  }
+
+  return (node.children ?? []).map(markdownText).join(' ')
+}
 
 const postsDirectory = path.join(process.cwd(), './content/data/testimonials/')
 export async function getTestimonialsData(tags?: ('chatbot' | 'sw-dev')[]) {
@@ -30,6 +50,7 @@ export async function getTestimonialsData(tags?: ('chatbot' | 'sw-dev')[]) {
       const fullPath = path.join(postsDirectory, fileName)
       const id = fileName.replace(/\.md$/, '')
       const fileContents = fs.readFileSync(fullPath, 'utf8')
+      let quoteText = ''
       const data = await compileMDX<TestimonialFrontmatter>({
         source: fileContents,
         components: {
@@ -37,10 +58,18 @@ export async function getTestimonialsData(tags?: ('chatbot' | 'sw-dev')[]) {
         },
         options: {
           parseFrontmatter: true,
+          mdxOptions: {
+            remarkPlugins: [
+              () => (tree: MarkdownNode) => {
+                quoteText = markdownText(tree).replace(/\s+/g, ' ').trim()
+              },
+            ],
+          },
         },
       })
       return {
         id,
+        quoteText,
         ...data,
       }
     })
