@@ -3,6 +3,12 @@ import type { Redirect } from 'next/dist/lib/load-custom-routes'
 export default function redirects() {
   return [
     {
+      source: '/:path*',
+      has: [{ type: 'header', key: 'x-forwarded-proto', value: 'http' }],
+      destination: 'https://apptiva.ch/:path*',
+      statusCode: 301,
+    },
+    {
       source: '/projekte/restaurant-bestell-app-payflink',
       destination: '/projekte/restaurant-bestell-app-injoi',
       permanent: true,
