@@ -3,7 +3,7 @@ import React from 'react'
 import { cn } from '@/utils/cn'
 
 const buttonStyle = cva(
-  'rounded px-6 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-colors',
+  'rounded px-6 py-3 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-colors',
   {
     variants: {
       intent: {

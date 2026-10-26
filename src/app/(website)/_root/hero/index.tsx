@@ -11,7 +11,7 @@ export default async function Hero() {
   ])
 
   return (
-    <div className="full relative mt-[-8rem] min-h-fit animate-gradient items-center bg-gradient-to-br from-primary-light to-primary-dark bg-300% py-44 text-base-white">
+    <div className="full relative mt-[-8rem] min-h-fit animate-gradient items-center bg-linear-to-br from-primary-light to-primary-dark bg-300% py-44 text-base-white">
       {isEnabled ? (
         <HeroPreview initial={draft} />
       ) : (

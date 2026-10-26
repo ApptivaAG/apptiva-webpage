@@ -118,7 +118,7 @@ export default function EmblaCarousel<T>(props: {
                 slides.map((slide: any, index) => {
                   return (
                     <div
-                      className={`relative my-20 h-[--min-size-mobile] flex-[0_0_100%] md:flex-[0_0_60%] lg:h-[--min-size] lg:pl-[1rem]`}
+                      className={`relative my-20 h-(--min-size-mobile) flex-[0_0_100%] md:flex-[0_0_60%] lg:h-(--min-size) lg:pl-[1rem]`}
                       key={index}
                       style={
                         {
@@ -139,7 +139,7 @@ export default function EmblaCarousel<T>(props: {
                             }),
                           } as React.CSSProperties
                         }
-                        className="absolute top-1/2 h-[--project-overview-height-mobile] -translate-y-1/2 rounded-lg border border-base-grey p-5 lg:h-[--project-overview-height]"
+                        className="absolute top-1/2 h-(--project-overview-height-mobile) -translate-y-1/2 rounded-lg border border-base-grey p-5 lg:h-(--project-overview-height)"
                       >
                         <ProjectOverview project={slide}></ProjectOverview>
                       </div>
@@ -180,7 +180,7 @@ export default function EmblaCarousel<T>(props: {
           {' '}
         </Button>
         <div
-          className="fixed left-[--mousePosX] top-[--mousePosY] z-20 h-24 w-24 -translate-x-1/2 -translate-y-1/2 bg-transparent opacity-[--iconOpacity] transition-opacity duration-500 ease-in"
+          className="fixed left-(--mousePosX) top-(--mousePosY) z-20 h-24 w-24 -translate-x-1/2 -translate-y-1/2 bg-transparent opacity-(--iconOpacity) transition-opacity duration-500 ease-in"
           style={
             {
               '--mousePosX': `${mousePos.x}px`,
@@ -201,7 +201,7 @@ export default function EmblaCarousel<T>(props: {
         </div>
         <div className=" absolute bottom-8 left-0 right-0 z-10 mx-auto h-1 w-4/5 max-w-full overflow-hidden rounded bg-transparent">
           <div
-            className="absolute bottom-0 left-[--leftScrollOffset] top-0 z-20 w-[--progressBarSize] rounded bg-secondary"
+            className="absolute bottom-0 left-(--leftScrollOffset) top-0 z-20 w-(--progressBarSize) rounded bg-secondary"
             style={
               {
                 '--progressBarSize': `${progressBarSize}%`,

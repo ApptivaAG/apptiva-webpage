@@ -87,7 +87,7 @@ export default function GoogleReviewsPreview(props: { module?: ModuleData }) {
               index={index}
               className="basis-full md:basis-1/3"
             >
-              <Card className="flex h-full flex-col gap-4 border-primary/10 bg-base-white p-6 shadow-sm md:p-8">
+              <Card className="flex h-full flex-col gap-4 border-primary/10 bg-base-white p-6 shadow-xs md:p-8">
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex items-center gap-3">
                     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">

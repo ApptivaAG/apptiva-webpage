@@ -28,7 +28,7 @@ export default function Footer({ initialYear }: { initialYear: number }) {
     <>
       {/* The footer has to be higher in the z-index, so that the content coming after the footer is behind */}
       <footer>
-        <div className="relative z-10 bg-gradient-to-br from-primary-light to-primary-dark bg-300% py-4">
+        <div className="relative z-10 bg-linear-to-br from-primary-light to-primary-dark bg-300% py-4">
           <div className="mx-4 rounded-md bg-primary text-base-white">
             <div className="flex flex-wrap justify-between gap-x-24 gap-y-12 rounded-md bg-black/40 p-4 sm:p-12">
               <div>
@@ -159,7 +159,7 @@ export default function Footer({ initialYear }: { initialYear: number }) {
         <div
           className={`${!inView ? 'fixed' : 'relative'} left-0 right-0 top-0 z-0 flex min-h-lvh flex-col justify-end`}
         >
-          <div className="flex flex-1 flex-col justify-end bg-gradient-to-br from-primary-light to-primary-dark bg-300% py-4">
+          <div className="flex flex-1 flex-col justify-end bg-linear-to-br from-primary-light to-primary-dark bg-300% py-4">
             <p className="mx-auto my-36 max-w-[47rem] px-12 text-3xl font-bold text-base-white md:text-4xl lg:text-6xl">
               <RandomText />
             </p>
