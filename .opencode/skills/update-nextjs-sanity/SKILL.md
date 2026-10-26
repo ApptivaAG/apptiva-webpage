@@ -47,7 +47,6 @@ node -e "require('./sanity.config.ts')"
 
 **Ignored dependencies** (never auto-update):
 
-- `remark-gfm`
 - `next-mdx-remote`
 
 **Sanity packages** hoisted via `.npmrc`:

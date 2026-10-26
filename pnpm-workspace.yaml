@@ -12,7 +12,6 @@ autoInstallPeers: true
 # Dependency update settings
 updateConfig:
   ignoreDependencies:
-    - remark-gfm
     - next-mdx-remote
 
 # Overrides for security fixes and version pinning
