@@ -1,11 +1,11 @@
-import { InferType } from 'groqd'
+import type { InferResultType } from 'groqd'
 import GlossaryComponent from '@/components/glossary-entries'
 import Heading from '@/components/heading'
 import { PageHeader } from '@/components/page-header'
 import { glossaryQuery } from '@/sanity/lib/queries'
 
 export function GlossaryList(props: {
-  data?: InferType<typeof glossaryQuery>
+  data?: InferResultType<typeof glossaryQuery>
 }) {
   if (!props.data) {
     return <>Empty</>

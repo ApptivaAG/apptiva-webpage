@@ -13,7 +13,7 @@ export default function PopoutImage(props: { module: ModuleData }) {
       />
       {props.module.content && (
         <>
-          <div className="col-start-1 row-start-1 h-full w-full bg-gradient-to-tr from-primary to-50%"></div>
+          <div className="col-start-1 row-start-1 h-full w-full bg-linear-to-tr from-primary to-50%"></div>
           <div className="content col-start-1 row-start-1 !pt-[100%] pb-8 text-base-white md:!pt-[50%]">
             {props.module.title && (
               <Heading level={2} size={3} className="pb-4">

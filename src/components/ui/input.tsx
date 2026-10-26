@@ -3,7 +3,7 @@ import * as React from 'react'
 import { cn } from '@/utils/cn'
 
 const inputStyle = cva(
-  'ring-offset-white file:font-medium flex h-12 w-full rounded border border-base-white px-3 py-2 text-base file:border-0 file:bg-transparent file:text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
+  'ring-offset-white file:font-medium flex h-12 w-full rounded border border-base-white px-3 py-2 text-base file:border-0 file:bg-transparent file:text-sm focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
   {
     variants: {
       intent: {

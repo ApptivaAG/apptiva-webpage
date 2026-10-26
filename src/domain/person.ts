@@ -27,18 +27,34 @@ export const getPersonBySlug = cache(async (slug: string) => {
     contact: {
       ...person.contact,
       socialNetworks: person.contact?.socialNetworks?.filter(
-        (network): network is { title: string; url?: string } =>
-          !!network?.title
+        (
+          network: { title?: string; url?: string } | undefined
+        ): network is {
+          title: string
+          url?: string
+        } => !!network?.title
       ),
     },
     image: person.image,
-    skills: person.skills?.filter(
-      (
-        skill
-      ): skill is {
-        title: string
-        items?: { name?: string; value?: number }[]
-      } => !!skill?.title
-    ),
+    skills: person.skills
+      ?.filter(
+        (
+          skill:
+            | {
+                title?: string
+                items?: ({ name?: string; value?: number } | undefined)[]
+              }
+            | undefined
+        ): skill is {
+          title: string
+          items?: ({ name?: string; value?: number } | undefined)[]
+        } => !!skill?.title
+      )
+      .map((skill) => ({
+        ...skill,
+        items: skill.items?.filter(
+          (item): item is NonNullable<typeof item> => item !== undefined
+        ),
+      })),
   } satisfies Person
 })

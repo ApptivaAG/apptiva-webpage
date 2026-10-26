@@ -1,8 +1,25 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../../../tailwind.config.mjs";
 
 @layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: #e5e7eb;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #9ca3af;
+  }
+
   :root {
     --primary: 6 48 98;
     --primary-light: 17 126 255;
@@ -96,4 +113,9 @@
   .full {
     grid-column: full;
   }
+}
+
+@theme {
+  --default-ring-width: 3px;
+  --default-ring-color: #3b82f6;
 }
