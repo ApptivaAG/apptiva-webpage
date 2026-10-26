@@ -24,7 +24,7 @@ export default function AuthorProfile({
 
   return (
     <>
-      <header className="full relative -mt-32 overflow-hidden bg-gradient-to-br from-primary to-primary-dark pb-16 pt-40 text-base-white md:pb-24 md:pt-48">
+      <header className="full relative -mt-32 overflow-hidden bg-linear-to-br from-primary to-primary-dark pb-16 pt-40 text-base-white md:pb-24 md:pt-48">
         <div className="content">
           <BreadCrumb
             className="pb-10"

@@ -1,9 +1,8 @@
 import typography from '@tailwindcss/typography'
-import type { Config } from 'tailwindcss'
 import colors from 'tailwindcss/colors'
 import animate from 'tailwindcss-animate'
 
-const config: Config = {
+const config = {
   darkMode: 'selector',
   content: [
     './content/**/*.{js,ts,jsx,tsx,md}',
@@ -153,15 +152,5 @@ const config: Config = {
     },
   },
   plugins: [animate, typography],
-}
-
-function round(num: number) {
-  return num
-    .toFixed(7)
-    .replace(/(\.[0-9]+?)0+$/, '$1')
-    .replace(/\.0$/, '')
-}
-function rem(px: number) {
-  return `${round(px / 16)}rem`
 }
 export default config

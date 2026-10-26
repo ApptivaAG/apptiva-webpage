@@ -65,7 +65,7 @@ export default function ProjectDetail(props: {
         dateCreated={project._createdAt}
         dateModified={project._updatedAt}
       />
-      <header className="full relative mt-[-8rem] min-h-fit animate-gradient items-center bg-gradient-to-br from-primary-light to-primary-dark bg-300% pb-8 pt-32 text-base-white md:pb-16 md:pt-44">
+      <header className="full relative mt-[-8rem] min-h-fit animate-gradient items-center bg-linear-to-br from-primary-light to-primary-dark bg-300% pb-8 pt-32 text-base-white md:pb-16 md:pt-44">
         <div className="content">
           <BreadCrumb className="pb-6" links={breadcrumbLinks} />
           <Heading level={1}>
@@ -91,7 +91,7 @@ export default function ProjectDetail(props: {
         <div className="prose max-lg:order-2">
           {project.content && <ProjectPortableText content={project.content} />}
         </div>
-        <aside className="flex-shrink-0 basis-80 rounded bg-base-grey p-4 text-primary max-lg:order-1 lg:p-8 [&>div]:mb-4 [&>div]:text-xl [&>div]:leading-tight [&>p]:text-sm [&>p]:font-bold">
+        <aside className="shrink-0 basis-80 rounded bg-base-grey p-4 text-primary max-lg:order-1 lg:p-8 [&>div]:mb-4 [&>div]:text-xl [&>div]:leading-tight [&>p]:text-sm [&>p]:font-bold">
           {project.tasks && (
             <>
               <p>Aufgaben</p>

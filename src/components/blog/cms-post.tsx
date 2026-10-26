@@ -25,7 +25,7 @@ export default function CmsBlogPost(props: {
 
   return (
     <>
-      <header className="full relative mt-[-8rem] min-h-fit animate-gradient items-center bg-gradient-to-br from-primary-light to-primary-dark bg-300% pb-8 pt-32 text-base-white md:pb-16 md:pt-44">
+      <header className="full relative mt-[-8rem] min-h-fit animate-gradient items-center bg-linear-to-br from-primary-light to-primary-dark bg-300% pb-8 pt-32 text-base-white md:pb-16 md:pt-44">
         <div className="content">
           <BreadCrumb
             className="pb-6"
