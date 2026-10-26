@@ -1,4 +1,4 @@
-import { InferType } from 'groqd'
+import type { InferResultType } from 'groqd'
 import { PageHeader } from '@/components/page-header'
 import PrevNextNavigation from '@/components/prev-next-navigation'
 import { glossaryBySlugQuery } from '@/sanity/lib/queries'
@@ -6,7 +6,7 @@ import portableTextToString from '@/utils/portable-text-to-string'
 import GlossaryPortableText from './glossar-portable-text'
 
 export default function Item(props: {
-  glossary: InferType<typeof glossaryBySlugQuery>
+  glossary: InferResultType<typeof glossaryBySlugQuery>
   previousSlug?: string
   nextSlug?: string
 }) {

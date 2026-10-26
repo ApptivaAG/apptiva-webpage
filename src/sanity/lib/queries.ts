@@ -1,27 +1,24 @@
-import { InferType, nullToUndefined, q, sanityImage } from 'groqd'
+import type { InferResultType } from 'groqd'
+import { q, sanityImageWithAlt } from './groqd'
+
+export { sanityImageWithAlt } from './groqd'
 
 export const Slug = ['slug.current', q.string().optional()] satisfies [
   string,
   any,
 ]
 
-export const sanityImageWithAlt = (fieldName = 'image') =>
-  sanityImage(fieldName, {
-    withAsset: ['base', 'lqip'],
-    additionalFields: nullToUndefined({
-      alt: q.string().optional().default('Fehlende Bildbeschreibung'),
-    }),
-  }).nullable()
-
-export const Tags = q('tags')
-  .filter()
-  .deref()
-  .grabOne$('name', q.string().optional())
-  .nullable()
+export const Tags = q.raw(
+  'tags[]->name',
+  q
+    .array(q.string())
+    .nullish()
+    .transform((tags) => tags ?? undefined)
+)
 
 const Cards = q('cards')
   .filter()
-  .grab$({
+  .project({
     _key: q.string(),
     title: q.string().optional().default('Ohne Titel'),
     pill: q.string().optional(),
@@ -34,15 +31,15 @@ const Cards = q('cards')
 
 export const Documents = q('documents')
   .filter()
-  .grab$({
+  .project({
     _key: q.string(),
     title: q.string().optional().default('Dokument ohne Titel'),
     description: q.string().optional(),
     file: q('file')
-      .grab$({
+      .project({
         asset: q('asset')
           .deref()
-          .grab$({
+          .project({
             url: q.string(),
             size: q.number().optional(),
           })
@@ -54,18 +51,18 @@ export const Documents = q('documents')
   })
   .nullable()
 
-export type ProjectsData = NonNullable<InferType<typeof Projects>>[number]
+export type ProjectsData = NonNullable<InferResultType<typeof Projects>>[number]
 export const Projects = q('projects')
   .filter()
   .deref()
-  .grab({
+  .project({
     _id: q.string(),
     projectName: q.string().optional(),
     image: sanityImageWithAlt(),
     slug: Slug,
     customerRef: q('customerRef')
       .deref()
-      .grab$({
+      .project({
         customerName: q.string().optional(),
         logo: sanityImageWithAlt('logo'),
       })
@@ -73,7 +70,7 @@ export const Projects = q('projects')
     order: q.number().optional().nullable(),
     description: q.string().optional().nullable(),
     meta: q('meta')
-      .grab$({
+      .project({
         title: q.string().optional(),
         description: q.string().optional(),
       })
@@ -83,12 +80,12 @@ export const Projects = q('projects')
   .nullable()
 
 export type ServicePageTeasersData = NonNullable<
-  InferType<typeof ServicePageTeasers>
+  InferResultType<typeof ServicePageTeasers>
 >[number]
 export const ServicePageTeasers = q('servicePageTeaser')
   .filter()
   .deref()
-  .grab$({
+  .project({
     _id: q.string().nullable(),
     slug: Slug,
     illustration: sanityImageWithAlt('illustration'),
@@ -97,11 +94,11 @@ export const ServicePageTeasers = q('servicePageTeaser')
   })
   .nullable()
 
-export type FAQQueryModuleData = NonNullable<InferType<typeof FAQs>>
+export type FAQQueryModuleData = NonNullable<InferResultType<typeof FAQs>>
 export const FAQs = q('faqs')
   .filter()
   .deref()
-  .grab$({
+  .project({
     _id: q.string(),
     question: q.string().optional(),
     answerStyled: q.contentBlocks().optional(),
@@ -113,7 +110,7 @@ export const FAQs = q('faqs')
 
 export const Prices = q('priceCards')
   .filter()
-  .grab$({
+  .project({
     _key: q.string(),
     title: q.string().optional().default('Ohne Titel'),
     image: sanityImageWithAlt(),
@@ -126,7 +123,7 @@ export const Prices = q('priceCards')
   })
   .nullable()
 
-export type PersonData = NonNullable<InferType<typeof Persons>>[number]
+export type PersonData = NonNullable<InferResultType<typeof Persons>>[number]
 
 const PersonSelection = {
   slug: Slug,
@@ -141,7 +138,7 @@ const PersonSelection = {
   role: q.string().optional(),
   slogan: q.string().optional(),
   contact: q('contact')
-    .grab$({
+    .project({
       mail: q.string().optional().default('Keine E-Mail-Adresse'),
       phone: q.string().optional().default('Keine Telefonnummer'),
     })
@@ -150,13 +147,13 @@ const PersonSelection = {
 export const Persons = q('*')
   .filterByType('person')
   .filter('active == true')
-  .grab$(PersonSelection)
+  .project(PersonSelection)
 
 export const ContentAuthors = q(
   '(select(count(authors) > 0 => authors, defined(author) => [author], [])[]->)'
 )
   .filter('defined(_id) && defined(personName) && active == true')
-  .grab$({
+  .project({
     _id: q.string(),
     personName: q.string(),
     slug: Slug,
@@ -172,15 +169,15 @@ export const ContentAuthors = q(
     ],
   })
 
-export type ContentAuthorData = InferType<typeof ContentAuthors>[number]
+export type ContentAuthorData = InferResultType<typeof ContentAuthors>[number]
 
 const Header = q('header')
-  .grab$({
+  .project({
     title: q.contentBlocks().optional(),
     lead: q.string().optional().default(''),
     image: sanityImageWithAlt(),
     meta: q('meta')
-      .grab$({
+      .project({
         title: q.string().optional(),
         description: q.string().optional(),
       })
@@ -188,27 +185,29 @@ const Header = q('header')
   })
   .nullable()
 
-export type ServicesQueryData = NonNullable<InferType<typeof servicesQuery>>
+export type ServicesQueryData = NonNullable<
+  InferResultType<typeof servicesQuery>
+>
 
 const SubPageOf = (depth = 0): any =>
   depth > 5
     ? q('subPageOf')
         .deref()
-        .grab$({
+        .project({
           slug: Slug,
           breadcrumb: q.string().optional(),
         })
         .nullable()
     : q('subPageOf')
         .deref()
-        .grab$({
+        .project({
           slug: Slug,
           breadcrumb: q.string().optional(),
           subPageOf: SubPageOf(depth + 1),
         })
         .nullable()
 
-export const servicesQuery = q('*').filterByType('service-page').grab$({
+export const servicesQuery = q('*').filterByType('service-page').project({
   _id: q.string(),
   _updatedAt: q.string(),
   slug: Slug,
@@ -216,10 +215,10 @@ export const servicesQuery = q('*').filterByType('service-page').grab$({
   subPageOf: SubPageOf(),
 })
 
-export type ModuleData = NonNullable<InferType<typeof Modules>>[number]
+export type ModuleData = NonNullable<InferResultType<typeof Modules>>[number]
 const Modules = q('modules')
   .filter()
-  .grab$({
+  .project({
     _key: q.string(),
     title: q.string().optional().default('Ohne Titel'),
     introduction: q.contentBlocks().optional(),
@@ -242,10 +241,12 @@ const Modules = q('modules')
   })
   .nullable()
 
-export type PostsQueryData = NonNullable<InferType<typeof queryPostsFromCms>>
+export type PostsQueryData = NonNullable<
+  InferResultType<typeof queryPostsFromCms>
+>
 export const queryPostsFromCms = q('*')
   .filterByType('blog')
-  .grab$({
+  .project({
     _createdAt: q.string(),
     _updatedAt: q.string(),
     _id: q.string(),
@@ -262,10 +263,13 @@ export const queryPostsFromCms = q('*')
         }),
       })
       .optional(),
-    author: q('author')
-      .deref()
-      .grabOne$('personName', q.string().optional())
-      .nullable(),
+    author: q.raw(
+      'author->personName',
+      q
+        .string()
+        .nullish()
+        .transform((personName) => personName ?? undefined)
+    ),
     authorProfileSlug: [
       'select(author->active == true && author->authorProfile.enabled == true => author->slug.current)',
       q.string().nullable(),
@@ -277,13 +281,13 @@ export const queryPostsFromCms = q('*')
   })
 
 export type PostBySlugQueryData = NonNullable<
-  InferType<typeof queryPostFromCmsBySlug>
+  InferResultType<typeof queryPostFromCmsBySlug>
 >
 export const queryPostFromCmsBySlug = q('*')
   .filterByType('blog')
   .filter('slug.current == $slug')
   .slice(0)
-  .grab$({
+  .project({
     _createdAt: q.string(),
     _updatedAt: q.string(),
     _id: q.string(),
@@ -301,10 +305,13 @@ export const queryPostFromCmsBySlug = q('*')
         }),
       })
       .optional(),
-    author: q('author')
-      .deref()
-      .grabOne$('personName', q.string().optional())
-      .nullable(),
+    author: q.raw(
+      'author->personName',
+      q
+        .string()
+        .nullish()
+        .transform((personName) => personName ?? undefined)
+    ),
     authorProfileSlug: [
       'select(author->active == true && author->authorProfile.enabled == true => author->slug.current)',
       q.string().nullable(),
@@ -317,14 +324,14 @@ export const queryPostFromCmsBySlug = q('*')
 
 export const projectsQuery = q('*')
   .filterByType('project')
-  .grab$({
+  .project({
     _id: q.string(),
     _updatedAt: q.string(),
     projectName: q.string().optional(),
     image: sanityImageWithAlt(),
     customerRef: q('customerRef')
       .deref()
-      .grab$({
+      .project({
         customerName: q.string().optional(),
         logo: sanityImageWithAlt('logo'),
       })
@@ -333,7 +340,7 @@ export const projectsQuery = q('*')
     order: q.number().optional(),
     description: q.string().optional(),
     meta: q('meta')
-      .grab$({
+      .project({
         title: q.string().optional(),
         description: q.string().optional(),
       })
@@ -346,7 +353,7 @@ export const projectBySlugQuery = q('*')
   .filterByType('project')
   .filter('slug.current == $slug')
   .slice(0)
-  .grab$({
+  .project({
     _id: q.string(),
     _createdAt: q.string(),
     _updatedAt: q.string(),
@@ -356,7 +363,7 @@ export const projectBySlugQuery = q('*')
     imageHeader: sanityImageWithAlt('imageHeader'),
     description: q.string().optional(),
     meta: q('meta')
-      .grab$({
+      .project({
         title: q.string().optional(),
         description: q.string().optional(),
       })
@@ -368,18 +375,21 @@ export const projectBySlugQuery = q('*')
     customer: q.string().optional(),
     customerRef: q('customerRef')
       .deref()
-      .grab$({
+      .project({
         customerName: q.string().optional(),
         logo: sanityImageWithAlt('logo'),
         logoHeight: q.number().optional(),
       })
       .nullable(),
-    contactPerson: q('contactPerson').deref().grab$(PersonSelection).nullable(),
+    contactPerson: q('contactPerson')
+      .deref()
+      .project(PersonSelection)
+      .nullable(),
     content: q.contentBlocks().optional(),
     callToAction: q.contentBlocks().optional(),
   })
 
-export const queryTags = q('*').filterByType('tag').grab$({
+export const queryTags = q('*').filterByType('tag').project({
   name: q.string(),
   _id: q.string(),
 })
@@ -388,7 +398,7 @@ export const mediaPageQuery = q('*')
   .filterByType('media-page')
   .filter()
   .slice(0)
-  .grab$({
+  .project({
     _id: q.string(),
     slug: Slug,
     header: Header,
@@ -399,7 +409,7 @@ export const aboutPageQuery = q('*')
   .filterByType('about-page')
   .filter()
   .slice(0)
-  .grab$({
+  .project({
     _id: q.string(),
     slug: Slug,
     header: Header,
@@ -407,13 +417,13 @@ export const aboutPageQuery = q('*')
   })
 
 export type ServiceBySlugQueryData = NonNullable<
-  InferType<typeof serviceBySlugQuery>
+  InferResultType<typeof serviceBySlugQuery>
 >
 export const serviceBySlugQuery = q('*')
   .filterByType('service-page')
   .filter('slug.current == $slug')
   .slice(0)
-  .grab$({
+  .project({
     _id: q.string(),
     _createdAt: q.string(),
     _updatedAt: q.string(),
@@ -424,7 +434,7 @@ export const serviceBySlugQuery = q('*')
     modules: Modules,
     authors: ContentAuthors,
     callToAction: q('callToAction')
-      .grab$({
+      .project({
         name: q.string().optional(),
         href: q.string().optional(),
       })
@@ -433,7 +443,7 @@ export const serviceBySlugQuery = q('*')
     productType: q.string().optional(),
     products: q('products')
       .filter()
-      .grab$({
+      .project({
         name: q.string(),
         description: q.string().optional(),
         price: q.number(),
@@ -443,8 +453,10 @@ export const serviceBySlugQuery = q('*')
       .nullable(),
   })
 
-export type GlossaryQueryData = NonNullable<InferType<typeof glossaryQuery>>
-export const glossaryQuery = q('*').filterByType('glossary').grab$({
+export type GlossaryQueryData = NonNullable<
+  InferResultType<typeof glossaryQuery>
+>
+export const glossaryQuery = q('*').filterByType('glossary').project({
   _id: q.string(),
   _updatedAt: q.string(),
   header: Header,
@@ -458,7 +470,7 @@ export const glossaryBySlugQuery = q('*')
   .filterByType('glossary')
   .filter('slug.current == $slug')
   .slice(0)
-  .grab$({
+  .project({
     _id: q.string(),
     header: Header,
     slug: Slug,
@@ -467,11 +479,11 @@ export const glossaryBySlugQuery = q('*')
     tags: Tags,
   })
 
-export type FAQQueryData = NonNullable<InferType<typeof faqsQuery>>
+export type FAQQueryData = NonNullable<InferResultType<typeof faqsQuery>>
 export const faqsQuery = q('*')
   .filterByType('faq')
   .filter('showAtWissen')
-  .grab$({
+  .project({
     _id: q.string(),
     question: q.string().optional(),
     answerStyled: q.contentBlocks().optional(),
@@ -480,7 +492,7 @@ export const faqsQuery = q('*')
   })
   .order('question asc')
 
-export const personsQuery = q('*').filterByType('person').grab$({
+export const personsQuery = q('*').filterByType('person').project({
   personName: q.string().optional(),
   slug: Slug,
   image: sanityImageWithAlt(),
@@ -490,7 +502,7 @@ export const personBySlugQuery = q('*')
   .filterByType('person')
   .filter('slug.current == $slug')
   .slice(0)
-  .grab$({
+  .project({
     personName: q.string().optional(),
     slug: Slug,
     role: q.string().optional(),
@@ -536,9 +548,11 @@ export const personBySlugQuery = q('*')
       .optional(),
   })
 
-export type HomepageDataQueries = NonNullable<InferType<typeof homepageQuery>>
+export type HomepageDataQueries = NonNullable<
+  InferResultType<typeof homepageQuery>
+>
 
-export const homepageQuery = q('*').filterByType('homepage').slice(0).grab$({
+export const homepageQuery = q('*').filterByType('homepage').slice(0).project({
   claim: q.contentBlocks().optional(),
   modules: Modules,
 })

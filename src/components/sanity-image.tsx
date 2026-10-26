@@ -72,7 +72,7 @@ function getSizes(sizes: string | undefined, size: string | undefined) {
 
 function buildPlaceholder(
   image: SanityImageSource & {
-    alt: string
+    alt?: string
   },
   width: number,
   height: number

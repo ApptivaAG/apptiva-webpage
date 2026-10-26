@@ -1,4 +1,4 @@
-import { InferType } from 'groqd'
+import type { InferResultType } from 'groqd'
 import { serviceBySlugQuery, servicesQuery } from '@/sanity/lib/queries'
 
-export type ServiceQueryData = InferType<typeof servicesQuery>[number]
+export type ServiceQueryData = InferResultType<typeof servicesQuery>[number]
