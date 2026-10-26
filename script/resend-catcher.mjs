@@ -1,195 +1,32 @@
 #!/usr/bin/env node
-import { randomUUID } from 'node:crypto'
-import { existsSync, mkdirSync, writeFileSync } from 'node:fs'
-import { createServer } from 'node:http'
-import { dirname, resolve } from 'node:path'
+import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { createResendCatcher } from './lib/resend-catcher.mjs'
 
-const __dirname = dirname(fileURLToPath(import.meta.url))
-const CAPTURED_DIR = resolve(__dirname, '..', 'captured')
-const PORT = 3999
+const port = Number(process.env.RESEND_CATCHER_PORT || 3999)
+const captureDir = process.env.RESEND_CAPTURE_DIR
+  ? resolve(process.env.RESEND_CAPTURE_DIR)
+  : fileURLToPath(new URL('../captured', import.meta.url))
 
-if (!existsSync(CAPTURED_DIR)) {
-  mkdirSync(CAPTURED_DIR, { recursive: true })
-}
-
-const RESEND_LABEL = '\x1b[36m[resend-catcher]\x1b[0m'
-const OK_LABEL = '\x1b[32mOK\x1b[0m'
-
-function bold(s) {
-  return `\x1b[1m${s}\x1b[0m`
-}
-
-function dim(s) {
-  return `\x1b[2m${s}\x1b[0m`
-}
-
-function yellow(s) {
-  return `\x1b[33m${s}\x1b[0m`
-}
-
-function log(...args) {
-  console.log(RESEND_LABEL, ...args)
-}
-
-function redactAuth(headers) {
-  const h = { ...headers }
-  if (h.authorization) {
-    h.authorization = h.authorization.replace(/(Bearer\s+)(.+)/, (_, pre) => pre + 're_***')
-  }
-  return h
-}
-
-function formatJson(obj) {
-  return JSON.stringify(obj, null, 2)
-}
-
-function inferKind(emails) {
-  for (const email of emails) {
-    if (email.to === 'bubble-chat@apptiva.ch') return 'klar'
-    if (email.to === 'klar@apptiva.ch') return 'klar'
-    if (email.to === 'info@apptiva.ch') return 'apptiva'
-  }
-  const subject = emails[0]?.subject || 'unknown'
-  return subject.replace(/[^a-zA-Z0-9_-]/g, '_').substring(0, 40)
-}
-
-const VOID_TAGS = new Set(['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'source', 'track', 'wbr'])
-const INVISIBLE_RUN = /[\u200B-\u200F\u2060\uFEFF\u00AD\u034F\s]{20,}/g
-
-function formatHtml(html) {
-  const tokens = html.match(/<!--[\s\S]*?-->|<![^>]*>|<[^>]+>|[^<]+/g) || []
-  const lines = []
-  let depth = 0
-  for (const token of tokens) {
-    if (token.startsWith('<!--') || token.startsWith('<!')) {
-      lines.push('  '.repeat(depth) + token)
-    } else if (token.startsWith('</')) {
-      depth = Math.max(0, depth - 1)
-      lines.push('  '.repeat(depth) + token)
-    } else if (token.startsWith('<')) {
-      const name = /^<([a-zA-Z0-9-]+)/.exec(token)?.[1]?.toLowerCase()
-      lines.push('  '.repeat(depth) + token)
-      if (name && !VOID_TAGS.has(name) && !token.endsWith('/>')) depth++
-    } else {
-      const text = token.replace(INVISIBLE_RUN, ' [invisible padding] ').replace(/\s+/g, ' ').trim()
-      if (text) lines.push('  '.repeat(depth) + text)
-    }
-  }
-  return lines.join('\n') + '\n'
-}
-
-function captureRequest(method, url, headers, body, kind) {
-  const snapshot = {
-    receivedAt: new Date().toISOString(),
-    method,
-    path: url,
-    headers: redactAuth(headers),
-    body,
-  }
-
-  const dir = resolve(CAPTURED_DIR, kind)
-  mkdirSync(dir, { recursive: true })
-
-  writeFileSync(resolve(dir, 'request.json'), formatJson(snapshot) + '\n')
-
-  if (Array.isArray(body)) {
-    body.forEach((item, i) => {
-      const html = item.html
-      if (html) {
-        writeFileSync(resolve(dir, `email-${i + 1}.html`), formatHtml(html))
-      }
-    })
-  }
-
-  return dir
-}
-
-function mockBatchResponse(count) {
-  return {
-    data: Array.from({ length: count }, () => ({ id: randomUUID() })),
-  }
-}
-
-function mockSingleResponse() {
-  return { data: { id: randomUUID() } }
-}
-
-const server = createServer((req, res) => {
-  const { method, url, headers } = req
-  const isEmailEndpoint = url === '/emails' || url === '/emails/batch'
-
-  if (method !== 'POST' || !isEmailEndpoint) {
-    log(yellow(`Ignored ${method} ${url}`))
-    res.writeHead(405, { 'Content-Type': 'application/json' })
-    res.end(JSON.stringify({ error: 'Only POST /emails and POST /emails/batch are supported' }))
-    return
-  }
-
-  let rawBody = ''
-  req.on('data', (chunk) => { rawBody += chunk })
-  req.on('end', () => {
-    let body
-    try {
-      body = JSON.parse(rawBody)
-    } catch {
-      log(yellow('Invalid JSON body received'))
-      res.writeHead(400, { 'Content-Type': 'application/json' })
-      res.end(JSON.stringify({ error: 'Invalid JSON' }))
-      return
-    }
-
-    const emails = Array.isArray(body) ? body : [body]
-    const kind = inferKind(emails)
-
-    log('')
-    log(bold('=== Captured Resend Request ==='))
-    log(`${bold('Kind:')}    ${kind}`)
-    log(`${bold('Method:')}  ${method}`)
-    log(`${bold('Path:')}    ${url}`)
-    log(`${bold('Headers:')}`)
-    log(headers.authorization ? `  authorization: ${headers.authorization}` : '  (no auth)')
-    if (headers['user-agent']) log(`  user-agent: ${headers['user-agent']}`)
-    if (headers['content-type']) log(`  content-type: ${headers['content-type']}`)
-    log(`${bold('Body:')}    ${isArray(body) ? `batch of ${body.length} email(s)` : 'single email'}`)
-
-    emails.forEach((email, i) => {
-      log('')
-      log(dim(`--- Email ${i + 1} ---`))
-      log(`  ${bold('from:')}    ${email.from}`)
-      log(`  ${bold('to:')}      ${email.to}`)
-      log(`  ${bold('subject:')} ${email.subject}`)
-      log(`  ${bold('html:')}    ${email.html ? email.html.substring(0, 120) + '...' : '(react template, pre-render)'}`)
-      if (email.react) {
-        log(`  ${bold('react:')}   <React component>`)
-      }
-    })
-
-    log('')
-
-    captureRequest(method, url, headers, emails, kind)
-    log(`${OK_LABEL} → ${bold(`captured/${kind}/`)}`)
-    log(`${OK_LABEL}   request.json`)
-    emails.forEach((_, i) => {
-      log(`${OK_LABEL}   email-${i + 1}.html`)
-    })
-
-    const responseBody = isArray(body)
-      ? mockBatchResponse(body.length)
-      : mockSingleResponse()
-
-    res.writeHead(200, { 'Content-Type': 'application/json' })
-    res.end(JSON.stringify(responseBody) + '\n')
-    log(`${OK_LABEL} Mock Resend response sent (200)\n`)
-  })
+const { server } = createResendCatcher({
+  captureDir,
+  log: (...args) => console.log('\x1b[36m[resend-catcher]\x1b[0m', ...args),
 })
 
-server.listen(PORT, () => {
-  log(bold(`Catcher listening on http://localhost:${PORT}`))
-  log(dim('Set RESEND_BASE_URL=http://localhost:3999 to intercept Resend calls'))
-  log(dim('Press Ctrl+C to stop'))
+server.on('error', (error) => {
+  console.error('[resend-catcher]', error.message)
+  process.exitCode = 1
+})
+server.listen(port, '127.0.0.1', () => {
+  console.log(
+    `[resend-catcher] Listening on http://127.0.0.1:${server.address().port}`
+  )
+  console.log(
+    '[resend-catcher] Set RESEND_BASE_URL to this address to capture email requests.'
+  )
+  console.log(`[resend-catcher] Captures: ${captureDir}`)
 })
 
-function isArray(v) {
-  return Array.isArray(v)
+for (const signal of ['SIGINT', 'SIGTERM']) {
+  process.once(signal, () => server.close())
 }

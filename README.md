@@ -41,6 +41,68 @@ On every push to the `master` branch, a Docker image is built via [GitHub Action
 
 Non-master branches are automatically deployed as preview environments on [Vercel](https://vercel.com), the platform from the creators of Next.js. Each pull request gets a unique preview URL.
 
+## Automated form E2E tests
+
+The Playwright suite covers the contact, forum, chatbot demo, free chatbot trial,
+footer newsletter, and chat launcher forms in desktop and mobile Chromium.
+
+```bash
+pnpm exec playwright install chromium # Once per machine
+pnpm test:e2e                         # Run all browser tests
+pnpm test:e2e --project=chromium       # Desktop only
+pnpm test:e2e:ui                      # Interactive runner
+pnpm test:e2e:report                  # Open the last HTML report
+pnpm test:e2e:typecheck               # Type-check the test suite
+```
+
+On NixOS, use the system Chromium instead of Playwright's downloaded binary:
+
+```bash
+PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH="$(command -v chromium)" pnpm test:e2e
+```
+
+Tests start their own Next.js development server on port 3100 and mock services
+on port 3101. Leave both ports free. The test server uses `.next-e2e` as its output
+directory so it can run alongside your regular development server.
+No `.env` files or live API keys are needed.
+
+This branch pins Tailwind CSS to 3.4.19 to match the existing PostCSS plugin,
+`@tailwind` directives, and TypeScript theme configuration. Browser tests do not
+depend on the separate Tailwind 4 migration.
+
+Zod overrides stay within their major versions. GROQD 0.15 uses Zod 3, while
+the application and form validation use Zod 4. Forcing GROQD onto Zod 4 breaks
+its inferred query types and the production type-check.
+
+The browser exercises the real pages and server actions. The Resend SDK sends
+HTTP requests directly to the local catcher through `RESEND_BASE_URL`. Both E2E
+tests and the manual CLI use `script/lib/resend-catcher.mjs`. MSW intercepts
+Mailchimp, the spam classifier, and Plausible. Sanity returns a fixed chatbot
+page containing the trial signup module. Other external server
+requests fail closed, and the browser blocks third-party scripts and requests.
+The suite never sends real email, subscribes real members, or records production
+analytics. Keep these mocks enabled when adding tests.
+
+Coverage includes required fields, invalid email addresses, optional fields,
+success messages, both rendered email copies and recipient routing, correction
+and resubmission, honeypots, AI spam handling, pending states, provider errors,
+and retries. Chat launcher tests use a stub widget to check message forwarding,
+empty messages, and an unavailable widget without contacting the live chat service.
+`e2e/support/mock-services.mjs` controls service responses and captures
+outgoing payloads. Each test attaches these payloads to its report. Failures also
+save a screenshot and browser trace.
+
+The E2E mock server hosts the shared Resend catcher on port 3101 alongside the
+other mocks. `GET /calls` includes its captured HTTP requests, `POST /reset`
+clears captures and response settings, and `POST /options` accepts `resendError`
+and `delayMs` for failure and pending-state tests. E2E runs keep captures in
+memory and never write to the tracked `captured/` directory.
+
+Run the catcher's HTTP, SDK, and CLI tests separately with `pnpm test:resend-catcher`.
+
+[The E2E workflow](.github/workflows/e2e.yml) runs on pull requests and pushes to
+`master` without repository secrets. Unit tests remain separate under `pnpm test`.
+
 ## Email Testing (React-Email v6 + Resend)
 
 ### Run Tests
@@ -69,16 +131,16 @@ To inspect the exact request payload sent to Resend (without actually sending), 
 pnpm resend:catch
 ```
 
-This starts a server on `http://localhost:3999` that accepts `POST /emails` and `POST /emails/batch`, logs the full request (from, to, subject, rendered html, auth header), and writes the captured data to `captured/{kind}/`:
+This starts a loopback-only server on `http://127.0.0.1:3999` that accepts `POST /emails` and `POST /emails/batch`, logs email details with authorization headers redacted, and writes the captured data to `captured/{kind}/`:
 
 - **`captured/{kind}/request.json`** — full request snapshot (auth token redacted)
 - **`captured/{kind}/email-{N}.html`** — rendered HTML of each email in the batch
 
-The `{kind}` is inferred from the recipient email address (`klar@apptiva.ch` → `klar`, `info@apptiva.ch` → `apptiva`).
+The `{kind}` is inferred from the recipient email address (`klar@apptiva.ch` → `klar`, `info@apptiva.ch` → `apptiva`). Both string and array recipients are supported.
 
 These files are tracked in git — when the email templates change, `git diff` on `captured/klar/email-1.html` shows exactly what changed.
 
-The catcher returns a mock success response so the server action completes normally. No real emails are sent.
+The catcher returns Resend-compatible single-email and batch success responses so the server action completes normally. No real emails are sent. Set `RESEND_CATCHER_PORT` or `RESEND_CAPTURE_DIR` to override the CLI's port or capture directory. File output and logging are optional in the shared implementation; only the manual CLI enables them by default.
 
 To enable, `RESEND_BASE_URL=http://localhost:3999` is already set in `.env.local` (gitignored). Comment it out to send real emails again.
 
