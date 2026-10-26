@@ -1,5 +1,5 @@
 import Module from '@/components/module'
-import { HomepageDataQueries } from '@/sanity/lib/queries'
+import type { HomepageDataQueries, ModuleData } from '@/sanity/lib/queries'
 
 export default function ModuleWrapper(props: {
   data: HomepageDataQueries
@@ -10,7 +10,7 @@ export default function ModuleWrapper(props: {
 }) {
   return (
     <>
-      {props.data.modules?.map((module) => (
+      {props.data.modules?.map((module: ModuleData) => (
         <Module
           key={module._key}
           module={module}

@@ -35,7 +35,7 @@ export function PageHeader(props: {
 
   return (
     <>
-      <header className="full mt-[-8rem] min-h-fit animate-gradient items-center bg-gradient-to-br from-primary-light to-primary-dark bg-300% pb-20 pt-32 text-base-white md:pb-24 md:pt-44">
+      <header className="full mt-[-8rem] min-h-fit animate-gradient items-center bg-linear-to-br from-primary-light to-primary-dark bg-300% pb-20 pt-32 text-base-white md:pb-24 md:pt-44">
         <div className="content">
           {props.links && (
             <BreadCrumb className="pb-2 md:pb-6" links={props.links} />

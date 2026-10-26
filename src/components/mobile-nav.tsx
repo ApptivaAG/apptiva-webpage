@@ -43,7 +43,7 @@ const MobileNav = () => {
               <div className="flex flex-col">
                 {navbarData.map((item, index) => (
                   <div key={index}>
-                    <div className="flex flex-col pb-5 pt-4 focus:outline-none">
+                    <div className="flex flex-col pb-5 pt-4 focus:outline-hidden">
                       {item.type === 'menu' ? (
                         <Accordion
                           className="w-full"
@@ -52,11 +52,11 @@ const MobileNav = () => {
                         >
                           <AccordionItem
                             header={
-                              <div className="group flex w-full justify-between p-0 text-xl !no-underline focus:outline-none">
+                              <div className="group flex w-full justify-between p-0 text-xl !no-underline focus:outline-hidden">
                                 {item.title}
                               </div>
                             }
-                            className="p-0 outline-none transition-colors duration-700 hover:no-underline aria-expanded:text-secondary"
+                            className="p-0 outline-hidden transition-colors duration-700 hover:no-underline aria-expanded:text-secondary"
                           >
                             <AccordionContent className="mt-4 flex flex-col divide-y divide-base-white/40 rounded bg-base-white/5 px-4">
                               {item.items

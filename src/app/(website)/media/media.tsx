@@ -3,6 +3,7 @@
 import { Metadata } from 'next/dist/lib/metadata/types/metadata-interface'
 import React from 'react'
 import Module from '@/components/module'
+import type { ModuleData } from '@/sanity/lib/queries'
 import { PageHeader } from '../../../components/page-header'
 import { MediaPageQueryData } from './types'
 
@@ -32,7 +33,7 @@ export default function Media(props: {
         links={[{ name: 'Media', href: '/media' }]}
       ></PageHeader>
 
-      {props.data.modules?.map((module) => (
+      {props.data.modules?.map((module: ModuleData) => (
         <Module
           key={module._key}
           module={module}

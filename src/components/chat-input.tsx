@@ -58,10 +58,10 @@ export default function ChatInput(props: {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             placeholder="Frage unsere KI ..."
-            className={`w-full overflow-clip rounded border-2 bg-base-white/20 ${size === 'sm' ? 'h-[54px] py-0 text-lg' : 'py-5 text-xl'} ${size === 'sm' ? 'pl-12' : 'pl-16'} pr-14 ${variant === 'white' ? 'text-primary' : 'text-base-white'} backdrop-blur-lg ${variant === 'white' ? 'placeholder:text-primary/80' : 'placeholder:text-base-white/80'} focus:outline-none focus:ring-2 focus:ring-primary-light ${variant === 'blue' ? 'border-primary/80' : 'border-base-white'}`}
+            className={`w-full overflow-clip rounded border-2 bg-base-white/20 ${size === 'sm' ? 'h-[54px] py-0 text-lg' : 'py-5 text-xl'} ${size === 'sm' ? 'pl-12' : 'pl-16'} pr-14 ${variant === 'white' ? 'text-primary' : 'text-base-white'} backdrop-blur-lg ${variant === 'white' ? 'placeholder:text-primary/80' : 'placeholder:text-base-white/80'} focus:outline-hidden focus:ring-2 focus:ring-primary-light ${variant === 'blue' ? 'border-primary/80' : 'border-base-white'}`}
           />
           <div
-            className={`pointer-events-none absolute inset-0 overflow-hidden rounded after:absolute after:inset-0 after:h-full after:w-full after:animate-shine after:bg-gradient-to-r after:from-transparent ${variant === 'white' ? 'after:via-secondary/60' : 'after:via-base-white/40'} after:to-transparent after:content-['']`}
+            className={`pointer-events-none absolute inset-0 overflow-hidden rounded after:absolute after:inset-0 after:h-full after:w-full after:animate-shine after:bg-linear-to-r after:from-transparent ${variant === 'white' ? 'after:via-secondary/60' : 'after:via-base-white/40'} after:to-transparent after:content-['']`}
           />
         </div>
         <button

@@ -1,4 +1,4 @@
-import { InferType } from 'groqd'
+import type { InferResultType } from 'groqd'
 import { aboutPageQuery } from '@/sanity/lib/queries'
 
-export type AboutPageQueryData = InferType<typeof aboutPageQuery>
+export type AboutPageQueryData = InferResultType<typeof aboutPageQuery>

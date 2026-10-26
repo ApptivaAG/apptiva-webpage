@@ -1,12 +1,12 @@
 'use client'
 
 import { QueryResponseInitial, useQuery } from '@sanity/react-loader'
-import { InferType } from 'groqd'
+import type { InferResultType } from 'groqd'
 import { orderGlossaryByTitle } from '@/domain/glossary'
 import { glossaryQuery } from '@/sanity/lib/queries'
 import { GlossaryList } from './list'
 
-type Data = InferType<typeof glossaryQuery>
+type Data = InferResultType<typeof glossaryQuery>
 
 export default function GlossaryPreview({
   initial,

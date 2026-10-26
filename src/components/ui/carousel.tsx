@@ -303,7 +303,7 @@ const SlidesFadeOutCarouselItem = React.forwardRef<
       aria-roledescription="slide"
       key={index}
       className={cn(
-        'relative flex h-[--min-size-mobile] min-w-0 shrink-0 grow-0 basis-full md:h-[--min-size-tablet] md:pl-[1rem] lg:h-[--min-size]',
+        'relative flex h-(--min-size-mobile) min-w-0 shrink-0 grow-0 basis-full md:h-(--min-size-tablet) md:pl-[1rem] lg:h-(--min-size)',
         className
       )}
       style={
@@ -327,7 +327,7 @@ const SlidesFadeOutCarouselItem = React.forwardRef<
             }),
           } as React.CSSProperties
         }
-        className="absolute top-1/2 h-[--project-overview-height-mobile] -translate-y-1/2 rounded-lg border border-base-grey p-5 md:h-[--project-overview-height-tablet] lg:h-[--project-overview-height]"
+        className="absolute top-1/2 h-(--project-overview-height-mobile) -translate-y-1/2 rounded-lg border border-base-grey p-5 md:h-(--project-overview-height-tablet) lg:h-(--project-overview-height)"
         {...props}
       ></div>
     </div>
@@ -367,7 +367,7 @@ function ProgressBar() {
       />
       <div className="relative col-[content] row-[1/1] h-1">
         <div
-          className="absolute left-[--leftScrollOffset] h-full w-[--progressBarSize] rounded bg-secondary"
+          className="absolute left-(--leftScrollOffset) h-full w-(--progressBarSize) rounded bg-secondary"
           style={
             {
               '--progressBarSize': `${progressBarSize}%`,

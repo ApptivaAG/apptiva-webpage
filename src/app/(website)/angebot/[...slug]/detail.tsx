@@ -6,7 +6,7 @@ import Module from '@/components/module'
 import { PageHeader } from '@/components/page-header'
 import ProductSchema from '@/components/product-schema'
 import Button from '@/components/ui/button'
-import { ServiceBySlugQueryData } from '@/sanity/lib/queries'
+import type { ModuleData, ServiceBySlugQueryData } from '@/sanity/lib/queries'
 import portableTextToString from '@/utils/portable-text-to-string'
 
 export default function ServiceDetail(props: {
@@ -49,7 +49,7 @@ export default function ServiceDetail(props: {
         }
       />
 
-      {props.service.modules?.map((module) => (
+      {props.service.modules?.map((module: ModuleData) => (
         <CatchErrors key={module._key} isPreview={props.isPreview}>
           <Module
             partners={props.partners}

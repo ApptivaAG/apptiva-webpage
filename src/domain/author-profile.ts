@@ -1,6 +1,7 @@
-import { InferType, q } from 'groqd'
+import type { InferResultType } from 'groqd'
 import { draftMode } from 'next/headers'
 import { cache } from 'react'
+import { q } from '@/sanity/lib/groqd'
 import { Slug, sanityImageWithAlt } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
 import { cleanStega } from '@/utils/clean-stega'
@@ -20,14 +21,14 @@ export const authorProfileQuery = q('*')
     'slug.current == $slug && active == true && authorProfile.enabled == true'
   )
   .slice(0)
-  .grab$({
+  .project({
     _id: q.string(),
     personName: q.string(),
     slug: Slug,
     role: q.string().optional(),
     image: sanityImageWithAlt(),
     contact: q('contact')
-      .grab$({
+      .project({
         mail: q.string().optional(),
         phone: q.string().optional(),
         socialNetworks: q
@@ -35,11 +36,11 @@ export const authorProfileQuery = q('*')
           .nullish(),
       })
       .nullable(),
-    authorProfile: q('authorProfile').grab$({
+    authorProfile: q('authorProfile').project({
       headline: q.string().optional(),
       introduction: q.string().optional(),
       meta: q('meta')
-        .grab$({
+        .project({
           title: q.string().optional(),
           description: q.string().optional(),
         })
@@ -67,7 +68,7 @@ export const authorProfileQuery = q('*')
         'select(count(authors) > 0 => ^._id in authors[]._ref, author._ref == ^._id) && defined(slug.current)'
       )
       .order('publishedAt desc')
-      .grab$({
+      .project({
         _id: q.string(),
         slug: Slug,
         name: q.string().optional(),
@@ -79,25 +80,27 @@ export const authorProfileQuery = q('*')
   })
   .nullable()
 
+export type AuthorProfileData = NonNullable<
+  InferResultType<typeof authorProfileQuery>
+>
+export type ProfileSection = NonNullable<
+  NonNullable<AuthorProfileData['authorProfile']['sections']>[number]
+>
+
 export const authorProfilesQuery = q('*')
   .filterByType('person')
   .filter(
     'active == true && authorProfile.enabled == true && defined(slug.current)'
   )
-  .grab$({ slug: Slug, _updatedAt: q.string() })
+  .project({ slug: Slug, _updatedAt: q.string() })
 
-export type AuthorProfileData = NonNullable<
-  InferType<typeof authorProfileQuery>
->
-export type ProfileSection = NonNullable<
-  AuthorProfileData['authorProfile']['sections']
->[number]
-
-export const getAuthorProfile = cache(async (slug: string) => {
-  const { isEnabled } = await draftMode()
-  const { published } = await load(authorProfileQuery, isEnabled, { slug }, [
-    'person',
-    'blog',
-  ])
-  return cleanStega(published)
-})
+export const getAuthorProfile = cache(
+  async (slug: string): Promise<AuthorProfileData | null> => {
+    const { isEnabled } = await draftMode()
+    const { published } = await load(authorProfileQuery, isEnabled, { slug }, [
+      'person',
+      'blog',
+    ])
+    return cleanStega(published)
+  }
+)
