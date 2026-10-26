@@ -70,6 +70,10 @@ This branch pins Tailwind CSS to 3.4.19 to match the existing PostCSS plugin,
 `@tailwind` directives, and TypeScript theme configuration. Browser tests do not
 depend on the separate Tailwind 4 migration.
 
+Zod overrides stay within their major versions. GROQD 0.15 uses Zod 3, while
+the application and form validation use Zod 4. Forcing GROQD onto Zod 4 breaks
+its inferred query types and the production type-check.
+
 The browser exercises the real pages and server actions. The Resend SDK sends
 HTTP requests directly to the local catcher through `RESEND_BASE_URL`. Both E2E
 tests and the manual CLI use `script/lib/resend-catcher.mjs`. MSW intercepts

@@ -175,7 +175,8 @@ overrides:
   next@>=16.2.0 <16.3.6: ^16.3.6
   fast-uri@>=3.0.0 <3.1.9: ^3.1.9
   postcss-selector-parser@<7.1.6: ^7.1.6
-  zod@<4.6.6: ^4.6.6
+  groqd@0.15.13>zod: 3.25.76
+  zod@>=4.0.0 <4.6.6: ^4.6.6
 
 importers:
 
@@ -6882,6 +6883,9 @@ packages:
     peerDependencies:
       zod: ^4.6.6
 
+  zod@3.25.76:
+    resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
+
   zod@4.6.7:
     resolution: {integrity: sha512-g8W2D2kU6a8untc053fX1uVBKzM7yqAxW/3zwk83+6RyF2+SKOuV+c0wBDhUwzV1PaGapmZH+rmcUzPf+3CGwg==}
 
@@ -11646,7 +11650,7 @@ snapshots:
 
   groqd@0.15.13:
     dependencies:
-      zod: 4.6.7
+      zod: 3.25.76
 
   gunzip-maybe@1.4.2:
     dependencies:
@@ -13373,7 +13377,7 @@ snapshots:
       rxjs: 7.8.2
       sanity: 6.19.0(cbf25d2f52e6743febdcc0c51c5270cb)
       styled-components: 6.6.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
-      zod: 4.6.7
+      zod: 3.25.76
     transitivePeerDependencies:
       - '@types/react'
       - supports-color
@@ -14331,6 +14335,8 @@ snapshots:
     dependencies:
       '@rvf/set-get': 7.0.4
       zod: 4.6.7
+
+  zod@3.25.76: {}
 
   zod@4.6.7: {}
 
