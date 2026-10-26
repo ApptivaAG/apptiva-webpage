@@ -6,6 +6,7 @@ const { withPlausibleProxy } = require('next-plausible')
 
 const config: NextConfig = {
   output: 'standalone',
+  distDir: process.env.NEXT_DIST_DIR || '.next',
   cacheComponents: true,
   partialPrefetching: true,
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
