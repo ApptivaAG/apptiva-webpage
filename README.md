@@ -66,6 +66,10 @@ on port 3101. Leave both ports free. The test server uses `.next-e2e` as its out
 directory so it can run alongside your regular development server.
 No `.env` files or live API keys are needed.
 
+This branch pins Tailwind CSS to 3.4.19 to match the existing PostCSS plugin,
+`@tailwind` directives, and TypeScript theme configuration. Browser tests do not
+depend on the separate Tailwind 4 migration.
+
 The browser exercises the real pages and server actions. The Resend SDK sends
 HTTP requests directly to the local catcher through `RESEND_BASE_URL`. Both E2E
 tests and the manual CLI use `script/lib/resend-catcher.mjs`. MSW intercepts
