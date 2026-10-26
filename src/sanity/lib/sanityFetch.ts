@@ -1,67 +1,79 @@
 import 'server-only'
 
-import { BaseQuery, InferType, makeSafeQueryRunner, z } from 'groqd'
+import type { IGroqBuilder } from 'groqd'
 import { cacheLife, cacheTag } from 'next/cache'
 import { draftMode } from 'next/headers'
 import { token } from '../env'
 import { client } from './client'
 import { loadQuery } from './store'
 
-export const runQuery = makeSafeQueryRunner(
-  async (
-    query,
-    params: Record<string, number | string> = {},
-    tags?: string[]
-  ) => {
-    'use cache'
-    cacheLife('max')
-    if (tags?.length) cacheTag(...tags)
-    const isDraftMode = (await draftMode()).isEnabled
+export type GroqdQuery = IGroqBuilder<any>
 
-    if (isDraftMode && !token) {
-      throw new Error(
-        'The `SANITY_API_READ_TOKEN` environment variable is required.'
-      )
-    }
+export async function runQuery<TResult>(
+  query: IGroqBuilder<TResult>,
+  params: Record<string, number | string> = {},
+  tags?: string[]
+): Promise<TResult> {
+  const isDraftMode = (await draftMode()).isEnabled
+  const data = await fetchCachedQuery(query.query, params, tags, isDraftMode)
 
-    return client
-      .withConfig({
-        token: token,
-        perspective: isDraftMode ? 'previewDrafts' : 'published',
-        useCdn: !isDraftMode,
-        stega: {
-          enabled: isDraftMode,
-          studioUrl: '/studio',
-        },
-      })
-      .fetch(query, params, { next: { tags } })
+  return query.parse(nullFieldsToUndefined(data))
+}
+
+async function fetchCachedQuery(
+  query: string,
+  params: Record<string, number | string>,
+  tags: string[] | undefined,
+  isDraftMode: boolean
+) {
+  'use cache'
+  cacheLife('max')
+  if (tags?.length) cacheTag(...tags)
+
+  if (isDraftMode && !token) {
+    throw new Error(
+      'The `SANITY_API_READ_TOKEN` environment variable is required.'
+    )
   }
-)
 
-export type GroqdQuery = BaseQuery<z.ZodTypeAny>
+  return client
+    .withConfig({
+      token: token,
+      perspective: isDraftMode ? 'previewDrafts' : 'published',
+      useCdn: !isDraftMode,
+      stega: {
+        enabled: isDraftMode,
+        studioUrl: '/studio',
+      },
+    })
+    .fetch<unknown>(query, params, { next: { tags } })
+}
 
-export async function load<T extends GroqdQuery>(
-  query: T,
+export async function load<TResult>(
+  query: IGroqBuilder<TResult>,
   isDraftMode = false,
   params: Record<string, number | string> = {},
   cacheTags?: string[]
 ) {
-  const result = await loadCachedQuery<InferType<T>>(
+  const result = await loadCachedQuery<TResult>(
     query.query,
     isDraftMode,
     params,
     cacheTags
   )
 
-  const parsed = query.schema.safeParse(result.data) as z.SafeParseReturnType<
-    InferType<T>,
-    any
-  >
+  let error: Error | undefined
+  try {
+    query.parse(nullFieldsToUndefined(result.data))
+  } catch (cause) {
+    error =
+      cause instanceof Error ? cause : new Error('Could not parse query result')
+  }
 
   return {
     draft: result,
-    published: result.data as InferType<T>,
-    error: !parsed.success ? parsed.error : undefined,
+    published: result.data,
+    error,
   }
 }
 
@@ -80,5 +92,22 @@ async function loadCachedQuery<T>(
     isDraftMode
       ? { perspective: 'previewDrafts', useCdn: false, stega: true }
       : {}
+  )
+}
+
+function nullFieldsToUndefined(value: unknown): unknown {
+  if (Array.isArray(value)) {
+    return value.map(nullFieldsToUndefined)
+  }
+
+  if (typeof value !== 'object' || value === null) {
+    return value
+  }
+
+  return Object.fromEntries(
+    Object.entries(value).map(([key, field]) => [
+      key,
+      field === null ? undefined : nullFieldsToUndefined(field),
+    ])
   )
 }

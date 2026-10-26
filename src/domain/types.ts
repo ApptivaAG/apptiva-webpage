@@ -35,7 +35,7 @@ export type PortableText = Array<
   }
 >
 
-export type SanityImageWithAlt = (SanityImageSource & { alt: string }) | null
+export type SanityImageWithAlt = (SanityImageSource & { alt?: string }) | null
 
 export type BlogFrontmatter = {
   title: string

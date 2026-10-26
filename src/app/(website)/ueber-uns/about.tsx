@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Module from '@/components/module'
+import type { ModuleData } from '@/sanity/lib/queries'
 import { PageHeader } from '../../../components/page-header'
 import { AboutPageQueryData } from './types'
 
@@ -19,7 +20,7 @@ export default function About(props: {
         links={[{ name: 'Über uns', href: '/ueber-uns' }]}
       ></PageHeader>
 
-      {props.data.modules?.map((module) => (
+      {props.data.modules?.map((module: ModuleData) => (
         <Module
           key={module._key}
           module={module}

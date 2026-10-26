@@ -1,10 +1,16 @@
-import { PostBySlugQueryData } from '@/sanity/lib/queries'
+import type {
+  ContentAuthorData,
+  PostBySlugQueryData,
+  PostsQueryData,
+} from '@/sanity/lib/queries'
 import { cleanStega } from '@/utils/clean-stega'
 import portableTextToString from '../../utils/portable-text-to-string'
 import { mapTags } from '../tags/map-tags'
 import { CmsBlog, CmsContent } from '../types'
 
-export function mapCmsPost(post: PostBySlugQueryData | null) {
+export function mapCmsPost(
+  post: PostBySlugQueryData | PostsQueryData[number] | null
+) {
   if (!post || !post.slug) {
     return undefined
   }
@@ -27,7 +33,9 @@ export function mapCmsPost(post: PostBySlugQueryData | null) {
     },
     slug: post.slug,
     author: post.authors?.length
-      ? post.authors.map((author) => author.personName).join(', ')
+      ? post.authors
+          .map((author: ContentAuthorData) => author.personName)
+          .join(', ')
       : (post.author ?? 'Anonymous'),
     authorProfileSlug: post.authors?.length
       ? post.authors[0].hasAuthorProfile
@@ -37,7 +45,7 @@ export function mapCmsPost(post: PostBySlugQueryData | null) {
     authors: post.authors,
     publishDate: post.publishedAt ?? post._createdAt,
     modifiedDate: post._updatedAt,
-    breadcrumb: post.breadcrumb,
+    breadcrumb: 'breadcrumb' in post ? post.breadcrumb : undefined,
     tags: mapTags(post.tags),
     faqs: post.faqs,
   } satisfies CmsBlog

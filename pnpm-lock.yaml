@@ -251,8 +251,8 @@ importers:
         specifier: 8.6.0
         version: 8.6.0(react@19.2.8)
       groqd:
-        specifier: ^0.15.13
-        version: 0.15.13
+        specifier: ^1.7.1
+        version: 1.7.1
       next:
         specifier: ^16.4.2
         version: 16.4.2(@babel/core@7.29.7(supports-color@8.1.1))(@types/node@24.19.2)(babel-plugin-macros@3.1.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
@@ -4518,8 +4518,8 @@ packages:
     resolution: {integrity: sha512-lI4IYuH0S2BD9X+TNn+QLMcOueqAJr/O/gmn1CbtmWZ8WjBIbTflXudOsMb1Dh/AaPBYTxcGWjQosEHqfTeSkA==}
     engines: {node: '>=22.12'}
 
-  groqd@0.15.13:
-    resolution: {integrity: sha512-SAchnByIi1ZKBaaMtnNTM996n/hyB7IqRjy+JmJv62fIKfucSiG5D9y42D38zwC5xUa4fZfjvdR70bS7ShTuAw==}
+  groqd@1.7.1:
+    resolution: {integrity: sha512-gcm9ccjEEDwD1pn+NS3NzZb4Bc4QrV+PhmvuP63cT1ixIFWnWiFgeauByqkCHmjuZ7QtD/gNWIYFM8tQhPPqiQ==}
     engines: {node: '>= 14'}
 
   gunzip-maybe@1.4.2:
@@ -11635,8 +11635,9 @@ snapshots:
 
   groq@6.19.0: {}
 
-  groqd@0.15.13:
+  groqd@1.7.1:
     dependencies:
+      type-fest: 4.41.0
       zod: 4.6.7
 
   gunzip-maybe@1.4.2:
