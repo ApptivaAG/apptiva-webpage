@@ -63,10 +63,6 @@ test('opens chat without forwarding a whitespace-only message', async ({
 test('keeps the question when the chat widget is unavailable', async ({
   page,
 }) => {
-  test.fail(
-    true,
-    'Known bug: script#chatbot creates a named window property without the widget API. Remove this annotation when the launcher checks the API before calling it.'
-  )
   // Next.js loads this script lazily. Wait for its named DOM property before
   // removing the stub, otherwise this scenario depends on browser idle timing.
   await expect(page.locator('script#chatbot')).toBeAttached()

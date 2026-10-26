@@ -4,6 +4,11 @@ import { usePlausible } from 'next-plausible'
 import { type FormEvent, useState } from 'react'
 import { HiSparkles } from 'react-icons/hi2'
 
+type ChatWidget = {
+  openChatWindow?: () => void
+  enterGuestMessage?: (message: string) => void
+}
+
 export default function ChatInput(props: {
   mode: 'inline-input' | 'floating-input'
   origin: 'page-header' | 'contact-person' | 'floating-bottom' | 'navbar'
@@ -25,13 +30,16 @@ export default function ChatInput(props: {
       },
     })
 
-    const chatbot = (window as any).chatbot
-    if (chatbot) {
-      chatbot.openChatWindow()
-      if (!message.trim()) return
-      chatbot.enterGuestMessage(message)
-      setMessage('')
+    const chatbot = (window as Window & { chatbot?: ChatWidget }).chatbot
+    if (typeof chatbot?.openChatWindow !== 'function') return
+
+    chatbot.openChatWindow()
+    if (!message.trim() || typeof chatbot.enterGuestMessage !== 'function') {
+      return
     }
+
+    chatbot.enterGuestMessage(message)
+    setMessage('')
   }
 
   return (

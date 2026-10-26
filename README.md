@@ -103,12 +103,6 @@ Run the catcher's HTTP, SDK, and CLI tests separately with `pnpm test:resend-cat
 [The E2E workflow](.github/workflows/e2e.yml) runs on pull requests and pushes to
 `master` without repository secrets. Unit tests remain separate under `pnpm test`.
 
-The unavailable-chat-widget test currently has an expected-failure annotation.
-When the SDK is absent, `script#chatbot` creates a named `window.chatbot` property
-that is a DOM element, not the widget API. Submitting then throws when calling
-`openChatWindow`. The test still runs on both viewports. Once the launcher guards
-against a missing API, remove its `test.fail` annotation.
-
 ## Email Testing (React-Email v6 + Resend)
 
 ### Run Tests
