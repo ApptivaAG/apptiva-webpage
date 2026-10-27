@@ -1,7 +1,7 @@
 'use client'
 
 import { usePlausible } from 'next-plausible'
-import { type FormEvent, useState } from 'react'
+import { type FormEvent, useEffect, useState } from 'react'
 import { HiSparkles } from 'react-icons/hi2'
 
 type ChatWidget = {
@@ -20,6 +20,11 @@ export default function ChatInput(props: {
   const variant = props.variant ?? 'default'
   const plausible = usePlausible()
   const [message, setMessage] = useState('')
+  const [isHydrated, setIsHydrated] = useState(false)
+
+  useEffect(() => {
+    setIsHydrated(true)
+  }, [])
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -45,6 +50,7 @@ export default function ChatInput(props: {
   return (
     <div
       {...(props.mode === 'inline-input' && { 'data-chat-input': 'inline' })}
+      data-chat-input-ready={isHydrated ? 'true' : 'false'}
       className={`w-full max-w-xl lg:max-w-3xl ${props.className}`}
     >
       <form onSubmit={handleSubmit} className="relative">

@@ -25,6 +25,11 @@ test.beforeEach(async ({ page }) => {
     }
   })
   await openPage(page, '/kontakt')
+  // The server-rendered form is visible before React attaches its submit
+  // handler. Wait for hydration so Enter cannot trigger a native GET reload.
+  await expect(
+    page.locator('main [data-chat-input="inline"]')
+  ).toHaveAttribute('data-chat-input-ready', 'true')
 })
 
 test('opens chat, forwards the question, and clears the input', async ({
