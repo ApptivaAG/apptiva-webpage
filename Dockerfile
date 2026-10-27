@@ -1,5 +1,5 @@
 # Stage 1: Install dependencies
-FROM node:22-alpine AS deps
+FROM node:24.22.1-alpine AS deps
 RUN corepack enable && corepack prepare pnpm@12.15.0 --activate
 WORKDIR /app
 
@@ -10,7 +10,7 @@ COPY package.json pnpm-lock.yaml .npmrc pnpm-workspace.yaml ./
 RUN pnpm install --frozen-lockfile
 
 # Stage 2: Build the application
-FROM node:22-alpine AS builder
+FROM node:24.22.1-alpine AS builder
 RUN corepack enable && corepack prepare pnpm@12.15.0 --activate
 WORKDIR /app
 
@@ -40,7 +40,7 @@ ENV GOOGLE_REVIEWS_PLACE_ID=$GOOGLE_REVIEWS_PLACE_ID
 RUN pnpm build
 
 # Stage 3: Production runner
-FROM node:22-alpine AS runner
+FROM node:24.22.1-alpine AS runner
 WORKDIR /app
 
 ENV NODE_ENV=production
