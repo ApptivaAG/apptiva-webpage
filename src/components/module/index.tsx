@@ -1,4 +1,5 @@
 import { ModuleData } from '@/sanity/lib/queries'
+import CalBookingModule from './cal-booking'
 import Cards from './cards'
 import Contact from './contact'
 import Docs from './docs/docs'
@@ -59,6 +60,9 @@ export default function Module(props: {
 
     case 'test-chatbot':
       return <TestChatbotFree module={module} />
+
+    case 'cal-booking':
+      return <CalBookingModule module={module} />
 
     case 'image':
       // eslint-disable-next-line jsx-a11y/alt-text

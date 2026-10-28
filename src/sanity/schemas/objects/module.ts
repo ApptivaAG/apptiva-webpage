@@ -9,6 +9,13 @@ export default defineType({
       name: 'title',
       title: 'Titel',
       type: 'string',
+      validation: (Rule) =>
+        Rule.custom((value, context) =>
+          (context.parent as { type?: string } | undefined)?.type ===
+            'cal-booking' && !value
+            ? 'Für die Terminbuchung ist ein Titel erforderlich.'
+            : true
+        ),
     }),
     defineField({
       name: 'introduction',
@@ -45,6 +52,7 @@ export default defineType({
           { title: 'Team', value: 'team' },
           { title: 'Dokumente', value: 'documents' },
           { title: 'Chatbot kostenlos testen', value: 'test-chatbot' },
+          { title: 'Terminbuchung (Cal.com)', value: 'cal-booking' },
         ],
       },
     }),
@@ -89,6 +97,19 @@ export default defineType({
         ],
       },
       hidden: isNotType('cards', 'text', 'documents', 'google-reviews'),
+    }),
+    defineField({
+      name: 'calStyle',
+      title: 'Stil',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Grauer Hintergrund', value: 'light-gray-bg' },
+          { title: 'Blauer Hintergrund', value: 'dark-bg' },
+        ],
+      },
+      initialValue: 'light-gray-bg',
+      hidden: isNotType('cal-booking'),
     }),
     defineField({
       name: 'image',
@@ -140,10 +161,33 @@ export default defineType({
         'prices',
         'image',
         'test-chatbot',
+        'cal-booking',
         'google-reviews'
       ),
     }),
 
+    defineField({
+      name: 'hint',
+      title: 'Hinweis',
+      description: 'Kurzer Hinweis mit Schloss-Icon unter der Beschreibung.',
+      type: 'string',
+      hidden: isNotType('cal-booking'),
+    }),
+    defineField({
+      name: 'calLink',
+      title: 'Cal.com Link',
+      description:
+        'Pflichtfeld. Im Format «benutzer/event», z. B. «max-muster/30min» (oder die komplette cal.com-URL).',
+      type: 'string',
+      validation: (Rule) =>
+        Rule.custom((value, context) =>
+          (context.parent as { type?: string } | undefined)?.type ===
+            'cal-booking' && !value
+            ? 'Für die Terminbuchung ist ein Cal.com Link erforderlich.'
+            : true
+        ),
+      hidden: isNotType('cal-booking'),
+    }),
     defineField({
       name: 'cards',
       title: 'Cards',

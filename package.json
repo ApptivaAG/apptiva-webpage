@@ -23,6 +23,7 @@
   },
   "packageManager": "pnpm@12.15.0",
   "dependencies": {
+    "@calcom/embed-react": "^1.5.3",
     "@codemirror/language": "^6.13.1",
     "@codemirror/legacy-modes": "^6.5.5",
     "@mailchimp/mailchimp_marketing": "^3.0.80",
