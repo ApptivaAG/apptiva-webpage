@@ -69,12 +69,12 @@ export default function Partners(props: {}) {
         </div>
 
         {/* Large screens: static row (no repetition) */}
-        <div className="hidden h-[16.4rem] items-center justify-evenly gap-24 lg:flex">
+        <div className="hidden h-[16.4rem] items-center justify-evenly gap-12 lg:flex xl:gap-24">
           {partners.map((partner: any) => {
             return (
               <div
                 key={partner.id}
-                className="relative min-w-0 flex-[0_0_16.4rem] bg-base-white"
+                className="relative min-w-0 max-w-[16.4rem] flex-1 bg-base-white"
                 style={{ height: partner.height + 10 }}
               >
                 <WithLink

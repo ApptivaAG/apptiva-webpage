@@ -26,6 +26,12 @@ const partnerList = [
     height: 120,
     link: 'https://www.flm.ch/',
   },
+  {
+    fileName: 'creanet-black.svg',
+    alt: 'creanet',
+    height: 120,
+    link: 'https://www.creanet.ch/',
+  },
 ] satisfies Logo[]
 
 export default function getPartnerLogos() {
