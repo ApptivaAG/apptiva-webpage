@@ -1,11 +1,11 @@
 'use client'
 
-import Cal, { getCalApi } from '@calcom/embed-react'
-import { type ReactNode, useEffect, useId, useState } from 'react'
-import { FiCalendar, FiLock } from 'react-icons/fi'
 import Heading from '@/components/heading'
 import Button from '@/components/ui/button'
 import { cn } from '@/utils/cn'
+import Cal, { getCalApi } from '@calcom/embed-react'
+import { type ReactNode, useEffect, useId, useState } from 'react'
+import { FiCalendar, FiLock } from 'react-icons/fi'
 
 export default function CalBooking({
   calLink,
@@ -72,7 +72,7 @@ export default function CalBooking({
           role="region"
           aria-label="Terminkalender"
           className={cn(
-            'relative min-h-[600px] w-full min-w-0 overflow-hidden rounded-lg',
+            'relative min-h-[600px] w-full min-w-0 overflow-clip rounded-lg',
             // Vor dem Laden braucht der Platzhalter auf blauem Hintergrund eine helle Fläche
             dark && !enabled && 'bg-base-white text-primary'
           )}
@@ -85,7 +85,7 @@ export default function CalBooking({
               config={{
                 layout: 'month_view',
                 theme: 'light',
-                useSlotsViewOnSmallScreen: 'true',
+                useSlotsViewOnSmallScreen: 'false',
               }}
             />
           ) : (
