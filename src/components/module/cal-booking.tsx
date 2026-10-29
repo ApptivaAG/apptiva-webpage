@@ -16,7 +16,7 @@ export default function CalBookingModule(props: { module: ModuleData }) {
 
   return (
     <Section intent={intent} level="one">
-      <div className="content">
+      <div className="content cal-booking-content">
         <CalBooking
           calLink={calLink}
           namespace={namespace}

@@ -83,6 +83,17 @@
         var(--feature) [feature-end]
         var(--full) [full-end];
     }
+
+    .cal-booking-content {
+      --left-ratio: min(
+        calc(32% - var(--gap) - (var(--content-gap) / 2)),
+        22rem
+      );
+      --right-ratio: min(
+        calc(68% - var(--gap) - (var(--content-gap) / 2)),
+        50rem
+      );
+    }
   }
 
   .middle-grid {

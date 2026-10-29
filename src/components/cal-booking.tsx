@@ -81,7 +81,7 @@ export default function CalBooking({
             <Cal
               namespace={namespace}
               calLink={calLink}
-              style={{ width: '100%', minHeight: '600px', overflow: 'auto' }}
+              style={{ width: '100%', minHeight: '600px' }}
               config={{
                 layout: 'month_view',
                 theme: 'light',
