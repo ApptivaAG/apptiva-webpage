@@ -48,7 +48,7 @@ export default defineConfig({
         RESEND_API_KEY: 're_e2e-test-key',
         RESEND_BASE_URL: 'http://127.0.0.1:3101',
         MAIL_CHIMP_API_KEY: 'e2e-test-key-us13',
-        JEV_API_KEY: 'e2e-test-key',
+        TYPESAFE_API_KEY: 'e2e-test-key',
         GOOGLE_REVIEWS_API_KEY: '',
         GOOGLE_REVIEWS_PLACE_ID: '',
         NEXT_PUBLIC_GTAG_ID: '',

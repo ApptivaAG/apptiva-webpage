@@ -41,6 +41,49 @@ On every push to the `master` branch, a Docker image is built via [GitHub Action
 
 Non-master branches are automatically deployed as preview environments on [Vercel](https://vercel.com), the platform from the creators of Next.js. Each pull request gets a unique preview URL.
 
+## Contact form spam check
+
+Contact form submissions are checked server-side by Jev through the official
+[TypeSafe AI API](https://docs.typesafe.ai/api/system-one). The implementation is
+in [`src/domain/spam-check.ts`](src/domain/spam-check.ts).
+
+Create an API key through [TypeSafe AI](https://typesafe.ai) and add it to
+`.env.local` for local development:
+
+```dotenv
+TYPESAFE_API_KEY=your_typesafe_api_key
+```
+
+Set the same variable in Coolify for production and in Vercel for previews where
+spam checking should be enabled, then redeploy. Keep the key server-side; never
+prefix it with `NEXT_PUBLIC_` or commit it. The old `JEV_API_KEY` variable is no
+longer used. Use the official provider, not the unrelated `jevtypesafeai.com` proxy.
+
+The check calls `https://api.typesafe.ai/v1/systemone` with model `jev-latest`
+and asks for two probabilities: random or gibberish text, and bot or spam activity.
+If either score is at least `SPAM_THRESHOLD` (currently `0.8`), the submission is
+treated as spam. The request times out after three seconds.
+
+- The honeypot runs first and rejects submissions that fill the hidden address field.
+- AI-detected spam is forwarded only to `spam@apptiva.ch`, with a `[SPAM?]` subject
+  prefix. The form shows success, but no confirmation is sent to the submitted address.
+- The check fails open on a missing API key, timeout, network error, or unsuccessful
+  API response. Normal email delivery continues without AI screening.
+
+Non-empty contact fields, including names, email addresses and messages, are sent
+to TypeSafe AI for classification. Keep the
+[privacy notice](src/app/(website)/(mdx-pages)/datenschutzerklaerung/content.mdx)
+up to date when changing the provider or the data sent.
+
+Run the unit tests without a live API key:
+
+```bash
+pnpm exec vitest run src/domain/__tests__/spam-check.test.ts src/components/server-actions/__tests__/submit-contact-form.test.ts
+```
+
+The form E2E suite also mocks TypeSafe requests, so it does not send contact data
+to the live API.
+
 ## Automated form E2E tests
 
 The Playwright suite covers the contact, forum, chatbot demo, free chatbot trial,

@@ -28,7 +28,7 @@ const server = setupServer(
     })
   ),
   http.all(/^https:\/\/us13\.api\.mailchimp\.com\//, forward('mailchimp')),
-  http.post('https://jevtypesafeai.com/api/v1/decide', forward('spam')),
+  http.post('https://api.typesafe.ai/v1/systemone', forward('spam')),
   http.post('https://plausible.io/api/event', forward('analytics')),
   http.get(/^https:\/\/e2e-test\.api(?:cdn)?\.sanity\.io\//, ({ request }) => {
     const query = new URL(request.url).searchParams.get('query') ?? ''

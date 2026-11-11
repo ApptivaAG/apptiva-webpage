@@ -1,4 +1,4 @@
-const JEV_URL = 'https://jevtypesafeai.com/api/v1/decide'
+const TYPESAFE_URL = 'https://api.typesafe.ai/v1/systemone'
 const TIMEOUT_MS = 3000
 export const SPAM_THRESHOLD = 0.8
 
@@ -31,9 +31,9 @@ export type SpamResult = { spam: boolean; scores?: Record<string, number> }
  * Fails open: any error, timeout or missing API key returns `spam: false`.
  */
 export async function checkSpam(fields: SpamFields): Promise<SpamResult> {
-  const apiKey = process.env.JEV_API_KEY
+  const apiKey = process.env.TYPESAFE_API_KEY
   if (!apiKey) {
-    console.warn('JEV_API_KEY not set, skipping spam check')
+    console.warn('TYPESAFE_API_KEY not set, skipping spam check')
     return { spam: false }
   }
 
@@ -45,13 +45,14 @@ export async function checkSpam(fields: SpamFields): Promise<SpamResult> {
   ].join('\n')
 
   try {
-    const response = await fetch(JEV_URL, {
+    const response = await fetch(TYPESAFE_URL, {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
+        model: 'jev-latest',
         state,
         questions: {
           gibberish: {

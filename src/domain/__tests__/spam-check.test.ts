@@ -17,7 +17,7 @@ describe('checkSpam', () => {
 
   beforeEach(() => {
     vi.stubGlobal('fetch', fetchMock)
-    vi.stubEnv('JEV_API_KEY', 'test-key')
+    vi.stubEnv('TYPESAFE_API_KEY', 'test-key')
     fetchMock.mockReset()
     vi.spyOn(console, 'error').mockImplementation(() => {})
     vi.spyOn(console, 'warn').mockImplementation(() => {})
@@ -41,9 +41,12 @@ describe('checkSpam', () => {
 
     expect(result.spam).toBe(true)
     const [url, init] = fetchMock.mock.calls[0]
-    expect(url).toBe('https://jevtypesafeai.com/api/v1/decide')
+    expect(url).toBe('https://api.typesafe.ai/v1/systemone')
     expect(init.headers.Authorization).toBe('Bearer test-key')
+    expect(init.headers['Content-Type']).toBe('application/json')
+    expect(init.signal).toBeInstanceOf(AbortSignal)
     const body = JSON.parse(init.body)
+    expect(body.model).toBe('jev-latest')
     expect(body.state).toContain('Name: EDWlxOunnWqzznaMtPmoU')
     expect(body.state).not.toContain('Telefon')
     expect(Object.keys(body.questions)).toEqual(['gibberish', 'bot'])
@@ -71,8 +74,16 @@ describe('checkSpam', () => {
   })
 
   it('skips the check without API key', async () => {
-    vi.stubEnv('JEV_API_KEY', '')
+    vi.stubEnv('TYPESAFE_API_KEY', '')
     expect((await checkSpam({ name: 'x' })).spam).toBe(false)
+    expect(fetchMock).not.toHaveBeenCalled()
+  })
+
+  it('does not use the old proxy API key', async () => {
+    vi.stubEnv('TYPESAFE_API_KEY', '')
+    vi.stubEnv('JEV_API_KEY', 'old-proxy-key')
+
+    expect(await checkSpam({ name: 'Anna Muster' })).toEqual({ spam: false })
     expect(fetchMock).not.toHaveBeenCalled()
   })
 })
