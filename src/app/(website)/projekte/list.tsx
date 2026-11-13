@@ -1,7 +1,7 @@
-import Link from 'next/link'
 import { PageHeader } from '@/components/page-header'
 import Button from '@/components/ui/button'
 import Underline from '@/components/ui/underline'
+import Link from 'next/link'
 import { type Category, matchesCategory, projectPath } from './category'
 import { ProjectTeaser } from './projekt-teaser'
 import { ProjectQueryData } from './types'
@@ -36,10 +36,11 @@ export default function ProjectList(props: {
     <PageHeader
       title={
         <>
-          Erfolgsprojekte: <Underline>Chatbots</Underline> im Einsatz
+          <Underline>Chatbots in der Praxis</Underline>: Ausgewählte
+          Erfolgsprojekte
         </>
       }
-      lead="Lass dich von unseren Referenzen inspirieren! Seit über 10 Jahren liefern wir Chatbots für Kund:innen aus verschiedensten Branchen."
+      lead="Lass dich von unseren Referenzen inspirieren! Seit über 10 Jahren liefern wir Chatbots für Kund:innen aus verschiedensten Branchen. Hier zeigen wir eine Auswahl unserer Projekte. Einige weitere Kundenprojekte dürfen wir aus Gründen der Vertraulichkeit nicht öffentlich zeigen oder namentlich nennen."
       links={[
         { name: 'Angebot' },
         { name: 'Chatbots', href: '/angebot/chatbots' },

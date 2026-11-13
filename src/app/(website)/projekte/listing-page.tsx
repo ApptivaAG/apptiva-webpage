@@ -1,7 +1,7 @@
-import { Metadata } from 'next'
-import { draftMode } from 'next/headers'
 import { projectsQuery } from '@/sanity/lib/queries'
 import { load } from '@/sanity/lib/sanityFetch'
+import { Metadata } from 'next'
+import { draftMode } from 'next/headers'
 import { type Category, projectPath } from './category'
 import ProjectList from './list'
 import ProjectsPreview from './preview'
@@ -43,13 +43,13 @@ export default async function Home() {
 export function categoryMetadata(category: Category): Metadata {
   const isChatbots = category === 'chatbots'
   const categoryTitle = isChatbots
-    ? 'Erfolgsprojekte: Chatbots im Einsatz'
+    ? 'Chatbots in der Praxis: Ausgewählte Erfolgsprojekte'
     : 'Erfolgsprojekte: Softwarelösungen im Einsatz'
   return {
     ...metadata,
     title: categoryTitle,
     description: isChatbots
-      ? 'Entdecke Chatbot-Referenzen von Apptiva: digitale Assistenten für Kundenservice, interne Abläufe und neue digitale Angebote.'
+      ? 'Seit über 10 Jahren realisiert Apptiva Chatbots für Unternehmen verschiedener Branchen. Entdecke ausgewählte Referenzen.'
       : 'Web- und Mobile-Apps, Schnittstellen und Produktkonfiguratoren: Entdecke Softwareprojekte, die Apptiva für Unternehmen umgesetzt hat.',
     alternates: { canonical: projectPath(category) },
     openGraph: { title: categoryTitle, url: projectPath(category) },
