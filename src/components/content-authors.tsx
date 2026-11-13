@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import type { ContentAuthorData } from '@/sanity/lib/queries'
 import { cn } from '@/utils/cn'
+import Link from 'next/link'
 import Heading from './heading'
 import SanityImage from './sanity-image'
 import Section from './section'
@@ -16,7 +16,7 @@ export default function ContentAuthors({
     <Section id="autoren" level={'author'}>
       <div className="content">
         <Heading level={2} size={2} className="text-center">
-          {authors.length === 1 ? 'Über den Autor' : 'Über die Autoren'}
+          {authors.length === 1 ? 'Über die Autor:in' : 'Über die Autoren'}
         </Heading>
         <div
           className={cn(
@@ -49,7 +49,7 @@ export default function ContentAuthors({
                       className="mt-4 inline-flex items-center gap-3 font-bold underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
                     >
                       <span aria-hidden="true">→</span>
-                      Zum Autorenprofil
+                      Zum Profil
                       <span className="sr-only"> von {author.personName}</span>
                     </Link>
                   )}

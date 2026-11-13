@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import { ModuleData } from '@/sanity/lib/queries'
 import { formatIds } from '@/utils/format-ids'
+import Link from 'next/link'
 import Heading from '../heading'
 import SanityImage from '../sanity-image'
 import StyledPortableText from '../styled-portable-text'
@@ -58,7 +58,7 @@ export default function Team(props: { module: ModuleData }) {
                         href={`/autoren/${person.slug}`}
                         className="mt-4 inline-block font-bold underline underline-offset-4"
                       >
-                        Autorenprofil ansehen →
+                        Profil ansehen →
                       </Link>
                     )}
                   </div>
