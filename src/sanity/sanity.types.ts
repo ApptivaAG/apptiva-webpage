@@ -86,6 +86,7 @@ export type Header = {
     _key: string;
   }>;
   lead?: string;
+  trustElements?: Array<string>;
   image?: ImageWithAlt;
   meta?: Meta;
 };
@@ -464,11 +465,13 @@ export type Module = {
     | "image"
     | "team"
     | "documents"
-    | "test-chatbot";
+    | "test-chatbot"
+    | "cal-booking";
   level?: 1 | 2;
   layout?:
     "1-column" | "2-column" | "3-column" | "card-carousel" | "full" | "popout";
   style?: "dark-bg" | "light-bg" | "light-gray-bg";
+  calStyle?: "light-gray-bg" | "dark-bg";
   image?: ImageWithAlt;
   orientation?: "left" | "right";
   documents?: Array<
@@ -503,6 +506,8 @@ export type Module = {
         _key: string;
       } & Cta)
   >;
+  hint?: string;
+  calLink?: string;
   cards?: Array<
     {
       _key: string;

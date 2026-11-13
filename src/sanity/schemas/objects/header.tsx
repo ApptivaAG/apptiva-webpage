@@ -35,6 +35,15 @@ export default defineType({
       rows: 3,
     }),
     defineField({
+      name: 'trustElements',
+      title: 'Trustelemente',
+      type: 'array',
+      description:
+        'Wird im Chatbot-Bereich als anpassbare Vertrauens-Badges angezeigt. Ohne Einträge werden keine Badges angezeigt.',
+      hidden: ({ document }) => document?._type !== 'service-page',
+      of: [defineArrayMember({ type: 'string' })],
+    }),
+    defineField({
       name: 'image',
       title: 'Bild',
       type: 'imageWithAlt',

@@ -36,6 +36,7 @@ export default function ServiceDetail(props: {
       <PageHeader
         title={props.service.header?.title}
         lead={props.service.header?.lead}
+        trustElements={props.service.header?.trustElements}
         image={props.service.header?.image}
         links={buildBreadcrumbs(props.service, 'angebot')}
         callToAction={

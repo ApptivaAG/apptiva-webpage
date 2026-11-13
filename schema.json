@@ -411,6 +411,16 @@
           },
           "optional": true
         },
+        "trustElements": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "array",
+            "of": {
+              "type": "string"
+            }
+          },
+          "optional": true
+        },
         "image": {
           "type": "objectAttribute",
           "value": {
@@ -2924,6 +2934,10 @@
               {
                 "type": "string",
                 "value": "test-chatbot"
+              },
+              {
+                "type": "string",
+                "value": "cal-booking"
               }
             ]
           },
@@ -2995,6 +3009,23 @@
               {
                 "type": "string",
                 "value": "light-gray-bg"
+              }
+            ]
+          },
+          "optional": true
+        },
+        "calStyle": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "union",
+            "of": [
+              {
+                "type": "string",
+                "value": "light-gray-bg"
+              },
+              {
+                "type": "string",
+                "value": "dark-bg"
               }
             ]
           },
@@ -3258,6 +3289,20 @@
                 }
               ]
             }
+          },
+          "optional": true
+        },
+        "hint": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": true
+        },
+        "calLink": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
           },
           "optional": true
         },

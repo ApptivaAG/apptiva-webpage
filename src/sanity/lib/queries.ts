@@ -175,6 +175,7 @@ const Header = q('header')
   .project({
     title: q.contentBlocks().optional(),
     lead: q.string().optional().default(''),
+    trustElements: q.array(q.string()).optional(),
     image: sanityImageWithAlt(),
     meta: q('meta')
       .project({
