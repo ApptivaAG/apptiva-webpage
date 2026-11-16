@@ -2,6 +2,7 @@ import { isValidElement } from 'react'
 import ChatInput from '@/components/chat-input'
 import SanityImage from '@/components/sanity-image'
 import { PortableText, SanityImageWithAlt } from '@/domain/types'
+import { cleanStega } from '@/utils/clean-stega'
 import BreadCrumb from './bread-crumb'
 import styles from './ghost-pill.module.css'
 import Heading from './heading'
@@ -30,7 +31,9 @@ export function PageHeader(props: {
     <StyledPortableText spreadParagraphs={false} content={props.lead} />
   )
 
-  const isChatbotOffer = props.links?.some((link) => link.name === 'Chatbots')
+  const isChatbotOffer = props.links?.some(
+    (link) => cleanStega(link.name) === 'Chatbots'
+  )
   const trustElements = isChatbotOffer
     ? (props.trustElements ?? []).filter((element) => element.trim().length > 0)
     : []
