@@ -1,7 +1,7 @@
+import Link from 'next/link'
 import { PageHeader } from '@/components/page-header'
 import Button from '@/components/ui/button'
 import Underline from '@/components/ui/underline'
-import Link from 'next/link'
 import { type Category, matchesCategory, projectPath } from './category'
 import { ProjectTeaser } from './projekt-teaser'
 import { ProjectQueryData } from './types'

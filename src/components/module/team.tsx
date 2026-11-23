@@ -1,6 +1,6 @@
+import Link from 'next/link'
 import { ModuleData } from '@/sanity/lib/queries'
 import { formatIds } from '@/utils/format-ids'
-import Link from 'next/link'
 import Heading from '../heading'
 import SanityImage from '../sanity-image'
 import StyledPortableText from '../styled-portable-text'

@@ -1,11 +1,11 @@
 'use client'
 
-import Heading from '@/components/heading'
-import Button from '@/components/ui/button'
-import { cn } from '@/utils/cn'
 import Cal, { getCalApi } from '@calcom/embed-react'
 import { type ReactNode, useEffect, useId, useState } from 'react'
 import { FiCalendar, FiLock } from 'react-icons/fi'
+import Heading from '@/components/heading'
+import Button from '@/components/ui/button'
+import { cn } from '@/utils/cn'
 
 export default function CalBooking({
   calLink,

@@ -1,6 +1,6 @@
+import Link from 'next/link'
 import type { ContentAuthorData } from '@/sanity/lib/queries'
 import { cn } from '@/utils/cn'
-import Link from 'next/link'
 import Heading from './heading'
 import SanityImage from './sanity-image'
 import Section from './section'
