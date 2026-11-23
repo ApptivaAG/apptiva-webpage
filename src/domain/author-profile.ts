@@ -72,7 +72,7 @@ export const authorProfileQuery = q('*')
         _id: q.string(),
         slug: Slug,
         name: q.string().optional(),
-        publishedAt: q.string().optional(),
+        publishedAt: ['coalesce(publishedAt, _createdAt)', q.string()],
         title: ['pt::text(header.title)', q.string().nullable()],
         lead: ['header.lead', q.string().nullable()],
         isLearning: ['"Apptiva lernt" in tags[]->name', q.boolean()],
