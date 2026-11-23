@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { AuthorProfileData, ProfileSection } from '@/domain/author-profile'
+import type { AuthorProfileData, ProfileSection } from '@/domain/author-profile'
+import { cleanStega } from '@/utils/clean-stega'
 import { cn } from '@/utils/cn'
 import BreadCrumb from './bread-crumb'
 import Heading from './heading'
@@ -30,7 +31,10 @@ export default function AuthorProfile({
             className="pb-10"
             links={[
               { name: 'Über uns', href: '/ueber-uns' },
-              { name: person.personName, href: `/autoren/${person.slug}` },
+              {
+                name: person.personName,
+                href: `/autoren/${cleanStega(person.slug)}`,
+              },
             ]}
           />
           <div className="grid items-center gap-12 lg:grid-cols-[1.3fr_1fr] lg:gap-20">
@@ -65,7 +69,7 @@ export default function AuthorProfile({
                   {socialNetworks.map((network) => (
                     <a
                       key={network.url}
-                      href={network.url ?? undefined}
+                      href={cleanStega(network.url) ?? undefined}
                       className="underline underline-offset-4"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -140,17 +144,17 @@ export default function AuthorProfile({
               {person.articles.slice(0, 6).map((article) => (
                 <Link
                   key={article._id}
-                  href={`/${article.isLearning ? 'apptiva-lernt' : 'blog'}/${article.slug}`}
+                  href={`/${article.isLearning ? 'apptiva-lernt' : 'blog'}/${cleanStega(article.slug)}`}
                   className="group flex flex-col rounded-lg bg-base-white p-6 transition-shadow hover:shadow-lg md:p-8"
                 >
                   {article.publishedAt && (
                     <time
                       className="mb-4 text-sm"
-                      dateTime={article.publishedAt}
+                      dateTime={cleanStega(article.publishedAt)}
                     >
-                      {new Date(article.publishedAt).toLocaleDateString(
-                        'de-CH'
-                      )}
+                      {new Date(
+                        cleanStega(article.publishedAt)
+                      ).toLocaleDateString('de-CH')}
                     </time>
                   )}
                   <Heading level={3} size={4}>
@@ -175,7 +179,7 @@ export default function AuthorProfile({
                     <li key={article._id}>
                       <Link
                         className="underline underline-offset-4"
-                        href={`/${article.isLearning ? 'apptiva-lernt' : 'blog'}/${article.slug}`}
+                        href={`/${article.isLearning ? 'apptiva-lernt' : 'blog'}/${cleanStega(article.slug)}`}
                       >
                         {article.title || article.name} →
                       </Link>
@@ -218,7 +222,7 @@ export default function AuthorProfile({
               {person.contact?.mail && (
                 <a
                   className="break-all underline underline-offset-4"
-                  href={`mailto:${person.contact.mail}`}
+                  href={`mailto:${cleanStega(person.contact.mail)}`}
                 >
                   {person.contact.mail}
                 </a>
@@ -226,7 +230,7 @@ export default function AuthorProfile({
               {person.contact?.phone && (
                 <a
                   className="underline underline-offset-4"
-                  href={`tel:${person.contact.phone.replace(/\s/g, '')}`}
+                  href={`tel:${cleanStega(person.contact.phone).replace(/\s/g, '')}`}
                 >
                   {person.contact.phone}
                 </a>
@@ -234,7 +238,7 @@ export default function AuthorProfile({
               {socialNetworks.map((network) => (
                 <a
                   key={network.url}
-                  href={network.url ?? undefined}
+                  href={cleanStega(network.url) ?? undefined}
                   className="underline underline-offset-4"
                 >
                   {network.title} ↗
@@ -263,7 +267,7 @@ function ProfileSectionView({
   index: number
 }) {
   const entries = section.entries?.filter((entry) => entry.title) ?? []
-  const layout = section.layout ?? 'text'
+  const layout = cleanStega(section.layout) ?? 'text'
   const dark = layout === 'stats'
   return (
     <Section
@@ -386,9 +390,9 @@ function ProfileSectionView({
                   ) : null}
                   {entry.href && (
                     <a
-                      href={entry.href}
+                      href={cleanStega(entry.href)}
                       className="mt-6 inline-block font-bold underline underline-offset-4"
-                      {...(entry.href.startsWith('https://')
+                      {...(cleanStega(entry.href).startsWith('https://')
                         ? { target: '_blank', rel: 'noopener noreferrer' }
                         : {})}
                     >

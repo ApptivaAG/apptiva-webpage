@@ -3,9 +3,12 @@ import { notFound } from 'next/navigation'
 import { rootUrl } from '@/app/env'
 import AuthorProfile from '@/components/author-profile'
 import { Schema } from '@/components/schema'
-import { authorProfilesQuery, getAuthorProfile } from '@/domain/author-profile'
+import { authorProfilesQuery } from '@/domain/author-profile'
+import { loadAuthorProfile } from '@/domain/author-profile-loader'
 import { urlForImage } from '@/sanity/lib/image'
 import { load } from '@/sanity/lib/sanityFetch'
+import { cleanStega } from '@/utils/clean-stega'
+import AuthorPreview from './preview'
 
 export const instant = false
 
@@ -22,7 +25,8 @@ export async function generateMetadata({
 }: {
   params: Promise<{ slug: string }>
 }): Promise<Metadata> {
-  const person = await getAuthorProfile((await params).slug)
+  const { published } = await loadAuthorProfile((await params).slug)
+  const person = cleanStega(published)
   if (!person) return {}
   const title =
     person.authorProfile.meta?.title ?? `${person.personName} | Autorenprofil`
@@ -57,8 +61,10 @@ export default async function AuthorPage({
 }: {
   params: Promise<{ slug: string }>
 }) {
-  if ((await params).slug === '__placeholder__') notFound()
-  const person = (await getAuthorProfile((await params).slug)) ?? notFound()
+  const { slug } = await params
+  if (slug === '__placeholder__') notFound()
+  const { published, draft, isDraftMode } = await loadAuthorProfile(slug)
+  const person = cleanStega(published) ?? notFound()
   const url = `${rootUrl}/autoren/${person.slug}`
   return (
     <>
@@ -88,7 +94,11 @@ export default async function AuthorPage({
           },
         }}
       />
-      <AuthorProfile person={person} />
+      {isDraftMode ? (
+        <AuthorPreview initial={draft} slug={slug} />
+      ) : (
+        <AuthorProfile person={person} />
+      )}
     </>
   )
 }

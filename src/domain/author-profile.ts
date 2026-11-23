@@ -1,10 +1,6 @@
 import type { InferResultType } from 'groqd'
-import { draftMode } from 'next/headers'
-import { cache } from 'react'
 import { q } from '@/sanity/lib/groqd'
 import { Slug, sanityImageWithAlt } from '@/sanity/lib/queries'
-import { load } from '@/sanity/lib/sanityFetch'
-import { cleanStega } from '@/utils/clean-stega'
 
 const entry = q.object({
   _key: q.string(),
@@ -93,14 +89,3 @@ export const authorProfilesQuery = q('*')
     'active == true && authorProfile.enabled == true && defined(slug.current)'
   )
   .project({ slug: Slug, _updatedAt: q.string() })
-
-export const getAuthorProfile = cache(
-  async (slug: string): Promise<AuthorProfileData | null> => {
-    const { isEnabled } = await draftMode()
-    const { published } = await load(authorProfileQuery, isEnabled, { slug }, [
-      'person',
-      'blog',
-    ])
-    return cleanStega(published)
-  }
-)
