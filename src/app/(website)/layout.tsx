@@ -3,7 +3,6 @@ import { cacheLife } from 'next/cache'
 import localFont from 'next/font/local'
 import { draftMode } from 'next/headers'
 import PlausibleProvider from 'next-plausible'
-import { VisualEditing } from 'next-sanity/visual-editing'
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
 import ChatbotAnalytics from '@/components/chatbot-analytics'
 import ChatbotScript from '@/components/chatbot-script'
@@ -12,6 +11,7 @@ import CookieConsentProvider from '@/components/cookie-consent-provider'
 import { DisableDraftMode } from '@/components/disable-draft-mode'
 import FloatingChatInput from '@/components/floating-chat-input'
 import Footer from '@/components/footer'
+import { SanityPreview } from '@/components/sanity-preview'
 import { Schema } from '@/components/schema'
 import SnitcherScript from '@/components/snitcher-script'
 import { organizationSchema } from '@/lib/schema/organization'
@@ -103,7 +103,7 @@ export default async function RootLayout({
         <ContactLinkAnalytics />
         {(await draftMode()).isEnabled ? (
           <>
-            <VisualEditing />
+            <SanityPreview websiteOrigin={new URL(rootUrl).origin} />
             <DisableDraftMode />
           </>
         ) : (
