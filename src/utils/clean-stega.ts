@@ -1,8 +1,7 @@
 import { stegaClean } from '@sanity/client/stega'
 
 /**
- * Removes Vercel Stega encoding from data.
- * This is a wrapper around the deprecated vercelStegaCleanAll function.
+ * Removes Stega encoding from data using Sanity's stegaClean function.
  * When replacing the underlying implementation, only this file needs to be updated.
  *
  * @param data - The data to clean

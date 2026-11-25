@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with `create-next-app`.
 
 ## Getting Started
 
@@ -27,8 +27,6 @@ To learn more about Next.js, take a look at the following resources:
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
 ## Deployment
 
 ### Production (Coolify)
@@ -36,10 +34,6 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The production site is hosted on our Coolify server at [https://apptiva.ch](https://apptiva.ch).
 
 On every push to the `master` branch, a Docker image is built via [GitHub Actions](.github/workflows/) and pushed to GitHub Container Registry. A webhook on Coolify then pulls the latest image and redeploys the service.
-
-### Preview (Vercel)
-
-Non-master branches are automatically deployed as preview environments on [Vercel](https://vercel.com), the platform from the creators of Next.js. Each pull request gets a unique preview URL.
 
 ## Contact form spam check
 
@@ -54,7 +48,7 @@ Create an API key through [TypeSafe AI](https://typesafe.ai) and add it to
 TYPESAFE_API_KEY=your_typesafe_api_key
 ```
 
-Set the same variable in Coolify for production and in Vercel for previews where
+Set the same variable in Coolify for production and in any preview environment where
 spam checking should be enabled, then redeploy. Keep the key server-side; never
 prefix it with `NEXT_PUBLIC_` or commit it. The old `JEV_API_KEY` variable is no
 longer used. Use the official provider, not the unrelated `jevtypesafeai.com` proxy.
