@@ -22,6 +22,7 @@ export default function Item(props: {
       <PageHeader
         title={glossary.header?.title ?? 'Glossar'}
         lead={glossary.summary ?? glossary.header?.lead}
+        trustElements={glossary.header?.trustElements}
         image={glossary.header?.image}
         links={[
           { name: 'Glossar', href: '/glossar' },

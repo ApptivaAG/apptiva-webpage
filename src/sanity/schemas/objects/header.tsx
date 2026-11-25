@@ -39,8 +39,7 @@ export default defineType({
       title: 'Trustelemente',
       type: 'array',
       description:
-        'Wird im Chatbot-Bereich als anpassbare Vertrauens-Badges angezeigt. Ohne Einträge werden keine Badges angezeigt.',
-      hidden: ({ document }) => document?._type !== 'service-page',
+        'Wird als anpassbare Vertrauens-Badges im Header angezeigt. Ohne Einträge werden keine Badges angezeigt.',
       of: [defineArrayMember({ type: 'string' })],
     }),
     defineField({

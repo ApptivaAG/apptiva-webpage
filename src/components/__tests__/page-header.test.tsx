@@ -60,7 +60,7 @@ describe('PageHeader trust elements', () => {
     expect(container.querySelector('header ul')).toBeNull()
   })
 
-  it('does not show trust elements outside the chatbot area', () => {
+  it('shows CMS trust elements outside the chatbot area', () => {
     render(
       <PageHeader
         title="Software"
@@ -70,6 +70,6 @@ describe('PageHeader trust elements', () => {
       />
     )
 
-    expect(screen.queryByText('Schweizer Hosting')).toBeNull()
+    expect(screen.queryByText('Schweizer Hosting')).not.toBeNull()
   })
 })

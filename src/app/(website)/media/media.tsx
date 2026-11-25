@@ -30,6 +30,7 @@ export default function Media(props: {
       <PageHeader
         title={props.data.header?.title}
         lead={props.data.header?.lead}
+        trustElements={props.data.header?.trustElements}
         links={[{ name: 'Media', href: '/media' }]}
       ></PageHeader>
 

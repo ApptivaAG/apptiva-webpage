@@ -17,6 +17,7 @@ export default function About(props: {
       <PageHeader
         title={props.data.header?.title}
         lead={props.data.header?.lead}
+        trustElements={props.data.header?.trustElements}
         links={[{ name: 'Über uns', href: '/ueber-uns' }]}
       ></PageHeader>
 
