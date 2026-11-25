@@ -27,7 +27,7 @@ export default function Footer({ initialYear }: { initialYear: number }) {
   return (
     <>
       {/* The footer has to be higher in the z-index, so that the content coming after the footer is behind */}
-      <footer>
+      <footer className="[&_a]:inline-block [&_a]:leading-[1.1] [&_ul>li]:pb-1">
         <div className="relative z-10 bg-linear-to-br from-primary-light to-primary-dark bg-300% py-4">
           <div className="mx-4 rounded-md bg-primary text-base-white">
             <div className="flex flex-wrap justify-between gap-x-24 gap-y-12 rounded-md bg-black/40 p-4 sm:p-12">
@@ -62,15 +62,17 @@ export default function Footer({ initialYear }: { initialYear: number }) {
                     href="https://wa.me/41766012056"
                     rel="noopener noreferrer"
                     target="_blank"
-                    className="flex gap-1 rounded bg-base-white px-3 py-2 text-primary !no-underline transition-colors hover:bg-base-white/80"
+                    className="rounded bg-base-white px-3 py-2 text-primary !no-underline transition-colors hover:bg-base-white/80"
                   >
-                    <Image
-                      height={25}
-                      src={whatsApp}
-                      alt="WhatsApp Logo"
-                      style={{ width: 'auto' }}
-                    />
-                    Chat auf WhatsApp
+                    <span className="flex items-center gap-1">
+                      <Image
+                        height={25}
+                        src={whatsApp}
+                        alt="WhatsApp Logo"
+                        style={{ width: 'auto' }}
+                      />
+                      Chat auf WhatsApp
+                    </span>
                   </a>
                 </p>
               </div>
@@ -203,17 +205,14 @@ export default function Footer({ initialYear }: { initialYear: number }) {
                 KI-Chatbot
               </Heading>
 
-              <ul className="*:pb-1.5">
+              <ul>
                 <li>
                   <Link href="/angebot/chatbots">
                     <UnderlineForLink>Chatbots</UnderlineForLink>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    className="inline-block leading-[1.1]"
-                    href="/angebot/chatbots/ki-assistent-website"
-                  >
+                  <Link href="/angebot/chatbots/ki-assistent-website">
                     <UnderlineForLink>
                       Kundenanfragen <br />
                       automatisch beantworten
@@ -225,7 +224,6 @@ export default function Footer({ initialYear }: { initialYear: number }) {
                     href="https://klar.apptiva.ch"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block leading-[1.1]"
                   >
                     <UnderlineForLink>
                       Apptiva Klar <br />
@@ -249,6 +247,13 @@ export default function Footer({ initialYear }: { initialYear: number }) {
                 <li>
                   <Link href="/angebot/development/prozesse-automatisieren">
                     <UnderlineForLink>Prozesse automatisieren</UnderlineForLink>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/angebot/development/ki-prozessautomatisierung-kmu">
+                    <UnderlineForLink>
+                      KI-Prozessautomatisierung <br /> für KMU
+                    </UnderlineForLink>
                   </Link>
                 </li>
                 <li>
