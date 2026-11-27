@@ -6,15 +6,18 @@ import { apiVersion } from '../env'
 
 type Row = { _id: string; personName: string; current: number; last: number }
 
-const QUERY = `*[_type == "person" && active == true && !(_id in path("drafts.**"))]{
+const QUERY = `*[_type == "person" && active == true && !(_id in path("drafts.**"))
+  && _id != $excludedPersonId]{
   _id,
   personName,
   "current": count(*[_type == "blog" && !(_id in path("drafts.**"))
     && !($excludedTagId in coalesce(tags[]._ref, []))
-    && author._ref == ^._id && publishedAt >= $currentStart && publishedAt < $nextStart]),
+    && ^._id in select(count(authors) > 0 => authors[]._ref, defined(author) => [author._ref], [])
+    && publishedAt >= $currentStart && publishedAt < $nextStart]),
   "last": count(*[_type == "blog" && !(_id in path("drafts.**"))
     && !($excludedTagId in coalesce(tags[]._ref, []))
-    && author._ref == ^._id && publishedAt >= $lastStart && publishedAt < $currentStart])
+    && ^._id in select(count(authors) > 0 => authors[]._ref, defined(author) => [author._ref], [])
+    && publishedAt >= $lastStart && publishedAt < $currentStart])
 } | order(current desc, last desc, personName asc)`
 
 function BlogStats() {
@@ -45,6 +48,7 @@ function BlogStats() {
   useEffect(() => {
     client
       .fetch<Row[]>(QUERY, {
+        excludedPersonId: '5b407138-d0ac-4c97-ab3f-095dd64da859', // Brigitte Wey
         excludedTagId: 'b059ed38-345a-4b97-95be-56de061e34d0',
         lastStart: `${year - 1}-01-01T00:00:00Z`,
         currentStart: `${year}-01-01T00:00:00Z`,
