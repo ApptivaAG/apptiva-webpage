@@ -1,5 +1,25 @@
 // A small CMS response for the real /angebot/chatbots route. Keep the signup
 // module available even when editors change the production page in Sanity.
+export const homepage = {
+  claim: [
+    {
+      _type: 'block',
+      _key: 'e2e-homepage-heading',
+      style: 'h1',
+      markDefs: [],
+      children: [
+        {
+          _type: 'span',
+          _key: 'text',
+          marks: [],
+          text: 'Ihre digitale Zukunft beginnt hier',
+        },
+      ],
+    },
+  ],
+  modules: [],
+}
+
 export const chatbotService = {
   _id: 'e2e-chatbots',
   _createdAt: '2026-01-01T00:00:00Z',

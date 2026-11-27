@@ -1,7 +1,7 @@
 import { HttpResponse, http, passthrough } from 'msw'
 import { setupServer } from 'msw/node'
 import nextPackage from 'next/package.json' with { type: 'json' }
-import { chatbotService } from './sanity-fixture.mjs'
+import { chatbotService, homepage } from './sanity-fixture.mjs'
 
 const mockOrigin = 'http://127.0.0.1:3101'
 
@@ -32,12 +32,15 @@ const server = setupServer(
   http.post('https://plausible.io/api/event', forward('analytics')),
   http.get(/^https:\/\/e2e-test\.api(?:cdn)?\.sanity\.io\//, ({ request }) => {
     const query = new URL(request.url).searchParams.get('query') ?? ''
+    const isHomepage = /_type\s*==\s*['"]homepage['"]/.test(query)
     const isService = /_type\s*==\s*['"]service-page['"]/.test(query)
-    const result = isService
-      ? query.includes('slug.current == $slug')
-        ? chatbotService
-        : [chatbotService]
-      : []
+    const result = isHomepage
+      ? homepage
+      : isService
+        ? query.includes('slug.current == $slug')
+          ? chatbotService
+          : [chatbotService]
+        : []
     return HttpResponse.json({ result, ms: 1, query })
   }),
   http.all('*', async ({ request }) => {
