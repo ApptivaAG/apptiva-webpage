@@ -2,8 +2,9 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
+import BackToTopButton from './back-to-top-button'
 import Heading from './heading'
 import lbv from './lehrbetrieb-vignette.png'
 import logo from './logo.svg'
@@ -341,6 +342,9 @@ export default function Footer({ initialYear }: { initialYear: number }) {
                 </li>
               </ul>
             </div>
+            <Suspense fallback={null}>
+              <BackToTopButton />
+            </Suspense>
           </div>
         </div>
       </footer>
